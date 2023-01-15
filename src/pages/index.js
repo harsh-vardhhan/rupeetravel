@@ -26,16 +26,16 @@ export default function Home() {
               <Stack divider={<StackDivider />} spacing='4'>
                 <Box>
                   <Link href="/debitcards">
-                    <Heading size='xs' textTransform='uppercase'>
+                    <Heading size='md'>
                       Debit Card
                     </Heading>
                     <Text pt='2' fontSize='sm'>
-                      View a summary of all your clients over the last month.
+                      Zero forex markup debit card
                     </Text>
                   </Link>
                 </Box>
                 <Box>
-                  <Heading size='xs' textTransform='uppercase'>
+                  <Heading size='md'>
                     Credit Card
                   </Heading>
                   <Text pt='2' fontSize='sm'>
@@ -43,7 +43,7 @@ export default function Home() {
                   </Text>
                 </Box>
                 <Box>
-                  <Heading size='xs' textTransform='uppercase'>
+                  <Heading size='md'>
                     E-Visa
                   </Heading>
                   <Text pt='2' fontSize='sm'>
@@ -51,7 +51,7 @@ export default function Home() {
                   </Text>
                 </Box>
                 <Box>
-                  <Heading size='xs' textTransform='uppercase'>
+                  <Heading size='md'>
                     Flight Booking
                   </Heading>
                   <Text pt='2' fontSize='sm'>
@@ -59,7 +59,7 @@ export default function Home() {
                   </Text>
                 </Box>
                 <Box>
-                  <Heading size='xs' textTransform='uppercase'>
+                  <Heading size='md'>
                     Travel insurance
                   </Heading>
                   <Text pt='2' fontSize='sm'>
@@ -67,7 +67,7 @@ export default function Home() {
                   </Text>
                 </Box>
                 <Box>
-                  <Heading size='xs' textTransform='uppercase'>
+                  <Heading size='md'>
                     Luggage
                   </Heading>
                   <Text pt='2' fontSize='sm'>
@@ -75,7 +75,7 @@ export default function Home() {
                   </Text>
                 </Box>
                 <Box>
-                  <Heading size='xs' textTransform='uppercase'>
+                  <Heading size='md'>
                     Hotel Booking
                   </Heading>
                   <Text pt='2' fontSize='sm'>
@@ -83,7 +83,7 @@ export default function Home() {
                   </Text>
                 </Box>
                 <Box>
-                  <Heading size='xs' textTransform='uppercase'>
+                  <Heading size='md'>
                     Food & Taxi
                   </Heading>
                   <Text pt='2' fontSize='sm'>
@@ -91,7 +91,7 @@ export default function Home() {
                   </Text>
                 </Box>
                 <Box>
-                  <Heading size='xs' textTransform='uppercase'>
+                  <Heading size='md'>
                     E-sim & new mobile sim
                   </Heading>
                   <Text pt='2' fontSize='sm'>
@@ -99,7 +99,7 @@ export default function Home() {
                   </Text>
                 </Box>
                 <Box>
-                  <Heading size='xs' textTransform='uppercase'>
+                  <Heading size='md'>
                     place to work
                   </Heading>
                   <Text pt='2' fontSize='sm'>
