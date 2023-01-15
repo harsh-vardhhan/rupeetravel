@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
-import { Card, CardHeader, CardBody, CardFooter, Stack, Button, Image, Text, StackDivider, Box } from '@chakra-ui/react'
+import Link from 'next/link'
+import { Card, CardHeader, CardBody, Text, StackDivider, Box, Stack } from '@chakra-ui/react'
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         <Heading as='h2' size='2xl'>Rupee Travel</Heading>
         <Text fontSize='xl' style={{ marginTop: '20px' }}>Budget travel checklist for Indians travelling Vietnam 🇻🇳</Text>
         <div style={{ marginTop: '20px' }}>
-          <Card>
+          <Card style={{maxWidth: '500px'}}>
             <CardHeader>
               <Heading size='md'>Checklist</Heading>
             </CardHeader>
@@ -24,12 +25,14 @@ export default function Home() {
             <CardBody>
               <Stack divider={<StackDivider />} spacing='4'>
                 <Box>
-                  <Heading size='xs' textTransform='uppercase'>
-                    Debit Card
-                  </Heading>
-                  <Text pt='2' fontSize='sm'>
-                    View a summary of all your clients over the last month.
-                  </Text>
+                  <Link href="/debitcards">
+                    <Heading size='xs' textTransform='uppercase'>
+                      Debit Card
+                    </Heading>
+                    <Text pt='2' fontSize='sm'>
+                      View a summary of all your clients over the last month.
+                    </Text>
+                  </Link>
                 </Box>
                 <Box>
                   <Heading size='xs' textTransform='uppercase'>
@@ -89,7 +92,7 @@ export default function Home() {
                 </Box>
                 <Box>
                   <Heading size='xs' textTransform='uppercase'>
-                   E-sim & new mobile sim
+                    E-sim & new mobile sim
                   </Heading>
                   <Text pt='2' fontSize='sm'>
                     See a detailed analysis of all your business clients.
