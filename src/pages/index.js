@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Stack, Button, Image, Text, StackDivider, Box } from '@chakra-ui/react'
 
 export default function Home() {
   return (
@@ -12,7 +13,93 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Heading>Rupee Travel</Heading>
+        <Heading as='h2' size='2xl'>Rupee Travel</Heading>
+        <Text fontSize='xl' style={{ marginTop: '20px' }}>Budget travel checklist for Indians travelling Vietnam 🇻🇳</Text>
+        <div style={{ marginTop: '20px' }}>
+          <Card>
+            <CardHeader>
+              <Heading size='md'>Checklist</Heading>
+            </CardHeader>
+
+            <CardBody>
+              <Stack divider={<StackDivider />} spacing='4'>
+                <Box>
+                  <Heading size='xs' textTransform='uppercase'>
+                    Debit Card
+                  </Heading>
+                  <Text pt='2' fontSize='sm'>
+                    View a summary of all your clients over the last month.
+                  </Text>
+                </Box>
+                <Box>
+                  <Heading size='xs' textTransform='uppercase'>
+                    Credit Card
+                  </Heading>
+                  <Text pt='2' fontSize='sm'>
+                    Check out the overview of your clients.
+                  </Text>
+                </Box>
+                <Box>
+                  <Heading size='xs' textTransform='uppercase'>
+                    E-Visa
+                  </Heading>
+                  <Text pt='2' fontSize='sm'>
+                    See a detailed analysis of all your business clients.
+                  </Text>
+                </Box>
+                <Box>
+                  <Heading size='xs' textTransform='uppercase'>
+                    Travel insurance
+                  </Heading>
+                  <Text pt='2' fontSize='sm'>
+                    See a detailed analysis of all your business clients.
+                  </Text>
+                </Box>
+                <Box>
+                  <Heading size='xs' textTransform='uppercase'>
+                    Luggage
+                  </Heading>
+                  <Text pt='2' fontSize='sm'>
+                    See a detailed analysis of all your business clients.
+                  </Text>
+                </Box>
+                <Box>
+                  <Heading size='xs' textTransform='uppercase'>
+                    Hotel Booking
+                  </Heading>
+                  <Text pt='2' fontSize='sm'>
+                    See a detailed analysis of all your business clients.
+                  </Text>
+                </Box>
+                <Box>
+                  <Heading size='xs' textTransform='uppercase'>
+                    Food & Taxi
+                  </Heading>
+                  <Text pt='2' fontSize='sm'>
+                    See a detailed analysis of all your business clients.
+                  </Text>
+                </Box>
+                <Box>
+                  <Heading size='xs' textTransform='uppercase'>
+                    Mobile sim
+                  </Heading>
+                  <Text pt='2' fontSize='sm'>
+                    See a detailed analysis of all your business clients.
+                  </Text>
+                </Box>
+                <Box>
+                  <Heading size='xs' textTransform='uppercase'>
+                    place to work
+                  </Heading>
+                  <Text pt='2' fontSize='sm'>
+                    See a detailed analysis of all your business clients.
+                  </Text>
+                </Box>
+              </Stack>
+            </CardBody>
+          </Card>
+        </div>
+
       </main>
     </>
   )
