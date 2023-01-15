@@ -61,7 +61,7 @@ export default function Home() {
                                 <Stack mt='6' spacing='3'>
                                     <Heading size='md'>Fi Card</Heading>
                                     <Text>
-                                        Fi is a no brainer, easy to use neo bank account. Suit's perfect for travelling abroad.
+                                        Fi is a no brainer, easy to use neo bank account. Suits perfect for travelling abroad.
                                     </Text>
                                     <List spacing={3}>
                                         <ListItem>
@@ -70,7 +70,7 @@ export default function Home() {
                                         </ListItem>
                                         <ListItem>
                                             <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            ₹100 on internatinal ATM's
+                                            ₹100 on internatinal ATMs
                                         </ListItem>
                                     </List>
                                 </Stack>
@@ -89,7 +89,7 @@ export default function Home() {
                             <CardBody>
                                 <Alert status='info' style={{ marginTop: '10px' }}>
                                     <AlertIcon />
-                                    Do activate the "Apply these settings to international usage" checkbox when abroad
+                                    Do activate the &quot;Apply these settings to international usage&quot; checkbox when abroad
                                 </Alert>
                                 <Image
                                     src={'/static/images/fisetting.webp'}
@@ -104,7 +104,7 @@ export default function Home() {
                             <CardBody>
                                 <Alert status='error' style={{ marginTop: '10px' }}>
                                     <AlertIcon />
-                                    Please avoid Discover debit cards, since they are hardly accepted anywhere. You can check the logo on your debit incase you aren't aware. 
+                                    Please avoid Discover debit cards, since they are hardly accepted anywhere. You can check the logo on your debit incase you are not aware. 
                                 </Alert>
                                 <Image
                                     src={'/static/images/discover.webp'}
