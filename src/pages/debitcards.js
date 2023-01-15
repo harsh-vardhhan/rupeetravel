@@ -21,7 +21,7 @@ import {
     AlertIcon,
     SimpleGrid
 } from '@chakra-ui/react'
-import { CheckCircleIcon } from '@chakra-ui/icons'
+import { CheckCircleIcon, InfoIcon} from '@chakra-ui/icons'
 import Link from 'next/link'
 
 export default function Home() {
@@ -61,7 +61,7 @@ export default function Home() {
                                 <Stack mt='6' spacing='3'>
                                     <Heading size='md'>Fi Card</Heading>
                                     <Text>
-                                        Fi is a no brainer, easy to use neo bank account. Suits perfect for travelling abroad.
+                                        Fi is a no brainer, easy to use neobank account. Suit&apos;s perfect for travelling abroad.
                                     </Text>
                                     <List spacing={3}>
                                         <ListItem>
@@ -70,7 +70,11 @@ export default function Home() {
                                         </ListItem>
                                         <ListItem>
                                             <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            ₹100 on internatinal ATMs
+                                            ₹100 on international ATM cash withdrawl from Fi
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={InfoIcon} color='red.400' />
+                                            Local ATM&apos;s in Vietnam will still charge 1.5%-3% on withdrawl
                                         </ListItem>
                                     </List>
                                 </Stack>
