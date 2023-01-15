@@ -81,7 +81,7 @@ export default function Home() {
                 </Box>
                 <Box>
                   <Heading size='xs' textTransform='uppercase'>
-                    Mobile sim
+                   E-sim & new mobile sim
                   </Heading>
                   <Text pt='2' fontSize='sm'>
                     See a detailed analysis of all your business clients.
