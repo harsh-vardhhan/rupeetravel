@@ -49,6 +49,14 @@ export default function Home() {
                 </Box>
                 <Box>
                   <Heading size='xs' textTransform='uppercase'>
+                    Flight Booking
+                  </Heading>
+                  <Text pt='2' fontSize='sm'>
+                    See a detailed analysis of all your business clients.
+                  </Text>
+                </Box>
+                <Box>
+                  <Heading size='xs' textTransform='uppercase'>
                     Travel insurance
                   </Heading>
                   <Text pt='2' fontSize='sm'>
