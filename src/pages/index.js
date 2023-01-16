@@ -2,13 +2,13 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
 import Link from 'next/link'
-import { 
-  Card, 
-  CardHeader, 
-  CardBody, 
-  Text, 
-  StackDivider, 
-  Box, 
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  Text,
+  StackDivider,
+  Box,
   Stack,
   SimpleGrid,
   Tag,
@@ -48,12 +48,14 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Heading size='md'>
-                      Credit Card <Tag colorScheme='orange'>Recommended</Tag>
-                    </Heading>
-                    <Text pt='2' fontSize='sm'>
-                    Zero forex markup credit card
-                    </Text>
+                    <Link href="/creditcards">
+                      <Heading size='md'>
+                        Credit Card <Tag colorScheme='orange'>Recommended</Tag>
+                      </Heading>
+                      <Text pt='2' fontSize='sm'>
+                        Zero forex markup credit card
+                      </Text>
+                    </Link>
                   </Box>
                   <Box>
                     <Heading size='md'>
