@@ -19,7 +19,8 @@ import {
     BreadcrumbLink,
     Alert,
     AlertIcon,
-    SimpleGrid
+    SimpleGrid,
+    Tag,
 } from '@chakra-ui/react'
 import { CheckCircleIcon, InfoIcon} from '@chakra-ui/icons'
 import Link from 'next/link'
@@ -59,7 +60,7 @@ export default function Home() {
                                     borderRadius='lg'
                                 />
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>Fi Card</Heading>
+                                    <Heading size='md'>Fi Card <Tag colorScheme='teal'>Personally using</Tag></Heading>
                                     <Text>
                                         Fi is a no brainer, easy to use neobank account. Suit&apos;s perfect for travelling abroad.
                                     </Text>

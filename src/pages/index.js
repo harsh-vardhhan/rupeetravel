@@ -11,6 +11,7 @@ import {
   Box, 
   Stack,
   SimpleGrid,
+  Tag,
 } from '@chakra-ui/react'
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
                   <Box>
                     <Link href="/debitcards">
                       <Heading size='md'>
-                        Debit Card
+                        Debit Card <Tag colorScheme='teal'>Mandatory</Tag>
                       </Heading>
                       <Text pt='2' fontSize='sm'>
                         Zero forex markup debit card
@@ -48,58 +49,58 @@ export default function Home() {
                   </Box>
                   <Box>
                     <Heading size='md'>
-                      Credit Card
+                      Credit Card <Tag colorScheme='orange'>Recommended</Tag>
                     </Heading>
                     <Text pt='2' fontSize='sm'>
-                      Check out the overview of your clients.
+                    Zero forex markup credit card
                     </Text>
                   </Box>
                   <Box>
                     <Heading size='md'>
-                      E-Visa
+                      E-Visa <Tag colorScheme='teal'>Mandatory</Tag>
                     </Heading>
                     <Text pt='2' fontSize='sm'>
-                      See a detailed analysis of all your business clients.
+                      Apply your E-Visa online.
                     </Text>
                   </Box>
                   <Box>
                     <Heading size='md'>
-                      Flight Booking
+                      Flight Booking <Tag colorScheme='teal'>Mandatory</Tag>
                     </Heading>
                     <Text pt='2' fontSize='sm'>
-                      See a detailed analysis of all your business clients.
+                      Scan for the cheapest tickets.
                     </Text>
                   </Box>
                   <Box>
                     <Heading size='md'>
-                      Travel insurance
+                      Travel insurance <Tag colorScheme='orange'>Recommended</Tag>
                     </Heading>
                     <Text pt='2' fontSize='sm'>
-                      See a detailed analysis of all your business clients.
+                      Safeguard your journey.
                     </Text>
                   </Box>
                   <Box>
                     <Heading size='md'>
-                      Luggage
+                      Luggage <Tag colorScheme='orange'>Recommended</Tag>
                     </Heading>
                     <Text pt='2' fontSize='sm'>
-                      See a detailed analysis of all your business clients.
+                      Quick travel hack for luggage.
                     </Text>
                   </Box>
                   <Box>
                     <Heading size='md'>
-                      Hotel Booking
+                      Hotel Booking <Tag colorScheme='orange'>Recommended</Tag>
                     </Heading>
                     <Text pt='2' fontSize='sm'>
-                      See a detailed analysis of all your business clients.
+                      Book hotel directly.
                     </Text>
                   </Box>
                   <Box>
                     <Heading size='md'>
-                      eSim
+                      eSim <Tag colorScheme='orange'>Recommended</Tag>
                     </Heading>
                     <Text pt='2' fontSize='sm'>
-                      See a detailed analysis of all your business clients.
+                      Get eSim for single sim phone.
                     </Text>
                   </Box>
                 </Stack>
@@ -115,26 +116,26 @@ export default function Home() {
                 <Stack divider={<StackDivider />} spacing='4'>
                   <Box>
                     <Heading size='md'>
-                      Food & Taxi
+                      Food & Taxi <Tag colorScheme='orange'>Recommended</Tag>
                     </Heading>
                     <Text pt='2' fontSize='sm'>
-                      See a detailed analysis of all your business clients.
+                      Download the Zomato + Uber of Vietnam.
                     </Text>
                   </Box>
                   <Box>
                     <Heading size='md'>
-                      Local mobile sim
+                      Local mobile sim <Tag colorScheme='orange'>Recommended</Tag>
                     </Heading>
                     <Text pt='2' fontSize='sm'>
-                      See a detailed analysis of all your business clients.
+                      Get local Vietnam sim.
                     </Text>
                   </Box>
                   <Box>
                     <Heading size='md'>
-                      Place to work
+                      Place to work <Tag colorScheme='orange'>Recommended</Tag>
                     </Heading>
                     <Text pt='2' fontSize='sm'>
-                      See a detailed analysis of all your business clients.
+                      Cafe for remote workers.
                     </Text>
                   </Box>
                 </Stack>
