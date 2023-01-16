@@ -39,7 +39,7 @@ export default function Home() {
                     <Heading as='h2' size='2xl'>Rupee Travel</Heading>
                 </Link>
 
-                <Text fontSize='xl' style={{ marginTop: '20px' }}>Credit Cards</Text>
+                <Text fontSize='xl' style={{ marginTop: '20px' }}>E-Visa</Text>
                 <Breadcrumb>
                     <BreadcrumbItem>
                         <Link href="/">
@@ -47,7 +47,7 @@ export default function Home() {
                         </Link>
                     </BreadcrumbItem>
                     <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink href='#'>Credit Cards</BreadcrumbLink>
+                        <BreadcrumbLink href='#'>E-Visa</BreadcrumbLink>
                     </BreadcrumbItem>
                 </Breadcrumb>
                 <div style={{ marginTop: '20px' }}>
@@ -55,19 +55,23 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>RBL World Safari <Tag colorScheme='orange'>Applied for it</Tag></Heading>
+                                    <Heading size='md'>E-Visa <Tag colorScheme='teal'>Personally used</Tag></Heading>
                                     <List spacing={3}>
                                         <ListItem>
                                             <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            Zero forex markup credit card
+                                            you can stay for maximum one month
                                         </ListItem>
                                         <ListItem>
                                             <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            ₹3000 Joining/Annual fee
+                                            Usually visa approved within 5 days max.
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={CheckCircleIcon} color='green.500' />
+                                            Very unlikely to get rejected 🙂
                                         </ListItem>
                                         <ListItem>
                                             <ListIcon as={InfoIcon} color='red.400' />
-                                            All other zero forex markup cards have high joining fee, hence avoid them
+                                            Please don&apos;t use any third party agency, apply on the official government site link given below
                                         </ListItem>
                                     </List>
                                 </Stack>
@@ -75,11 +79,8 @@ export default function Home() {
                             <Divider style={{ color: '#e2e8f0' }} />
                             <CardFooter>
                                 <ButtonGroup spacing='2'>
-                                    <Button
-                                        variant='solid'
-                                        colorScheme='blue'
-                                        onClick={() => window.open('https://www.rblbank.com/product/credit-cards/world-safari-credit-card')}>
-                                        RBL World Safari
+                                    <Button colorScheme='blue' onClick={() => window.open('https://evisa.xuatnhapcanh.gov.vn/web/guest/khai-thi-thuc-dien-tu/cap-thi-thuc-dien-tu')}>
+                                        Apply E-Visa
                                     </Button>
                                 </ButtonGroup>
                             </CardFooter>

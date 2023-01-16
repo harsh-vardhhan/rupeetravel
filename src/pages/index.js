@@ -58,28 +58,34 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Heading size='md'>
-                      E-Visa <Tag colorScheme='teal'>Mandatory</Tag>
-                    </Heading>
-                    <Text pt='2' fontSize='sm'>
-                      Apply your E-Visa online.
-                    </Text>
+                    <Link href="/evisa">
+                      <Heading size='md'>
+                        E-Visa <Tag colorScheme='teal'>Mandatory</Tag>
+                      </Heading>
+                      <Text pt='2' fontSize='sm'>
+                        Apply your E-Visa online.
+                      </Text>
+                    </Link>
                   </Box>
                   <Box>
-                    <Heading size='md'>
-                      Flight Booking <Tag colorScheme='teal'>Mandatory</Tag>
-                    </Heading>
-                    <Text pt='2' fontSize='sm'>
-                      Scan for the cheapest tickets.
-                    </Text>
+                    <Link href="/flight">
+                      <Heading size='md'>
+                        Flight Booking <Tag colorScheme='teal'>Mandatory</Tag>
+                      </Heading>
+                      <Text pt='2' fontSize='sm'>
+                        Scan for the cheapest tickets.
+                      </Text>
+                    </Link>
                   </Box>
                   <Box>
-                    <Heading size='md'>
-                      Travel insurance <Tag colorScheme='orange'>Recommended</Tag>
-                    </Heading>
-                    <Text pt='2' fontSize='sm'>
-                      Safeguard your journey.
-                    </Text>
+                    <Link href="/insurance">
+                      <Heading size='md'>
+                        Travel insurance <Tag colorScheme='orange'>Recommended</Tag>
+                      </Heading>
+                      <Text pt='2' fontSize='sm'>
+                        Safeguard your journey.
+                      </Text>
+                    </Link>
                   </Box>
                   <Box>
                     <Heading size='md'>

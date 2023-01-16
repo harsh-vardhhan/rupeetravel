@@ -39,7 +39,7 @@ export default function Home() {
                     <Heading as='h2' size='2xl'>Rupee Travel</Heading>
                 </Link>
 
-                <Text fontSize='xl' style={{ marginTop: '20px' }}>Credit Cards</Text>
+                <Text fontSize='xl' style={{ marginTop: '20px' }}>Travel Insurance</Text>
                 <Breadcrumb>
                     <BreadcrumbItem>
                         <Link href="/">
@@ -47,7 +47,7 @@ export default function Home() {
                         </Link>
                     </BreadcrumbItem>
                     <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink href='#'>Credit Cards</BreadcrumbLink>
+                        <BreadcrumbLink href='#'>Travel Insurance</BreadcrumbLink>
                     </BreadcrumbItem>
                 </Breadcrumb>
                 <div style={{ marginTop: '20px' }}>
@@ -55,19 +55,19 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>RBL World Safari <Tag colorScheme='orange'>Applied for it</Tag></Heading>
+                                    <Heading size='md'>Digit Insurance <Tag colorScheme='teal'>Personally used</Tag></Heading>
                                     <List spacing={3}>
                                         <ListItem>
                                             <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            Zero forex markup credit card
+                                            Got $100,000 coverage at just ~₹1300 premium
                                         </ListItem>
                                         <ListItem>
                                             <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            ₹3000 Joining/Annual fee
+                                           It cannot be extended hence make sure it covers your entire stay while buying it.
                                         </ListItem>
                                         <ListItem>
                                             <ListIcon as={InfoIcon} color='red.400' />
-                                            All other zero forex markup cards have high joining fee, hence avoid them
+                                            Your normal health insurance doens&apos;t cover international treatments hence strongly recommended you get travel insurance.
                                         </ListItem>
                                     </List>
                                 </Stack>
@@ -75,36 +75,14 @@ export default function Home() {
                             <Divider style={{ color: '#e2e8f0' }} />
                             <CardFooter>
                                 <ButtonGroup spacing='2'>
-                                    <Button
-                                        variant='solid'
-                                        colorScheme='blue'
-                                        onClick={() => window.open('https://www.rblbank.com/product/credit-cards/world-safari-credit-card')}>
-                                        RBL World Safari
+                                    <Button colorScheme='blue' onClick={() => window.open('https://www.godigit.com/international-travel-insurance')}>
+                                        Digit Travel Insurance
                                     </Button>
                                 </ButtonGroup>
                             </CardFooter>
                         </Card>
-
-                        <Card maxW='sm'>
-                            <CardBody>
-                                <Tag colorScheme='teal'>Personally used 😞</Tag>
-                                <Alert status='error' style={{ marginTop: '10px' }}>
-                                    <AlertIcon />
-                                    Please avoid Amex credit cards, since they are hardly accepted anywhere in Vietnam.
-                                </Alert>
-                                <Image
-                                    src={'/static/images/amex.webp'}
-                                    alt='Green double couch with wooden legs'
-                                    borderRadius='lg'
-                                    style={{ marginTop: '10px' }}
-                                />
-                            </CardBody>
-                        </Card>
                     </SimpleGrid>
-
-
                 </div>
-
             </main>
         </>
     )

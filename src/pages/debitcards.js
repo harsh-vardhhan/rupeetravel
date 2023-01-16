@@ -22,7 +22,7 @@ import {
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
-import { CheckCircleIcon, InfoIcon} from '@chakra-ui/icons'
+import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
 
 export default function Home() {
@@ -75,8 +75,8 @@ export default function Home() {
                                         </ListItem>
                                         <ListItem>
                                             <ListIcon as={InfoIcon} color='red.400' />
-                                            Local ATMs in Vietnam will still charge 1.5%-3% 
-                                            (minimum amount 30,000 VND -50,000 VND) on withdrawal. 
+                                            Local ATMs in Vietnam will still charge 1.5%-3%
+                                            (minimum amount 30,000 VND -50,000 VND) on withdrawal.
                                             Hence try withdrawing a decent amount of cash.
                                         </ListItem>
                                     </List>
@@ -85,7 +85,10 @@ export default function Home() {
                             <Divider style={{ color: '#e2e8f0' }} />
                             <CardFooter>
                                 <ButtonGroup spacing='2'>
-                                    <Button variant='solid' colorScheme='blue'>
+                                    <Button
+                                        variant='solid'
+                                        colorScheme='blue'
+                                        onClick={() => window.open('https://fi.money/')}>
                                         Get Fi Account
                                     </Button>
                                 </ButtonGroup>
@@ -111,7 +114,7 @@ export default function Home() {
                             <CardBody>
                                 <Alert status='error' style={{ marginTop: '10px' }}>
                                     <AlertIcon />
-                                    Please avoid Discover debit cards, since they are hardly accepted anywhere. You can check the logo on your debit incase you are not aware. 
+                                    Please avoid Discover debit cards, since they are hardly accepted anywhere. You can check the logo on your debit incase you are not aware.
                                 </Alert>
                                 <Image
                                     src={'/static/images/discover.webp'}
