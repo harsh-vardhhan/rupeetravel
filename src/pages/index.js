@@ -129,28 +129,34 @@ export default function Home() {
               <CardBody>
                 <Stack divider={<StackDivider />} spacing='4'>
                   <Box>
-                    <Heading size='md'>
-                      Food & Taxi <Tag colorScheme='orange'>Recommended</Tag>
-                    </Heading>
-                    <Text pt='2' fontSize='sm'>
-                      Download the Zomato + Uber of Vietnam.
-                    </Text>
+                    <Link href="/mobileapp">
+                      <Heading size='md'>
+                        Food & Taxi <Tag colorScheme='orange'>Recommended</Tag>
+                      </Heading>
+                      <Text pt='2' fontSize='sm'>
+                        Download the Zomato + Uber of Vietnam.
+                      </Text>
+                    </Link>
                   </Box>
                   <Box>
-                    <Heading size='md'>
-                      Local mobile sim <Tag colorScheme='orange'>Recommended</Tag>
-                    </Heading>
-                    <Text pt='2' fontSize='sm'>
-                      Get local Vietnam sim.
-                    </Text>
+                    <Link href="/sim">
+                      <Heading size='md'>
+                        Local mobile sim <Tag colorScheme='orange'>Recommended</Tag>
+                      </Heading>
+                      <Text pt='2' fontSize='sm'>
+                        Get local Vietnam sim.
+                      </Text>
+                    </Link>
                   </Box>
                   <Box>
-                    <Heading size='md'>
-                      Place to work <Tag colorScheme='orange'>Recommended</Tag>
-                    </Heading>
-                    <Text pt='2' fontSize='sm'>
-                      Cafe for remote workers.
-                    </Text>
+                    <Link href="/work">
+                      <Heading size='md'>
+                        Place to work <Tag colorScheme='orange'>Recommended</Tag>
+                      </Heading>
+                      <Text pt='2' fontSize='sm'>
+                        For remote workers.
+                      </Text>
+                    </Link>
                   </Box>
                 </Stack>
               </CardBody>
