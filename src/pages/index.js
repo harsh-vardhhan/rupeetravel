@@ -40,7 +40,7 @@ export default function Home() {
                   <Box>
                     <Link href="/debitcards">
                       <Heading size='md'>
-                        Debit Card <Tag colorScheme='teal'>Mandatory</Tag>
+                        Debit Card <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
                       <Text pt='2' fontSize='sm'>
                         Zero forex markup debit card
