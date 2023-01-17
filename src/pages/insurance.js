@@ -13,12 +13,9 @@ import {
     CardFooter,
     ButtonGroup,
     Button,
-    Image,
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
-    Alert,
-    AlertIcon,
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'

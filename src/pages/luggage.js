@@ -9,20 +9,14 @@ import {
     List,
     ListItem,
     ListIcon,
-    Divider,
-    CardFooter,
-    ButtonGroup,
-    Button,
     Image,
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
-    Alert,
-    AlertIcon,
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
-import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
+import { CheckCircleIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
 
 export default function Home() {

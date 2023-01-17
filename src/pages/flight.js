@@ -13,7 +13,6 @@ import {
     CardFooter,
     ButtonGroup,
     Button,
-    Image,
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,

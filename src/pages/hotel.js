@@ -17,8 +17,6 @@ import {
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
-    Alert,
-    AlertIcon,
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'

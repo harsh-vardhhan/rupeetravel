@@ -17,10 +17,7 @@ import {
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
-    Alert,
-    AlertIcon,
     SimpleGrid,
-    Tag,
 } from '@chakra-ui/react'
 import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
