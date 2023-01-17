@@ -85,22 +85,6 @@ export default function Home() {
                                 </ButtonGroup>
                             </CardFooter>
                         </Card>
-
-                        <Card maxW='sm'>
-                            <CardBody>
-                                <Tag colorScheme='teal'>Personally used 😞</Tag>
-                                <Alert status='error' style={{ marginTop: '10px' }}>
-                                    <AlertIcon />
-                                    Please avoid Amex credit cards, since they are hardly accepted anywhere in Vietnam.
-                                </Alert>
-                                <Image
-                                    src={'/static/images/amex.webp'}
-                                    alt='Green double couch with wooden legs'
-                                    borderRadius='lg'
-                                    style={{ marginTop: '10px' }}
-                                />
-                            </CardBody>
-                        </Card>
                     </SimpleGrid>
 
 
