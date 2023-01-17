@@ -23,9 +23,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
 
-        <meta name="twitter:title" content={'Rupee Travel | Vietnam trip for Indians'} />
-        <meta name="twitter:description" content={'Vietnam budget travel checklist for Indians'} />
-        <meta name="twitter:image" content={'https://raw.githubusercontent.com/TrakBit/Images/master/rupeetravel.png'} />
+        <meta name="twitter:title" content="Rupee Travel | Vietnam trip for Indians" />
+        <meta name="twitter:description" content="Vietnam budget travel checklist for Indians" />
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/TrakBit/Images/master/rupeetravel.png" />
         <meta name="twitter:card" content="summary_large_image" />
 
       </Head>
