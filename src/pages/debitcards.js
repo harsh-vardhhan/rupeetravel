@@ -112,9 +112,11 @@ export default function Home() {
 
                         <Card maxW='sm'>
                             <CardBody>
+                                <Tag colorScheme='teal'>Personally used 😞</Tag>
                                 <Alert status='error' style={{ marginTop: '10px' }}>
                                     <AlertIcon />
-                                    Please avoid Discover debit cards, since they are hardly accepted anywhere. You can check the logo on your debit incase you are not aware.
+                                    Please avoid Discover debit cards since they are hardly accepted anywhere. 
+                                    You can check the logo on your debit card in case you aren&apos;t aware.
                                 </Alert>
                                 <Image
                                     src={'/static/images/discover.webp'}
