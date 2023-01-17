@@ -88,28 +88,34 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Heading size='md'>
-                      Luggage <Tag colorScheme='orange'>Recommended</Tag>
-                    </Heading>
-                    <Text pt='2' fontSize='sm'>
-                      Quick travel hack for luggage.
-                    </Text>
+                    <Link href="/luggage">
+                      <Heading size='md'>
+                        Luggage <Tag colorScheme='orange'>Recommended</Tag>
+                      </Heading>
+                      <Text pt='2' fontSize='sm'>
+                        Quick travel hack for luggage.
+                      </Text>
+                    </Link>
                   </Box>
                   <Box>
-                    <Heading size='md'>
-                      Hotel Booking <Tag colorScheme='orange'>Recommended</Tag>
-                    </Heading>
-                    <Text pt='2' fontSize='sm'>
-                      Book hotel directly.
-                    </Text>
+                    <Link href="/hotel">
+                      <Heading size='md'>
+                        Hotel Booking <Tag colorScheme='orange'>Recommended</Tag>
+                      </Heading>
+                      <Text pt='2' fontSize='sm'>
+                        Book hotel directly.
+                      </Text>
+                    </Link>
                   </Box>
                   <Box>
-                    <Heading size='md'>
-                      eSim <Tag colorScheme='orange'>Recommended</Tag>
-                    </Heading>
-                    <Text pt='2' fontSize='sm'>
-                      Get eSim for single sim phone.
-                    </Text>
+                    <Link href="/esim">
+                      <Heading size='md'>
+                        eSim <Tag colorScheme='orange'>Recommended</Tag>
+                      </Heading>
+                      <Text pt='2' fontSize='sm'>
+                        Get eSim for single sim phone.
+                      </Text>
+                    </Link>
                   </Box>
                 </Stack>
               </CardBody>
