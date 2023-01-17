@@ -60,7 +60,7 @@ export default function Home() {
                                     borderRadius='lg'
                                 />
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>Name on your luggage to avoid confusion <Tag colorScheme='teal'>Personally experienced 😞</Tag></Heading>
+                                    <Heading size='md'>Luggage travel hack <Tag colorScheme='teal'>Personally experienced 😞</Tag></Heading>
                                     <List spacing={3}>
                                         <ListItem>
                                             <ListIcon as={CheckCircleIcon} color='green.500' />
