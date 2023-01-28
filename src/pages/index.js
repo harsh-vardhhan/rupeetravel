@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <main className={styles.main}>
-        <Heading as='h2' size='2xl'>Rupee Travel</Heading>
+        <Heading as='h1' size='2xl'>Rupee Travel</Heading>
         <Text fontSize='xl' style={{ marginTop: '20px' }}>Budget travel checklist for Indians travelling Vietnam 🇻🇳</Text>
         <div style={{ marginTop: '20px' }}>
 

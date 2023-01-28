@@ -30,7 +30,7 @@ export default function Home() {
         <>
             <main className={styles.main}>
                 <Link href="/">
-                    <Heading as='h2' size='2xl'>Rupee Travel</Heading>
+                    <Heading as='h1' size='2xl'>Rupee Travel</Heading>
                 </Link>
 
                 <Text fontSize='xl' style={{ marginTop: '20px' }}>Debit Cards</Text>
