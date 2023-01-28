@@ -17,18 +17,6 @@ import {
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Rupee Travel | Vietnam trip for Indians </title>
-        <meta name="description" content="Vietnam budget travel checklist for Indians" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-
-        <meta name="twitter:title" content="Rupee Travel | Vietnam trip for Indians" />
-        <meta name="twitter:description" content="Vietnam budget travel checklist for Indians" />
-        <meta name="twitter:image" content="https://raw.githubusercontent.com/TrakBit/Images/master/rupeetravel.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-
-      </Head>
       <main className={styles.main}>
         <Heading as='h2' size='2xl'>Rupee Travel</Heading>
         <Text fontSize='xl' style={{ marginTop: '20px' }}>Budget travel checklist for Indians travelling Vietnam 🇻🇳</Text>

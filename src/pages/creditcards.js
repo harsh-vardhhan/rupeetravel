@@ -28,12 +28,6 @@ import Link from 'next/link'
 export default function Home() {
     return (
         <>
-            <Head>
-                <title>Rupee Travel | Vietnam trip for Indians </title>
-                <meta name="description" content="Vietnam budget travel checklist for Indians" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
             <main className={styles.main}>
                 <Link href="/">
                     <Heading as='h2' size='2xl'>Rupee Travel</Heading>
