@@ -145,10 +145,20 @@ export default function Home() {
                   <Box>
                     <Link href="/work">
                       <Heading size='md'>
-                        Place to work <Tag colorScheme='orange'>Recommended</Tag>
+                        Place to work <Tag colorScheme='red'>Remote work</Tag>
                       </Heading>
                       <Text pt='2' fontSize='sm'>
                         For remote workers.
+                      </Text>
+                    </Link>
+                  </Box>
+                  <Box>
+                    <Link href="/atm">
+                      <Heading size='md'>
+                        ATM cash withdrawal  <Tag colorScheme='orange'>Recommended</Tag>
+                      </Heading>
+                      <Text pt='2' fontSize='sm'>
+                        zero forex ATM 
                       </Text>
                     </Link>
                   </Box>
