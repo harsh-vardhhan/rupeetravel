@@ -1,42 +1,43 @@
-import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
 import {
     Card,
     CardBody,
-    Text,
     Stack,
     List,
-    ListItem,
-    ListIcon,
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
 import { CheckCircleIcon } from '@chakra-ui/icons'
-import Link from 'next/link'
+import ListView from '@/component/listview'
+import Header from '@/component/header'
+
+const features = [
+    {
+        item: 1,
+        icon: CheckCircleIcon,
+        title: `You will access to sim right after your immigration is done at airport`,
+        color: 'green.500',
+    },
+    {
+        item: 2,
+        icon: CheckCircleIcon,
+        title: `Get sim with good data pack`,
+        color: 'green.500',
+    },
+    {
+        item: 3,
+        icon: CheckCircleIcon,
+        title: `Please don't use it too lavishly, mobile data is not as cheap as India`,
+        color: 'red.400',
+    },
+]
 
 export default function Home() {
     return (
         <>
             <main className={styles.main}>
-                <Link href="/">
-                    <Heading as='h1' size='2xl'>Rupee Travel</Heading>
-                </Link>
-
-                <Text fontSize='xl' style={{ marginTop: '20px' }}>Local sim</Text>
-                <Breadcrumb>
-                    <BreadcrumbItem>
-                        <Link href="/">
-                            <BreadcrumbLink>Home</BreadcrumbLink>
-                        </Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink href='#'>Local sim</BreadcrumbLink>
-                    </BreadcrumbItem>
-                </Breadcrumb>
+                <Header title={'local sim'}/>
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
@@ -44,18 +45,7 @@ export default function Home() {
                                 <Stack mt='6' spacing='3'>
                                     <Heading size='md'>Get local sim at airport <Tag colorScheme='teal'>Personally used</Tag></Heading>
                                     <List spacing={3}>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            You will access to sim right after your immigration is done at airport
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500'/>
-                                           Get sim with good data pack
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='red.400'  />
-                                            Please don&apos;t use it too lavishly, mobile data is not as cheap as India
-                                        </ListItem>
+                                        <ListView features={features} />
                                     </List>
                                 </Stack>
                             </CardBody>

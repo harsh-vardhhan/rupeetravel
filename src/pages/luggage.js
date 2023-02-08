@@ -1,43 +1,44 @@
-import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
 import {
     Card,
     CardBody,
-    Text,
     Stack,
     List,
-    ListItem,
-    ListIcon,
     Image,
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
 import { CheckCircleIcon } from '@chakra-ui/icons'
-import Link from 'next/link'
+import ListView from '@/component/listview'
+import Header from '@/component/header'
+
+const features = [
+    {
+        item: 1,
+        icon: CheckCircleIcon,
+        title: `Put a name label on your checked-in luggage`,
+        color: 'green.500',
+    },
+    {
+        item: 2,
+        icon: CheckCircleIcon,
+        title: `It avoids the chances of others accidentally picking your luggage`,
+        color: 'red.400',
+    },
+    {
+        item: 3,
+        icon: CheckCircleIcon,
+        title: `It also helps you recognise your luggage quickly on the conveyer belt.`,
+        color: 'green.500',
+    },
+]
 
 export default function Home() {
     return (
         <>
             <main className={styles.main}>
-                <Link href="/">
-                    <Heading as='h1' size='2xl'>Rupee Travel</Heading>
-                </Link>
-
-                <Text fontSize='xl' style={{ marginTop: '20px' }}>Luggage</Text>
-                <Breadcrumb>
-                    <BreadcrumbItem>
-                        <Link href="/">
-                            <BreadcrumbLink>Home</BreadcrumbLink>
-                        </Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink href='#'>Luggage</BreadcrumbLink>
-                    </BreadcrumbItem>
-                </Breadcrumb>
+                <Header title={'luggage'}/>
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
@@ -50,18 +51,7 @@ export default function Home() {
                                 <Stack mt='6' spacing='3'>
                                     <Heading size='md'>Luggage travel hack <Tag colorScheme='teal'>Personally experienced 😞</Tag></Heading>
                                     <List spacing={3}>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            Put a name label on your checked-in luggage
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='red.400' />
-                                           It avoids the chances of others accidentally picking your luggage
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            It also helps you recognise your luggage quickly on the conveyer belt.
-                                        </ListItem>
+                                        <ListView features={features} />
                                     </List>
                                 </Stack>
                             </CardBody>

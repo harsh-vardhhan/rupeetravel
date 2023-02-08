@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
 import {
@@ -7,43 +6,71 @@ import {
     Text,
     Stack,
     List,
-    ListItem,
-    ListIcon,
-    Divider,
-    CardFooter,
-    ButtonGroup,
-    Button,
     Image,
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
     Alert,
     AlertIcon,
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
 import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
-import Link from 'next/link'
+import Header from '@/component/header'
+import ListView from '@/component/listview'
+
+const features = [
+    {
+        item: 1,
+        icon: CheckCircleIcon,
+        title: `Always accepts international debit card (unlike other ATM's)`,
+        color: 'green.500',
+    },
+    {
+        item: 2,
+        icon: CheckCircleIcon,
+        title: 'Zero Forex charges on cash withdrawal.',
+        color: 'green.500',
+    },
+    {
+        item: 3,
+        icon: InfoIcon,
+        title: ` Other ATMs in Vietnam can charge 1.5%-3%
+        (minimum amount 30,000 VND -50,000 VND) on withdrawal.`,
+        color: 'red.400',
+    }
+]
+
+const atmFeatures = [
+    {
+        item: 1,
+        icon: CheckCircleIcon,
+        title: ` bank whose debit card you hold. 💳`,
+        color: 'green.500',
+    },
+    {
+        item: 2,
+        icon: CheckCircleIcon,
+        title: `bank whose ATM you use. 🏧`,
+        color: 'green.500',
+    },
+    {
+        item: 3,
+        icon: CheckCircleIcon,
+        title: ` Fi debit card + Ocean bank ATM = zero forex*`,
+        color: 'green.500',
+    },
+    {
+        item: 4,
+        icon: InfoIcon,
+        title: ` *Just ₹100 charge for ATM withdrawal from Fi`,
+        color: 'red.400',
+    }
+]
 
 export default function Home() {
     return (
         <>
             <main className={styles.main}>
-                <Link href="/">
-                    <Heading as='h1' size='2xl'>Rupee Travel</Heading>
-                </Link>
+                <Header title={'ATM cash withdrawal'} />
 
-                <Text fontSize='xl' style={{ marginTop: '20px' }}>ATM cash withdrawal</Text>
-                <Breadcrumb>
-                    <BreadcrumbItem>
-                        <Link href="/">
-                            <BreadcrumbLink>Home</BreadcrumbLink>
-                        </Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink href='#'>ATM cash withdrawal</BreadcrumbLink>
-                    </BreadcrumbItem>
-                </Breadcrumb>
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
@@ -59,19 +86,7 @@ export default function Home() {
                                         Just search on google map &quot;Ocean Bank&quot; for nearby ATM.
                                     </Text>
                                     <List spacing={3}>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            Always accepts international debit card (unlike other ATM&apos;s)
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            Zero Forex charges on cash withdrawal.
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={InfoIcon} color='red.400' />
-                                            Other ATMs in Vietnam can charge 1.5%-3%
-                                            (minimum amount 30,000 VND -50,000 VND) on withdrawal.
-                                        </ListItem>
+                                        <ListView features={features}/>
                                     </List>
                                 </Stack>
                             </CardBody>
@@ -88,22 +103,7 @@ export default function Home() {
                                         When you withdraw cash from ATM&apos;s there are two sides which charge you:
                                     </Text>
                                     <List spacing={3}>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            bank whose debit card you hold. 💳
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            bank whose ATM you use. 🏧
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            Fi debit card + Ocean bank ATM = zero forex*
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={InfoIcon} color='red.400' />
-                                            *Just ₹100 charge for ATM withdrawal from Fi
-                                        </ListItem>
+                                        <ListView features={atmFeatures}/>
                                     </List>
                                 </Stack>
                             </CardBody>

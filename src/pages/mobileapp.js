@@ -1,46 +1,47 @@
-import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
 import {
     Card,
     CardBody,
-    Text,
     Stack,
     List,
-    ListItem,
-    ListIcon,
     Divider,
     CardFooter,
     ButtonGroup,
     Button,
     Image,
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
     SimpleGrid,
 } from '@chakra-ui/react'
-import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
-import Link from 'next/link'
+import { CheckCircleIcon } from '@chakra-ui/icons'
+import ListView from '@/component/listview'
+import Header from '@/component/header'
+
+const features = [
+    {
+        item: 1,
+        icon: CheckCircleIcon,
+        title: `It's the Uber + Zomato of Vietnam`,
+        color: 'green.500',
+    },
+    {
+        item: 2,
+        icon: CheckCircleIcon,
+        title: `Signup with the local Vietnam number`,
+        color: 'red.400',
+    },
+    {
+        item: 3,
+        icon: CheckCircleIcon,
+        title: `Indian debit and credit cards don't work with Grab. So keep cash (VND) ready before using it's services.`,
+        color: 'green.500',
+    },
+]
 
 export default function Home() {
     return (
         <>
             <main className={styles.main}>
-                <Link href="/">
-                    <Heading as='h1' size='2xl'>Rupee Travel</Heading>
-                </Link>
-
-                <Text fontSize='xl' style={{ marginTop: '20px' }}>Get Grab</Text>
-                <Breadcrumb>
-                    <BreadcrumbItem>
-                        <Link href="/">
-                            <BreadcrumbLink>Home</BreadcrumbLink>
-                        </Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink href='#'>Get Grab</BreadcrumbLink>
-                    </BreadcrumbItem>
-                </Breadcrumb>
+                <Header title={'mobile app'}/>
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
@@ -53,18 +54,7 @@ export default function Home() {
                                 <Stack mt='6' spacing='3'>
                                     <Heading size='md'>Download Grab</Heading>
                                     <List spacing={3}>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            It&apos;s the Uber + Zomato of Vietnam
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            Signup with the local Vietnam number
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={InfoIcon} color='red.400' />
-                                            Indian debit and credit cards don&apos;t work with Grab. So keep cash (VND) ready before using it&apos;s services.
-                                        </ListItem>
+                                        <ListView features={features} />
                                     </List>
                                 </Stack>
                             </CardBody>

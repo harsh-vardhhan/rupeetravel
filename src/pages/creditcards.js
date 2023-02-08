@@ -1,49 +1,52 @@
-import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
 import {
     Card,
     CardBody,
-    Text,
     Stack,
     List,
-    ListItem,
-    ListIcon,
     Divider,
     CardFooter,
     ButtonGroup,
     Button,
     Image,
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
     Alert,
     AlertIcon,
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
 import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
-import Link from 'next/link'
+import Header from '@/component/header'
+import ListView from '@/component/listview'
+
+const features = [
+    {
+        item: 1,
+        icon: CheckCircleIcon,
+        title: ' Zero forex markup credit card',
+        color: 'green.500',
+    },
+    {
+        item: 2,
+        icon: CheckCircleIcon,
+        title: '₹3000 Joining/Annual fee',
+        color: 'green.500',
+    },
+    {
+        item: 3,
+        icon: InfoIcon,
+        title: 'All other zero forex markup cards have high joining fee, hence avoid them',
+        color: 'red.400',
+    }
+]
 
 export default function Home() {
     return (
         <>
             <main className={styles.main}>
-                <Link href="/">
-                    <Heading as='h1' size='2xl'>Rupee Travel</Heading>
-                </Link>
 
-                <Text fontSize='xl' style={{ marginTop: '20px' }}>Credit Cards</Text>
-                <Breadcrumb>
-                    <BreadcrumbItem>
-                        <Link href="/">
-                            <BreadcrumbLink>Home</BreadcrumbLink>
-                        </Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink href='#'>Credit Cards</BreadcrumbLink>
-                    </BreadcrumbItem>
-                </Breadcrumb>
+                <Header title={'Credit Cards'}/>
+
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
@@ -51,18 +54,7 @@ export default function Home() {
                                 <Stack mt='6' spacing='3'>
                                     <Heading size='md'>RBL World Safari <Tag colorScheme='orange'>Applied for it</Tag></Heading>
                                     <List spacing={3}>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            Zero forex markup credit card
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            ₹3000 Joining/Annual fee
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={InfoIcon} color='red.400' />
-                                            All other zero forex markup cards have high joining fee, hence avoid them
-                                        </ListItem>
+                                        <ListView features={features}/>
                                     </List>
                                 </Stack>
                             </CardBody>

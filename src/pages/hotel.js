@@ -1,47 +1,48 @@
-import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
 import {
     Card,
     CardBody,
-    Text,
     Stack,
     List,
-    ListItem,
-    ListIcon,
     Divider,
     CardFooter,
     ButtonGroup,
     Button,
     Image,
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
 import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
-import Link from 'next/link'
+import ListView from '@/component/listview'
+import Header from '@/component/header'
+
+const features = [
+    {
+        item: 1,
+        icon: CheckCircleIcon,
+        title: `just search on fb as 'CITY_YOU_VISITING hotel'`,
+        color: 'green.500',
+    },
+    {
+        item: 2,
+        icon: CheckCircleIcon,
+        title: `You can message hotels and get your rooms booked`,
+        color: 'green.500',
+    },
+    {
+        item: 3,
+        icon: InfoIcon,
+        title: `For premium experience stick to domestic 4 star (which are internationally 3 star hotels.)`,
+        color: 'red.400',
+    },
+]
 
 export default function Home() {
     return (
         <>
             <main className={styles.main}>
-                <Link href="/">
-                    <Heading as='h1' size='2xl'>Rupee Travel</Heading>
-                </Link>
-
-                <Text fontSize='xl' style={{ marginTop: '20px' }}>Hotel</Text>
-                <Breadcrumb>
-                    <BreadcrumbItem>
-                        <Link href="/">
-                            <BreadcrumbLink>Home</BreadcrumbLink>
-                        </Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink href='#'>Hotel</BreadcrumbLink>
-                    </BreadcrumbItem>
-                </Breadcrumb>
+                <Header title={'booking hotel'}/>
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
@@ -54,18 +55,7 @@ export default function Home() {
                                 <Stack mt='6' spacing='3'>
                                     <Heading size='md'>Facebook search</Heading>
                                     <List spacing={3}>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            just search on fb as &quot;CITY_YOU_VISITING hotel&quot;
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            You can message hotels and get your rooms booked
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={InfoIcon} color='red.400' />
-                                            For premium experience stick to domestic 4 star (which are internationally 3 star hotels.)
-                                        </ListItem>
+                                        <ListView features={features}/>
                                     </List>
                                 </Stack>
                             </CardBody>

@@ -1,46 +1,47 @@
-import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
 import {
     Card,
     CardBody,
-    Text,
     Stack,
     List,
-    ListItem,
-    ListIcon,
     Divider,
     CardFooter,
     ButtonGroup,
     Button,
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
 import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
-import Link from 'next/link'
+import ListView from '@/component/listview'
+import Header from '@/component/header'
+
+const features = [
+    {
+        item: 1,
+        icon: CheckCircleIcon,
+        title: `Got $100,000 coverage at just ~₹1300 premium`,
+        color: 'green.500',
+    },
+    {
+        item: 2,
+        icon: CheckCircleIcon,
+        title: `It cannot be extended hence make sure it covers your entire stay while buying it.`,
+        color: 'green.500',
+    },
+    {
+        item: 3,
+        icon: InfoIcon,
+        title: `Your normal health insurance doesn't cover international treatments hence strongly recommended you get travel insurance.`,
+        color: 'red.400',
+    },
+]
 
 export default function Home() {
     return (
         <>
             <main className={styles.main}>
-                <Link href="/">
-                    <Heading as='h1' size='2xl'>Rupee Travel</Heading>
-                </Link>
-
-                <Text fontSize='xl' style={{ marginTop: '20px' }}>Travel Insurance</Text>
-                <Breadcrumb>
-                    <BreadcrumbItem>
-                        <Link href="/">
-                            <BreadcrumbLink>Home</BreadcrumbLink>
-                        </Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink href='#'>Travel Insurance</BreadcrumbLink>
-                    </BreadcrumbItem>
-                </Breadcrumb>
+                <Header title={'travel insurance'}/>
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
@@ -48,18 +49,7 @@ export default function Home() {
                                 <Stack mt='6' spacing='3'>
                                     <Heading size='md'>Digit Insurance <Tag colorScheme='teal'>Personally used</Tag></Heading>
                                     <List spacing={3}>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                            Got $100,000 coverage at just ~₹1300 premium
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={CheckCircleIcon} color='green.500' />
-                                           It cannot be extended hence make sure it covers your entire stay while buying it.
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListIcon as={InfoIcon} color='red.400' />
-                                            Your normal health insurance doens&apos;t cover international treatments hence strongly recommended you get travel insurance.
-                                        </ListItem>
+                                        <ListView features={features} />
                                     </List>
                                 </Stack>
                             </CardBody>
