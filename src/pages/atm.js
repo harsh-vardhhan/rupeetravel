@@ -77,7 +77,7 @@ export default function Home() {
                             <CardBody>
                                 <Image
                                     src={'/static/images/atm.webp'}
-                                    alt='Green double couch with wooden legs'
+                                    alt='Ocean Bank ATM'
                                     borderRadius='lg'
                                 />
                                 <Stack mt='6' spacing='3'>

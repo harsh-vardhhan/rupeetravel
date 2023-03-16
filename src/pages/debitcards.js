@@ -54,7 +54,7 @@ export default function Home() {
                             <CardBody>
                                 <Image
                                     src={'/static/images/debitcard.webp'}
-                                    alt='Green double couch with wooden legs'
+                                    alt='Fi Debit Card'
                                     borderRadius='lg'
                                 />
                                 <Stack mt='6' spacing='3'>
@@ -88,7 +88,7 @@ export default function Home() {
                                 </Alert>
                                 <Image
                                     src={'/static/images/fisetting.webp'}
-                                    alt='Green double couch with wooden legs'
+                                    alt='Fi Settings Mobile'
                                     style={{ marginTop: '10px' }}
                                     borderRadius='lg'
                                 />
@@ -105,7 +105,7 @@ export default function Home() {
                                 </Alert>
                                 <Image
                                     src={'/static/images/discover.webp'}
-                                    alt='Green double couch with wooden legs'
+                                    alt='Discover card'
                                     borderRadius='lg'
                                     style={{ marginTop: '10px' }}
                                 />

@@ -23,19 +23,25 @@ const features = [
     {
         item: 1,
         icon: CheckCircleIcon,
-        title: ' Zero forex markup credit card',
+        title: 'Zero forex markup credit card',
         color: 'green.500',
     },
     {
         item: 2,
         icon: CheckCircleIcon,
-        title: '₹3000 Joining/Annual fee',
+        title: 'Zero Joining/Annual fee',
         color: 'green.500',
     },
     {
         item: 3,
+        icon: CheckCircleIcon,
+        title: 'Withdraw cash from ATM without interest till Payment date (48 days interest free cash)',
+        color: 'green.500',
+    },
+    {
+        item: 4,
         icon: InfoIcon,
-        title: 'All other zero forex markup cards have high joining fee, hence avoid them',
+        title: 'Secured credit card which needs an FD as collateral',
         color: 'red.400',
     }
 ]
@@ -45,16 +51,22 @@ export default function Home() {
         <>
             <main className={styles.main}>
 
-                <Header title={'Credit Cards'}/>
+                <Header title={'Credit Cards'} />
 
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>RBL World Safari <Tag colorScheme='orange'>Applied for it</Tag></Heading>
+                                    <Heading size='md'>IDFC First Wow <Tag colorScheme='teal'>Personally using</Tag></Heading>
+                                    <Image
+                                        src={'/static/images/creditcard.webp'}
+                                        alt='IDFC First Wow'
+                                        borderRadius='lg'
+                                        style={{ marginTop: '10px' }}
+                                    />
                                     <List spacing={3}>
-                                        <ListView features={features}/>
+                                        <ListView features={features} />
                                     </List>
                                 </Stack>
                             </CardBody>
@@ -64,8 +76,8 @@ export default function Home() {
                                     <Button
                                         variant='solid'
                                         colorScheme='blue'
-                                        onClick={() => window.open('https://www.rblbank.com/product/credit-cards/world-safari-credit-card')}>
-                                        RBL World Safari
+                                        onClick={() => window.open('https://www.idfcfirstbank.com/credit-card/credit-card-against-fixed-deposits')}>
+                                        IDFC First Wow
                                     </Button>
                                 </ButtonGroup>
                             </CardFooter>
@@ -80,7 +92,7 @@ export default function Home() {
                                 </Alert>
                                 <Image
                                     src={'/static/images/amex.webp'}
-                                    alt='Green double couch with wooden legs'
+                                    alt='Amex card'
                                     borderRadius='lg'
                                     style={{ marginTop: '10px' }}
                                 />
