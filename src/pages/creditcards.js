@@ -40,6 +40,12 @@ const features = [
     },
     {
         item: 4,
+        icon: CheckCircleIcon,
+        title: 'VISA backed credit card hence higher acceptance in Vietnam',
+        color: 'green.500',
+    },
+    {
+        item: 5,
         icon: InfoIcon,
         title: 'Secured credit card which needs an FD as collateral',
         color: 'red.400',
