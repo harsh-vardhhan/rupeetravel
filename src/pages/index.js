@@ -32,7 +32,7 @@ export default function Home() {
               <CardBody>
                 <Stack divider={<StackDivider />} spacing='4'>
                   <Box>
-                    <Link href="/debit-cards">
+                    <Link href="/debit-cards-vietnam-zero-forex-markup">
                       <Heading size='md'>
                         Debit Card <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
@@ -42,7 +42,7 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/credit-cards">
+                    <Link href="/credit-cards-vietnam-zero-forex-markup">
                       <Heading size='md'>
                         Credit Card <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
@@ -52,7 +52,7 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/evisa">
+                    <Link href="/e-visa-vietnam">
                       <Heading size='md'>
                         E-Visa <Tag colorScheme='teal'>Mandatory</Tag>
                       </Heading>
@@ -62,7 +62,7 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/flight">
+                    <Link href="/flight-vietnam">
                       <Heading size='md'>
                         Flight Booking <Tag colorScheme='teal'>Mandatory</Tag>
                       </Heading>
@@ -72,7 +72,7 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/insurance">
+                    <Link href="/travel-insurance-vietnam">
                       <Heading size='md'>
                         Travel insurance <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
@@ -92,7 +92,7 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/hotel">
+                    <Link href="/hotel-booking-vietnam">
                       <Heading size='md'>
                         Hotel Booking <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
@@ -102,7 +102,7 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/esim">
+                    <Link href="/esim-vietnam">
                       <Heading size='md'>
                         eSim <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
@@ -123,7 +123,7 @@ export default function Home() {
               <CardBody>
                 <Stack divider={<StackDivider />} spacing='4'>
                   <Box>
-                    <Link href="/mobileapp">
+                    <Link href="/food-delivery-taxi-vietnam">
                       <Heading size='md'>
                         Food & Taxi <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
@@ -133,7 +133,7 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/sim">
+                    <Link href="/sim-vietnam">
                       <Heading size='md'>
                         Local mobile sim <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
@@ -143,7 +143,7 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/work">
+                    <Link href="/remote-work-vietnam">
                       <Heading size='md'>
                         Place to work <Tag colorScheme='red'>Remote work</Tag>
                       </Heading>
@@ -153,7 +153,7 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/atm">
+                    <Link href="/atm-vietnam-zero-forex-markup">
                       <Heading size='md'>
                         ATM cash withdrawal  <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
