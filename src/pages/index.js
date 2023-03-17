@@ -62,7 +62,7 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/flight-vietnam">
+                    <Link href="/flight-booking-vietnam">
                       <Heading size='md'>
                         Flight Booking <Tag colorScheme='teal'>Mandatory</Tag>
                       </Heading>
