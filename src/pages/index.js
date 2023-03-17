@@ -31,7 +31,7 @@ export default function Home() {
               <CardBody>
                 <Stack divider={<StackDivider />} spacing='4'>
                   <Box>
-                    <Link href="/debit-cards-vietnam-zero-forex-markup">
+                    <Link href="/debit-cards-travel-vietnam-zero-forex-markup-fee">
                       <Heading size='md'>
                         Debit Card <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
@@ -41,7 +41,7 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/credit-cards-vietnam-zero-forex-markup">
+                    <Link href="/credit-cards-travel-vietnam-zero-forex-markup-fee">
                       <Heading size='md'>
                         Credit Card <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
