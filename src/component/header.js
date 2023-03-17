@@ -16,9 +16,7 @@ const Header = ({ title }) => {
             <Text fontSize='xl' style={{ marginTop: '20px' }}>{title}</Text>
             <Breadcrumb>
                 <BreadcrumbItem>
-                    <Link href="/">
-                        <BreadcrumbLink>Home</BreadcrumbLink>
-                    </Link>
+                    <Link href="/">Home</Link>
                 </BreadcrumbItem>
                 <BreadcrumbItem isCurrentPage>
                     <BreadcrumbLink href='#'>{title}</BreadcrumbLink>
