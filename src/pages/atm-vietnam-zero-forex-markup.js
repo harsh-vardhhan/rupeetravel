@@ -70,7 +70,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Rupee Travel | Best ATM in Vietnam for foreigners</title>
+                <title>Rupee Travel | Best ATM with zero forex markup in Vietnam for foreigners</title>
                 <meta name="description" content="Best and cheapest ATM in Vietnam for zero exchange rate" />
             </Head>
             <main className={styles.main}>
