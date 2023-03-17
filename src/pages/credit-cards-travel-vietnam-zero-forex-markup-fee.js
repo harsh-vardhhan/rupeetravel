@@ -55,6 +55,10 @@ const features = [
 export default function Home() {
     return (
         <>
+            <Head>
+                <title>Rupee Travel | credit card with zero forex markup for travel in Vietnam</title>
+                <meta name="description" content="Best credit card with zero forex markup for foreign travel in Vietnam for Indians" />
+            </Head>
             <main className={styles.main}>
 
                 <Header title={'Credit Cards'} />
