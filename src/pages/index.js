@@ -32,7 +32,7 @@ export default function Home() {
               <CardBody>
                 <Stack divider={<StackDivider />} spacing='4'>
                   <Box>
-                    <Link href="/debitcards">
+                    <Link href="/debit-cards">
                       <Heading size='md'>
                         Debit Card <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
@@ -42,7 +42,7 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/creditcards">
+                    <Link href="/credit-cards">
                       <Heading size='md'>
                         Credit Card <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
