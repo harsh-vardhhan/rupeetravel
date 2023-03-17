@@ -37,13 +37,13 @@ export default function Home() {
     return (
         <>
             <main className={styles.main}>
-                <Header title={'local sim'}/>
+                <Header title={'local SIM card'}/>
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>Get local sim at airport <Tag colorScheme='teal'>Personally used</Tag></Heading>
+                                    <Heading size='md'>Get local SIM card at airport <Tag colorScheme='teal'>Personally used</Tag></Heading>
                                     <List spacing={3}>
                                         <ListView features={features} />
                                     </List>

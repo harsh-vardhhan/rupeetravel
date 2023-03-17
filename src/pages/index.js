@@ -133,12 +133,12 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/sim-vietnam">
+                    <Link href="/local-sim-card-vietnam">
                       <Heading size='md'>
-                        Local mobile sim <Tag colorScheme='orange'>Recommended</Tag>
+                        Local mobile SIM card <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
                       <Text pt='2' fontSize='sm'>
-                        Get local Vietnam sim.
+                        Get local Vietnam SIM card.
                       </Text>
                     </Link>
                   </Box>
