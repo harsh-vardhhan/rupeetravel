@@ -71,7 +71,7 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/travel-insurance-vietnam">
+                    <Link href="/travel-insurance-india-vietnam">
                       <Heading size='md'>
                         Travel insurance <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
