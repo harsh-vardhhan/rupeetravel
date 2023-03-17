@@ -51,7 +51,7 @@ export default function Home() {
                     </Link>
                   </Box>
                   <Box>
-                    <Link href="/e-visa-vietnam">
+                    <Link href="/e-visa-vietnam-indians">
                       <Heading size='md'>
                         E-Visa <Tag colorScheme='teal'>Mandatory</Tag>
                       </Heading>
