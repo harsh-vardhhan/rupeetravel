@@ -68,6 +68,10 @@ const atmFeatures = [
 export default function Home() {
     return (
         <>
+            <Head>
+                <title>Rupee Travel | Best ATM in Vietnam for foreigners</title>
+                <meta name="description" content="Best and cheapest ATM in Vietnam for zero exchange rate" />
+            </Head>
             <main className={styles.main}>
                 <Header title={'ATM cash withdrawal'} />
 

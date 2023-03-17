@@ -54,6 +54,10 @@ const features = [
 export default function Home() {
     return (
         <>
+            <Head>
+                <title>Rupee Travel | India to Vietnam flight ticket</title>
+                <meta name="description" content="Lowest Vietnam flight ticket price from India" />
+            </Head>
             <main className={styles.main}>
                 <Header title={'booking flight'}/>
                 <div style={{ marginTop: '20px' }}>

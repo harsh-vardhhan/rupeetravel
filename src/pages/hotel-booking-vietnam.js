@@ -41,6 +41,10 @@ const features = [
 export default function Home() {
     return (
         <>
+            <Head>
+                <title>Rupee Travel | Lowest Vietnam hotel room price</title>
+                <meta name="description" content="Vietnam cheap hotels" />
+            </Head>
             <main className={styles.main}>
                 <Header title={'booking hotel'}/>
                 <div style={{ marginTop: '20px' }}>

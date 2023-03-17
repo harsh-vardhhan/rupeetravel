@@ -40,6 +40,10 @@ const features = [
 export default function Home() {
     return (
         <>
+            <Head>
+                <title>Rupee Travel | Best travel insurance for Vietnam</title>
+                <meta name="description" content="Travel insurance for Indians in Vietnam" />
+            </Head>
             <main className={styles.main}>
                 <Header title={'travel insurance'}/>
                 <div style={{ marginTop: '20px' }}>

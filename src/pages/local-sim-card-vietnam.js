@@ -36,6 +36,10 @@ const features = [
 export default function Home() {
     return (
         <>
+            <Head>
+                <title>Rupee Travel | Prepaid SIM cards for tourist</title>
+                <meta name="description" content="SIM card at Vietnam airport" />
+            </Head>
             <main className={styles.main}>
                 <Header title={'local SIM card'}/>
                 <div style={{ marginTop: '20px' }}>

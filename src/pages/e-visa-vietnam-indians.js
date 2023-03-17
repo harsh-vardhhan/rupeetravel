@@ -46,6 +46,10 @@ const features = [
 export default function Home() {
     return (
         <>
+            <Head>
+                <title>Rupee Travel | Apply for Vietnam e-visa</title>
+                <meta name="description" content="Vietnam e-visa application" />
+            </Head>
             <main className={styles.main}>
                 <Header title={'Apply E-Visa'} />
                 <div style={{ marginTop: '20px' }}>

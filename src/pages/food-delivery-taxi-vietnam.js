@@ -40,6 +40,10 @@ const features = [
 export default function Home() {
     return (
         <>
+            <Head>
+                <title>Rupee Travel | Food delivery and ride hailing app in Vietnam</title>
+                <meta name="description" content="Grab app in Vietnam" />
+            </Head>
             <main className={styles.main}>
                 <Header title={'mobile app'}/>
                 <div style={{ marginTop: '20px' }}>
