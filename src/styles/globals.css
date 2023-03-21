@@ -105,3 +105,21 @@ a {
     color-scheme: dark;
   }
 }
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-display: swap;
+  color:#33334F;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-display: swap;
+  color:#33334F;
+}
+
+h3 {
+  font-family: "Inter", sans-serif;
+  font-display: swap;
+  color:#33334F;
+}

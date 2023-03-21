@@ -11,9 +11,18 @@ const Header = ({ title }) => {
     return (
         <>
             <Link href="/">
-                <Heading as='h1' size='2xl'>Rupee Travel</Heading>
+                <Heading size='2xl'>Rupee Travel</Heading>
             </Link>
-            <Text fontSize='xl' style={{ marginTop: '20px' }}>{title}</Text>
+            <Text
+                as='h1'
+                fontSize='xl'
+                style={{
+                    marginTop: '20px',
+                    fontWeight: 600,
+                    color: 'slategrey'
+                }}>
+                {title}
+            </Text>
             <Breadcrumb>
                 <BreadcrumbItem>
                     <Link href="/">Home</Link>

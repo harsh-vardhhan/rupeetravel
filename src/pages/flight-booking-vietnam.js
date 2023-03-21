@@ -60,7 +60,7 @@ export default function Home() {
                 <meta name="description" content="Lowest Vietnam flight ticket price from India" />
             </Head>
             <main className={styles.main}>
-                <Header title={'booking flight'}/>
+                <Header title={'Booking flight for Vietnam'}/>
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>

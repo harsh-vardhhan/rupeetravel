@@ -47,7 +47,7 @@ export default function Home() {
                 <meta name="description" content="Vietnam cheap hotels" />
             </Head>
             <main className={styles.main}>
-                <Header title={'booking hotel'}/>
+                <Header title={'Booking hotel in Vietnam'}/>
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>

@@ -62,7 +62,7 @@ export default function Home() {
             </Head>
             <main className={styles.main}>
 
-                <Header title={'Credit Cards'} />
+                <Header title={'Indian Credit Cards for Vietnam'} />
 
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>

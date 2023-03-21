@@ -32,7 +32,7 @@ export default function Home() {
     return (
         <>
             <main className={styles.main}>
-                <Header title={'work'}/>
+                <Header title={'Remote work from Vietnam'}/>
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>

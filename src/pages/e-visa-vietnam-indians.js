@@ -52,7 +52,7 @@ export default function Home() {
                 <meta name="description" content="Vietnam e-visa application" />
             </Head>
             <main className={styles.main}>
-                <Header title={'Apply E-Visa'} />
+                <Header title={'Apply E-Visa for Vietnam'} />
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>

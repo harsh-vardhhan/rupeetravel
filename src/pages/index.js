@@ -17,8 +17,13 @@ export default function Home() {
   return (
     <>
       <main className={styles.main}>
-        <Heading as='h1' size='2xl'>Rupee Travel</Heading>
-        <Text fontSize='xl' style={{ marginTop: '20px' }}>Budget travel checklist for Indians travelling Vietnam 🇻🇳</Text>
+        <Heading size='2xl'>Rupee Travel</Heading>
+        <Text
+          fontSize='xl'
+          as='h1'
+          style={{ marginTop: '20px', fontWeight: 600, color: 'slategrey' }}>
+          Budget travel checklist for Indians travelling Vietnam 🇻🇳
+        </Text>
         <div style={{ marginTop: '20px' }}>
 
           <SimpleGrid minChildWidth='350px' spacing='40px'>
@@ -157,7 +162,7 @@ export default function Home() {
                         ATM cash withdrawal  <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
                       <Text pt='2' fontSize='sm'>
-                        zero forex ATM 
+                        zero forex ATM
                       </Text>
                     </Link>
                   </Box>

@@ -52,7 +52,7 @@ export default function Home() {
                 <meta name="description" content="Best debit card with zero forex markup for foreign travel in Vietnam for Indians" />
             </Head>
             <main className={styles.main}>
-                <Header title={'Debit Cards'}/>
+                <Header title={'Indian Debit Cards for Vietnam'}/>
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
