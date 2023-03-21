@@ -19,7 +19,6 @@ const Header = ({ title }) => {
                 style={{
                     marginTop: '20px',
                     fontWeight: 600,
-                    color: 'slategrey'
                 }}>
                 {title}
             </Text>

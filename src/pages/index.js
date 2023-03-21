@@ -21,7 +21,7 @@ export default function Home() {
         <Text
           fontSize='xl'
           as='h1'
-          style={{ marginTop: '20px', fontWeight: 600, color: 'slategrey' }}>
+          style={{ marginTop: '20px', fontWeight: 600}}>
           Budget travel checklist for Indians travelling Vietnam 🇻🇳
         </Text>
         <div style={{ marginTop: '20px' }}>
