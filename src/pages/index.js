@@ -40,7 +40,7 @@ export default function Home() {
                       <Heading size='md'>
                         Debit Card <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
+                      <Text pt='2' fontSize='sm'>
                         Zero forex markup debit card
                       </Text>
                     </Link>
@@ -50,7 +50,7 @@ export default function Home() {
                       <Heading size='md'>
                         Credit Card <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
+                      <Text pt='2' fontSize='sm'>
                         Zero forex markup credit card
                       </Text>
                     </Link>
@@ -60,7 +60,7 @@ export default function Home() {
                       <Heading size='md'>
                         Foreign Currency Notes <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
+                      <Text pt='2' fontSize='sm'>
                         Lowest exchange rate foreign currency notes
                       </Text>
                     </Link>
@@ -70,7 +70,7 @@ export default function Home() {
                       <Heading size='md'>
                         E-Visa <Tag colorScheme='teal'>Mandatory</Tag>
                       </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
+                      <Text pt='2' fontSize='sm'>
                         Apply E-Visa online.
                       </Text>
                     </Link>
@@ -80,7 +80,7 @@ export default function Home() {
                       <Heading size='md'>
                         Flight Booking <Tag colorScheme='teal'>Mandatory</Tag>
                       </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
+                      <Text pt='2' fontSize='sm'>
                         Cheapest flights from India to Vietnam.
                       </Text>
                     </Link>
@@ -90,7 +90,7 @@ export default function Home() {
                       <Heading size='md'>
                         Travel insurance <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
+                      <Text pt='2' fontSize='sm'>
                         Best travel insurance for Indians
                       </Text>
                     </Link>
@@ -100,7 +100,7 @@ export default function Home() {
                       <Heading size='md'>
                         Luggage <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
+                      <Text pt='2' fontSize='sm'>
                         Quick travel hack for luggage.
                       </Text>
                     </Link>
@@ -110,7 +110,7 @@ export default function Home() {
                       <Heading size='md'>
                         Hotel Booking <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
+                      <Text pt='2' fontSize='sm'>
                         Book Vietnam hotel directly.
                       </Text>
                     </Link>
@@ -120,7 +120,7 @@ export default function Home() {
                       <Heading size='md'>
                         eSim <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
+                      <Text pt='2' fontSize='sm'>
                         Get Vietnam eSim for single sim phone.
                       </Text>
                     </Link>
@@ -141,7 +141,7 @@ export default function Home() {
                       <Heading size='md'>
                         Food & Taxi <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
+                      <Text pt='2' fontSize='sm'>
                         Download the Zomato + Uber of Vietnam.
                       </Text>
                     </Link>
@@ -151,7 +151,7 @@ export default function Home() {
                       <Heading size='md'>
                         Local mobile SIM card <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
+                      <Text pt='2' fontSize='sm'>
                         Get local Vietnam SIM card.
                       </Text>
                     </Link>
@@ -161,7 +161,7 @@ export default function Home() {
                       <Heading size='md'>
                         Place to work <Tag colorScheme='red'>Remote work</Tag>
                       </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
+                      <Text pt='2' fontSize='sm'>
                         For remote workers.
                       </Text>
                     </Link>
@@ -171,7 +171,7 @@ export default function Home() {
                       <Heading size='md'>
                         ATM cash withdrawal  <Tag colorScheme='orange'>Recommended</Tag>
                       </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
+                      <Text pt='2' fontSize='sm'>
                         zero forex ATM
                       </Text>
                     </Link>
