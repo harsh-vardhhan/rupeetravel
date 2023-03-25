@@ -140,7 +140,7 @@ export default function Home() {
 
             <Card style={{ maxWidth: '500px' }}>
               <CardHeader>
-                <Heading size='md'>Before you arrive 🇮🇳</Heading>
+                <Heading as='h3' size='md'>Before you arrive 🇮🇳</Heading>
               </CardHeader>
               <CardBody>
                 <Stack divider={<StackDivider />} spacing='4'>
@@ -156,7 +156,7 @@ export default function Home() {
 
             <Card style={{ maxWidth: '500px', marginTop: '10px' }}>
               <CardHeader>
-                <Heading size='md'>Arrived 🇻🇳</Heading>
+                <Heading as='h3' size='md'>Arrived 🇻🇳</Heading>
               </CardHeader>
               <CardBody>
                 <Stack divider={<StackDivider />} spacing='4'>
@@ -181,7 +181,7 @@ const CheckListItem = ({ task }) => {
   return (
     <Box>
       <Link href={task.link}>
-        <Heading size='md'>
+        <Heading as='h3' size='md'>
           {task.heading}&nbsp;
           <Tag colorScheme={task.tagColor}>
             {task.tagText}
