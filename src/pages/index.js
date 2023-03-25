@@ -146,6 +146,7 @@ export default function Home() {
                 <Stack divider={<StackDivider />} spacing='4'>
                   {beforeArrivals.map(beforeArrival => (
                     <CheckListItem
+                      key={beforeArrival.key}
                       task={beforeArrival}
                     />
                   ))}
@@ -161,6 +162,7 @@ export default function Home() {
                 <Stack divider={<StackDivider />} spacing='4'>
                   {arrivals.map(arrivals => (
                     <CheckListItem
+                      key={arrivals.key}
                       task={arrivals}
                     />
                   ))}
