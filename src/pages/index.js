@@ -33,7 +33,7 @@ const beforeArrivals = [
   {
     key: 3,
     heading: `Foreign Currency Notes`,
-    subHeading: `Lowest exchange rate foreign currency notes`,
+    subHeading: `Buy foreign currency notes online`,
     tagText: `Recommended`,
     tagColor: `orange`,
     link: `/buy-foreign-currency-notes-online`
@@ -41,7 +41,7 @@ const beforeArrivals = [
   {
     key: 4,
     heading: `E-Visa`,
-    subHeading: `Apply E-Visa online`,
+    subHeading: `Apply online E-Visa for Vietnam`,
     tagText: `Mandatory`,
     tagColor: `teal`,
     link: `/e-visa-vietnam-indians`
@@ -73,7 +73,7 @@ const beforeArrivals = [
   {
     key: 8,
     heading: `Hotel Booking`,
-    subHeading: `Book Vietnam hotel directly`,
+    subHeading: `Book Vietnam hotel online`,
     tagText: `Recommended`,
     tagColor: `orange`,
     link: `/hotel-booking-vietnam`
@@ -108,7 +108,7 @@ const arrivals = [
   {
     key: 3,
     heading: `Place to work`,
-    subHeading: `For remote workers`,
+    subHeading: `Best place for remote work in Vietnam`,
     tagText: `Remote work`,
     tagColor: `red`,
     link: `/remote-work-vietnam`
@@ -116,7 +116,7 @@ const arrivals = [
   {
     key: 4,
     heading: `ATM cash withdrawal`,
-    subHeading: `zero forex charges ATM`,
+    subHeading: `zero forex markup charges ATM`,
     tagText: `Recommended`,
     tagColor: `orange`,
     link: `/atm-vietnam-zero-forex-markup`
