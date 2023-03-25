@@ -17,7 +17,7 @@ const beforeArrivals = [
   {
     key: 1,
     heading: `Debit Card`,
-    subHeading: `Zero forex markup debit card`,
+    subHeading: `Zero forex markup fee debit card`,
     tagText: `Recommended`,
     tagColor: `orange`,
     link: `/debit-cards-travel-vietnam-zero-forex-markup-fee`
@@ -25,7 +25,7 @@ const beforeArrivals = [
   {
     key: 2,
     heading: `Credit Card`,
-    subHeading: `Zero forex markup credit card`,
+    subHeading: `Zero forex markup fee credit card`,
     tagText: `Recommended`,
     tagColor: `orange`,
     link: `/credit-cards-travel-vietnam-zero-forex-markup-fee`
@@ -116,7 +116,7 @@ const arrivals = [
   {
     key: 4,
     heading: `ATM cash withdrawal`,
-    subHeading: `zero forex ATM`,
+    subHeading: `zero forex charges ATM`,
     tagText: `Recommended`,
     tagColor: `orange`,
     link: `/atm-vietnam-zero-forex-markup`
