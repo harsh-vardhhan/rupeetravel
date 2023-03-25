@@ -13,6 +13,116 @@ import {
   Tag,
 } from '@chakra-ui/react'
 
+const beforeArrivals = [
+  {
+    key: 1,
+    heading: `Debit Card`,
+    subHeading: `Zero forex markup debit card`,
+    tagText: `Recommended`,
+    tagColor: `orange`,
+    link: `/debit-cards-travel-vietnam-zero-forex-markup-fee`
+  },
+  {
+    key: 2,
+    heading: `Credit Card`,
+    subHeading: `Zero forex markup credit card`,
+    tagText: `Recommended`,
+    tagColor: `orange`,
+    link: `/credit-cards-travel-vietnam-zero-forex-markup-fee`
+  },
+  {
+    key: 3,
+    heading: `Foreign Currency Notes`,
+    subHeading: `Lowest exchange rate foreign currency notes`,
+    tagText: `Recommended`,
+    tagColor: `orange`,
+    link: `/buy-foreign-currency-notes-online`
+  },
+  {
+    key: 4,
+    heading: `E-Visa`,
+    subHeading: `Apply E-Visa online`,
+    tagText: `Mandatory`,
+    tagColor: `teal`,
+    link: `/e-visa-vietnam-indians`
+  },
+  {
+    key: 5,
+    heading: `Flight Booking`,
+    subHeading: `Cheapest flights from India to Vietnam`,
+    tagText: `Mandatory`,
+    tagColor: `teal`,
+    link: `/flight-booking-vietnam`
+  },
+  {
+    key: 6,
+    heading: `Travel insurance`,
+    subHeading: `Best travel insurance for Indians`,
+    tagText: `Recommended`,
+    tagColor: `orange`,
+    link: `/travel-insurance-india-vietnam`
+  },
+  {
+    key: 7,
+    heading: `Luggage`,
+    subHeading: `Quick travel hack for luggage`,
+    tagText: `Recommended`,
+    tagColor: `orange`,
+    link: `/luggage`
+  },
+  {
+    key: 8,
+    heading: `Hotel Booking`,
+    subHeading: `Book Vietnam hotel directly`,
+    tagText: `Recommended`,
+    tagColor: `orange`,
+    link: `/hotel-booking-vietnam`
+  },
+  {
+    key: 9,
+    heading: `eSim`,
+    subHeading: `Get Vietnam eSim for single sim phone`,
+    tagText: `Recommended`,
+    tagColor: `orange`,
+    link: `/esim-vietnam`
+  },
+]
+
+const arrivals = [
+  {
+    key: 1,
+    heading: `Food & Taxi`,
+    subHeading: `Download the Zomato + Uber of Vietnam`,
+    tagText: `Recommended`,
+    tagColor: `orange`,
+    link: `/food-delivery-taxi-vietnam`
+  },
+  {
+    key: 2,
+    heading: `Local mobile SIM card`,
+    subHeading: `Get local Vietnam SIM card`,
+    tagText: `Recommended`,
+    tagColor: `orange`,
+    link: `/local-sim-card-vietnam`
+  },
+  {
+    key: 3,
+    heading: `Place to work`,
+    subHeading: `For remote workers`,
+    tagText: `Remote work`,
+    tagColor: `red`,
+    link: `/remote-work-vietnam`
+  },
+  {
+    key: 4,
+    heading: `ATM cash withdrawal`,
+    subHeading: `zero forex ATM`,
+    tagText: `Recommended`,
+    tagColor: `orange`,
+    link: `/atm-vietnam-zero-forex-markup`
+  },
+]
+
 export default function Home() {
   return (
     <>
@@ -32,99 +142,13 @@ export default function Home() {
               <CardHeader>
                 <Heading size='md'>Before you arrive 🇮🇳</Heading>
               </CardHeader>
-
               <CardBody>
                 <Stack divider={<StackDivider />} spacing='4'>
-                  <Box>
-                    <Link href="/debit-cards-travel-vietnam-zero-forex-markup-fee">
-                      <Heading size='md'>
-                        Debit Card <Tag colorScheme='orange'>Recommended</Tag>
-                      </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
-                        Zero forex markup debit card
-                      </Text>
-                    </Link>
-                  </Box>
-                  <Box>
-                    <Link href="/credit-cards-travel-vietnam-zero-forex-markup-fee">
-                      <Heading size='md'>
-                        Credit Card <Tag colorScheme='orange'>Recommended</Tag>
-                      </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
-                        Zero forex markup credit card
-                      </Text>
-                    </Link>
-                  </Box>
-                  <Box>
-                    <Link href="/buy-foreign-currency-notes-online">
-                      <Heading size='md'>
-                        Foreign Currency Notes <Tag colorScheme='orange'>Recommended</Tag>
-                      </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
-                        Lowest exchange rate foreign currency notes
-                      </Text>
-                    </Link>
-                  </Box>
-                  <Box>
-                    <Link href="/e-visa-vietnam-indians">
-                      <Heading size='md'>
-                        E-Visa <Tag colorScheme='teal'>Mandatory</Tag>
-                      </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
-                        Apply E-Visa online.
-                      </Text>
-                    </Link>
-                  </Box>
-                  <Box>
-                    <Link href="/flight-booking-vietnam">
-                      <Heading size='md'>
-                        Flight Booking <Tag colorScheme='teal'>Mandatory</Tag>
-                      </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
-                        Cheapest flights from India to Vietnam.
-                      </Text>
-                    </Link>
-                  </Box>
-                  <Box>
-                    <Link href="/travel-insurance-india-vietnam">
-                      <Heading size='md'>
-                        Travel insurance <Tag colorScheme='orange'>Recommended</Tag>
-                      </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
-                        Best travel insurance for Indians
-                      </Text>
-                    </Link>
-                  </Box>
-                  <Box>
-                    <Link href="/luggage">
-                      <Heading size='md'>
-                        Luggage <Tag colorScheme='orange'>Recommended</Tag>
-                      </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
-                        Quick travel hack for luggage.
-                      </Text>
-                    </Link>
-                  </Box>
-                  <Box>
-                    <Link href="/hotel-booking-vietnam">
-                      <Heading size='md'>
-                        Hotel Booking <Tag colorScheme='orange'>Recommended</Tag>
-                      </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
-                        Book Vietnam hotel directly.
-                      </Text>
-                    </Link>
-                  </Box>
-                  <Box>
-                    <Link href="/esim-vietnam">
-                      <Heading size='md'>
-                        eSim <Tag colorScheme='orange'>Recommended</Tag>
-                      </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
-                        Get Vietnam eSim for single sim phone.
-                      </Text>
-                    </Link>
-                  </Box>
+                  {beforeArrivals.map(beforeArrival => (
+                    <CheckListItem
+                      task={beforeArrival}
+                    />
+                  ))}
                 </Stack>
               </CardBody>
             </Card>
@@ -133,60 +157,38 @@ export default function Home() {
               <CardHeader>
                 <Heading size='md'>Arrived 🇻🇳</Heading>
               </CardHeader>
-
               <CardBody>
                 <Stack divider={<StackDivider />} spacing='4'>
-                  <Box>
-                    <Link href="/food-delivery-taxi-vietnam">
-                      <Heading size='md'>
-                        Food & Taxi <Tag colorScheme='orange'>Recommended</Tag>
-                      </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
-                        Download the Zomato + Uber of Vietnam.
-                      </Text>
-                    </Link>
-                  </Box>
-                  <Box>
-                    <Link href="/local-sim-card-vietnam">
-                      <Heading size='md'>
-                        Local mobile SIM card <Tag colorScheme='orange'>Recommended</Tag>
-                      </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
-                        Get local Vietnam SIM card.
-                      </Text>
-                    </Link>
-                  </Box>
-                  <Box>
-                    <Link href="/remote-work-vietnam">
-                      <Heading size='md'>
-                        Place to work <Tag colorScheme='red'>Remote work</Tag>
-                      </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
-                        For remote workers.
-                      </Text>
-                    </Link>
-                  </Box>
-                  <Box>
-                    <Link href="/atm-vietnam-zero-forex-markup">
-                      <Heading size='md'>
-                        ATM cash withdrawal  <Tag colorScheme='orange'>Recommended</Tag>
-                      </Heading>
-                      <Text as='h2' pt='2' fontSize='sm'>
-                        zero forex ATM
-                      </Text>
-                    </Link>
-                  </Box>
+                  {arrivals.map(arrivals => (
+                    <CheckListItem
+                      task={arrivals}
+                    />
+                  ))}
                 </Stack>
               </CardBody>
             </Card>
 
           </SimpleGrid>
-
-
-
         </div>
-
       </main>
     </>
+  )
+}
+
+const CheckListItem = ({ task }) => {
+  return (
+    <Box>
+      <Link href={task.link}>
+        <Heading size='md'>
+          {task.heading}&nbsp;
+          <Tag colorScheme={task.tagColor}>
+            {task.tagText}
+          </Tag>
+        </Heading>
+        <Text as='h2' pt='2' fontSize='sm'>
+          {task.subHeading}
+        </Text>
+      </Link>
+    </Box>
   )
 }
