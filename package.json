@@ -10,14 +10,14 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.16",
+    "@chakra-ui/icons": "2.0.16",
     "@chakra-ui/react": "2.4.8",
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
+    "@emotion/react": "11.10.5",
+    "@emotion/styled": "11.10.5",
     "@next/font": "13.1.2",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.2",
-    "framer-motion": "^6.5.1",
+    "framer-motion": "6.5.1",
     "next": "13.1.2",
     "next-sitemap": "^4.0.6",
     "nextjs-google-analytics": "^2.3.3",
