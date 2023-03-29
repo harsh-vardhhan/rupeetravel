@@ -58,7 +58,7 @@ export default function Home() {
                                     borderRadius='lg'
                                 />
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>Facebook search</Heading>
+                                    <Heading as='h3' size='md'>Facebook search</Heading>
                                     <List spacing={3}>
                                         <ListView features={features}/>
                                     </List>

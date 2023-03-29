@@ -86,7 +86,7 @@ export default function Home() {
                                     borderRadius='lg'
                                 />
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>Ocean Bank ATM <Tag colorScheme='teal'>Personally using</Tag></Heading>
+                                    <Heading as='h3' size='md'>Ocean Bank ATM <Tag colorScheme='teal'>Personally using</Tag></Heading>
                                     <Text>
                                         Just search on google map &quot;Ocean Bank&quot; for nearby ATM.
                                     </Text>

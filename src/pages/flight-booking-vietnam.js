@@ -66,7 +66,7 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>Vietjet <Tag colorScheme='teal'>Personally used</Tag></Heading>
+                                    <Heading as='h3' size='md'>Vietjet <Tag colorScheme='teal'>Personally used</Tag></Heading>
                                     <List spacing={3}>
                                         <ListView features={features}/>
                                     </List>

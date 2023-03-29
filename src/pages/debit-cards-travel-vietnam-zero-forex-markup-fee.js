@@ -63,7 +63,7 @@ export default function Home() {
                                     borderRadius='lg'
                                 />
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>Fi Card <Tag colorScheme='teal'>Personally using</Tag></Heading>
+                                    <Heading as='h3' size='md'>Fi Card <Tag colorScheme='teal'>Personally using</Tag></Heading>
                                     <Text>
                                         Fi is a no brainer, easy to use neobank account. Suit&apos;s perfect for travelling abroad.
                                     </Text>

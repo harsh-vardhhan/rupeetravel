@@ -69,7 +69,7 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>IDFC First Wow <Tag colorScheme='teal'>Personally using</Tag></Heading>
+                                    <Heading as='h3' size='md'>IDFC First Wow <Tag colorScheme='teal'>Personally using</Tag></Heading>
                                     <Image
                                         src={'/static/images/creditcard.webp'}
                                         alt='IDFC First Wow'
