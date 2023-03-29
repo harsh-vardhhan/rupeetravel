@@ -128,52 +128,43 @@ export default function Home() {
     <>
       <main className={styles.main}>
         <Heading size='2xl'>Rupee Travel</Heading>
-        <Text
-          fontSize='xl'
-          as='h1'
-          style={{ marginTop: '20px', fontWeight: 600 }}>
+        <Heading as='h1' size='xl' style={{ marginTop: '20px' }}>
           Budget travel checklist for Indians travelling Vietnam 🇻🇳
-        </Text>
+        </Heading>
         <div style={{ marginTop: '20px' }}>
-
           <SimpleGrid minChildWidth='350px' spacing='40px'>
-
-            <Card style={{ maxWidth: '500px' }}>
-              <CardHeader>
-                <Heading as='h3' size='md'>Before you arrive 🇮🇳</Heading>
-              </CardHeader>
-              <CardBody>
-                <Stack divider={<StackDivider />} spacing='4'>
-                  {beforeArrivals.map(beforeArrival => (
-                    <CheckListItem
-                      key={beforeArrival.key}
-                      task={beforeArrival}
-                    />
-                  ))}
-                </Stack>
-              </CardBody>
-            </Card>
-
-            <Card style={{ maxWidth: '500px', marginTop: '10px' }}>
-              <CardHeader>
-                <Heading as='h3' size='md'>Arrived 🇻🇳</Heading>
-              </CardHeader>
-              <CardBody>
-                <Stack divider={<StackDivider />} spacing='4'>
-                  {arrivals.map(arrivals => (
-                    <CheckListItem
-                      key={arrivals.key}
-                      task={arrivals}
-                    />
-                  ))}
-                </Stack>
-              </CardBody>
-            </Card>
-
+            <CheckListItemCard
+              title={'Before you arrive 🇮🇳'}
+              list={beforeArrivals}
+            />
+            <CheckListItemCard
+              title={'Arrived 🇻🇳'}
+              list={arrivals}
+            />
           </SimpleGrid>
         </div>
       </main>
     </>
+  )
+}
+
+const CheckListItemCard = ({ title, list }) => {
+  return (
+    <Card style={{ maxWidth: '500px', marginTop: '10px' }}>
+      <CardHeader>
+        <Heading as='h3' size='lg'>{title}</Heading>
+      </CardHeader>
+      <CardBody>
+        <Stack divider={<StackDivider />} spacing='4'>
+          {list.map(arrivals => (
+            <CheckListItem
+              key={arrivals.key}
+              task={arrivals}
+            />
+          ))}
+        </Stack>
+      </CardBody>
+    </Card>
   )
 }
 
