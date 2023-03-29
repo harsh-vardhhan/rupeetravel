@@ -123,6 +123,17 @@ const arrivals = [
   },
 ]
 
+const beforeDeparture = [
+  {
+    key: 1,
+    heading: ` VND for next visit`,
+    subHeading: `Withdraw Vietnam currency from ATM `,
+    tagText: `Frequent visitors`,
+    tagColor: `blue`,
+    link: `/withdraw-vietnam-currency-atm`
+  },
+]
+
 export default function Home() {
   return (
     <>
@@ -132,7 +143,7 @@ export default function Home() {
           Budget travel checklist for Indians travelling Vietnam 🇻🇳
         </Heading>
         <div style={{ marginTop: '20px' }}>
-          <SimpleGrid minChildWidth='350px' spacing='40px'>
+          <SimpleGrid minChildWidth='330px' spacing='40px'>
             <CheckListItemCard
               title={'Before you arrive 🇮🇳'}
               list={beforeArrivals}
@@ -140,6 +151,10 @@ export default function Home() {
             <CheckListItemCard
               title={'Arrived 🇻🇳'}
               list={arrivals}
+            />
+            <CheckListItemCard
+              title={'Before you depart 🇻🇳'}
+              list={beforeDeparture}
             />
           </SimpleGrid>
         </div>
