@@ -11,7 +11,7 @@ const Header = ({ title }) => {
     return (
         <>
             <Link href="/">
-                <Heading size='2xl'>Rupee Travel</Heading>
+                <Heading as='h3' size='2xl'>Rupee Travel</Heading>
             </Link>
             <Text
                 as='h1'
