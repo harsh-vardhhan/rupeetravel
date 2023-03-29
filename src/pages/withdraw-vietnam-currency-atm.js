@@ -64,7 +64,7 @@ export default function Home() {
                                     borderRadius='lg'
                                 />
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>Withdraw VND for next visit<Tag colorScheme='teal'>Personally used</Tag></Heading>
+                                    <Heading size='md'>Withdraw VND for next visit <Tag colorScheme='teal'>Personally used</Tag></Heading>
                                     <List spacing={3}>
                                         <ListView features={features} />
                                     </List>
