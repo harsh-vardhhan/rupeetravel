@@ -167,7 +167,7 @@ const CheckListItemCard = ({ title, list }) => {
   return (
     <Card style={{ maxWidth: '500px', marginTop: '10px' }}>
       <CardHeader>
-        <Heading as='h3' size='lg'>{title}</Heading>
+        <Text fontSize='2xl' as='b'>{title}</Text>
       </CardHeader>
       <CardBody>
         <Stack divider={<StackDivider />} spacing='4'>
@@ -187,12 +187,12 @@ const CheckListItem = ({ task }) => {
   return (
     <Box>
       <Link href={task.link}>
-        <Heading as='h3' size='md'>
+        <Text fontSize='xl' as='b'>
           {task.heading}&nbsp;
-          <Tag colorScheme={task.tagColor}>
+          <Tag style={{marginTop: '4px'}} colorScheme={task.tagColor}>
             {task.tagText}
           </Tag>
-        </Heading>
+        </Text>
         <Text as='h2' pt='2' fontSize='sm'>
           {task.subHeading}
         </Text>

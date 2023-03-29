@@ -23,7 +23,7 @@ const features = [
     {
         item: 1,
         icon: CheckCircleIcon,
-        title: ` Try booking early, you can get prices as low as ₹6,000`,
+        title: `Try booking early, you can get prices as low as ₹6,000`,
         color: 'green.500',
     },
     {
