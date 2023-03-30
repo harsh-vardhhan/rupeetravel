@@ -193,7 +193,7 @@ const CheckListItem = ({ task }) => {
             {task.tagText}
           </Tag>
         </Text>
-        <Text as='h2' pt='2' fontSize='sm'>
+        <Text style={{fontWeight: 500}} as='h2' pt='2' fontSize='sm'>
           {task.subHeading}
         </Text>
       </Link>
