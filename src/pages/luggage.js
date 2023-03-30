@@ -17,7 +17,7 @@ const features = [
     {
         item: 1,
         icon: CheckCircleIcon,
-        title: `Put a name label on your checked-in luggage`,
+        title: `Put a laminated name label on your checked-in luggage`,
         color: 'green.500',
     },
     {
@@ -44,7 +44,7 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Image
-                                    src={'/static/images/luggage.webp'}
+                                    src={'/static/images/luggage-travel-hack.webp'}
                                     alt='Luggage'
                                     borderRadius='lg'
                                 />
