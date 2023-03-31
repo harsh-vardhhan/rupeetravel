@@ -75,7 +75,7 @@ export default function Home() {
                                         src={'/static/images/creditcard.webp'}
                                         alt='IDFC First Wow'
                                         borderRadius='lg'
-                                        style={{ marginTop: '10px', width: '310px', height: '232px'}}
+                                        style={{ marginTop: '10px'}}
                                     />
                                     <List spacing={3}>
                                         <ListView features={features} />
@@ -106,7 +106,7 @@ export default function Home() {
                                     src={'/static/images/amex.webp'}
                                     alt='Amex card'
                                     borderRadius='lg'
-                                    style={{ marginTop: '10px', width: '310px', height: '232px' }}
+                                    style={{ marginTop: '10px'}}
                                 />
                             </CardBody>
                         </Card>
