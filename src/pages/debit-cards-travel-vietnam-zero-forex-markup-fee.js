@@ -115,7 +115,7 @@ export default function Home() {
                                     src={'/static/images/discover.webp'}
                                     alt='Discover card'
                                     borderRadius='lg'
-                                    style={{ marginTop: '10px' }}
+                                    style={{ marginTop: '10px', width: '310px', height: '232px' }}
                                 />
                             </CardBody>
                         </Card>
