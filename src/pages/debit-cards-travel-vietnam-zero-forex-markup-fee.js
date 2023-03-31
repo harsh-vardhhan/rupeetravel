@@ -11,7 +11,6 @@ import {
     Divider,
     CardFooter,
     Button,
-    Image,
     Alert,
     AlertIcon,
     SimpleGrid,
