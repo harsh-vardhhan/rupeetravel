@@ -61,9 +61,12 @@ export default function Home() {
                                     src={'/static/images/debitcard.webp'}
                                     alt='Fi Debit Card'
                                     borderRadius='lg'
+                                    style={{ width: '310px', height: '232px' }}
                                 />
                                 <Stack mt='6' spacing='3'>
-                                    <Heading as='h3' size='md'>Fi Card <Tag colorScheme='teal'>Personally using</Tag></Heading>
+                                    <Heading as='h2' size='md'>Fi Debit Card </Heading>
+                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally using</Tag>
+
                                     <Text>
                                         Fi is a no brainer, easy to use neobank account. Suit&apos;s perfect for travelling abroad.
                                     </Text>
@@ -94,7 +97,7 @@ export default function Home() {
                                 <Image
                                     src={'/static/images/fisetting.webp'}
                                     alt='Fi Settings Mobile'
-                                    style={{ marginTop: '10px' }}
+                                    style={{ marginTop: '10px', width: '310px', height: '232px' }}
                                     borderRadius='lg'
                                 />
                             </CardBody>
