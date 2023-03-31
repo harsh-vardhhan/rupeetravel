@@ -69,12 +69,13 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading as='h3' size='md'>IDFC First Wow <Tag colorScheme='teal'>Personally using</Tag></Heading>
+                                    <Heading as='h2' size='md'>IDFC First Wow</Heading>
+                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally using</Tag>
                                     <Image
                                         src={'/static/images/creditcard.webp'}
                                         alt='IDFC First Wow'
                                         borderRadius='lg'
-                                        style={{ marginTop: '10px' }}
+                                        style={{ marginTop: '10px', width: '310px', height: '232px'}}
                                     />
                                     <List spacing={3}>
                                         <ListView features={features} />
