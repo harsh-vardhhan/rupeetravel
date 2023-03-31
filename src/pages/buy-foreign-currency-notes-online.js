@@ -72,7 +72,7 @@ export default function Home() {
                                         src={'/static/images/currency.webp'}
                                         alt='foriegn currency notes'
                                         borderRadius='lg'
-                                        style={{ marginTop: '10px' }}
+                                        style={{ marginTop: '10px', height: '330px', width: '310px' }}
                                     />
                                     <List spacing={3}>
                                         <ListView features={features} />
