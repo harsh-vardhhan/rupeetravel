@@ -55,6 +55,7 @@ export default function Home() {
                                     src={'/static/images/grab.webp'}
                                     alt='Grab Mobile App'
                                     borderRadius='lg'
+                                    style={{ width: '310px', height: '425px' }}
                                 />
                                 <Stack mt='6' spacing='3'>
                                     <Heading as='h3' size='md'>Download Grab</Heading>
