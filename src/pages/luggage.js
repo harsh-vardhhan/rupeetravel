@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
 import {
@@ -5,7 +6,6 @@ import {
     CardBody,
     Stack,
     List,
-    Image,
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
@@ -46,7 +46,6 @@ export default function Home() {
                                 <Image
                                     src={'/static/images/luggage-travel-hack.webp'}
                                     alt='Luggage'
-                                    borderRadius='lg'
                                 />
                                 <Stack mt='6' spacing='3'>
                                     <Heading size='md'>Luggage travel hack <Tag colorScheme='teal'>Personally experienced 😞</Tag></Heading>
