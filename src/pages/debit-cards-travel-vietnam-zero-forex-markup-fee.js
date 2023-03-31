@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
@@ -11,6 +10,7 @@ import {
     Divider,
     CardFooter,
     Button,
+    Image,
     Alert,
     AlertIcon,
     SimpleGrid,
@@ -59,10 +59,8 @@ export default function Home() {
                                 <Image
                                     src={'/static/images/debit-card.webp'}
                                     alt='Fi Debit Card'
-                                    style={{ 
-                                        width: 310, 
-                                        height: 232
-                                    }}
+                                    borderRadius='lg'
+                                    style={{ width: '310px', height: '232px' }}
                                 />
                                 <Stack mt='6' spacing='3'>
                                     <Heading as='h2' size='md'>Fi Debit Card </Heading>
