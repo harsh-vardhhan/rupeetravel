@@ -62,9 +62,11 @@ export default function Home() {
                                     src={'/static/images/local-currency.webp'}
                                     alt='local-currency'
                                     borderRadius='lg'
+                                    style={{ width: '310px', height: '232px' }}
                                 />
                                 <Stack mt='6' spacing='3'>
-                                    <Heading as='h3' size='md'>Withdraw VND for next visit <Tag colorScheme='teal'>Personally used</Tag></Heading>
+                                    <Heading as='h2' size='md'>Withdraw VND for next visit </Heading>
+                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally used</Tag>
                                     <List spacing={3}>
                                         <ListView features={features} />
                                     </List>

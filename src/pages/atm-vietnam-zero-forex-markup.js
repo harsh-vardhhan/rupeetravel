@@ -84,9 +84,11 @@ export default function Home() {
                                     src={'/static/images/atm.webp'}
                                     alt='Ocean Bank ATM'
                                     borderRadius='lg'
+                                    style={{ width: '310px', height: '307px' }}
                                 />
-                                <Stack mt='6' spacing='3'>
-                                    <Heading as='h3' size='md'>Ocean Bank ATM <Tag colorScheme='teal'>Personally using</Tag></Heading>
+                                <Stack mt='6' spacing='3'> 
+                                    <Heading as='h2' size='md'>Withdraw cash from Ocean Bank ATM </Heading>
+                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally using</Tag>                   
                                     <Text>
                                         Just search on google map &quot;Ocean Bank&quot; for nearby ATM.
                                     </Text>

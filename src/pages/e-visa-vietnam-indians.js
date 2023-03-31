@@ -58,7 +58,8 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>E-Visa <Tag colorScheme='teal'>Personally used</Tag></Heading>
+                                    <Heading as='h2' size='md'>E-Visa for Vietnam</Heading>
+                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally used</Tag>
                                     <List spacing={3}>
                                         <ListView features={features}/>
                                     </List>

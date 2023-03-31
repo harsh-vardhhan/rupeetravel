@@ -56,9 +56,10 @@ export default function Home() {
                                     src={'/static/images/hotel.webp'}
                                     alt='Vietnam Hotel'
                                     borderRadius='lg'
+                                    style={{ width: '310px', height: '422px'}}
                                 />
                                 <Stack mt='6' spacing='3'>
-                                    <Heading as='h3' size='md'>Facebook search</Heading>
+                                    <Heading as='h2' size='md'>Book hotel in Vietnam from Facebook</Heading>
                                     <List spacing={3}>
                                         <ListView features={features}/>
                                     </List>

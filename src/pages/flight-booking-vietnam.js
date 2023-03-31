@@ -66,7 +66,8 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading as='h3' size='md'>Vietjet <Tag colorScheme='teal'>Personally used</Tag></Heading>
+                                    <Heading as='h2' size='md'>Book Vietjet flight</Heading>
+                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally using</Tag>
                                     <List spacing={3}>
                                         <ListView features={features}/>
                                     </List>
