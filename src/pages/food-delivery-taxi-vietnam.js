@@ -58,7 +58,7 @@ export default function Home() {
                                     style={{ width: '310px', height: '425px' }}
                                 />
                                 <Stack mt='6' spacing='3'>
-                                    <Heading as='h3' size='md'>Download Grab</Heading>
+                                    <Heading as='h2' size='md'>Download Grab</Heading>
                                     <List spacing={3}>
                                         <ListView features={features} />
                                     </List>
