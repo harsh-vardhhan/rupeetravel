@@ -67,7 +67,8 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading as='h3' size='md'>Book My Forex <Tag colorScheme='teal'>Personally using</Tag></Heading>
+                                    <Heading as='h2' size='md'>Book My Forex</Heading>
+                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally using</Tag>
                                     <Image
                                         src={'/static/images/currency.webp'}
                                         alt='foriegn currency notes'
