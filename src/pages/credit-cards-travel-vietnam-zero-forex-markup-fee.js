@@ -71,7 +71,7 @@ export default function Home() {
                                     <Heading as='h2' size='md'>IDFC First Wow</Heading>
                                     <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally using</Tag>
                                     <Image
-                                        src={'/static/images/creditcard.webp'}
+                                        src={'/static/images/credit-card.webp'}
                                         alt='IDFC First Wow'
                                         borderRadius='lg'
                                         style={{ marginTop: '10px', width: '310px', height: '174px'}}
@@ -100,7 +100,7 @@ export default function Home() {
                                     Please avoid Amex credit cards, since they are hardly accepted anywhere in Vietnam.
                                 </Alert>
                                 <Image
-                                    src={'/static/images/amex.webp'}
+                                    src={'/static/images/american-express.webp'}
                                     alt='Amex card'
                                     borderRadius='lg'
                                     style={{ marginTop: '10px', width: '310px', height: '312px' }}

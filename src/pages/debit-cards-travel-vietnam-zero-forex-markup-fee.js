@@ -57,7 +57,7 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Image
-                                    src={'/static/images/debitcard.webp'}
+                                    src={'/static/images/debit-card.webp'}
                                     alt='Fi Debit Card'
                                     borderRadius='lg'
                                     style={{ width: '310px', height: '232px' }}
