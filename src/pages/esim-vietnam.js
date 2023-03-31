@@ -7,7 +7,6 @@ import {
     List,
     Divider,
     CardFooter,
-    ButtonGroup,
     Button,
     SimpleGrid,
     Tag,
@@ -42,7 +41,7 @@ export default function Home() {
     return (
         <>
             <main className={styles.main}>
-                <Header title={'eSim'}/>
+                <Header title={'eSim'} />
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
@@ -50,20 +49,18 @@ export default function Home() {
                                 <Stack mt='6' spacing='3'>
                                     <Heading as='h3' size='md'>Convert to eSim <Tag colorScheme='teal'>Personally used</Tag></Heading>
                                     <List spacing={3}>
-                                        <ListView features={features}/>
+                                        <ListView features={features} />
                                     </List>
                                 </Stack>
                             </CardBody>
                             <Divider style={{ color: '#e2e8f0' }} />
                             <CardFooter>
-                                <ButtonGroup spacing='2'>
-                                    <Button
-                                        variant='solid'
-                                        colorScheme='blue'
-                                        onClick={() => window.open('https://www.jio.com/en-in/esim')}>
-                                        Jio eSim
-                                    </Button>
-                                </ButtonGroup>
+                                <Button
+                                    variant='solid'
+                                    colorScheme='green'
+                                    onClick={() => window.open('https://www.jio.com/en-in/esim')}>
+                                    Jio eSim
+                                </Button>
                             </CardFooter>
                         </Card>
                     </SimpleGrid>

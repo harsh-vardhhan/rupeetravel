@@ -9,7 +9,6 @@ import {
     List,
     Divider,
     CardFooter,
-    ButtonGroup,
     Button,
     Image,
     Alert,
@@ -77,14 +76,12 @@ export default function Home() {
                             </CardBody>
                             <Divider style={{ color: '#e2e8f0' }} />
                             <CardFooter>
-                                <ButtonGroup spacing='2'>
-                                    <Button
-                                        variant='solid'
-                                        colorScheme='blue'
-                                        onClick={() => window.open('https://fi.money/')}>
-                                        Get Fi Account
-                                    </Button>
-                                </ButtonGroup>
+                                <Button
+                                    variant='solid'
+                                    colorScheme='green'
+                                    onClick={() => window.open('https://fi.money/')}>
+                                    Get Fi Account
+                                </Button>
                             </CardFooter>
                         </Card>
 

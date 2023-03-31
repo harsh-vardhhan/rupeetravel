@@ -77,7 +77,7 @@ export default function Home() {
                                 <Link spacing='2' href='/atm-vietnam-zero-forex-markup'>
                                     <Button
                                         variant='solid'
-                                        colorScheme='blue'
+                                        colorScheme='green'
                                     >
                                         Ocean Bank ATM
                                     </Button>

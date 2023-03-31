@@ -60,11 +60,11 @@ export default function Home() {
                             </CardBody>
                             <Divider style={{ color: '#e2e8f0' }} />
                             <CardFooter>
-                                <ButtonGroup spacing='2'>
-                                    <Button colorScheme='blue' onClick={() => window.open('https://www.godigit.com/international-travel-insurance')}>
-                                        Digit Travel Insurance
-                                    </Button>
-                                </ButtonGroup>
+                                <Button 
+                                    colorScheme='green' 
+                                    onClick={() => window.open('https://www.godigit.com/international-travel-insurance')}>
+                                    Digit Travel Insurance
+                                </Button>
                             </CardFooter>
                         </Card>
                     </SimpleGrid>

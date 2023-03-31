@@ -8,7 +8,6 @@ import {
     List,
     Divider,
     CardFooter,
-    ButtonGroup,
     Button,
     SimpleGrid,
     Tag,
@@ -67,11 +66,11 @@ export default function Home() {
                             </CardBody>
                             <Divider style={{ color: '#e2e8f0' }} />
                             <CardFooter>
-                                <ButtonGroup spacing='2'>
-                                    <Button colorScheme='blue' onClick={() => window.open('https://evisa.xuatnhapcanh.gov.vn/web/guest/khai-thi-thuc-dien-tu/cap-thi-thuc-dien-tu')}>
-                                        Apply E-Visa
-                                    </Button>
-                                </ButtonGroup>
+                                <Button 
+                                    colorScheme='green' 
+                                    onClick={() => window.open('https://evisa.xuatnhapcanh.gov.vn/web/guest/khai-thi-thuc-dien-tu/cap-thi-thuc-dien-tu')}>
+                                    Apply E-Visa
+                                </Button>
                             </CardFooter>
                         </Card>
                     </SimpleGrid>

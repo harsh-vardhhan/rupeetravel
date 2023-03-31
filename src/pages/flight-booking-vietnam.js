@@ -8,7 +8,6 @@ import {
     List,
     Divider,
     CardFooter,
-    ButtonGroup,
     Button,
     Alert,
     AlertIcon,
@@ -75,11 +74,11 @@ export default function Home() {
                             </CardBody>
                             <Divider style={{ color: '#e2e8f0' }} />
                             <CardFooter>
-                                <ButtonGroup spacing='2'>
-                                    <Button colorScheme='blue' onClick={() => window.open('https://www.vietjetair.com/en')}>
-                                        Book Vietjet
-                                    </Button>
-                                </ButtonGroup>
+                                <Button 
+                                    colorScheme='green' 
+                                    onClick={() => window.open('https://www.vietjetair.com/en')}>
+                                    Book Vietjet
+                                </Button>
                             </CardFooter>
                         </Card>
 
