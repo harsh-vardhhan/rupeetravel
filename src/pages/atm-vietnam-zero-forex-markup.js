@@ -75,7 +75,6 @@ export default function Home() {
             </Head>
             <main className={styles.main}>
                 <Header title={'ATM cash withdrawal with no fee in Vietnam'} />
-
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
@@ -98,7 +97,6 @@ export default function Home() {
                                 </Stack>
                             </CardBody>
                         </Card>
-
                         <Card maxW='sm'>
                             <CardBody>
                                 <Alert status='info' style={{ marginTop: '10px' }}>
@@ -116,10 +114,7 @@ export default function Home() {
                             </CardBody>
                         </Card>
                     </SimpleGrid>
-
-
                 </div>
-
             </main>
         </>
     )

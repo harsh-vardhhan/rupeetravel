@@ -51,7 +51,7 @@ export default function Home() {
                 <meta name="description" content="Best debit card with zero forex markup for foreign travel in Vietnam for Indians" />
             </Head>
             <main className={styles.main}>
-                <Header title={'Indian Debit Cards for Vietnam'}/>
+                <Header title={'Indian Debit Cards for Vietnam'} />
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
@@ -64,13 +64,13 @@ export default function Home() {
                                 />
                                 <Stack mt='6' spacing='3'>
                                     <Heading as='h2' size='md'>Fi Debit Card </Heading>
-                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally using</Tag>
+                                    <Tag colorScheme='teal' style={{ width: 'fit-content' }}>Personally using</Tag>
 
                                     <Text>
                                         Fi is a no brainer, easy to use neobank account. Suit&apos;s perfect for travelling abroad.
                                     </Text>
                                     <List spacing={3}>
-                                        <ListView features={features}/>
+                                        <ListView features={features} />
                                     </List>
                                 </Stack>
                             </CardBody>
@@ -84,7 +84,6 @@ export default function Home() {
                                 </Button>
                             </CardFooter>
                         </Card>
-
                         <Card maxW='sm'>
                             <CardBody>
                                 <Alert status='info' style={{ marginTop: '10px' }}>
@@ -99,7 +98,6 @@ export default function Home() {
                                 />
                             </CardBody>
                         </Card>
-
                         <Card maxW='sm'>
                             <CardBody>
                                 <Tag colorScheme='teal'>Personally used 😞</Tag>
@@ -117,10 +115,7 @@ export default function Home() {
                             </CardBody>
                         </Card>
                     </SimpleGrid>
-
-
                 </div>
-
             </main>
         </>
     )

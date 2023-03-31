@@ -81,7 +81,6 @@ export default function Home() {
                                 </Button>
                             </CardFooter>
                         </Card>
-
                         <Card maxW='sm'>
                             <CardBody>
                                 <Tag colorScheme='orange'>Fellow passenger faced this</Tag>

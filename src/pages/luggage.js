@@ -50,7 +50,8 @@ export default function Home() {
                                     style={{ width: '310px', height: '187px'}}
                                 />
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>Luggage travel hack <Tag colorScheme='teal'>Personally experienced 😞</Tag></Heading>
+                                    <Heading as='h2' size='md'>Luggage travel hack</Heading>
+                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally experienced 😞</Tag>
                                     <List spacing={3}>
                                         <ListView features={features} />
                                     </List>

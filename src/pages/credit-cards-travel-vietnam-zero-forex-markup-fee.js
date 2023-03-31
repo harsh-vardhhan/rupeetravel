@@ -60,9 +60,7 @@ export default function Home() {
                 <meta name="description" content="Best credit card with zero forex markup for foreign travel in Vietnam for Indians" />
             </Head>
             <main className={styles.main}>
-
                 <Header title={'Indian Credit Cards for Vietnam'} />
-
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
@@ -91,7 +89,6 @@ export default function Home() {
                                 </Button>
                             </CardFooter>
                         </Card>
-
                         <Card maxW='sm'>
                             <CardBody>
                                 <Tag colorScheme='teal'>Personally used 😞</Tag>
@@ -108,10 +105,7 @@ export default function Home() {
                             </CardBody>
                         </Card>
                     </SimpleGrid>
-
-
                 </div>
-
             </main>
         </>
     )

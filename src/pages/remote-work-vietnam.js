@@ -38,7 +38,8 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>Arranging for remote work <Tag colorScheme='teal'>Personally experienced</Tag></Heading>
+                                    <Heading as='h2' size='md'>Arranging for remote work </Heading>
+                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally experienced</Tag>
                                     <List spacing={3}>
                                         <ListView features={features} />
                                     </List>

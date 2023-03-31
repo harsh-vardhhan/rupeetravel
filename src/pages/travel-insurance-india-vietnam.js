@@ -52,7 +52,8 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading as='h3' size='md'>Digit Insurance <Tag colorScheme='teal'>Personally used</Tag></Heading>
+                                    <Heading as='h2' size='md'>Digit Insurance</Heading>
+                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally used</Tag>
                                     <List spacing={3}>
                                         <ListView features={features} />
                                     </List>
