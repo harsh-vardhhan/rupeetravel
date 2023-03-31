@@ -5,7 +5,7 @@ import {
 
 const ListView = ({features}) => {
     return features.map((feature) => (
-        <ListItem as='h2' key={feature.item}>
+        <ListItem key={feature.item}>
             <ListIcon as={feature.icon} color={feature.color} />
             {feature.title}
         </ListItem>
