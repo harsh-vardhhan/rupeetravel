@@ -97,7 +97,7 @@ export default function Home() {
                                 <Image
                                     src={'/static/images/fisetting.webp'}
                                     alt='Fi Settings Mobile'
-                                    style={{ marginTop: '10px' }}
+                                    style={{ marginTop: '10px', width: '310px', height: '364px' }}
                                     borderRadius='lg'
                                 />
                             </CardBody>
