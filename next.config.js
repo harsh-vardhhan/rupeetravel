@@ -3,7 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     formats: ['image/webp'],
-    unoptimized: true
   },
 }
 

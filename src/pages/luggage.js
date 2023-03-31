@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
 import {
@@ -8,6 +7,7 @@ import {
     List,
     SimpleGrid,
     Tag,
+    Image
 } from '@chakra-ui/react'
 import { CheckCircleIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
@@ -46,6 +46,8 @@ export default function Home() {
                                 <Image
                                     src={'/static/images/luggage-travel-hack.webp'}
                                     alt='Luggage'
+                                    borderRadius='lg'
+                                    style={{ width: '310px', height: '187px'}}
                                 />
                                 <Stack mt='6' spacing='3'>
                                     <Heading size='md'>Luggage travel hack <Tag colorScheme='teal'>Personally experienced 😞</Tag></Heading>
