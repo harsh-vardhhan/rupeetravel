@@ -222,6 +222,7 @@ const Social = () => {
       </WrapItem>
       <WrapItem>
         <Button
+          style={{marginTop: '4px'}}
           colorScheme='twitter'
           leftIcon={<FaTwitter />}
           onClick={() => window.open('https://twitter.com/harsh_vardhhan')}
