@@ -11,7 +11,12 @@ import {
   Stack,
   SimpleGrid,
   Tag,
+  Avatar,
+  Wrap,
+  WrapItem,
+  Button,
 } from '@chakra-ui/react'
+import { FaTwitter } from "react-icons/fa";
 
 const beforeArrivals = [
   {
@@ -157,6 +162,7 @@ export default function Home() {
               list={beforeDeparture}
             />
           </SimpleGrid>
+          <Social/>
         </div>
       </main>
     </>
@@ -189,14 +195,40 @@ const CheckListItem = ({ task }) => {
       <Link href={task.link}>
         <Text fontSize='xl' as='b'>
           {task.heading}&nbsp;
-          <Tag style={{marginTop: '4px'}} colorScheme={task.tagColor}>
+          <Tag style={{ marginTop: '4px' }} colorScheme={task.tagColor}>
             {task.tagText}
           </Tag>
         </Text>
-        <Text style={{fontWeight: 500}} as='h2' pt='2' fontSize='sm'>
+        <Text style={{ fontWeight: 500 }} as='h2' pt='2' fontSize='sm'>
           {task.subHeading}
         </Text>
       </Link>
     </Box>
+  )
+}
+
+const Social = () => {
+  return (
+    <Wrap style={{ marginTop: '20px' }}>
+      <WrapItem>
+        <Avatar
+          style={{ height: '48px', width: '48px' }}
+          name='Harsh Vardhan'
+          src={'/static/images/harsh-vardhan.webp'}
+        />
+      </WrapItem>
+      <WrapItem>
+        <Text style={{ marginTop: '10px' }} as='b' fontSize='md'>Follow me for tips</Text>
+      </WrapItem>
+      <WrapItem>
+        <Button
+          colorScheme='twitter'
+          leftIcon={<FaTwitter />}
+          onClick={() => window.open('https://twitter.com/harsh_vardhhan')}
+        >
+          Twitter
+        </Button>
+      </WrapItem>
+    </Wrap>
   )
 }
