@@ -11,7 +11,7 @@ import {
   Stack,
   SimpleGrid,
   Tag,
-  Avatar,
+  Image,
   Wrap,
   WrapItem,
   Button,
@@ -211,9 +211,9 @@ const Social = () => {
   return (
     <Wrap style={{ marginTop: '20px' }}>
       <WrapItem>
-        <Avatar
-          style={{ height: '48px', width: '48px' }}
-          name='Harsh Vardhan'
+        <Image
+          style={{ height: '48px', width: '48px', borderRadius: '24px' }}
+          alt='Harsh Vardhan'
           src={'/static/images/harsh-vardhan.webp'}
         />
       </WrapItem>
