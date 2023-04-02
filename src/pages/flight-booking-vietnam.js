@@ -67,7 +67,7 @@ const indigo = [
     {
         item: 3,
         icon: CheckCircleIcon,
-        title: `In-flight services accept INR and USD, whereas Vietjet accepts VND and USD`,
+        title: `In-flight services accepts INR and USD, whereas Vietjet accepts VND and USD`,
         color: 'green.500',
     },
     {
