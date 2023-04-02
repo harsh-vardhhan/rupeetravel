@@ -110,47 +110,21 @@ export default function Home() {
                 <meta name="description" content="Lowest Vietnam flight ticket price from India" />
             </Head>
             <main className={styles.main}>
-                <Header title={'Booking flight for Vietnam'}/>
+                <Header title={'Booking flight for Vietnam'} />
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
-                        <Card maxW='sm'>
-                            <CardBody>
-                                <Stack mt='6' spacing='3'>
-                                    <Heading as='h2' size='md'>Book Vietjet flight to Vietnam</Heading>
-                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally used</Tag>
-                                    <List spacing={3}>
-                                        <ListView features={vietjet}/>
-                                    </List>
-                                </Stack>
-                            </CardBody>
-                            <Divider style={{ color: '#e2e8f0' }} />
-                            <CardFooter>
-                                <Button 
-                                    colorScheme='green' 
-                                    onClick={() => window.open('https://www.vietjetair.com/en')}>
-                                    Book Vietjet
-                                </Button>
-                            </CardFooter>
-                        </Card>
-                        <Card maxW='sm'>
-                            <CardBody>
-                                <Stack mt='6' spacing='3'>
-                                    <Heading as='h2' size='md'>Book Indigo flight to Vietnam</Heading>
-                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally used</Tag>
-                                    <List spacing={3}>
-                                        <ListView features={indigo}/>
-                                    </List>
-                                </Stack>
-                            </CardBody>
-                            <Divider style={{ color: '#e2e8f0' }} />
-                            <CardFooter>
-                                <Button 
-                                    colorScheme='green' 
-                                    onClick={() => window.open('https://www.goindigo.in/')}>
-                                    Book Indigo
-                                </Button>
-                            </CardFooter>
-                        </Card>
+                        <FlightCard
+                            cardTitle={'Book Vietjet flight to Vietnam'}
+                            features={vietjet}
+                            buttonName={'Book Vietjet'}
+                            buttonLink={'https://www.vietjetair.com/en'}
+                        />
+                        <FlightCard
+                            cardTitle={'Book Indigo flight to Vietnam'}
+                            features={indigo}
+                            buttonName={'Book Indigo'}
+                            buttonLink={'https://www.goindigo.in/'}
+                        />
                         <Card maxW='sm'>
                             <CardBody>
                                 <Tag colorScheme='orange'>Fellow passenger faced this</Tag>
@@ -164,5 +138,31 @@ export default function Home() {
                 </div>
             </main>
         </>
+    )
+}
+
+const FlightCard = ({cardTitle, features, buttonName, buttonLink}) => {
+    return (
+        <Card maxW='sm'>
+            <CardBody>
+                <Stack mt='6' spacing='3'>
+                    <Heading as='h2' size='md'>{cardTitle}</Heading>
+                    <Tag colorScheme='teal' style={{ width: 'fit-content' }}>
+                        Personally used
+                    </Tag>
+                    <List spacing={3}>
+                        <ListView features={features} />
+                    </List>
+                </Stack>
+            </CardBody>
+            <Divider style={{ color: '#e2e8f0' }} />
+            <CardFooter>
+                <Button
+                    colorScheme='green'
+                    onClick={() => window.open(buttonLink)}>
+                    {buttonName}
+                </Button>
+            </CardFooter>
+        </Card>
     )
 }
