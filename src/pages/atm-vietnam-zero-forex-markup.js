@@ -91,9 +91,9 @@ export default function Home() {
                                     />
                                     <Image
                                         src={'/static/images/mb-bank-atm.webp'}
-                                        alt='Ocean Bank ATM'
+                                        alt='MB Bank ATM'
                                         borderRadius='lg'
-                                        style={{ width: '310px', height: '307px' }}
+                                        style={{ width: '310px', height: '284px' }}
                                     />
                                 </Stack>
                                 <Stack mt='6' spacing='3'>
