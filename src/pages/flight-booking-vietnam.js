@@ -67,17 +67,23 @@ const indigo = [
     {
         item: 3,
         icon: CheckCircleIcon,
-        title: `Payment gateway for booking flight tickets accepts American Express unlike Vietjet`,
+        title: `In-flight services accept INR and USD, whereas Vietjet accepts VND and USD`,
         color: 'green.500',
     },
     {
         item: 4,
         icon: CheckCircleIcon,
-        title: `You can use Reward cards like Indigo ka-ching whereas Vietjet doesn’t have any partner program with any Indian credit card company`,
+        title: `Payment gateway for booking flight tickets accepts American Express unlike Vietjet`,
         color: 'green.500',
     },
     {
         item: 5,
+        icon: CheckCircleIcon,
+        title: `You can use Reward cards like Indigo ka-ching whereas Vietjet doesn’t have any partner program with any Indian credit card company`,
+        color: 'green.500',
+    },
+    {
+        item: 6,
         icon: CheckCircleIcon,
         title: `Takes their add-on services like priority check-in very seriously unlike Vietjet which at times denies this service at times even when charging for it.`,
         color: 'green.500',
@@ -89,7 +95,7 @@ const indigo = [
         color: 'green.500',
     },
     {
-        item: 5,
+        item: 7,
         icon: InfoIcon,
         title: `Flights from Delhi/Mumbai to Vietnam are not direct, rather via Kolkata. Vietjet has direct flights from Delhi/Mumbai to Vietnam.`,
         color: 'red.400',
