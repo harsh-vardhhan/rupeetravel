@@ -84,12 +84,6 @@ export default function Home() {
                             <CardBody>
                                 <Stack direction='column'>
                                     <Image
-                                        src={'/static/images/ocean-bank-atm.webp'}
-                                        alt='Ocean Bank ATM'
-                                        borderRadius='lg'
-                                        style={{ width: '310px', height: '307px' }}
-                                    />
-                                    <Image
                                         src={'/static/images/mb-bank-atm.webp'}
                                         alt='MB Bank ATM'
                                         borderRadius='lg'
