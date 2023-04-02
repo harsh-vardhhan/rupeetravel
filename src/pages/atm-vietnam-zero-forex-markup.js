@@ -12,6 +12,9 @@ import {
     AlertIcon,
     SimpleGrid,
     Tag,
+    Divider,
+    CardFooter,
+    Button,
 } from '@chakra-ui/react'
 import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import Header from '@/component/header'
@@ -55,7 +58,7 @@ const atmFeatures = [
     {
         item: 3,
         icon: CheckCircleIcon,
-        title: ` Fi debit card + Ocean bank ATM = zero forex*`,
+        title: ` Fi debit card + Ocean Bank/MB Bank ATM = zero forex*`,
         color: 'green.500',
     },
     {
@@ -79,23 +82,46 @@ export default function Home() {
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
                             <CardBody>
-                                <Image
-                                    src={'/static/images/atm.webp'}
-                                    alt='Ocean Bank ATM'
-                                    borderRadius='lg'
-                                    style={{ width: '310px', height: '307px' }}
-                                />
-                                <Stack mt='6' spacing='3'> 
-                                    <Heading as='h2' size='md'>Withdraw cash from Ocean Bank ATM </Heading>
-                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally using</Tag>                   
+                                <Stack direction='column'>
+                                    <Image
+                                        src={'/static/images/ocean-bank-atm.webp'}
+                                        alt='Ocean Bank ATM'
+                                        borderRadius='lg'
+                                        style={{ width: '310px', height: '307px' }}
+                                    />
+                                    <Image
+                                        src={'/static/images/mb-bank-atm.webp'}
+                                        alt='Ocean Bank ATM'
+                                        borderRadius='lg'
+                                        style={{ width: '310px', height: '307px' }}
+                                    />
+                                </Stack>
+                                <Stack mt='6' spacing='3'>
+                                    <Heading as='h2' size='md'>Withdraw cash from Ocean Bank ATM or MB Bank ATM </Heading>
+                                    <Tag colorScheme='teal' style={{ width: 'fit-content' }}>Personally using</Tag>
                                     <Text>
-                                        Just search on google map &quot;Ocean Bank&quot; for nearby ATM.
+                                        Just search on google map <Text as='b'>Ocean Bank</Text> or <Text as='b'>MB Bank</Text> for nearby ATM.
                                     </Text>
                                     <List spacing={3}>
-                                        <ListView features={features}/>
+                                        <ListView features={features} />
                                     </List>
                                 </Stack>
                             </CardBody>
+                            <Divider style={{ color: '#e2e8f0' }} />
+                            <CardFooter>
+                                <Stack direction='row'>
+                                    <Button
+                                        colorScheme='green'
+                                        onClick={() => window.open('https://www.google.com/maps?q=MB+Bank+ATM')}>
+                                        MB Bank ATM
+                                    </Button>
+                                    <Button
+                                        colorScheme='green'
+                                        onClick={() => window.open('https://www.google.com/maps?q=Ocean+Bank+ATM')}>
+                                        Ocean Bank ATM
+                                    </Button>
+                                </Stack>
+                            </CardFooter>
                         </Card>
                         <Card maxW='sm'>
                             <CardBody>
@@ -108,7 +134,7 @@ export default function Home() {
                                         When you withdraw cash from ATM&apos;s there are two sides which charge you:
                                     </Text>
                                     <List spacing={3}>
-                                        <ListView features={atmFeatures}/>
+                                        <ListView features={atmFeatures} />
                                     </List>
                                 </Stack>
                             </CardBody>
