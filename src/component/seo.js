@@ -64,9 +64,7 @@ export default function Seo({
         property="twitter:description"
         content={description}
       />
-
       <link rel="canonical" href={canonical ?? DOMAIN} />
-
       <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
   );
