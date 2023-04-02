@@ -79,7 +79,7 @@ const indigo = [
     {
         item: 5,
         icon: CheckCircleIcon,
-        title: `You can use Reward cards like Indigo ka-ching whereas Vietjet doesn’t have any partner program with any Indian credit card company`,
+        title: `You can use Reward cards like Indigo ka-ching whereas Vietjet doesn’t have any partner program with any Indian credit card`,
         color: 'green.500',
     },
     {
