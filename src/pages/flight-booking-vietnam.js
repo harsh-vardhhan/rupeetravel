@@ -18,7 +18,7 @@ import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
 import Header from '@/component/header'
 
-const features = [
+const vietjet = [
     {
         item: 1,
         icon: CheckCircleIcon,
@@ -34,7 +34,7 @@ const features = [
     {
         item: 3,
         icon: CheckCircleIcon,
-        title: `Extra ~₹2,000 for checked in luggage`,
+        title: `Extra ~₹2,000 for checked-in luggage`,
         color: 'green.500',
     },
     {
@@ -47,6 +47,51 @@ const features = [
         item: 5,
         icon: InfoIcon,
         title: `Food in plane is expensive, you can even carry some airport food in flight.`,
+        color: 'red.400',
+    }
+]
+
+const indigo = [
+    {
+        item: 1,
+        icon: CheckCircleIcon,
+        title: `Cheaper flights on weekends than Vietjet`,
+        color: 'green.500',
+    },
+    {
+        item: 2,
+        icon: CheckCircleIcon,
+        title: `More comfortable seats than Vietjet`,
+        color: 'green.500',
+    },
+    {
+        item: 3,
+        icon: CheckCircleIcon,
+        title: `Payment gateway for booking flight tickets accepts American Express unlike Vietjet`,
+        color: 'green.500',
+    },
+    {
+        item: 4,
+        icon: CheckCircleIcon,
+        title: `You can use Reward cards like Indigo ka-ching whereas Vietjet doesn’t have any partner program with any Indian credit card company`,
+        color: 'green.500',
+    },
+    {
+        item: 5,
+        icon: CheckCircleIcon,
+        title: `Takes their add-on services like priority check-in very seriously unlike Vietjet which at times denies this service at times even when charging for it.`,
+        color: 'green.500',
+    },
+    {
+        item: 6,
+        icon: CheckCircleIcon,
+        title: `No extra charge for checked-in luggage unlike Vietjet`,
+        color: 'green.500',
+    },
+    {
+        item: 5,
+        icon: InfoIcon,
+        title: `Flights from Delhi/Mumbai to Vietnam are not direct, rather via Kolkata. Vietjet has direct flights from Delhi/Mumbai to Vietnam.`,
         color: 'red.400',
     }
 ]
@@ -65,10 +110,10 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading as='h2' size='md'>Book Vietjet flight</Heading>
-                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally using</Tag>
+                                    <Heading as='h2' size='md'>Book Vietjet flight to Vietnam</Heading>
+                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally used</Tag>
                                     <List spacing={3}>
-                                        <ListView features={features}/>
+                                        <ListView features={vietjet}/>
                                     </List>
                                 </Stack>
                             </CardBody>
@@ -78,6 +123,25 @@ export default function Home() {
                                     colorScheme='green' 
                                     onClick={() => window.open('https://www.vietjetair.com/en')}>
                                     Book Vietjet
+                                </Button>
+                            </CardFooter>
+                        </Card>
+                        <Card maxW='sm'>
+                            <CardBody>
+                                <Stack mt='6' spacing='3'>
+                                    <Heading as='h2' size='md'>Book Indigo flight to Vietnam</Heading>
+                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally used</Tag>
+                                    <List spacing={3}>
+                                        <ListView features={indigo}/>
+                                    </List>
+                                </Stack>
+                            </CardBody>
+                            <Divider style={{ color: '#e2e8f0' }} />
+                            <CardFooter>
+                                <Button 
+                                    colorScheme='green' 
+                                    onClick={() => window.open('https://www.goindigo.in/')}>
+                                    Book Indigo
                                 </Button>
                             </CardFooter>
                         </Card>
