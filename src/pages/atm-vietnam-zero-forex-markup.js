@@ -97,7 +97,7 @@ export default function Home() {
                                     />
                                 </Stack>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading as='h2' size='md'>Withdraw cash from Ocean Bank ATM or MB Bank ATM </Heading>
+                                    <Heading as='h2' size='md'>Withdraw cash from Ocean Bank ATM or MB Bank ATM</Heading>
                                     <Tag colorScheme='teal' style={{ width: 'fit-content' }}>Personally using</Tag>
                                     <Text>
                                         Just search on google map <Text as='b'>Ocean Bank</Text> or <Text as='b'>MB Bank</Text> for nearby ATM.
