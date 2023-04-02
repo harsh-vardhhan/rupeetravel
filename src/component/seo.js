@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const DOMAIN = "https://www.rupeetravel.com/";
+const DOMAIN = "https://www.RupeeTravel.com/";
 const DEFAULT_OG_IMAGE =
   "https://raw.githubusercontent.com/TrakBit/Images/master/rupeetravel.png";
 
