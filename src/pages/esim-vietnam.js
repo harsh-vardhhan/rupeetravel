@@ -14,6 +14,7 @@ import {
 import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
 import Header from '@/component/header'
+import Seo from '@/component/seo'
 
 const features = [
     {
@@ -40,6 +41,7 @@ const features = [
 export default function Home() {
     return (
         <>
+            <Seo canonical={'https://www.rupeetravel.com/luggage'}/>
             <main className={styles.main}>
                 <Header title={'eSim'} />
                 <div style={{ marginTop: '20px' }}>
