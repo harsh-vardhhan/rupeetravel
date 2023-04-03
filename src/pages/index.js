@@ -19,12 +19,12 @@ import {
 import { FaTwitter } from "react-icons/fa";
 import Seo from '@/component/seo'
 
-export default function Home({ beforeArrivals, arrivals, beforeDeparture}) {
+export default function Home({ beforeArrivals, arrivals, beforeDeparture }) {
   return (
     <>
       <Seo canonical={'https://www.rupeetravel.com'} />
       <main className={styles.main}>
-        <Heading size='2xl'>Rupee Travel</Heading>
+        <Text fontSize='5xl' as='b'>Rupee Travel</Text>
         <Heading as='h1' size='xl' style={{ marginTop: '20px' }}>
           Budget travel checklist for Indians travelling Vietnam 🇻🇳
         </Heading>
