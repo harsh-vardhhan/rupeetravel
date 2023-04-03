@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
 import {
@@ -18,6 +17,7 @@ import {
 import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import Header from '@/component/header'
 import ListView from '@/component/listview'
+import Seo from '@/component/seo'
 
 const features = [
     {
@@ -55,10 +55,11 @@ const features = [
 export default function Home() {
     return (
         <>
-            <Head>
-                <title>Rupee Travel | credit card with zero forex markup for travel in Vietnam</title>
-                <meta name="description" content="Best credit card with zero forex markup for foreign travel in Vietnam for Indians" />
-            </Head>
+            <Seo
+                title='Rupee Travel | credit card with zero forex markup for travel in Vietnam'
+                description='Best credit card with zero forex markup for foreign travel in Vietnam for Indians'
+                canonical={'https://www.rupeetravel.com/credit-cards-travel-vietnam-zero-forex-markup-fee'}
+            />
             <main className={styles.main}>
                 <Header title={'Indian Credit Cards for Vietnam'} />
                 <div style={{ marginTop: '20px' }}>
@@ -67,12 +68,12 @@ export default function Home() {
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
                                     <Heading as='h2' size='md'>IDFC First Wow credit card</Heading>
-                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally using</Tag>
+                                    <Tag colorScheme='teal' style={{ width: 'fit-content' }}>Personally using</Tag>
                                     <Image
                                         src={'/static/images/credit-card.webp'}
                                         alt='IDFC First Wow'
                                         borderRadius='lg'
-                                        style={{ marginTop: '10px', width: '310px', height: '174px'}}
+                                        style={{ marginTop: '10px', width: '310px', height: '174px' }}
                                     />
                                     <List spacing={3}>
                                         <ListView features={features} />

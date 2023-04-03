@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
 import {
@@ -15,6 +14,7 @@ import {
 import { CheckCircleIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
 import Header from '@/component/header'
+import Seo from '@/component/seo'
 
 const features = [
     {
@@ -40,10 +40,11 @@ const features = [
 export default function Home() {
     return (
         <>
-            <Head>
-                <title>Rupee Travel | Food delivery and ride hailing app in Vietnam</title>
-                <meta name="description" content="Grab app in Vietnam" />
-            </Head>
+            <Seo
+                title='Rupee Travel | Food delivery and ride hailing app in Vietnam'
+                description='Grab app in Vietnam'
+                canonical={'https://www.rupeetravel.com/food-delivery-taxi-vietnam'}
+            />
             <main className={styles.main}>
                 <Header title={'Food Delivery and Taxi for Vietnam'}/>
                 <div style={{ marginTop: '20px' }}>

@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
 import {
@@ -19,6 +18,7 @@ import {
 import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import Header from '@/component/header'
 import ListView from '@/component/listview'
+import Seo from '@/component/seo'
 
 const features = [
     {
@@ -72,10 +72,11 @@ const atmFeatures = [
 export default function Home() {
     return (
         <>
-            <Head>
-                <title>Rupee Travel | Best ATM with zero forex markup in Vietnam for foreigners</title>
-                <meta name="description" content="Best and cheapest ATM in Vietnam for zero exchange rate" />
-            </Head>
+            <Seo
+                title='Rupee Travel | Best ATM with zero forex markup in Vietnam for foreigners'
+                description='Best and cheapest ATM in Vietnam for zero exchange rate'
+                canonical={'https://www.rupeetravel.com/atm-vietnam-zero-forex-markup'}
+            />
             <main className={styles.main}>
                 <Header title={'ATM cash withdrawal with no fee in Vietnam'} />
                 <div style={{ marginTop: '20px' }}>

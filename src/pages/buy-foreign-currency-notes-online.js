@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Heading } from '@chakra-ui/react'
 import {
@@ -16,6 +15,7 @@ import {
 import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import Header from '@/component/header'
 import ListView from '@/component/listview'
+import Seo from '@/component/seo'
 
 const features = [
     {
@@ -53,10 +53,11 @@ const features = [
 export default function Home() {
     return (
         <>
-            <Head>
-                <title>Rupee Travel | Buy forex currency notes in India</title>
-                <meta name="description" content="best foreign currency exchange online in India" />
-            </Head>
+            <Seo
+                title='Rupee Travel | Buy forex currency notes in India'
+                description='best foreign currency exchange online in India'
+                canonical={'https://www.rupeetravel.com/buy-foreign-currency-notes-online'}
+            />
             <main className={styles.main}>
                 <Header title={'Buy foreign currency notes'} />
                 <div style={{ marginTop: '20px' }}>
