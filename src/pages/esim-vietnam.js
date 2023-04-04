@@ -10,6 +10,7 @@ import {
     Button,
     SimpleGrid,
     Tag,
+    Image
 } from '@chakra-ui/react'
 import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
@@ -38,6 +39,27 @@ const features = [
     }
 ]
 
+const reasons = [
+    {
+        item: 1,
+        icon: CheckCircleIcon,
+        title: `In India, you need OTP on your mobile number to make online payments, check bank balance via UPI`,
+        color: 'green.500',
+    },
+    {
+        item: 2,
+        icon: CheckCircleIcon,
+        title: `It can be hard to put the main SIM aside for single SIM phones when travelling abroad`,
+        color: 'green.500',
+    },
+    {
+        item: 3,
+        icon: InfoIcon,
+        title: `That’s where e-SIM feels convenient. Just turn on your Indian SIM whenever needed.`,
+        color: 'green.500',
+    }
+]
+
 export default function Home() {
     return (
         <>
@@ -49,7 +71,8 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading as='h3' size='md'>Convert to eSim <Tag colorScheme='teal'>Personally used</Tag></Heading>
+                                    <Heading as='h2' size='md'>Convert Indian SIM to eSIM</Heading>
+                                    <Tag colorScheme='teal' style={{ width: 'fit-content' }}>Personally used</Tag>
                                     <List spacing={3}>
                                         <ListView features={features} />
                                     </List>
@@ -64,6 +87,22 @@ export default function Home() {
                                     Jio eSim
                                 </Button>
                             </CardFooter>
+                        </Card>
+                        <Card maxW='sm'>
+                            <CardBody>
+                                <Stack mt='6' spacing='3'>
+                                    <Heading as='h2' size='md'>Why get eSIM?</Heading>
+                                    <Image
+                                        src={'/static/images/esim.webp'}
+                                        alt='eSIM'
+                                        borderRadius='lg'
+                                        style={{ marginTop: '10px', width: '310px', height: '391px' }}
+                                    />
+                                    <List spacing={3}>
+                                        <ListView features={reasons} />
+                                    </List>
+                                </Stack>
+                            </CardBody>
                         </Card>
                     </SimpleGrid>
                 </div>
