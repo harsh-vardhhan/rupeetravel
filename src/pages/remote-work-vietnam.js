@@ -7,6 +7,9 @@ import {
     List,
     SimpleGrid,
     Tag,
+    Divider,
+    CardFooter,
+    Button,
 } from '@chakra-ui/react'
 import { CheckCircleIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
@@ -24,7 +27,7 @@ const features = [
     {
         item: 2,
         icon: CheckCircleIcon,
-        title: ` Highlands Cafe (Starbucks of Vietnam) is a good place to work as well but can be noisy for meetings. `,
+        title: `Choose nearest Highlands Cafe (Starbucks of Vietnam) to work. They always have decent internet`,
         color: 'green.500',
     },
 ]
@@ -32,22 +35,32 @@ const features = [
 export default function Home() {
     return (
         <>
-            <Seo canonical={'https://www.rupeetravel.com/luggage'}/>
+            <Seo canonical={'https://www.rupeetravel.com/remote-work-vietnam'} />
             <main className={styles.main}>
-                <Header title={'Remote work from Vietnam'}/>
+                <Header title={'Remote work from Vietnam'} />
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
                                     <Heading as='h2' size='md'>Arranging for remote work </Heading>
-                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally experienced</Tag>
+                                    <Tag colorScheme='teal' style={{ width: 'fit-content' }}>Personally experienced</Tag>
                                     <List spacing={3}>
                                         <ListView features={features} />
                                     </List>
                                 </Stack>
                             </CardBody>
+                            <Divider style={{ color: '#e2e8f0' }} />
+                            <CardFooter>
+                                <Button
+                                    variant='solid'
+                                    colorScheme='green'
+                                    onClick={() => window.open('https://www.google.com/maps?q=Highlands+Cafe')}>
+                                    Highlands Cafe
+                                </Button>
+                            </CardFooter>
                         </Card>
+
                     </SimpleGrid>
                 </div>
             </main>
