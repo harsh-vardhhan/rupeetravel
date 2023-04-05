@@ -11,8 +11,5 @@ module.exports = {
       },
       { userAgent: "*", allow: "/" },
     ],
-    additionalSitemaps: [
-      `${siteUrl}sitemap.xml`,
-    ],
   },
 };
