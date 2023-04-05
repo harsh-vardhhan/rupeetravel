@@ -3,6 +3,7 @@ module.exports = {
   siteUrl,
   exclude: ["/404"],
   generateRobotsTxt: true,
+  generateIndexSitemap: false,
   robotsTxtOptions: {
     policies: [
       {
