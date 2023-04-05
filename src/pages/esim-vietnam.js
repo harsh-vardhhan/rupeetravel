@@ -63,7 +63,7 @@ const reasons = [
 export default function Home() {
     return (
         <>
-            <Seo canonical={'https://www.rupeetravel.com/luggage'}/>
+            <Seo canonical={'https://www.rupeetravel.com/esim-vietnam'}/>
             <main className={styles.main}>
                 <Header title={'eSim'} />
                 <div style={{ marginTop: '20px' }}>
