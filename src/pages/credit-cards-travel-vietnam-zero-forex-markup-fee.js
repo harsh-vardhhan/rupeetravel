@@ -56,8 +56,8 @@ export default function Home() {
     return (
         <>
             <Seo
-                title='Rupee Travel | credit card with zero forex markup for travel in Vietnam'
-                description='Best credit card with zero forex markup for foreign travel in Vietnam for Indians'
+                title='Rupee Travel | credit card with zero international transaction charges'
+                description='Best credit card for international travel'
                 canonical={'https://www.rupeetravel.com/credit-cards-travel-vietnam-zero-forex-markup-fee'}
             />
             <main className={styles.main}>
