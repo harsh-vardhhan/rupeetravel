@@ -35,7 +35,11 @@ const features = [
 export default function Home() {
     return (
         <>
-            <Seo canonical={'https://www.rupeetravel.com/remote-work-vietnam'} />
+            <Seo 
+                canonical={'https://www.rupeetravel.com/remote-work-vietnam'} 
+                title='Rupee Travel | Remote work in Vietnam'
+                description='Best places to work remotely in Vietnam'
+            />
             <main className={styles.main}>
                 <Header title={'Remote work from Vietnam'} />
                 <div style={{ marginTop: '20px' }}>

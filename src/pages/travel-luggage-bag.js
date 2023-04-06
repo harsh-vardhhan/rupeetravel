@@ -38,7 +38,11 @@ const features = [
 export default function Home() {
     return (
         <>
-            <Seo canonical={'https://www.rupeetravel.com/luggage'}/>
+            <Seo 
+                title='Rupee Travel | Best travel hack for luggage'
+                description='hack for travel luggage on airports'
+                canonical={'https://www.rupeetravel.com/travel-luggage-bag'}
+            />
             <main className={styles.main}>
                 <Header title={'luggage'}/>
                 <div style={{ marginTop: '20px' }}>

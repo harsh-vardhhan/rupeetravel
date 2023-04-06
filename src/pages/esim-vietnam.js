@@ -63,7 +63,11 @@ const reasons = [
 export default function Home() {
     return (
         <>
-            <Seo canonical={'https://www.rupeetravel.com/luggage'}/>
+            <Seo 
+                title='Rupee Travel | Activate eSIM for travel'
+                description='Airtel eSIM | Jio eSIM | How to activate eSIM in iPhone'
+                canonical={'https://www.rupeetravel.com/esim-vietnam'}
+            />
             <main className={styles.main}>
                 <Header title={'eSim'} />
                 <div style={{ marginTop: '20px' }}>

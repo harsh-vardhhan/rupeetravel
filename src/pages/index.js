@@ -172,7 +172,7 @@ export async function getStaticProps(ctx) {
       subHeading: `Quick travel hack for luggage`,
       tagText: `Recommended`,
       tagColor: `orange`,
-      link: `/luggage`
+      link: `/travel-luggage-bag`
     },
     {
       key: 8,
