@@ -48,7 +48,7 @@ export default function Home() {
         <>
             <Seo
                 title='Rupee Travel | Apply for Vietnam e-visa'
-                description='Vietnam e-visa application'
+                description='Vietnam e-visa application. Vietnam visa for Indians.'
                 canonical={'https://www.rupeetravel.com/e-visa-vietnam-indians'}
             />
             <main className={styles.main}>
