@@ -38,7 +38,7 @@ const features = [
     {
         item: 4,
         icon: InfoIcon,
-        title: `Please don&apos;t use any third party agency, apply on the official government site link given below`,
+        title: `Please don't use any third party agency, apply on the official government site link given below`,
         color: 'red.400',
     }
 ]
