@@ -15,7 +15,7 @@ export default function Seo({
 }) {
   return (
     <Head>
-      <title key="title">{`${title} – ${siteName}`}</title>
+      <title key="title">{title}</title>
       <meta name="description" content={description} />
       <meta key="og_type" property="og:type" content={ogType} />
       <meta key="og_title" property="og:title" content={title} />
