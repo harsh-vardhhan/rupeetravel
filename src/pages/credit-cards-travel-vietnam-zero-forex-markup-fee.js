@@ -14,45 +14,11 @@ import {
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
-import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import Header from '@/component/header'
 import ListView from '@/component/listview'
 import Seo from '@/component/seo'
 
-const features = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: 'Zero forex markup credit card',
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: 'Zero Joining/Annual fee',
-        color: 'green.500',
-    },
-    {
-        item: 3,
-        icon: CheckCircleIcon,
-        title: 'Withdraw cash from ATM without interest till Payment date (48 days interest free cash)',
-        color: 'green.500',
-    },
-    {
-        item: 4,
-        icon: CheckCircleIcon,
-        title: 'VISA backed credit card hence higher acceptance in Vietnam',
-        color: 'green.500',
-    },
-    {
-        item: 5,
-        icon: InfoIcon,
-        title: 'Secured credit card which needs an FD as collateral',
-        color: 'red.400',
-    }
-]
-
-export default function Home() {
+export default function Home({ features }) {
     return (
         <>
             <Seo
@@ -110,4 +76,41 @@ export default function Home() {
             </main>
         </>
     )
+}
+
+export async function getStaticProps() {
+
+    const features = [
+        {
+            item: 1,
+            title: '✅ Zero forex markup credit card',
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: '✅ Zero Joining/Annual fee',
+            color: 'green.500',
+        },
+        {
+            item: 3,
+            title: '✅ Withdraw cash from ATM without interest till Payment date (48 days interest free cash)',
+            color: 'green.500',
+        },
+        {
+            item: 4,
+            title: '✅ VISA backed credit card hence higher acceptance in Vietnam',
+            color: 'green.500',
+        },
+        {
+            item: 5,
+            title: '❌ Secured credit card which needs an FD as collateral',
+            color: 'red.400',
+        }
+    ]
+
+    return {
+        props: {
+            features,
+        }
+    }
 }

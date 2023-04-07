@@ -9,33 +9,11 @@ import {
     Tag,
     Image
 } from '@chakra-ui/react'
-import { CheckCircleIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
 import Header from '@/component/header'
 import Seo from '@/component/seo'
 
-const features = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: `Put a laminated name label on your checked-in luggage`,
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: `It avoids the chances of others accidentally picking your luggage`,
-        color: 'red.400',
-    },
-    {
-        item: 3,
-        icon: CheckCircleIcon,
-        title: `It also helps you recognise your luggage quickly on the conveyer belt.`,
-        color: 'green.500',
-    },
-]
-
-export default function Home() {
+export default function Home({ features }) {
     return (
         <>
             <Seo 
@@ -69,4 +47,31 @@ export default function Home() {
             </main>
         </>
     )
+}
+
+export async function getStaticProps() {
+
+    const features = [
+        {
+            item: 1,
+            title: `✅ Put a laminated name label on your checked-in luggage`,
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: `❌ It avoids the chances of others accidentally picking your luggage`,
+            color: 'red.400',
+        },
+        {
+            item: 3,
+            title: `✅ It also helps you recognise your luggage quickly on the conveyer belt.`,
+            color: 'green.500',
+        },
+    ]
+
+    return {
+        props: {
+            features,
+        }
+    }
 }

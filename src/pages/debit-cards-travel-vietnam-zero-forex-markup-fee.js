@@ -15,36 +15,12 @@ import {
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
-import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
 import Header from '@/component/header'
 import Seo from '@/component/seo'
 import Link from 'next/link';
 
-const features = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: 'Zero forex markup on debit card',
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: '₹100 on international ATM cash withdrawl from Fi',
-        color: 'green.500',
-    },
-    {
-        item: 3,
-        icon: InfoIcon,
-        title: `Local ATMs in Vietnam will still charge 1.5%-3%
-        (minimum amount 30,000 VND -50,000 VND) on withdrawal.
-        Hence try using zero forex ATM's.`,
-        color: 'red.400',
-    }
-]
-
-export default function Home() {
+export default function Home({ features }) {
     return (
         <>
             <Seo
@@ -130,4 +106,33 @@ export default function Home() {
             </main>
         </>
     )
+}
+
+export async function getStaticProps() {
+
+    const features = [
+        {
+            item: 1,
+            title: '✅ Zero forex markup on debit card',
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: '✅ ₹100 on international ATM cash withdrawl from Fi',
+            color: 'green.500',
+        },
+        {
+            item: 3,
+            title: `❌ Local ATMs in Vietnam will still charge 1.5%-3%
+            (minimum amount 30,000 VND -50,000 VND) on withdrawal.
+            Hence try using zero forex ATM's.`,
+            color: 'red.400',
+        }
+    ]
+
+    return {
+        props: {
+            features,
+        }
+    }
 }

@@ -11,39 +11,11 @@ import {
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
-import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
 import Header from '@/component/header'
 import Seo from '@/component/seo'
 
-const features = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: `you can stay for maximum one month`,
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: `Usually visa approved within 5 days max.`,
-        color: 'green.500',
-    },
-    {
-        item: 3,
-        icon: CheckCircleIcon,
-        title: `Very unlikely to get rejected 🙂`,
-        color: 'green.500',
-    },
-    {
-        item: 4,
-        icon: InfoIcon,
-        title: `Please don't use any third party agency, apply on the official government site link given below`,
-        color: 'red.400',
-    }
-]
-
-export default function Home() {
+export default function Home({ features }) {
     return (
         <>
             <Seo
@@ -59,16 +31,16 @@ export default function Home() {
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
                                     <Heading as='h2' size='md'>E-Visa for Vietnam</Heading>
-                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally used</Tag>
+                                    <Tag colorScheme='teal' style={{ width: 'fit-content' }}>Personally used</Tag>
                                     <List spacing={3}>
-                                        <ListView features={features}/>
+                                        <ListView features={features} />
                                     </List>
                                 </Stack>
                             </CardBody>
                             <Divider style={{ color: '#e2e8f0' }} />
                             <CardFooter>
-                                <Button 
-                                    colorScheme='green' 
+                                <Button
+                                    colorScheme='green'
                                     onClick={() => window.open('https://evisa.xuatnhapcanh.gov.vn/web/guest/khai-thi-thuc-dien-tu/cap-thi-thuc-dien-tu')}>
                                     Apply E-Visa
                                 </Button>
@@ -79,4 +51,36 @@ export default function Home() {
             </main>
         </>
     )
+}
+
+export async function getStaticProps() {
+
+    const features = [
+        {
+            item: 1,
+            title: `✅ you can stay for maximum one month`,
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: `✅ Usually visa approved within 5 days max.`,
+            color: 'green.500',
+        },
+        {
+            item: 3,
+            title: `✅ Very unlikely to get rejected 🙂`,
+            color: 'green.500',
+        },
+        {
+            item: 4,
+            title: `❌ Please don't use any third party agency, apply on the official government site link given below`,
+            color: 'red.400',
+        }
+    ]
+
+    return {
+        props: {
+            features,
+        }
+    }
 }

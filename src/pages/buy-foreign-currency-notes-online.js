@@ -12,45 +12,11 @@ import {
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
-import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import Header from '@/component/header'
 import ListView from '@/component/listview'
 import Seo from '@/component/seo'
 
-const features = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: 'Buy USD as an extra emergency fund. You can use it for your other non-Vietnam trips as well',
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: 'BookMyForex is an easy to use online service to get foreign currency',
-        color: 'green.500',
-    },
-    {
-        item: 3,
-        icon: CheckCircleIcon,
-        title: `You can keep the foreign currency if its not more than $2000 per person`,
-        color: 'green.500',
-    },
-    {
-        item: 4,
-        icon: InfoIcon,
-        title: 'Place the order atleast 2 working days before you plan to leave ',
-        color: 'red.400',
-    },
-    {
-        item: 5,
-        icon: InfoIcon,
-        title: 'Ensure you select product type as currency note and NOT travel card',
-        color: 'red.400',
-    }
-]
-
-export default function Home() {
+export default function Home({ features }) {
     return (
         <>
             <Seo
@@ -66,7 +32,7 @@ export default function Home() {
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
                                     <Heading as='h2' size='md'>BookMyForex for USD currency notes</Heading>
-                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally using</Tag>
+                                    <Tag colorScheme='teal' style={{ width: 'fit-content' }}>Personally using</Tag>
                                     <Image
                                         src={'/static/images/currency.webp'}
                                         alt='foriegn currency notes'
@@ -88,12 +54,46 @@ export default function Home() {
                                 </Button>
                             </CardFooter>
                         </Card>
-
                     </SimpleGrid>
-
-
                 </div>
             </main>
         </>
     )
+}
+
+export async function getStaticProps() {
+
+    const features = [
+        {
+            item: 1,
+            title: '✅ Buy USD as an extra emergency fund. You can use it for your other non-Vietnam trips as well',
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: '✅ BookMyForex is an easy to use online service to get foreign currency',
+            color: 'green.500',
+        },
+        {
+            item: 3,
+            title: `✅ You can keep the foreign currency if its not more than $2000 per person`,
+            color: 'green.500',
+        },
+        {
+            item: 4,
+            title: '❌ Place the order atleast 2 working days before you plan to leave ',
+            color: 'red.400',
+        },
+        {
+            item: 5,
+            title: '❌ Ensure you select product type as currency note and NOT travel card',
+            color: 'red.400',
+        }
+    ]
+
+    return {
+        props: {
+            features,
+        }
+    }
 }

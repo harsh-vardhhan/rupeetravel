@@ -13,96 +13,11 @@ import {
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
-import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
 import Header from '@/component/header'
 import Seo from '@/component/seo'
 
-const vietjet = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: `Try booking early, you can get prices as low as ₹6,000`,
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: `~₹5,000 is tax on every ticket hence prices can't go lower than that`,
-        color: 'green.500',
-    },
-    {
-        item: 3,
-        icon: CheckCircleIcon,
-        title: `Extra ~₹2,000 for checked-in luggage`,
-        color: 'green.500',
-    },
-    {
-        item: 4,
-        icon: CheckCircleIcon,
-        title: `If you plan to travel the entire country, try checking the cheapest current route eg: Hanoi, Ho Chi Minh, Da Nang.`,
-        color: 'green.500',
-    },
-    {
-        item: 5,
-        icon: InfoIcon,
-        title: `Food in plane is expensive, you can even carry some airport food in flight.`,
-        color: 'red.400',
-    }
-]
-
-const indigo = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: `Cheaper flights on weekends than Vietjet`,
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: `More comfortable seats than Vietjet`,
-        color: 'green.500',
-    },
-    {
-        item: 3,
-        icon: CheckCircleIcon,
-        title: `In-flight services accepts INR and USD, whereas Vietjet accepts VND and USD`,
-        color: 'green.500',
-    },
-    {
-        item: 4,
-        icon: CheckCircleIcon,
-        title: `Payment gateway for booking flight tickets accepts American Express unlike Vietjet`,
-        color: 'green.500',
-    },
-    {
-        item: 5,
-        icon: CheckCircleIcon,
-        title: `You can use Reward cards like Indigo ka-ching whereas Vietjet doesn’t have any partner program with any Indian credit card`,
-        color: 'green.500',
-    },
-    {
-        item: 6,
-        icon: CheckCircleIcon,
-        title: `Takes their add-on services like priority check-in very seriously unlike Vietjet which at times denies this service at times even when charging for it.`,
-        color: 'green.500',
-    },
-    {
-        item: 6,
-        icon: CheckCircleIcon,
-        title: `No extra charge for checked-in luggage unlike Vietjet`,
-        color: 'green.500',
-    },
-    {
-        item: 7,
-        icon: InfoIcon,
-        title: `Flights from Delhi/Mumbai to Vietnam are not direct, rather via Kolkata. Vietjet has direct flights from Delhi/Mumbai to Vietnam.`,
-        color: 'red.400',
-    }
-]
-
-export default function Home() {
+export default function Home({ indigo, vietjet }) {
     return (
         <>
             <Seo
@@ -142,7 +57,7 @@ export default function Home() {
     )
 }
 
-const FlightCard = ({cardTitle, features, buttonName, buttonLink}) => {
+const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
     return (
         <Card maxW='sm'>
             <CardBody>
@@ -166,4 +81,85 @@ const FlightCard = ({cardTitle, features, buttonName, buttonLink}) => {
             </CardFooter>
         </Card>
     )
+}
+
+export async function getStaticProps() {
+
+    const vietjet = [
+        {
+            item: 1,
+            title: `✅ Try booking early, you can get prices as low as ₹6,000`,
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: `✅ ~₹5,000 is tax on every ticket hence prices can't go lower than that`,
+            color: 'green.500',
+        },
+        {
+            item: 3,
+            title: `✅ Extra ~₹2,000 for checked-in luggage`,
+            color: 'green.500',
+        },
+        {
+            item: 4,
+            title: `✅ If you plan to travel the entire country, try checking the cheapest current route eg: Hanoi, Ho Chi Minh, Da Nang.`,
+            color: 'green.500',
+        },
+        {
+            item: 5,
+            title: `❌ Food in plane is expensive, you can even carry some airport food in flight.`,
+            color: 'red.400',
+        }
+    ]
+
+    const indigo = [
+        {
+            item: 1,
+            title: `✅ Cheaper flights on weekends than Vietjet`,
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: `✅ More comfortable seats than Vietjet`,
+            color: 'green.500',
+        },
+        {
+            item: 3,
+            title: `✅ In-flight services accepts INR and USD, whereas Vietjet accepts VND and USD`,
+            color: 'green.500',
+        },
+        {
+            item: 4,
+            title: `✅ Payment gateway for booking flight tickets accepts American Express unlike Vietjet`,
+            color: 'green.500',
+        },
+        {
+            item: 5,
+            title: `✅ You can use Reward cards like Indigo ka-ching whereas Vietjet doesn’t have any partner program with any Indian credit card`,
+            color: 'green.500',
+        },
+        {
+            item: 6,
+            title: `✅ Takes their add-on services like priority check-in very seriously unlike Vietjet which at times denies this service at times even when charging for it.`,
+            color: 'green.500',
+        },
+        {
+            item: 7,
+            title: `✅ No extra charge for checked-in luggage unlike Vietjet`,
+            color: 'green.500',
+        },
+        {
+            item: 8,
+            title: `❌ Flights from Delhi/Mumbai to Vietnam are not direct, rather via Kolkata. Vietjet has direct flights from Delhi/Mumbai to Vietnam.`,
+            color: 'red.400',
+        }
+    ]
+
+    return {
+        props: {
+            indigo,
+            vietjet,
+        }
+    }
 }

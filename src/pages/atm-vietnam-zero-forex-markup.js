@@ -15,61 +15,11 @@ import {
     CardFooter,
     Button,
 } from '@chakra-ui/react'
-import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import Header from '@/component/header'
 import ListView from '@/component/listview'
 import Seo from '@/component/seo'
 
-const features = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: `Always accepts international debit card (unlike other ATM's)`,
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: 'Zero Forex charges on cash withdrawal.',
-        color: 'green.500',
-    },
-    {
-        item: 3,
-        icon: InfoIcon,
-        title: ` Other ATMs in Vietnam can charge 1.5%-3%
-        (minimum amount 30,000 VND -50,000 VND) on withdrawal.`,
-        color: 'red.400',
-    }
-]
-
-const atmFeatures = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: ` bank whose debit card you hold. 💳`,
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: `bank whose ATM you use. 🏧`,
-        color: 'green.500',
-    },
-    {
-        item: 3,
-        icon: CheckCircleIcon,
-        title: ` Fi debit card + Ocean Bank/MB Bank ATM = zero forex*`,
-        color: 'green.500',
-    },
-    {
-        item: 4,
-        icon: InfoIcon,
-        title: ` *Just ₹100 charge for ATM withdrawal from Fi`,
-        color: 'red.400',
-    }
-]
-
-export default function Home() {
+export default function Home({ features, atmFeatures }) {
     return (
         <>
             <Seo
@@ -139,4 +89,57 @@ export default function Home() {
             </main>
         </>
     )
+}
+
+export async function getStaticProps() {
+
+    const features = [
+        {
+            item: 1,
+            title: `✅ Always accepts international debit card (unlike other ATM's)`,
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: '✅ Zero Forex charges on cash withdrawal.',
+            color: 'green.500',
+        },
+        {
+            item: 3,
+            title: `❌ Other ATMs in Vietnam can charge 1.5%-3%
+            (minimum amount 30,000 VND -50,000 VND) on withdrawal.`,
+            color: 'red.400',
+        }
+    ]
+
+    const atmFeatures = [
+        {
+            item: 1,
+            title: `✅ bank whose debit card you hold. 💳`,
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: `✅ bank whose ATM you use. 🏧`,
+            color: 'green.500',
+        },
+        {
+            item: 3,
+            title: `✅ Fi debit card + Ocean Bank/MB Bank ATM = zero forex*`,
+            color: 'green.500',
+        },
+        {
+            item: 4,
+            title: `❌ ₹100 charge for ATM withdrawal from Fi`,
+            color: 'red.400',
+        }
+    ]
+
+
+    return {
+        props: {
+            features,
+            atmFeatures
+        }
+    }
 }

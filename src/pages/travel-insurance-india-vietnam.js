@@ -11,33 +11,11 @@ import {
     SimpleGrid,
     Tag,
 } from '@chakra-ui/react'
-import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
 import Header from '@/component/header'
 import Seo from '@/component/seo'
 
-const features = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: `Got $100,000 coverage at just ~₹1300 premium`,
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: `It cannot be extended hence make sure it covers your entire stay while buying it.`,
-        color: 'green.500',
-    },
-    {
-        item: 3,
-        icon: InfoIcon,
-        title: `Your normal health insurance doesn't cover international treatments hence strongly recommended you get travel insurance.`,
-        color: 'red.400',
-    },
-]
-
-export default function Home() {
+export default function Home({ features }) {
     return (
         <>
             <Seo
@@ -46,14 +24,14 @@ export default function Home() {
                 canonical={'https://www.rupeetravel.com/travel-insurance-india-vietnam'}
             />
             <main className={styles.main}>
-                <Header title={'Travel insurance for Vietnam'}/>
+                <Header title={'Travel insurance for Vietnam'} />
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
                                     <Heading as='h2' size='md'>Digit Insurance</Heading>
-                                    <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally used</Tag>
+                                    <Tag colorScheme='teal' style={{ width: 'fit-content' }}>Personally used</Tag>
                                     <List spacing={3}>
                                         <ListView features={features} />
                                     </List>
@@ -61,8 +39,8 @@ export default function Home() {
                             </CardBody>
                             <Divider style={{ color: '#e2e8f0' }} />
                             <CardFooter>
-                                <Button 
-                                    colorScheme='green' 
+                                <Button
+                                    colorScheme='green'
                                     onClick={() => window.open('https://www.godigit.com/international-travel-insurance')}>
                                     Digit Travel Insurance
                                 </Button>
@@ -73,4 +51,31 @@ export default function Home() {
             </main>
         </>
     )
+}
+
+export async function getStaticProps() {
+
+    const features = [
+        {
+            item: 1,
+            title: `✅ Got $100,000 coverage at just ~₹1300 premium`,
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: `✅ It cannot be extended hence make sure it covers your entire stay while buying it.`,
+            color: 'green.500',
+        },
+        {
+            item: 3,
+            title: `❌ Your normal health insurance doesn't cover international treatments hence strongly recommended you get travel insurance.`,
+            color: 'red.400',
+        },
+    ]
+
+    return {
+        props: {
+            features,
+        }
+    }
 }

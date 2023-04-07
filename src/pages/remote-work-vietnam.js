@@ -11,32 +11,15 @@ import {
     CardFooter,
     Button,
 } from '@chakra-ui/react'
-import { CheckCircleIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
 import Header from '@/component/header'
 import Seo from '@/component/seo'
 
-const features = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: `If you're a remote worker like me ensure your hotel has fast internet before booking them. 
-        The Hotel in which I stayed in Da Nang (Lavencos) has 20 Mbps which suits my need.`,
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: `Choose nearest Highlands Cafe (Starbucks of Vietnam) to work. They always have decent internet`,
-        color: 'green.500',
-    },
-]
-
-export default function Home() {
+export default function Home({ features }) {
     return (
         <>
-            <Seo 
-                canonical={'https://www.rupeetravel.com/remote-work-vietnam'} 
+            <Seo
+                canonical={'https://www.rupeetravel.com/remote-work-vietnam'}
                 title='Rupee Travel | Remote work in Vietnam'
                 description='Best places to work remotely in Vietnam'
             />
@@ -70,4 +53,27 @@ export default function Home() {
             </main>
         </>
     )
+}
+
+export async function getStaticProps() {
+
+    const features = [
+        {
+            item: 1,
+            title: `✅ If you're a remote worker like me ensure your hotel has fast internet before booking them. 
+            The Hotel in which I stayed in Da Nang (Lavencos) has 20 Mbps which suits my need.`,
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: `✅ Choose nearest Highlands Cafe (Starbucks of Vietnam) to work. They always have decent internet`,
+            color: 'green.500',
+        },
+    ]
+
+    return {
+        props: {
+            features,
+        }
+    }
 }

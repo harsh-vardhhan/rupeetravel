@@ -12,40 +12,12 @@ import {
     CardFooter,
     Button
 } from '@chakra-ui/react'
-import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
 import Header from '@/component/header'
 import Seo from '@/component/seo'
 import Link from 'next/link'
 
-const features = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: `Before you leave, withdraw some VND enough for first few days of your next visit.`,
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: `Avoid the hassle of looking for ATM right after your arrive Vietnam.`,
-        color: 'green.500',
-    },
-    {
-        item: 3,
-        icon: CheckCircleIcon,
-        title: `Vietnam is still mostly cash only society. No credit card,debit card, or USD will make it as easy as Vietnam currency (VND).`,
-        color: 'green.500',
-    },
-    {
-        item: 4,
-        icon: InfoIcon,
-        title: `Try withdrawing money from Ocean Bank ATM since it has zero forex markup charges.`,
-        color: 'red.400',
-    }
-]
-
-export default function Home() {
+export default function Home({ features }) {
     return (
         <>
             <Seo
@@ -90,4 +62,36 @@ export default function Home() {
             </main>
         </>
     )
+}
+
+export async function getStaticProps() {
+
+    const features = [
+        {
+            item: 1,
+            title: `✅ Before you leave, withdraw some VND enough for first few days of your next visit.`,
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: `✅ Avoid the hassle of looking for ATM right after your arrive Vietnam.`,
+            color: 'green.500',
+        },
+        {
+            item: 3,
+            title: `✅ Vietnam is still mostly cash only society. No credit card,debit card, or USD will make it as easy as Vietnam currency (VND).`,
+            color: 'green.500',
+        },
+        {
+            item: 4,
+            title: `❌ Try withdrawing money from Ocean Bank ATM since it has zero forex markup charges.`,
+            color: 'red.400',
+        }
+    ]
+
+    return {
+        props: {
+            features,
+        }
+    }
 }

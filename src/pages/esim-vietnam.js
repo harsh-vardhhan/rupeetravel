@@ -12,55 +12,11 @@ import {
     Tag,
     Image
 } from '@chakra-ui/react'
-import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
 import Header from '@/component/header'
 import Seo from '@/component/seo'
 
-const features = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: `If you have single sim phone convert to eSim`,
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: `This helps you in installing the new sim in Vietnam`,
-        color: 'green.500',
-    },
-    {
-        item: 3,
-        icon: InfoIcon,
-        title: `It can take 24 hours to get SMS part activated so try doing it a day before you leave.
-        Especially important if you plan to use credit/debit card for uber/ola to reach airport`,
-        color: 'red.400',
-    }
-]
-
-const reasons = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: `In India, you need OTP on your mobile number to make online payments, check bank balance via UPI`,
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: `It can be hard to put the main SIM aside for single SIM phones when travelling abroad`,
-        color: 'green.500',
-    },
-    {
-        item: 3,
-        icon: InfoIcon,
-        title: `That’s where e-SIM feels convenient. Just turn on your Indian SIM whenever needed.`,
-        color: 'green.500',
-    }
-]
-
-export default function Home() {
+export default function Home({features, reasons}) {
     return (
         <>
             <Seo 
@@ -113,4 +69,52 @@ export default function Home() {
             </main>
         </>
     )
+}
+
+export async function getStaticProps() {
+
+    const features = [
+        {
+            item: 1,
+            title: `✅ If you have single sim phone convert to eSim`,
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: `✅ This helps you in installing the new sim in Vietnam`,
+            color: 'green.500',
+        },
+        {
+            item: 3,
+            title: `❌ It can take 24 hours to get SMS part activated so try doing it a day before you leave.
+            Especially important if you plan to use credit/debit card for uber/ola to reach airport`,
+            color: 'red.400',
+        }
+    ]
+    
+    const reasons = [
+        {
+            item: 1,
+            title: `✅ In India, you need OTP on your mobile number to make online payments, check bank balance via UPI`,
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: `✅ It can be hard to put the main SIM aside for single SIM phones when travelling abroad`,
+            color: 'green.500',
+        },
+        {
+            item: 3,
+            title: `✅ That’s where e-SIM feels convenient. Just turn on your Indian SIM whenever needed.`,
+            color: 'green.500',
+        }
+    ]
+    
+
+    return {
+        props: {
+            features,
+            reasons,
+        }
+    }
 }

@@ -11,33 +11,11 @@ import {
     Image,
     SimpleGrid,
 } from '@chakra-ui/react'
-import { CheckCircleIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
 import Header from '@/component/header'
 import Seo from '@/component/seo'
 
-const features = [
-    {
-        item: 1,
-        icon: CheckCircleIcon,
-        title: `It's the Uber + Zomato of Vietnam`,
-        color: 'green.500',
-    },
-    {
-        item: 2,
-        icon: CheckCircleIcon,
-        title: `Signup with the local Vietnam number`,
-        color: 'red.400',
-    },
-    {
-        item: 3,
-        icon: CheckCircleIcon,
-        title: `Indian debit and credit cards don't work with Grab. So keep cash (VND) ready before using it's services.`,
-        color: 'green.500',
-    },
-]
-
-export default function Home() {
+export default function Home({ features }) {
     return (
         <>
             <Seo
@@ -46,7 +24,7 @@ export default function Home() {
                 canonical={'https://www.rupeetravel.com/food-delivery-taxi-vietnam'}
             />
             <main className={styles.main}>
-                <Header title={'Food Delivery and Taxi for Vietnam'}/>
+                <Header title={'Food Delivery and Taxi for Vietnam'} />
                 <div style={{ marginTop: '20px' }}>
                     <SimpleGrid minChildWidth='350px' spacing='40px'>
                         <Card maxW='sm'>
@@ -79,4 +57,32 @@ export default function Home() {
             </main>
         </>
     )
+}
+
+export async function getStaticProps() {
+
+    const features = [
+        {
+            item: 1,
+            title: `✅ It's the Uber + Zomato of Vietnam`,
+            color: 'green.500',
+        },
+        {
+            item: 2,
+            title: `❌ Signup with the local Vietnam number`,
+            color: 'red.400',
+        },
+        {
+            item: 3,
+            title: `✅ Indian debit and credit cards don't work with Grab. So keep cash (VND) ready before using it's services.`,
+            color: 'green.500',
+        },
+    ]
+
+
+    return {
+        props: {
+            features,
+        }
+    }
 }
