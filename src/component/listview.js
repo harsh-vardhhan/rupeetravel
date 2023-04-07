@@ -1,13 +1,13 @@
 import {
-    ListItem,
+    Text
 } from '@chakra-ui/react'
 
 const ListView = ({ features }) => {
     return features.map((feature) => {
         return (
-            <ListItem key={feature.item}>
+            <Text as='h2' size='xs' key={feature.item}>
                 {feature.title}
-            </ListItem>
+            </Text>
         )
     })
 }
