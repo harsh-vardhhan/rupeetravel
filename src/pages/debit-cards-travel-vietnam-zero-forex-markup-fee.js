@@ -19,6 +19,7 @@ import { CheckCircleIcon, InfoIcon } from '@chakra-ui/icons'
 import ListView from '@/component/listview'
 import Header from '@/component/header'
 import Seo from '@/component/seo'
+import Link from 'next/link';
 
 const features = [
     {
@@ -38,7 +39,7 @@ const features = [
         icon: InfoIcon,
         title: `Local ATMs in Vietnam will still charge 1.5%-3%
         (minimum amount 30,000 VND -50,000 VND) on withdrawal.
-        Hence try withdrawing a decent amount of cash.`,
+        Hence try using zero forex ATM's.`,
         color: 'red.400',
     }
 ]
@@ -77,12 +78,21 @@ export default function Home() {
                             </CardBody>
                             <Divider style={{ color: '#e2e8f0' }} />
                             <CardFooter>
-                                <Button
-                                    variant='solid'
-                                    colorScheme='green'
-                                    onClick={() => window.open('https://fi.money/')}>
-                                    Get Fi Account
-                                </Button>
+                                <Stack direction='row'>
+                                    <Button
+                                        variant='solid'
+                                        colorScheme='green'
+                                        onClick={() => window.open('https://fi.money/')}>
+                                        Get Fi Account
+                                    </Button>
+                                    <Link spacing='2' href='/atm-vietnam-zero-forex-markup'>
+                                        <Button
+                                            variant='solid'
+                                            colorScheme='green'>
+                                            Zero forex ATMs
+                                        </Button>
+                                    </Link>
+                                </Stack>
                             </CardFooter>
                         </Card>
                         <Card maxW='sm'>
