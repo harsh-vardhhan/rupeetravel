@@ -4,7 +4,6 @@ import {
     Card,
     CardBody,
     Stack,
-    List,
     Divider,
     CardFooter,
     Button,
@@ -33,9 +32,7 @@ export default function Home({features, reasons}) {
                                 <Stack mt='6' spacing='3'>
                                     <Heading as='h2' size='md'>Convert Indian SIM to eSIM</Heading>
                                     <Tag colorScheme='teal' style={{ width: 'fit-content' }}>Personally used</Tag>
-                                    <List spacing={3}>
-                                        <ListView features={features} />
-                                    </List>
+                                    <ListView features={features} />
                                 </Stack>
                             </CardBody>
                             <Divider style={{ color: '#e2e8f0' }} />
@@ -58,9 +55,7 @@ export default function Home({features, reasons}) {
                                         borderRadius='lg'
                                         style={{ marginTop: '10px', width: '310px', height: '391px' }}
                                     />
-                                    <List spacing={3}>
-                                        <ListView features={reasons} />
-                                    </List>
+                                    <ListView features={reasons} />
                                 </Stack>
                             </CardBody>
                         </Card>

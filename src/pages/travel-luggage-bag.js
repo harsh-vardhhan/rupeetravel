@@ -4,7 +4,6 @@ import {
     Card,
     CardBody,
     Stack,
-    List,
     SimpleGrid,
     Tag,
     Image
@@ -36,9 +35,7 @@ export default function Home({ features }) {
                                 <Stack mt='6' spacing='3'>
                                     <Heading as='h2' size='md'>Luggage travel hack</Heading>
                                     <Tag colorScheme='teal' style={{width: 'fit-content'}}>Personally experienced 😞</Tag>
-                                    <List spacing={3}>
-                                        <ListView features={features} />
-                                    </List>
+                                    <ListView features={features} />
                                 </Stack>
                             </CardBody>
                         </Card>

@@ -5,7 +5,6 @@ import {
     CardBody,
     Text,
     Stack,
-    List,
     Image,
     Alert,
     AlertIcon,
@@ -47,9 +46,7 @@ export default function Home({ features, atmFeatures }) {
                                     <Text>
                                         Just search on google map <Text as='b'>Ocean Bank</Text> or <Text as='b'>MB Bank</Text> for nearby ATM.
                                     </Text>
-                                    <List spacing={3}>
-                                        <ListView features={features} />
-                                    </List>
+                                    <ListView features={features} />
                                 </Stack>
                             </CardBody>
                             <Divider style={{ color: '#e2e8f0' }} />
@@ -78,9 +75,7 @@ export default function Home({ features, atmFeatures }) {
                                     <Text>
                                         When you withdraw cash from ATM&apos;s there are two sides which charge you:
                                     </Text>
-                                    <List spacing={3}>
-                                        <ListView features={atmFeatures} />
-                                    </List>
+                                    <ListView features={atmFeatures} />
                                 </Stack>
                             </CardBody>
                         </Card>

@@ -4,7 +4,6 @@ import {
     Card,
     CardBody,
     Stack,
-    List,
     Divider,
     CardFooter,
     Button,
@@ -66,9 +65,7 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
                     <Tag colorScheme='teal' style={{ width: 'fit-content' }}>
                         Personally used
                     </Tag>
-                    <List spacing={3}>
-                        <ListView features={features} />
-                    </List>
+                    <ListView features={features} />
                 </Stack>
             </CardBody>
             <Divider style={{ color: '#e2e8f0' }} />

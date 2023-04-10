@@ -4,7 +4,6 @@ import {
     Card,
     CardBody,
     Stack,
-    List,
     Divider,
     CardFooter,
     Button,
@@ -41,9 +40,7 @@ export default function Home({ features }) {
                                         borderRadius='lg'
                                         style={{ marginTop: '10px', width: '310px', height: '174px' }}
                                     />
-                                    <List spacing={3}>
-                                        <ListView features={features} />
-                                    </List>
+                                    <ListView features={features} />
                                 </Stack>
                             </CardBody>
                             <Divider style={{ color: '#e2e8f0' }} />

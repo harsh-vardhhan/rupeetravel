@@ -4,7 +4,6 @@ import {
     Card,
     CardBody,
     Stack,
-    List,
     Divider,
     CardFooter,
     Button,
@@ -32,9 +31,7 @@ export default function Home({ features }) {
                                 <Stack mt='6' spacing='3'>
                                     <Heading as='h2' size='md'>E-Visa for Vietnam</Heading>
                                     <Tag colorScheme='teal' style={{ width: 'fit-content' }}>Personally used</Tag>
-                                    <List spacing={3}>
-                                        <ListView features={features} />
-                                    </List>
+                                    <ListView features={features} />
                                 </Stack>
                             </CardBody>
                             <Divider style={{ color: '#e2e8f0' }} />

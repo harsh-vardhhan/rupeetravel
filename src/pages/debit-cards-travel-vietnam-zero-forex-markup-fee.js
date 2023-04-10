@@ -5,7 +5,6 @@ import {
     CardBody,
     Text,
     Stack,
-    List,
     Divider,
     CardFooter,
     Button,
@@ -47,9 +46,7 @@ export default function Home({ features }) {
                                     <Text>
                                         Fi is a no brainer, easy to use neobank account. Suit&apos;s perfect for travelling abroad.
                                     </Text>
-                                    <List spacing={3}>
-                                        <ListView features={features} />
-                                    </List>
+                                    <ListView features={features} />
                                 </Stack>
                             </CardBody>
                             <Divider style={{ color: '#e2e8f0' }} />
