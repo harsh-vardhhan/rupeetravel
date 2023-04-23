@@ -22,7 +22,7 @@ export default function Home() {
                         <Card maxW='sm'>
                             <CardBody>
                                 <Stack mt='6' spacing='3'>
-                                    <Heading as='h2' size='xl'>Oops, this item isn't on the travel checklist.</Heading>
+                                    <Heading as='h2' size='xl'>{`Oops, this item isn't on the travel checklist.`}</Heading>
                                 </Stack>
                             </CardBody>
                             <Divider style={{ color: '#e2e8f0' }} />
