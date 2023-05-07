@@ -52,7 +52,7 @@ export default function Home({ beforeArrivals, arrivals, beforeDeparture }) {
 
 const CheckListItemCard = ({ title, list }) => {
   return (
-    <Card style={{ maxWidth: '500px', marginTop: '10px' }}>
+    <Card style={{ width: '343px', marginTop: '10px' }}>
       <CardHeader>
         <Text fontSize='2xl' as='b'>{title}</Text>
       </CardHeader>
