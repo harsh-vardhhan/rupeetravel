@@ -1,6 +1,6 @@
 import styles from '@/styles/Home.module.css'
-import { Heading } from '@chakra-ui/react'
 import {
+    Heading,
     Card,
     CardBody,
     Stack,

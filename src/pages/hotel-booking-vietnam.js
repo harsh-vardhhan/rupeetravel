@@ -1,5 +1,4 @@
 import styles from '@/styles/Home.module.css'
-import { Heading } from '@chakra-ui/react'
 import {
     Card,
     CardBody,
@@ -10,6 +9,7 @@ import {
     Image,
     SimpleGrid,
     Tag,
+    Heading,
 } from '@chakra-ui/react'
 import ListView from '@/component/listview'
 import Header from '@/component/header'

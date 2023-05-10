@@ -1,5 +1,4 @@
 import styles from '@/styles/Home.module.css'
-import { Heading } from '@chakra-ui/react'
 import {
     Card,
     CardBody,
@@ -13,6 +12,7 @@ import {
     Divider,
     CardFooter,
     Button,
+    Heading,
 } from '@chakra-ui/react'
 import Header from '@/component/header'
 import ListView from '@/component/listview'

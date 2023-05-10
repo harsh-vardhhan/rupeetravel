@@ -2,7 +2,6 @@ import {
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
-    Heading,
     Text,
 } from '@chakra-ui/react';
 import Link from 'next/link';

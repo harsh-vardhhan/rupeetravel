@@ -1,5 +1,4 @@
 import styles from '@/styles/Home.module.css'
-import { Heading } from '@chakra-ui/react'
 import Link from 'next/link'
 import {
   Card,
@@ -15,6 +14,7 @@ import {
   Wrap,
   WrapItem,
   Button,
+  Heading,
 } from '@chakra-ui/react'
 import { FaTwitter } from "react-icons/fa";
 import Seo from '@/component/seo'
@@ -115,7 +115,7 @@ const Social = () => {
   )
 }
 
-export async function getStaticProps(ctx) {
+export async function getStaticProps() {
 
   const beforeArrivals = [
     {
