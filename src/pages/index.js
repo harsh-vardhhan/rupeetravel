@@ -55,7 +55,7 @@ export default function Home({ beforeArrivals, arrivals, beforeDeparture }) {
         <div style={{ marginTop: "20px" }}>
           {mobile ? (
             <div style={{
-              display: flex,
+              display: 'flex',
               flexDirection: 'column',
             }}>
               <CheckListItemCard
@@ -73,7 +73,7 @@ export default function Home({ beforeArrivals, arrivals, beforeDeparture }) {
             </div>
           ) : (
             <div style={{
-              display: flex,
+              display: 'flex',
               flexDirection: 'row',
               gap: '40px'
             }}>
