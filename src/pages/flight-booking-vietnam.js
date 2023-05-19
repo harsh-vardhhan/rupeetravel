@@ -11,6 +11,13 @@ import {
   SimpleGrid,
   Tag,
   Heading,
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Th,
+  Td,
+  Box,
 } from "@chakra-ui/react";
 import ListView from "@/component/listview";
 import Header from "@/component/header";
@@ -52,11 +59,55 @@ export default function Home({ indigo, vietjet }) {
               </CardBody>
             </Card>
           </SimpleGrid>
+          <ComparisionMatrix />
         </div>
       </main>
     </>
   );
 }
+
+const ComparisionMatrix = () => (
+  <Card style={{ marginTop: "30px" }}>
+    <Box overflowX="auto">
+      <Table variant='simple'>
+        <Thead>
+          <Tr>
+            <Th>Facilities</Th>
+            <Th>Vietjet</Th>
+            <Th>Indigo</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          <Tr>
+            <Td>Checked-in luggage cost included in ticket price</Td>
+            <Td>❌</Td>
+            <Td>✅</Td>
+          </Tr>
+          <Tr>
+            <Td>Accepts Amex at payment gateway</Td>
+            <Td>❌</Td>
+            <Td>✅</Td>
+          </Tr>
+          <Tr>
+            <Td>Direct flight to Vietnam from India (0 stops)</Td>
+            <Td>✅</Td>
+            <Td>❌</Td>
+          </Tr>
+          <Tr>
+            <Td>Credit Card Reward Program</Td>
+            <Td>❌</Td>
+            <Td>✅</Td>
+          </Tr>
+          <Tr>
+            <Td>Accepts INR for in-flight services</Td>
+            <Td>❌</Td>
+            <Td>✅</Td>
+          </Tr>
+        </Tbody>
+      </Table>
+    </Box>
+  </Card>
+)
 
 const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
   return (
@@ -106,7 +157,7 @@ export async function getStaticProps() {
     },
     {
       item: 5,
-      title: `❌ Booking via the Vietjet site from July 2023 will incur 20% TCS. Opt for an Indian booking site that makes INR payments. Disable international transactions to prevent USD payment`,
+      title: `❌ Booking via the Vietjet site from July 2023 will incur 20% TCS. Opt for an Indian booking site that makes INR payments. Disable international transactions to prevent USD payment. [Note: Not applicable if your annual spending on international credit cards is less than 7 Lakhs.]`,
       color: "green.500",
     },
     {
