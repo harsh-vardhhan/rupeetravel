@@ -157,7 +157,7 @@ export async function getStaticProps() {
     },
     {
       item: 5,
-      title: `❌ Booking via the Vietjet site from July 2023 will incur 20% TCS. Opt for an Indian booking site that makes INR payments. Disable international transactions to prevent USD payment. [Note: Not applicable if your annual spending on international credit cards is less than 7 Lakhs.]`,
+      title: `❌ Booking via the Vietjet site from July 2023 will incur 20% TCS. Opt for an Indian booking site that makes INR payments. Disable international transactions to prevent USD payment. [Note: Not applicable if your annual spending on international credit cards is less than INR 7 Lakhs.]`,
       color: "green.500",
     },
     {
