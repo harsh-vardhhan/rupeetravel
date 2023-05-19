@@ -106,6 +106,11 @@ export async function getStaticProps() {
     },
     {
       item: 5,
+      title: `❌ Booking via the Vietjet site from July 2023 will incur 20% TCS. Opt for an Indian booking site that makes INR payments. Disable international transactions to prevent USD payment`,
+      color: "green.500",
+    },
+    {
+      item: 6,
       title: `❌ Food in plane is expensive, you can even carry some airport food in flight.`,
       color: "red.400",
     },
@@ -149,6 +154,11 @@ export async function getStaticProps() {
     },
     {
       item: 8,
+      title: `✅ No 20% TCS since INR payment occurs via the Indigo website.`,
+      color: "green.500",
+    },
+    {
+      item: 9,
       title: `❌ Flights from Delhi/Mumbai to Vietnam are not direct, rather via Kolkata. Vietjet has direct flights from Delhi/Mumbai to Vietnam.`,
       color: "red.400",
     },
