@@ -20,27 +20,27 @@ export default function Home({ features }) {
   const structuredData = {
     "@context": "https://www.schema.org",
     "@type": "product",
-    "brand": "BookMyForex",
-    "name": "USD foriegn currency notes",
-    "image": "https://ik.imagekit.io/rupeetravel/currency.webp",
-    "category": "foreign currency notes",
-    "description": "Buy USD forex cash at best prices.",
-    "aggregateRating": {
+    brand: "BookMyForex",
+    name: "USD foriegn currency notes",
+    image: "https://ik.imagekit.io/rupeetravel/currency.webp",
+    category: "foreign currency notes",
+    description: "Buy USD forex cash at best prices.",
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "1"
+      ratingValue: "5",
+      reviewCount: "1",
     },
-    "offers": {
+    offers: {
       "@type": "Offer",
-      "priceCurrency": "INR",
-      "price": "0",
-      "itemCondition": "http://schema.org/UsedCondition",
-      "availability": "http://schema.org/InStock",
-      "seller": {
+      priceCurrency: "INR",
+      price: "0",
+      itemCondition: "http://schema.org/UsedCondition",
+      availability: "http://schema.org/InStock",
+      seller: {
         "@type": "Currency Dealer",
-        "name": "BookMyForex"
+        name: "BookMyForex",
       },
-    }
+    },
   };
   return (
     <>
