@@ -14,10 +14,20 @@ import {
 import Header from "@/component/header";
 import ListView from "@/component/listview";
 import Seo from "@/component/seo";
+import StructuredData from "@/component/structuredData";
 
 export default function Home({ features }) {
+  const structuredData = {
+    "@context": "https://www.schema.org",
+    "@type": "product",
+    "brand": "BookMyForex",
+    "name": "USD foriegn currency notes",
+    "category": "foreign currency notes",
+    "description": "Buy USD forex cash at best prices.",
+  };
   return (
     <>
+      <StructuredData data={structuredData} />
       <Seo
         title="Rupee Travel | Buy forex currency notes in India"
         description="best foreign currency exchange online in India"

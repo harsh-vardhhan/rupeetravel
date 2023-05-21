@@ -15,11 +15,21 @@ import {
 } from "@chakra-ui/react";
 import Header from "@/component/header";
 import ListView from "@/component/listview";
+import StructuredData from "@/component/structuredData";
 import Seo from "@/component/seo";
 
 export default function Home({ features }) {
+  const structuredData = {
+    "@context": "https://www.schema.org",
+    "@type": "product",
+    "brand": "IDFC Bank",
+    "name": "IDCF First Wow Credit Card",
+    "category": "Credit Card",
+    "description": " Zero forex markup credit card",
+  };
   return (
     <>
+      <StructuredData data={structuredData} />
       <Seo
         title="Rupee Travel | credit card with zero international transaction charges"
         description="Best credit card for international travel. Apply IDFC credit card."

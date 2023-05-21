@@ -17,11 +17,22 @@ import {
 import ListView from "@/component/listview";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
+import StructuredData from "@/component/structuredData";
 import Link from "next/link";
 
 export default function Home({ features }) {
+  const structuredData = {
+    "@context": "https://www.schema.org",
+    "@type": "product",
+    "brand": "Fi Bank",
+    "name": "Fi Debit Card",
+    "category": "Debit Card",
+    "description": " Zero forex markup debit card",
+  };
+
   return (
     <>
+      <StructuredData data={structuredData} />
       <Seo
         title="Rupee Travel | debit card with zero forex markup for travel in Vietnam"
         description="Best debit card with zero forex markup for foreign travel in Vietnam for Indians"
