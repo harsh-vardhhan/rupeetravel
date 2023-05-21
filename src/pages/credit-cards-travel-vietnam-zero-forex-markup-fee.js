@@ -68,7 +68,7 @@ export default function Home({ features }) {
                     Personally using
                   </Tag>
                   <Image
-                    src={"/static/images/credit-card.webp"}
+                    src={"https://ik.imagekit.io/rupeetravel/credit-card.webp"}
                     alt="IDFC First Wow"
                     borderRadius="lg"
                     style={{
@@ -104,7 +104,7 @@ export default function Home({ features }) {
                   anywhere in Vietnam.
                 </Alert>
                 <Image
-                  src={"/static/images/american-express.webp"}
+                  src={"https://ik.imagekit.io/rupeetravel/american-express.webp"}
                   alt="Amex card"
                   borderRadius="lg"
                   style={{ marginTop: "10px", width: "310px", height: "312px" }}
