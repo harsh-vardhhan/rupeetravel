@@ -22,10 +22,10 @@ export default function Home({ features }) {
   const structuredData = {
     "@context": "https://www.schema.org",
     "@type": "product",
-    "brand": "IDFC Bank",
-    "name": "IDCF First Wow Credit Card",
-    "category": "Credit Card",
-    "description": " Zero forex markup credit card",
+    brand: "IDFC Bank",
+    name: "IDCF First Wow Credit Card",
+    category: "Credit Card",
+    description: " Zero forex markup credit card",
   };
   return (
     <>

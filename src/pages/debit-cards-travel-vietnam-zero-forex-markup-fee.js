@@ -24,10 +24,10 @@ export default function Home({ features }) {
   const structuredData = {
     "@context": "https://www.schema.org",
     "@type": "product",
-    "brand": "Fi Bank",
-    "name": "Fi Debit Card",
-    "category": "Debit Card",
-    "description": " Zero forex markup debit card",
+    brand: "Fi Bank",
+    name: "Fi Debit Card",
+    category: "Debit Card",
+    description: " Zero forex markup debit card",
   };
 
   return (
