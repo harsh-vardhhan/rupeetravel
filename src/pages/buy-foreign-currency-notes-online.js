@@ -24,6 +24,22 @@ export default function Home({ features }) {
     "name": "USD foriegn currency notes",
     "category": "foreign currency notes",
     "description": "Buy USD forex cash at best prices.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "1"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "price": "0",
+      "itemCondition": "http://schema.org/UsedCondition",
+      "availability": "http://schema.org/InStock",
+      "seller": {
+        "@type": "Currency Dealer",
+        "name": "BookMyForex"
+      },
+    }
   };
   return (
     <>

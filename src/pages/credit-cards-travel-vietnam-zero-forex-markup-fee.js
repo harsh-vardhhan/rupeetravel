@@ -26,6 +26,22 @@ export default function Home({ features }) {
     "name": "IDCF First Wow Credit Card",
     "category": "Credit Card",
     "description": " Zero forex markup credit card",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "1"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "price": "0",
+      "itemCondition": "http://schema.org/UsedCondition",
+      "availability": "http://schema.org/InStock",
+      "seller": {
+        "@type": "Bank",
+        "name": "IDFC Bank"
+      },
+    }
   };
   return (
     <>

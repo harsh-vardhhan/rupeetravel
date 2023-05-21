@@ -28,6 +28,22 @@ export default function Home({ features }) {
     "name": "Fi Debit Card",
     "category": "Debit Card",
     "description": " Zero forex markup debit card",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "1"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "price": "0",
+      "itemCondition": "http://schema.org/UsedCondition",
+      "availability": "http://schema.org/InStock",
+      "seller": {
+        "@type": "Bank",
+        "name": "Fi Bank"
+      },
+    }
   };
 
   return (
