@@ -22,6 +22,7 @@ export default function Home({ features }) {
     "@type": "product",
     "brand": "BookMyForex",
     "name": "USD foriegn currency notes",
+    "image": "https://ik.imagekit.io/rupeetravel/currency.webp",
     "category": "foreign currency notes",
     "description": "Buy USD forex cash at best prices.",
     "aggregateRating": {

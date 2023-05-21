@@ -26,6 +26,7 @@ export default function Home({ features }) {
     "@type": "product",
     "brand": "Fi Bank",
     "name": "Fi Debit Card",
+    "image": "https://ik.imagekit.io/rupeetravel/debit-card.webp",
     "category": "Debit Card",
     "description": " Zero forex markup debit card",
     "aggregateRating": {

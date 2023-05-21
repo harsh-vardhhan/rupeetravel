@@ -24,6 +24,7 @@ export default function Home({ features }) {
     "@type": "product",
     "brand": "IDFC Bank",
     "name": "IDCF First Wow Credit Card",
+    "image": "https://ik.imagekit.io/rupeetravel/credit-card.webp",
     "category": "Credit Card",
     "description": " Zero forex markup credit card",
     "aggregateRating": {
