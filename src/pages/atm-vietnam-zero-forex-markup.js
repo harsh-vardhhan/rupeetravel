@@ -13,7 +13,7 @@ import {
   Button,
   Heading,
 } from "@chakra-ui/react";
-import Image from 'next/image';
+import Image from "next/image";
 import Header from "@/component/header";
 import ListView from "@/component/listview";
 import Seo from "@/component/seo";
