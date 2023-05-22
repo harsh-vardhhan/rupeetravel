@@ -66,7 +66,7 @@ export default function Home({ features }) {
                     Personally using
                   </Tag>
                   <Image
-                    src={"/static/images/currency.webp"}
+                    src={"https://ik.imagekit.io/rupeetravel/currency.webp"}
                     alt="foriegn currency notes"
                     borderRadius="lg"
                     style={{

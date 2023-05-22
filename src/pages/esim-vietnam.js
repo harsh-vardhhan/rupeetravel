@@ -57,7 +57,7 @@ export default function Home({ features, reasons }) {
                     Why get eSIM?
                   </Heading>
                   <Image
-                    src={"/static/images/esim.webp"}
+                    src={"https://ik.imagekit.io/rupeetravel/esim.webp"}
                     alt="eSIM"
                     borderRadius="lg"
                     style={{

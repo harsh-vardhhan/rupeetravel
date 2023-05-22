@@ -30,7 +30,7 @@ export default function Home({ features }) {
             <Card maxW="sm">
               <CardBody>
                 <Image
-                  src={"/static/images/hotel.webp"}
+                  src={"https://ik.imagekit.io/rupeetravel/hotel.webp"}
                   alt="Vietnam Hotel"
                   borderRadius="lg"
                   style={{ width: "310px", height: "422px" }}

@@ -34,7 +34,7 @@ export default function Home({ features, atmFeatures }) {
               <CardBody>
                 <Stack direction="column">
                   <Image
-                    src={"/static/images/mb-bank-atm.webp"}
+                    src={"https://ik.imagekit.io/rupeetravel/mb-bank-atm.webp"}
                     alt="MB Bank ATM"
                     borderRadius="lg"
                     style={{ width: "310px", height: "284px" }}

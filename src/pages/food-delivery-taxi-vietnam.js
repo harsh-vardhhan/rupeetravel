@@ -29,7 +29,7 @@ export default function Home({ features }) {
             <Card maxW="sm">
               <CardBody>
                 <Image
-                  src={"/static/images/grab.webp"}
+                  src={"https://ik.imagekit.io/rupeetravel/grab.webp"}
                   alt="Grab Mobile App"
                   borderRadius="lg"
                   style={{ width: "310px", height: "425px" }}

@@ -31,7 +31,7 @@ export default function Home({ features }) {
             <Card maxW="md">
               <CardBody>
                 <Image
-                  src={"/static/images/local-currency.webp"}
+                  src={"https://ik.imagekit.io/rupeetravel/local-currency.webp"}
                   alt="local-currency"
                   borderRadius="lg"
                   style={{ width: "310px", height: "232px" }}

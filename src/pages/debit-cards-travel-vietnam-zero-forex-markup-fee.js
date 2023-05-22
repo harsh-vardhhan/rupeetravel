@@ -64,7 +64,7 @@ export default function Home({ features }) {
             <Card maxW="sm">
               <CardBody>
                 <Image
-                  src={"/static/images/debit-card.webp"}
+                  src={"https://ik.imagekit.io/rupeetravel/debit-card.webp"}
                   alt="Fi Debit Card"
                   borderRadius="lg"
                   style={{ width: "310px", height: "232px" }}
@@ -110,7 +110,7 @@ export default function Home({ features }) {
                   usage&quot; checkbox when abroad
                 </Alert>
                 <Image
-                  src={"/static/images/fisetting.webp"}
+                  src={"https://ik.imagekit.io/rupeetravel/fisetting.webp"}
                   alt="Fi Settings Mobile"
                   style={{ marginTop: "10px", width: "310px", height: "364px" }}
                   borderRadius="lg"
@@ -127,7 +127,7 @@ export default function Home({ features }) {
                   in case you aren&apos;t aware.
                 </Alert>
                 <Image
-                  src={"/static/images/discover.webp"}
+                  src={"https://ik.imagekit.io/rupeetravel/discover.webp"}
                   alt="Discover card"
                   borderRadius="lg"
                   style={{ marginTop: "10px", width: "310px", height: "232px" }}

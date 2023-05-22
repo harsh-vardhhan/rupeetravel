@@ -95,7 +95,7 @@ const Social = () => {
         <Image
           style={{ height: '48px', width: '48px', borderRadius: '24px' }}
           alt='Harsh Vardhan'
-          src={'/static/images/harsh-vardhan.webp'}
+          src={'https://ik.imagekit.io/rupeetravel/harsh-vardhan.webp'}
         />
       </WrapItem>
       <WrapItem>
