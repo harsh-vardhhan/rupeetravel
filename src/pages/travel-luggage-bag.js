@@ -27,7 +27,9 @@ export default function Home({ features }) {
             <Card maxW="sm">
               <CardBody>
                 <Image
-                  src={"https://ik.imagekit.io/rupeetravel/luggage-travel-hack.webp"}
+                  src={
+                    "https://ik.imagekit.io/rupeetravel/luggage-travel-hack.webp"
+                  }
                   alt="Luggage"
                   borderRadius="lg"
                   style={{ width: "310px", height: "187px" }}
