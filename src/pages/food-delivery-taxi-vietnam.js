@@ -9,7 +9,7 @@ import {
   SimpleGrid,
   Heading,
 } from "@chakra-ui/react";
-import Image from 'next/image';
+import Image from "next/image";
 import ListView from "@/component/listview";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
