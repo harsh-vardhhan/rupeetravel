@@ -10,12 +10,12 @@ import {
   Stack,
   SimpleGrid,
   Tag,
-  Image,
   Wrap,
   WrapItem,
   Button,
   Heading,
 } from '@chakra-ui/react'
+import Image from 'next/image';
 import { FaTwitter } from "react-icons/fa";
 import Seo from '@/component/seo'
 
@@ -93,9 +93,11 @@ const Social = () => {
     <Wrap style={{ marginTop: '20px' }}>
       <WrapItem>
         <Image
-          style={{ height: '48px', width: '48px', borderRadius: '24px' }}
+          height={48}
+          width={48}
+          style={{ borderRadius: '24px' }}
           alt='Harsh Vardhan'
-          src={'https://ik.imagekit.io/rupeetravel/harsh-vardhan.webp'}
+          src={'/images/harsh-vardhan.webp'}
         />
       </WrapItem>
       <WrapItem>

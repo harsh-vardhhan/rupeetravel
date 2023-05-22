@@ -6,11 +6,11 @@ import {
   Divider,
   CardFooter,
   Button,
-  Image,
   SimpleGrid,
   Tag,
   Heading,
 } from "@chakra-ui/react";
+import Image from 'next/image';
 import Header from "@/component/header";
 import ListView from "@/component/listview";
 import Seo from "@/component/seo";
@@ -66,13 +66,13 @@ export default function Home({ features }) {
                     Personally using
                   </Tag>
                   <Image
-                    src={"https://ik.imagekit.io/rupeetravel/currency.webp"}
+                    src={"/images/currency.webp"}
                     alt="foriegn currency notes"
                     borderRadius="lg"
+                    height={330}
+                    width={310}
                     style={{
                       marginTop: "10px",
-                      height: "330px",
-                      width: "310px",
                     }}
                   />
                   <ListView features={features} />

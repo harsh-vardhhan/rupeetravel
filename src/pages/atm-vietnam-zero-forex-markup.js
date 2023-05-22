@@ -4,7 +4,6 @@ import {
   CardBody,
   Text,
   Stack,
-  Image,
   Alert,
   AlertIcon,
   SimpleGrid,
@@ -14,6 +13,7 @@ import {
   Button,
   Heading,
 } from "@chakra-ui/react";
+import Image from 'next/image';
 import Header from "@/component/header";
 import ListView from "@/component/listview";
 import Seo from "@/component/seo";
@@ -34,10 +34,10 @@ export default function Home({ features, atmFeatures }) {
               <CardBody>
                 <Stack direction="column">
                   <Image
-                    src={"https://ik.imagekit.io/rupeetravel/mb-bank-atm.webp"}
+                    src={"/images/mb-bank-atm.webp"}
                     alt="MB Bank ATM"
-                    borderRadius="lg"
-                    style={{ width: "310px", height: "284px" }}
+                    height={284}
+                    width={310}
                   />
                 </Stack>
                 <Stack mt="6" spacing="3">

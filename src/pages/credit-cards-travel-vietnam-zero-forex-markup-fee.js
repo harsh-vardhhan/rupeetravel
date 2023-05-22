@@ -6,13 +6,13 @@ import {
   Divider,
   CardFooter,
   Button,
-  Image,
   Alert,
   AlertIcon,
   SimpleGrid,
   Tag,
   Heading,
 } from "@chakra-ui/react";
+import Image from 'next/image';
 import Header from "@/component/header";
 import ListView from "@/component/listview";
 import StructuredData from "@/component/structuredData";
@@ -68,13 +68,12 @@ export default function Home({ features }) {
                     Personally using
                   </Tag>
                   <Image
-                    src={"https://ik.imagekit.io/rupeetravel/credit-card.webp"}
+                    src={"/images/credit-card.webp"}
                     alt="IDFC First Wow"
-                    borderRadius="lg"
+                    height={174}
+                    width={310}
                     style={{
                       marginTop: "10px",
-                      width: "310px",
-                      height: "174px",
                     }}
                   />
                   <ListView features={features} />
@@ -104,10 +103,11 @@ export default function Home({ features }) {
                   anywhere in Vietnam.
                 </Alert>
                 <Image
-                  src={"https://ik.imagekit.io/rupeetravel/american-express.webp"}
+                  src={"/imagesamerican-express.webp"}
                   alt="Amex card"
-                  borderRadius="lg"
-                  style={{ marginTop: "10px", width: "310px", height: "312px" }}
+                  height={312}
+                  width={310}
+                  style={{ marginTop: "10px"}}
                 />
               </CardBody>
             </Card>

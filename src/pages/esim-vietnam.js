@@ -8,9 +8,9 @@ import {
   Button,
   SimpleGrid,
   Tag,
-  Image,
   Heading,
 } from "@chakra-ui/react";
+import Image from 'next/image';
 import ListView from "@/component/listview";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
@@ -57,13 +57,13 @@ export default function Home({ features, reasons }) {
                     Why get eSIM?
                   </Heading>
                   <Image
-                    src={"https://ik.imagekit.io/rupeetravel/esim.webp"}
+                    src={"/images//esim.webp"}
                     alt="eSIM"
                     borderRadius="lg"
+                    height={391}
+                    width={310}
                     style={{
                       marginTop: "10px",
-                      width: "310px",
-                      height: "391px",
                     }}
                   />
                   <ListView features={reasons} />

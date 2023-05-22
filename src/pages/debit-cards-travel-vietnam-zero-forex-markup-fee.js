@@ -7,13 +7,13 @@ import {
   Divider,
   CardFooter,
   Button,
-  Image,
   Alert,
   AlertIcon,
   SimpleGrid,
   Tag,
   Heading,
 } from "@chakra-ui/react";
+import Image from 'next/image';
 import ListView from "@/component/listview";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
@@ -64,9 +64,11 @@ export default function Home({ features }) {
             <Card maxW="sm">
               <CardBody>
                 <Image
-                  src={"https://ik.imagekit.io/rupeetravel/debit-card.webp"}
+                  src={"/images/debit-card.webp"}
                   alt="Fi Debit Card"
                   borderRadius="lg"
+                  height={232}
+                  width={310}
                   style={{ width: "310px", height: "232px" }}
                 />
                 <Stack mt="6" spacing="3">
@@ -110,10 +112,11 @@ export default function Home({ features }) {
                   usage&quot; checkbox when abroad
                 </Alert>
                 <Image
-                  src={"https://ik.imagekit.io/rupeetravel/fisetting.webp"}
+                  src={"/images/fisetting.webp"}
                   alt="Fi Settings Mobile"
+                  height={364}
+                  width={310}
                   style={{ marginTop: "10px", width: "310px", height: "364px" }}
-                  borderRadius="lg"
                 />
               </CardBody>
             </Card>
@@ -127,10 +130,11 @@ export default function Home({ features }) {
                   in case you aren&apos;t aware.
                 </Alert>
                 <Image
-                  src={"https://ik.imagekit.io/rupeetravel/discover.webp"}
+                  src={"/images/discover.webp"}
                   alt="Discover card"
-                  borderRadius="lg"
-                  style={{ marginTop: "10px", width: "310px", height: "232px" }}
+                  height={232}
+                  width={310}
+                  style={{ marginTop: "10px" }}
                 />
               </CardBody>
             </Card>

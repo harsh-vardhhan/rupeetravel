@@ -6,11 +6,11 @@ import {
   Divider,
   CardFooter,
   Button,
-  Image,
   SimpleGrid,
   Tag,
   Heading,
 } from "@chakra-ui/react";
+import Image from 'next/image';
 import ListView from "@/component/listview";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
@@ -30,10 +30,10 @@ export default function Home({ features }) {
             <Card maxW="sm">
               <CardBody>
                 <Image
-                  src={"https://ik.imagekit.io/rupeetravel/hotel.webp"}
+                  src={"/images/hotel.webp"}
                   alt="Vietnam Hotel"
-                  borderRadius="lg"
-                  style={{ width: "310px", height: "422px" }}
+                  height={422}
+                  width={310}
                 />
                 <Stack mt="6" spacing="3">
                   <Heading as="h2" size="md">

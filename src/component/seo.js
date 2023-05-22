@@ -2,7 +2,7 @@ import Head from "next/head";
 
 const DOMAIN = "https://www.rupeetravel.com/";
 const DEFAULT_OG_IMAGE =
-  "https://raw.githubusercontent.com/TrakBit/Images/master/rupeetravel.png";
+  "https://raw.githubusercontent.com/TrakBit/images//master/rupeetravel.png";
 
 export default function Seo({
   title = "Rupee Travel | Vietnam trip for Indians",
