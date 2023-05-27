@@ -103,7 +103,7 @@ export default function Home({ features }) {
                   anywhere in Vietnam.
                 </Alert>
                 <Image
-                  src={"/imagesamerican-express.webp"}
+                  src={"/images/american-express.webp"}
                   alt="Amex card"
                   height={312}
                   width={310}
