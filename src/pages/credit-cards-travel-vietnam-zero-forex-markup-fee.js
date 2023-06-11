@@ -12,7 +12,7 @@ import {
   Tag,
   Heading,
 } from "@chakra-ui/react";
-import Image from 'next/image';
+import Image from "next/image";
 import Header from "@/component/header";
 import ListView from "@/component/listview";
 import StructuredData from "@/component/structuredData";
@@ -22,27 +22,27 @@ export default function Home({ features }) {
   const structuredData = {
     "@context": "https://www.schema.org",
     "@type": "product",
-    "brand": "IDFC Bank",
-    "name": "IDCF First Wow Credit Card",
-    "image": "https://ik.imagekit.io/rupeetravel/credit-card.webp",
-    "category": "Credit Card",
-    "description": " Zero forex markup credit card",
-    "aggregateRating": {
+    brand: "IDFC Bank",
+    name: "IDCF First Wow Credit Card",
+    image: "https://ik.imagekit.io/rupeetravel/credit-card.webp",
+    category: "Credit Card",
+    description: " Zero forex markup credit card",
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "1"
+      ratingValue: "5",
+      reviewCount: "1",
     },
-    "offers": {
+    offers: {
       "@type": "Offer",
-      "priceCurrency": "INR",
-      "price": "0",
-      "itemCondition": "http://schema.org/UsedCondition",
-      "availability": "http://schema.org/InStock",
-      "seller": {
+      priceCurrency: "INR",
+      price: "0",
+      itemCondition: "http://schema.org/UsedCondition",
+      availability: "http://schema.org/InStock",
+      seller: {
         "@type": "Bank",
-        "name": "IDFC Bank"
+        name: "IDFC Bank",
       },
-    }
+    },
   };
   return (
     <>
@@ -107,7 +107,7 @@ export default function Home({ features }) {
                   alt="Amex card"
                   height={312}
                   width={310}
-                  style={{ marginTop: "10px"}}
+                  style={{ marginTop: "10px" }}
                 />
               </CardBody>
             </Card>
