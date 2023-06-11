@@ -146,6 +146,11 @@ export async function getStaticProps() {
       title: "❌ Secured credit card which needs an FD as collateral",
       color: "red.400",
     },
+    {
+      item: 6,
+      title: "❌ Only ₹1 Lakh FD limit hence only 1 Lakh credit card limit",
+      color: "red.400",
+    },
   ];
 
   return {
