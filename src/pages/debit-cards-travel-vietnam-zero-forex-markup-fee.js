@@ -159,6 +159,16 @@ export async function getStaticProps() {
     },
     {
       item: 3,
+      title: "✅ For unlimited zero forex spending, maintain ₹50,000 minimum balance.",
+      color: "green.500",
+    },
+    {
+      item: 4,
+      title: "✅ For zero forex spending till ₹50,000, maintain ₹10,000 minimum balance.",
+      color: "green.500",
+    },
+    {
+      item: 5,
       title: `❌ Local ATMs in Vietnam will still charge 1.5%-3%
             (minimum amount 30,000 VND -50,000 VND) on withdrawal.
             Hence try using zero forex ATM's.`,
