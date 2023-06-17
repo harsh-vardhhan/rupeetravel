@@ -13,7 +13,7 @@ import {
   Tag,
   Heading,
 } from "@chakra-ui/react";
-import Image from 'next/image';
+import Image from "next/image";
 import ListView from "@/component/listview";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
@@ -24,27 +24,27 @@ export default function Home({ features }) {
   const structuredData = {
     "@context": "https://www.schema.org",
     "@type": "product",
-    "brand": "Fi Bank",
-    "name": "Fi Debit Card",
-    "image": "https://ik.imagekit.io/rupeetravel/debit-card.webp",
-    "category": "Debit Card",
-    "description": " Zero forex markup debit card",
-    "aggregateRating": {
+    brand: "Fi Bank",
+    name: "Fi Debit Card",
+    image: "https://ik.imagekit.io/rupeetravel/debit-card.webp",
+    category: "Debit Card",
+    description: " Zero forex markup debit card",
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "1"
+      ratingValue: "5",
+      reviewCount: "1",
     },
-    "offers": {
+    offers: {
       "@type": "Offer",
-      "priceCurrency": "INR",
-      "price": "0",
-      "itemCondition": "http://schema.org/UsedCondition",
-      "availability": "http://schema.org/InStock",
-      "seller": {
+      priceCurrency: "INR",
+      price: "0",
+      itemCondition: "http://schema.org/UsedCondition",
+      availability: "http://schema.org/InStock",
+      seller: {
         "@type": "Bank",
-        "name": "Fi Bank"
+        name: "Fi Bank",
       },
-    }
+    },
   };
 
   return (
@@ -159,12 +159,14 @@ export async function getStaticProps() {
     },
     {
       item: 3,
-      title: "✅ For unlimited zero forex spending, maintain ₹50,000 minimum balance.",
+      title:
+        "✅ For unlimited zero forex spending, maintain ₹50,000 minimum balance.",
       color: "green.500",
     },
     {
       item: 4,
-      title: "✅ For zero forex spending till ₹50,000, maintain ₹10,000 minimum balance.",
+      title:
+        "✅ For zero forex spending till ₹50,000, maintain ₹10,000 minimum balance.",
       color: "green.500",
     },
     {
