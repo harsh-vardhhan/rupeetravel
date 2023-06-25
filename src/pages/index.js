@@ -227,6 +227,14 @@ export async function getStaticProps() {
       tagColor: `orange`,
       link: `/atm-vietnam-zero-forex-markup`
     },
+    {
+      key: 5,
+      heading: `Da Nang Map`,
+      subHeading: `best places to visit in Da Nang`,
+      tagText: `Recommended`,
+      tagColor: `orange`,
+      link: `/da-nang-map`
+    },
   ]
 
   const beforeDeparture = [

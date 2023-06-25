@@ -13,12 +13,14 @@
     "@chakra-ui/icons": "2.0.16",
     "@chakra-ui/react": "2.6.1",
     "@next/font": "13.1.2",
+    "@rive-app/react-canvas": "^3.0.53",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.2",
     "next": "13.4.1",
     "next-sitemap": "4.0.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "4.8.0"
+    "react-icons": "4.8.0",
+    "rive-react": "^3.0.53"
   }
 }
