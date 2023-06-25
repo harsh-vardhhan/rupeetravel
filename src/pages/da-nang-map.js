@@ -15,7 +15,11 @@ export default function Home() {
     console.log(bumpInput)
     return (
         <>
-            <Seo canonical={'https://www.rupeetravel.com'} />
+            <Seo
+                title="Rupee Travel | Da Nang Map"
+                description="Best places to visit in Da Nang"
+                canonical={"https://www.rupeetravel.com/da-nang-map"}
+            />
             <main className={styles.main}>
                 <Header title={"Da Nang Map"} />
                 <RiveComponent
