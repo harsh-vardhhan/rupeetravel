@@ -1,5 +1,5 @@
 ---
-title: 'The accidental nomad: Guide for Da Nang'
+title: 'The accidental nomad: Month long stay in Da Nang'
 excerpt: 'Da Nang is the ulimate destination for Indian digital nomads largely due to the proximity'
 coverImage: '/assets/blog/digital-nomad-da-nang/cover.webp'
 date: '2023-06-01T05:35:07.322Z'
