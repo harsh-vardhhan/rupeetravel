@@ -19,7 +19,7 @@ import Image from 'next/image';
 import { FaTwitter } from "react-icons/fa";
 import Seo from '@/component/seo'
 
-export default function Home({ beforeArrivals, arrivals, beforeDeparture }) {
+export default function Home({blogs, beforeArrivals, arrivals, beforeDeparture }) {
   return (
     <>
       <Seo canonical={'https://www.rupeetravel.com'} />
@@ -41,6 +41,10 @@ export default function Home({ beforeArrivals, arrivals, beforeDeparture }) {
             <CheckListItemCard
               title={'Before you depart 🇻🇳'}
               list={beforeDeparture}
+            />
+            <CheckListItemCard
+              title={'Blogs'}
+              list={blogs}
             />
           </SimpleGrid>
           <Social />
@@ -248,8 +252,20 @@ export async function getStaticProps() {
     },
   ]
 
+  const blogs = [
+    {
+      key: 1,
+      heading: ` Accidental Nomad`,
+      subHeading: `Month long stay in Da Nang `,
+      tagText: `Blog`,
+      tagColor: `red`,
+      link: `/posts/digital-nomad-da-nang`
+    },
+  ]
+
   return {
     props: {
+      blogs,
       beforeArrivals,
       arrivals,
       beforeDeparture,
