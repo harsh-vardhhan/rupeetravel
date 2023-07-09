@@ -1,13 +1,13 @@
 ---
-title: 'The accidental nomad: Guide for Da Nang'
-excerpt: 'Da Nang is the ulimate destination for Indian digital nomads largely due to the proximity'
-coverImage: '/assets/blog/digital-nomad-guide-da-nang/cover.webp'
-date: '2023-06-01T05:35:07.322Z'
+title: "The accidental nomad: Guide for Da Nang"
+excerpt: "Da Nang is the ulimate destination for Indian digital nomads largely due to the proximity"
+coverImage: "/assets/blog/digital-nomad-guide-da-nang/cover.webp"
+date: "2023-06-01T05:35:07.322Z"
 author:
-  name: 'Harsh Vardhan'
-  picture: '/assets/blog/digital-nomad-guide-da-nang/profile.webp'
+  name: "Harsh Vardhan"
+  picture: "/assets/blog/digital-nomad-guide-da-nang/profile.webp"
 ogImage:
-  url: '/assets/blog/digital-nomad-guide-da-nang/cover.webp'
+  url: "/assets/blog/digital-nomad-guide-da-nang/cover.webp"
 ---
 
 ## The accidental digital nomad
@@ -22,7 +22,7 @@ The Vietnam e-visa is for a month, so why not maximize it? So I decided on a mon
 
 I started to equip myself with all cross-border financial tools to make my stay as pleasant as possible:
 
-- zero forex markup credit card 
+- zero forex markup credit card
 - zero forex markup debit card
 - travel insurance
 - USD currency notes
