@@ -1,5 +1,5 @@
-import Link from "next/link"
-import Image from "next/image"
+import Link from "next/link";
+import Image from "next/image";
 
 const CoverImage = ({ title, src, slug }) => {
   const image = (
@@ -9,9 +9,9 @@ const CoverImage = ({ title, src, slug }) => {
       width={1300}
       height={630}
     />
-  )
+  );
   return (
-    <div >
+    <div>
       {slug ? (
         <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}>
           {image}
@@ -20,7 +20,7 @@ const CoverImage = ({ title, src, slug }) => {
         image
       )}
     </div>
-  )
-}
+  );
+};
 
-export default CoverImage
+export default CoverImage;
