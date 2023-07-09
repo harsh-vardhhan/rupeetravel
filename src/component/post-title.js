@@ -4,7 +4,7 @@ import {
 
 const PostTitle = ({ children }) => {
   return (
-    <Heading h1 size='4xl' style={{ marginTop: '20px' }}>
+    <Heading h1 fontSize={{ base: '24px', md: '40px', lg: '75px' }} style={{ marginTop: '20px' }}>
       {children}
     </Heading>
   )

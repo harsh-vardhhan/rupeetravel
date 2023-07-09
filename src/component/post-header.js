@@ -1,9 +1,8 @@
 import Avatar from "./avatar"
-import DateFormatter from "./date-formatter"
 import CoverImage from "./cover-image"
 import PostTitle from "./post-title"
 
-const PostHeader = ({ title, coverImage, date, author }) => {
+const PostHeader = ({ title, coverImage, author }) => {
   return (
     <>
       <PostTitle>{title}</PostTitle>
