@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import { useEffect } from "react";
 import Container from '../../component/container'
 import PostBody from '../../component/post-body'
 import Header from '../../component/blog-header'
@@ -40,12 +39,9 @@ export default function Post({ post, preview }) {
                     date={post.date}
                     author={post.author}
                   />
-                  <PostBody 
+                  <PostBody
                     content={post.content}
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'center'
-                    }} />
+                  />
                 </article>
               </>
             )}
