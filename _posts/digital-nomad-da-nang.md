@@ -1,13 +1,13 @@
 ---
-title: 'The accidental nomad: Guide for Da Nang'
-excerpt: 'Da Nang is the ulimate destination for Indian digital nomads largely due to the proximity'
-coverImage: '/assets/blog/digital-nomad-da-nang/cover.webp'
-date: '2023-06-01T05:35:07.322Z'
+title: "The accidental nomad: Guide for Da Nang"
+excerpt: "Da Nang is the ulimate destination for Indian digital nomads largely due to the proximity"
+coverImage: "/assets/blog/digital-nomad-da-nang/cover.webp"
+date: "2023-06-01T05:35:07.322Z"
 author:
-  name: 'Harsh Vardhan'
-  picture: '/assets/blog/digital-nomad-da-nang/profile.webp'
+  name: "Harsh Vardhan"
+  picture: "/assets/blog/digital-nomad-da-nang/profile.webp"
 ogImage:
-  url: '/assets/blog/digital-nomad-da-nang/cover.webp'
+  url: "/assets/blog/digital-nomad-da-nang/cover.webp"
 ---
 
 ## The accidental digital nomad
@@ -24,7 +24,7 @@ The Vietnam e-visa is for a month, so why not maximize it? So I decided on a mon
 
 I started to equip myself with all cross-border financial tools to make my stay as pleasant as possible:
 
-- zero forex markup credit card 
+- zero forex markup credit card
 - zero forex markup debit card
 - travel insurance
 - USD currency notes
@@ -56,7 +56,7 @@ The city is planned such that I reached my hotel from the airport in just 10 min
 
 I was a good bit tired after almost a 5-hour flight. But too excited to take a rest. So took a small nap and left for a walk to explore the city.
 
-The city was prettier than I had seen in photos or videos. It has Palm trees, clean beaches, a long promenade, and views of mountains like a city right from some Hollywood movie. 
+The city was prettier than I had seen in photos or videos. It has Palm trees, clean beaches, a long promenade, and views of mountains like a city right from some Hollywood movie.
 
 It had a pretty cafe, Highlands (most popular coffee chain in Vietnam), in front of the beach. I had instantly deicded that this is going to be my co-working place.
 
@@ -68,17 +68,17 @@ As someone who can't handle much spice (I feel blasphemic saying this as an Indi
 
 Most of the these dishes used to cost me about ₹120. I used grab app to order them right at my hotel room. Hence despite staying away from home, I never felt like staying away.
 
-##  Long evening walks on beach
+## Long evening walks on beach
 
 A There's long promenade to walk. After the office hours I would go for long walks on beach listening podcasts. From the beach you can see long skyline of hotels. That's precisely what makes Da Nang premium hotels so affordable, an insane supply of high quality hotels.
 
-##  Weekend trip to Hoi An
+## Weekend trip to Hoi An
 
 ![River](/assets/blog/digital-nomad-da-nang/river.webp "River")
 
 I was busy on weekdays with my job, so one weekend planned a trip to Hoi An, A nearby city with more tradational architecture unlike Da Nang, which has a modern architecture.
 
-The way to Hoi An made me observe how ambitious the Vietnamese government is on Da Nang and Hoi An region. Real estate and hotels construction throughout the way. 
+The way to Hoi An made me observe how ambitious the Vietnamese government is on Da Nang and Hoi An region. Real estate and hotels construction throughout the way.
 
 I had booked a private taxi, visited buddhist cave, and experienced a tradational Vietnamese boat ride.
 
@@ -86,12 +86,12 @@ Hoi An was a careful crafted city that felt like showcasing vietnamese brand as 
 
 It looked obvious that the people and the government had worked really hard to make the city that awesome. Pretty lamp decorations everywhere in the night was a jaw dropping beauty.
 
-## Reflecting the experience 
+## Reflecting the experience
 
-I left for a month long solo trip. For many this is still an extreme path to take. Staying alone in strange country for a month without friends, or family members can sound daunting, but such experiences help you grow in life. 
+I left for a month long solo trip. For many this is still an extreme path to take. Staying alone in strange country for a month without friends, or family members can sound daunting, but such experiences help you grow in life.
 
-You learn to look after yourself, entertain yourself, reflect deeper on past experience of life. 
+You learn to look after yourself, entertain yourself, reflect deeper on past experience of life.
 
-You don't have to force yourself to make a solo trip about soul searching or simply enjoying the currency arbitrage. 
+You don't have to force yourself to make a solo trip about soul searching or simply enjoying the currency arbitrage.
 
 Just build an experience that aligns with your real personality.
