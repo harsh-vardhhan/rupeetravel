@@ -56,7 +56,9 @@ The city is planned such that I reached my hotel from the airport in just 10 min
 
 I was a good bit tired after almost a 5-hour flight. But too excited to take a rest. So took a small nap and left for a walk to explore the city.
 
-The city was prettier than I had seen in photos or videos. It has Palm trees, clean beaches, a long promenade, and views of mountains like a city right from some Hollywood movie. 
+The city was prettier than I had seen in photos or videos. It has Palm trees, clean beaches, a long promenade, and views of mountains like a city right from some Hollywood movie.
+
+![Cafe](/assets/blog/digital-nomad-da-nang/cafe.webp "Cafe")
 
 It had a pretty cafe, Highlands (most popular coffee chain in Vietnam), in front of the beach. I had instantly deicded that this is going to be my co-working place.
 
@@ -90,7 +92,7 @@ It looked obvious that the people and the government had worked really hard to m
 
 I left for a month long solo trip. For many this is still an extreme path to take. Staying alone in strange country for a month without friends, or family members can sound daunting, but such experiences help you grow in life. 
 
-You learn to look after yourself, entertain yourself, reflect deeper on past experience of life. 
+You learn to look after yourself, entertain yourself, reflect deeper on past experience of life.
 
 You don't have to force yourself to make a solo trip about soul searching or simply enjoying the currency arbitrage. 
 
