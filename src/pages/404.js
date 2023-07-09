@@ -10,7 +10,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import Seo from "@/component/seo";
+import Seo from "../component/seo";
 
 export default function Home() {
   return (
