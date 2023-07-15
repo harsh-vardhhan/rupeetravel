@@ -261,6 +261,14 @@ export async function getStaticProps() {
       tagColor: `red`,
       link: `/posts/digital-nomad-da-nang`
     },
+    {
+      key: 2,
+      heading: ` Indian passport sucks, but not its financial services`,
+      subHeading: ` Cross border financial tools`,
+      tagText: `Blog`,
+      tagColor: `red`,
+      link: `/posts/india-cross-border-finance`
+    },
   ]
 
   return {
