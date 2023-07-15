@@ -34,6 +34,8 @@ If you take any random Indian credit/debit card overseas, it can incur forex mar
 
 But India has ample competition in the credit/debit card space. You can get zero forex markup credit cards and debit cards, both.
 
+Both cards mentioned below are zero annual fee and zero joining fee.
+
 - **Credit Card-** [IDFC First Wow](https://www.rupeetravel.com/credit-cards-travel-vietnam-zero-forex-markup-fee) 🔗
 - **Debit Card-** [Fi](https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee) 🔗
 
