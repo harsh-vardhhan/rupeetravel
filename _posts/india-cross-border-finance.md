@@ -55,4 +55,4 @@ For emergencies, carry some USD currency notes and keep them separate from your 
 
 You can get USD currency notes from any local forex dealer in your city. You can also get them delivered via online platforms like [**BookMyForex** 🔗](https://www.rupeetravel.com/buy-foreign-currency-notes-online), which I used.
 
-Note: If your wallet ever does get stolen, block your debit and credit card via the mobile app.
+**Note**: If your wallet ever does get stolen, block your debit and credit card via the mobile app.
