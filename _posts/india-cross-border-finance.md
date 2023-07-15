@@ -26,7 +26,7 @@ So what exactly doe India offer?
 
 They do. They make your traveling not only convenient but also affordable. The lower the overhead cost of traveling, the more often you can travel.
 
-### Zero forex credit/debit cards
+### 1. Zero forex credit and debit cards
 
 ![credit card](/assets/blog/india-cross-border-finance/credit-card.webp "Credit Card")
 
@@ -37,8 +37,22 @@ But India has ample competition in the credit/debit card space. You can get zero
 - **Credit Card-** [IDFC First Wow](https://www.rupeetravel.com/credit-cards-travel-vietnam-zero-forex-markup-fee) 🔗
 - **Debit Card-** [Fi](https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee) 🔗
 
-### Travel insurance 
+### 2. Travel Insurance 
 
-Your local health insurance won't pay for the hospital bills that incur overseas. That's why you need travel insurance. They cover your overseas hospital bills at a low price.
+Your local health insurance won't pay for the hospital bills that incur overseas. You need a [**travel insurance** 🔗](https://www.rupeetravel.com/travel-insurance-india-vietnam). They cover your overseas hospital bills at a low price.
 
-For example, my 26 days holiday in Da Nang, Vietnam, was covered by digit insurance for ₹1276.
+For example, my 26 days holiday in Da Nang, Vietnam, was covered by digit insurance for ₹1276. It gave comprehensive coverage in that amount.
+
+![travel insurance coverage](/assets/blog/india-cross-border-finance/travel-insurance-coverage.webp "travel insurance coverage")
+
+### 3. USD currency notes
+
+![travel insurance coverage](/assets/blog/india-cross-border-finance/usd-currency-notes.webp "travel insurance coverage")
+
+Imagine losing your wallet overseas. If the wallet has your credit and debit cards, it can be a troublesome situation.
+
+For emergencies, carry some USD currency notes and keep them separate from your wallet. You can get any local currency in any country easily in exchange for USD.
+
+You can get USD currency notes from any local forex dealer in your city. You can also get them delivered via online platforms like [**BookMyForex** 🔗](https://www.rupeetravel.com/buy-foreign-currency-notes-online), which I used.
+
+Note: If your wallet ever does get stolen, block your debit and credit card via the mobile app.
