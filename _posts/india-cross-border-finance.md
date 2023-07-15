@@ -1,13 +1,13 @@
 ---
-title: 'Indian passport sucks, but its cross-border tools do not.'
-excerpt: 'You need to leverage the cross-border financial services India provides for your next international travel plan'
-coverImage: '/assets/blog/india-cross-border-finance/tools.webp'
-date: '2023-06-01T05:35:07.322Z'
+title: "Indian passport sucks, but its cross-border tools do not."
+excerpt: "You need to leverage the cross-border financial services India provides for your next international travel plan"
+coverImage: "/assets/blog/india-cross-border-finance/tools.webp"
+date: "2023-06-01T05:35:07.322Z"
 author:
-  name: 'Harsh Vardhan'
-  picture: '/assets/blog/india-cross-border-finance/profile.webp'
+  name: "Harsh Vardhan"
+  picture: "/assets/blog/india-cross-border-finance/profile.webp"
 ogImage:
-  url: '/assets/blog/india-cross-border-finance/tools.webp'
+  url: "/assets/blog/india-cross-border-finance/tools.webp"
 ---
 
 ## Yes, an Indian passport sucks. We all know that.
@@ -19,6 +19,7 @@ My entire Twitter feed is complaints by fellow Indians about how they got reject
 You got only one life to live, and India's passport strength might not improve in your lifetime. So now it's better to acknowledge the reality and focus on what India does offer and how you can leverage it.
 
 So what exactly doe India offer?
+
 - Visa-free access to ample nearby SEA (South East Asian) countries.
 - A very comprehensive set of financial tools for cross-border finance.
 
@@ -37,7 +38,7 @@ But India has ample competition in the credit/debit card space. You can get zero
 - **Credit Card-** [IDFC First Wow](https://www.rupeetravel.com/credit-cards-travel-vietnam-zero-forex-markup-fee) 🔗
 - **Debit Card-** [Fi](https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee) 🔗
 
-### 2. Travel Insurance 
+### 2. Travel Insurance
 
 Your local health insurance won't pay for the hospital bills that incur overseas. You need a [**travel insurance** 🔗](https://www.rupeetravel.com/travel-insurance-india-vietnam). They cover your overseas hospital bills at a low price.
 
