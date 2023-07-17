@@ -59,6 +59,7 @@ export async function getStaticProps({ params }) {
     'date',
     'slug',
     'author',
+    'canonical',
     'content',
     'ogImage',
     'coverImage',
