@@ -22,7 +22,7 @@ export default function Post({ post, preview }) {
       <Seo
         title={post.title}
         description={post.excerpt}
-        canonical={post.slug}
+        canonical={post.canonical}
       />
       <main className={styles.main}>
         <Layout preview={preview}>
