@@ -3,6 +3,7 @@ title: 'The accidental nomad: Month long stay in Da Nang'
 excerpt: 'Da Nang is the ulimate destination for Indian digital nomads largely due to the proximity'
 coverImage: '/assets/blog/digital-nomad-da-nang/cover.webp'
 date: '2023-06-01T05:35:07.322Z'
+canonical: 'https://www.rupeetravel.com/posts/digital-nomad-da-nang'
 author:
   name: 'Harsh Vardhan'
   picture: '/assets/blog/digital-nomad-da-nang/profile.webp'
