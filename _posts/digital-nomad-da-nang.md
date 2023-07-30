@@ -25,10 +25,10 @@ The Vietnam e-visa is for a month, so why not maximize it? So I decided on a mon
 
 I started to equip myself with all cross-border financial tools to make my stay as pleasant as possible:
 
-- zero forex markup credit card 
-- zero forex markup debit card
-- travel insurance
-- USD currency notes
+- [zero forex markup credit card](https://www.rupeetravel.com/credit-cards-travel-vietnam-zero-forex-markup-fee) 🔗
+- [zero forex markup debit card](https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee) 🔗
+- [travel insurance](https://www.rupeetravel.com/travel-insurance-india-vietnam) 🔗
+- [USD currency notes](https://www.rupeetravel.com/buy-foreign-currency-notes-online) 🔗
 
 ## Budget stay or premium experience?
 
