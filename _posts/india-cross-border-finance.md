@@ -1,14 +1,14 @@
 ---
-title: 'Indian passport sucks, but its cross-border tools do not.'
-excerpt: 'You need to leverage the cross-border financial services India provides for your next international travel plan'
-coverImage: '/assets/blog/india-cross-border-finance/tools.webp'
-date: '2023-06-01T05:35:07.322Z'
-canonical: 'https://www.rupeetravel.com/posts/india-cross-border-finance'
+title: "Indian passport sucks, but its cross-border tools do not."
+excerpt: "You need to leverage the cross-border financial services India provides for your next international travel plan"
+coverImage: "/assets/blog/india-cross-border-finance/tools.webp"
+date: "2023-06-01T05:35:07.322Z"
+canonical: "https://www.rupeetravel.com/posts/india-cross-border-finance"
 author:
-  name: 'Harsh Vardhan'
-  picture: '/assets/blog/india-cross-border-finance/profile.webp'
+  name: "Harsh Vardhan"
+  picture: "/assets/blog/india-cross-border-finance/profile.webp"
 ogImage:
-  url: '/assets/blog/india-cross-border-finance/tools.webp'
+  url: "/assets/blog/india-cross-border-finance/tools.webp"
 ---
 
 ## Yes, an Indian passport sucks. We all know that.
@@ -20,6 +20,7 @@ My entire Twitter feed is complaints by fellow Indians about how they got reject
 You got only one life to live, and India's passport strength might not improve in your lifetime. So now it's better to acknowledge the reality and focus on what India does offer and how you can leverage it.
 
 So what exactly doe India offer?
+
 - Visa-free access to ample nearby SEA (South East Asian) countries.
 - A very comprehensive set of financial tools for cross-border finance.
 
@@ -40,7 +41,7 @@ Both cards mentioned below are zero annual fee and zero joining fee.
 - **Credit Card-** [IDFC First Wow](https://www.rupeetravel.com/credit-cards-travel-vietnam-zero-forex-markup-fee) 🔗
 - **Debit Card-** [Fi](https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee) 🔗
 
-### 2. Travel Insurance 
+### 2. Travel Insurance
 
 Your local health insurance won't pay for the hospital bills that incur overseas. You need a [**travel insurance** 🔗](https://www.rupeetravel.com/travel-insurance-india-vietnam). They cover your overseas hospital bills at a low price.
 
@@ -60,19 +61,17 @@ You can get USD currency notes from any local forex dealer in your city. You can
 
 **Note**: If your wallet ever does get stolen, block your debit and credit card via the mobile app.
 
-
 #### Do Not buy VND Vietnamese Dong in India
-
 
 Please do not buy Vietnamese Dong (VND) in India. You'll get them at highly inefficient rates. Use your zero forex debit card and withdraw the money from a [**local Vietnamese ATM** 🔗](https://www.rupeetravel.com/atm-vietnam-zero-forex-markup).
 
 You can see in below example:
 
-| conversion rate on 31st July 2023  | INR  | VND  | USD  |
-|---|---|---|---|
-|BookMyForex Rate   | ₹1,000  | ₫222,222  | $12  |
-|Real forex rate   | ₹1,000  | ₫287,845  | $12.15  |
-|Conversion cost   |   | ₫65,623  | $0.15  |
-|Conversion cost %  |   | 22.8%  |  1.2% |
+| conversion rate on 31st July 2023 | INR    | VND      | USD    |
+| --------------------------------- | ------ | -------- | ------ |
+| BookMyForex Rate                  | ₹1,000 | ₫222,222 | $12    |
+| Real forex rate                   | ₹1,000 | ₫287,845 | $12.15 |
+| Conversion cost                   |        | ₫65,623  | $0.15  |
+| Conversion cost %                 |        | 22.8%    | 1.2%   |
 
 You are paying a forex conversion fee of approximately 23%, which shouldn't occur in 2023.
