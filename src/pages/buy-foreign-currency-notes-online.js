@@ -124,8 +124,8 @@ const ComparisionMatrix = () => (
           <Tr>
             <Th>conversion rate on 31st July 2023</Th>
             <Th>INR</Th>
-            <Th>VND</Th>
-            <Th>USD</Th>
+            <Th>VND (INRVND)</Th>
+            <Th>USD (INRUSD)</Th>
           </Tr>
         </Thead>
         <Tbody>
