@@ -18,7 +18,7 @@ import {
   Td,
   Box,
 } from "@chakra-ui/react";
-import Image from 'next/image';
+import Image from "next/image";
 import Header from "@/component/header";
 import ListView from "@/component/listview";
 import Seo from "@/component/seo";
@@ -28,27 +28,27 @@ export default function Home({ features }) {
   const structuredData = {
     "@context": "https://www.schema.org",
     "@type": "product",
-    "brand": "BookMyForex",
-    "name": "USD foriegn currency notes",
-    "image": "https://ik.imagekit.io/rupeetravel/currency.webp",
-    "category": "foreign currency notes",
-    "description": "Buy USD forex cash at best prices.",
-    "aggregateRating": {
+    brand: "BookMyForex",
+    name: "USD foriegn currency notes",
+    image: "https://ik.imagekit.io/rupeetravel/currency.webp",
+    category: "foreign currency notes",
+    description: "Buy USD forex cash at best prices.",
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "1"
+      ratingValue: "5",
+      reviewCount: "1",
     },
-    "offers": {
+    offers: {
       "@type": "Offer",
-      "priceCurrency": "INR",
-      "price": "0",
-      "itemCondition": "http://schema.org/UsedCondition",
-      "availability": "http://schema.org/InStock",
-      "seller": {
+      priceCurrency: "INR",
+      price: "0",
+      itemCondition: "http://schema.org/UsedCondition",
+      availability: "http://schema.org/InStock",
+      seller: {
         "@type": "Currency Dealer",
-        "name": "BookMyForex"
+        name: "BookMyForex",
       },
-    }
+    },
   };
   return (
     <>
@@ -108,8 +108,10 @@ export default function Home({ features }) {
 const ComparisionMatrix = () => (
   <Card style={{ marginTop: "30px" }}>
     <Box overflowX="auto">
-      <Table variant='simple'>
-      <TableCaption>Cost of VND currency notes over USD currency notes in India</TableCaption>
+      <Table variant="simple">
+        <TableCaption>
+          Cost of VND currency notes over USD currency notes in India
+        </TableCaption>
         <Thead>
           <Tr>
             <Th>conversion rate on 31st July 2023</Th>
@@ -147,7 +149,7 @@ const ComparisionMatrix = () => (
       </Table>
     </Box>
   </Card>
-)
+);
 
 export async function getStaticProps() {
   const features = [
