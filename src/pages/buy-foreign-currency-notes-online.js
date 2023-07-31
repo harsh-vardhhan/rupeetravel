@@ -108,7 +108,7 @@ export default function Home({ features }) {
 const ComparisionMatrix = () => (
   <Card style={{ marginTop: "30px" }}>
     <Box overflowX="auto">
-      <Table variant='simple'>
+      <Table variant='simple' size='sm'>
       <TableCaption>Cost of VND currency notes over USD currency notes in India</TableCaption>
         <Thead>
           <Tr>
