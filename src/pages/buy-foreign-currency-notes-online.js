@@ -9,6 +9,14 @@ import {
   SimpleGrid,
   Tag,
   Heading,
+  Table,
+  TableCaption,
+  Thead,
+  Tbody,
+  Tr,
+  Th,
+  Td,
+  Box,
 } from "@chakra-ui/react";
 import Image from 'next/image';
 import Header from "@/component/header";
@@ -90,11 +98,56 @@ export default function Home({ features }) {
               </CardFooter>
             </Card>
           </SimpleGrid>
+          <ComparisionMatrix />
         </div>
       </main>
     </>
   );
 }
+
+const ComparisionMatrix = () => (
+  <Card style={{ marginTop: "30px" }}>
+    <Box overflowX="auto">
+      <Table variant='simple'>
+      <TableCaption>Cost of getting VND currency notes over USD currency notes in India</TableCaption>
+        <Thead>
+          <Tr>
+            <Th>conversion rate on 31st July 2023</Th>
+            <Th>INR</Th>
+            <Th>VND</Th>
+            <Th>USD</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          <Tr>
+            <Td>BookMyForex Rate</Td>
+            <Td>₹1,000</Td>
+            <Td>₫222,222</Td>
+            <Td>$12</Td>
+          </Tr>
+          <Tr>
+            <Td>Real forex rate</Td>
+            <Td>₹1,000</Td>
+            <Td>₫287,845</Td>
+            <Td>$12.15</Td>
+          </Tr>
+          <Tr>
+            <Td>Conversion cost </Td>
+            <Td></Td>
+            <Td>₫65,623</Td>
+            <Td>$0.15</Td>
+          </Tr>
+          <Tr>
+            <Td>Conversion cost %</Td>
+            <Td></Td>
+            <Td>22.8%</Td>
+            <Td>1.2%</Td>
+          </Tr>
+        </Tbody>
+      </Table>
+    </Box>
+  </Card>
+)
 
 export async function getStaticProps() {
   const features = [
