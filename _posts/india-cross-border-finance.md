@@ -59,3 +59,20 @@ For emergencies, carry some USD currency notes and keep them separate from your 
 You can get USD currency notes from any local forex dealer in your city. You can also get them delivered via online platforms like [**BookMyForex** 🔗](https://www.rupeetravel.com/buy-foreign-currency-notes-online), which I used.
 
 **Note**: If your wallet ever does get stolen, block your debit and credit card via the mobile app.
+
+
+#### Do Not buy VND Vietnamese Dong in India
+
+
+Please do not buy Vietnamese Dong (VND) in India. You'll get them at highly inefficient rates. Use your zero forex debit card and withdraw the money from a [**local Vietnamese ATM** 🔗](https://www.rupeetravel.com/atm-vietnam-zero-forex-markup).
+
+You can see in below example:
+
+| conversion rate on 31st July 2023  | INR  | VND  | USD  |
+|---|---|---|---|
+|BookMyForex Rate   | ₹1,000  | ₫222,222  | $12  |
+|Real forex rate   | ₹1,000  | ₫287,845  | $12.15  |
+|Conversion cost   |   | ₫65,623  | $0.15  |
+|Conversion cost %  |   | 22.8%  |  1.2% |
+
+You are paying a forex conversion fee of approximately 23%, which shouldn't occur in 2023.
