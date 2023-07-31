@@ -98,6 +98,16 @@ export default function Home({ features }) {
               </CardFooter>
             </Card>
           </SimpleGrid>
+          <Text
+            as="h2"
+            fontSize="xl"
+            style={{
+              marginTop: "20px",
+              fontWeight: 600,
+            }}
+          >
+            {'Only Order USD currency in India'}
+          </Text>
           <ComparisionMatrix />
         </div>
       </main>
@@ -109,7 +119,7 @@ const ComparisionMatrix = () => (
   <Card style={{ marginTop: "30px" }}>
     <Box overflowX="auto">
       <Table variant='simple' size='sm'>
-      <TableCaption>Cost of VND currency notes over USD currency notes in India</TableCaption>
+        <TableCaption>Cost of VND currency notes over USD currency notes in India</TableCaption>
         <Thead>
           <Tr>
             <Th>conversion rate on 31st July 2023</Th>
