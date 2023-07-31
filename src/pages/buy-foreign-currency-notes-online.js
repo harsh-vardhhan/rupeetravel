@@ -149,7 +149,7 @@ const ComparisionMatrix = () => (
           <Tr>
             <Td>Conversion cost %</Td>
             <Td></Td>
-            <Td>22.8%</Td>
+            <Td>⚠️ 22.8%</Td>
             <Td>1.2%</Td>
           </Tr>
         </Tbody>
