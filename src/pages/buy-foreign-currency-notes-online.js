@@ -106,7 +106,7 @@ export default function Home({ features }) {
               fontWeight: 600,
             }}
           >
-            {'Only Order USD currency in India'}
+            {'Only Order USD currency notes in India'}
           </Text>
           <ComparisionMatrix />
         </div>
