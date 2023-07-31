@@ -99,16 +99,6 @@ export default function Home({ features }) {
               </CardFooter>
             </Card>
           </SimpleGrid>
-          <Text
-            as="h2"
-            fontSize="xl"
-            style={{
-              marginTop: "20px",
-              fontWeight: 600,
-            }}
-          >
-            {'Only Order USD currency notes in India'}
-          </Text>
           <ComparisionMatrix />
         </div>
       </main>
@@ -118,6 +108,16 @@ export default function Home({ features }) {
 
 const ComparisionMatrix = () => (
   <Card style={{ marginTop: "30px" }}>
+    <Text
+      as="h2"
+      fontSize="xl"
+      style={{
+        marginTop: "20px",
+        fontWeight: 600,
+      }}
+    >
+      {'Only Order USD currency notes in India'}
+    </Text>
     <Box overflowX="auto">
       <Table variant='simple' size='sm'>
         <TableCaption>Cost of VND currency notes over USD currency notes in India</TableCaption>
