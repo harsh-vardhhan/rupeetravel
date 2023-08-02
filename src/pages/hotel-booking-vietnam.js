@@ -33,7 +33,7 @@ export default function Home({ hotels }) {
         canonical={"https://www.rupeetravel.com/hotel-booking-vietnam"}
       />
       <main className={styles.main}>
-        <Header title={"Booking hotel in Vietnam"} />
+        <Header title={"Booking hotel in Da Nang, Vietnam"} />
         <div style={{ marginTop: "20px" }}>
           <SimpleGrid minChildWidth="350px" spacing="40px">
             <Card>
