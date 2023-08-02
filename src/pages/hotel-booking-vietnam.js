@@ -38,7 +38,6 @@ export default function Home({ hotels }) {
           <SimpleGrid minChildWidth="350px" spacing="40px">
             <Card>
               <CardBody>
-
                 <TableContainer>
                   <Table size='sm'>
                     <Thead>
@@ -66,11 +65,9 @@ export default function Home({ hotels }) {
                           </Tr>
                         )
                       })}
-
                     </Tbody>
                   </Table>
                 </TableContainer>
-
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
               <CardBody>
@@ -110,6 +107,26 @@ export async function getStaticProps() {
       item: 2,
       name: "Lavencos Hotel",
       contact: "https://www.facebook.com/lavencos.vn",
+    },
+    {
+      item: 3,
+      name: "Paracel Danang Hotel",
+      contact: "https://www.facebook.com/paraceldananghotel/",
+    },
+    {
+      item: 4,
+      name: "BlueSun Hotel",
+      contact: "https://www.facebook.com/bluesundanang/",
+    },
+    {
+      item: 5,
+      name: "Golden Lotus Hotel",
+      contact: "https://www.facebook.com/goldenlotushoteldanang/",
+    },
+    {
+      item: 6,
+      name: "Avatar Danang Hotel",
+      contact: "https://www.facebook.com/AvatarDananghotel/",
     },
   ];
 
