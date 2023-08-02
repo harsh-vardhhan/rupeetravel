@@ -12,11 +12,38 @@ import {
 } from "@chakra-ui/react";
 import ListView from "@/component/listview";
 import Header from "@/component/header";
+import StructuredData from "@/component/structuredData";
 import Seo from "@/component/seo";
 
 export default function Home({ features }) {
+  const structuredData = {
+    "@context": "https://www.schema.org",
+    "@type": "product",
+    "brand": "Vietnam E-visa",
+    "name": "Vietnam E-visa application",
+    "image": "https://ik.imagekit.io/rupeetravel/local-currency.webp",
+    "category": "E-visa",
+    "description": " Vietnam E-visa application",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "1"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "price": "2100",
+      "itemCondition": "http://schema.org/UsedCondition",
+      "availability": "http://schema.org/InStock",
+      "seller": {
+        "@type": "Vietnam Immigration",
+        "name": "Vietnam E-visa"
+      },
+    }
+  };
   return (
     <>
+      <StructuredData data={structuredData} />
       <Seo
         title="Rupee Travel | Apply for Vietnam e-visa"
         description="Vietnam e-visa application. Vietnam visa for Indians."
