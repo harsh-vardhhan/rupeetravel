@@ -19,27 +19,27 @@ export default function Home({ features }) {
   const structuredData = {
     "@context": "https://www.schema.org",
     "@type": "product",
-    "brand": "Vietnam E-visa",
-    "name": "Vietnam E-visa application",
-    "image": "https://ik.imagekit.io/rupeetravel/local-currency.webp",
-    "category": "E-visa",
-    "description": " Vietnam E-visa application",
-    "aggregateRating": {
+    brand: "Vietnam E-visa",
+    name: "Vietnam E-visa application",
+    image: "https://ik.imagekit.io/rupeetravel/local-currency.webp",
+    category: "E-visa",
+    description: " Vietnam E-visa application",
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "1"
+      ratingValue: "5",
+      reviewCount: "1",
     },
-    "offers": {
+    offers: {
       "@type": "Offer",
-      "priceCurrency": "INR",
-      "price": "2100",
-      "itemCondition": "http://schema.org/UsedCondition",
-      "availability": "http://schema.org/InStock",
-      "seller": {
+      priceCurrency: "INR",
+      price: "2100",
+      itemCondition: "http://schema.org/UsedCondition",
+      availability: "http://schema.org/InStock",
+      seller: {
         "@type": "Vietnam Immigration",
-        "name": "Vietnam E-visa"
+        name: "Vietnam E-visa",
       },
-    }
+    },
   };
   return (
     <>
@@ -71,7 +71,7 @@ export default function Home({ features }) {
                   colorScheme="green"
                   onClick={() =>
                     window.open(
-                      "https://evisa.xuatnhapcanh.gov.vn/web/guest/khai-thi-thuc-dien-tu/cap-thi-thuc-dien-tu"
+                      "https://evisa.xuatnhapcanh.gov.vn/web/guest/khai-thi-thuc-dien-tu/cap-thi-thuc-dien-tu",
                     )
                   }
                 >
