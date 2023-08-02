@@ -39,7 +39,8 @@ export default function Home({ hotels }) {
           <SimpleGrid minChildWidth="350px" spacing="40px">
             <Card>
               <CardBody>
-                All hotels are located near the beach. You can request the hotel to send a taxi for you at the Da Nang airport.
+                🏝️ All hotels are located near the beach. 
+                🚕 You can request the hotel to send a taxi for you at the Da Nang airport.
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
               <CardBody>
