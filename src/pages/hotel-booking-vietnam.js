@@ -91,7 +91,7 @@ export default function Home({ hotels }) {
                   </Button>
                   <Link spacing="2" href="/da-nang-map">
                     <Button variant="solid" colorScheme="green">
-                      Zero forex ATMs
+                      Da Nang Map
                     </Button>
                   </Link>
                 </Stack>
