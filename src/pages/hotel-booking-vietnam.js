@@ -9,13 +9,21 @@ import {
   SimpleGrid,
   Tag,
   Heading,
+  Table,
+  TableCaption,
+  Thead,
+  Tbody,
+  Tr,
+  Th,
+  Td,
+  Box,
 } from "@chakra-ui/react";
 import Image from 'next/image';
 import ListView from "@/component/listview";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
 
-export default function Home({ features }) {
+export default function Home({ hotels }) {
   return (
     <>
       <Seo
@@ -27,20 +35,41 @@ export default function Home({ features }) {
         <Header title={"Booking hotel in Vietnam"} />
         <div style={{ marginTop: "20px" }}>
           <SimpleGrid minChildWidth="350px" spacing="40px">
-            <Card maxW="sm">
+            <Card>
               <CardBody>
-                <Image
-                  src={"/images/hotel.webp"}
-                  alt="Vietnam Hotel"
-                  height={422}
-                  width={310}
-                />
-                <Stack mt="6" spacing="3">
-                  <Heading as="h2" size="md">
-                    Book hotel in Vietnam from Facebook
-                  </Heading>
-                  <ListView features={features} />
-                </Stack>
+
+                <TableContainer>
+                  <Table size='sm'>
+                    <Thead>
+                      <Tr>
+                        <Th>Hotel</Th>
+                        <Th>Contact</Th>
+                      </Tr>
+                    </Thead>
+                    <Tbody>
+                      {hotels.map((hotel, i) => {
+                        return (
+                          <Tr key={i}>
+                            <Td>{hotel.name}</Td>
+                            <Td>
+                              <Button 
+                                colorScheme='teal'
+                                size='xs'
+                                onClick={() =>
+                                  window.open(hotel.contact)
+                                }  
+                              >
+                                contact
+                              </Button>
+                            </Td>
+                          </Tr>
+                        )
+                      })}
+
+                    </Tbody>
+                  </Table>
+                </TableContainer>
+
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
               <CardBody>
@@ -70,27 +99,22 @@ export default function Home({ features }) {
 }
 
 export async function getStaticProps() {
-  const features = [
+  const hotels = [
     {
       item: 1,
-      title: `✅ just search on fb as 'CITY_YOU_VISITING hotel'`,
-      color: "green.500",
+      name: `Sala Danang Beach Hotel`,
+      contact: "https://www.facebook.com/saladanangbeachhotel/",
     },
     {
       item: 2,
-      title: `✅ You can message hotels and get your rooms booked`,
-      color: "green.500",
-    },
-    {
-      item: 3,
-      title: `❌ For premium experience stick to domestic 4 star (which are internationally 3 star hotels.)`,
-      color: "red.400",
+      name: "Lavencos Hotel",
+      contact: "https://www.facebook.com/lavencos.vn",
     },
   ];
 
   return {
     props: {
-      features,
+      hotels,
     },
   };
 }
