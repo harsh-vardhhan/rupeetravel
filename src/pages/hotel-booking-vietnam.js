@@ -23,6 +23,7 @@ import Image from 'next/image';
 import ListView from "@/component/listview";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
+import Link from "next/link";
 
 export default function Home({ hotels }) {
   return (
