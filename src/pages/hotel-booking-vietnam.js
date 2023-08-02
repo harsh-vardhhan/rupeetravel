@@ -52,12 +52,12 @@ export default function Home({ hotels }) {
                           <Tr key={i}>
                             <Td>{hotel.name}</Td>
                             <Td>
-                              <Button 
+                              <Button
                                 colorScheme='teal'
                                 size='xs'
                                 onClick={() =>
                                   window.open(hotel.contact)
-                                }  
+                                }
                               >
                                 contact
                               </Button>
@@ -78,15 +78,23 @@ export default function Home({ hotels }) {
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
-                <Button
-                  variant="solid"
-                  colorScheme="green"
-                  onClick={() =>
-                    window.open("https://www.facebook.com/lavencos.vn")
-                  }
-                >
-                  Contact Lavencos Hotel
-                </Button>
+                <Stack direction="row">
+                  <Button
+                    variant="solid"
+                    colorScheme="green"
+                    onClick={() =>
+                      window.open("https://www.facebook.com/lavencos.vn")
+                    }
+                  >
+                    Contact Lavencos Hotel
+                  </Button>
+                  <Link spacing="2" href="/da-nang-map">
+                    <Button variant="solid" colorScheme="green">
+                      Zero forex ATMs
+                    </Button>
+                  </Link>
+                </Stack>
+
               </CardFooter>
             </Card>
           </SimpleGrid>
