@@ -37,7 +37,7 @@ export default function Home({ hotels }) {
         <Header title={"Booking hotel in Da Nang, Vietnam"} />
         <div style={{ marginTop: "20px" }}>
           <SimpleGrid minChildWidth="350px" spacing="40px">
-            <Card maxW="sm">
+            <Card>
               <CardBody>
                 All hotels are located near the beach. You can request the hotel to send a taxi for you at the Da Nang airport.
               </CardBody>
@@ -91,7 +91,7 @@ export default function Home({ hotels }) {
                       window.open("https://www.facebook.com/lavencos.vn")
                     }
                   >
-                    Contact Lavencos Hotel
+                    Contact Lavencos
                   </Button>
                   <Link spacing="2" href="/da-nang-map">
                     <Button variant="solid" colorScheme="green">
