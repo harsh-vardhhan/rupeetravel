@@ -143,7 +143,7 @@ export async function getStaticProps() {
     },
     {
       item: 7,
-      name: "Belle Maison Parosand Danang Hotel",
+      name: "Belle Maison Parosand Hotel",
       contact: "facebook.com/bellemaisondanang/",
     },
   ];
