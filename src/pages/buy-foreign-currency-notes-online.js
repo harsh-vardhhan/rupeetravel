@@ -89,13 +89,20 @@ export default function Home({ features }) {
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
-                <Button
-                  variant="solid"
-                  colorScheme="green"
-                  onClick={() => window.open("https://www.bookmyforex.com/")}
-                >
-                  Book My Forex
-                </Button>
+                <Stack direction="row">
+                  <Button
+                    variant="solid"
+                    colorScheme="green"
+                    onClick={() => window.open("https://www.bookmyforex.com/")}
+                  >
+                    Book My Forex
+                  </Button>
+                  <Link spacing="2" href="/posts/india-cross-border-finance">
+                    <Button variant="solid" colorScheme="green">
+                      Read More
+                    </Button>
+                  </Link>
+                </Stack>
               </CardFooter>
             </Card>
           </SimpleGrid>
@@ -111,7 +118,7 @@ const ComparisionMatrix = () => (
     <CardBody>
       <Stack mt="6" spacing="3">
         <Heading as="h2" size="md">
-        {'Only Order USD currency notes in India'}
+          {'Only Order USD currency notes in India'}
         </Heading>
       </Stack>
     </CardBody>

@@ -81,17 +81,24 @@ export default function Home({ features }) {
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
-                <Button
-                  variant="solid"
-                  colorScheme="green"
-                  onClick={() =>
-                    window.open(
-                      "https://www.idfcfirstbank.com/credit-card/credit-card-against-fixed-deposits"
-                    )
-                  }
-                >
-                  IDFC First Wow
-                </Button>
+                <Stack direction="row">
+                  <Button
+                    variant="solid"
+                    colorScheme="green"
+                    onClick={() =>
+                      window.open(
+                        "https://www.idfcfirstbank.com/credit-card/credit-card-against-fixed-deposits"
+                      )
+                    }
+                  >
+                    IDFC First Wow
+                  </Button>
+                  <Link spacing="2" href="/posts/india-cross-border-finance">
+                    <Button variant="solid" colorScheme="green">
+                      Read More
+                    </Button>
+                  </Link>
+                </Stack>
               </CardFooter>
             </Card>
             <Card maxW="sm">
@@ -107,7 +114,7 @@ export default function Home({ features }) {
                   alt="Amex card"
                   height={312}
                   width={310}
-                  style={{ marginTop: "10px"}}
+                  style={{ marginTop: "10px" }}
                 />
               </CardBody>
             </Card>

@@ -40,16 +40,23 @@ export default function Home({ features }) {
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
-                <Button
-                  colorScheme="green"
-                  onClick={() =>
-                    window.open(
-                      "https://www.godigit.com/international-travel-insurance"
-                    )
-                  }
-                >
-                  Digit Travel Insurance
-                </Button>
+                <Stack direction="row">
+                  <Button
+                    colorScheme="green"
+                    onClick={() =>
+                      window.open(
+                        "https://www.godigit.com/international-travel-insurance"
+                      )
+                    }
+                  >
+                    Get Insurance
+                  </Button>
+                  <Link spacing="2" href="/posts/india-cross-border-finance">
+                    <Button variant="solid" colorScheme="green">
+                      Read More
+                    </Button>
+                  </Link>
+                </Stack>
               </CardFooter>
             </Card>
           </SimpleGrid>
