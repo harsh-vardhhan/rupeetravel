@@ -45,7 +45,7 @@ export default function Home({ features }) {
                     colorScheme="green"
                     onClick={() =>
                       window.open(
-                        "https://www.godigit.com/international-travel-insurance"
+                        "https://www.godigit.com/international-travel-insurance",
                       )
                     }
                   >
