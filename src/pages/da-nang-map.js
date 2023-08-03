@@ -1,116 +1,121 @@
-import Seo from '@/component/seo'
-import styles from '@/styles/Home.module.css'
+import Seo from "@/component/seo";
+import styles from "@/styles/Home.module.css";
 import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
 import Header from "@/component/header";
 import Link from "next/link";
 import {
-    Button,
-    Card,
-    CardBody,
-    Divider,
-    CardFooter,
-    Stack,
-    Heading,
+  Button,
+  Card,
+  CardBody,
+  Divider,
+  CardFooter,
+  Stack,
+  Heading,
 } from "@chakra-ui/react";
 
 export default function Home({ deviceType }) {
+  const { rive, RiveComponent } = useRive({
+    src: "map.riv",
+    stateMachines: "toggle-dragon-bridge",
+    artboard: "map",
+    autoplay: true,
+  });
 
-    const { rive, RiveComponent } = useRive({
-        src: "map.riv",
-        stateMachines: "toggle-dragon-bridge",
-        artboard: "map",
-        autoplay: true,
-    });
+  const bumpInput = useStateMachineInput(
+    rive,
+    "toggle-dragon-bridge",
+    "hover-on",
+    false,
+  );
 
-    const bumpInput = useStateMachineInput(rive, "toggle-dragon-bridge", "hover-on", false);
-
-    if (deviceType === 'mobile') {
-        return (
-            <>
-                <Seo
-                    title="Rupee Travel | Da Nang Map"
-                    description="Best places to visit in Da Nang"
-                    canonical={"https://www.rupeetravel.com/da-nang-map"}
+  if (deviceType === "mobile") {
+    return (
+      <>
+        <Seo
+          title="Rupee Travel | Da Nang Map"
+          description="Best places to visit in Da Nang"
+          canonical={"https://www.rupeetravel.com/da-nang-map"}
+        />
+        <main className={styles.main}>
+          <Header title={"Da Nang Map"} />
+          <Card maxW="sm">
+            <CardBody>
+              <Stack mt="6" spacing="3">
+                <Heading as="h2" size="md">
+                  Click on map
+                </Heading>
+                <RiveComponent
+                  style={{
+                    height: "476px",
+                    width: "381px",
+                    WebkitTransform: "rotate(90deg)",
+                  }}
+                  onClick={() => (bumpInput.value = !bumpInput.value)}
                 />
-                <main className={styles.main}>
-                    <Header title={"Da Nang Map"} />
-                    <Card maxW="sm">
-                        <CardBody>
-                            <Stack mt="6" spacing="3">
-                                <Heading as="h2" size="md">
-                                    Click on map
-                                </Heading>
-                                <RiveComponent
-                                    style={{
-                                        height: "476px",
-                                        width: "381px",
-                                        WebkitTransform: "rotate(90deg)",
-                                    }}
-                                    onClick={() => bumpInput.value = !bumpInput.value}
-                                />
-                            </Stack>
-                        </CardBody>
-                        <Divider style={{ color: "#e2e8f0" }} />
-                        <CardFooter>
-                            <Link spacing="2" href="/hotel-booking-vietnam">
-                                <Button variant="solid" colorScheme="green">
-                                    Book Hotel
-                                </Button>
-                            </Link>
-                        </CardFooter>
-                    </Card>
-                </main>
-            </>
-        )
-    } else {
-        return (
-            <>
-                <Seo
-                    title="Rupee Travel | Da Nang Map"
-                    description="Best places to visit in Da Nang"
-                    canonical={"https://www.rupeetravel.com/da-nang-map"}
+              </Stack>
+            </CardBody>
+            <Divider style={{ color: "#e2e8f0" }} />
+            <CardFooter>
+              <Link spacing="2" href="/hotel-booking-vietnam">
+                <Button variant="solid" colorScheme="green">
+                  Book Hotel
+                </Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        </main>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Seo
+          title="Rupee Travel | Da Nang Map"
+          description="Best places to visit in Da Nang"
+          canonical={"https://www.rupeetravel.com/da-nang-map"}
+        />
+        <main className={styles.main}>
+          <Header title={"Da Nang Map"} />
+          <Card>
+            <CardBody>
+              <Stack mt="6" spacing="3">
+                <Heading as="h2" size="md">
+                  Click on map
+                </Heading>
+                <RiveComponent
+                  style={{
+                    height: "600px",
+                  }}
+                  onClick={() => (bumpInput.value = !bumpInput.value)}
                 />
-                <main className={styles.main}>
-                    <Header title={"Da Nang Map"} />
-                    <Card>
-                        <CardBody>
-                            <Stack mt="6" spacing="3">
-                                <Heading as="h2" size="md">
-                                    Click on map
-                                </Heading>
-                                <RiveComponent
-                                    style={{
-                                        height: "600px",
-                                    }}
-                                    onClick={() => bumpInput.value = !bumpInput.value}
-                                />
-                            </Stack>
-                        </CardBody>
-                        <Divider style={{ color: "#e2e8f0" }} />
-                        <CardFooter>
-                            <Link spacing="2" href="/hotel-booking-vietnam">
-                                <Button variant="solid" colorScheme="green">
-                                    Book Hotel
-                                </Button>
-                            </Link>
-                        </CardFooter>
-                    </Card>
-                </main>
-            </>
-        )
-    }
-
+              </Stack>
+            </CardBody>
+            <Divider style={{ color: "#e2e8f0" }} />
+            <CardFooter>
+              <Link spacing="2" href="/hotel-booking-vietnam">
+                <Button variant="solid" colorScheme="green">
+                  Book Hotel
+                </Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        </main>
+      </>
+    );
+  }
 }
 
 export async function getServerSideProps(context) {
-    const UA = context.req.headers['user-agent'];
-    const isMobile = Boolean(UA.match(
-        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
-    ))
+  const UA = context.req.headers["user-agent"];
+  const isMobile = Boolean(
+    UA.match(
+      /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i,
+    ),
+  );
 
-    return {
-        props: {
-            deviceType: isMobile ? 'mobile' : 'desktop'
-        }
-    }
+  return {
+    props: {
+      deviceType: isMobile ? "mobile" : "desktop",
+    },
+  };
 }
