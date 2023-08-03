@@ -5,6 +5,10 @@ import Header from "@/component/header";
 import Link from "next/link";
 import {
     Button,
+    Card,
+    CardBody,
+    Divider,
+    CardFooter,
 } from "@chakra-ui/react";
 
 export default function Home({ deviceType }) {
@@ -28,19 +32,26 @@ export default function Home({ deviceType }) {
                 />
                 <main className={styles.main}>
                     <Header title={"Da Nang Map"} />
-                    <RiveComponent
-                        style={{
-                            height: "476px",
-                            width: "381px",
-                            WebkitTransform: "rotate(90deg)",
-                        }}
-                        onClick={() => bumpInput.value = !bumpInput.value}
-                    />
-                    <Link spacing="2" href="/hotel-booking-vietnam">
-                        <Button variant="solid" colorScheme="green">
-                            Book Hotel
-                        </Button>
-                    </Link>
+                    <Card>
+                        <CardBody>
+                            <RiveComponent
+                                style={{
+                                    height: "476px",
+                                    width: "381px",
+                                    WebkitTransform: "rotate(90deg)",
+                                }}
+                                onClick={() => bumpInput.value = !bumpInput.value}
+                            />
+                        </CardBody>
+                        <Divider style={{ color: "#e2e8f0" }} />
+                        <CardFooter>
+                            <Link spacing="2" href="/hotel-booking-vietnam">
+                                <Button variant="solid" colorScheme="green">
+                                    Book Hotel
+                                </Button>
+                            </Link>
+                        </CardFooter>
+                    </Card>
                 </main>
             </>
         )
