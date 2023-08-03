@@ -152,6 +152,16 @@ export async function getStaticProps() {
       name: "Sekong Hotel Da Nang",
       contact: "https://facebook.com/sekonghoteldanang"
     },
+    {
+      item: 9,
+      name: "Cicilia Danang Hotel & Spa",
+      contact: "https://www.facebook.com/ciciliadanang/"
+    },
+    {
+      item: 10,
+      name: "Aria Grand Hotel Da Nang",
+      contact: "https://www.facebook.com/ariagrandhotel/"
+    },
   ];
 
   return {
