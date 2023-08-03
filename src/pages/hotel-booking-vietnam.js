@@ -19,7 +19,7 @@ import {
   Box,
   TableContainer,
 } from "@chakra-ui/react";
-import Image from 'next/image';
+import Image from "next/image";
 import ListView from "@/component/listview";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
@@ -39,13 +39,13 @@ export default function Home({ hotels }) {
           <SimpleGrid minChildWidth="350px" spacing="40px">
             <Card>
               <CardBody>
-                🏝️ All hotels are located near the beach. 
-                🚕 You can request the hotel to send a taxi for you at the Da Nang airport.
+                🏝️ All hotels are located near the beach. 🚕 You can request the
+                hotel to send a taxi for you at the Da Nang airport.
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
               <CardBody>
                 <TableContainer>
-                  <Table size='sm'>
+                  <Table size="sm">
                     <Thead>
                       <Tr>
                         <Th>Hotel</Th>
@@ -59,17 +59,15 @@ export default function Home({ hotels }) {
                             <Td>{hotel.name}</Td>
                             <Td>
                               <Button
-                                colorScheme='teal'
-                                size='xs'
-                                onClick={() =>
-                                  window.open(hotel.contact)
-                                }
+                                colorScheme="teal"
+                                size="xs"
+                                onClick={() => window.open(hotel.contact)}
                               >
                                 contact
                               </Button>
                             </Td>
                           </Tr>
-                        )
+                        );
                       })}
                     </Tbody>
                   </Table>
@@ -100,7 +98,6 @@ export default function Home({ hotels }) {
                     </Button>
                   </Link>
                 </Stack>
-
               </CardFooter>
             </Card>
           </SimpleGrid>
@@ -150,7 +147,7 @@ export async function getStaticProps() {
     {
       item: 8,
       name: "Sekong Hotel Da Nang",
-      contact: "https://facebook.com/sekonghoteldanang"
+      contact: "https://facebook.com/sekonghoteldanang",
     },
   ];
 
