@@ -40,7 +40,7 @@ export default function Home({ hotels }) {
             <Card>
               <CardBody>
                 🏝️ All hotels are located near the beach.
-                <br/>
+                <br />
                 🚕 You can request the hotel to send a taxi for you at the Da Nang airport.
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
