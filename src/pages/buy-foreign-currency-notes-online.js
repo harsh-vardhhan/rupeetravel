@@ -24,6 +24,7 @@ import Header from "@/component/header";
 import ListView from "@/component/listview";
 import Seo from "@/component/seo";
 import StructuredData from "@/component/structuredData";
+import Link from "next/link";
 
 export default function Home({ features }) {
   const structuredData = {
