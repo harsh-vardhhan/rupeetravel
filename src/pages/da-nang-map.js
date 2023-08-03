@@ -2,6 +2,11 @@ import Seo from '@/component/seo'
 import styles from '@/styles/Home.module.css'
 import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
 import Header from "@/component/header";
+import Link from "next/link";
+import {
+    Buttton
+} from "@chakra-ui/react";
+
 export default function Home({ deviceType }) {
 
     const { rive, RiveComponent } = useRive({
@@ -24,13 +29,18 @@ export default function Home({ deviceType }) {
                 <main className={styles.main}>
                     <Header title={"Da Nang Map"} />
                     <RiveComponent
-                        style={{ 
-                            height: "476px", 
+                        style={{
+                            height: "476px",
                             width: "381px",
                             WebkitTransform: "rotate(90deg)",
                         }}
                         onClick={() => bumpInput.value = !bumpInput.value}
                     />
+                    <Link spacing="2" href="/hotel-booking-vietnam">
+                        <Button variant="solid" colorScheme="green">
+                            Book Hotel
+                        </Button>
+                    </Link>
                 </main>
             </>
         )
@@ -45,7 +55,7 @@ export default function Home({ deviceType }) {
                 <main className={styles.main}>
                     <Header title={"Da Nang Map"} />
                     <RiveComponent
-                        style={{ height: "600px"}}
+                        style={{ height: "600px" }}
                         onClick={() => bumpInput.value = !bumpInput.value}
                     />
                 </main>
