@@ -32,7 +32,7 @@ export default function Home({ deviceType }) {
                 />
                 <main className={styles.main}>
                     <Header title={"Da Nang Map"} />
-                    <Card>
+                    <Card maxW="sm">
                         <CardBody>
                             <RiveComponent
                                 style={{
@@ -65,10 +65,24 @@ export default function Home({ deviceType }) {
                 />
                 <main className={styles.main}>
                     <Header title={"Da Nang Map"} />
-                    <RiveComponent
-                        style={{ height: "600px" }}
-                        onClick={() => bumpInput.value = !bumpInput.value}
-                    />
+                    <Card>
+                        <CardBody>
+                            <RiveComponent
+                                style={{
+                                    height: "600px",
+                                }}
+                                onClick={() => bumpInput.value = !bumpInput.value}
+                            />
+                        </CardBody>
+                        <Divider style={{ color: "#e2e8f0" }} />
+                        <CardFooter>
+                            <Link spacing="2" href="/hotel-booking-vietnam">
+                                <Button variant="solid" colorScheme="green">
+                                    Book Hotel
+                                </Button>
+                            </Link>
+                        </CardFooter>
+                    </Card>
                 </main>
             </>
         )
