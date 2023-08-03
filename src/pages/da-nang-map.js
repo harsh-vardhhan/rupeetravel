@@ -4,7 +4,7 @@ import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
 import Header from "@/component/header";
 import Link from "next/link";
 import {
-    Buttton
+    Button,
 } from "@chakra-ui/react";
 
 export default function Home({ deviceType }) {
