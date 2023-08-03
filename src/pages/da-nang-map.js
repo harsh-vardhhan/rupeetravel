@@ -9,6 +9,8 @@ import {
     CardBody,
     Divider,
     CardFooter,
+    Stack,
+    Heading,
 } from "@chakra-ui/react";
 
 export default function Home({ deviceType }) {
@@ -34,14 +36,19 @@ export default function Home({ deviceType }) {
                     <Header title={"Da Nang Map"} />
                     <Card maxW="sm">
                         <CardBody>
-                            <RiveComponent
-                                style={{
-                                    height: "476px",
-                                    width: "381px",
-                                    WebkitTransform: "rotate(90deg)",
-                                }}
-                                onClick={() => bumpInput.value = !bumpInput.value}
-                            />
+                            <Stack mt="6" spacing="3">
+                                <Heading as="h2" size="md">
+                                    Click on map
+                                </Heading>
+                                <RiveComponent
+                                    style={{
+                                        height: "476px",
+                                        width: "381px",
+                                        WebkitTransform: "rotate(90deg)",
+                                    }}
+                                    onClick={() => bumpInput.value = !bumpInput.value}
+                                />
+                            </Stack>
                         </CardBody>
                         <Divider style={{ color: "#e2e8f0" }} />
                         <CardFooter>
@@ -67,12 +74,17 @@ export default function Home({ deviceType }) {
                     <Header title={"Da Nang Map"} />
                     <Card>
                         <CardBody>
-                            <RiveComponent
-                                style={{
-                                    height: "600px",
-                                }}
-                                onClick={() => bumpInput.value = !bumpInput.value}
-                            />
+                            <Stack mt="6" spacing="3">
+                                <Heading as="h2" size="md">
+                                    Click on map
+                                </Heading>
+                                <RiveComponent
+                                    style={{
+                                        height: "600px",
+                                    }}
+                                    onClick={() => bumpInput.value = !bumpInput.value}
+                                />
+                            </Stack>
                         </CardBody>
                         <Divider style={{ color: "#e2e8f0" }} />
                         <CardFooter>
