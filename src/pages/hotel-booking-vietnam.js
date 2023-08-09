@@ -8,19 +8,14 @@ import {
   Button,
   SimpleGrid,
   Tag,
-  Heading,
   Table,
-  TableCaption,
   Thead,
   Tbody,
   Tr,
   Th,
   Td,
-  Box,
   TableContainer,
 } from "@chakra-ui/react";
-import Image from 'next/image';
-import ListView from "@/component/listview";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
 import Link from "next/link";
