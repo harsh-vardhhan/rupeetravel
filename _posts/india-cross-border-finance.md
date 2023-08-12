@@ -11,11 +11,11 @@ ogImage:
   url: '/assets/blog/india-cross-border-finance/tools.webp'
 ---
 
-### Yes, an Indian passport sucks. We all know that ###
+## Yes, an Indian passport sucks. We all know that ###
 
 My entire Twitter feed is complaints by fellow Indians about how they got rejected for Schengen visas or American tourist visas. Indian passport ranks globally in 85th position as per the Henley passport index.
 
-### Now enter the enlightenment phase
+## Now enter the enlightenment phase
 
 You got only one life to live, and India's passport strength might not improve in your lifetime. So now it's better to acknowledge the reality and focus on what India does offer and how you can leverage it.
 
@@ -23,9 +23,10 @@ So what exactly doe India offer?
 - Visa-free access to ample nearby SEA (South East Asian) countries.
 - A very comprehensive set of financial tools for cross-border finance.
 
-### How do cards and financial tools matter in traveling?
 
-They do. They make your traveling not only convenient but also affordable. The lower the overhead cost of traveling, the more often you can travel.
+> How do cards and financial tools matter in traveling?
+
+> They do. They make your traveling not only convenient but also affordable. The lower the overhead cost of traveling, the more often you can travel.
 
 ## 1. Zero forex credit and debit cards
 
