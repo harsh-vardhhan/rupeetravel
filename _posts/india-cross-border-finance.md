@@ -28,7 +28,7 @@ So what exactly doe India offer?
 
 > They do. They make your traveling not only convenient but also affordable. The lower the overhead cost of traveling, the more often you can travel.
 
-## 1. Zero forex credit and debit cards
+## Get Zero forex credit and debit cards
 
 ![credit card](/assets/blog/india-cross-border-finance/credit-card.webp "Credit Card")
 
@@ -41,7 +41,7 @@ Both cards mentioned below are zero annual fee and zero joining fee.
 - **Credit Card-** [IDFC First Wow](https://www.rupeetravel.com/credit-cards-travel-vietnam-zero-forex-markup-fee) 🔗
 - **Debit Card-** [Fi](https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee) 🔗
 
-## 2. Travel Insurance 
+## Get a cheap Travel Insurance 
 
 Your local health insurance won't pay for the hospital bills that incur overseas. You need a [**travel insurance** 🔗](https://www.rupeetravel.com/travel-insurance-india-vietnam). They cover your overseas hospital bills at a low price.
 
@@ -49,7 +49,7 @@ For example, my 26 days holiday in Da Nang, Vietnam, was covered by digit insura
 
 ![travel insurance coverage](/assets/blog/india-cross-border-finance/travel-insurance-coverage.webp "travel insurance coverage")
 
-## 3. USD currency notes
+## Order USD currency notes
 
 ![travel insurance coverage](/assets/blog/india-cross-border-finance/usd-currency-notes.webp "travel insurance coverage")
 
