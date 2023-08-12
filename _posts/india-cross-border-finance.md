@@ -11,11 +11,11 @@ ogImage:
   url: '/assets/blog/india-cross-border-finance/tools.webp'
 ---
 
-## Yes, an Indian passport sucks. We all know that.
+### Yes, an Indian passport sucks. We all know that ###
 
 My entire Twitter feed is complaints by fellow Indians about how they got rejected for Schengen visas or American tourist visas. Indian passport ranks globally in 85th position as per the Henley passport index.
 
-## Now enter the enlightenment phase
+### Now enter the enlightenment phase
 
 You got only one life to live, and India's passport strength might not improve in your lifetime. So now it's better to acknowledge the reality and focus on what India does offer and how you can leverage it.
 
@@ -23,11 +23,11 @@ So what exactly doe India offer?
 - Visa-free access to ample nearby SEA (South East Asian) countries.
 - A very comprehensive set of financial tools for cross-border finance.
 
-## How do cards and financial tools matter in traveling?
+### How do cards and financial tools matter in traveling?
 
 They do. They make your traveling not only convenient but also affordable. The lower the overhead cost of traveling, the more often you can travel.
 
-### 1. Zero forex credit and debit cards
+## 1. Zero forex credit and debit cards
 
 ![credit card](/assets/blog/india-cross-border-finance/credit-card.webp "Credit Card")
 
@@ -40,7 +40,7 @@ Both cards mentioned below are zero annual fee and zero joining fee.
 - **Credit Card-** [IDFC First Wow](https://www.rupeetravel.com/credit-cards-travel-vietnam-zero-forex-markup-fee) 🔗
 - **Debit Card-** [Fi](https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee) 🔗
 
-### 2. Travel Insurance 
+## 2. Travel Insurance 
 
 Your local health insurance won't pay for the hospital bills that incur overseas. You need a [**travel insurance** 🔗](https://www.rupeetravel.com/travel-insurance-india-vietnam). They cover your overseas hospital bills at a low price.
 
@@ -48,7 +48,7 @@ For example, my 26 days holiday in Da Nang, Vietnam, was covered by digit insura
 
 ![travel insurance coverage](/assets/blog/india-cross-border-finance/travel-insurance-coverage.webp "travel insurance coverage")
 
-### 3. USD currency notes
+## 3. USD currency notes
 
 ![travel insurance coverage](/assets/blog/india-cross-border-finance/usd-currency-notes.webp "travel insurance coverage")
 
