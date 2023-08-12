@@ -7,15 +7,23 @@ import {
   CardFooter,
   Button,
   SimpleGrid,
-  Tag,
   Heading,
+  Step,
+  StepDescription,
+  StepIndicator,
+  StepNumber,
+  StepSeparator,
+  StepStatus,
+  StepTitle,
+  Stepper,
+  useSteps,
+  Box
 } from "@chakra-ui/react";
-import ListView from "@/component/listview";
 import Header from "@/component/header";
 import StructuredData from "@/component/structuredData";
 import Seo from "@/component/seo";
 
-export default function Home({ features }) {
+export default function Home({ steps }) {
   const structuredData = {
     "@context": "https://www.schema.org",
     "@type": "product",
@@ -41,6 +49,12 @@ export default function Home({ features }) {
       },
     }
   };
+
+  const { activeStep } = useSteps({
+    index: 0,
+    count: 3,
+  })
+
   return (
     <>
       <StructuredData data={structuredData} />
@@ -59,10 +73,29 @@ export default function Home({ features }) {
                   <Heading as="h2" size="md">
                     E-Visa for Vietnam
                   </Heading>
-                  <Tag colorScheme="teal" style={{ width: "fit-content" }}>
-                    Personally used
-                  </Tag>
-                  <ListView features={features} />
+
+                  <Stepper index={activeStep} orientation='vertical' height='400px' gap='0'>
+                    {steps.map((step, index) => (
+                      <Step key={index}>
+                        <StepIndicator>
+                          <StepStatus
+                            active={<StepNumber />}
+                            incomplete={<StepNumber />}
+                            complete={<StepNumber />}
+                          />
+                        </StepIndicator>
+
+                        <Box flexShrink='1'>
+                          <StepTitle>{step.title}</StepTitle>
+                          <StepDescription>{step.description}</StepDescription>
+                        </Box>
+
+                        <StepSeparator />
+                      </Step>
+                    ))}
+                  </Stepper>
+                  )
+
                 </Stack>
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
@@ -87,32 +120,24 @@ export default function Home({ features }) {
 }
 
 export async function getStaticProps() {
-  const features = [
+  const steps = [
     {
-      item: 1,
-      title: `✅ you can stay for maximum one month`,
-      color: "green.500",
+      title: `Apply for Vietnam E-Visa`,
+      description: "fill the online form from the official site link given below.",
     },
     {
-      item: 2,
-      title: `✅ Usually visa approved within 5 days max.`,
-      color: "green.500",
+      title: `Pay the fee`,
+      description: "Pay the $25 online non-refundable fee",
     },
     {
-      item: 3,
-      title: `✅ Very unlikely to get rejected 🙂`,
-      color: "green.500",
-    },
-    {
-      item: 4,
-      title: `❌ Please don't use any third party agency, apply on the official government site link given below`,
-      color: "red.400",
+      title: `Wait for E-Visa approval`,
+      description: "Wait for 3-5 business days. You will get status update on your email",
     },
   ];
 
   return {
     props: {
-      features,
+      steps,
     },
   };
 }
