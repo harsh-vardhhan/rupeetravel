@@ -19,7 +19,6 @@ export default function Home() {
 
     const format = (val) => `₹` + val
     const parse = (val) => val.replace(/^\₹/, '')
-
     const [value, setValue] = useState('100')
     const INRVNDForexRate = 287.5
     const INRVNDBookMyForexRate = 217.0
