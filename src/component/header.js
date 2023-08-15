@@ -6,7 +6,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 
-const Header = ({ title, blog=false }) => {
+const Header = ({ title, blog = false }) => {
   return (
     <>
       <Link href="/">
@@ -17,7 +17,7 @@ const Header = ({ title, blog=false }) => {
       {blog ? (
         <Text
           as="h1"
-          fontSize={{ base: '24px', md: '40px', lg: '75px' }}
+          fontSize={{ base: "24px", md: "40px", lg: "75px" }}
           style={{
             marginTop: "20px",
             fontWeight: 700,
