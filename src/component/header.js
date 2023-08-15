@@ -6,7 +6,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 
-const Header = ({ title }) => {
+const Header = ({ title, blog=false }) => {
   return (
     <>
       <Link href="/">
@@ -14,16 +14,29 @@ const Header = ({ title }) => {
           Rupee Travel
         </Text>
       </Link>
-      <Text
-        as="h1"
-        fontSize="xl"
-        style={{
-          marginTop: "20px",
-          fontWeight: 600,
-        }}
-      >
-        {title}
-      </Text>
+      {blog ? (
+        <Text
+          as="h1"
+          fontSize={{ base: '24px', md: '40px', lg: '75px' }}
+          style={{
+            marginTop: "20px",
+            fontWeight: 700,
+          }}
+        >
+          {title}
+        </Text>
+      ) : (
+        <Text
+          as="h1"
+          fontSize="xl"
+          style={{
+            marginTop: "20px",
+            fontWeight: 600,
+          }}
+        >
+          {title}
+        </Text>
+      )}
       <Breadcrumb>
         <BreadcrumbItem>
           <Link href="/">Home</Link>
