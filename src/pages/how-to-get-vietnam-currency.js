@@ -122,7 +122,7 @@ export default function Home() {
                         </Card>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             You can buy VND in India from an authorised forex dealer like BookMyforex.
-                            But it can be seen that rate offered by BookMyForex isn't great compared to the offering in the forex market.
+                            But it can be seen that rate offered by BookMyForex is not great compared to the offering in the forex market.
                         </Text>
                     </div>
                 </div>
