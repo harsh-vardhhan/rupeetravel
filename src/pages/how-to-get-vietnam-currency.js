@@ -17,13 +17,6 @@ import Image from 'next/image';
 
 export default function Home() {
 
-    const format = (val) => `₹` + val
-    const parse = (val) => val.replace(/^\₹/, '')
-    const [value, setValue] = useState('100')
-
-    const INRVNDForexRate = 287.5
-    const INRVNDBookMyForexRate = 217.0
-
     return (
         <>
             <Seo
@@ -63,79 +56,108 @@ export default function Home() {
                             <ListItem>in the right amount</ListItem>
                         </UnorderedList>
                         <Heading style={{ marginTop: '20px' }}> INR to Vietnam currency</Heading>
-                        <Heading fontSize={'lg'} style={{ marginTop: '20px' }}> INRVND currency converter with forex rate:</Heading>
-                        <Card style={{ padding: '20px', marginTop: '10px' }}>
-                            <div>
-                                <Stack direction="row">
-                                    <Text style={{ marginTop: '7px', fontWeight: 700 }}>INR</Text>
-                                    <NumberInput
-                                        onChange={(valueString) => setValue(parse(valueString))}
-                                        value={format(value)}
-                                        max={100000}
-                                    >
-                                        <NumberInputField />
-                                    </NumberInput>
-                                </Stack>
-                            </div>
-                            <div style={{ marginTop: '20px' }}>
-                                <Stack direction="row">
-                                    <Text style={{ marginTop: '0px', fontWeight: 700 }}>VND</Text>
-                                    <Text>₫ {value * INRVNDForexRate}</Text>
-                                </Stack>
-                            </div>
-                            <div style={{ marginTop: '20px' }}>
-                                <Stack direction="row">
-                                    <Text style={{ marginTop: '0px', fontWeight: 700 }}>Forex Rate</Text>
-                                    <Tag colorScheme='teal'>₫ {INRVNDForexRate}</Tag>
-                                </Stack>
-                            </div>
-                        </Card>
+                        <CurrencyConverter
+                            currencyPair={'INRVND'}
+                            exchange={'forex market'}
+                            rate={287.5}
+                            base={'INR'}
+                            quote={'VND'}
+                            baseSymbol={'₹'}
+                            quoteSymbol={'₫'}
+                        />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             Try to buy Vietnamese Dong (VND) closest to the forex rate. This is where it gets tricky. You need to get the right foriegn currency at the right place to get the right price.
                         </Text>
                         <Heading style={{ marginTop: '20px' }}> Buy Vietnam currency in India</Heading>
-                        <Heading fontSize={'lg'} style={{ marginTop: '20px' }}> INRVND currency converter with BookMyForex rate:</Heading>
-                        <Card style={{ padding: '20px', marginTop: '10px' }}>
-                            <div>
-                                <Stack direction="row">
-                                    <Text style={{ marginTop: '7px', fontWeight: 700 }}>INR</Text>
-                                    <NumberInput
-                                        onChange={(valueString) => setValue(parse(valueString))}
-                                        value={format(value)}
-                                        max={100000}
-                                    >
-                                        <NumberInputField />
-                                    </NumberInput>
-                                </Stack>
-                            </div>
-                            <div style={{ marginTop: '20px' }}>
-                                <Stack direction="row">
-                                    <Text style={{ marginTop: '0px', fontWeight: 700 }}>VND</Text>
-                                    <Text>₫ {value * INRVNDBookMyForexRate}</Text>
-                                </Stack>
-                            </div>
-                            <div style={{ marginTop: '20px' }}>
-                                <Stack direction="row">
-                                    <Text style={{ marginTop: '0px', fontWeight: 700 }}>BookMyForex Rate</Text>
-                                    <Tag colorScheme='teal'>₫ {INRVNDBookMyForexRate}</Tag>
-                                </Stack>
-                            </div>
-                        </Card>
+                        <CurrencyConverter
+                            currencyPair={'INRVND'}
+                            exchange={'BookMyForex'}
+                            rate={217.0}
+                            base={'INR'}
+                            quote={'VND'}
+                            baseSymbol={'₹'}
+                            quoteSymbol={'₫'}
+                        />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             <b>The dumb way:</b> You can buy VND in India from an authorised forex dealer like BookMyforex.
                             But it can be seen that rate offered by BookMyForex is not great compared to the offering in the forex market.
                         </Text>
-                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor:'#FAF3F0' }}>
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
                             <Heading fontSize={'lg'}> Why is buying VND so expensive in India?</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                Vietnamese currency VND is a exotic currency, 
+                                Vietnamese currency VND is a exotic currency,
                                 meaning the currency does not have sufficient demand in the global market.
                                 Less buyer and sellers of the currency makes the buying and selling cost very high.
                             </Text>
                         </Card>
+                        <Heading style={{ marginTop: '20px' }}> Buy USD in India</Heading>
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            {`Wait? but why? I am travelling to Vietnam, not the US, why should I buy USD. 
+                            Well, that's cause USD has the highest global demand hence the buy/sell rate 
+                            are great even in India.`}
+                        </Text>
+                        <CurrencyConverter
+                            currencyPair={'USDINR'}
+                            exchange={'BookMyForex'}
+                            rate={83.36}
+                            base={'USD'}
+                            quote={'INR'}
+                            baseSymbol={'$'}
+                            quoteSymbol={'₹'}
+                        />
+                        <CurrencyConverter
+                            currencyPair={'USDINR'}
+                            exchange={'forex rate'}
+                            rate={83.13}
+                            base={'USD'}
+                            quote={'INR'}
+                            baseSymbol={'$'}
+                            quoteSymbol={'₹'}
+                        />
                     </div>
                 </div>
             </main>
+        </>
+    )
+}
+
+const CurrencyConverter = ({ currencyPair, exchange, rate, base, quote, baseSymbol, quoteSymbol }) => {
+
+    const format = (val) => baseSymbol + val
+    const parse = (val) => val.replace(/^\{`baseSymbol`}/, '')
+    const [value, setValue] = useState('100')
+
+    return (
+        <>
+            <Heading fontSize={'lg'} style={{ marginTop: '20px' }}>
+                {currencyPair} currency converter with {exchange} rate:
+            </Heading>
+            <Card style={{ padding: '20px', marginTop: '10px' }}>
+                <div>
+                    <Stack direction="row">
+                        <Text style={{ marginTop: '7px', fontWeight: 700 }}>{base}</Text>
+                        <NumberInput
+                            onChange={(valueString) => setValue(parse(valueString))}
+                            value={format(value)}
+                            max={100000}
+                        >
+                            <NumberInputField />
+                        </NumberInput>
+                    </Stack>
+                </div>
+                <div style={{ marginTop: '20px' }}>
+                    <Stack direction="row">
+                        <Text style={{ marginTop: '0px', fontWeight: 700 }}>{quote}</Text>
+                        <Text>{quoteSymbol} {value * rate}</Text>
+                    </Stack>
+                </div>
+                <div style={{ marginTop: '20px' }}>
+                    <Stack direction="row">
+                        <Text style={{ marginTop: '0px', fontWeight: 700 }}>{exchange} Rate</Text>
+                        <Tag colorScheme='teal'>{quoteSymbol} {rate}</Tag>
+                    </Stack>
+                </div>
+            </Card>
         </>
     )
 }
