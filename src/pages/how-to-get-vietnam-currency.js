@@ -94,6 +94,7 @@ export default function Home() {
                             Try to buy Vietnamese Dong (VND) closest to the forex rate. This is where it gets tricky. You need to get the right foriegn currency at the right place to get the right price.
                         </Text>
                         <Heading style={{ marginTop: '20px' }}> Buy Vietnam currency in India</Heading>
+                        <Heading fontSize={'lg'} style={{ marginTop: '20px' }}> INRVND currency converter with BookMyForex rate:</Heading>
                         <Card style={{ padding: '20px', marginTop: '10px' }}>
                             <div>
                                 <Stack direction="row">
@@ -121,9 +122,17 @@ export default function Home() {
                             </div>
                         </Card>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            You can buy VND in India from an authorised forex dealer like BookMyforex.
+                            <b>The dumb way:</b> You can buy VND in India from an authorised forex dealer like BookMyforex.
                             But it can be seen that rate offered by BookMyForex is not great compared to the offering in the forex market.
                         </Text>
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor:'#FAF3F0' }}>
+                            <Heading fontSize={'lg'}> Why is buying VND so expensive in India?</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                Vietnamese currency VND is a exotic currency, 
+                                meaning the currency does not have sufficient demand in the global market.
+                                Less buyer and sellers of the currency makes the buying and selling cost very high.
+                            </Text>
+                        </Card>
                     </div>
                 </div>
             </main>
