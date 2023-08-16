@@ -79,8 +79,8 @@ export default function Home() {
                             quoteSymbol={'₫'}
                         />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            <b>The dumb way:</b> You can buy VND in India from an authorised forex dealer like BookMyforex.
-                            But it can be seen that rate offered by BookMyForex is not great compared to the offering in the forex market.
+                            <b>The dumb way:</b>{` You can buy VND in India from an authorised forex dealer like BookMyforex.
+                            But it can be seen that rate offered by BookMyForex is not great compared to the offering in the forex market.`}
                         </Text>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
                             <Heading fontSize={'lg'}> Why is buying VND so expensive in India?</Heading>
@@ -92,7 +92,7 @@ export default function Home() {
                         </Card>
                         <Heading style={{ marginTop: '20px' }}> Buy USD in India</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            <b>The smart way: </b>{`Wait? but why? I am travelling to Vietnam, not the US, why should I buy USD. 
+                            <b>The smart way:</b>{` Wait? but why? I am travelling to Vietnam, not the US, why should I buy USD. 
                             Well, that's cause USD has the highest global demand hence the buy/sell rate 
                             are great even in India.`}
                         </Text>
@@ -123,6 +123,34 @@ export default function Home() {
                             Vietnam, specially tourist hubs like `}
                             <a href='#'><b onClick={() => window.open('https://www.rupeetravel.com/da-nang-map')}><u>{`Da Nang`}</u></b></a>.
                         </Text>
+                        <Heading style={{ marginTop: '20px' }}> Withdraw VND from Vietnam ATM</Heading>
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            <b>The smartest way:</b> Get a
+                            <a href='#'>
+                                <b onClick={() => window.open('https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee')}>
+                                    <u>{` zero forex markup debit card`}</u>
+                                </b>
+                            </a> and use it to withdraw VND from a
+
+                            <a href='#'>
+                                <b onClick={() => window.open('https://www.rupeetravel.com/atm-vietnam-zero-forex-markup')}>
+                                    <u>{` zero forex markup ATM`}</u>
+                                </b>
+                            </a>{`. This not only give you great conversion rates, 
+                            but you can also skip the hassle of buying any 
+                            currency notes before your actual trip. It also 
+                            allows you skip the hassle of buying USD currency 
+                            notes just for great conversion rates.`}
+                        </Text>
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
+                            <Heading fontSize={'lg'}>{` Why is conversion rates for VND via Vietnam ATM's so great?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                {`Payment networks like Visa and MasterCard use the forex market 
+                                (which are very liquid - many buyers and sellers of currency) 
+                                to get great conversion rates unlike local forex dealer. Also, behind the scene it's 
+                                simulating the same smart conversion technique (INR - USD - VND). `}
+                            </Text>
+                        </Card>
                     </div>
                 </div>
             </main>
