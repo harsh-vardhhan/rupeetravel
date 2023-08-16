@@ -92,7 +92,7 @@ export default function Home() {
                         </Card>
                         <Heading style={{ marginTop: '20px' }}> Buy USD in India</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            {`Wait? but why? I am travelling to Vietnam, not the US, why should I buy USD. 
+                            <b>The smart way: </b>{`Wait? but why? I am travelling to Vietnam, not the US, why should I buy USD. 
                             Well, that's cause USD has the highest global demand hence the buy/sell rate 
                             are great even in India.`}
                         </Text>
@@ -114,6 +114,15 @@ export default function Home() {
                             baseSymbol={'$'}
                             quoteSymbol={'₹'}
                         />
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            {`The difference between rates offered between
+                            BookMyForex and the forex market is minimal.
+                            You can carry the USD purchased in
+                            India to Vietnam and buy VND from it at the airport.
+                            The USD is even accepted directly at many places in
+                            Vietnam, specially tourist hubs like `}
+                            <a href='#'><b onClick={() => window.open('https://www.rupeetravel.com/da-nang-map')}><u>{`Da Nang`}</u></b></a>.
+                        </Text>
                     </div>
                 </div>
             </main>
