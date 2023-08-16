@@ -269,6 +269,14 @@ export async function getStaticProps() {
       tagColor: `red`,
       link: `/posts/india-cross-border-finance`
     },
+    {
+      key: 3,
+      heading: ` How to get Vietnam currency in India`,
+      subHeading: ` Foreign currency note conversion rates `,
+      tagText: `Blog`,
+      tagColor: `red`,
+      link: `/how-to-get-vietnam-currency`
+    }
   ]
 
   return {
