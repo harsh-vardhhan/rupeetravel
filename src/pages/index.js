@@ -14,21 +14,24 @@ import {
   WrapItem,
   Button,
   Heading,
+  Divider,
+  CardFooter
 } from '@chakra-ui/react'
 import Image from 'next/image';
 import { FaTwitter } from "react-icons/fa";
 import Seo from '@/component/seo'
 
-export default function Home({blogs, beforeArrivals, arrivals, beforeDeparture }) {
+export default function Home({ blogs, beforeArrivals, arrivals, beforeDeparture }) {
   return (
     <>
       <Seo canonical={'https://www.rupeetravel.com'} />
       <main className={styles.main}>
         <Text fontSize='5xl' as='b'>Rupee Travel</Text>
-        <Heading as='h1' size='xl' style={{ marginTop: '20px' }}>
-          Budget travel checklist for Indians travelling Vietnam 🇻🇳
+        <Heading as='h1' fontSize={{ base: '24px', md: '40px', lg: '75px' }} style={{ marginTop: '20px' }}>
+          The ultimate checklist for Vietnam travel from India 🇻🇳
         </Heading>
         <div style={{ marginTop: '20px' }}>
+
           <SimpleGrid minChildWidth='330px' spacing='40px'>
             <CheckListItemCard
               title={'Before you arrive 🇮🇳'}
@@ -47,6 +50,7 @@ export default function Home({blogs, beforeArrivals, arrivals, beforeDeparture }
               list={blogs}
             />
           </SimpleGrid>
+          <Map/>
           <Social />
         </div>
       </main>
@@ -99,7 +103,6 @@ const Social = () => {
         <Image
           height={48}
           width={48}
-          style={{ borderRadius: '24px' }}
           alt='Harsh Vardhan'
           src={'/images/harsh-vardhan.webp'}
         />
@@ -118,6 +121,39 @@ const Social = () => {
         </Button>
       </WrapItem>
     </Wrap>
+  )
+}
+
+const Map = () => {
+  return (
+    <Card style={{ marginTop: '10px', maxWidth: '700px' }}>
+      <CardHeader>
+        <Text as='h2' fontSize='2xl' fontWeight={700}>{'Visit Da Nang, Vietnam'}</Text>
+      </CardHeader>
+      <CardBody>
+        <Image
+          src={"/images/da-nang-map.webp"}
+          alt="Da Nang Map"
+          height={402}
+          width={700}
+        />
+      </CardBody>
+      <Divider style={{ color: "#e2e8f0" }} />
+      <CardFooter>
+        <Stack direction="row">
+          <Link spacing="2" href="/da-nang-map">
+            <Button variant="solid" colorScheme="green">
+              Map
+            </Button>
+          </Link>
+          <Link spacing="2" href="/hotel-booking-vietnam">
+            <Button variant="solid" colorScheme="green">
+              Book Hotel
+            </Button>
+          </Link>
+        </Stack>
+      </CardFooter>
+    </Card>
   )
 }
 
@@ -230,14 +266,6 @@ export async function getStaticProps() {
       tagText: `Recommended`,
       tagColor: `orange`,
       link: `/atm-vietnam-zero-forex-markup`
-    },
-    {
-      key: 5,
-      heading: `Da Nang Map`,
-      subHeading: `best places to visit in Da Nang`,
-      tagText: `Recommended`,
-      tagColor: `orange`,
-      link: `/da-nang-map`
     },
   ]
 
