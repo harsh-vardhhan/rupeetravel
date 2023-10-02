@@ -51,7 +51,6 @@ export default function Home({ blogs, beforeArrivals, arrivals, beforeDeparture 
             />
           </SimpleGrid>
           <Map/>
-          <Social />
         </div>
       </main>
     </>
@@ -93,34 +92,6 @@ const CheckListItem = ({ task }) => {
         </Text>
       </Link>
     </Box>
-  )
-}
-
-const Social = () => {
-  return (
-    <Wrap style={{ marginTop: '20px' }}>
-      <WrapItem>
-        <Image
-          height={48}
-          width={48}
-          alt='Harsh Vardhan'
-          src={'/images/harsh-vardhan.webp'}
-        />
-      </WrapItem>
-      <WrapItem>
-        <Text style={{ marginTop: '10px' }} as='b' fontSize='md'>Follow me for tips</Text>
-      </WrapItem>
-      <WrapItem>
-        <Button
-          style={{ marginTop: '4px' }}
-          colorScheme='twitter'
-          leftIcon={<FaTwitter />}
-          onClick={() => window.open('https://twitter.com/harsh_vardhhan')}
-        >
-          Twitter
-        </Button>
-      </WrapItem>
-    </Wrap>
   )
 }
 
