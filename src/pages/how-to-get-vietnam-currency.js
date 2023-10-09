@@ -17,6 +17,12 @@ import Image from 'next/image';
 
 export default function Home() {
 
+    const USDINRMarketRate = 83.31
+    const USDINRBookMyForexRate = 84.29
+
+    const INRVNDMarketRate = 292
+    const INRVNDBookMyForexRate = 217
+
     return (
         <>
             <Seo
@@ -59,7 +65,7 @@ export default function Home() {
                         <CurrencyConverter
                             currencyPair={'INRVND'}
                             exchange={'forex market'}
-                            rate={287.5}
+                            rate={INRVNDMarketRate}
                             base={'INR'}
                             quote={'VND'}
                             baseSymbol={'₹'}
@@ -72,7 +78,7 @@ export default function Home() {
                         <CurrencyConverter
                             currencyPair={'INRVND'}
                             exchange={'BookMyForex'}
-                            rate={217.0}
+                            rate={INRVNDBookMyForexRate}
                             base={'INR'}
                             quote={'VND'}
                             baseSymbol={'₹'}
@@ -99,7 +105,7 @@ export default function Home() {
                         <CurrencyConverter
                             currencyPair={'USDINR'}
                             exchange={'BookMyForex'}
-                            rate={83.36}
+                            rate={USDINRBookMyForexRate}
                             base={'USD'}
                             quote={'INR'}
                             baseSymbol={'$'}
@@ -108,7 +114,7 @@ export default function Home() {
                         <CurrencyConverter
                             currencyPair={'USDINR'}
                             exchange={'forex rate'}
-                            rate={83.13}
+                            rate={USDINRMarketRate}
                             base={'USD'}
                             quote={'INR'}
                             baseSymbol={'$'}
