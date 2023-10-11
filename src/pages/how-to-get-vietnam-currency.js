@@ -61,6 +61,26 @@ export default function Home() {
                             <ListItem>in foreign country (get VND in Vietnam)</ListItem>
                             <ListItem>in the right amount</ListItem>
                         </UnorderedList>
+
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
+                            <Heading fontSize={'lg'}>{` But why use cash in Vietnam and not credit or debit cards?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                Vietnam is still predominantly a cash-first country.
+                                Using only credit and debit cards will limit the places you can visit,
+                                like street food places or even getting a
+                                {' '}
+                                <a href='#'>
+                                    <b onClick={() => window.open('https://www.rupeetravel.com/food-delivery-taxi-vietnam')}>
+                                        <u>{`Grab`}</u>
+                                    </b>
+                                </a>
+                                {' '}
+                                bike.
+                                Hence, you always want to keep Vietnamese Dong, the local currency,
+                                with your credit and debit cards.
+                            </Text>
+                        </Card>
+
                         <Heading style={{ marginTop: '20px' }}> INR to Vietnam currency</Heading>
                         <CurrencyConverter
                             currencyPair={'INRVND'}
