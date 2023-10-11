@@ -117,6 +117,13 @@ export default function Home() {
                             </Text>
                         </Card>
                         <Heading style={{ marginTop: '20px' }}> Buy USD in India</Heading>
+                        <Image
+                            src={"/images/usd-currency.webp"}
+                            alt="Amex card"
+                            height={700}
+                            width={1000}
+                            style={{ marginTop: "10px" }}
+                        />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             <b>The smart way:</b>{` Wait? but why? I am travelling to Vietnam, not the US, why should I buy USD. 
                             Well, that's cause USD has the highest global demand hence the buy/sell rate 
@@ -141,15 +148,34 @@ export default function Home() {
                             quoteSymbol={'₹'}
                         />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            {`The difference between rates offered between
+                            The difference between rates offered between
                             BookMyForex and the forex market is minimal.
-                            You can carry the USD purchased in
-                            India to Vietnam and buy VND from it at the airport.
+                            You can carry the
+                            {' '}
+                            <a href='#'>
+                                <b onClick={() => window.open('https://www.rupeetravel.com/buy-foreign-currency-notes-online')}>
+                                    <u>{`USD purchased in India`}</u>
+                                </b>
+                            </a>
+                            {' '}
+                            to Vietnam and buy VND from it at the airport.
                             The USD is even accepted directly at many places in
-                            Vietnam, specially tourist hubs like `}
-                            <a href='#'><b onClick={() => window.open('https://www.rupeetravel.com/da-nang-map')}><u>{`Da Nang`}</u></b></a>.
+                            Vietnam, specially tourist hubs like
+                            {' '}
+                            <a href='#'>
+                                <b onClick={() => window.open('https://www.rupeetravel.com/da-nang-map')}>
+                                    <u>{`Da Nang`}</u>
+                                </b>
+                            </a>.
                         </Text>
                         <Heading style={{ marginTop: '20px' }}> Withdraw VND from Vietnam ATM</Heading>
+                        <Image
+                            src={"/images/ocean-bank-atm.webp"}
+                            alt="Amex card"
+                            height={1000}
+                            width={500}
+                            style={{ marginTop: "10px" }}
+                        />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             <b>The smartest way:</b> Get a
                             <a href='#'>
