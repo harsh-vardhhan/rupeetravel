@@ -168,6 +168,14 @@ export default function Home() {
                                 </b>
                             </a>.
                         </Text>
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
+                            <Heading fontSize={'lg'}>{` What if I didn't spend all the USD I purchased for my Vietnam travel?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                {`As an Indian citizen, you can keep $2,000 physical currency notes. 
+                                Since USD is a globally accepted currency, you can use it for your 
+                                next international travel to any other country. `}
+                            </Text>
+                        </Card>
                         <Heading style={{ marginTop: '20px' }}> Withdraw VND from Vietnam ATM</Heading>
                         <Image
                             src={"/images/ocean-bank-atm.webp"}
