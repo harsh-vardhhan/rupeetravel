@@ -119,7 +119,7 @@ export default function Home() {
                         <Heading style={{ marginTop: '20px' }}> Buy USD in India</Heading>
                         <Image
                             src={"/images/usd-currency.webp"}
-                            alt="Amex card"
+                            alt="USD currency"
                             height={700}
                             width={1000}
                             style={{ marginTop: "10px" }}
@@ -143,6 +143,13 @@ export default function Home() {
                                 {' '}and air tickets for the travel destination.
                             </Text>
                         </Card>
+                        <Image
+                            src={"/images/buy-USD.gif"}
+                            alt="BookMyForex"
+                            height={300}
+                            width={500}
+                            style={{ marginTop: "10px" }}
+                        />
                         <CurrencyConverter
                             currencyPair={'USDINR'}
                             exchange={'BookMyForex'}
@@ -193,7 +200,7 @@ export default function Home() {
                         <Heading style={{ marginTop: '20px' }}> Withdraw VND from Vietnam ATM</Heading>
                         <Image
                             src={"/images/ocean-bank-atm.webp"}
-                            alt="Amex card"
+                            alt="Ocean Bank ATM"
                             height={1000}
                             width={500}
                             style={{ marginTop: "10px" }}
