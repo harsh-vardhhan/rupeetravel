@@ -130,7 +130,7 @@ export default function Home() {
                             are great even in India.`}
                         </Text>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
-                            <Heading fontSize={'lg'}> Can I buy USD from BookMyForex whenever I want?</Heading>
+                            <Heading fontSize={'lg'}> Can I buy USD currency notes from BookMyForex whenever I want?</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
                                 No. You can only buy USD currency notes from an authorized forex dealer
                                 like BookMyForex when you have a valid visa, like
