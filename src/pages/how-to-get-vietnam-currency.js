@@ -132,15 +132,15 @@ export default function Home() {
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
                             <Heading fontSize={'lg'}> Can I buy USD from BookMyForex whenever I want?</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            No. You can only buy USD currency notes from an authorized forex dealer 
-                            like BookMyForex when you have a valid visa, like
-                            {' '}
-                            <a href='#'>
-                                <b onClick={() => window.open('https://www.rupeetravel.com/e-visa-vietnam-indians')}>
-                                    <u>{`Vietnam's e-visa`}</u>
-                                </b>
-                            </a>
-                            {' '}and air tickets for the travel destination.
+                                No. You can only buy USD currency notes from an authorized forex dealer
+                                like BookMyForex when you have a valid visa, like
+                                {' '}
+                                <a href='#'>
+                                    <b onClick={() => window.open('https://www.rupeetravel.com/e-visa-vietnam-indians')}>
+                                        <u>{`Vietnam's e-visa`}</u>
+                                    </b>
+                                </a>
+                                {' '}and air tickets for the travel destination.
                             </Text>
                         </Card>
                         <CurrencyConverter
@@ -223,6 +223,14 @@ export default function Home() {
                                 (which are very liquid - many buyers and sellers of currency) 
                                 to get great conversion rates unlike local forex dealer. Also, behind the scene it's 
                                 simulating the same smart conversion technique (INR - USD - VND). `}
+                            </Text>
+                        </Card>
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#eef4ed' }}>
+                            <Heading fontSize={'lg'}>{` What to do with the unspent Vietnam currency?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                {`If you plan to travel to Vietnam again, you can keep it for your next visit. 
+                                But if you don't, you can sell it in exchange for Indian Rupee to an 
+                                authorized Forex dealer, like BookMyForex. `}
                             </Text>
                         </Card>
                     </div>
