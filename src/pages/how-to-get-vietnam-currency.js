@@ -129,6 +129,20 @@ export default function Home() {
                             Well, that's cause USD has the highest global demand hence the buy/sell rate 
                             are great even in India.`}
                         </Text>
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
+                            <Heading fontSize={'lg'}> Can I buy USD from BookMyForex whenever I want?</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            No. You can only buy USD currency notes from an authorized forex dealer 
+                            like BookMyForex when you have a valid visa, like
+                            {' '}
+                            <a href='#'>
+                                <b onClick={() => window.open('https://www.rupeetravel.com/e-visa-vietnam-indians')}>
+                                    <u>{`Vietnam's e-visa`}</u>
+                                </b>
+                            </a>
+                            {' '}and air tickets for the travel destination.
+                            </Text>
+                        </Card>
                         <CurrencyConverter
                             currencyPair={'USDINR'}
                             exchange={'BookMyForex'}
