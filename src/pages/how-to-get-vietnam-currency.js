@@ -325,7 +325,7 @@ const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base,
                 <div style={{ marginTop: '20px' }}>
                     <Stack direction="row">
                         <Text style={{ marginTop: '0px', fontWeight: 700 }}>{quote}</Text>
-                        <Text>{quoteSymbol} {convertedPrice}</Text>
+                        <Text>{convertedPrice}</Text>
                     </Stack>
                 </div>
                 <div style={{ marginTop: '20px' }}>
