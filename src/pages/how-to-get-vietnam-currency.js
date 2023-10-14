@@ -23,6 +23,8 @@ export default function Home() {
     const INRVNDMarketRate = 292
     const INRVNDBookMyForexRate = 217
 
+    const VNDINRMarketRate = 0.0034
+
     return (
         <>
             <Seo
@@ -90,6 +92,7 @@ export default function Home() {
                             quote={'VND'}
                             baseSymbol={'₹'}
                             quoteSymbol={'₫'}
+                            amount={100}
                         />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             Try to buy Vietnamese Dong (VND) closest to the forex rate. This is where it gets tricky. You need to get the right foriegn currency at the right place to get the right price.
@@ -103,6 +106,7 @@ export default function Home() {
                             quote={'VND'}
                             baseSymbol={'₹'}
                             quoteSymbol={'₫'}
+                            amount={100}
                         />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             <b>The dumb way:</b>{` You can buy VND in India from an authorised forex dealer like BookMyforex.
@@ -158,6 +162,7 @@ export default function Home() {
                             quote={'INR'}
                             baseSymbol={'$'}
                             quoteSymbol={'₹'}
+                            amount={100}
                         />
                         <CurrencyConverter
                             currencyPair={'USDINR'}
@@ -167,6 +172,7 @@ export default function Home() {
                             quote={'INR'}
                             baseSymbol={'$'}
                             quoteSymbol={'₹'}
+                            amount={100}
                         />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             The difference between rates offered between
@@ -244,6 +250,23 @@ export default function Home() {
                                 simulating the same smart conversion technique (INR - USD - VND). `}
                             </Text>
                         </Card>
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#ecf8f8' }}>
+                            <Heading fontSize={'lg'}>{` Can you bring back the Vietnam currency to India?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                {`Yes. You can bring back ₫15,000,000 VND of physical currency notes
+                                 to India without declaring to the Vietnamese customs. `}
+                            </Text>
+                            <CurrencyConverter
+                                currencyPair={'VNDINR'}
+                                exchange={'forex market'}
+                                rate={VNDINRMarketRate}
+                                base={'VND'}
+                                quote={'INR'}
+                                baseSymbol={'₫'}
+                                quoteSymbol={'₹'}
+                                amount={15000000}
+                            />
+                        </Card>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#eef4ed' }}>
                             <Heading fontSize={'lg'}>{` What to do with the unspent Vietnam currency?`}</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
@@ -259,11 +282,11 @@ export default function Home() {
     )
 }
 
-const CurrencyConverter = ({ currencyPair, exchange, rate, base, quote, baseSymbol, quoteSymbol }) => {
+const CurrencyConverter = ({amount, currencyPair, exchange, rate, base, quote, baseSymbol, quoteSymbol }) => {
 
     const format = (val) => baseSymbol + val
     const parse = (val) => val.replace(/^\{`baseSymbol`}/, '')
-    const [value, setValue] = useState('100')
+    const [value, setValue] = useState(amount)
 
     return (
         <>
@@ -277,7 +300,7 @@ const CurrencyConverter = ({ currencyPair, exchange, rate, base, quote, baseSymb
                         <NumberInput
                             onChange={(valueString) => setValue(parse(valueString))}
                             value={format(value)}
-                            max={100000}
+                            max={1000000000}
                         >
                             <NumberInputField />
                         </NumberInput>
