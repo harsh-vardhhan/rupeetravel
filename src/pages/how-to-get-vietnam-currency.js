@@ -202,6 +202,16 @@ export default function Home() {
                                 Since USD is a globally accepted currency, you can use it for your 
                                 next international travel to any other country. `}
                             </Text>
+                            <CurrencyConverter
+                                currencyPair={'USDINR'}
+                                exchange={'forex market'}
+                                rate={USDINRMarketRate}
+                                base={'USD'}
+                                quote={'INR'}
+                                baseSymbol={'$'}
+                                quoteSymbol={'₹'}
+                                amount={2000}
+                            />
                         </Card>
                         <Heading style={{ marginTop: '20px' }}> Withdraw VND from Vietnam ATM</Heading>
                         <Image
@@ -282,7 +292,7 @@ export default function Home() {
     )
 }
 
-const CurrencyConverter = ({amount, currencyPair, exchange, rate, base, quote, baseSymbol, quoteSymbol }) => {
+const CurrencyConverter = ({ amount, currencyPair, exchange, rate, base, quote, baseSymbol, quoteSymbol }) => {
 
     const format = (val) => baseSymbol + val
     const parse = (val) => val.replace(/^\{`baseSymbol`}/, '')
