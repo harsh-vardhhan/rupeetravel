@@ -166,7 +166,7 @@ export default function Home() {
                         />
                         <CurrencyConverter
                             currencyPair={'USDINR'}
-                            exchange={'forex rate'}
+                            exchange={'forex market'}
                             rate={USDINRMarketRate}
                             base={'USD'}
                             quote={'INR'}
