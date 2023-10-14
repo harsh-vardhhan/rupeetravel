@@ -44,7 +44,7 @@ export default function Home() {
                     >
                         <Image
                             src={"/images/tools.webp"}
-                            alt="Amex card"
+                            alt="Zero forex charges cards"
                             height={1536}
                             width={2048}
                             style={{ marginTop: "10px" }}
@@ -119,7 +119,7 @@ export default function Home() {
                         <Heading style={{ marginTop: '20px' }}> Buy USD in India</Heading>
                         <Image
                             src={"/images/usd-currency.webp"}
-                            alt="USD currency"
+                            alt="USD currency notes"
                             height={700}
                             width={1000}
                             style={{ marginTop: "10px" }}
@@ -200,8 +200,8 @@ export default function Home() {
                         <Heading style={{ marginTop: '20px' }}> Withdraw VND from Vietnam ATM</Heading>
                         <Image
                             src={"/images/ocean-bank-atm.webp"}
-                            alt="Ocean Bank ATM"
-                            height={1000}
+                            alt="Zero forex charges ATM - Ocean Bank ATM"
+                            height={700}
                             width={500}
                             style={{ marginTop: "10px" }}
                         />
@@ -222,6 +222,18 @@ export default function Home() {
                             currency notes before your actual trip. It also 
                             allows you skip the hassle of buying USD currency 
                             notes just for great conversion rates.`}
+                        </Text>
+                        <Image
+                            src={"/images/forex-charges-atm.webp"}
+                            alt="ATM with forex charges"
+                            height={700}
+                            width={500}
+                            style={{ marginTop: "10px" }}
+                        />
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            {`Using any random ATM can cause you forex charges up to 3%. 
+                            Hence, using a zero forex charge debit card isn't enough. 
+                            It's essential that you also use that card in a zero-forex ATM.`}
                         </Text>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
                             <Heading fontSize={'lg'}>{` Why is conversion rates for VND via Vietnam ATM's so great?`}</Heading>
