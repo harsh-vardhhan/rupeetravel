@@ -107,6 +107,7 @@ export default function Home() {
                             baseSymbol={'₹'}
                             quoteSymbol={'₫'}
                             amount={100}
+                            region={'en-VN'}
                         />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             <b>The dumb way:</b>{` You can buy VND in India from an authorised forex dealer like BookMyforex.
@@ -163,6 +164,7 @@ export default function Home() {
                             baseSymbol={'$'}
                             quoteSymbol={'₹'}
                             amount={100}
+                            region={'en-IN'}
                         />
                         <CurrencyConverter
                             currencyPair={'USDINR'}
@@ -173,6 +175,7 @@ export default function Home() {
                             baseSymbol={'$'}
                             quoteSymbol={'₹'}
                             amount={100}
+                            region={'en-IN'}
                         />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             The difference between rates offered between
@@ -211,6 +214,7 @@ export default function Home() {
                                 baseSymbol={'$'}
                                 quoteSymbol={'₹'}
                                 amount={2000}
+                                region={'en-IN'}
                             />
                         </Card>
                         <Heading style={{ marginTop: '20px' }}> Withdraw VND from Vietnam ATM</Heading>
@@ -275,6 +279,7 @@ export default function Home() {
                                 baseSymbol={'₫'}
                                 quoteSymbol={'₹'}
                                 amount={15000000}
+                                region={'en-IN'}
                             />
                         </Card>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#eef4ed' }}>
@@ -292,12 +297,12 @@ export default function Home() {
     )
 }
 
-const CurrencyConverter = ({ amount, currencyPair, exchange, rate, base, quote, baseSymbol, quoteSymbol }) => {
+const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base, quote, baseSymbol, quoteSymbol }) => {
 
     const format = (val) => baseSymbol + val
     const parse = (val) => val.replace(/^\{`baseSymbol`}/, '')
     const [value, setValue] = useState(amount)
-    const convertedPrice = (value * rate).toLocaleString({style : 'currency', currency : quote})
+    const convertedPrice = (value * rate).toLocaleString(region, { style: 'currency', currency: quote })
 
     return (
         <>
