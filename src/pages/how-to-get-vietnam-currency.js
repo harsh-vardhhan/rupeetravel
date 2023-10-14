@@ -287,6 +287,7 @@ const CurrencyConverter = ({amount, currencyPair, exchange, rate, base, quote, b
     const format = (val) => baseSymbol + val
     const parse = (val) => val.replace(/^\{`baseSymbol`}/, '')
     const [value, setValue] = useState(amount)
+    const convertedPrice = (value * rate).toLocaleString({style : 'currency', currency : quote})
 
     return (
         <>
@@ -309,7 +310,7 @@ const CurrencyConverter = ({amount, currencyPair, exchange, rate, base, quote, b
                 <div style={{ marginTop: '20px' }}>
                     <Stack direction="row">
                         <Text style={{ marginTop: '0px', fontWeight: 700 }}>{quote}</Text>
-                        <Text>{quoteSymbol} {value * rate}</Text>
+                        <Text>{quoteSymbol} {convertedPrice}</Text>
                     </Stack>
                 </div>
                 <div style={{ marginTop: '20px' }}>
