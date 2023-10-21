@@ -90,7 +90,7 @@ export default function Home() {
     const USDINRMarketRate = 83.31
     const USDINRBookMyForexRate = 84.29
 
-    const INRVNDMarketRate = 292
+    const INRVNDMarketRate = 294.81
     const INRVNDBookMyForexRate = 217
 
     const VNDINRMarketRate = 0.0034
