@@ -243,6 +243,28 @@ export default function Home() {
                             allows you skip the hassle of buying USD currency 
                             notes just for great conversion rates.`}
                         </Text>
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
+                            <Heading fontSize={'lg'}>{` So, if you have zero forex markup debit card, you don't need to carry USD currency notes?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                {`No, I would recommend keeping USD currency notes as an 
+                                alternate solution. That's cause there have been events 
+                                where banks like `}
+                                <a href='#'>
+                                    <b onClick={() => window.open('https://inc42.com/buzz/neobank-niyo-users-bear-the-brunt-as-partner-sbm-bank-india-comes-under-rbi-radar/')}>
+                                        <u>{` Niyo`}</u>
+                                    </b>
+                                </a>
+                                {' and '}
+                                <a href='#'>
+                                    <b onClick={() => window.open('https://entrackr.com/2023/10/paytm-payments-bank-halts-intl-transactions-on-debit-cards/')}>
+                                        <u>{` Paytm`}</u>
+                                    </b>
+                                </a>
+                                {` disabled international transactions due to regulatory 
+                                issues. Physical USD currency 
+                                notes keep you immune from such situations. `}
+                            </Text>
+                        </Card>
                         <Image
                             src={"/images/forex-charges-atm.webp"}
                             alt="ATM with forex charges"
