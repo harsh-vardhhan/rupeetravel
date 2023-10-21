@@ -14,8 +14,78 @@ import {
 import Seo from '@/component/seo';
 import Header from "@/component/header";
 import Image from 'next/image';
+import StructuredData from "@/component/structuredData";
 
 export default function Home() {
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "But why use cash in Vietnam and not credit or debit cards?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Vietnam is still predominantly a cash-first country. Using only credit and debit cards will limit the places you can visit, like street food places or even getting a Grab bike. Hence, you always want to keep Vietnamese Dong, the local currency, with your credit and debit cards."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Why is buying VND so expensive in India?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Vietnamese currency VND is a exotic currency, meaning the currency does not have sufficient demand in the global market. Less buyer and sellers of the currency makes the buying and selling cost very high."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I buy USD currency notes from BookMyForex whenever I want?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. You can only buy USD currency notes from an authorized forex dealer like BookMyForex when you have a valid visa, like Vietnam's e-visa and air tickets for the travel destination."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What if I didn't spend all the USD I purchased for my Vietnam travel?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "As an Indian citizen, you can keep $2,000 physical currency notes. Since USD is a globally accepted currency, you can use it for your next international travel to any other country."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "So, if you have zero forex markup debit card, you don't need to carry USD currency notes?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, I would recommend keeping USD currency notes as an alternate solution. That's cause there have been events where banks like Niyo and Paytm disabled international transactions due to regulatory issues. Physical USD currency notes keep you immune from such situations."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Why is conversion rates for VND via Vietnam ATM's so great?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Payment networks like Visa and MasterCard use the forex market (which are very liquid - many buyers and sellers of currency) to get great conversion rates unlike local forex dealer. Also, behind the scene it's simulating the same smart conversion technique (INR - USD - VND)."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can you bring back the Vietnam currency to India?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. You can bring back ₫15,000,000 VND of physical currency notes to India without declaring to the Vietnamese customs."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What to do with the unspent Vietnam currency?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If you plan to travel to Vietnam again, you can keep it for your next visit. But if you don't, you can sell it in exchange for Indian Rupee to an authorized Forex dealer, like BookMyForex."
+            }
+        }
+    ]
+    };
 
     const USDINRMarketRate = 83.31
     const USDINRBookMyForexRate = 84.29
@@ -27,6 +97,7 @@ export default function Home() {
 
     return (
         <>
+            <StructuredData data={structuredData} />
             <Seo
                 title="Rupee Travel | Get Vietnam currency in India"
                 description="Vietnam currency | Vietnamese Dong | VND"
