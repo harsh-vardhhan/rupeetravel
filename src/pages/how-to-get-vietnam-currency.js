@@ -84,7 +84,7 @@ export default function Home() {
                 "text": "If you plan to travel to Vietnam again, you can keep it for your next visit. But if you don't, you can sell it in exchange for Indian Rupee to an authorized Forex dealer, like BookMyForex."
             }
         }
-    ]
+        ]
     };
 
     const USDINRMarketRate = 83.31
@@ -218,6 +218,23 @@ export default function Home() {
                                 </a>
                                 {' '}and air tickets for the travel destination.
                             </Text>
+                        </Card>
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#ecf8f8' }}>
+                            <Heading fontSize={'lg'}>{` Are online forex brokers like BookMyForex always giving better rates than brick-and-mortar ones?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                {`I asked a local forex broker in Mumbai for USD currency notes. 
+                                It turned out that both the local forex dealer and BookMyForex 
+                                are offering USD currency notes at the same rate. 
+                                So please don't go with the perception that online brokers offer a better rate. 
+                                First, compare whose offering better rates.`}
+                            </Text>
+                            <Image
+                                src={"/images/authorised-forex-dealer.webp"}
+                                alt="USD currency notes"
+                                height={700}
+                                width={500}
+                                style={{ marginTop: "10px" }}
+                            />
                         </Card>
                         <Image
                             src={"/images/buy-USD.gif"}
