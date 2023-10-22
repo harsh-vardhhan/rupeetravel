@@ -237,7 +237,7 @@ export default function Home() {
                             />
                         </Card>
                         <Image
-                            src={"/images/buy-USD.gif"}
+                            src={"/images/buy-USD-currency-notes.webp"}
                             alt="BookMyForex"
                             height={300}
                             width={500}
