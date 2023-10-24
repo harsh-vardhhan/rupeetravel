@@ -65,7 +65,7 @@ export default function Seo({
         content={description}
       />
       <link rel="canonical" href={canonical ?? DOMAIN} />
-      <link rel="shortcut icon" href="/rupee.ico" />
+      <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
   );
 }
