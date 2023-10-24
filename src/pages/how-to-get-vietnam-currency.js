@@ -157,21 +157,17 @@ export default function Home() {
                                 <Thead>
                                     <Tr>
                                         <Th>Ways of buying vietnam currency</Th>
-                                        <Th>rating</Th>
                                     </Tr>
                                 </Thead>
                                 <Tbody>
                                     <Tr onClick={() => buyVNDClick()}>
                                         <Td><b><u>Buy Vietnam currency in India</u></b></Td>
-                                        <Td>⭐</Td>
                                     </Tr>
                                     <Tr onClick={() => buyUSDClick()}>
                                         <Td><b><u>Buy USD in India</u></b></Td>
-                                        <Td>⭐⭐⭐</Td>
                                     </Tr>
                                     <Tr onClick={() => withdrawVNDClick()}>
                                         <Td><b><u>Withdraw VND from Vietnam ATM</u></b></Td>
-                                        <Td>⭐⭐⭐⭐⭐</Td>
                                     </Tr>
                                 </Tbody>
                             </Table>
