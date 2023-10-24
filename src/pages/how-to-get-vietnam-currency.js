@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from '@/styles/Home.module.css';
 import {
     Text,
@@ -10,6 +10,13 @@ import {
     Stack,
     Card,
     Tag,
+    Table,
+    Thead,
+    Tbody,
+    Tr,
+    Th,
+    Td,
+    TableContainer,
 } from '@chakra-ui/react';
 import Seo from '@/component/seo';
 import Header from "@/component/header";
@@ -95,6 +102,24 @@ export default function Home() {
 
     const VNDINRMarketRate = 0.0034
 
+    const buyVNDRef = useRef(null);
+
+    const buyVNDClick = () => {
+        buyVNDRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const buyUSDRef = useRef(null);
+
+    const buyUSDClick = () => {
+        buyUSDRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const withdrawVNDRef = useRef(null);
+
+    const withdrawVNDClick = () => {
+        withdrawVNDRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <>
             <StructuredData data={structuredData} />
@@ -122,6 +147,36 @@ export default function Home() {
                             width={2048}
                             style={{ marginTop: "10px" }}
                         />
+
+                        <TableContainer style={{
+                            borderWidth: 'medium',
+                            borderColor: 'aliceblue',
+                            marginTop: '10px',
+                        }}>
+                            <Table variant='simple'>
+                                <Thead>
+                                    <Tr>
+                                        <Th>Ways of buying vietnam currency</Th>
+                                        <Th>rating</Th>
+                                    </Tr>
+                                </Thead>
+                                <Tbody>
+                                    <Tr onClick={() => buyVNDClick()}>
+                                        <Td><b><u>Buy Vietnam currency in India</u></b></Td>
+                                        <Td>⭐</Td>
+                                    </Tr>
+                                    <Tr onClick={() => buyUSDClick()}>
+                                        <Td><b><u>Buy USD in India</u></b></Td>
+                                        <Td>⭐⭐⭐</Td>
+                                    </Tr>
+                                    <Tr onClick={() => withdrawVNDClick()}>
+                                        <Td><b><u>Withdraw VND from Vietnam ATM</u></b></Td>
+                                        <Td>⭐⭐⭐⭐⭐</Td>
+                                    </Tr>
+                                </Tbody>
+                            </Table>
+                        </TableContainer>
+
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             Getting foreign currency is a crucial piece of travel experience.
                             In a foreign country, no access to local currency can be a scary experience.
@@ -168,7 +223,7 @@ export default function Home() {
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             Try to buy Vietnamese Dong (VND) closest to the forex rate. This is where it gets tricky. You need to get the right foriegn currency at the right place to get the right price.
                         </Text>
-                        <Heading style={{ marginTop: '20px' }}> Buy Vietnam currency in India</Heading>
+                        <Heading ref={buyVNDRef} style={{ marginTop: '20px' }}> Buy Vietnam currency in India</Heading>
                         <CurrencyConverter
                             currencyPair={'INRVND'}
                             exchange={'BookMyForex'}
@@ -192,7 +247,7 @@ export default function Home() {
                                 Less buyer and sellers of the currency makes the buying and selling cost very high.
                             </Text>
                         </Card>
-                        <Heading style={{ marginTop: '20px' }}> Buy USD in India</Heading>
+                        <Heading ref={buyUSDRef} style={{ marginTop: '20px' }}> Buy USD in India</Heading>
                         <Image
                             src={"/images/usd-currency.webp"}
                             alt="USD currency notes"
@@ -305,7 +360,7 @@ export default function Home() {
                                 region={'en-IN'}
                             />
                         </Card>
-                        <Heading style={{ marginTop: '20px' }}> Withdraw VND from Vietnam ATM</Heading>
+                        <Heading ref={withdrawVNDRef} style={{ marginTop: '20px' }}> Withdraw VND from Vietnam ATM</Heading>
                         <Image
                             src={"/images/ocean-bank-atm.webp"}
                             alt="Zero forex charges ATM - Ocean Bank ATM"
@@ -402,7 +457,7 @@ export default function Home() {
                         </Card>
                     </div>
                 </div>
-            </main>
+            </main >
         </>
     )
 }
