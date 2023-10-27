@@ -472,7 +472,7 @@ export default function Home() {
                         </Card>
                         <Heading ref={VNDNotesRef} style={{ marginTop: '20px' }}> Vietnam currency notes in Indian Rupees</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                          `Let's understand the physical currency notes in Vietnam and how much they value in Indian Rupees.`
+                          {`Let's understand the physical currency notes in Vietnam and how much they value in Indian Rupees.`}
                         </Text>
                         <Image
                             src={"/images/vietnam-currency-notes.webp"}
@@ -482,7 +482,7 @@ export default function Home() {
                             style={{ marginTop: "10px" }}
                         />
                         <Heading fontSize={'xl'} style={{ marginTop: '20px' }} as='h3'>
-                            `500,000 VND currency notes to INR`
+                            {`500,000 VND currency notes to INR`}
                         </Heading>
                         <CurrencyConverter
                             currencyPair={'VNDINR'}
@@ -497,8 +497,8 @@ export default function Home() {
                         />
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                <b>`What ₫500,000 VND gets you in Vietnam:`</b>
-                                Roughly the same amount ₫600,000 VND gets you an hotel room in Da Nang for a night.
+                                <b>{`What ₫500,000 VND gets you in Vietnam:`}</b>
+                                {`Roughly the same amount ₫600,000 VND gets you an hotel room in Da Nang for a night.`}
                             </Text>
                             <Image
                                 src={"/images/hotel-booking-receipt.webp"}
@@ -509,7 +509,7 @@ export default function Home() {
                             />
                         </Card>
                         <Heading fontSize={'xl'} style={{ marginTop: '20px' }} as='h3'>
-                            `200,000 VND currency notes to INR`
+                            {`200,000 VND currency notes to INR`}
                         </Heading>
                         <CurrencyConverter
                             currencyPair={'VNDINR'}
@@ -523,7 +523,7 @@ export default function Home() {
                             region={'en-IN'}
                         />
                         <Heading fontSize={'xl'} style={{ marginTop: '20px' }} as='h3'>
-                            `100,000 VND currency notes to INR`
+                            {`100,000 VND currency notes to INR`}
                         </Heading>
                         <CurrencyConverter
                             currencyPair={'VNDINR'}
@@ -537,7 +537,7 @@ export default function Home() {
                             region={'en-IN'}
                         />
                         <Heading fontSize={'xl'} style={{ marginTop: '20px' }} as='h3'>
-                            `50,000 VND currency notes to INR`
+                            {`50,000 VND currency notes to INR`}
                         </Heading>
                         <CurrencyConverter
                             currencyPair={'VNDINR'}
@@ -552,7 +552,7 @@ export default function Home() {
                         />
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                <b>`What ₫50,000 VND gets you in Vietnam:` </b>
+                                <b>{`What ₫50,000 VND gets you in Vietnam:`} </b>
                                 It gets you a vegan dish called com chay. 
                             </Text>
                             <Image
