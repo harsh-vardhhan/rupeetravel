@@ -386,7 +386,7 @@ export default function Home() {
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             <b>The smartest way:</b> Get a
                             <a href='#'>
-                                <b onClick={() => window.open('https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee')}>
+                                <b onClick={() => window.open('https://www.rupeetravel.com/debit-cards-travel-vietn no am-zero-forex-markup-fee')}>
                                     <u>{` zero forex markup debit card`}</u>
                                 </b>
                             </a> and use it to withdraw VND from a
@@ -472,7 +472,7 @@ export default function Home() {
                         </Card>
                         <Heading ref={VNDNotesRef} style={{ marginTop: '20px' }}> Vietnam currency notes in Indian Rupees</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                          {`Let's understand the physical currency notes in Vietnam and how much they value in Indian Rupees.`}
+                          {`Let us understand the physical currency notes in Vietnam and how much they value in Indian Rupees.`}
                         </Text>
                         <Image
                             src={"/images/vietnam-currency-notes.webp"}
