@@ -3,6 +3,7 @@ import styles from '@/styles/Home.module.css';
 import {
     Text,
     Heading,
+    Sub,
     ListItem,
     UnorderedList,
     NumberInput,
@@ -102,6 +103,12 @@ export default function Home() {
 
     const VNDINRMarketRate = 0.0034
 
+    const INRVNDRef = useRef(null);
+
+    const INRVNDClick = () => {
+        INRVNDRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     const buyVNDRef = useRef(null);
 
     const buyVNDClick = () => {
@@ -118,6 +125,12 @@ export default function Home() {
 
     const withdrawVNDClick = () => {
         withdrawVNDRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const VNDNotesRef = useRef(null);
+
+    const VNDNotesClick = () => {
+        VNDNotesRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
@@ -156,10 +169,13 @@ export default function Home() {
                             <Table variant='simple'>
                                 <Thead>
                                     <Tr>
-                                        <Th>Ways of buying vietnam currency</Th>
+                                        <Th>Table of content</Th>
                                     </Tr>
                                 </Thead>
                                 <Tbody>
+                                    <Tr onClick={() => INRVNDClick()}>
+                                        <Td><b><u>INR to Vietnam currency</u></b></Td>
+                                    </Tr>
                                     <Tr onClick={() => buyVNDClick()}>
                                         <Td><b><u>Buy Vietnam currency in India</u></b></Td>
                                     </Tr>
@@ -168,6 +184,9 @@ export default function Home() {
                                     </Tr>
                                     <Tr onClick={() => withdrawVNDClick()}>
                                         <Td><b><u>Withdraw VND from Vietnam ATM</u></b></Td>
+                                    </Tr>
+                                    <Tr onClick={() => VNDNotesClick()}>
+                                        <Td><b><u>Vietnam currency notes in Indian Rupees</u></b></Td>
                                     </Tr>
                                 </Tbody>
                             </Table>
@@ -205,7 +224,7 @@ export default function Home() {
                             </Text>
                         </Card>
 
-                        <Heading style={{ marginTop: '20px' }}> INR to Vietnam currency</Heading>
+                        <Heading style={{ marginTop: '20px' }} ref={INRVNDRef}> INR to Vietnam currency</Heading>
                         <CurrencyConverter
                             currencyPair={'INRVND'}
                             exchange={'forex market'}
@@ -450,6 +469,106 @@ export default function Home() {
                                 But if you don't, you can sell it in exchange for Indian Rupee to an 
                                 authorized Forex dealer, like BookMyForex. `}
                             </Text>
+                        </Card>
+                        <Heading ref={VNDNotesRef} style={{ marginTop: '20px' }}> Vietnam currency notes in Indian Rupees</Heading>
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            Let's understand the physical currency notes in Vietnam and how much they value in Indian Rupees.
+                        </Text>
+                        <Image
+                            src={"/images/vietnam-currency-notes.webp"}
+                            alt="Vietnam currency notes"
+                            height={700}
+                            width={500}
+                            style={{ marginTop: "10px" }}
+                        />
+                        <Heading fontSize={'xl'} style={{ marginTop: '20px' }} as='h3'>
+                            500,000 VND currency notes to INR
+                        </Heading>
+                        <CurrencyConverter
+                            currencyPair={'VNDINR'}
+                            exchange={'forex market'}
+                            rate={VNDINRMarketRate}
+                            base={'VND'}
+                            quote={'INR'}
+                            baseSymbol={'₫'}
+                            quoteSymbol={'₹'}
+                            amount={500000}
+                            region={'en-IN'}
+                        />
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                <b>What ₫500,000 VND gets you in Vietnam: </b>
+                                Roughly the same amount ₫600,000 VND gets you an hotel room in Da Nang for a night.
+                            </Text>
+                            <Image
+                                src={"/images/hotel-booking-receipt.webp"}
+                                alt="Hotel booking receipt"
+                                height={900}
+                                width={700}
+                                style={{ marginTop: "10px" }}
+                            />
+                        </Card>
+                        <Heading fontSize={'xl'} style={{ marginTop: '20px' }} as='h3'>
+                            200,000 VND currency notes to INR
+                        </Heading>
+                        <CurrencyConverter
+                            currencyPair={'VNDINR'}
+                            exchange={'forex market'}
+                            rate={VNDINRMarketRate}
+                            base={'VND'}
+                            quote={'INR'}
+                            baseSymbol={'₫'}
+                            quoteSymbol={'₹'}
+                            amount={200000}
+                            region={'en-IN'}
+                        />
+                        <Heading fontSize={'xl'} style={{ marginTop: '20px' }} as='h3'>
+                            100,000 VND currency notes to INR
+                        </Heading>
+                        <CurrencyConverter
+                            currencyPair={'VNDINR'}
+                            exchange={'forex market'}
+                            rate={VNDINRMarketRate}
+                            base={'VND'}
+                            quote={'INR'}
+                            baseSymbol={'₫'}
+                            quoteSymbol={'₹'}
+                            amount={100000}
+                            region={'en-IN'}
+                        />
+                        <Heading fontSize={'xl'} style={{ marginTop: '20px' }} as='h3'>
+                            50,000 VND currency notes to INR
+                        </Heading>
+                        <CurrencyConverter
+                            currencyPair={'VNDINR'}
+                            exchange={'forex market'}
+                            rate={VNDINRMarketRate}
+                            base={'VND'}
+                            quote={'INR'}
+                            baseSymbol={'₫'}
+                            quoteSymbol={'₹'}
+                            amount={50000}
+                            region={'en-IN'}
+                        />
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                <b>What ₫50,000 VND gets you in Vietnam: </b>
+                                It gets you a vegan dish called com chay. 
+                            </Text>
+                            <Image
+                                src={"/images/rice-dish-receipt.webp"}
+                                alt="Hotel booking receipt"
+                                height={700}
+                                width={500}
+                                style={{ marginTop: "10px" }}
+                            />
+                            <Image
+                                src={"/images/rice-dish.webp"}
+                                alt="Hotel booking receipt"
+                                height={700}
+                                width={500}
+                                style={{ marginTop: "10px" }}
+                            />
                         </Card>
                     </div>
                 </div>
