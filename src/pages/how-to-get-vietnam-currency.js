@@ -186,7 +186,7 @@ export default function Home() {
                                         <Td><b><u>Withdraw VND from Vietnam ATM</u></b></Td>
                                     </Tr>
                                     <Tr onClick={() => VNDNotesClick()}>
-                                        <Td><b><u>Vietnam currency notes in Indian Rupees</u></b></Td>
+                                        <Td><b><u>Vietnam currency in Indian Rupees</u></b></Td>
                                     </Tr>
                                 </Tbody>
                             </Table>
@@ -470,7 +470,7 @@ export default function Home() {
                                 authorized Forex dealer, like BookMyForex. `}
                             </Text>
                         </Card>
-                        <Heading ref={VNDNotesRef} style={{ marginTop: '20px' }}> Vietnam currency notes in Indian Rupees</Heading>
+                        <Heading ref={VNDNotesRef} style={{ marginTop: '20px' }}> Vietnam currency in Indian Rupees</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                           {`Let us understand the physical currency notes in Vietnam and how much they value in Indian Rupees.`}
                         </Text>
