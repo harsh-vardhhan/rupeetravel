@@ -471,8 +471,35 @@ export default function Home() {
                             </Text>
                         </Card>
                         <Heading ref={VNDNotesRef} style={{ marginTop: '20px' }}> Vietnam currency in Indian Rupees</Heading>
+                        <TableContainer style={{
+                            borderWidth: 'medium',
+                            borderColor: 'aliceblue',
+                            marginTop: '10px',
+                        }}>
+                            <Table variant='simple'>
+                                <Thead>
+                                    <Tr>
+                                        <Th>Major currency notes of Vietnam</Th>
+                                    </Tr>
+                                </Thead>
+                                <Tbody>
+                                    <Tr>
+                                        <Td><b>₫500,000 VND</b></Td>
+                                    </Tr>
+                                    <Tr>
+                                        <Td><b>₫200,000 VND</b></Td>
+                                    </Tr>
+                                    <Tr>
+                                        <Td><b>₫100,000 VND</b></Td>
+                                    </Tr>
+                                    <Tr>
+                                        <Td><b>₫50,000 VND</b></Td>
+                                    </Tr>
+                                </Tbody>
+                            </Table>
+                        </TableContainer>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                          {`Let us understand the physical currency notes in Vietnam and how much they value in Indian Rupees.`}
+                            {`Let us understand the physical currency notes in Vietnam and how much they value in Indian Rupees.`}
                         </Text>
                         <Image
                             src={"/images/vietnam-currency-notes.webp"}
@@ -482,7 +509,7 @@ export default function Home() {
                             style={{ marginTop: "10px" }}
                         />
                         <Heading fontSize={'xl'} style={{ marginTop: '20px' }} as='h3'>
-                            {`500,000 VND currency notes to INR`}
+                            {`₫500,000 VND currency notes to INR`}
                         </Heading>
                         <CurrencyConverter
                             currencyPair={'VNDINR'}
@@ -497,8 +524,8 @@ export default function Home() {
                         />
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                <b>{`What ₫500,000 VND gets you in Vietnam:`}</b>
-                                {`Roughly the same amount ₫600,000 VND gets you an hotel room in Da Nang for a night.`}
+                                <b>{`What ₫500,000 VND gets you in Vietnam: `}</b>
+                                {` Roughly the same amount ₫600,000 VND gets you a hotel room in Da Nang for a night.`}
                             </Text>
                             <Image
                                 src={"/images/hotel-booking-receipt.webp"}
@@ -509,7 +536,7 @@ export default function Home() {
                             />
                         </Card>
                         <Heading fontSize={'xl'} style={{ marginTop: '20px' }} as='h3'>
-                            {`200,000 VND currency notes to INR`}
+                            {`₫200,000 VND currency notes to INR`}
                         </Heading>
                         <CurrencyConverter
                             currencyPair={'VNDINR'}
@@ -522,8 +549,21 @@ export default function Home() {
                             amount={200000}
                             region={'en-IN'}
                         />
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                <b>{`What ₫200,000 VND gets you in Vietnam: `}</b>
+                                {` For ₫220,000 VND, you can enjoy sushi at a nice high-end restaurant (Tram Sushi, Hanoi).`}
+                            </Text>
+                            <Image
+                                src={"/images/sushi.webp"}
+                                alt="Hotel booking receipt"
+                                height={700}
+                                width={500}
+                                style={{ marginTop: "10px" }}
+                            />
+                        </Card>
                         <Heading fontSize={'xl'} style={{ marginTop: '20px' }} as='h3'>
-                            {`100,000 VND currency notes to INR`}
+                            {`₫100,000 VND currency notes to INR`}
                         </Heading>
                         <CurrencyConverter
                             currencyPair={'VNDINR'}
@@ -537,7 +577,7 @@ export default function Home() {
                             region={'en-IN'}
                         />
                         <Heading fontSize={'xl'} style={{ marginTop: '20px' }} as='h3'>
-                            {`50,000 VND currency notes to INR`}
+                            {`₫50,000 VND currency notes to INR`}
                         </Heading>
                         <CurrencyConverter
                             currencyPair={'VNDINR'}
@@ -553,7 +593,7 @@ export default function Home() {
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
                                 <b>{`What ₫50,000 VND gets you in Vietnam:`} </b>
-                                It gets you a vegan dish called com chay. 
+                                It gets you a vegan dish called com chay.
                             </Text>
                             <Image
                                 src={"/images/rice-dish-receipt.webp"}
