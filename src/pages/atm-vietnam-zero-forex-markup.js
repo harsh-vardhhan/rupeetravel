@@ -57,24 +57,20 @@ export default function Home({ features, atmFeatures }) {
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
                 <Stack direction="row">
-                  <Button
-                    colorScheme="green"
-                    onClick={() =>
-                      window.open("https://www.google.com/maps?q=MB+Bank+ATM")
-                    }
-                  >
-                    MB Bank ATM
-                  </Button>
-                  <Button
-                    colorScheme="green"
-                    onClick={() =>
-                      window.open(
-                        "https://www.google.com/maps?q=Ocean+Bank+ATM"
-                      )
-                    }
-                  >
-                    Ocean Bank ATM
-                  </Button>
+                  <a href="https://www.google.com/maps?q=MB+Bank+ATM">
+                    <Button
+                      colorScheme="green"
+                    >
+                      MB Bank ATM
+                    </Button>
+                  </a>
+                  <a href="https://www.google.com/maps?q=Ocean+Bank+ATM">
+                    <Button
+                      colorScheme="green"
+                    >
+                      Ocean Bank ATM
+                    </Button>
+                  </a>
                 </Stack>
               </CardFooter>
             </Card>

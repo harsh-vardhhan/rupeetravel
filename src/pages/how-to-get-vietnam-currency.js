@@ -407,7 +407,7 @@ export default function Home() {
                             notes just for great conversion rates.`}
                         </Text>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
-                            <Heading fontSize={'lg'}>{` So, if you have zero forex markup debit card, you don't need to carry USD currency notes?`}</Heading>
+                            <Heading fontSize={'lg'}>{`So, if you have zero forex markup debit card, you don't need to carry USD currency notes?`}</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
                                 {`No, I would recommend keeping USD currency notes as an 
                                 alternate solution. That's cause there have been events 
@@ -428,8 +428,24 @@ export default function Home() {
                                 notes keep you immune from such situations. `}
                             </Text>
                         </Card>
+
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#fff8e8' }}>
+                            <Heading fontSize={'lg'}>{`How to find zero forex markup ATMs for cash withdrawal in Vietnam?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                {`You can search for `}
+                                <u><b><a href="https://www.google.com/maps?q=Ocean+Bank+ATM">Ocean Bank</a></b></u>
+                                {' or '}
+                                <u><b><a href="https://www.google.com/maps?q=MB+Bank+ATM">MB Bank</a></b></u>.
+                                {` Both ATMs accept international Visa and MasterCard 
+                                debit cards and are zero forex markup ATMs.`}
+                            </Text>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                <b>Note:</b> These Google map links will give you the right results only when you are in Vietnam.
+                            </Text>
+                        </Card>
+
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#ecf8f8' }}>
-                            <Heading fontSize={'lg'}>{` Which debit cards are accepted in Vietnam ATMs for cash withdrawal?`}</Heading>
+                            <Heading fontSize={'lg'}>{`Which debit cards are accepted in Vietnam ATMs for cash withdrawal?`}</Heading>
                             <Image
                                 src={"/images/enable-card.webp"}
                                 alt="enable cash withdrawal and international usage"
@@ -446,7 +462,7 @@ export default function Home() {
                         </Card>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#eef4ed' }}>
                             <Heading fontSize={'lg'}>
-                                {` Will using any ATM for cash withdrawal cost me 
+                                {`Will using any ATM for cash withdrawal cost me 
                                 zero charges if I use a zero forex markup debit card?`}
                             </Heading>
                             <Image
@@ -464,7 +480,7 @@ export default function Home() {
                             </Text>
                         </Card>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
-                            <Heading fontSize={'lg'}>{` Why is conversion rates for VND via Vietnam ATM's so great?`}</Heading>
+                            <Heading fontSize={'lg'}>{`Why is conversion rates for VND via Vietnam ATM's so great?`}</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
                                 {`Payment networks like Visa and MasterCard use the forex market 
                                 (which are very liquid - many buyers and sellers of currency) 
@@ -473,7 +489,7 @@ export default function Home() {
                             </Text>
                         </Card>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#ecf8f8' }}>
-                            <Heading fontSize={'lg'}>{` Can you bring back the Vietnam currency to India?`}</Heading>
+                            <Heading fontSize={'lg'}>{`Can you bring back the Vietnam currency to India?`}</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
                                 {`Yes. You can bring back ₫15,000,000 VND of physical currency notes
                                  to India without declaring to the Vietnamese customs. `}
@@ -491,7 +507,7 @@ export default function Home() {
                             />
                         </Card>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#eef4ed' }}>
-                            <Heading fontSize={'lg'}>{` What to do with the unspent Vietnam currency?`}</Heading>
+                            <Heading fontSize={'lg'}>{`What to do with the unspent Vietnam currency?`}</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
                                 {`If you plan to travel to Vietnam again, you can keep it for your next visit. 
                                 But if you don't, you can sell it in exchange for Indian Rupee to an 
