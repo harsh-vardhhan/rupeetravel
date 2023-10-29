@@ -427,18 +427,41 @@ export default function Home() {
                                 notes keep you immune from such situations. `}
                             </Text>
                         </Card>
-                        <Image
-                            src={"/images/forex-charges-atm.webp"}
-                            alt="ATM with forex charges"
-                            height={700}
-                            width={500}
-                            style={{ marginTop: "10px" }}
-                        />
-                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            {`Using any random ATM can cause you forex charges up to 3%. 
-                            Hence, using a zero forex charge debit card isn't enough. 
-                            It's essential that you also use that card in a zero-forex ATM.`}
-                        </Text>
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#ecf8f8' }}>
+                            <Heading fontSize={'lg'}>{` Which debit cards are accepted in Vietnam ATMs for cash withdrawal?`}</Heading>
+                            <Image
+                                src={"/images/enable-card.webp"}
+                                alt="enable cash withdrawal and international usage"
+                                height={500}
+                                width={300}
+                                style={{ marginTop: "10px" }}
+                            />
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                Visa and MasterCard are the widely accepted cards in Vietnam ATMs.
+                                You will have to <b>enable ATM withdrawals and international usage</b>.
+                                Please do not carry RuPay or Discover for cash withdrawals in
+                                Vietnam. No ATMs are likely to accept them.
+                            </Text>
+                        </Card>
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#eef4ed' }}>
+                            <Heading fontSize={'lg'}>
+                                {` Will using any ATM for cash withdrawal cost me 
+                                zero charges if I use a zero forex markup debit card?`}
+                            </Heading>
+                            <Image
+                                src={"/images/forex-charges-atm.webp"}
+                                alt="ATM with forex charges"
+                                height={600}
+                                width={400}
+                                style={{ marginTop: "10px" }}
+                            />
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                {`No, Using any random ATM can cause you 
+                                forex charges up to 3%. Hence, using a zero 
+                                forex charge debit card isn't enough. It's essential 
+                                that you also use that card in a zero-forex ATM.`}
+                            </Text>
+                        </Card>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
                             <Heading fontSize={'lg'}>{` Why is conversion rates for VND via Vietnam ATM's so great?`}</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
