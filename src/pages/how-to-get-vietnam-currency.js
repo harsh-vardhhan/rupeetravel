@@ -181,13 +181,41 @@ export default function Home() {
                                         <Td><b><u>INR to Vietnam currency</u></b></Td>
                                     </Tr>
                                     <Tr onClick={() => buyVNDClick()}>
-                                        <Td><b><u>Buy Vietnam currency in India</u></b></Td>
+                                        <Td>
+                                            <Tag colorScheme='red'>Dumb way</Tag>
+                                            <br />
+                                            <div style={{ marginTop: 10 }}>
+                                                <b>
+                                                    <u>
+                                                        Buy Vietnam currency in India
+                                                    </u>
+                                                </b>
+                                            </div>
+                                        </Td>
                                     </Tr>
                                     <Tr onClick={() => buyUSDClick()}>
-                                        <Td><b><u>Buy USD in India</u></b></Td>
+                                        <Td><Tag colorScheme='teal'>Smart way</Tag>
+                                            <br />
+                                            <div style={{ marginTop: 10 }}>
+                                                <b>
+                                                    <u>
+                                                        Buy USD in India
+                                                    </u>
+                                                </b>
+                                            </div>
+                                        </Td>
                                     </Tr>
                                     <Tr onClick={() => withdrawVNDClick()}>
-                                        <Td><b><u>Withdraw VND from Vietnam ATM</u></b></Td>
+                                        <Td><Tag colorScheme='teal'>Smartest way</Tag>
+                                            <br />
+                                            <div style={{ marginTop: 10 }}>
+                                                <b>
+                                                    <u>
+                                                        Withdraw VND from Vietnam ATM
+                                                    </u>
+                                                </b>
+                                            </div>
+                                        </Td>
                                     </Tr>
                                     <Tr onClick={() => VNDNotesClick()}>
                                         <Td><b><u>Vietnam currency in Indian Rupees</u></b></Td>
