@@ -3,7 +3,7 @@ import styles from '@/styles/Home.module.css';
 import {
     Text,
     Heading,
-    Sub,
+    CardFooter,
     ListItem,
     UnorderedList,
     NumberInput,
@@ -18,6 +18,10 @@ import {
     Th,
     Td,
     TableContainer,
+    CardBody,
+    Divider,
+    ButtonGroup,
+    Button
 } from '@chakra-ui/react';
 import Seo from '@/component/seo';
 import Header from "@/component/header";
@@ -522,19 +526,40 @@ export default function Home() {
                             amount={500000}
                             region={'en-IN'}
                         />
+
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
-                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                <b>{`What ₫500,000 VND gets you in Vietnam: `}</b>
-                                {` Roughly the same amount ₫600,000 VND gets you a hotel room in Da Nang for a night.`}
-                            </Text>
-                            <Image
-                                src={"/images/hotel-booking-receipt.webp"}
-                                alt="Hotel booking receipt"
-                                height={900}
-                                width={700}
-                                style={{ marginTop: "10px" }}
-                            />
+                            <CardBody>
+                                <Image
+                                    src={"/images/hotel-booking-receipt.webp"}
+                                    alt="Hotel booking receipt"
+                                    height={900}
+                                    width={700}
+                                    style={{ marginTop: "10px" }}
+                                />
+                                <Stack mt='6' spacing='3'>
+                                    <Heading size='md' as='h4'>{`What ₫500,000 VND gets you in Vietnam`}</Heading>
+                                    <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                        {` Roughly the same amount gets you a hotel room in Da Nang for a night.`}
+                                    </Text>
+                                    <Text fontSize='2xl'>
+                                        ₫600,000/night
+                                    </Text>
+                                </Stack>
+                            </CardBody>
+                            <Divider />
+                            <CardFooter>
+                                <ButtonGroup spacing='2'>
+                                    <Button
+                                        variant='solid'
+                                        colorScheme='green'
+                                        onClick={() => window.open('https://www.rupeetravel.com/hotel-booking-vietnam')}
+                                    >
+                                        Book Hotel
+                                    </Button>
+                                </ButtonGroup>
+                            </CardFooter>
                         </Card>
+
                         <Heading fontSize={'xl'} style={{ marginTop: '20px' }} as='h3'>
                             {`₫200,000 VND currency notes to INR`}
                         </Heading>
@@ -549,19 +574,40 @@ export default function Home() {
                             amount={200000}
                             region={'en-IN'}
                         />
+
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
-                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                <b>{`What ₫200,000 VND gets you in Vietnam: `}</b>
-                                {` For ₫220,000 VND, you can enjoy sushi at a nice high-end restaurant (Tram Sushi, Hanoi).`}
-                            </Text>
-                            <Image
-                                src={"/images/sushi.webp"}
-                                alt="Hotel booking receipt"
-                                height={700}
-                                width={500}
-                                style={{ marginTop: "10px" }}
-                            />
+                            <CardBody>
+                                <Image
+                                    src={"/images/sushi.webp"}
+                                    alt="Sushi"
+                                    height={900}
+                                    width={700}
+                                    style={{ marginTop: "10px" }}
+                                />
+                                <Stack mt='6' spacing='3'>
+                                    <Heading size='md' as='h4'>{`What ₫200,000 VND gets you in Vietnam`}</Heading>
+                                    <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                        {` You can enjoy sushi at a nice high-end restaurant (Tram Sushi, Hanoi).`}
+                                    </Text>
+                                    <Text fontSize='2xl'>
+                                        ₫220,000
+                                    </Text>
+                                </Stack>
+                            </CardBody>
+                            <Divider />
+                            <CardFooter>
+                                <ButtonGroup spacing='2'>
+                                    <Button
+                                        variant='solid'
+                                        colorScheme='green'
+                                        onClick={() => window.open('https://tramsushi.com/')}
+                                    >
+                                        Visit website
+                                    </Button>
+                                </ButtonGroup>
+                            </CardFooter>
                         </Card>
+
                         <Heading fontSize={'xl'} style={{ marginTop: '20px' }} as='h3'>
                             {`₫100,000 VND currency notes to INR`}
                         </Heading>
@@ -590,26 +636,40 @@ export default function Home() {
                             amount={50000}
                             region={'en-IN'}
                         />
+
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
-                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                <b>{`What ₫50,000 VND gets you in Vietnam:`} </b>
-                                It gets you a vegan dish called com chay.
-                            </Text>
-                            <Image
-                                src={"/images/rice-dish-receipt.webp"}
-                                alt="Hotel booking receipt"
-                                height={700}
-                                width={500}
-                                style={{ marginTop: "10px" }}
-                            />
-                            <Image
-                                src={"/images/rice-dish.webp"}
-                                alt="Hotel booking receipt"
-                                height={700}
-                                width={500}
-                                style={{ marginTop: "10px" }}
-                            />
+                            <CardBody>
+                                <Image
+                                    src={"/images/rice-dish.webp"}
+                                    alt="rice dish"
+                                    height={700}
+                                    width={500}
+                                    style={{ marginTop: "10px" }}
+                                />
+                                <Stack mt='6' spacing='3'>
+                                    <Heading size='md' as='h4'>{`What ₫50,000 VND gets you in Vietnam`}</Heading>
+                                    <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                        {`It gets you a vegan dish called com chay.`}
+                                    </Text>
+                                    <Text fontSize='2xl'>
+                                        ₫45,000
+                                    </Text>
+                                </Stack>
+                            </CardBody>
+                            <Divider />
+                            <CardFooter>
+                                <ButtonGroup spacing='2'>
+                                    <Button
+                                        variant='solid'
+                                        colorScheme='green'
+                                        onClick={() => window.open('https://lovinghut.com/vn/')}
+                                    >
+                                        Visit website
+                                    </Button>
+                                </ButtonGroup>
+                            </CardFooter>
                         </Card>
+
                     </div>
                 </div>
             </main >
