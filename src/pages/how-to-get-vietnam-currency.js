@@ -389,7 +389,7 @@ export default function Home() {
                         />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             <b>The smartest way:</b> Get a
-                            <a href='https://www.rupeetravel.com/debit-cards-travel-vietn no am-zero-forex-markup-fee'>
+                            <a href='https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee'>
                                 <b>
                                     <u>{` zero forex markup debit card`}</u>
                                 </b>
