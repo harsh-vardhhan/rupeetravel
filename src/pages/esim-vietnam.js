@@ -41,13 +41,14 @@ export default function Home({ features, reasons }) {
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
-                <Button
-                  variant="solid"
-                  colorScheme="green"
-                  onClick={() => window.open("https://www.jio.com/en-in/esim")}
-                >
-                  Jio eSim
-                </Button>
+                <a href="https://www.jio.com/en-in/esim">
+                  <Button
+                    variant="solid"
+                    colorScheme="green"
+                  >
+                    Jio eSim
+                  </Button>
+                </a>
               </CardFooter>
             </Card>
             <Card maxW="sm">

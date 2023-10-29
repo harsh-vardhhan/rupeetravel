@@ -83,17 +83,14 @@ export default function Home({ features }) {
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
                 <Stack direction="row">
-                  <Button
-                    variant="solid"
-                    colorScheme="green"
-                    onClick={() =>
-                      window.open(
-                        "https://www.idfcfirstbank.com/credit-card/credit-card-against-fixed-deposits"
-                      )
-                    }
-                  >
-                    IDFC First Wow
-                  </Button>
+                  <a href="https://www.idfcfirstbank.com/credit-card/credit-card-against-fixed-deposits">
+                    <Button
+                      variant="solid"
+                      colorScheme="green"
+                    >
+                      IDFC First Wow
+                    </Button>
+                  </a>
                   <Link spacing="2" href="/posts/india-cross-border-finance">
                     <Button variant="solid" colorScheme="green">
                       Read More

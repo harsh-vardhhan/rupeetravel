@@ -89,13 +89,14 @@ export default function Home({ features }) {
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
                 <Stack direction="row">
-                  <Button
-                    variant="solid"
-                    colorScheme="green"
-                    onClick={() => window.open("https://fi.money/")}
-                  >
-                    Get Fi Account
-                  </Button>
+                  <a href="https://fi.money/">
+                    <Button
+                      variant="solid"
+                      colorScheme="green"
+                    >
+                      Get Fi Account
+                    </Button>
+                  </a>
                   <Link spacing="2" href="/atm-vietnam-zero-forex-markup">
                     <Button variant="solid" colorScheme="green">
                       Zero forex ATMs

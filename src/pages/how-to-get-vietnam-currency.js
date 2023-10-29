@@ -216,8 +216,8 @@ export default function Home() {
                                 Using only credit and debit cards will limit the places you can visit,
                                 like street food places or even getting a
                                 {' '}
-                                <a href='#'>
-                                    <b onClick={() => window.open('https://www.rupeetravel.com/food-delivery-taxi-vietnam')}>
+                                <a href='https://www.rupeetravel.com/food-delivery-taxi-vietnam'>
+                                    <b>
                                         <u>{`Grab`}</u>
                                     </b>
                                 </a>
@@ -285,8 +285,8 @@ export default function Home() {
                                 No. You can only buy USD currency notes from an authorized forex dealer
                                 like BookMyForex when you have a valid visa, like
                                 {' '}
-                                <a href='#'>
-                                    <b onClick={() => window.open('https://www.rupeetravel.com/e-visa-vietnam-indians')}>
+                                <a href='https://www.rupeetravel.com/e-visa-vietnam-indians'>
+                                    <b>
                                         <u>{`Vietnam's e-visa`}</u>
                                     </b>
                                 </a>
@@ -344,8 +344,8 @@ export default function Home() {
                             BookMyForex and the forex market is minimal.
                             You can carry the
                             {' '}
-                            <a href='#'>
-                                <b onClick={() => window.open('https://www.rupeetravel.com/buy-foreign-currency-notes-online')}>
+                            <a href='https://www.rupeetravel.com/buy-foreign-currency-notes-online'>
+                                <b>
                                     <u>{`USD purchased in India`}</u>
                                 </b>
                             </a>
@@ -354,8 +354,8 @@ export default function Home() {
                             The USD is even accepted directly at many places in
                             Vietnam, specially tourist hubs like
                             {' '}
-                            <a href='#'>
-                                <b onClick={() => window.open('https://www.rupeetravel.com/da-nang-map')}>
+                            <a href='https://www.rupeetravel.com/da-nang-map'>
+                                <b>
                                     <u>{`Da Nang`}</u>
                                 </b>
                             </a>.
@@ -389,14 +389,14 @@ export default function Home() {
                         />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             <b>The smartest way:</b> Get a
-                            <a href='#'>
-                                <b onClick={() => window.open('https://www.rupeetravel.com/debit-cards-travel-vietn no am-zero-forex-markup-fee')}>
+                            <a href='https://www.rupeetravel.com/debit-cards-travel-vietn no am-zero-forex-markup-fee'>
+                                <b>
                                     <u>{` zero forex markup debit card`}</u>
                                 </b>
                             </a> and use it to withdraw VND from a
 
-                            <a href='#'>
-                                <b onClick={() => window.open('https://www.rupeetravel.com/atm-vietnam-zero-forex-markup')}>
+                            <a href='https://www.rupeetravel.com/atm-vietnam-zero-forex-markup'>
+                                <b>
                                     <u>{` zero forex markup ATM`}</u>
                                 </b>
                             </a>{`. This not only give you great conversion rates, 
@@ -411,14 +411,14 @@ export default function Home() {
                                 {`No, I would recommend keeping USD currency notes as an 
                                 alternate solution. That's cause there have been events 
                                 where banks like `}
-                                <a href='#'>
-                                    <b onClick={() => window.open('https://inc42.com/buzz/neobank-niyo-users-bear-the-brunt-as-partner-sbm-bank-india-comes-under-rbi-radar/')}>
+                                <a href='https://inc42.com/buzz/neobank-niyo-users-bear-the-brunt-as-partner-sbm-bank-india-comes-under-rbi-radar/'>
+                                    <b>
                                         <u>{` Niyo`}</u>
                                     </b>
                                 </a>
                                 {' and '}
-                                <a href='#'>
-                                    <b onClick={() => window.open('https://entrackr.com/2023/10/paytm-payments-bank-halts-intl-transactions-on-debit-cards/')}>
+                                <a href='https://entrackr.com/2023/10/paytm-payments-bank-halts-intl-transactions-on-debit-cards/'>
+                                    <b>
                                         <u>{` Paytm`}</u>
                                     </b>
                                 </a>
@@ -572,13 +572,14 @@ export default function Home() {
                             <Divider />
                             <CardFooter>
                                 <ButtonGroup spacing='2'>
-                                    <Button
-                                        variant='solid'
-                                        colorScheme='green'
-                                        onClick={() => window.open('https://www.rupeetravel.com/hotel-booking-vietnam')}
-                                    >
-                                        Book Hotel
-                                    </Button>
+                                    <a href="https://www.rupeetravel.com/hotel-booking-vietnam">
+                                        <Button
+                                            variant='solid'
+                                            colorScheme='green'
+                                        >
+                                            Book Hotel
+                                        </Button>
+                                    </a>
                                 </ButtonGroup>
                             </CardFooter>
                         </Card>
@@ -620,13 +621,14 @@ export default function Home() {
                             <Divider />
                             <CardFooter>
                                 <ButtonGroup spacing='2'>
-                                    <Button
-                                        variant='solid'
-                                        colorScheme='green'
-                                        onClick={() => window.open('https://tramsushi.com/')}
-                                    >
-                                        Visit website
-                                    </Button>
+                                    <a href="https://tramsushi.com/">
+                                        <Button
+                                            variant='solid'
+                                            colorScheme='green'
+                                        >
+                                            Visit website
+                                        </Button>
+                                    </a>
                                 </ButtonGroup>
                             </CardFooter>
                         </Card>
@@ -682,13 +684,14 @@ export default function Home() {
                             <Divider />
                             <CardFooter>
                                 <ButtonGroup spacing='2'>
-                                    <Button
-                                        variant='solid'
-                                        colorScheme='green'
-                                        onClick={() => window.open('https://lovinghut.com/vn/')}
-                                    >
-                                        Visit website
-                                    </Button>
+                                    <a href="https://lovinghut.com/vn/">
+                                        <Button
+                                            variant='solid'
+                                            colorScheme='green'
+                                        >
+                                            Visit website
+                                        </Button>
+                                    </a>
                                 </ButtonGroup>
                             </CardFooter>
                         </Card>

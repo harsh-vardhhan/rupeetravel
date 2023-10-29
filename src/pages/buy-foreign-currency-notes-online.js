@@ -91,13 +91,14 @@ export default function Home({ features }) {
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
                 <Stack direction="row">
-                  <Button
-                    variant="solid"
-                    colorScheme="green"
-                    onClick={() => window.open("https://www.bookmyforex.com/")}
-                  >
-                    Book My Forex
-                  </Button>
+                  <a href="https://www.bookmyforex.com/">
+                    <Button
+                      variant="solid"
+                      colorScheme="green"
+                    >
+                      Book My Forex
+                    </Button>
+                  </a>
                   <Link spacing="2" href="/posts/india-cross-border-finance">
                     <Button variant="solid" colorScheme="green">
                       Read More

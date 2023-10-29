@@ -43,15 +43,14 @@ export default function Home({ features }) {
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
-                <Button
-                  variant="solid"
-                  colorScheme="green"
-                  onClick={() =>
-                    window.open("https://www.grab.com/vn/download/")
-                  }
-                >
-                  Download Grab
-                </Button>
+                <a href="https://www.grab.com/vn/download/">
+                  <Button
+                    variant="solid"
+                    colorScheme="green"
+                  >
+                    Download Grab
+                  </Button>
+                </a>
               </CardFooter>
             </Card>
           </SimpleGrid>

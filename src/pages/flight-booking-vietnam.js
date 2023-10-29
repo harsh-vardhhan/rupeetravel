@@ -125,9 +125,11 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
       </CardBody>
       <Divider style={{ color: "#e2e8f0" }} />
       <CardFooter>
-        <Button colorScheme="green" onClick={() => window.open(buttonLink)}>
-          {buttonName}
-        </Button>
+        <a href={buttonLink}>
+          <Button colorScheme="green">
+            {buttonName}
+          </Button>
+        </a>
       </CardFooter>
     </Card>
   );

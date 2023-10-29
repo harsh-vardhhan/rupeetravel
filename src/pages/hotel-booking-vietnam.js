@@ -54,15 +54,14 @@ export default function Home({ hotels }) {
                           <Tr key={i}>
                             <Td>{hotel.name}</Td>
                             <Td>
-                              <Button
-                                colorScheme='teal'
-                                size='xs'
-                                onClick={() =>
-                                  window.open(hotel.contact)
-                                }
-                              >
-                                contact
-                              </Button>
+                              <a href={hotel.contact}>
+                                <Button
+                                  colorScheme='teal'
+                                  size='xs'
+                                >
+                                  contact
+                                </Button>
+                              </a>
                             </Td>
                           </Tr>
                         )
@@ -81,15 +80,14 @@ export default function Home({ hotels }) {
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
                 <Stack direction="row">
-                  <Button
-                    variant="solid"
-                    colorScheme="green"
-                    onClick={() =>
-                      window.open("https://www.facebook.com/lavencos.vn")
-                    }
-                  >
-                    Contact Lavencos
-                  </Button>
+                  <a href="https://www.facebook.com/lavencos.vn">
+                    <Button
+                      variant="solid"
+                      colorScheme="green"
+                    >
+                      Contact Lavencos
+                    </Button>
+                  </a>
                   <Link spacing="2" href="/da-nang-map">
                     <Button variant="solid" colorScheme="green">
                       Da Nang Map

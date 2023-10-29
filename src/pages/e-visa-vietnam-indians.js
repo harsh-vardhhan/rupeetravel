@@ -100,16 +100,13 @@ export default function Home({ steps }) {
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
-                <Button
-                  colorScheme="green"
-                  onClick={() =>
-                    window.open(
-                      "https://evisa.xuatnhapcanh.gov.vn/web/guest/khai-thi-thuc-dien-tu/cap-thi-thuc-dien-tu"
-                    )
-                  }
-                >
-                  Apply E-Visa
-                </Button>
+                <a href="https://evisa.xuatnhapcanh.gov.vn/web/guest/khai-thi-thuc-dien-tu/cap-thi-thuc-dien-tu">
+                  <Button
+                    colorScheme="green"
+                  >
+                    Apply E-Visa
+                  </Button>
+                </a>
               </CardFooter>
             </Card>
           </SimpleGrid>
