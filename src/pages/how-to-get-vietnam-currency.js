@@ -389,15 +389,16 @@ export default function Home() {
                         />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             <b>The smartest way:</b> Get a
+                            {' '}
                             <a href='https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee'>
                                 <b>
-                                    <u>{` zero forex markup debit card`}</u>
+                                    <u>{`zero forex markup debit card`}</u>
                                 </b>
                             </a> and use it to withdraw VND from a
-
+                            {' '}
                             <a href='https://www.rupeetravel.com/atm-vietnam-zero-forex-markup'>
                                 <b>
-                                    <u>{` zero forex markup ATM`}</u>
+                                    <u>{`zero forex markup ATM`}</u>
                                 </b>
                             </a>{`. This not only give you great conversion rates, 
                             but you can also skip the hassle of buying any 
