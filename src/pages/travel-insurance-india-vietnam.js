@@ -43,11 +43,7 @@ export default function Home({ features }) {
               <CardFooter>
                 <Stack direction="row">
                   <a href="https://www.godigit.com/international-travel-insurance">
-                    <Button
-                      colorScheme="green"
-                    >
-                      Get Insurance
-                    </Button>
+                    <Button colorScheme="green">Get Insurance</Button>
                   </a>
                   <Link spacing="2" href="/posts/india-cross-border-finance">
                     <Button variant="solid" colorScheme="green">

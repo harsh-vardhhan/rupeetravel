@@ -10,7 +10,7 @@ import {
   Tag,
   Heading,
 } from "@chakra-ui/react";
-import Image from 'next/image';
+import Image from "next/image";
 import ListView from "@/component/listview";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
@@ -42,10 +42,7 @@ export default function Home({ features, reasons }) {
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
                 <a href="https://www.jio.com/en-in/esim">
-                  <Button
-                    variant="solid"
-                    colorScheme="green"
-                  >
+                  <Button variant="solid" colorScheme="green">
                     Jio eSim
                   </Button>
                 </a>
