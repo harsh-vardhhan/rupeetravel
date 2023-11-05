@@ -507,13 +507,33 @@ export default function Home() {
                                 that you also use that card in a zero-forex ATM.`}
                             </Text>
                         </Card>
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#fff8e8' }}>
+                            <Heading fontSize={'lg'}>{`Why prefer a zero forex markup debit card over a Forex travel card for cash withdrawal from a Vietnam ATM?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                <a href='https://www.bookmyforex.com/forex-card/'>
+                                    <b>
+                                        <u>{`Forex travel cards`}</u>
+                                    </b>
+                                </a>
+                                {` provide the same benefit as `}
+                                <a href='https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee'>
+                                    <b>
+                                        <u>{`zero forex markup debit cards`}</u>
+                                    </b>
+                                </a>
+                                {`, which are zero charges for cash withdrawals, but they come with the hassle of reloading USD on them. Zero forex markup debit cards come with dynamic conversion (INR -> USD -> VND), so there is no need to worry about loading USD every time.`}
+                            </Text>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                {`Also, no Forex Travel cards, as of now, support loading Vietnam currency VND. Hence, the hassle of currency conversion and forex conversion cost is still there (USD -> VND).`}
+                            </Text>
+                        </Card>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
                             <Heading fontSize={'lg'}>{`Why is conversion rates for VND via Vietnam ATM's so great?`}</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
                                 {`Payment networks like Visa and MasterCard use the forex market 
                                 (which are very liquid - many buyers and sellers of currency) 
                                 to get great conversion rates unlike local forex dealer. Also, behind the scene it's 
-                                simulating the same smart conversion technique (INR - USD - VND). `}
+                                simulating the same smart conversion technique (INR -> USD -> VND). `}
                             </Text>
                         </Card>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#ecf8f8' }}>
