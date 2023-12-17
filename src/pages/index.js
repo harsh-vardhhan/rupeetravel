@@ -1,5 +1,5 @@
-import styles from '@/styles/Home.module.css'
-import Link from 'next/link'
+import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 import {
   Card,
   CardHeader,
@@ -15,91 +15,96 @@ import {
   Button,
   Heading,
   Divider,
-  CardFooter
-} from '@chakra-ui/react'
-import Image from 'next/image';
+  CardFooter,
+} from "@chakra-ui/react";
+import Image from "next/image";
 import { FaTwitter } from "react-icons/fa";
-import Seo from '@/component/seo'
+import Seo from "@/component/seo";
 
-export default function Home({ blogs, beforeArrivals, arrivals, beforeDeparture }) {
+export default function Home({
+  blogs,
+  beforeArrivals,
+  arrivals,
+  beforeDeparture,
+}) {
   return (
     <>
-      <Seo canonical={'https://www.rupeetravel.com'} />
+      <Seo canonical={"https://www.rupeetravel.com"} />
       <main className={styles.main}>
-        <Text fontSize='5xl' as='b'>Rupee Travel</Text>
-        <Heading as='h1' fontSize={{ base: '24px', md: '40px', lg: '75px' }} style={{ marginTop: '20px' }}>
+        <Text fontSize="5xl" as="b">
+          Rupee Travel
+        </Text>
+        <Heading
+          as="h1"
+          fontSize={{ base: "24px", md: "40px", lg: "75px" }}
+          style={{ marginTop: "20px" }}
+        >
           The ultimate checklist for Vietnam travel from India 🇻🇳
         </Heading>
-        <div style={{ marginTop: '20px' }}>
-
-          <SimpleGrid minChildWidth='330px' spacing='40px'>
+        <div style={{ marginTop: "20px" }}>
+          <SimpleGrid minChildWidth="330px" spacing="40px">
             <CheckListItemCard
-              title={'Before you arrive 🇮🇳'}
+              title={"Before you arrive 🇮🇳"}
               list={beforeArrivals}
             />
+            <CheckListItemCard title={"Arrived 🇻🇳"} list={arrivals} />
             <CheckListItemCard
-              title={'Arrived 🇻🇳'}
-              list={arrivals}
-            />
-            <CheckListItemCard
-              title={'Before you depart 🇻🇳'}
+              title={"Before you depart 🇻🇳"}
               list={beforeDeparture}
             />
-            <CheckListItemCard
-              title={'Blogs'}
-              list={blogs}
-            />
+            <CheckListItemCard title={"Blogs"} list={blogs} />
           </SimpleGrid>
-          <Map/>
+          <Map />
         </div>
       </main>
     </>
-  )
+  );
 }
 
 const CheckListItemCard = ({ title, list }) => {
   return (
-    <Card style={{ width: '343px', marginTop: '10px' }}>
+    <Card style={{ width: "343px", marginTop: "10px" }}>
       <CardHeader>
-        <Text fontSize='2xl' as='b'>{title}</Text>
+        <Text fontSize="2xl" as="b">
+          {title}
+        </Text>
       </CardHeader>
       <CardBody>
-        <Stack divider={<StackDivider />} spacing='4'>
-          {list.map(arrivals => (
-            <CheckListItem
-              key={arrivals.key}
-              task={arrivals}
-            />
+        <Stack divider={<StackDivider />} spacing="4">
+          {list.map((arrivals) => (
+            <CheckListItem key={arrivals.key} task={arrivals} />
           ))}
         </Stack>
       </CardBody>
     </Card>
-  )
-}
+  );
+};
 
 const CheckListItem = ({ task }) => {
   return (
     <Box>
       <Link href={task.link}>
-        <Text fontSize='xl' as='b'>
+        <Text fontSize="xl" as="b">
           {task.heading}&nbsp;
-          <Tag style={{ marginTop: '4px' }} colorScheme={task.tagColor}>
+          <Tag style={{ marginTop: "4px" }} colorScheme={task.tagColor}>
             {task.tagText}
           </Tag>
         </Text>
-        <Text style={{ fontWeight: 500 }} as='h2' pt='2' fontSize='sm'>
+        <Text style={{ fontWeight: 500 }} as="h2" pt="2" fontSize="sm">
           {task.subHeading}
         </Text>
       </Link>
     </Box>
-  )
-}
+  );
+};
 
 const Map = () => {
   return (
-    <Card style={{ marginTop: '10px', maxWidth: '700px' }}>
+    <Card style={{ marginTop: "10px", maxWidth: "700px" }}>
       <CardHeader>
-        <Text as='h2' fontSize='2xl' fontWeight={700}>{'Visit Da Nang, Vietnam'}</Text>
+        <Text as="h2" fontSize="2xl" fontWeight={700}>
+          {"Visit Da Nang, Vietnam"}
+        </Text>
       </CardHeader>
       <CardBody>
         <Image
@@ -125,11 +130,10 @@ const Map = () => {
         </Stack>
       </CardFooter>
     </Card>
-  )
-}
+  );
+};
 
 export async function getStaticProps() {
-
   const beforeArrivals = [
     {
       key: 1,
@@ -137,7 +141,7 @@ export async function getStaticProps() {
       subHeading: `Zero forex markup fee debit card`,
       tagText: `Recommended`,
       tagColor: `orange`,
-      link: `/debit-cards-travel-vietnam-zero-forex-markup-fee`
+      link: `/debit-cards-travel-vietnam-zero-forex-markup-fee`,
     },
     {
       key: 2,
@@ -145,7 +149,7 @@ export async function getStaticProps() {
       subHeading: `Zero forex markup fee credit card`,
       tagText: `Recommended`,
       tagColor: `orange`,
-      link: `/credit-cards-travel-vietnam-zero-forex-markup-fee`
+      link: `/credit-cards-travel-vietnam-zero-forex-markup-fee`,
     },
     {
       key: 3,
@@ -153,7 +157,7 @@ export async function getStaticProps() {
       subHeading: `Buy foreign currency notes online`,
       tagText: `Recommended`,
       tagColor: `orange`,
-      link: `/buy-foreign-currency-notes-online`
+      link: `/buy-foreign-currency-notes-online`,
     },
     {
       key: 4,
@@ -161,7 +165,7 @@ export async function getStaticProps() {
       subHeading: `Apply online E-Visa for Vietnam`,
       tagText: `Mandatory`,
       tagColor: `teal`,
-      link: `/e-visa-vietnam-indians`
+      link: `/e-visa-vietnam-indians`,
     },
     {
       key: 5,
@@ -169,7 +173,7 @@ export async function getStaticProps() {
       subHeading: `Cheapest flights from India to Vietnam`,
       tagText: `Mandatory`,
       tagColor: `teal`,
-      link: `/flight-booking-vietnam`
+      link: `/flight-booking-vietnam`,
     },
     {
       key: 6,
@@ -177,7 +181,7 @@ export async function getStaticProps() {
       subHeading: `Best travel insurance for Indians`,
       tagText: `Recommended`,
       tagColor: `orange`,
-      link: `/travel-insurance-india-vietnam`
+      link: `/travel-insurance-india-vietnam`,
     },
     {
       key: 7,
@@ -185,7 +189,7 @@ export async function getStaticProps() {
       subHeading: `Quick travel hack for luggage`,
       tagText: `Recommended`,
       tagColor: `orange`,
-      link: `/travel-luggage-bag`
+      link: `/travel-luggage-bag`,
     },
     {
       key: 8,
@@ -193,7 +197,7 @@ export async function getStaticProps() {
       subHeading: `Book Vietnam hotel online`,
       tagText: `Recommended`,
       tagColor: `orange`,
-      link: `/hotel-booking-vietnam`
+      link: `/hotel-booking-vietnam`,
     },
     {
       key: 9,
@@ -201,9 +205,9 @@ export async function getStaticProps() {
       subHeading: `Get Vietnam eSim for single sim phone`,
       tagText: `Recommended`,
       tagColor: `orange`,
-      link: `/esim-vietnam`
+      link: `/esim-vietnam`,
     },
-  ]
+  ];
 
   const arrivals = [
     {
@@ -212,7 +216,7 @@ export async function getStaticProps() {
       subHeading: `Download the Zomato + Uber of Vietnam`,
       tagText: `Recommended`,
       tagColor: `orange`,
-      link: `/food-delivery-taxi-vietnam`
+      link: `/food-delivery-taxi-vietnam`,
     },
     {
       key: 2,
@@ -220,7 +224,7 @@ export async function getStaticProps() {
       subHeading: `Get local Vietnam SIM card`,
       tagText: `Recommended`,
       tagColor: `orange`,
-      link: `/local-sim-card-vietnam`
+      link: `/local-sim-card-vietnam`,
     },
     {
       key: 3,
@@ -228,7 +232,7 @@ export async function getStaticProps() {
       subHeading: `Best place for remote work in Vietnam`,
       tagText: `Remote work`,
       tagColor: `red`,
-      link: `/remote-work-vietnam`
+      link: `/remote-work-vietnam`,
     },
     {
       key: 4,
@@ -236,9 +240,9 @@ export async function getStaticProps() {
       subHeading: `zero forex markup charges ATM`,
       tagText: `Recommended`,
       tagColor: `orange`,
-      link: `/atm-vietnam-zero-forex-markup`
+      link: `/atm-vietnam-zero-forex-markup`,
     },
-  ]
+  ];
 
   const beforeDeparture = [
     {
@@ -247,9 +251,9 @@ export async function getStaticProps() {
       subHeading: `Withdraw Vietnam currency from ATM `,
       tagText: `Frequent visitors`,
       tagColor: `blue`,
-      link: `/withdraw-vietnam-currency-atm`
+      link: `/withdraw-vietnam-currency-atm`,
     },
-  ]
+  ];
 
   const blogs = [
     {
@@ -258,7 +262,7 @@ export async function getStaticProps() {
       subHeading: `Month long stay in Da Nang `,
       tagText: `Blog`,
       tagColor: `red`,
-      link: `/posts/digital-nomad-da-nang`
+      link: `/posts/digital-nomad-da-nang`,
     },
     {
       key: 2,
@@ -266,7 +270,7 @@ export async function getStaticProps() {
       subHeading: ` Cross border financial tools`,
       tagText: `Blog`,
       tagColor: `red`,
-      link: `/posts/india-cross-border-finance`
+      link: `/posts/india-cross-border-finance`,
     },
     {
       key: 3,
@@ -274,7 +278,7 @@ export async function getStaticProps() {
       subHeading: ` Foreign currency note conversion rates `,
       tagText: `Blog`,
       tagColor: `red`,
-      link: `/how-to-get-vietnam-currency`
+      link: `/how-to-get-vietnam-currency`,
     },
     {
       key: 4,
@@ -282,9 +286,9 @@ export async function getStaticProps() {
       subHeading: ` Budget trips to visa free countries`,
       tagText: `Blog`,
       tagColor: `red`,
-      link: `/visa-free-countries-for-indians`
-    }
-  ]
+      link: `/visa-free-countries-for-indians`,
+    },
+  ];
 
   return {
     props: {
@@ -292,6 +296,6 @@ export async function getStaticProps() {
       beforeArrivals,
       arrivals,
       beforeDeparture,
-    }
-  }
+    },
+  };
 }
