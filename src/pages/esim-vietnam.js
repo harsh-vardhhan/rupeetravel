@@ -58,7 +58,7 @@ export default function Home({ features, reasons }) {
                     Why get eSIM?
                   </Heading>
                   <Image
-                    src={"/images//esim.webp"}
+                    src={"/images/esim.webp"}
                     alt="eSIM"
                     borderRadius="lg"
                     height={391}

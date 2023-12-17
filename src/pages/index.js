@@ -275,6 +275,14 @@ export async function getStaticProps() {
       tagText: `Blog`,
       tagColor: `red`,
       link: `/how-to-get-vietnam-currency`
+    },
+    {
+      key: 4,
+      heading: ` Visa free countries for Indians`,
+      subHeading: ` Budget trips to visa free countries`,
+      tagText: `Blog`,
+      tagColor: `red`,
+      link: `/visa-free-countries-for-indians`
     }
   ]
 
