@@ -50,7 +50,7 @@ const ComparisionMatrix = () => (
                         <Th>Route (From Mumbai - Destination)</Th>
                         <Th>Price</Th>
                         <Th>Month</Th>
-                        <Th>USD (INRUSD)</Th>
+                        <Th>Book</Th>
                     </Tr>
                 </Thead>
                 <Tbody>
