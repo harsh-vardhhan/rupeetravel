@@ -1,6 +1,6 @@
-import Avatar from "./avatar"
-import CoverImage from "./cover-image"
-import PostTitle from "./post-title"
+import Avatar from "./avatar";
+import CoverImage from "./cover-image";
+import PostTitle from "./post-title";
 
 const PostHeader = ({ title, coverImage, author }) => {
   return (
@@ -13,7 +13,7 @@ const PostHeader = ({ title, coverImage, author }) => {
         <CoverImage title={title} src={coverImage} />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default PostHeader
+export default PostHeader;

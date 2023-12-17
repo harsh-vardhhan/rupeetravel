@@ -69,7 +69,7 @@ export default function Home({ indigo, vietjet }) {
 const ComparisionMatrix = () => (
   <Card style={{ marginTop: "30px" }}>
     <Box overflowX="auto">
-      <Table variant='simple'>
+      <Table variant="simple">
         <Thead>
           <Tr>
             <Th>Facilities</Th>
@@ -107,7 +107,7 @@ const ComparisionMatrix = () => (
       </Table>
     </Box>
   </Card>
-)
+);
 
 const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
   return (
@@ -126,9 +126,7 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
       <Divider style={{ color: "#e2e8f0" }} />
       <CardFooter>
         <a href={buttonLink}>
-          <Button colorScheme="green">
-            {buttonName}
-          </Button>
+          <Button colorScheme="green">{buttonName}</Button>
         </a>
       </CardFooter>
     </Card>

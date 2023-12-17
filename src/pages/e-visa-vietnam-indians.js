@@ -17,7 +17,7 @@ import {
   StepTitle,
   Stepper,
   useSteps,
-  Box
+  Box,
 } from "@chakra-ui/react";
 import Header from "@/component/header";
 import StructuredData from "@/component/structuredData";
@@ -27,33 +27,33 @@ export default function Home({ steps }) {
   const structuredData = {
     "@context": "https://www.schema.org",
     "@type": "product",
-    "brand": "Vietnam E-visa",
-    "name": "Vietnam E-visa application",
-    "image": "https://ik.imagekit.io/rupeetravel/local-currency.webp",
-    "category": "E-visa",
-    "description": " Vietnam E-visa application",
-    "aggregateRating": {
+    brand: "Vietnam E-visa",
+    name: "Vietnam E-visa application",
+    image: "https://ik.imagekit.io/rupeetravel/local-currency.webp",
+    category: "E-visa",
+    description: " Vietnam E-visa application",
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "1"
+      ratingValue: "5",
+      reviewCount: "1",
     },
-    "offers": {
+    offers: {
       "@type": "Offer",
-      "priceCurrency": "INR",
-      "price": "2100",
-      "itemCondition": "http://schema.org/UsedCondition",
-      "availability": "http://schema.org/InStock",
-      "seller": {
+      priceCurrency: "INR",
+      price: "2100",
+      itemCondition: "http://schema.org/UsedCondition",
+      availability: "http://schema.org/InStock",
+      seller: {
         "@type": "Vietnam Immigration",
-        "name": "Vietnam E-visa"
+        name: "Vietnam E-visa",
       },
-    }
+    },
   };
 
   const { activeStep } = useSteps({
     index: 0,
     count: 3,
-  })
+  });
 
   return (
     <>
@@ -73,8 +73,12 @@ export default function Home({ steps }) {
                   <Heading as="h2" size="md">
                     E-Visa for Vietnam
                   </Heading>
-
-                  <Stepper index={activeStep} orientation='vertical' height='400px' gap='0'>
+                  <Stepper
+                    index={activeStep}
+                    orientation="vertical"
+                    height="400px"
+                    gap="0"
+                  >
                     {steps.map((step, index) => (
                       <Step key={index}>
                         <StepIndicator>
@@ -85,7 +89,7 @@ export default function Home({ steps }) {
                           />
                         </StepIndicator>
 
-                        <Box flexShrink='1'>
+                        <Box flexShrink="1">
                           <StepTitle>{step.title}</StepTitle>
                           <StepDescription>{step.description}</StepDescription>
                         </Box>
@@ -95,17 +99,12 @@ export default function Home({ steps }) {
                     ))}
                   </Stepper>
                   )
-
                 </Stack>
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
                 <a href="https://evisa.xuatnhapcanh.gov.vn/web/guest/khai-thi-thuc-dien-tu/cap-thi-thuc-dien-tu">
-                  <Button
-                    colorScheme="green"
-                  >
-                    Apply E-Visa
-                  </Button>
+                  <Button colorScheme="green">Apply E-Visa</Button>
                 </a>
               </CardFooter>
             </Card>
@@ -120,7 +119,8 @@ export async function getStaticProps() {
   const steps = [
     {
       title: `Apply for Vietnam E-Visa`,
-      description: "fill the online form from the official site link given below.",
+      description:
+        "fill the online form from the official site link given below.",
     },
     {
       title: `Pay the fee`,
@@ -128,7 +128,8 @@ export async function getStaticProps() {
     },
     {
       title: `Wait for E-Visa approval`,
-      description: "Wait for 3-5 business days. You will get status update on your email",
+      description:
+        "Wait for 3-5 business days. You will get status update on your email",
     },
   ];
 
