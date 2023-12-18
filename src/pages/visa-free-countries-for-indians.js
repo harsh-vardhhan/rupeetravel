@@ -10,6 +10,7 @@ import {
     Th,
     Td,
     Box,
+    Tag,
 } from "@chakra-ui/react";
 import Header from "@/component/header";
 import ListView from "@/component/listview";
@@ -48,15 +49,20 @@ const ComparisionMatrix = () => (
                 <Thead>
                     <Tr>
                         <Th>Route (From Mumbai - Destination)</Th>
-                        <Th>Price</Th>
+                        <Th>Flight + Visa</Th>
                         <Th>Book</Th>
                         <Th>Apply Visa</Th>
                     </Tr>
                 </Thead>
                 <Tbody>
                     <Tr>
-                        <Td>Hong Kong</Td>
-                        <Td>₹10,700</Td>
+                        <Td>Hong Kong
+                            <br />
+                            <Tag style={{ marginTop: '4px' }} colorScheme={'blue'}>
+                                {'14 days visa'}
+                            </Tag>
+                        </Td>
+                        <Td>₹10,734 + ₹900</Td>
                         <Td>
                             <a href={'https://www.google.com/travel/flights/s/2f1W3zQ31nbhNVdCA'}>
                                 <Button
@@ -79,8 +85,14 @@ const ComparisionMatrix = () => (
                         </Td>
                     </Tr>
                     <Tr>
-                        <Td>Bali</Td>
-                        <Td>₹11,344</Td>
+                        <Td>
+                            Bali
+                            <br />
+                            <Tag style={{ marginTop: '4px' }} colorScheme={'blue'}>
+                                {'30 days visa'}
+                            </Tag>
+                        </Td>
+                        <Td>₹10,878 + ₹3,334</Td>
                         <Td>
                             <a href={'https://www.google.com/travel/flights/s/6pVdwHxfCJxrDpER8'}>
                                 <Button
@@ -103,8 +115,14 @@ const ComparisionMatrix = () => (
                         </Td>
                     </Tr>
                     <Tr>
-                        <Td>Kazakhstan</Td>
-                        <Td>₹5,909</Td>
+                        <Td>
+                            Kazakhstan
+                            <br />
+                            <Tag style={{ marginTop: '4px' }} colorScheme={'blue'}>
+                                {'14 days visa'}
+                            </Tag>
+                        </Td>
+                        <Td>₹6,041 + ₹0</Td>
                         <Td>
                             <a href={'https://www.google.com/travel/flights/s/Vm6Y6SLShSMi4Yxc7'}>
                                 <Button

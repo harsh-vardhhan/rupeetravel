@@ -10,15 +10,12 @@ import {
   Stack,
   SimpleGrid,
   Tag,
-  Wrap,
-  WrapItem,
   Button,
   Heading,
   Divider,
   CardFooter
 } from '@chakra-ui/react'
 import Image from 'next/image';
-import { FaTwitter } from "react-icons/fa";
 import Seo from '@/component/seo'
 
 export default function Home({ blogs, beforeArrivals, arrivals, beforeDeparture }) {
