@@ -51,6 +51,7 @@ const ComparisionMatrix = () => (
                         <Th>Price</Th>
                         <Th>Month</Th>
                         <Th>Book</Th>
+                        <Th>apply visa</Th>
                     </Tr>
                 </Thead>
                 <Tbody>
@@ -65,6 +66,16 @@ const ComparisionMatrix = () => (
                                     size='xs'
                                 >
                                     Book
+                                </Button>
+                            </a>
+                        </Td>
+                        <Td>
+                            <a href={'https://www.immd.gov.hk/eng/services/visas/pre-arrival_registration_for_indian_nationals.html'}>
+                                <Button
+                                    colorScheme='teal'
+                                    size='xs'
+                                >
+                                    apply
                                 </Button>
                             </a>
                         </Td>
@@ -83,6 +94,16 @@ const ComparisionMatrix = () => (
                                 </Button>
                             </a>
                         </Td>
+                        <Td>
+                            <a href={'https://molina.imigrasi.go.id/'}>
+                                <Button
+                                    colorScheme='teal'
+                                    size='xs'
+                                >
+                                    apply
+                                </Button>
+                            </a>
+                        </Td>
                     </Tr>
                     <Tr>
                         <Td>Kazakhstan</Td>
@@ -97,6 +118,8 @@ const ComparisionMatrix = () => (
                                     Book
                                 </Button>
                             </a>
+                        </Td>
+                        <Td>
                         </Td>
                     </Tr>
                 </Tbody>
