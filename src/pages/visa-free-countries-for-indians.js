@@ -85,21 +85,6 @@ const ComparisionMatrix = () => (
                         </Td>
                     </Tr>
                     <Tr>
-                        <Td>Taiwan</Td>
-                        <Td>₹12,629</Td>
-                        <Td>March</Td>
-                        <Td>
-                            <a href={'https://www.google.com/travel/flights/s/cr9q7wxkXSYLVGu66'}>
-                                <Button
-                                    colorScheme='teal'
-                                    size='xs'
-                                >
-                                    Book
-                                </Button>
-                            </a>
-                        </Td>
-                    </Tr>
-                    <Tr>
                         <Td>Kazakhstan</Td>
                         <Td>₹5,909</Td>
                         <Td>March</Td>
