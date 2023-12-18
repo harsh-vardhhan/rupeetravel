@@ -49,7 +49,6 @@ const ComparisionMatrix = () => (
                     <Tr>
                         <Th>Route (From Mumbai - Destination)</Th>
                         <Th>Price</Th>
-                        <Th>Month</Th>
                         <Th>Book</Th>
                         <Th>Apply Visa</Th>
                     </Tr>
@@ -58,7 +57,6 @@ const ComparisionMatrix = () => (
                     <Tr>
                         <Td>Hong Kong</Td>
                         <Td>₹10,700</Td>
-                        <Td>March</Td>
                         <Td>
                             <a href={'https://www.google.com/travel/flights/s/2f1W3zQ31nbhNVdCA'}>
                                 <Button
@@ -83,7 +81,6 @@ const ComparisionMatrix = () => (
                     <Tr>
                         <Td>Bali</Td>
                         <Td>₹11,344</Td>
-                        <Td>March</Td>
                         <Td>
                             <a href={'https://www.google.com/travel/flights/s/6pVdwHxfCJxrDpER8'}>
                                 <Button
@@ -108,7 +105,6 @@ const ComparisionMatrix = () => (
                     <Tr>
                         <Td>Kazakhstan</Td>
                         <Td>₹5,909</Td>
-                        <Td>March</Td>
                         <Td>
                             <a href={'https://www.google.com/travel/flights/s/Vm6Y6SLShSMi4Yxc7'}>
                                 <Button
