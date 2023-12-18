@@ -51,7 +51,7 @@ const ComparisionMatrix = () => (
                         <Th>Price</Th>
                         <Th>Month</Th>
                         <Th>Book</Th>
-                        <Th>apply visa</Th>
+                        <Th>Apply Visa</Th>
                     </Tr>
                 </Thead>
                 <Tbody>
@@ -75,7 +75,7 @@ const ComparisionMatrix = () => (
                                     colorScheme='teal'
                                     size='xs'
                                 >
-                                    apply
+                                    Apply
                                 </Button>
                             </a>
                         </Td>
@@ -100,7 +100,7 @@ const ComparisionMatrix = () => (
                                     colorScheme='teal'
                                     size='xs'
                                 >
-                                    apply
+                                    Apply
                                 </Button>
                             </a>
                         </Td>
