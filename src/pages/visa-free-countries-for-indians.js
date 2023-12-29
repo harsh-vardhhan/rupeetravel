@@ -62,7 +62,7 @@ const ComparisionMatrix = () => (
                                 {'14 days visa'}
                             </Tag>
                         </Td>
-                        <Td>₹10,734 + ₹900</Td>
+                        <Td>₹10,734 + ₹2,450</Td>
                         <Td>
                             <a href={'https://www.google.com/travel/flights/s/2f1W3zQ31nbhNVdCA'}>
                                 <Button
