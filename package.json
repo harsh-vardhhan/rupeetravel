@@ -13,7 +13,6 @@
     "@chakra-ui/icons": "2.0.16",
     "@chakra-ui/react": "2.6.1",
     "@next/font": "13.1.2",
-    "@rive-app/react-canvas": "^3.0.53",
     "classnames": "^2.3.1",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.2",
@@ -25,8 +24,7 @@
     "react-dom": "18.2.0",
     "react-icons": "4.8.0",
     "remark": "^14.0.3",
-    "remark-html": "^15.0.2",
-    "rive-react": "^3.0.53"
+    "remark-html": "^15.0.2"
   },
   "devDependencies": {
     "@types/node": "20.4.1",

@@ -1,6 +1,6 @@
+import { useState } from "react";
 import Seo from '@/component/seo'
 import styles from '@/styles/Home.module.css'
-import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
 import Header from "@/component/header";
 import Link from "next/link";
 import {
@@ -12,17 +12,11 @@ import {
     Stack,
     Heading,
 } from "@chakra-ui/react";
+import Image from 'next/image';
 
 export default function Home({ deviceType }) {
 
-    const { rive, RiveComponent } = useRive({
-        src: "map.riv",
-        stateMachines: "toggle-dragon-bridge",
-        artboard: "map",
-        autoplay: true,
-    });
-
-    const bumpInput = useStateMachineInput(rive, "toggle-dragon-bridge", "hover-on", false);
+    const [label, setLabel] = useState(false)
 
     if (deviceType === 'mobile') {
         return (
@@ -40,14 +34,25 @@ export default function Home({ deviceType }) {
                                 <Heading as="h2" size="md">
                                     Click on map
                                 </Heading>
-                                <RiveComponent
-                                    style={{
-                                        height: "476px",
-                                        width: "381px",
-                                        WebkitTransform: "rotate(90deg)",
-                                    }}
-                                    onClick={() => bumpInput.value = !bumpInput.value}
-                                />
+                                {label ? (
+                                    <Image
+                                        src={"/images/map.svg"}
+                                        alt="Hotel booking receipt"
+                                        height={476}
+                                        width={381}
+                                        style={{ marginTop: "10px" }}
+                                        onClick={() => setLabel(!label)}
+                                    />
+                                ) : (
+                                    <Image
+                                        src={"/images/map_label.svg"}
+                                        alt="Hotel booking receipt"
+                                        height={476}
+                                        width={381}
+                                        style={{ marginTop: "10px" }}
+                                        onClick={() => setLabel(!label)}
+                                    />
+                                )}
                             </Stack>
                         </CardBody>
                         <Divider style={{ color: "#e2e8f0" }} />
@@ -78,14 +83,28 @@ export default function Home({ deviceType }) {
                                 <Heading as="h2" size="md">
                                     Click on map
                                 </Heading>
-                                <RiveComponent
-                                    style={{
-                                        height: "600px",
-                                    }}
-                                    onClick={() => bumpInput.value = !bumpInput.value}
-                                />
+                                {label ? (
+                                    <Image
+                                        src={"/images/map.svg"}
+                                        alt="Hotel booking receipt"
+                                        height={800}
+                                        width={800}
+                                        style={{ marginTop: "10px" }}
+                                        onClick={() => setLabel(!label)}
+                                    />
+                                ) : (
+                                    <Image
+                                        src={"/images/map_label.svg"}
+                                        alt="Hotel booking receipt"
+                                        height={800}
+                                        width={800}
+                                        style={{ marginTop: "10px" }}
+                                        onClick={() => setLabel(!label)}
+                                    />
+                                )}
                             </Stack>
                         </CardBody>
+
                         <Divider style={{ color: "#e2e8f0" }} />
                         <CardFooter>
                             <Link spacing="2" href="/hotel-booking-vietnam">
