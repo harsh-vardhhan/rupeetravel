@@ -303,8 +303,8 @@ export default function Home() {
                             style={{ marginTop: "10px" }}
                         />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            <b>The smart way:</b>{` Wait? but why? I am travelling to Vietnam, not the US, why should I buy USD. 
-                            Well, that's cause USD has the highest global demand hence the buy/sell rate 
+                            <b>The smart way:</b>{` Wait? but why? I am travelling to Vietnam, not the US, why should I buy USD.
+                            Well, that's cause USD has the highest global demand hence the buy/sell rate
                             are great even in India.`}
                         </Text>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
@@ -324,10 +324,10 @@ export default function Home() {
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#ecf8f8' }}>
                             <Heading fontSize={'lg'}>{` Are online forex brokers like BookMyForex always giving better rates than brick-and-mortar ones?`}</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                {`I asked a local forex broker in Mumbai for USD currency notes. 
-                                It turned out that both the local forex dealer and BookMyForex 
-                                are offering USD currency notes at the same rate. 
-                                So please don't go with the perception that online brokers offer a better rate. 
+                                {`I asked a local forex broker in Mumbai for USD currency notes.
+                                It turned out that both the local forex dealer and BookMyForex
+                                are offering USD currency notes at the same rate.
+                                So please don't go with the perception that online brokers offer a better rate.
                                 First, compare whose offering better rates.`}
                             </Text>
                             <Image
@@ -391,8 +391,8 @@ export default function Home() {
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
                             <Heading fontSize={'lg'}>{` What if I didn't spend all the USD I purchased for my Vietnam travel?`}</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                {`As an Indian citizen, you can keep $2,000 physical currency notes. 
-                                Since USD is a globally accepted currency, you can use it for your 
+                                {`As an Indian citizen, you can keep $2,000 physical currency notes.
+                                Since USD is a globally accepted currency, you can use it for your
                                 next international travel to any other country. `}
                             </Text>
                             <CurrencyConverter
@@ -407,6 +407,26 @@ export default function Home() {
                                 region={'en-IN'}
                             />
                         </Card>
+
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#ecf8f8' }}>
+                            <Heading fontSize={'lg'}>{` How much foreign currency can I carry from India?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                {`You can carry up to $3,000 foreign currency notes from India.
+                                  If you need more foreign currency, then you can carry credit and debit cards.`}
+                            </Text>
+                            <CurrencyConverter
+                                currencyPair={'USDINR'}
+                                exchange={'forex market'}
+                                rate={USDINRMarketRate}
+                                base={'USD'}
+                                quote={'INR'}
+                                baseSymbol={'$'}
+                                quoteSymbol={'₹'}
+                                amount={3000}
+                                region={'en-IN'}
+                            />
+                        </Card>
+
                         <Heading ref={withdrawVNDRef} style={{ marginTop: '20px' }}> Withdraw VND from Vietnam ATM</Heading>
                         <Image
                             src={"/images/ocean-bank-atm.webp"}
@@ -428,17 +448,17 @@ export default function Home() {
                                 <b>
                                     <u>{`zero forex markup ATM`}</u>
                                 </b>
-                            </a>{`. This not only give you great conversion rates, 
-                            but you can also skip the hassle of buying any 
-                            currency notes before your actual trip. It also 
-                            allows you skip the hassle of buying USD currency 
+                            </a>{`. This not only give you great conversion rates,
+                            but you can also skip the hassle of buying any
+                            currency notes before your actual trip. It also
+                            allows you skip the hassle of buying USD currency
                             notes just for great conversion rates.`}
                         </Text>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
                             <Heading fontSize={'lg'}>{`So, if you have zero forex markup debit card, you don't need to carry USD currency notes?`}</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                {`No, I would recommend keeping USD currency notes as an 
-                                alternate solution. That's cause there have been events 
+                                {`No, I would recommend keeping USD currency notes as an
+                                alternate solution. That's cause there have been events
                                 where banks like `}
                                 <a href='https://inc42.com/buzz/neobank-niyo-users-bear-the-brunt-as-partner-sbm-bank-india-comes-under-rbi-radar/'>
                                     <b>
@@ -451,8 +471,8 @@ export default function Home() {
                                         <u>{` Paytm`}</u>
                                     </b>
                                 </a>
-                                {` disabled international transactions due to regulatory 
-                                issues. Physical USD currency 
+                                {` disabled international transactions due to regulatory
+                                issues. Physical USD currency
                                 notes keep you immune from such situations. `}
                             </Text>
                         </Card>
@@ -464,7 +484,7 @@ export default function Home() {
                                 <u><b><a href="https://www.google.com/maps?q=Ocean+Bank+ATM">Ocean Bank</a></b></u>
                                 {' or '}
                                 <u><b><a href="https://www.google.com/maps?q=MB+Bank+ATM">MB Bank</a></b></u>.
-                                {` Both ATMs accept international Visa and MasterCard 
+                                {` Both ATMs accept international Visa and MasterCard
                                 debit cards and are zero forex markup ATMs.`}
                             </Text>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
@@ -490,7 +510,7 @@ export default function Home() {
                         </Card>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#eef4ed' }}>
                             <Heading fontSize={'lg'}>
-                                {`Will using any ATM for cash withdrawal cost me 
+                                {`Will using any ATM for cash withdrawal cost me
                                 zero charges if I use a zero forex markup debit card?`}
                             </Heading>
                             <Image
@@ -501,18 +521,18 @@ export default function Home() {
                                 style={{ marginTop: "10px" }}
                             />
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                {`No, Using any random ATM can cause you 
-                                forex charges up to 3%. Hence, using a zero 
-                                forex charge debit card isn't enough. It's essential 
+                                {`No, Using any random ATM can cause you
+                                forex charges up to 3%. Hence, using a zero
+                                forex charge debit card isn't enough. It's essential
                                 that you also use that card in a zero-forex ATM.`}
                             </Text>
                         </Card>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#fff8e8' }}>
-                            <Heading fontSize={'lg'}>{`Why prefer a zero forex markup debit card over a Forex travel card for cash withdrawal from a Vietnam ATM?`}</Heading>
+                            <Heading fontSize={'lg'}>{`What is forex card?`}</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
                                 <a href='https://www.bookmyforex.com/forex-card/'>
                                     <b>
-                                        <u>{`Forex travel cards`}</u>
+                                        <u>{`Forex cards`}</u>
                                     </b>
                                 </a>
                                 {` provide the same benefit as `}
@@ -524,15 +544,15 @@ export default function Home() {
                                 {`, which are zero charges for cash withdrawals, but they come with the hassle of reloading USD on them. Zero forex markup debit cards come with dynamic conversion (INR -> USD -> VND), so there is no need to worry about loading USD every time.`}
                             </Text>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                {`Also, no Forex Travel cards, as of now, support loading Vietnam currency VND. Hence, the hassle of currency conversion and forex conversion cost is still there (USD -> VND).`}
+                                {`Also, no forex cards, as of now, support loading Vietnam currency VND. Hence, the hassle of currency conversion and forex conversion cost is still there (USD -> VND).`}
                             </Text>
                         </Card>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
                             <Heading fontSize={'lg'}>{`Why is conversion rates for VND via Vietnam ATM's so great?`}</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                {`Payment networks like Visa and MasterCard use the forex market 
-                                (which are very liquid - many buyers and sellers of currency) 
-                                to get great conversion rates unlike local forex dealer. Also, behind the scene it's 
+                                {`Payment networks like Visa and MasterCard use the forex market
+                                (which are very liquid - many buyers and sellers of currency)
+                                to get great conversion rates unlike local forex dealer. Also, behind the scene it's
                                 simulating the same smart conversion technique (INR -> USD -> VND). `}
                             </Text>
                         </Card>
@@ -555,10 +575,9 @@ export default function Home() {
                             />
                         </Card>
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#eef4ed' }}>
-                            <Heading fontSize={'lg'}>{`What to do with the unspent Vietnam currency?`}</Heading>
+                            <Heading fontSize={'lg'}>{`How to exchange foreign currency to Indian rupees?`}</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                {`If you plan to travel to Vietnam again, you can keep it for your next visit. 
-                                But if you don't, you can sell it in exchange for Indian Rupee to an 
+                                {`You can sell it in exchange for Indian Rupee to an
                                 authorized Forex dealer, like BookMyForex. `}
                             </Text>
                         </Card>
