@@ -17,9 +17,9 @@ import {
   Th,
   Td,
   Box,
-  Text
+  Text,
 } from "@chakra-ui/react";
-import Image from 'next/image';
+import Image from "next/image";
 import Header from "@/component/header";
 import ListView from "@/component/listview";
 import Seo from "@/component/seo";
@@ -30,27 +30,27 @@ export default function Home({ features }) {
   const structuredData = {
     "@context": "https://www.schema.org",
     "@type": "product",
-    "brand": "BookMyForex",
-    "name": "USD foriegn currency notes",
-    "image": "https://ik.imagekit.io/rupeetravel/currency.webp",
-    "category": "foreign currency notes",
-    "description": "Buy USD forex cash at best prices.",
-    "aggregateRating": {
+    brand: "BookMyForex",
+    name: "USD foriegn currency notes",
+    image: "https://ik.imagekit.io/rupeetravel/currency.webp",
+    category: "foreign currency notes",
+    description: "Buy USD forex cash at best prices.",
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "1"
+      ratingValue: "5",
+      reviewCount: "1",
     },
-    "offers": {
+    offers: {
       "@type": "Offer",
-      "priceCurrency": "INR",
-      "price": "0",
-      "itemCondition": "http://schema.org/UsedCondition",
-      "availability": "http://schema.org/InStock",
-      "seller": {
+      priceCurrency: "INR",
+      price: "0",
+      itemCondition: "http://schema.org/UsedCondition",
+      availability: "http://schema.org/InStock",
+      seller: {
         "@type": "Currency Dealer",
-        "name": "BookMyForex"
+        name: "BookMyForex",
       },
-    }
+    },
   };
   return (
     <>
@@ -78,7 +78,6 @@ export default function Home({ features }) {
                   <Image
                     src={"/images/currency.webp"}
                     alt="foriegn currency notes"
-                    borderRadius="lg"
                     height={330}
                     width={310}
                     style={{
@@ -92,10 +91,7 @@ export default function Home({ features }) {
               <CardFooter>
                 <Stack direction="row">
                   <a href="https://www.bookmyforex.com/">
-                    <Button
-                      variant="solid"
-                      colorScheme="green"
-                    >
+                    <Button variant="solid" colorScheme="green">
                       Book My Forex
                     </Button>
                   </a>
@@ -120,14 +116,16 @@ const ComparisionMatrix = () => (
     <CardBody>
       <Stack mt="6" spacing="3">
         <Heading as="h2" size="md">
-          {'Only Order USD currency notes in India'}
+          {"Only Order USD currency notes in India"}
         </Heading>
       </Stack>
     </CardBody>
 
     <Box overflowX="auto">
-      <Table variant='simple' size='sm'>
-        <TableCaption>Cost of VND currency notes over USD currency notes in India</TableCaption>
+      <Table variant="simple" size="sm">
+        <TableCaption>
+          Cost of VND currency notes over USD currency notes in India
+        </TableCaption>
         <Thead>
           <Tr>
             <Th>conversion rate on 31st July 2023</Th>
@@ -165,7 +163,7 @@ const ComparisionMatrix = () => (
       </Table>
     </Box>
   </Card>
-)
+);
 
 export async function getStaticProps() {
   const features = [
