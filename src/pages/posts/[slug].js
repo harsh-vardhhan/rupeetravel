@@ -1,20 +1,19 @@
-import { useRouter } from 'next/router'
-import Container from '../../component/container'
-import PostBody from '../../component/post-body'
-import Header from '../../component/blog-header'
-import PostHeader from '../../component/post-header'
-import Layout from '../../component/layout'
-import Seo from '../../component/seo'
-import { getPostBySlug, getAllPosts } from '../../lib/api'
-import PostTitle from '../../component/post-title'
-import markdownToHtml from '../../lib/markdownToHtml'
-import styles from '@/styles/Home.module.css'
+import { useRouter } from "next/router";
+import Container from "../../component/container";
+import PostBody from "../../component/post-body";
+import Header from "../../component/blog-header";
+import PostHeader from "../../component/post-header";
+import Layout from "../../component/layout";
+import Seo from "../../component/seo";
+import { getPostBySlug, getAllPosts } from "../../lib/api";
+import PostTitle from "../../component/post-title";
+import markdownToHtml from "../../lib/markdownToHtml";
+import styles from "@/styles/Home.module.css";
 
 export default function Post({ post, preview }) {
-
-  const router = useRouter()
+  const router = useRouter();
   if (!router.isFallback && !post?.slug) {
-    router.push('/404')
+    router.push("/404");
   }
 
   return (
@@ -39,9 +38,7 @@ export default function Post({ post, preview }) {
                     date={post.date}
                     author={post.author}
                   />
-                  <PostBody
-                    content={post.content}
-                  />
+                  <PostBody content={post.content} />
                 </article>
               </>
             )}
@@ -49,22 +46,22 @@ export default function Post({ post, preview }) {
         </Layout>
       </main>
     </>
-  )
+  );
 }
 
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
-    'title',
-    'excerpt',
-    'date',
-    'slug',
-    'author',
-    'canonical',
-    'content',
-    'ogImage',
-    'coverImage',
-  ])
-  const content = await markdownToHtml(post.content || '')
+    "title",
+    "excerpt",
+    "date",
+    "slug",
+    "author",
+    "canonical",
+    "content",
+    "ogImage",
+    "coverImage",
+  ]);
+  const content = await markdownToHtml(post.content || "");
 
   return {
     props: {
@@ -73,11 +70,11 @@ export async function getStaticProps({ params }) {
         content,
       },
     },
-  }
+  };
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts(["slug"]);
 
   return {
     paths: posts.map((post) => {
@@ -85,8 +82,8 @@ export async function getStaticPaths() {
         params: {
           slug: post.slug,
         },
-      }
+      };
     }),
     fallback: false,
-  }
+  };
 }
