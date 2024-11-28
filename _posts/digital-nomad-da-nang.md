@@ -1,14 +1,14 @@
 ---
-title: 'The accidental nomad: Month long stay in Da Nang'
-excerpt: 'Da Nang is the ulimate destination for Indian digital nomads largely due to the proximity'
-coverImage: '/assets/blog/digital-nomad-da-nang/cover.webp'
-date: '2023-06-01T05:35:07.322Z'
-canonical: 'https://www.rupeetravel.com/posts/digital-nomad-da-nang'
+title: "The accidental nomad: Month long stay in Da Nang"
+excerpt: "Da Nang is the ulimate destination for Indian digital nomads largely due to the proximity"
+coverImage: "/assets/blog/digital-nomad-da-nang/cover.webp"
+date: "2023-06-01T05:35:07.322Z"
+canonical: "https://www.rupeetravel.com/posts/digital-nomad-da-nang"
 author:
-  name: 'Harsh Vardhan'
-  picture: '/assets/blog/digital-nomad-da-nang/profile.webp'
+  name: "Harsh Vardhan"
+  picture: "/assets/blog/digital-nomad-da-nang/profile.webp"
 ogImage:
-  url: '/assets/blog/digital-nomad-da-nang/cover.webp'
+  url: "/assets/blog/digital-nomad-da-nang/cover.webp"
 ---
 
 ## The accidental digital nomad
@@ -57,7 +57,7 @@ The city is planned such that I reached my hotel from the airport in just 10 min
 
 I was a good bit tired after almost a 5-hour flight. But too excited to take a rest. So took a small nap and left for a walk to explore the city.
 
-The city was prettier than I had seen in photos or videos. It has Palm trees, clean beaches, a long promenade, and views of mountains like a city right from some Hollywood movie. 
+The city was prettier than I had seen in photos or videos. It has Palm trees, clean beaches, a long promenade, and views of mountains like a city right from some Hollywood movie.
 
 ![Cafe](/assets/blog/digital-nomad-da-nang/cafe.webp "Cafe")
 
@@ -71,17 +71,17 @@ As someone who can't handle much spice (I feel blasphemous saying this as an Ind
 
 Most of these dishes used to cost me about ₹120. I used the Grab app to order them right at my hotel room. Hence despite staying away from home, I never felt like staying away.
 
-##  Long evening walks on the beach
+## Long evening walks on the beach
 
 There's a long promenade to walk. After office hours I would go for long walks on the beach listening to podcasts. From the beach, you can see a long skyline of hotels. That's precisely what makes Da Nang premium hotels so affordable, an insane supply of high-quality hotels.
 
-##  Weekend trip to Hoi An
+## Weekend trip to Hoi An
 
 ![River](/assets/blog/digital-nomad-da-nang/river.webp "River")
 
 I was busy on weekdays with my job, so one weekend planned a trip to Hoi An, A nearby city with more traditional architecture unlike Da Nang, which has modern architecture.
 
-The way to Hoi An made me observe how ambitious the Vietnamese government is in Da Nang and Hoi An. Real estate and hotel construction throughout. 
+The way to Hoi An made me observe how ambitious the Vietnamese government is in Da Nang and Hoi An. Real estate and hotel construction throughout.
 
 I booked a private taxi, visited a Buddhist cave, and experienced a traditional Vietnamese boat ride.
 
@@ -89,12 +89,12 @@ Hoi An was a carefully crafted city that felt like showcasing a Vietnamese brand
 
 It looked obvious that the people and the government had worked hard to make the city that awesome. Pretty lamp decorations everywhere in the night were a jaw-dropping beauty.
 
-## Reflecting on the experience 
+## Reflecting on the experience
 
-I left for a month-long solo trip. For many, this is still an extreme path to take. Staying alone in a strange country for a month without friends, or family members can sound daunting, but such experiences help you grow in life. 
+I left for a month-long solo trip. For many, this is still an extreme path to take. Staying alone in a strange country for a month without friends, or family members can sound daunting, but such experiences help you grow in life.
 
-You learn to look after yourself, entertain yourself, and reflect deeper on experience of life. 
+You learn to look after yourself, entertain yourself, and reflect deeper on experience of life.
 
-You don't have to force yourself to make a solo trip about soul searching or simply enjoying the currency arbitrage. 
+You don't have to force yourself to make a solo trip about soul searching or simply enjoying the currency arbitrage.
 
 Just build an experience that aligns with your real personality.
