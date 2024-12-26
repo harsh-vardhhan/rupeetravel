@@ -15,12 +15,15 @@ import {
   Th,
   Td,
   TableContainer,
+  Text
 } from "@chakra-ui/react";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
 import Link from "next/link";
+import fs from 'fs';
+import path from 'path';
 
-export default function Home({ hotels }) {
+export default function Home({ hotels, rates }) {
   return (
     <>
       <Seo
@@ -99,12 +102,90 @@ export default function Home({ hotels }) {
             </Card>
           </SimpleGrid>
         </div>
+        <Text
+          as="h1"
+          fontSize="xl"
+          style={{
+            marginTop: "20px",
+            fontWeight: 600,
+          }}
+        >
+          {"VinHolidays Fiesta, Phu Quoc, Vietnam"}
+        </Text>
+        <div style={{ marginTop: "20px" }}>
+          <SimpleGrid minChildWidth="350px" spacing="40px">
+            <Card>
+              <CardBody>
+                <TableContainer>
+                  <Table size='sm'>
+                    <Thead>
+                      <Tr>
+                        <Th>Date</Th>
+                        <Th>Price</Th>
+                        <Th>Cheapest</Th>
+                      </Tr>
+                    </Thead>
+                    <Tbody>
+                      {rates.map((rate, i) => {
+                        return (
+                          <Tr key={i}>
+                            <Td>{rate.date}</Td>
+                            <Td>₹{rate.price}</Td>
+                            <Td>
+                              <div style={{
+                                width: '100%',
+                                display: 'flex',
+                                alignItems: 'center',
+                                position: 'relative'
+                              }}>
+                                <div style={{
+                                  position: 'absolute',
+                                  left: 2,
+                                  zIndex: 1,
+                                  paddingRight: '7px',
+                                  fontWeight: 'bold'
+                                }}>
+                                  {Math.floor(rate.percentage)}%
+                                </div>
+                                <div
+                                  style={{
+                                    width: `${rate.percentage}%`,
+                                    height: '25px',
+                                    backgroundColor: '#E1FFBB',
+                                    borderColor: 'green',
+                                    borderWidth: '1px',
+                                    borderStyle: 'solid',
+                                    position: 'absolute',
+                                    left: 0,
+                                    zIndex: 0
+                                  }}
+                                ></div>
+                              </div>
+                            </Td>
+                          </Tr>
+                        );
+                      })}
+                    </Tbody>
+                  </Table>
+                </TableContainer>
+              </CardBody>
+            </Card>
+          </SimpleGrid>
+        </div>
       </main>
     </>
   );
 }
 
 export async function getStaticProps() {
+  // Construct the path to your JSON file
+  const filePath = path.join(process.cwd(), 'public', 'data', 'vinholidays_fiesta_rates.json');
+
+  // Read the JSON file
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+
+  // Parse the JSON string into a JavaScript object
+  const rates = JSON.parse(fileContents);
   const hotels = [
     {
       item: 1,
@@ -161,6 +242,7 @@ export async function getStaticProps() {
   return {
     props: {
       hotels,
+      rates
     },
   };
 }
