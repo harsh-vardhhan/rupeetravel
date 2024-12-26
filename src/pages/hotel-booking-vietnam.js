@@ -15,13 +15,13 @@ import {
   Th,
   Td,
   TableContainer,
-  Text
+  Text,
 } from "@chakra-ui/react";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
 import Link from "next/link";
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 export default function Home({ hotels, rates }) {
   return (
@@ -39,12 +39,13 @@ export default function Home({ hotels, rates }) {
               <CardBody>
                 🏝️ All hotels are located near the beach.
                 <br />
-                🚕 You can request the hotel to send a taxi for you at the Da Nang airport.
+                🚕 You can request the hotel to send a taxi for you at the Da
+                Nang airport.
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
               <CardBody>
                 <TableContainer>
-                  <Table size='sm'>
+                  <Table size="sm">
                     <Thead>
                       <Tr>
                         <Th>Hotel</Th>
@@ -58,16 +59,13 @@ export default function Home({ hotels, rates }) {
                             <Td>{hotel.name}</Td>
                             <Td>
                               <a href={hotel.contact}>
-                                <Button
-                                  colorScheme='teal'
-                                  size='xs'
-                                >
+                                <Button colorScheme="teal" size="xs">
                                   contact
                                 </Button>
                               </a>
                             </Td>
                           </Tr>
-                        )
+                        );
                       })}
                     </Tbody>
                   </Table>
@@ -84,10 +82,7 @@ export default function Home({ hotels, rates }) {
               <CardFooter>
                 <Stack direction="row">
                   <a href="https://www.facebook.com/lavencos.vn">
-                    <Button
-                      variant="solid"
-                      colorScheme="green"
-                    >
+                    <Button variant="solid" colorScheme="green">
                       Contact Lavencos
                     </Button>
                   </a>
@@ -97,7 +92,6 @@ export default function Home({ hotels, rates }) {
                     </Button>
                   </Link>
                 </Stack>
-
               </CardFooter>
             </Card>
           </SimpleGrid>
@@ -117,7 +111,7 @@ export default function Home({ hotels, rates }) {
             <Card>
               <CardBody>
                 <TableContainer>
-                  <Table size='sm'>
+                  <Table size="sm">
                     <Thead>
                       <Tr>
                         <Th>Date</Th>
@@ -132,32 +126,36 @@ export default function Home({ hotels, rates }) {
                             <Td>{rate.date}</Td>
                             <Td>₹{rate.price}</Td>
                             <Td>
-                              <div style={{
-                                width: '100%',
-                                display: 'flex',
-                                alignItems: 'center',
-                                position: 'relative'
-                              }}>
-                                <div style={{
-                                  position: 'absolute',
-                                  left: 2,
-                                  zIndex: 1,
-                                  paddingRight: '7px',
-                                  fontWeight: 'bold'
-                                }}>
+                              <div
+                                style={{
+                                  width: "100%",
+                                  display: "flex",
+                                  alignItems: "center",
+                                  position: "relative",
+                                }}
+                              >
+                                <div
+                                  style={{
+                                    position: "absolute",
+                                    left: 2,
+                                    zIndex: 1,
+                                    paddingRight: "7px",
+                                    fontWeight: "bold",
+                                  }}
+                                >
                                   {Math.floor(rate.percentage)}%
                                 </div>
                                 <div
                                   style={{
                                     width: `${rate.percentage}%`,
-                                    height: '25px',
-                                    backgroundColor: '#E1FFBB',
-                                    borderColor: 'green',
-                                    borderWidth: '1px',
-                                    borderStyle: 'solid',
-                                    position: 'absolute',
+                                    height: "25px",
+                                    backgroundColor: "#E1FFBB",
+                                    borderColor: "green",
+                                    borderWidth: "1px",
+                                    borderStyle: "solid",
+                                    position: "absolute",
                                     left: 0,
-                                    zIndex: 0
+                                    zIndex: 0,
                                   }}
                                 ></div>
                               </div>
@@ -179,10 +177,15 @@ export default function Home({ hotels, rates }) {
 
 export async function getStaticProps() {
   // Construct the path to your JSON file
-  const filePath = path.join(process.cwd(), 'public', 'data', 'vinholidays_fiesta_rates.json');
+  const filePath = path.join(
+    process.cwd(),
+    "public",
+    "data",
+    "vinholidays_fiesta_rates.json",
+  );
 
   // Read the JSON file
-  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const fileContents = fs.readFileSync(filePath, "utf8");
 
   // Parse the JSON string into a JavaScript object
   const rates = JSON.parse(fileContents);
@@ -225,24 +228,24 @@ export async function getStaticProps() {
     {
       item: 8,
       name: "Sekong Hotel Da Nang",
-      contact: "https://facebook.com/sekonghoteldanang"
+      contact: "https://facebook.com/sekonghoteldanang",
     },
     {
       item: 9,
       name: "Cicilia Danang Hotel & Spa",
-      contact: "https://www.facebook.com/ciciliadanang/"
+      contact: "https://www.facebook.com/ciciliadanang/",
     },
     {
       item: 10,
       name: "Aria Grand Hotel Da Nang",
-      contact: "https://www.facebook.com/ariagrandhotel/"
+      contact: "https://www.facebook.com/ariagrandhotel/",
     },
   ];
 
   return {
     props: {
       hotels,
-      rates
+      rates,
     },
   };
 }
