@@ -34,10 +34,8 @@ export default function Home({ indigo, vietjet }) {
       <main className={styles.main}>
         <Header title={"Booking flight for Vietnam"} />
         <div style={{ marginTop: "20px" }}>
-          <a href={'/new-delhi-phu-quoc-vietnam-flight'}>
-            <Button colorScheme="green">
-              {'New Delhi → Phu Quoc'}
-            </Button>
+          <a href={"/new-delhi-phu-quoc-vietnam-flight"}>
+            <Button colorScheme="green">{"New Delhi → Phu Quoc"}</Button>
           </a>
           <SimpleGrid minChildWidth="350px" spacing="40px" marginTop={10}>
             <FlightCard
@@ -74,7 +72,7 @@ export default function Home({ indigo, vietjet }) {
 const ComparisionMatrix = () => (
   <Card style={{ marginTop: "30px" }}>
     <Box overflowX="auto">
-      <Table variant='simple'>
+      <Table variant="simple">
         <Thead>
           <Tr>
             <Th>Facilities</Th>
@@ -112,7 +110,7 @@ const ComparisionMatrix = () => (
       </Table>
     </Box>
   </Card>
-)
+);
 
 const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
   return (
@@ -131,9 +129,7 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
       <Divider style={{ color: "#e2e8f0" }} />
       <CardFooter>
         <a href={buttonLink}>
-          <Button colorScheme="green">
-            {buttonName}
-          </Button>
+          <Button colorScheme="green">{buttonName}</Button>
         </a>
       </CardFooter>
     </Card>
@@ -141,7 +137,6 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
 };
 
 export async function getStaticProps() {
-
   const vietjet = [
     {
       item: 1,
