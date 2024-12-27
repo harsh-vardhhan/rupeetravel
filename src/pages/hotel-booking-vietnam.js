@@ -130,7 +130,7 @@ export default function Home({ hotels, rates }) {
                         return (
                           <Tr key={i}>
                             <Td>{rate.date}</Td>
-                            <Td>₹{rate.price}</Td>
+                            <Td>₹{rate.price.toLocaleString('en-IN')}</Td>
                             <Td>
                               <div style={{
                                 width: '100%',
