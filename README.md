@@ -6,7 +6,7 @@
 
 ## Pages
 
--> Delhi to Da Nang 
+-> Delhi to Da Nang
 -> Delhi to Phu Quoc
 -> Mumbai to Da Nang
 -> Mumbai to Phu Quoc
