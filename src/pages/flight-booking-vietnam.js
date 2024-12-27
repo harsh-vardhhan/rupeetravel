@@ -43,14 +43,14 @@ export default function Home({ indigo, vietjet }) {
                   </Heading>
                   <div>
                     <Stack mt="6" spacing="3">
-                      <a href={'/new-delhi-phu-quoc-vietnam-flight'}>
+                      <a href={"/new-delhi-phu-quoc-vietnam-flight"}>
                         <Button colorScheme="green">
-                          {'New Delhi → Phu Quoc'}
+                          {"New Delhi → Phu Quoc"}
                         </Button>
                       </a>
-                      <a href={'/new-delhi-da-nang-vietnam-flight'}>
+                      <a href={"/new-delhi-da-nang-vietnam-flight"}>
                         <Button colorScheme="green">
-                          {'New Delhi → Da Nang'}
+                          {"New Delhi → Da Nang"}
                         </Button>
                       </a>
                     </Stack>
@@ -58,7 +58,6 @@ export default function Home({ indigo, vietjet }) {
                 </Stack>
               </CardBody>
             </Card>
-
           </SimpleGrid>
           <SimpleGrid minChildWidth="350px" spacing="40px" marginTop={10}>
             <FlightCard
@@ -95,7 +94,7 @@ export default function Home({ indigo, vietjet }) {
 const ComparisionMatrix = () => (
   <Card style={{ marginTop: "30px" }}>
     <Box overflowX="auto">
-      <Table variant='simple'>
+      <Table variant="simple">
         <Thead>
           <Tr>
             <Th>Facilities</Th>
@@ -133,7 +132,7 @@ const ComparisionMatrix = () => (
       </Table>
     </Box>
   </Card>
-)
+);
 
 const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
   return (
@@ -152,9 +151,7 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
       <Divider style={{ color: "#e2e8f0" }} />
       <CardFooter>
         <a href={buttonLink}>
-          <Button colorScheme="green">
-            {buttonName}
-          </Button>
+          <Button colorScheme="green">{buttonName}</Button>
         </a>
       </CardFooter>
     </Card>
@@ -162,7 +159,6 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
 };
 
 export async function getStaticProps() {
-
   const vietjet = [
     {
       item: 1,
