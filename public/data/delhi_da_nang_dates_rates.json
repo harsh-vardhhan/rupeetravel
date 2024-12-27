@@ -1,0 +1,742 @@
+[
+  {
+    "date": "1 January",
+    "price": 14747,
+    "percentage": 72.86905811351461
+  },
+  {
+    "date": "2 January",
+    "price": 15373,
+    "percentage": 69.90177584075977
+  },
+  {
+    "date": "3 January",
+    "price": 12794,
+    "percentage": 83.99249648272628
+  },
+  {
+    "date": "4 January",
+    "price": 19873,
+    "percentage": 54.07336587329543
+  },
+  {
+    "date": "5 January",
+    "price": 15373,
+    "percentage": 69.90177584075977
+  },
+  {
+    "date": "6 January",
+    "price": 13872,
+    "percentage": 77.46539792387543
+  },
+  {
+    "date": "7 January",
+    "price": 12622,
+    "percentage": 85.1370622722231
+  },
+  {
+    "date": "8 January",
+    "price": 12794,
+    "percentage": 83.99249648272628
+  },
+  {
+    "date": "9 January",
+    "price": 12622,
+    "percentage": 85.1370622722231
+  },
+  {
+    "date": "10 January",
+    "price": 12622,
+    "percentage": 85.1370622722231
+  },
+  {
+    "date": "11 January",
+    "price": 17038,
+    "percentage": 63.070782955745976
+  },
+  {
+    "date": "12 January",
+    "price": 13902,
+    "percentage": 77.29823047043591
+  },
+  {
+    "date": "13 January",
+    "price": 12794,
+    "percentage": 83.99249648272628
+  },
+  {
+    "date": "14 January",
+    "price": 15373,
+    "percentage": 69.90177584075977
+  },
+  {
+    "date": "15 January",
+    "price": 13498,
+    "percentage": 79.6117943399022
+  },
+  {
+    "date": "16 January",
+    "price": 15678,
+    "percentage": 68.5419058553387
+  },
+  {
+    "date": "17 January",
+    "price": 13902,
+    "percentage": 77.29823047043591
+  },
+  {
+    "date": "18 January",
+    "price": 18485,
+    "percentage": 58.13362185555856
+  },
+  {
+    "date": "19 January",
+    "price": 13730,
+    "percentage": 78.2665695557174
+  },
+  {
+    "date": "20 January",
+    "price": 12927,
+    "percentage": 83.12833604084474
+  },
+  {
+    "date": "21 January",
+    "price": 15678,
+    "percentage": 68.5419058553387
+  },
+  {
+    "date": "22 January",
+    "price": 13498,
+    "percentage": 79.6117943399022
+  },
+  {
+    "date": "23 January",
+    "price": 13326,
+    "percentage": 80.63935164340387
+  },
+  {
+    "date": "24 January",
+    "price": 13902,
+    "percentage": 77.29823047043591
+  },
+  {
+    "date": "25 January",
+    "price": 14980,
+    "percentage": 71.73564753004005
+  },
+  {
+    "date": "26 January",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "27 January",
+    "price": 17038,
+    "percentage": 63.070782955745976
+  },
+  {
+    "date": "28 January",
+    "price": 17038,
+    "percentage": 63.070782955745976
+  },
+  {
+    "date": "29 January",
+    "price": 19931,
+    "percentage": 53.91601023531183
+  },
+  {
+    "date": "30 January",
+    "price": 15798,
+    "percentage": 68.02126851500189
+  },
+  {
+    "date": "1 February",
+    "price": 14627,
+    "percentage": 73.46687632460518
+  },
+  {
+    "date": "2 February",
+    "price": 16653,
+    "percentage": 64.52891370924158
+  },
+  {
+    "date": "3 February",
+    "price": 14627,
+    "percentage": 73.46687632460518
+  },
+  {
+    "date": "4 February",
+    "price": 14627,
+    "percentage": 73.46687632460518
+  },
+  {
+    "date": "5 February",
+    "price": 1060000,
+    "percentage": 1.0137735849056604
+  },
+  {
+    "date": "6 February",
+    "price": 15798,
+    "percentage": 68.02126851500189
+  },
+  {
+    "date": "7 February",
+    "price": 15152,
+    "percentage": 70.92133051742344
+  },
+  {
+    "date": "8 February",
+    "price": 15798,
+    "percentage": 68.02126851500189
+  },
+  {
+    "date": "9 February",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "10 February",
+    "price": 13099,
+    "percentage": 82.03679670203833
+  },
+  {
+    "date": "12 February",
+    "price": 13099,
+    "percentage": 82.03679670203833
+  },
+  {
+    "date": "13 February",
+    "price": 15798,
+    "percentage": 68.02126851500189
+  },
+  {
+    "date": "14 February",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "15 February",
+    "price": 13872,
+    "percentage": 77.46539792387543
+  },
+  {
+    "date": "16 February",
+    "price": 12664,
+    "percentage": 84.8547062539482
+  },
+  {
+    "date": "17 February",
+    "price": 13902,
+    "percentage": 77.29823047043591
+  },
+  {
+    "date": "18 February",
+    "price": 13326,
+    "percentage": 80.63935164340387
+  },
+  {
+    "date": "19 February",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "20 February",
+    "price": 15788,
+    "percentage": 68.06435267291614
+  },
+  {
+    "date": "21 February",
+    "price": 12664,
+    "percentage": 84.8547062539482
+  },
+  {
+    "date": "22 February",
+    "price": 15798,
+    "percentage": 68.02126851500189
+  },
+  {
+    "date": "23 February",
+    "price": 13730,
+    "percentage": 78.2665695557174
+  },
+  {
+    "date": "24 February",
+    "price": 12794,
+    "percentage": 83.99249648272628
+  },
+  {
+    "date": "25 February",
+    "price": 12622,
+    "percentage": 85.1370622722231
+  },
+  {
+    "date": "26 February",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "27 February",
+    "price": 12622,
+    "percentage": 85.1370622722231
+  },
+  {
+    "date": "28 February",
+    "price": 12664,
+    "percentage": 84.8547062539482
+  },
+  {
+    "date": "1 March",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "2 March",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "3 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "4 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "5 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "6 March",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "7 March",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "8 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "9 March",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "10 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "11 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "12 March",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "13 March",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "14 March",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "15 March",
+    "price": 12664,
+    "percentage": 84.8547062539482
+  },
+  {
+    "date": "16 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "17 March",
+    "price": 12664,
+    "percentage": 84.8547062539482
+  },
+  {
+    "date": "18 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "19 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "20 March",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "21 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "22 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "23 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "24 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "25 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "26 March",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "27 March",
+    "price": 19931,
+    "percentage": 53.91601023531183
+  },
+  {
+    "date": "28 March",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "29 March",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "30 March",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "31 March",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "1 April",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "2 April",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "3 April",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "4 April",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "5 April",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "6 April",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "7 April",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "8 April",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "9 April",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "10 April",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "11 April",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "12 April",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "13 April",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "14 April",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "15 April",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "16 April",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "17 April",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "18 April",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "19 April",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "20 April",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "21 April",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "22 April",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "23 April",
+    "price": 14575,
+    "percentage": 73.72898799313894
+  },
+  {
+    "date": "24 April",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "25 April",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "26 April",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "27 April",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "28 April",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "29 April",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "30 April",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "1 May",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "2 May",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "3 May",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "4 May",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "5 May",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "6 May",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "7 May",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "8 May",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "9 May",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "10 May",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "11 May",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "12 May",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "13 May",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "14 May",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "15 May",
+    "price": 12664,
+    "percentage": 84.8547062539482
+  },
+  {
+    "date": "16 May",
+    "price": 11204,
+    "percentage": 95.9121742234916
+  },
+  {
+    "date": "17 May",
+    "price": 12664,
+    "percentage": 84.8547062539482
+  },
+  {
+    "date": "18 May",
+    "price": 10746,
+    "percentage": 100.0
+  },
+  {
+    "date": "19 May",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "20 May",
+    "price": 12664,
+    "percentage": 84.8547062539482
+  },
+  {
+    "date": "21 May",
+    "price": 11969,
+    "percentage": 89.78193666973013
+  },
+  {
+    "date": "22 May",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "23 May",
+    "price": 14627,
+    "percentage": 73.46687632460518
+  },
+  {
+    "date": "24 May",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "25 May",
+    "price": 14627,
+    "percentage": 73.46687632460518
+  },
+  {
+    "date": "26 May",
+    "price": 12664,
+    "percentage": 84.8547062539482
+  },
+  {
+    "date": "27 May",
+    "price": 12664,
+    "percentage": 84.8547062539482
+  },
+  {
+    "date": "28 May",
+    "price": 14627,
+    "percentage": 73.46687632460518
+  },
+  {
+    "date": "29 May",
+    "price": 13456,
+    "percentage": 79.86028537455411
+  },
+  {
+    "date": "30 May",
+    "price": 14627,
+    "percentage": 73.46687632460518
+  }
+]

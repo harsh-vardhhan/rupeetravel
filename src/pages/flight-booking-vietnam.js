@@ -33,12 +33,33 @@ export default function Home({ indigo, vietjet }) {
       />
       <main className={styles.main}>
         <Header title={"Booking flight for Vietnam"} />
-        <div style={{ marginTop: "20px" }}>
-          <a href={'/new-delhi-phu-quoc-vietnam-flight'}>
-            <Button colorScheme="green">
-              {'New Delhi → Phu Quoc'}
-            </Button>
-          </a>
+        <div>
+          <SimpleGrid>
+            <Card maxW="sm" style={{ marginTop: "20px" }}>
+              <CardBody>
+                <Stack mt="6" spacing="3">
+                  <Heading as="h2" size="md">
+                    {"Cheapest Day to book flight to Vietnam"}
+                  </Heading>
+                  <div>
+                    <Stack mt="6" spacing="3">
+                      <a href={'/new-delhi-phu-quoc-vietnam-flight'}>
+                        <Button colorScheme="green">
+                          {'New Delhi → Phu Quoc'}
+                        </Button>
+                      </a>
+                      <a href={'/new-delhi-da-nang-vietnam-flight'}>
+                        <Button colorScheme="green">
+                          {'New Delhi → Da Nang'}
+                        </Button>
+                      </a>
+                    </Stack>
+                  </div>
+                </Stack>
+              </CardBody>
+            </Card>
+
+          </SimpleGrid>
           <SimpleGrid minChildWidth="350px" spacing="40px" marginTop={10}>
             <FlightCard
               cardTitle={"Book Vietjet flight to Vietnam"}
