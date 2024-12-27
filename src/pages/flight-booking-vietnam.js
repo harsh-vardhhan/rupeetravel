@@ -19,13 +19,13 @@ import {
   Td,
   Box,
   Text,
-  TableContainer
+  TableContainer,
 } from "@chakra-ui/react";
 import ListView from "@/component/listview";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 export default function Home({ indigo, vietjet, rates }) {
   return (
@@ -52,7 +52,7 @@ export default function Home({ indigo, vietjet, rates }) {
             <Card>
               <CardBody>
                 <TableContainer>
-                  <Table size='sm'>
+                  <Table size="sm">
                     <Thead>
                       <Tr>
                         <Th>Date</Th>
@@ -65,34 +65,38 @@ export default function Home({ indigo, vietjet, rates }) {
                         return (
                           <Tr key={i}>
                             <Td>{rate.date}</Td>
-                            <Td>₹{rate.price.toLocaleString('en-IN')}</Td>
+                            <Td>₹{rate.price.toLocaleString("en-IN")}</Td>
                             <Td>
-                              <div style={{
-                                width: '100%',
-                                display: 'flex',
-                                alignItems: 'center',
-                                position: 'relative'
-                              }}>
-                                <div style={{
-                                  position: 'absolute',
-                                  left: 2,
-                                  zIndex: 1,
-                                  paddingRight: '7px',
-                                  fontWeight: 'bold'
-                                }}>
+                              <div
+                                style={{
+                                  width: "100%",
+                                  display: "flex",
+                                  alignItems: "center",
+                                  position: "relative",
+                                }}
+                              >
+                                <div
+                                  style={{
+                                    position: "absolute",
+                                    left: 2,
+                                    zIndex: 1,
+                                    paddingRight: "7px",
+                                    fontWeight: "bold",
+                                  }}
+                                >
                                   {Math.floor(rate.percentage)}%
                                 </div>
                                 <div
                                   style={{
                                     width: `${rate.percentage}%`,
-                                    height: '25px',
-                                    backgroundColor: '#E1FFBB',
-                                    borderColor: 'green',
-                                    borderWidth: '1px',
-                                    borderStyle: 'solid',
-                                    position: 'absolute',
+                                    height: "25px",
+                                    backgroundColor: "#E1FFBB",
+                                    borderColor: "green",
+                                    borderWidth: "1px",
+                                    borderStyle: "solid",
+                                    position: "absolute",
                                     left: 0,
-                                    zIndex: 0
+                                    zIndex: 0,
                                   }}
                                 ></div>
                               </div>
@@ -143,7 +147,7 @@ export default function Home({ indigo, vietjet, rates }) {
 const ComparisionMatrix = () => (
   <Card style={{ marginTop: "30px" }}>
     <Box overflowX="auto">
-      <Table variant='simple'>
+      <Table variant="simple">
         <Thead>
           <Tr>
             <Th>Facilities</Th>
@@ -181,7 +185,7 @@ const ComparisionMatrix = () => (
       </Table>
     </Box>
   </Card>
-)
+);
 
 const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
   return (
@@ -200,9 +204,7 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
       <Divider style={{ color: "#e2e8f0" }} />
       <CardFooter>
         <a href={buttonLink}>
-          <Button colorScheme="green">
-            {buttonName}
-          </Button>
+          <Button colorScheme="green">{buttonName}</Button>
         </a>
       </CardFooter>
     </Card>
@@ -211,10 +213,15 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
 
 export async function getStaticProps() {
   // Construct the path to your JSON file
-  const filePath = path.join(process.cwd(), 'public', 'data', 'delhi_phu_quoc_rates.json');
+  const filePath = path.join(
+    process.cwd(),
+    "public",
+    "data",
+    "delhi_phu_quoc_rates.json",
+  );
 
   // Read the JSON file
-  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const fileContents = fs.readFileSync(filePath, "utf8");
 
   // Parse the JSON string into a JavaScript object
   const rates = JSON.parse(fileContents);
@@ -304,7 +311,7 @@ export async function getStaticProps() {
     props: {
       indigo,
       vietjet,
-      rates
+      rates,
     },
   };
 }
