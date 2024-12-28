@@ -17,7 +17,7 @@ import Seo from "@/component/seo";
 import fs from 'fs';
 import path from 'path';
 
-export default function Home({ delhi_phu_quoc_rates, phu_quoc_delhi_rates }) {
+export default function Home({ flightRates }) {
   return (
     <>
       <Seo
@@ -51,11 +51,13 @@ export default function Home({ delhi_phu_quoc_rates, phu_quoc_delhi_rates }) {
                       </Tr>
                     </Thead>
                     <Tbody>
-                      {delhi_phu_quoc_rates.map((rate, i) => {
+                    {flightRates.filter(rate =>
+                        rate.origin === "New Delhi" && rate.destination === "Phu Quoc"
+                      ).map((rate, i) => {
                         return (
                           <Tr key={i}>
                             <Td>{rate.date}</Td>
-                            <Td>₹{rate.price.toLocaleString('en-IN')}</Td>
+                            <Td>{rate.price}</Td>
                             <Td>
                               <div style={{
                                 width: '100%',
@@ -121,11 +123,13 @@ export default function Home({ delhi_phu_quoc_rates, phu_quoc_delhi_rates }) {
                       </Tr>
                     </Thead>
                     <Tbody>
-                      {phu_quoc_delhi_rates.map((rate, i) => {
+                    {flightRates.filter(rate =>
+                        rate.destination === "New Delhi" && rate.origin === "Phu Quoc"
+                      ).map((rate, i) => {
                         return (
                           <Tr key={i}>
                             <Td>{rate.date}</Td>
-                            <Td>₹{rate.price.toLocaleString('en-IN')}</Td>
+                            <Td>{rate.price}</Td>
                             <Td>
                               <div style={{
                                 width: '100%',
@@ -173,23 +177,13 @@ export default function Home({ delhi_phu_quoc_rates, phu_quoc_delhi_rates }) {
 }
 
 export async function getStaticProps() {
-  // Construct the path to your JSON file
-  const filePathDelhi = path.join(process.cwd(), 'public', 'data', 'delhi_phu_quoc_dates_rates.json');
-  // Read the JSON file
-  const fileContentsDelhi = fs.readFileSync(filePathDelhi, 'utf8');
-
-  // Parse the JSON string into a JavaScript object
-  const delhi_phu_quoc_rates = JSON.parse(fileContentsDelhi);
-
-  const filePathPhuQuoc = path.join(process.cwd(), 'public', 'data', 'phu_quoc_delhi_dates_rates.json');
-  const fileContentsPhuQuoc = fs.readFileSync(filePathPhuQuoc, 'utf8');
-  const phu_quoc_delhi_rates = JSON.parse(fileContentsPhuQuoc);
-
+  const filePath = path.join(process.cwd(), 'public', 'data', 'flight-price.json');
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const flightRates = JSON.parse(fileContents);
 
   return {
     props: {
-        delhi_phu_quoc_rates,
-        phu_quoc_delhi_rates
+      flightRates,
     },
   };
 }

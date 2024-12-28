@@ -17,7 +17,7 @@ import Seo from "@/component/seo";
 import fs from 'fs';
 import path from 'path';
 
-export default function Home({ delhi_da_nang_rates, da_nang_delhi_rates }) {
+export default function Home({ flightRates }) {
   return (
     <>
       <Seo
@@ -51,11 +51,13 @@ export default function Home({ delhi_da_nang_rates, da_nang_delhi_rates }) {
                       </Tr>
                     </Thead>
                     <Tbody>
-                      {delhi_da_nang_rates.map((rate, i) => {
+                      {flightRates.filter(rate =>
+                        rate.origin === "New Delhi" && rate.destination === "Da Nang"
+                      ).map((rate, i) => {
                         return (
                           <Tr key={i}>
                             <Td>{rate.date}</Td>
-                            <Td>₹{rate.price.toLocaleString('en-IN')}</Td>
+                            <Td>{rate.price}</Td>
                             <Td>
                               <div style={{
                                 width: '100%',
@@ -121,11 +123,13 @@ export default function Home({ delhi_da_nang_rates, da_nang_delhi_rates }) {
                       </Tr>
                     </Thead>
                     <Tbody>
-                      {da_nang_delhi_rates.map((rate, i) => {
+                      {flightRates.filter(rate =>
+                        rate.destination === "New Delhi" && rate.origin === "Da Nang"
+                      ).map((rate, i) => {
                         return (
                           <Tr key={i}>
                             <Td>{rate.date}</Td>
-                            <Td>₹{rate.price.toLocaleString('en-IN')}</Td>
+                            <Td>{rate.price}</Td>
                             <Td>
                               <div style={{
                                 width: '100%',
@@ -173,18 +177,13 @@ export default function Home({ delhi_da_nang_rates, da_nang_delhi_rates }) {
 }
 
 export async function getStaticProps() {
-  const filePathDelhi = path.join(process.cwd(), 'public', 'data', 'delhi_da_nang_dates_rates.json');
-  const fileContentsDelhi = fs.readFileSync(filePathDelhi, 'utf8');
-  const delhi_da_nang_rates = JSON.parse(fileContentsDelhi);
-
-  const filePathDaNang = path.join(process.cwd(), 'public', 'data', 'da_nang_delhi_dates_rates.json');
-  const fileContentsDaNang = fs.readFileSync(filePathDaNang, 'utf8');
-  const da_nang_delhi_rates = JSON.parse(fileContentsDaNang);
+  const filePath = path.join(process.cwd(), 'public', 'data', 'flight-price.json');
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const flightRates = JSON.parse(fileContents);
 
   return {
     props: {
-        delhi_da_nang_rates,
-        da_nang_delhi_rates
+      flightRates,
     },
   };
 }
