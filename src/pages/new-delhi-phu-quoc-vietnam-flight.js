@@ -10,12 +10,12 @@ import {
   Th,
   Td,
   Text,
-  TableContainer
+  TableContainer,
 } from "@chakra-ui/react";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 export default function Home({ flightRates }) {
   return (
@@ -23,7 +23,9 @@ export default function Home({ flightRates }) {
       <Seo
         title="Rupee Travel | Delhi to Phu Quoc, Vietnam flight"
         description="Lowest Phu Quoc, Vietnam flight ticket price from India"
-        canonical={"https://www.rupeetravel.com/new-delhi-phu-quoc-vietnam-flight"}
+        canonical={
+          "https://www.rupeetravel.com/new-delhi-phu-quoc-vietnam-flight"
+        }
       />
       <main className={styles.main}>
         <Header title={"Booking flight for Phu Quoc, Vietnam"} />
@@ -42,7 +44,7 @@ export default function Home({ flightRates }) {
             <Card>
               <CardBody>
                 <TableContainer>
-                  <Table size='sm'>
+                  <Table size="sm">
                     <Thead>
                       <Tr>
                         <Th>Date</Th>
@@ -51,47 +53,55 @@ export default function Home({ flightRates }) {
                       </Tr>
                     </Thead>
                     <Tbody>
-                    {flightRates.filter(rate =>
-                        rate.origin === "New Delhi" && rate.destination === "Phu Quoc"
-                      ).map((rate, i) => {
-                        return (
-                          <Tr key={i}>
-                            <Td>{rate.date}</Td>
-                            <Td>{rate.price}</Td>
-                            <Td>
-                              <div style={{
-                                width: '100%',
-                                display: 'flex',
-                                alignItems: 'center',
-                                position: 'relative'
-                              }}>
-                                <div style={{
-                                  position: 'absolute',
-                                  left: 2,
-                                  zIndex: 1,
-                                  paddingRight: '7px',
-                                  fontWeight: 'bold'
-                                }}>
-                                  {Math.floor(rate.percentage)}%
-                                </div>
+                      {flightRates
+                        .filter(
+                          (rate) =>
+                            rate.origin === "New Delhi" &&
+                            rate.destination === "Phu Quoc",
+                        )
+                        .map((rate, i) => {
+                          return (
+                            <Tr key={i}>
+                              <Td>{rate.date}</Td>
+                              <Td>{rate.price}</Td>
+                              <Td>
                                 <div
                                   style={{
-                                    width: `${rate.percentage}%`,
-                                    height: '25px',
-                                    backgroundColor: '#E1FFBB',
-                                    borderColor: 'green',
-                                    borderWidth: '1px',
-                                    borderStyle: 'solid',
-                                    position: 'absolute',
-                                    left: 0,
-                                    zIndex: 0
+                                    width: "100%",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    position: "relative",
                                   }}
-                                ></div>
-                              </div>
-                            </Td>
-                          </Tr>
-                        );
-                      })}
+                                >
+                                  <div
+                                    style={{
+                                      position: "absolute",
+                                      left: 2,
+                                      zIndex: 1,
+                                      paddingRight: "7px",
+                                      fontWeight: "bold",
+                                    }}
+                                  >
+                                    {Math.floor(rate.percentage)}%
+                                  </div>
+                                  <div
+                                    style={{
+                                      width: `${rate.percentage}%`,
+                                      height: "25px",
+                                      backgroundColor: "#E1FFBB",
+                                      borderColor: "green",
+                                      borderWidth: "1px",
+                                      borderStyle: "solid",
+                                      position: "absolute",
+                                      left: 0,
+                                      zIndex: 0,
+                                    }}
+                                  ></div>
+                                </div>
+                              </Td>
+                            </Tr>
+                          );
+                        })}
                     </Tbody>
                   </Table>
                 </TableContainer>
@@ -114,7 +124,7 @@ export default function Home({ flightRates }) {
             <Card>
               <CardBody>
                 <TableContainer>
-                  <Table size='sm'>
+                  <Table size="sm">
                     <Thead>
                       <Tr>
                         <Th>Date</Th>
@@ -123,47 +133,55 @@ export default function Home({ flightRates }) {
                       </Tr>
                     </Thead>
                     <Tbody>
-                    {flightRates.filter(rate =>
-                        rate.destination === "New Delhi" && rate.origin === "Phu Quoc"
-                      ).map((rate, i) => {
-                        return (
-                          <Tr key={i}>
-                            <Td>{rate.date}</Td>
-                            <Td>{rate.price}</Td>
-                            <Td>
-                              <div style={{
-                                width: '100%',
-                                display: 'flex',
-                                alignItems: 'center',
-                                position: 'relative'
-                              }}>
-                                <div style={{
-                                  position: 'absolute',
-                                  left: 2,
-                                  zIndex: 1,
-                                  paddingRight: '7px',
-                                  fontWeight: 'bold'
-                                }}>
-                                  {Math.floor(rate.percentage)}%
-                                </div>
+                      {flightRates
+                        .filter(
+                          (rate) =>
+                            rate.destination === "New Delhi" &&
+                            rate.origin === "Phu Quoc",
+                        )
+                        .map((rate, i) => {
+                          return (
+                            <Tr key={i}>
+                              <Td>{rate.date}</Td>
+                              <Td>{rate.price}</Td>
+                              <Td>
                                 <div
                                   style={{
-                                    width: `${rate.percentage}%`,
-                                    height: '25px',
-                                    backgroundColor: '#E1FFBB',
-                                    borderColor: 'green',
-                                    borderWidth: '1px',
-                                    borderStyle: 'solid',
-                                    position: 'absolute',
-                                    left: 0,
-                                    zIndex: 0
+                                    width: "100%",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    position: "relative",
                                   }}
-                                ></div>
-                              </div>
-                            </Td>
-                          </Tr>
-                        );
-                      })}
+                                >
+                                  <div
+                                    style={{
+                                      position: "absolute",
+                                      left: 2,
+                                      zIndex: 1,
+                                      paddingRight: "7px",
+                                      fontWeight: "bold",
+                                    }}
+                                  >
+                                    {Math.floor(rate.percentage)}%
+                                  </div>
+                                  <div
+                                    style={{
+                                      width: `${rate.percentage}%`,
+                                      height: "25px",
+                                      backgroundColor: "#E1FFBB",
+                                      borderColor: "green",
+                                      borderWidth: "1px",
+                                      borderStyle: "solid",
+                                      position: "absolute",
+                                      left: 0,
+                                      zIndex: 0,
+                                    }}
+                                  ></div>
+                                </div>
+                              </Td>
+                            </Tr>
+                          );
+                        })}
                     </Tbody>
                   </Table>
                 </TableContainer>
@@ -177,8 +195,13 @@ export default function Home({ flightRates }) {
 }
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), 'public', 'data', 'flight-price.json');
-  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const filePath = path.join(
+    process.cwd(),
+    "public",
+    "data",
+    "flight-price.json",
+  );
+  const fileContents = fs.readFileSync(filePath, "utf8");
   const flightRates = JSON.parse(fileContents);
 
   return {
