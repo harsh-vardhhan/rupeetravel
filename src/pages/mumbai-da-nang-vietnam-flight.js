@@ -21,14 +21,12 @@ export default function Home({ flightRates }) {
   return (
     <>
       <Seo
-        title="Rupee Travel | Delhi to Phu Quoc, Vietnam flight"
-        description="Lowest Phu Quoc, Vietnam flight ticket price from New Delhi, India"
-        canonical={
-          "https://www.rupeetravel.com/new-delhi-phu-quoc-vietnam-flight"
-        }
+        title="Rupee Travel | Mumbai to Da Nang, Vietnam flight"
+        description="Lowest Da Nang, Vietnam flight ticket price from Mumbai, India"
+        canonical={"https://www.rupeetravel.com/mumbai-da-nang-vietnam-flight"}
       />
       <main className={styles.main}>
-        <Header title={"Booking flight for Phu Quoc, Vietnam"} />
+        <Header title={"Booking flight for Da Nang, Vietnam"} />
         <Text
           as="h2"
           fontSize="xl"
@@ -37,7 +35,7 @@ export default function Home({ flightRates }) {
             fontWeight: 600,
           }}
         >
-          {"New Delhi to Phu Quoc, Vietnam"}
+          {"Mumbai to Da Nang, Vietnam"}
         </Text>
         <div style={{ marginTop: "20px" }}>
           <SimpleGrid minChildWidth="350px" spacing="40px">
@@ -56,8 +54,8 @@ export default function Home({ flightRates }) {
                       {flightRates
                         .filter(
                           (rate) =>
-                            rate.origin === "New Delhi" &&
-                            rate.destination === "Phu Quoc",
+                            rate.origin === "Mumbai" &&
+                            rate.destination === "Da Nang",
                         )
                         .map((rate, i) => {
                           return (
@@ -117,7 +115,7 @@ export default function Home({ flightRates }) {
             fontWeight: 600,
           }}
         >
-          {"Phu Quoc, Vietnam to New Delhi"}
+          {"Da Nang, Vietnam to Mumbai"}
         </Text>
         <div style={{ marginTop: "20px" }}>
           <SimpleGrid minChildWidth="350px" spacing="40px">
@@ -136,8 +134,8 @@ export default function Home({ flightRates }) {
                       {flightRates
                         .filter(
                           (rate) =>
-                            rate.destination === "New Delhi" &&
-                            rate.origin === "Phu Quoc",
+                            rate.destination === "Mumbai" &&
+                            rate.origin === "Da Nang",
                         )
                         .map((rate, i) => {
                           return (

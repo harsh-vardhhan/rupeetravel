@@ -21,11 +21,9 @@ export default function Home({ flightRates }) {
   return (
     <>
       <Seo
-        title="Rupee Travel | Delhi to Phu Quoc, Vietnam flight"
-        description="Lowest Phu Quoc, Vietnam flight ticket price from New Delhi, India"
-        canonical={
-          "https://www.rupeetravel.com/new-delhi-phu-quoc-vietnam-flight"
-        }
+        title="Rupee Travel | Mumbai to Phu Quoc, Vietnam flight"
+        description="Lowest Phu Quoc, Vietnam flight ticket price from Mumbai, India"
+        canonical={"https://www.rupeetravel.com/mumbai-phu-quoc-vietnam-flight"}
       />
       <main className={styles.main}>
         <Header title={"Booking flight for Phu Quoc, Vietnam"} />
@@ -37,7 +35,7 @@ export default function Home({ flightRates }) {
             fontWeight: 600,
           }}
         >
-          {"New Delhi to Phu Quoc, Vietnam"}
+          {"Mumbai to Phu Quoc, Vietnam"}
         </Text>
         <div style={{ marginTop: "20px" }}>
           <SimpleGrid minChildWidth="350px" spacing="40px">
@@ -56,7 +54,7 @@ export default function Home({ flightRates }) {
                       {flightRates
                         .filter(
                           (rate) =>
-                            rate.origin === "New Delhi" &&
+                            rate.origin === "Mumbai" &&
                             rate.destination === "Phu Quoc",
                         )
                         .map((rate, i) => {
@@ -117,7 +115,7 @@ export default function Home({ flightRates }) {
             fontWeight: 600,
           }}
         >
-          {"Phu Quoc, Vietnam to New Delhi"}
+          {"Phu Quoc, Vietnam to Mumbai"}
         </Text>
         <div style={{ marginTop: "20px" }}>
           <SimpleGrid minChildWidth="350px" spacing="40px">
@@ -136,7 +134,7 @@ export default function Home({ flightRates }) {
                       {flightRates
                         .filter(
                           (rate) =>
-                            rate.destination === "New Delhi" &&
+                            rate.destination === "Mumbai" &&
                             rate.origin === "Phu Quoc",
                         )
                         .map((rate, i) => {
