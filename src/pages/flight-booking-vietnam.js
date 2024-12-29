@@ -53,6 +53,30 @@ export default function Home({ indigo, vietjet }) {
                           {"New Delhi → Da Nang"}
                         </Button>
                       </a>
+                      <a href={"/new-delhi-hanoi-vietnam-flight"}>
+                        <Button variant="outline" colorScheme="green">
+                          {"New Delhi → Hanoi"}
+                          &nbsp;
+                          <Tag
+                            colorScheme="teal"
+                            style={{ width: "fit-content" }}
+                          >
+                            Direct
+                          </Tag>
+                        </Button>
+                      </a>
+                      <a href={"/new-delhi-ho-chi-minh-city-vietnam-flight"}>
+                        <Button variant="outline" colorScheme="green">
+                          {"New Delhi → Ho Chi Minh City"}
+                          &nbsp;
+                          <Tag
+                            colorScheme="teal"
+                            style={{ width: "fit-content" }}
+                          >
+                            Direct
+                          </Tag>
+                        </Button>
+                      </a>
                       <a href={"/mumbai-phu-quoc-vietnam-flight"}>
                         <Button variant="outline" colorScheme="green">
                           {"Mumbai → Phu Quoc"}
@@ -61,6 +85,30 @@ export default function Home({ indigo, vietjet }) {
                       <a href={"/mumbai-da-nang-vietnam-flight"}>
                         <Button variant="outline" colorScheme="green">
                           {"Mumbai → Da Nang"}
+                        </Button>
+                      </a>
+                      <a href={"/mumbai-hanoi-vietnam-flight"}>
+                        <Button variant="outline" colorScheme="green">
+                          {"Mumbai → Hanoi"}
+                          &nbsp;
+                          <Tag
+                            colorScheme="teal"
+                            style={{ width: "fit-content" }}
+                          >
+                            Direct
+                          </Tag>
+                        </Button>
+                      </a>
+                      <a href={"/mumbai-ho-chi-minh-city-vietnam-flight"}>
+                        <Button variant="outline" colorScheme="green">
+                          {"Mumbai → Ho Chi Minh City"}
+                          &nbsp;
+                          <Tag
+                            colorScheme="teal"
+                            style={{ width: "fit-content" }}
+                          >
+                            Direct
+                          </Tag>
                         </Button>
                       </a>
                     </Stack>
