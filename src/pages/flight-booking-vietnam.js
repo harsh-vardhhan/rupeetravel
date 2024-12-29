@@ -44,22 +44,22 @@ export default function Home({ indigo, vietjet }) {
                   <div>
                     <Stack mt="6" spacing="3">
                       <a href={"/new-delhi-phu-quoc-vietnam-flight"}>
-                        <Button colorScheme="green">
+                        <Button variant="outline" colorScheme="green">
                           {"New Delhi → Phu Quoc"}
                         </Button>
                       </a>
                       <a href={"/new-delhi-da-nang-vietnam-flight"}>
-                        <Button colorScheme="green">
+                        <Button variant="outline" colorScheme="green">
                           {"New Delhi → Da Nang"}
                         </Button>
                       </a>
                       <a href={"/mumbai-phu-quoc-vietnam-flight"}>
-                        <Button colorScheme="green">
+                        <Button variant="outline" colorScheme="green">
                           {"Mumbai → Phu Quoc"}
                         </Button>
                       </a>
                       <a href={"/mumbai-da-nang-vietnam-flight"}>
-                        <Button colorScheme="green">
+                        <Button variant="outline" colorScheme="green">
                           {"Mumbai → Da Nang"}
                         </Button>
                       </a>
