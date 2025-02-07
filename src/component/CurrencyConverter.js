@@ -9,10 +9,8 @@ import {
     Tag,
 } from '@chakra-ui/react';
 
-const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base, quote, baseSymbol, quoteSymbol }) => {
-
-    const format = (val) => baseSymbol + val
-    const parse = (val) => val.replace(/^\{`baseSymbol`}/, '')
+const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base, quote, quoteSymbol }) => {
+    const parse = (val) => val.replace(/[^\d.-]/g, '');
     const [value, setValue] = useState(amount)
     const convertedPrice = (value * rate).toLocaleString(region, { style: 'currency', currency: quote })
 
@@ -27,10 +25,10 @@ const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base,
                         <Text style={{ marginTop: '7px', fontWeight: 700 }}>{base}</Text>
                         <NumberInput
                             onChange={(valueString) => setValue(parse(valueString))}
-                            value={format(value)}
+                            value={value} // Directly store the numeric value
                             max={1000000000}
                         >
-                            <NumberInputField />
+                            <NumberInputField onBlur={() => setValue(Number(value) || 0)} />
                         </NumberInput>
                     </Stack>
                 </div>

@@ -26,6 +26,14 @@ import Header from "@/component/header";
 import Image from 'next/image';
 import StructuredData from "@/component/structuredData";
 import CurrencyConverter from "@/component/CurrencyConverter";
+import {
+    USDINRMarketRate, 
+    USDINRBookMyForexRate,
+    INRVNDMarketRate,
+    INRVNDBookMyForexRate,
+    VNDINRMarketRate
+} from '../currency/currency';
+
 
 export default function Home() {
     const structuredData = {
@@ -98,40 +106,27 @@ export default function Home() {
         ]
     };
 
-    const USDINRMarketRate = 83.31
-    const USDINRBookMyForexRate = 84.29
-
-    const INRVNDMarketRate = 294.81
-    const INRVNDBookMyForexRate = 217
-
-    const VNDINRMarketRate = 0.0034
-
     const INRVNDRef = useRef(null);
-
     const INRVNDClick = () => {
         INRVNDRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
     const buyVNDRef = useRef(null);
-
     const buyVNDClick = () => {
         buyVNDRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
     const buyUSDRef = useRef(null);
-
     const buyUSDClick = () => {
         buyUSDRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
     const withdrawVNDRef = useRef(null);
-
     const withdrawVNDClick = () => {
         withdrawVNDRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
     const VNDNotesRef = useRef(null);
-
     const VNDNotesClick = () => {
         VNDNotesRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -262,7 +257,6 @@ export default function Home() {
                             rate={INRVNDMarketRate}
                             base={'INR'}
                             quote={'VND'}
-                            baseSymbol={'₹'}
                             quoteSymbol={'₫'}
                             amount={100}
                         />
@@ -276,7 +270,6 @@ export default function Home() {
                             rate={INRVNDBookMyForexRate}
                             base={'INR'}
                             quote={'VND'}
-                            baseSymbol={'₹'}
                             quoteSymbol={'₫'}
                             amount={100}
                             region={'en-VN'}
@@ -350,7 +343,6 @@ export default function Home() {
                             rate={USDINRBookMyForexRate}
                             base={'USD'}
                             quote={'INR'}
-                            baseSymbol={'$'}
                             quoteSymbol={'₹'}
                             amount={100}
                             region={'en-IN'}
@@ -361,7 +353,6 @@ export default function Home() {
                             rate={USDINRMarketRate}
                             base={'USD'}
                             quote={'INR'}
-                            baseSymbol={'$'}
                             quoteSymbol={'₹'}
                             amount={100}
                             region={'en-IN'}
@@ -400,7 +391,6 @@ export default function Home() {
                                 rate={USDINRMarketRate}
                                 base={'USD'}
                                 quote={'INR'}
-                                baseSymbol={'$'}
                                 quoteSymbol={'₹'}
                                 amount={2000}
                                 region={'en-IN'}
@@ -419,7 +409,6 @@ export default function Home() {
                                 rate={USDINRMarketRate}
                                 base={'USD'}
                                 quote={'INR'}
-                                baseSymbol={'$'}
                                 quoteSymbol={'₹'}
                                 amount={3000}
                                 region={'en-IN'}
@@ -567,7 +556,6 @@ export default function Home() {
                                 rate={VNDINRMarketRate}
                                 base={'VND'}
                                 quote={'INR'}
-                                baseSymbol={'₫'}
                                 quoteSymbol={'₹'}
                                 amount={15000000}
                                 region={'en-IN'}
