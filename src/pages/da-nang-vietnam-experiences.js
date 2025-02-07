@@ -32,7 +32,6 @@ export default function Home() {
             <Tweet id="1733011468139032687" />
           </SimpleGrid>
           <SimpleGrid minChildWidth="350px" spacing="40px">
-            <Tweet id="1730045655782142016" />
             <Tweet id="1729812022026502559" />
           </SimpleGrid>
         </div>
