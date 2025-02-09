@@ -504,16 +504,82 @@ export default function Home() {
                             />
                         </Card>
 
-                        {/* <Heading ref={Day5Ref} style={{ marginTop: '20px' }}> Day 5: Ubud</Heading>
+                        <Heading ref={Day5Ref} style={{ marginTop: '20px' }}> Day 5: Ubud</Heading>
+
+                        <Image
+                            src={"/images/tirta-empul-temple-ubud.webp"}
+                            alt="Tirta Empul temple, Bali"
+                            height={700}
+                            width={1000}
+                            style={{
+                                marginTop: "10px",
+                                borderWidth: 'medium',
+                                borderColor: 'aliceblue'
+                            }}
+                        />
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            {` `}
+                            {`Tirta Empul temple is the Hindu temple where you take bath in the holy water. 
+                            We travelled to this temple by renting a scooty cause its a lot cheaper than taxi. 
+                            The enterance fee to temple is 75,000 IDR/person`}
                         </Text>
+
+                        <CurrencyConverter
+                            currencyPair={'IDRINR'}
+                            exchange={'forex market'}
+                            rate={IDRINRMarketRate}
+                            base={'IDR'}
+                            quote={'INR'}
+                            quoteSymbol={'₹'}
+                            amount={75000}
+                            region={'en-ID'}
+                        />
 
                         <Heading ref={Day6Ref} style={{ marginTop: '20px' }}> Day 6: Ubud</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            {` `}
+                            {`Tegenungan waterfall comprises of an experience
+                             where you get to walk down the stairs
+                            of a mountain eventually reaching the waterfall. 
+                            The enterance cost to waterfall is 20,000 IDR/person`}
                         </Text>
 
+                        <CurrencyConverter
+                            currencyPair={'IDRINR'}
+                            exchange={'forex market'}
+                            rate={IDRINRMarketRate}
+                            base={'IDR'}
+                            quote={'INR'}
+                            quoteSymbol={'₹'}
+                            amount={20000}
+                            region={'en-ID'}
+                        />
+
+                        <Image
+                            src={"/images/tegenungan-waterfall-omma-club.webp"}
+                            alt="Tirta Empul temple, Bali"
+                            height={700}
+                            width={1000}
+                            style={{
+                                marginTop: "10px",
+                                borderWidth: 'medium',
+                                borderColor: 'aliceblue'
+                            }}
+                        />
+
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            <Link
+                                href="https://ommabali.com/"
+                                isExternal fontWeight="bold"
+                                textDecoration="underline"
+                            >
+                                {"Omma Club"}
+                            </Link>
+                            {` is the fun part which gives you access to pool with a view of the waterfall.
+                            you can certain sittings in the club and access to the pool
+                            for free if you order food or coffee.`}
+                        </Text>
+
+
+                        {/* 
                         <Heading ref={Day7Ref} style={{ marginTop: '20px' }}> Day 7: Uluwatu</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             {` `}
