@@ -577,13 +577,12 @@ export default function Home() {
                             you can certain sittings in the club and access to the pool
                             for free if you order food or coffee.`}
                         </Text>
-
-
-                        {/* 
                         <Heading ref={Day7Ref} style={{ marginTop: '20px' }}> Day 7: Uluwatu</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            {` `}
-                        </Text> */}
+                            {`It was our last day in Bali hence we returned from Ubud.
+                            we went for Uluwatu cause we didn't hadn't seen it 
+                            and also it was close to the airport`}
+                        </Text>
 
                     </div>
                 </div>
