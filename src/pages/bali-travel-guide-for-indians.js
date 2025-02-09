@@ -160,7 +160,7 @@ export default function Home() {
 
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             Though Indonesia provides facility to apply for e-visa for Indian citizens, it is not mandatory.
-                            You can simply get get visa on arrival at the airport.
+                            You can simply get visa on arrival at the airport.
                             You need to pay 500,000 IDR for visa on arrival either via USD currency notes or via credit/debit card.
                         </Text>
 
@@ -232,9 +232,137 @@ export default function Home() {
                             />
                         </Card>
 
-                        {/* <Heading ref={Day2Ref} style={{ marginTop: '20px' }}> Day 2: Seminyak</Heading>
+                        <div style={{
+                            marginTop: "10px",
+                        }}>
+                            <Image
+                                src={"/images/azul-beach-club.webp"}
+                                alt="Bali Kuta Arabica Cafe"
+                                height={700}
+                                width={500}
+                            />
+                        </div>
+
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            {` `}
+                            Kuta has multiple beach clubs that you can visit in the evening time. We visited Azul Beach Club.
+                            You can enjoy the sunset view from the beach club.
+                        </Text>
+
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
+                            <Heading fontSize={'lg'}>{` What is the budget drink option available?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                Since you need to buy a drink to sit at a beach club, you can try out Bali Cider.
+                                We had a bottle of Bali Cider for 49,000 IDR each.
+                            </Text>
+                            <Image
+                                src={"/images/azul-beach-club-cider.webp"}
+                                alt="Bali Cider at Azul Beach Club"
+                                height={200}
+                                width={400}
+                                style={{ marginTop: "10px" }}
+                            />
+                            <CurrencyConverter
+                                currencyPair={'IDRINR'}
+                                exchange={'forex market'}
+                                rate={IDRINRMarketRate}
+                                base={'IDR'}
+                                quote={'INR'}
+                                quoteSymbol={'₹'}
+                                amount={49000}
+                                region={'en-ID'}
+                            />
+                        </Card>
+
+                        <Heading ref={Day2Ref} style={{ marginTop: '20px' }}> Day 2: Seminyak</Heading>
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            {`Raya Seminyak is a street which offers boutiques, art shops. 
+                            you can also enjoy great cafe's and restaurants. Also, if you are looking for cash, there is an abundance of ATMs on this street.`}
+                        </Text>
+
+                        <Image
+                            src={"/images/bali-seminyak-atms.webp"}
+                            alt="ATMs at Raya Seminyak, Bali"
+                            height={700}
+                            width={1000}
+                            style={{
+                                marginTop: "10px",
+                                borderWidth: 'medium',
+                                borderColor: 'aliceblue'
+                            }}
+
+                        />
+
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
+                            <Heading fontSize={'lg'}>{` What is the budget food option available?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                We had a Margherita pizza at a restaurant on Raya Seminyak for 93,000 IDR.
+                                The place is called The Shisha House.
+                            </Text>
+                            <Image
+                                src={"/images/margherita-seminyak.webp"}
+                                alt="Margherita pizza at The Shisha House, Seminyak"
+                                height={300}
+                                width={500}
+                                style={{ marginTop: "10px" }}
+                            />
+                            <CurrencyConverter
+                                currencyPair={'IDRINR'}
+                                exchange={'forex market'}
+                                rate={IDRINRMarketRate}
+                                base={'IDR'}
+                                quote={'INR'}
+                                quoteSymbol={'₹'}
+                                amount={93000}
+                                region={'en-ID'}
+                            />
+                        </Card>
+
+                        <Image
+                            src={"/images/seminyak-coconut-beach.webp"}
+                            alt="Coconut water at Seminyak beach"
+                            height={300}
+                            width={400}
+                            style={{
+                                marginTop: "10px",
+                                borderWidth: 'medium',
+                                borderColor: 'aliceblue'
+                            }}
+                        />
+
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            {`By the evening, as the sun sets, you can visit the beach. 
+                            There are multiple coconut vendors there but you can go with the one who offer free chairs to sit and enjoy the sunset.
+                            The coconut water costs 30,000 IDR but you can bargain and get it for 25,000 IDR.`}
+                        </Text>
+
+                        <CurrencyConverter
+                            currencyPair={'IDRINR'}
+                            exchange={'forex market'}
+                            rate={IDRINRMarketRate}
+                            base={'IDR'}
+                            quote={'INR'}
+                            quoteSymbol={'₹'}
+                            amount={30000}
+                            region={'en-ID'}
+                        />
+
+
+                        <Image
+                            src={"/images/seminyak-beach-bean-bag.webp"}
+                            alt="Seminayk beach bean bag"
+                            height={300}
+                            width={400}
+                            style={{
+                                marginTop: "10px",
+                                borderWidth: 'medium',
+                                borderColor: 'aliceblue'
+                            }}
+                        />
+
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            {`By the night, within Seminyak beach, you can enjoy the beach clubs.
+                            You can beach clubs here are pretty much right on the beach unlike Kuta where they are 
+                            across the road. This makes the experience even more special.`}
                         </Text>
 
                         <Heading ref={Day3Ref} style={{ marginTop: '20px' }}> Day 3: Canggu</Heading>
@@ -242,7 +370,7 @@ export default function Home() {
                             {` `}
                         </Text>
 
-                        <Heading ref={Day4Ref} style={{ marginTop: '20px' }}> Day 4: Ubud</Heading>
+                        {/* <Heading ref={Day4Ref} style={{ marginTop: '20px' }}> Day 4: Ubud</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             {` `}
                         </Text>
