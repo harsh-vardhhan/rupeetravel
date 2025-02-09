@@ -201,9 +201,11 @@ export default function Home() {
                                 {"Beachwalk Shopping Center"}
                             </Link>
                             .
-                            You might what can be so special about a shopping mall ? well they have designed the mall aligned with theme of Bali. Hence its unlike
-                            any other mall you have visited in India. You can also try out Arabica cafe which is a Japanese coffee chain. Their white themed cafe
-                            is great for Instagram photos.
+                            You might what can be so special about a shopping mall ? 
+                            well they have designed the mall aligned with theme of Bali. 
+                            Hence its unlike any other mall you have visited in India. 
+                            You can also try out Arabica cafe which is a Japanese coffee chain. 
+                            Their white themed cafe is great for Instagram photos.
                         </Text>
 
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
@@ -276,7 +278,8 @@ export default function Home() {
                         <Heading ref={Day2Ref} style={{ marginTop: '20px' }}> Day 2: Seminyak</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             {`Raya Seminyak is a street which offers boutiques, art shops. 
-                            you can also enjoy great cafe's and restaurants. Also, if you are looking for cash, there is an abundance of ATMs on this street.`}
+                            you can also enjoy great cafe's and restaurants. Also, if you are looking for cash, 
+                            there is an abundance of ATMs on this street.`}
                         </Text>
 
                         <Image
@@ -320,7 +323,7 @@ export default function Home() {
                         <Image
                             src={"/images/seminyak-coconut-beach.webp"}
                             alt="Coconut water at Seminyak beach"
-                            height={300}
+                            height={200}
                             width={400}
                             style={{
                                 marginTop: "10px",
@@ -331,7 +334,8 @@ export default function Home() {
 
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             {`By the evening, as the sun sets, you can visit the beach. 
-                            There are multiple coconut vendors there but you can go with the one who offer free chairs to sit and enjoy the sunset.
+                            There are multiple coconut vendors there but you can go with the one who 
+                            offer free chairs to sit and enjoy the sunset.
                             The coconut water costs 30,000 IDR but you can bargain and get it for 25,000 IDR.`}
                         </Text>
 
@@ -350,7 +354,7 @@ export default function Home() {
                         <Image
                             src={"/images/seminyak-beach-bean-bag.webp"}
                             alt="Seminayk beach bean bag"
-                            height={300}
+                            height={200}
                             width={400}
                             style={{
                                 marginTop: "10px",
