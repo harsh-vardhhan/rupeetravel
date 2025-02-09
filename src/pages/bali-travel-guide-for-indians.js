@@ -13,6 +13,7 @@ import {
     TableContainer,
     Link,
     Card,
+    Box
 } from '@chakra-ui/react';
 import Seo from '@/component/seo';
 import Header from "@/component/header";
@@ -201,10 +202,10 @@ export default function Home() {
                                 {"Beachwalk Shopping Center"}
                             </Link>
                             .
-                            You might what can be so special about a shopping mall ? 
-                            well they have designed the mall aligned with theme of Bali. 
-                            Hence its unlike any other mall you have visited in India. 
-                            You can also try out Arabica cafe which is a Japanese coffee chain. 
+                            You might what can be so special about a shopping mall ?
+                            well they have designed the mall aligned with theme of Bali.
+                            Hence its unlike any other mall you have visited in India.
+                            You can also try out Arabica cafe which is a Japanese coffee chain.
                             Their white themed cafe is great for Instagram photos.
                         </Text>
 
@@ -371,8 +372,53 @@ export default function Home() {
 
                         <Heading ref={Day3Ref} style={{ marginTop: '20px' }}> Day 3: Canggu</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            {` `}
+                            {`Canggu has the amazing beach clubs for late night partying in Bali. 
+                        One of the most popular one is FINNS Beach Club. The best part is that club has zero entry fee.
+                        You have to only pay for the food and drinks you order.`}
                         </Text>
+
+                        <Box display="flex" justifyContent="center" mt={4}>
+                            <Box
+                                as="iframe"
+                                width="320px"
+                                height="560px"
+                                src="https://www.youtube.com/embed/GEymJ1R24wk"
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            />
+                        </Box>
+
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
+                            <Heading fontSize={'lg'}>{` What is the budget drink option available?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                To keep your partying experience budget friendly, 
+                                you can try out a Bintang beer.
+                                along with that try to use the
+                                {" "}
+                                <Link
+                                    href="https://finnsbeachclub.com/venue/beach-deluxe/drink-menu/#hh"
+                                    isExternal fontWeight="bold"
+                                    textDecoration="underline"
+                                >
+                                    {"happy hours"}
+                                </Link>
+                                {" "}
+                                to get two bintang beers at the price of one 
+                                which will cost you 85,000 IDR.
+                            </Text>
+                            <CurrencyConverter
+                                currencyPair={'IDRINR'}
+                                exchange={'forex market'}
+                                rate={IDRINRMarketRate}
+                                base={'IDR'}
+                                quote={'INR'}
+                                quoteSymbol={'₹'}
+                                amount={85000}
+                                region={'en-ID'}
+                            />
+                        </Card>
 
                         {/* <Heading ref={Day4Ref} style={{ marginTop: '20px' }}> Day 4: Ubud</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
