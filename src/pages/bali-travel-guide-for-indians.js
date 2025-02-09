@@ -65,6 +65,11 @@ export default function Home() {
         Day7Ref.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    const HotelsRef = useRef(null);
+    const HotelsClick = () => {
+        HotelsRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
 
     const TableRow = ({ onClick, label, tag, tagColor }) => (
         <Tr onClick={onClick} style={{ cursor: "pointer" }}>
@@ -125,6 +130,7 @@ export default function Home() {
                                     <TableRow onClick={Day5Click} label="Day 5 - Ubud" tagColor="teal" />
                                     <TableRow onClick={Day6Click} label="Day 6 - Ubud" tagColor="teal" />
                                     <TableRow onClick={Day7Click} label="Day 7 - Uluwatu" tagColor="teal" />
+                                    <TableRow onClick={HotelsClick} label="Hotels we stayed" tagColor="teal" />
                                 </Tbody>
                             </Table>
                         </TableContainer>
@@ -587,7 +593,7 @@ export default function Home() {
 
                         <Image
                             src={"/images/uluwatu-temple.webp"}
-                            alt="Tirta Empul temple, Bali"
+                            alt="Uluwatu temple, Bali"
                             height={200}
                             width={400}
                             style={{
@@ -612,6 +618,62 @@ export default function Home() {
                             quoteSymbol={'₹'}
                             amount={50000}
                             region={'en-ID'}
+                        />
+
+                        <Heading  ref={HotelsRef} style={{ marginTop: '20px' }}>
+                            Hotels we stayed
+                        </Heading>
+
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            {`Here is the list of hotels in which we stayed`}
+                        </Text>
+
+                        <TableContainer style={{
+                            borderWidth: 'medium',
+                            borderColor: 'aliceblue',
+                            marginTop: '10px',
+                        }}>
+                            <Table variant='simple'>
+                                <Thead>
+                                    <Tr>
+                                        <Th>Hotel </Th>
+                                        <Th>Price </Th>
+                                    </Tr>
+                                </Thead>
+                                <Tbody>
+                                    <Tr>
+                                        <Td>Zuri Hotel, Kuta</Td>
+                                        <Td>₹ 2,100</Td>
+                                    </Tr>
+                                    <Tr>
+                                        <Td>Lokasari Retreat</Td>
+                                        <Td>₹ 2,074</Td>
+                                    </Tr>
+                                    <Tr>
+                                        <Td>Puri Padma Hotel & Resort</Td>
+                                        <Td>₹ 2,800</Td>
+                                    </Tr>
+                                </Tbody>
+                            </Table>
+                        </TableContainer>
+
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            {`but its important 
+                            you don't blindly go for the same options. 
+                            Instead check on Google Map with hotel filter to see the budget hotels that exist around you
+                            when you're in Bali.`}
+                        </Text>
+
+                        <Image
+                            src={"/images/google-map-with-hotels-filter.webp"}
+                            alt="Uluwatu temple, Bali"
+                            height={700}
+                            width={1000}
+                            style={{
+                                marginTop: "10px",
+                                borderWidth: 'medium',
+                                borderColor: 'aliceblue'
+                            }}
                         />
 
                     </div>
