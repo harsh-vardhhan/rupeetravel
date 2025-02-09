@@ -375,7 +375,7 @@ export default function Home() {
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             {`In day time you can visit Tanah lot temple. You can take a taxi via Grab app.
                             it's best to visit this place when in Canggu cause it's the closest from here.
-                            The enterance fee to the temple costs 75,000 IDR/per person`}
+                            The enterance fee to the temple costs 75,000 IDR/person`}
                         </Text>
 
                         <CurrencyConverter
@@ -440,8 +440,69 @@ export default function Home() {
 
                         <Heading ref={Day4Ref} style={{ marginTop: '20px' }}> Day 4: Ubud</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            {` `}
+                            {`You can visit Alas Hurum where you can experience mountainuous rice fields.
+                            An amazing place for couple photoshoot.`}
                         </Text>
+
+                        <Image
+                            src={"/images/alas-hurum-ubud-bali.webp"}
+                            alt="Alas Hurum, Ubud, Bali"
+                            height={700}
+                            width={1000}
+                            style={{
+                                marginTop: "10px",
+                                borderWidth: 'medium',
+                                borderColor: 'aliceblue'
+                            }}
+                        />
+
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            {`The enterance fee to Alas Hurum costs 50,000 IDR/person`}
+                        </Text>
+
+                        <CurrencyConverter
+                            currencyPair={'IDRINR'}
+                            exchange={'forex market'}
+                            rate={IDRINRMarketRate}
+                            base={'IDR'}
+                            quote={'INR'}
+                            quoteSymbol={'₹'}
+                            amount={50000}
+                            region={'en-ID'}
+                        />
+
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
+                            <Heading fontSize={'lg'}>{` What is the budget food option available?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                We had a Smoked Bbq Chicken at the
+                                {" "}
+                                <Link
+                                    href="https://alasharum.com/en/cretya-ubud"
+                                    isExternal fontWeight="bold"
+                                    textDecoration="underline"
+                                >
+                                    {"Cretya Club."}
+                                </Link>
+                                {" "}. It had cost us 125,000 IDR and buying that food also gives you access to their pool.
+                            </Text>
+                            <Image
+                                src={"/images/alas-hurum-cretya-ubud.webp"}
+                                alt="Margherita pizza at The Shisha House, Seminyak"
+                                height={700}
+                                width={1000}
+                                style={{ marginTop: "10px" }}
+                            />
+                            <CurrencyConverter
+                                currencyPair={'IDRINR'}
+                                exchange={'forex market'}
+                                rate={IDRINRMarketRate}
+                                base={'IDR'}
+                                quote={'INR'}
+                                quoteSymbol={'₹'}
+                                amount={125000}
+                                region={'en-ID'}
+                            />
+                        </Card>
 
                         {/* <Heading ref={Day5Ref} style={{ marginTop: '20px' }}> Day 5: Ubud</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
