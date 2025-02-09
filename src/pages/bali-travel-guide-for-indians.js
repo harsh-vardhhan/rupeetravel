@@ -70,6 +70,11 @@ export default function Home() {
         HotelsRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    const MoneySavingRef = useRef(null);
+    const MoneySavingClick = () => {
+        MoneySavingRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
 
     const TableRow = ({ onClick, label, tag, tagColor }) => (
         <Tr onClick={onClick} style={{ cursor: "pointer" }}>
@@ -131,6 +136,7 @@ export default function Home() {
                                     <TableRow onClick={Day6Click} label="Day 6 - Ubud" tagColor="teal" />
                                     <TableRow onClick={Day7Click} label="Day 7 - Uluwatu" tagColor="teal" />
                                     <TableRow onClick={HotelsClick} label="Hotels we stayed" tagColor="teal" />
+                                    <TableRow onClick={MoneySavingClick} label="Money saving tips" tagColor="teal" />
                                 </Tbody>
                             </Table>
                         </TableContainer>
@@ -620,7 +626,7 @@ export default function Home() {
                             region={'en-ID'}
                         />
 
-                        <Heading  ref={HotelsRef} style={{ marginTop: '20px' }}>
+                        <Heading ref={HotelsRef} style={{ marginTop: '20px' }}>
                             Hotels we stayed
                         </Heading>
 
@@ -674,6 +680,62 @@ export default function Home() {
                                 borderWidth: 'medium',
                                 borderColor: 'aliceblue'
                             }}
+                        />
+
+                        <Heading ref={MoneySavingRef} style={{ marginTop: '20px' }}>
+                            Money saving tips
+                        </Heading>
+
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            Avoid using ATMs with mark-up fee.
+                            The ATMs will most likely inform you before cash withdrawal
+                        </Text>
+
+                        <Image
+                            src={"/images/atm-mark-up-fee.webp"}
+                            alt="ATM mark-up fee"
+                            height={400}
+                            width={400}
+                            style={{
+                                marginTop: "10px",
+                                borderWidth: 'medium',
+                                borderColor: 'aliceblue'
+                            }}
+                        />
+
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            If you would like to further save money, but at the cost of less convenience,
+                            you can bring USD currency notes from India and get them converted to IDR at a forex dealer.
+                            By using a forex dealer, not only do you save on the markup, but you also get better conversion rates.
+                        </Text>
+
+                        <Image
+                            src={"/images/IDR-forex-dealer.webp"}
+                            alt="ATM mark-up fee"
+                            height={400}
+                            width={700}
+                            style={{
+                                marginTop: "10px",
+                                borderWidth: 'medium',
+                                borderColor: 'aliceblue'
+                            }}
+                        />
+
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            Grab Taxi is a relatively more expensive option to commute in Bali.
+                            Instead, rent a scooter to travel. We got a scooter
+                            at a cost of 75,000 IDR per day, which already had 1 litre of petrol.
+                        </Text>
+
+                        <CurrencyConverter
+                            currencyPair={'IDRINR'}
+                            exchange={'forex market'}
+                            rate={IDRINRMarketRate}
+                            base={'IDR'}
+                            quote={'INR'}
+                            quoteSymbol={'₹'}
+                            amount={75000}
+                            region={'en-ID'}
                         />
 
                     </div>
