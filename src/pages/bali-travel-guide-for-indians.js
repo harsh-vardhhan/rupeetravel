@@ -366,11 +366,29 @@ export default function Home() {
 
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             {`By the night, within Seminyak beach, you can enjoy the beach clubs.
-                            You can beach clubs here are pretty much right on the beach unlike Kuta where they are 
+                            Beach clubs here are pretty much right on the beach unlike Kuta where they are 
                             across the road. This makes the experience even more special.`}
                         </Text>
 
                         <Heading ref={Day3Ref} style={{ marginTop: '20px' }}> Day 3: Canggu</Heading>
+
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            {`In day time you can visit Tanah lot temple. You can take a taxi via Grab app.
+                            it's best to visit this place when in Canggu cause it's the closest from here.
+                            The enterance fee to the temple costs 75,000 IDR/per person`}
+                        </Text>
+
+                        <CurrencyConverter
+                            currencyPair={'IDRINR'}
+                            exchange={'forex market'}
+                            rate={IDRINRMarketRate}
+                            base={'IDR'}
+                            quote={'INR'}
+                            quoteSymbol={'₹'}
+                            amount={75000}
+                            region={'en-ID'}
+                        />
+
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             {`Canggu has the amazing beach clubs for late night partying in Bali. 
                         One of the most popular one is FINNS Beach Club. The best part is that club has zero entry fee.
@@ -393,7 +411,7 @@ export default function Home() {
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
                             <Heading fontSize={'lg'}>{` What is the budget drink option available?`}</Heading>
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                                To keep your partying experience budget friendly, 
+                                To keep your partying experience budget friendly,
                                 you can try out a Bintang beer.
                                 along with that try to use the
                                 {" "}
@@ -405,7 +423,7 @@ export default function Home() {
                                     {"happy hours"}
                                 </Link>
                                 {" "}
-                                to get two bintang beers at the price of one 
+                                to get two bintang beers at the price of one
                                 which will cost you 85,000 IDR.
                             </Text>
                             <CurrencyConverter
@@ -420,12 +438,12 @@ export default function Home() {
                             />
                         </Card>
 
-                        {/* <Heading ref={Day4Ref} style={{ marginTop: '20px' }}> Day 4: Ubud</Heading>
+                        <Heading ref={Day4Ref} style={{ marginTop: '20px' }}> Day 4: Ubud</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             {` `}
                         </Text>
 
-                        <Heading ref={Day5Ref} style={{ marginTop: '20px' }}> Day 5: Ubud</Heading>
+                        {/* <Heading ref={Day5Ref} style={{ marginTop: '20px' }}> Day 5: Ubud</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             {` `}
                         </Text>
