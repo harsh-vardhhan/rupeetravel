@@ -577,12 +577,42 @@ export default function Home() {
                             you can certain sittings in the club and access to the pool
                             for free if you order food or coffee.`}
                         </Text>
+
                         <Heading ref={Day7Ref} style={{ marginTop: '20px' }}> Day 7: Uluwatu</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             {`It was our last day in Bali hence we returned from Ubud.
                             we went for Uluwatu cause we didn't hadn't seen it 
-                            and also it was close to the airport`}
+                            and also it was close to the airport.`}
                         </Text>
+
+                        <Image
+                            src={"/images/uluwatu-temple.webp"}
+                            alt="Tirta Empul temple, Bali"
+                            height={200}
+                            width={400}
+                            style={{
+                                marginTop: "10px",
+                                borderWidth: 'medium',
+                                borderColor: 'aliceblue'
+                            }}
+                        />
+
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            {`Uluwatu temple has a senic view of sea from the mountain.
+                              Be precautious, a lot of monkeys in the temple and nearby area. 
+                              The entry fee of the temple is 50,000 IDR/person`}
+                        </Text>
+
+                        <CurrencyConverter
+                            currencyPair={'IDRINR'}
+                            exchange={'forex market'}
+                            rate={IDRINRMarketRate}
+                            base={'IDR'}
+                            quote={'INR'}
+                            quoteSymbol={'₹'}
+                            amount={50000}
+                            region={'en-ID'}
+                        />
 
                     </div>
                 </div>
