@@ -75,13 +75,15 @@ export default function Home() {
         MoneySavingRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    const TotalCostRef = useRef(null);
+    const TotalCostClick = () => {
+        TotalCostRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
 
-    const TableRow = ({ onClick, label, tag, tagColor }) => (
+    const TableRow = ({ onClick, label }) => (
         <Tr onClick={onClick} style={{ cursor: "pointer" }}>
             <Td>
-                {tag && <Tag colorScheme={tagColor}>{tag}</Tag>}
-                {tag && <br />}
-                <div style={{ marginTop: tag ? 10 : 0 }}>
+                <div>
                     <b><u>{label}</u></b>
                 </div>
             </Td>
@@ -128,15 +130,16 @@ export default function Home() {
                                 </Thead>
                                 <Tbody>
                                     <TableRow onClick={FlightAndVisaClick} label="Booking flights and applying visa" />
-                                    <TableRow onClick={Day1Click} label="Day 1 - Kuta" tagColor="red" />
-                                    <TableRow onClick={Day2Click} label="Day 2 - Seminyak" tagColor="teal" />
-                                    <TableRow onClick={Day3Click} label="Day 3 - Canggu" tagColor="teal" />
-                                    <TableRow onClick={Day4Click} label="Day 4 - Ubud" tagColor="teal" />
-                                    <TableRow onClick={Day5Click} label="Day 5 - Ubud" tagColor="teal" />
-                                    <TableRow onClick={Day6Click} label="Day 6 - Ubud" tagColor="teal" />
-                                    <TableRow onClick={Day7Click} label="Day 7 - Uluwatu" tagColor="teal" />
-                                    <TableRow onClick={HotelsClick} label="Hotels we stayed" tagColor="teal" />
-                                    <TableRow onClick={MoneySavingClick} label="Money saving tips" tagColor="teal" />
+                                    <TableRow onClick={Day1Click} label="Day 1 - Kuta" />
+                                    <TableRow onClick={Day2Click} label="Day 2 - Seminyak" />
+                                    <TableRow onClick={Day3Click} label="Day 3 - Canggu" />
+                                    <TableRow onClick={Day4Click} label="Day 4 - Ubud" />
+                                    <TableRow onClick={Day5Click} label="Day 5 - Ubud" />
+                                    <TableRow onClick={Day6Click} label="Day 6 - Ubud" />
+                                    <TableRow onClick={Day7Click} label="Day 7 - Uluwatu" />
+                                    <TableRow onClick={HotelsClick} label="Hotels we stayed" />
+                                    <TableRow onClick={MoneySavingClick} label="Money saving tips" />
+                                    <TableRow onClick={TotalCostClick} label="Total cost" />
                                 </Tbody>
                             </Table>
                         </TableContainer>
@@ -767,10 +770,10 @@ export default function Home() {
                             region={'en-ID'}
                         />
 
-                        <Heading ref={Day7Ref} style={{ marginTop: '20px' }}> Total cost of trip for a couple</Heading>
+                        <Heading ref={TotalCostRef} style={{ marginTop: '20px' }}> Total cost of trip for a couple</Heading>
 
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            Depsite being fairly detailed about the cost, still consider significant variation 
+                            Depsite being fairly detailed about the cost, still consider significant variation
                             in cost for your own trip since personal preferences can vary.
                         </Text>
 
