@@ -736,7 +736,7 @@ export default function Home() {
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             If you would like to further save money, but at the cost of less convenience,
                             you can bring USD currency notes from India and get them converted to IDR at a forex dealer.
-                            By using a forex dealer, not only do you save on the markup, but you also get better conversion rates.
+                            By using a forex dealer, not only you save on the mark-up fee, but you also get better conversion rates.
                         </Text>
 
                         <Image
