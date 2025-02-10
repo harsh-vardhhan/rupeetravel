@@ -285,6 +285,14 @@ export async function getStaticProps() {
       tagColor: `red`,
       link: `/da-nang-vietnam-experiences`,
     },
+    {
+      key: 5,
+      heading: ` Bali travel guide for Indians`,
+      subHeading: ` 7 day itinerary for Couples in Bali`,
+      tagText: `Blog`,
+      tagColor: `red`,
+      link: `/bali-travel-guide-for-indians`,
+    },
   ];
 
   return {
