@@ -777,7 +777,7 @@ export default function Home() {
 
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             Despite being fairly detailed about the cost, still consider significant variation
-                            in cost for your own trip since personal preferences can vary.
+                            in cost for your own trip since personal preferences vary.
                         </Text>
 
                         <TableContainer style={{
