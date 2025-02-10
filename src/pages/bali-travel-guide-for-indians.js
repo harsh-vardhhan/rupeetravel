@@ -776,7 +776,7 @@ export default function Home() {
                         <Heading ref={TotalCostRef} style={{ marginTop: '20px' }}> Total cost of trip for a couple</Heading>
 
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            Depsite being fairly detailed about the cost, still consider significant variation
+                            Despite being fairly detailed about the cost, still consider significant variation
                             in cost for your own trip since personal preferences can vary.
                         </Text>
 
