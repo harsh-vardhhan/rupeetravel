@@ -641,7 +641,7 @@ export default function Home() {
 
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             {`Uluwatu temple has a scenic view of sea from the mountain.
-                              Be precautious, a lot of monkeys in the temple and nearby area. 
+                              Be precautious, a lot of monkeys in the temple and nearby areas. 
                               The entry fee of the temple is 50,000 IDR/person`}
                         </Text>
 
