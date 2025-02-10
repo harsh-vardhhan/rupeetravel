@@ -3,7 +3,6 @@ import styles from '@/styles/Home.module.css';
 import {
     Text,
     Heading,
-    Tag,
     Table,
     Thead,
     Tbody,
