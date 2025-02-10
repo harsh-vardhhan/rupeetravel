@@ -305,7 +305,6 @@ export default function Home() {
                                 borderWidth: 'medium',
                                 borderColor: 'aliceblue'
                             }}
-
                         />
 
                         <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
@@ -451,6 +450,36 @@ export default function Home() {
                         </Card>
 
                         <Heading ref={Day4Ref} style={{ marginTop: '20px' }}> Day 4: Ubud</Heading>
+
+                        <Card style={{ padding: '20px', marginTop: '10px', backgroundColor: '#FAF3F0' }}>
+                            <Heading fontSize={'lg'}>{` How to reach Ubud?`}</Heading>
+                            <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                                {`Ubud is relatively far from Canggu hence we couldn't go by scooter. 
+                            You can also book a Grab taxi like us. It had cost us 351,000 IDR for the trip.`}
+                            </Text>
+                            <Image
+                                src={"/images/canggu-to-ubud-grab.webp"}
+                                alt="Canggu to Ubud in Grab taxi"
+                                height={700}
+                                width={400}
+                                style={{
+                                    marginTop: "10px",
+                                    borderWidth: 'medium',
+                                    borderColor: 'aliceblue'
+                                }}
+                            />
+                            <CurrencyConverter
+                                currencyPair={'IDRINR'}
+                                exchange={'forex market'}
+                                rate={IDRINRMarketRate}
+                                base={'IDR'}
+                                quote={'INR'}
+                                quoteSymbol={'₹'}
+                                amount={351000}
+                                region={'en-ID'}
+                            />
+                        </Card>
+
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
                             {`You can visit Alas Hurum where you can experience mountainuous rice fields.
                             An amazing place for couple photoshoot.`}
@@ -737,6 +766,86 @@ export default function Home() {
                             amount={75000}
                             region={'en-ID'}
                         />
+
+                        <Heading ref={Day7Ref} style={{ marginTop: '20px' }}> Total cost of trip for a couple</Heading>
+
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            Depsite being fairly detailed about the cost, still consider significant variation 
+                            in cost for your own trip since personal preferences can vary.
+                        </Text>
+
+                        <TableContainer style={{
+                            borderWidth: 'medium',
+                            borderColor: 'aliceblue',
+                            marginTop: '10px',
+                        }}>
+                            <Table variant='simple' size="sm">
+                                <Thead>
+                                    <Tr>
+                                        <Th>Category</Th>
+                                        <Th>Cost</Th>
+                                    </Tr>
+                                </Thead>
+                                <Tbody>
+                                    <Tr><Td>Day 1 - Kuta</Td><Td></Td></Tr>
+                                    <Tr><Td>Lunch</Td><Td>₹ 660</Td></Tr>
+                                    <Tr><Td>Dinner</Td><Td>₹ 660</Td></Tr>
+                                    <Tr><Td>Drinks</Td><Td>₹ 530</Td></Tr>
+                                    <Tr><Td>Hotel</Td><Td>₹ 2,100</Td></Tr>
+                                    <Tr><Td>Coffee</Td><Td>₹ 300</Td></Tr>
+
+                                    <Tr><Td>Day 2 - Seminyak</Td><Td></Td></Tr>
+                                    <Tr><Td>Lunch</Td><Td>₹ 500</Td></Tr>
+                                    <Tr><Td>Dinner</Td><Td>₹ 600</Td></Tr>
+                                    <Tr><Td>Drinks</Td><Td>₹ 530</Td></Tr>
+                                    <Tr><Td>Hotel</Td><Td>₹ 2,100</Td></Tr>
+                                    <Tr><Td>Coconut</Td><Td>₹ 320</Td></Tr>
+
+                                    <Tr><Td>Day 3 - Canggu</Td><Td></Td></Tr>
+                                    <Tr><Td>Lunch</Td><Td>₹ 600</Td></Tr>
+                                    <Tr><Td>Dinner</Td><Td>₹ 600</Td></Tr>
+                                    <Tr><Td>Tanah Lot Temple</Td><Td>₹ 800</Td></Tr>
+                                    <Tr><Td>Drinks</Td><Td>₹ 900</Td></Tr>
+                                    <Tr><Td>Hotel</Td><Td>₹ 2,100</Td></Tr>
+
+                                    <Tr><Td>Day 4 - Ubud</Td><Td></Td></Tr>
+                                    <Tr><Td>Alas Hurum Entry Fee</Td><Td>₹ 540</Td></Tr>
+                                    <Tr><Td>Lunch</Td><Td>₹ 675</Td></Tr>
+                                    <Tr><Td>Dinner</Td><Td>₹ 600</Td></Tr>
+                                    <Tr><Td>Hotel</Td><Td>₹ 2,074</Td></Tr>
+                                    <Tr><Td>Scooter</Td><Td>₹ 450</Td></Tr>
+
+                                    <Tr><Td>Day 5 - Ubud</Td><Td></Td></Tr>
+                                    <Tr><Td>Empul Temple Entry Fee</Td><Td>₹ 810</Td></Tr>
+                                    <Tr><Td>Lunch</Td><Td>₹ 675</Td></Tr>
+                                    <Tr><Td>Dinner</Td><Td>₹ 600</Td></Tr>
+                                    <Tr><Td>Hotel</Td><Td>₹ 2,074</Td></Tr>
+                                    <Tr><Td>Scooter</Td><Td>₹ 450</Td></Tr>
+
+                                    <Tr><Td>Day 6 - Ubud</Td><Td></Td></Tr>
+                                    <Tr><Td>Waterfall Entry Fee</Td><Td>₹ 216</Td></Tr>
+                                    <Tr><Td>Lunch</Td><Td>₹ 600</Td></Tr>
+                                    <Tr><Td>Dinner</Td><Td>₹ 675</Td></Tr>
+                                    <Tr><Td>Hotel</Td><Td>₹ 2,800</Td></Tr>
+                                    <Tr><Td>Scooter</Td><Td>₹ 450</Td></Tr>
+                                    <Tr><Td>Coffee (Omma Club)</Td><Td>₹ 250</Td></Tr>
+
+                                    <Tr><Td>Day 7 - Uluwatu</Td><Td></Td></Tr>
+                                    <Tr><Td>Uluwatu Temple Entry Fee</Td><Td>₹ 540</Td></Tr>
+                                    <Tr><Td>Lunch</Td><Td>₹ 600</Td></Tr>
+                                    <Tr><Td>Dinner</Td><Td>₹ 675</Td></Tr>
+                                    <Tr><Td>Hotel</Td><Td>₹ 2,074</Td></Tr>
+                                    <Tr><Td>Scooter</Td><Td>₹ 450</Td></Tr>
+                                    <Tr><Td>Coffee</Td><Td>₹ 250</Td></Tr>
+
+                                    <Tr><Td>Visa on Arrival</Td><Td>₹ 5,400</Td></Tr>
+                                    <Tr><Td>Flight</Td><Td>₹ 63,000</Td></Tr>
+                                    <Tr><Td>Grab Taxi</Td><Td>₹ 10,000</Td></Tr>
+                                    <Tr><Td>Total Cost</Td><Td>₹ 1,10,228</Td></Tr>
+                                </Tbody>
+                            </Table>
+                        </TableContainer>
+
 
                     </div>
                 </div>
