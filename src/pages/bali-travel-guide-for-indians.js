@@ -618,7 +618,7 @@ export default function Home() {
                                 {"Omma Club"}
                             </Link>
                             {` is the fun part which gives you access to pool with a view of the waterfall.
-                            you can certain sittings in the club and access to the pool
+                            You can have certain sittings in the club and access to the pool
                             for free if you order food or coffee.`}
                         </Text>
 
