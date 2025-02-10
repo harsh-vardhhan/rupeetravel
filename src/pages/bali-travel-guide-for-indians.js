@@ -619,7 +619,7 @@ export default function Home() {
                             </Link>
                             {` is the fun part which gives you access to pool with a view of the waterfall.
                             You can have certain sittings in the club and access to the pool
-                            for free if you order food or coffee.`}
+                            for free, if you order food or coffee.`}
                         </Text>
 
                         <Heading ref={Day7Ref} style={{ marginTop: '20px' }}> Day 7: Uluwatu</Heading>
