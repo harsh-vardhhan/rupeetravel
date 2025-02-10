@@ -624,9 +624,7 @@ export default function Home() {
 
                         <Heading ref={Day7Ref} style={{ marginTop: '20px' }}> Day 7: Uluwatu</Heading>
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            {`It was our last day in Bali hence we returned from Ubud.
-                            we went for Uluwatu cause we didn't hadn't seen it 
-                            and also it was close to the airport.`}
+                            {`We went for Uluwatu to see the Uluwatu temple. Also being close to the airport, we planned it for our last day`}
                         </Text>
 
                         <Image
@@ -642,7 +640,7 @@ export default function Home() {
                         />
 
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
-                            {`Uluwatu temple has a senic view of sea from the mountain.
+                            {`Uluwatu temple has a scenic view of sea from the mountain.
                               Be precautious, a lot of monkeys in the temple and nearby area. 
                               The entry fee of the temple is 50,000 IDR/person`}
                         </Text>
