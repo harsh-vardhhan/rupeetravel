@@ -770,6 +770,11 @@ export default function Home() {
                             region={'en-ID'}
                         />
 
+                        <Text style={{ marginTop: '20px' }} fontSize='xl'>
+                            Book hotels which have free breakfast included with the booking.
+                            Free breakfast for couples saves decent money every morning.
+                        </Text>
+
                         <Heading ref={TotalCostRef} style={{ marginTop: '20px' }}> Total cost of trip for a couple</Heading>
 
                         <Text style={{ marginTop: '20px' }} fontSize='xl'>
