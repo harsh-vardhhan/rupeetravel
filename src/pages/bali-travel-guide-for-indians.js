@@ -427,7 +427,7 @@ export default function Home() {
                             <Text style={{ marginTop: '20px' }} fontSize='xl'>
                                 To keep your partying experience budget friendly,
                                 you can try out a Bintang beer.
-                                along with that try to use the
+                                Along with that, try to use the
                                 {" "}
                                 <Link
                                     href="https://finnsbeachclub.com/venue/beach-deluxe/drink-menu/#hh"
