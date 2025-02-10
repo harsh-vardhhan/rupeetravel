@@ -12,7 +12,20 @@ import {
 const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base, quote, quoteSymbol }) => {
     const parse = (val) => val.replace(/[^\d.-]/g, '');
     const [value, setValue] = useState(amount)
-    const convertedPrice = (value * rate).toLocaleString(region, { style: 'currency', currency: quote })
+    const formatCurrency = (value, currency) => {
+        const locales = {
+            IDR: 'id-ID', // Uses dot as thousand separator
+            INR: 'en-IN', // Uses comma as thousand separator
+        };
+        return new Intl.NumberFormat(locales[currency] || region, {
+            style: 'currency',
+            currency: currency,
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }).format(value);
+    };
+    
+    const convertedPrice = formatCurrency(value * rate, quote);    
 
     return (
         <>
