@@ -217,7 +217,7 @@ export default function Home() {
                                 {"Beachwalk Shopping Center"}
                             </Link>
                             .
-                            You might what can be so special about a shopping mall ?
+                            You might think what can be so special about a shopping mall ?
                             well they have designed the mall aligned with theme of Bali.
                             Hence its unlike any other mall you have visited in India.
                             You can also try out Arabica cafe which is a Japanese coffee chain.
