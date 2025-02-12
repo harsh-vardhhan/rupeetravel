@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { useState } from "react";
 import Seo from '@/component/seo'
 import styles from '@/styles/Home.module.css'
