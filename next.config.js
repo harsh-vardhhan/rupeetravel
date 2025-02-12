@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    runtime: 'experimental-edge',  // Ensure Edge runtime is enabled
+    runtime: "experimental-edge", // Ensure Edge runtime is enabled
     nodejs_compat: true, // Enable Node.js compatibility
   },
   reactStrictMode: true,
