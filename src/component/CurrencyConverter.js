@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import {
     Text,
     Heading,
@@ -7,59 +7,60 @@ import {
     Stack,
     Card,
     Tag,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
 const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base, quote, quoteSymbol }) => {
     const parse = (val) => val.replace(/[^\d.-]/g, '');
-    const [value, setValue] = useState(amount)
-    const formatCurrency = (value, currency) => {
+    const [value, setValue] = useState(amount);
+
+    const formatCurrency = useMemo(() => (value, currency) => {
         const locales = {
-            IDR: 'id-ID', // Uses dot as thousand separator
-            INR: 'en-IN', // Uses comma as thousand separator
+            IDR: "id-ID",
+            INR: "en-IN",
         };
         return new Intl.NumberFormat(locales[currency] || region, {
-            style: 'currency',
-            currency: currency,
+            style: "currency",
+            currency,
             minimumFractionDigits: 2,
-            maximumFractionDigits: 2
+            maximumFractionDigits: 2,
         }).format(value);
-    };
-    
-    const convertedPrice = formatCurrency(value * rate, quote);    
+    }, [region]);
+
+    const convertedPrice = useMemo(() => formatCurrency(value * rate, quote), [value, rate, quote, formatCurrency]);
 
     return (
         <>
-            <Heading fontSize={'lg'} style={{ marginTop: '20px' }}>
+            <Heading fontSize="lg" mt="20px">
                 {currencyPair} currency converter with {exchange} rate:
             </Heading>
-            <Card style={{ padding: '20px', marginTop: '10px' }}>
-                <div>
-                    <Stack direction="row">
-                        <Text style={{ marginTop: '7px', fontWeight: 700 }}>{base}</Text>
-                        <NumberInput
-                            onChange={(valueString) => setValue(parse(valueString))}
-                            value={value} // Directly store the numeric value
-                            max={1000000000}
-                        >
-                            <NumberInputField onBlur={() => setValue(Number(value) || 0)} />
-                        </NumberInput>
-                    </Stack>
-                </div>
-                <div style={{ marginTop: '20px' }}>
-                    <Stack direction="row">
-                        <Text style={{ marginTop: '0px', fontWeight: 700 }}>{quote}</Text>
-                        <Text>{convertedPrice}</Text>
-                    </Stack>
-                </div>
-                <div style={{ marginTop: '20px' }}>
-                    <Stack direction="row">
-                        <Text style={{ marginTop: '0px', fontWeight: 700 }}>{exchange} Rate</Text>
-                        <Tag colorScheme='teal'>{quoteSymbol} {rate}</Tag>
-                    </Stack>
-                </div>
+            <Card p="20px" mt="10px">
+                <Stack direction="row">
+                    <Text mt="7px" fontWeight="700">
+                        {base}
+                    </Text>
+                    <NumberInput
+                        onChange={(valueString) => setValue(parse(valueString))}
+                        value={value}
+                        max={1_000_000_000}
+                    >
+                        <NumberInputField onBlur={() => setValue(Number(value) || 0)} />
+                    </NumberInput>
+                </Stack>
+
+                <Stack direction="row" mt="20px">
+                    <Text fontWeight="700">{quote}</Text>
+                    <Text>{convertedPrice}</Text>
+                </Stack>
+
+                <Stack direction="row" mt="20px">
+                    <Text fontWeight="700">{exchange} Rate</Text>
+                    <Tag colorScheme="teal">
+                        {quoteSymbol} {rate}
+                    </Tag>
+                </Stack>
             </Card>
         </>
-    )
-}
+    );
+};
 
-export default CurrencyConverter
+export default CurrencyConverter;
