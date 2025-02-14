@@ -7,6 +7,7 @@ const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ["react-tweet"],
   images: {
+    unoptimized: true, //
     formats: ["image/webp"],
   },
 };
