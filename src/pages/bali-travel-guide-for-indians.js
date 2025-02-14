@@ -114,6 +114,7 @@ export default function Home() {
                             height={1536}
                             width={2048}
                             style={{ marginTop: "10px" }}
+                            placeholder="blur"
                         />
 
                         <TableContainer style={{
