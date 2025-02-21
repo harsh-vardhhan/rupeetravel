@@ -1,3 +1,11 @@
 # Travel checklist for Indians to Vietnam
 
-<img width="1223" alt="Screenshot 2023-06-16 at 10 47 56 PM" src="https://github.com/TrakBit/rupeetravel/assets/3825401/bd85856e-58d8-4928-a6bf-e50e2337e4cf">
+## SEO reach on Google
+
+<img width="640" alt="google-search" src="https://github.com/user-attachments/assets/19814da8-112c-4810-813f-6ad25d0f7997" />
+
+
+## SEO metrics
+
+<img width="420" alt="organic-keywords" src="https://github.com/user-attachments/assets/6e938f9d-ff99-4c6f-8ddc-c02393590bbf" />
+
