@@ -48,14 +48,21 @@ export default function Home({ flightRates }) {
 }
 
 export async function getStaticProps() {
-    const filePath = path.join(
-        process.cwd(),
-        "public",
-        "data",
-        "flight-price.json",
-    );
+    const filePath = path.join(process.cwd(), "public", "data", "flight-price.json");
     const fileContents = fs.readFileSync(filePath, "utf8");
-    const flightRates = JSON.parse(fileContents);
+    let flightRates = JSON.parse(fileContents);
+
+    // Apply the same filtering logic from FlightTabView.js at build time
+    const originCity = "New Delhi";
+    const destinationCity = "Da Nang";
+
+    flightRates = flightRates.filter(rate => 
+        (rate.origin === originCity && rate.destination === destinationCity) ||
+        (rate.origin === destinationCity && rate.destination === originCity)
+    );
+
+    // Sort flights by price (lowest to highest)
+    flightRates.sort((a, b) => a.price_inr - b.price_inr);
 
     return {
         props: {
