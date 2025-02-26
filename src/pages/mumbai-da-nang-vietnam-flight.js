@@ -45,18 +45,47 @@ export default function Home({ flightRates }) {
     );
 }
 
+import fs from "fs";
+import path from "path";
+
 export async function getStaticProps() {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const origin = "Mumbai";
-    const destination = "Da Nang";
+    try {
+        // Read flight data directly from the file instead of calling API
+        const filePath = path.join(process.cwd(), "data", "flight-price.json");
+        const jsonData = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
-    const res = await fetch(`${baseUrl}/api/flights?origin=${origin}&destination=${destination}`);
-    const flightRates = await res.json();
+        const origin = "Mumbai";
+        const destination = "Da Nang";
 
-    return {
-        props: {
-            flightRates,
-        },
-        revalidate: 3600, // Rebuild every 1 hour
-    };
+        // Separate outbound and inbound flights
+        let outboundFlights = jsonData.filter(flight =>
+            flight.origin === origin && flight.destination === destination
+        );
+
+        let inboundFlights = jsonData.filter(flight =>
+            flight.origin === destination && flight.destination === origin
+        );
+
+        // Sort by price (Lowest to Highest)
+        outboundFlights.sort((a, b) => a.price_inr - b.price_inr);
+        inboundFlights.sort((a, b) => a.price_inr - b.price_inr);
+
+        // Get the top 25 flights from each list
+        outboundFlights = outboundFlights.slice(0, 25);
+        inboundFlights = inboundFlights.slice(0, 25);
+
+        return {
+            props: {
+                flightRates: [...outboundFlights, ...inboundFlights],
+            },
+            revalidate: 3600, // Rebuild every 1 hour
+        };
+    } catch (error) {
+        console.error("Error loading flight data:", error);
+        return {
+            props: {
+                flightRates: [],
+            },
+        };
+    }
 }
