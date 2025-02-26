@@ -6,8 +6,6 @@ import {
 import Header from "@/component/header";
 import Seo from "@/component/seo";
 import FlightTabView from "@/component/FlightTabView"; // Import the tabbed component
-import fs from "fs";
-import path from "path";
 
 export default function Home({ flightRates }) {
     // Define the route-specific values
@@ -48,25 +46,17 @@ export default function Home({ flightRates }) {
 }
 
 export async function getStaticProps() {
-    const filePath = path.join(process.cwd(), "public", "data", "flight-price.json");
-    const fileContents = fs.readFileSync(filePath, "utf8");
-    let flightRates = JSON.parse(fileContents);
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    const origin = "Mumbai";
+    const destination = "Da Nang";
 
-    // Apply the same filtering logic from FlightTabView.js at build time
-    const originCity = "Mumbai";
-    const destinationCity = "Da Nang";
-
-    flightRates = flightRates.filter(rate => 
-        (rate.origin === originCity && rate.destination === destinationCity) ||
-        (rate.origin === destinationCity && rate.destination === originCity)
-    );
-
-    // Sort flights by price (lowest to highest)
-    flightRates.sort((a, b) => a.price_inr - b.price_inr);
+    const res = await fetch(`${baseUrl}/api/flights?origin=${origin}&destination=${destination}`);
+    const flightRates = await res.json();
 
     return {
         props: {
             flightRates,
         },
+        revalidate: 3600, // Rebuild every 1 hour
     };
 }
