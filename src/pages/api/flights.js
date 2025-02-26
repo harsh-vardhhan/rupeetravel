@@ -10,19 +10,25 @@ export default function handler(req, res) {
     // Get query parameters (case-insensitive)
     const { origin, destination } = req.query;
     if (!origin || !destination) {
-      return res.status(400).json({ error: "Origin and destination are required." });
+      return res
+        .status(400)
+        .json({ error: "Origin and destination are required." });
     }
 
     const originLower = origin.toLowerCase();
     const destinationLower = destination.toLowerCase();
 
     // Separate outbound and inbound flights
-    let outboundFlights = jsonData.filter(flight =>
-      flight.origin.toLowerCase() === originLower && flight.destination.toLowerCase() === destinationLower
+    let outboundFlights = jsonData.filter(
+      (flight) =>
+        flight.origin.toLowerCase() === originLower &&
+        flight.destination.toLowerCase() === destinationLower,
     );
 
-    let inboundFlights = jsonData.filter(flight =>
-      flight.origin.toLowerCase() === destinationLower && flight.destination.toLowerCase() === originLower
+    let inboundFlights = jsonData.filter(
+      (flight) =>
+        flight.origin.toLowerCase() === destinationLower &&
+        flight.destination.toLowerCase() === originLower,
     );
 
     // Sort both lists by `price_inr` (Lowest to Highest)
