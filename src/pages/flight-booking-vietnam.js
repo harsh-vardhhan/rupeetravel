@@ -35,9 +35,6 @@ export default function Home({ indigo, vietjet }) {
       <main className={styles.main}>
         <Header title={"Booking flight for Vietnam"} />
         <div>
-          <SimpleGrid>
-            <FlightSearchCards/>
-          </SimpleGrid>
           <SimpleGrid minChildWidth="350px" spacing="40px" marginTop={10}>
             <FlightCard
               cardTitle={"Book Vietjet flight to Vietnam"}
