@@ -85,7 +85,7 @@ const FlightSearchCards = () => {
         <Heading as="h2" size="lg" mb={2}>
           Book cheapest flights to Vietnam
         </Heading>
-        <Text color="gray.600">Direct flights from India to popular Vietnam destinations</Text>
+        <Text color="gray.600">Flights from India to popular Vietnam destinations</Text>
       </Box>
       <VStack spacing={3} align="stretch">
         {routes.map((route, index) => (
