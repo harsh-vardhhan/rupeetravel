@@ -22,7 +22,7 @@ import {
 import ListView from "@/component/listview";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
-import FlightSearchCards from "@/component/FlightSearchCards"
+import FlightSearchCards from "@/component/FlightSearchCards";
 
 export default function Home({ indigo, vietjet }) {
   return (
@@ -36,7 +36,7 @@ export default function Home({ indigo, vietjet }) {
         <Header title={"Booking flight for Vietnam"} />
         <div>
           <SimpleGrid>
-            <FlightSearchCards/>
+            <FlightSearchCards />
           </SimpleGrid>
           <SimpleGrid minChildWidth="350px" spacing="40px" marginTop={10}>
             <FlightCard
