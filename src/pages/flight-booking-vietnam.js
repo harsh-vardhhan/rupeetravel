@@ -22,7 +22,7 @@ import {
 import ListView from "@/component/listview";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
-import FlightSearchCards from "@/component/FlightSearchCards"
+import FlightSearchCards from "@/component/FlightSearchCards";
 
 export default function Home({ indigo, vietjet }) {
   return (
