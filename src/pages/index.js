@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Seo from "@/component/seo";
+import FlightSearchCards from "@/component/FlightSearchCards";
 
 export default function Home({
   blogs,
@@ -51,7 +52,7 @@ export default function Home({
             />
             <CheckListItemCard title={"Blogs"} list={blogs} />
           </SimpleGrid>
-          <Map />
+          <FlightSearchCards/>
         </div>
       </main>
     </>
@@ -92,41 +93,6 @@ const CheckListItem = ({ task }) => {
         </Text>
       </Link>
     </Box>
-  );
-};
-
-const Map = () => {
-  return (
-    <Card style={{ marginTop: "10px", maxWidth: "700px" }}>
-      <CardHeader>
-        <Text as="h2" fontSize="2xl" fontWeight={700}>
-          {"Visit Da Nang, Vietnam"}
-        </Text>
-      </CardHeader>
-      <CardBody>
-        <Image
-          src={"/images/da-nang-map.webp"}
-          alt="Da Nang Map"
-          height={402}
-          width={700}
-        />
-      </CardBody>
-      <Divider style={{ color: "#e2e8f0" }} />
-      <CardFooter>
-        <Stack direction="row">
-          <Link spacing="2" href="/da-nang-map">
-            <Button variant="solid" colorScheme="green">
-              Map
-            </Button>
-          </Link>
-          <Link spacing="2" href="/hotel-booking-vietnam">
-            <Button variant="solid" colorScheme="green">
-              Book Hotel
-            </Button>
-          </Link>
-        </Stack>
-      </CardFooter>
-    </Card>
   );
 };
 
