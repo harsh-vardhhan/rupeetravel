@@ -52,7 +52,7 @@ export default function Home({
             />
             <CheckListItemCard title={"Blogs"} list={blogs} />
           </SimpleGrid>
-          <FlightSearchCards/>
+          <FlightSearchCards />
         </div>
       </main>
     </>
