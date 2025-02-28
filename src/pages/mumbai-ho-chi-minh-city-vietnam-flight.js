@@ -19,7 +19,7 @@ export default function Home({ flightRates }) {
                 description={`Lowest ${destinationCity}, Vietnam flight ticket price from ${originCity}, India`}
                 canonical={`https://www.rupeetravel.com/${originCity.toLowerCase()}-${destinationCity.toLowerCase()}-vietnam-flight`}
             />
-            <Container maxW="xl" p={4}>
+            <Container maxW="2xl" p={4}>
                 <Header title={`Booking flight for ${destinationCity}, Vietnam`} />
                 <Text
                     as="h2"
