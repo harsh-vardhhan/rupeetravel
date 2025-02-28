@@ -19,8 +19,79 @@ import {
   TabPanels,
   Tab,
   TabPanel,
+  Tooltip,
+  CircularProgress,
+  CircularProgressLabel,
 } from "@chakra-ui/react";;
-import { FaPlane, FaClock, FaCalendarAlt } from "react-icons/fa";
+import { FaPlane, FaClock, FaCalendarAlt, FaUmbrella} from "react-icons/fa";
+
+// Precipitation data for the Vietnamese destinations
+const precipitationData = {
+  "Hanoi": {
+    1: 1.9, 2: 2.2, 3: 4.6, 4: 6.7, 5: 12.2, 6: 14.4, 
+    7: 16.3, 8: 17.2, 9: 12.6, 10: 8.0, 11: 4.2, 12: 2.0
+  },
+  "Ho Chi Minh City": {
+    1: 0.9, 2: 0.6, 3: 1.6, 4: 4.3, 5: 11.7, 6: 15.9, 
+    7: 16.7, 8: 15.7, 9: 16.6, 10: 16.5, 11: 8.4, 12: 2.9
+  },
+  "Da Nang": {
+    1: 4.5, 2: 1.8, 3: 2.0, 4: 3.2, 5: 7.2, 6: 7.2, 
+    7: 7.1, 8: 10.8, 9: 15.5, 10: 18.3, 11: 13.8, 12: 9.7
+  },
+  "Phu Quoc": {
+    1: 2.0, 2: 2.3, 3: 5.2, 4: 9.7, 5: 15.8, 6: 19.6, 
+    7: 21.3, 8: 21.6, 9: 20.6, 10: 19.4, 11: 11.0, 12: 3.9
+  }
+};
+
+// Rainfall Indicator Component
+const RainfallIndicator = ({ destination, date }) => {
+  // Check if we have data for this destination
+  if (!precipitationData[destination]) {
+    return null;
+  }
+
+  // Get month from date
+  const month = new Date(date).getMonth() + 1; // Jan is 0, so +1
+  
+  // Calculate rainfall probability
+  const daysInMonth = new Date(new Date(date).getFullYear(), month, 0).getDate();
+  const rainyDays = precipitationData[destination][month];
+  const probability = Math.round((rainyDays / daysInMonth) * 100);
+  
+  // Determine color based on probability
+  let color = "green.500";
+  if (probability > 30 && probability <= 60) {
+    color = "yellow.400";
+  } else if (probability > 60) {
+    color = "red.500";
+  }
+
+  return (
+    <Tooltip 
+      label={`${probability}% chance of rain in ${destination} during this month (${rainyDays} rainy days)`}
+      placement="top"
+      hasArrow
+    >
+      <Box>
+        <CircularProgress 
+          value={probability} 
+          color={color} 
+          size="38px" 
+          thickness="12px"
+        >
+          <CircularProgressLabel>
+            <Flex direction="column" align="center" justify="center">
+              <Icon as={FaUmbrella} boxSize={2.5} mb="1px" />
+              <Text fontSize="8px" fontWeight="bold">{probability}%</Text>
+            </Flex>
+          </CircularProgressLabel>
+        </CircularProgress>
+      </Box>
+    </Tooltip>
+  );
+};
 
 const FlightCard = ({ flight }) => {
   const cardBg = useColorModeValue("white", "gray.700");
@@ -66,7 +137,7 @@ const FlightCard = ({ flight }) => {
               <Heading size={headingSize} color={primaryColor} noOfLines={1}>
                 {flight.airline}
               </Heading>
-              <Badge colorScheme={flight.flightType === "Direct" ? "green" : "blue"} fontSize="xs">
+              <Badge colorScheme={flight.flightType === "Nonstop" ? "green" : "blue"} fontSize="xs">
                 {flight.flightType}
               </Badge>
             </HStack>
@@ -75,15 +146,25 @@ const FlightCard = ({ flight }) => {
             </Text>
           </Flex>
           
-          {/* Date and Time Row */}
+          {/* Date, Time and Rainfall Row */}
           <Flex justify="space-between" align="center" fontSize="sm" color="gray.600" mt={1} mb={2}>
             <HStack>
               <Icon as={FaCalendarAlt} boxSize={3} />
               <Text>{formattedDate}</Text>
             </HStack>
-            <HStack>
-              <Icon as={FaClock} boxSize={3} />
-              <Text>{flight.duration}</Text>
+            <HStack spacing={4}>
+              <HStack>
+                <Icon as={FaClock} boxSize={3} />
+                <Text>{flight.duration}</Text>
+              </HStack>
+              
+              {/* Rainfall Indicator */}
+              {precipitationData[flight.destination] && (
+                <RainfallIndicator 
+                  destination={flight.destination} 
+                  date={flight.date} 
+                />
+              )}
             </HStack>
           </Flex>
           
@@ -122,7 +203,6 @@ const FlightCard = ({ flight }) => {
     </Card>
   );
 };
-
 
 // New TabView component that combines both directions
 const FlightTabView = ({ flightRates, originCity, destinationCity }) => {
