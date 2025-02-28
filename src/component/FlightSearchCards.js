@@ -10,12 +10,106 @@ import {
   Container,
   HStack,
   Divider,
-  Icon
+  Icon,
+  Tooltip,
+  Circle,
+  Grid, // Added for responsive calendar layout
 } from '@chakra-ui/react';
-import { FaPlane } from 'react-icons/fa';
+import { FaPlane, FaUmbrella } from 'react-icons/fa';
 
+// Precipitation data (unchanged)
+const precipitationData = {
+  "Hanoi": {
+    1: 1.9, 2: 2.2, 3: 4.6, 4: 6.7, 5: 12.2, 6: 14.4, 
+    7: 16.3, 8: 17.2, 9: 12.6, 10: 8.0, 11: 4.2, 12: 2.0
+  },
+  "Ho Chi Minh City": {
+    1: 0.9, 2: 0.6, 3: 1.6, 4: 4.3, 5: 11.7, 6: 15.9, 
+    7: 16.7, 8: 15.7, 9: 16.6, 10: 16.5, 11: 8.4, 12: 2.9
+  },
+  "Da Nang": {
+    1: 4.5, 2: 1.8, 3: 2.0, 4: 3.2, 5: 7.2, 6: 7.2, 
+    7: 7.1, 8: 10.8, 9: 15.5, 10: 18.3, 11: 13.8, 12: 9.7
+  },
+  "Phu Quoc": {
+    1: 2.0, 2: 2.3, 3: 5.2, 4: 9.7, 5: 15.8, 6: 19.6, 
+    7: 21.3, 8: 21.6, 9: 20.6, 10: 19.4, 11: 11.0, 12: 3.9
+  }
+};
+
+// Calculate rainfall probability (unchanged)
+const getMonthlyRainfallProbabilities = (destination) => {
+  if (!precipitationData[destination]) {
+    return null;
+  }
+  
+  const probabilities = {};
+  
+  for (let month = 1; month <= 12; month++) {
+    const daysInMonth = new Date(new Date().getFullYear(), month, 0).getDate();
+    const rainyDays = precipitationData[destination][month];
+    probabilities[month] = Math.round((rainyDays / daysInMonth) * 100);
+  }
+  
+  return probabilities;
+};
+
+// Updated RainfallCalendar component
+const RainfallCalendar = ({ destination }) => {
+  if (!precipitationData[destination]) {
+    return null;
+  }
+
+  const probabilities = getMonthlyRainfallProbabilities(destination);
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  
+  const getProbabilityColor = (probability) => {
+    if (probability <= 30) return "green.400";
+    if (probability <= 60) return "yellow.400";
+    return "red.400";
+  };
+
+  return (
+    <Box mt={2}>
+      <Text fontSize="sm" color="gray.500" mb={1}>Rainfall probability by month:</Text>
+      <Grid
+        templateColumns={{ base: "repeat(4, 1fr)", sm: "repeat(6, 1fr)", md: "repeat(12, 1fr)" }}
+        gap={1}
+      >
+        {months.map((month, index) => {
+          const monthNumber = index + 1;
+          const probability = probabilities[monthNumber];
+          const color = getProbabilityColor(probability);
+          
+          return (
+            <Tooltip
+              key={month}
+              label={`${probability}% chance of rain in ${month}`}
+              placement="top"
+              hasArrow
+            >
+              <VStack spacing={0.5} align="center">
+                <Text fontSize="xs" color="gray.500">{month}</Text>
+                <Circle
+                  size="20px"
+                  bg={color}
+                  opacity={probability / 100}
+                >
+                  <Text fontSize="10px" fontWeight="bold" color="white">
+                    {probability}
+                  </Text>
+                </Circle>
+              </VStack>
+            </Tooltip>
+          );
+        })}
+      </Grid>
+    </Box>
+  );
+};
+
+// FlightCard component (unchanged)
 const FlightCard = ({ origin, destination, originCountry, destinationCountry }) => {
-  // Function to convert city names to URL-friendly format
   const toUrlPath = (cityName) => {
     return cityName.toLowerCase().replace(/ /g, '-');
   };
@@ -59,6 +153,10 @@ const FlightCard = ({ origin, destination, originCountry, destinationCountry }) 
                   </Box>
                 </HStack>
               </Flex>
+              
+              {precipitationData[destination] && (
+                <RainfallCalendar destination={destination} />
+              )}
             </Box>
           </Flex>
         </CardBody>
@@ -67,6 +165,7 @@ const FlightCard = ({ origin, destination, originCountry, destinationCountry }) 
   );
 };
 
+// FlightSearchCards component (unchanged)
 const FlightSearchCards = () => {
   const routes = [
     { origin: "New Delhi", destination: "Phu Quoc", originCountry: "India", destinationCountry: "Vietnam" },
