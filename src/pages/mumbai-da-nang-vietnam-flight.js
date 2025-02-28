@@ -71,8 +71,8 @@ export async function getStaticProps() {
         inboundFlights.sort((a, b) => a.price_inr - b.price_inr);
 
         // Get the top 25 flights from each list
-        outboundFlights = outboundFlights.slice(0, 25);
-        inboundFlights = inboundFlights.slice(0, 25);
+        outboundFlights = outboundFlights.slice(0, 50);
+        inboundFlights = inboundFlights.slice(0, 50);
 
         return {
             props: {
