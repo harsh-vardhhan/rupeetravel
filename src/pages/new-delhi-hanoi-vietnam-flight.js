@@ -1,7 +1,7 @@
-import styles from "@/styles/Home.module.css";
 import {
     Text,
     Box,
+    Container,
 } from "@chakra-ui/react";
 import Header from "@/component/header";
 import Seo from "@/component/seo";
@@ -19,7 +19,7 @@ export default function Home({ flightRates }) {
                 description={`Lowest ${destinationCity}, Vietnam flight ticket price from ${originCity}, India`}
                 canonical={`https://www.rupeetravel.com/${originCity.toLowerCase()}-${destinationCity.toLowerCase()}-vietnam-flight`}
             />
-            <main className={styles.main}>
+            <Container maxW="xl" p={4}>
                 <Header title={`Booking flight for ${destinationCity}, Vietnam`} />
                 <Text
                     as="h2"
@@ -40,7 +40,7 @@ export default function Home({ flightRates }) {
                         destinationCity={destinationCity}
                     />
                 </Box>
-            </main>
+            </Container>
         </>
     );
 }
