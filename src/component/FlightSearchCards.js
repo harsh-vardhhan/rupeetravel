@@ -15,7 +15,7 @@ import {
   Circle,
   Grid, // Added for responsive calendar layout
 } from '@chakra-ui/react';
-import { FaPlane, FaUmbrella } from 'react-icons/fa';
+import { FaPlane } from 'react-icons/fa';
 
 // Precipitation data (unchanged)
 const precipitationData = {
@@ -27,14 +27,6 @@ const precipitationData = {
     1: 0.9, 2: 0.6, 3: 1.6, 4: 4.3, 5: 11.7, 6: 15.9, 
     7: 16.7, 8: 15.7, 9: 16.6, 10: 16.5, 11: 8.4, 12: 2.9
   },
-  "Da Nang": {
-    1: 4.5, 2: 1.8, 3: 2.0, 4: 3.2, 5: 7.2, 6: 7.2, 
-    7: 7.1, 8: 10.8, 9: 15.5, 10: 18.3, 11: 13.8, 12: 9.7
-  },
-  "Phu Quoc": {
-    1: 2.0, 2: 2.3, 3: 5.2, 4: 9.7, 5: 15.8, 6: 19.6, 
-    7: 21.3, 8: 21.6, 9: 20.6, 10: 19.4, 11: 11.0, 12: 3.9
-  }
 };
 
 // Calculate rainfall probability (unchanged)
@@ -168,12 +160,8 @@ const FlightCard = ({ origin, destination, originCountry, destinationCountry }) 
 // FlightSearchCards component (unchanged)
 const FlightSearchCards = () => {
   const routes = [
-    { origin: "New Delhi", destination: "Phu Quoc", originCountry: "India", destinationCountry: "Vietnam" },
-    { origin: "New Delhi", destination: "Da Nang", originCountry: "India", destinationCountry: "Vietnam" },
     { origin: "New Delhi", destination: "Hanoi", originCountry: "India", destinationCountry: "Vietnam" },
     { origin: "New Delhi", destination: "Ho Chi Minh City", originCountry: "India", destinationCountry: "Vietnam" },
-    { origin: "Mumbai", destination: "Phu Quoc", originCountry: "India", destinationCountry: "Vietnam" },
-    { origin: "Mumbai", destination: "Da Nang", originCountry: "India", destinationCountry: "Vietnam" },
     { origin: "Mumbai", destination: "Hanoi", originCountry: "India", destinationCountry: "Vietnam" },
     { origin: "Mumbai", destination: "Ho Chi Minh City", originCountry: "India", destinationCountry: "Vietnam" }
   ];
