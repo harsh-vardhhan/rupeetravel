@@ -10,14 +10,9 @@ import {
   Stack,
   SimpleGrid,
   Tag,
-  Button,
   Heading,
-  Divider,
-  CardFooter,
 } from "@chakra-ui/react";
-import Image from "next/image";
 import Seo from "@/component/seo";
-import FlightSearchCards from "@/component/FlightSearchCards";
 
 export default function Home({
   blogs,
@@ -52,7 +47,6 @@ export default function Home({
             />
             <CheckListItemCard title={"Blogs"} list={blogs} />
           </SimpleGrid>
-          <FlightSearchCards/>
         </div>
       </main>
     </>
