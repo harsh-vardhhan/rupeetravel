@@ -110,7 +110,7 @@ const VisaStamp = () => {
               </HStack>
               <HStack justify="space-between" fontSize="xs" w="full">
                 <Text color="gray.600">ENTRY:</Text>
-                <Text fontWeight="semibold" color="black">JAKARTA</Text>
+                <Text fontWeight="semibold" color="black">DENPASAR</Text>
               </HStack>
             </VStack>
             
