@@ -172,11 +172,11 @@ export default function Home() {
             <Heading as={'h3'} style={{ marginTop: "20px" }} fontSize="2xl"> Bali weather </Heading>
             <Text style={{ marginTop: "20px" }} fontSize="xl">
               The best months to travel Bali are:
-                          <UnorderedList>
-              <ListItem>January</ListItem>
-              <ListItem>February</ListItem>
-              <ListItem>December</ListItem>
-            </UnorderedList>
+              <UnorderedList>
+                <ListItem>January</ListItem>
+                <ListItem>February</ListItem>
+                <ListItem>December</ListItem>
+              </UnorderedList>
             </Text>
 
             <Text style={{ marginTop: "20px" }} fontSize="xl">
