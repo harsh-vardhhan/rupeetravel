@@ -147,8 +147,9 @@ export default function Home() {
 
             <Heading style={{ marginTop: "20px" }} ref={FlightAndVisaRef}>
               {" "}
-              Booking flight and applying visa
+              Preparing for Bali trip
             </Heading>
+            <Heading as={'h3'} style={{ marginTop: "20px" }} fontSize="2xl"> Delhi to Bali flight</Heading>
             <Text style={{ marginTop: "20px" }} fontSize="xl">
               You can affordable return flights to Bali from New Delhi and
               Mumbai both. Just use{" "}
@@ -178,6 +179,8 @@ export default function Home() {
                 width={1000}
               />
             </div>
+
+            <Heading as={'h3'} style={{ marginTop: "20px" }} fontSize="2xl"> Visa for Bali </Heading>
 
             <Text style={{ marginTop: "20px" }} fontSize="xl">
               Though Indonesia provides facility to apply for e-visa for Indian
@@ -858,7 +861,7 @@ export default function Home() {
 
             <Heading ref={TotalCostRef} style={{ marginTop: "20px" }}>
               {" "}
-              Total cost of trip for a couple
+              Bali trip cost from India for couple​
             </Heading>
 
             <Text style={{ marginTop: "20px" }} fontSize="xl">
