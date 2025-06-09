@@ -656,18 +656,20 @@ export default function Home() {
                         You have to only pay for the food and drinks you order.`}
           </Text>
 
-          <Box display="flex" justifyContent="center" mt={4}>
-            <Box
-              as="iframe"
-              width={{ base: "100%", md: "320px" }}
-              height={{ base: "400px", md: "560px" }}
-              src="https://www.youtube.com/embed/GEymJ1R24wk"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </Box>
+          <Image
+            src={"/images/finns-beach-club.avif"}
+            alt="FINNS beach club"
+            height={200}
+            width={400}
+            style={{
+              marginTop: "10px",
+              borderWidth: "medium",
+              borderColor: "aliceblue",
+              'width': "100%",
+              height: "auto",
+              objectFit: "cover"
+            }}
+          />
 
           <Card
             style={{
@@ -1127,7 +1129,7 @@ export default function Home() {
           </Text>
 
           <Image
-            src={"/images/google-map-with-hotels-filter.webp"}
+            src={"/images/google-map-with-hotels-filter.avif"}
             alt="Google Map with hotels filter"
             height={700}
             width={1000}
