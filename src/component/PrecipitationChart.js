@@ -1,6 +1,6 @@
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { Box, Text, VStack, HStack, Badge, Flex } from '@chakra-ui/react';
+import { BarChart, Bar, XAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { Box, Text, VStack, Badge, Flex } from '@chakra-ui/react';
 
 // Helper function to determine emoji based on precipitation days
 const getRainEmoji = (days) => {
