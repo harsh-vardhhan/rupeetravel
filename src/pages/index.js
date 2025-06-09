@@ -29,7 +29,7 @@ export default function Home({
         </Text>
         <Heading
           as="h1"
-          fontSize={{ base: "2xl", md: "2xl", lg: "5xl" }} 
+          fontSize={{ base: "2xl", md: "2xl", lg: "5xl" }}
           style={{ marginTop: "20px" }}
         >
           The ultimate checklist for Vietnam travel from India 🇻🇳
