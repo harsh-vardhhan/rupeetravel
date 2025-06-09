@@ -4,9 +4,7 @@ import {
   Text,
   VStack,
   HStack,
-  Flex,
   Center,
-  Divider
 } from '@chakra-ui/react';
 
 const VisaStamp = () => {
@@ -113,7 +111,7 @@ const VisaStamp = () => {
                 <Text fontWeight="semibold" color="black">DENPASAR</Text>
               </HStack>
             </VStack>
-            
+
           </VStack>
           
           {/* Background watermark */}
