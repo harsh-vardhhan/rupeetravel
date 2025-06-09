@@ -13,11 +13,14 @@ import {
   Link,
   Card,
   Box,
+  UnorderedList,
+  ListItem
 } from "@chakra-ui/react";
 import Seo from "@/component/seo";
 import Header from "@/component/header";
 import Image from "next/image";
 import CurrencyConverter from "@/component/CurrencyConverter";
+import PrecipitationChart from "@/component/PrecipitationChart";
 import { IDRINRMarketRate } from "../currency/currency";
 
 export default function Home() {
@@ -75,6 +78,22 @@ export default function Home() {
   const TotalCostClick = () => {
     TotalCostRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const baliData = [
+    { month: 'Jan', days: 0.7 },
+    { month: 'Feb', days: 2.8 },
+    { month: 'Mar', days: 12.7 },
+    { month: 'Apr', days: 20.2 },
+    { month: 'May', days: 24.0 },
+    { month: 'Jun', days: 24.2 },
+    { month: 'Jul', days: 26.0 },
+    { month: 'Aug', days: 27.3 },
+    { month: 'Sep', days: 27.2 },
+    { month: 'Oct', days: 25.1 },
+    { month: 'Nov', days: 8.4 },
+    { month: 'Dec', days: 1.1 }
+  ];
+
 
   const TableRow = ({ onClick, label }) => (
     <Tr onClick={onClick} style={{ cursor: "pointer" }}>
@@ -149,6 +168,26 @@ export default function Home() {
               {" "}
               Preparing for Bali trip
             </Heading>
+
+            <Heading as={'h3'} style={{ marginTop: "20px" }} fontSize="2xl"> Bali weather </Heading>
+            <Text style={{ marginTop: "20px" }} fontSize="xl">
+              The best months to travel Bali are:
+                          <UnorderedList>
+              <ListItem>January</ListItem>
+              <ListItem>February</ListItem>
+              <ListItem>December</ListItem>
+            </UnorderedList>
+            </Text>
+
+            <Text style={{ marginTop: "20px" }} fontSize="xl">
+              Other months can seriously ruin your holiday experience.
+              A day spent waiting for rain to stop is a day wasted from your holiday.
+            </Text>
+            <PrecipitationChart
+              data={baliData}
+              destinationName="Bali"
+              destinationIcon="🌴"
+            />
             <Heading as={'h3'} style={{ marginTop: "20px" }} fontSize="2xl"> Delhi to Bali flight</Heading>
             <Text style={{ marginTop: "20px" }} fontSize="xl">
               You can affordable return flights to Bali from New Delhi and
