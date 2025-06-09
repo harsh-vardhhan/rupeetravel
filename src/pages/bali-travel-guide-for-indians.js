@@ -149,7 +149,10 @@ export default function Home() {
               {" "}
               Preparing for Bali trip
             </Heading>
-            <Heading as={'h3'} style={{ marginTop: "20px" }} fontSize="2xl"> Delhi to Bali flight</Heading>
+            <Heading as={"h3"} style={{ marginTop: "20px" }} fontSize="2xl">
+              {" "}
+              Delhi to Bali flight
+            </Heading>
             <Text style={{ marginTop: "20px" }} fontSize="xl">
               You can affordable return flights to Bali from New Delhi and
               Mumbai both. Just use{" "}
@@ -180,7 +183,10 @@ export default function Home() {
               />
             </div>
 
-            <Heading as={'h3'} style={{ marginTop: "20px" }} fontSize="2xl"> Visa for Bali </Heading>
+            <Heading as={"h3"} style={{ marginTop: "20px" }} fontSize="2xl">
+              {" "}
+              Visa for Bali{" "}
+            </Heading>
 
             <Text style={{ marginTop: "20px" }} fontSize="xl">
               Though Indonesia provides facility to apply for e-visa for Indian
