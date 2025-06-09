@@ -130,7 +130,7 @@ export default function Home() {
             width={2048}
             style={{
               marginTop: "10px",
-              width: "100%",
+              maxWidth: "100%",
               height: "auto",
               objectFit: "cover"
             }}
