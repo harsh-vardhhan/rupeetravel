@@ -80,18 +80,18 @@ export default function Home() {
   };
 
   const baliData = [
-    { month: 'Jan', days: 0.7 },
-    { month: 'Feb', days: 2.8 },
-    { month: 'Mar', days: 12.7 },
-    { month: 'Apr', days: 20.2 },
-    { month: 'May', days: 24.0 },
-    { month: 'Jun', days: 24.2 },
-    { month: 'Jul', days: 26.0 },
-    { month: 'Aug', days: 27.3 },
-    { month: 'Sep', days: 27.2 },
-    { month: 'Oct', days: 25.1 },
-    { month: 'Nov', days: 8.4 },
-    { month: 'Dec', days: 1.1 }
+    { month: 'Jan', days: 19 },
+    { month: 'Feb', days: 18 },
+    { month: 'Mar', days: 20 },
+    { month: 'Apr', days: 12 },
+    { month: 'May', days: 8 },
+    { month: 'Jun', days: 7 },
+    { month: 'Jul', days: 4 },
+    { month: 'Aug', days: 3 },
+    { month: 'Sep', days: 3 },
+    { month: 'Oct', days: 6 },
+    { month: 'Nov', days: 10 },
+    { month: 'Dec', days: 16 }
   ];
 
 
@@ -175,9 +175,9 @@ export default function Home() {
             </Text>
             
             <UnorderedList fontSize="xl">
-              <ListItem>January</ListItem>
-              <ListItem>February</ListItem>
-              <ListItem>December</ListItem>
+              <ListItem>July</ListItem>
+              <ListItem>August</ListItem>
+              <ListItem>September</ListItem>
             </UnorderedList>
 
             <Text style={{ marginTop: "20px" }} fontSize="xl">
