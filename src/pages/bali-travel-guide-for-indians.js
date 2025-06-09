@@ -124,7 +124,7 @@ export default function Home() {
         >
           <Header title={"Bali travel guide for Indians"} blog={true} />
           <Image
-            src={"/images/bali-rice-field.webp"}
+            src={"/images/bali-rice-field.avif"}
             alt="Bali rice field"
             height={1536}
             width={2048}
@@ -250,7 +250,7 @@ export default function Home() {
             }}
           >
             <Image
-              src={"/images/bali-return-flight.webp"}
+              src={"/images/bali-return-flight.avif"}
               alt="Bali return flight"
               height={700}
               width={1000}
@@ -309,7 +309,7 @@ export default function Home() {
             }}
           >
             <Image
-              src={"/images/bali-kuta-arabica-cafe.webp"}
+              src={"/images/bali-kuta-arabica-cafe.avif"}
               alt="Bali Kuta Arabica Cafe"
               height={700}
               width={1000}
@@ -372,7 +372,7 @@ export default function Home() {
                 for 61,000 IDR each.
               </Text>
               <Image
-                src={"/images/kuta-food.webp"}
+                src={"/images/kuta-food.avif"}
                 alt="Chicken and rice at Padang kurin Restaurant"
                 height={300}
                 width={500}
@@ -402,7 +402,7 @@ export default function Home() {
             }}
           >
             <Image
-              src={"/images/azul-beach-club.webp"}
+              src={"/images/azul-beach-club.avif"}
               alt="Bali Kuta Arabica Cafe"
               height={700}
               width={500}
@@ -452,7 +452,7 @@ export default function Home() {
                 each.
               </Text>
               <Image
-                src={"/images/azul-beach-club-cider.webp"}
+                src={"/images/azul-beach-club-cider.avif"}
                 alt="Bali Cider at Azul Beach Club"
                 height={200}
                 width={400}
@@ -493,7 +493,7 @@ export default function Home() {
           </Text>
 
           <Image
-            src={"/images/bali-seminyak-atms.webp"}
+            src={"/images/bali-seminyak-atms.avif"}
             alt="ATMs at Raya Seminyak, Bali"
             height={700}
             width={1000}
@@ -535,7 +535,7 @@ export default function Home() {
                 93,000 IDR. The place is called The Shisha House.
               </Text>
               <Image
-                src={"/images/margherita-seminyak.webp"}
+                src={"/images/margherita-seminyak.avif"}
                 alt="Margherita pizza at The Shisha House, Seminyak"
                 height={300}
                 width={500}
@@ -560,7 +560,7 @@ export default function Home() {
           </Card>
 
           <Image
-            src={"/images/seminyak-coconut-beach.webp"}
+            src={"/images/seminyak-coconut-beach.avif"}
             alt="Coconut water at Seminyak beach"
             height={200}
             width={400}
@@ -596,7 +596,7 @@ export default function Home() {
           />
 
           <Image
-            src={"/images/seminyak-beach-bean-bag.webp"}
+            src={"/images/seminyak-beach-bean-bag.avif"}
             alt="Seminayk beach bean bag"
             height={200}
             width={400}
@@ -755,7 +755,7 @@ export default function Home() {
                             You can also book a Grab taxi like us. It had cost us 351,000 IDR for the trip.`}
               </Text>
               <Image
-                src={"/images/canggu-to-ubud-grab.webp"}
+                src={"/images/canggu-to-ubud-grab.avif"}
                 alt="Canggu to Ubud in Grab taxi"
                 height={700}
                 width={400}
@@ -790,7 +790,7 @@ export default function Home() {
           </Text>
 
           <Image
-            src={"/images/alas-hurum-ubud-bali.webp"}
+            src={"/images/alas-hurum-ubud-bali.avif"}
             alt="Alas Hurum, Ubud, Bali"
             height={700}
             width={1000}
@@ -859,7 +859,7 @@ export default function Home() {
                 access to their pool.
               </Text>
               <Image
-                src={"/images/alas-hurum-cretya-ubud.webp"}
+                src={"/images/alas-hurum-cretya-ubud.avif"}
                 alt="Smoked BBQ Chicken at Cretya Club, Ubud"
                 height={700}
                 width={1000}
@@ -892,7 +892,7 @@ export default function Home() {
           </Heading>
 
           <Image
-            src={"/images/tirta-empul-temple-ubud.webp"}
+            src={"/images/tirta-empul-temple-ubud.avif"}
             alt="Tirta Empul temple, Bali"
             height={700}
             width={1000}
@@ -954,7 +954,7 @@ export default function Home() {
           />
 
           <Image
-            src={"/images/tegenungan-waterfall-omma-club.webp"}
+            src={"/images/tegenungan-waterfall-omma-club.avif"}
             alt="Tegenungan waterfall, Bali"
             height={700}
             width={1000}
@@ -1000,7 +1000,7 @@ export default function Home() {
           </Text>
 
           <Image
-            src={"/images/uluwatu-temple.webp"}
+            src={"/images/uluwatu-temple.avif"}
             alt="Uluwatu temple, Bali"
             height={200}
             width={400}
@@ -1158,7 +1158,7 @@ export default function Home() {
           </Text>
 
           <Image
-            src={"/images/atm-mark-up-fee.webp"}
+            src={"/images/atm-mark-up-fee.avif"}
             alt="ATM mark-up fee"
             height={400}
             width={400}
@@ -1184,7 +1184,7 @@ export default function Home() {
           </Text>
 
           <Image
-            src={"/images/IDR-forex-dealer.webp"}
+            src={"/images/IDR-forex-dealer.avif"}
             alt="Forex dealer in Bali"
             height={400}
             width={700}
