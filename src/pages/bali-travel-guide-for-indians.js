@@ -14,7 +14,7 @@ import {
   Card,
   Box,
   UnorderedList,
-  ListItem
+  ListItem,
 } from "@chakra-ui/react";
 import Seo from "@/component/seo";
 import Header from "@/component/header";
@@ -80,20 +80,19 @@ export default function Home() {
   };
 
   const baliData = [
-    { month: 'Jan', days: 19 },
-    { month: 'Feb', days: 18 },
-    { month: 'Mar', days: 20 },
-    { month: 'Apr', days: 12 },
-    { month: 'May', days: 8 },
-    { month: 'Jun', days: 7 },
-    { month: 'Jul', days: 4 },
-    { month: 'Aug', days: 3 },
-    { month: 'Sep', days: 3 },
-    { month: 'Oct', days: 6 },
-    { month: 'Nov', days: 10 },
-    { month: 'Dec', days: 16 }
+    { month: "Jan", days: 19 },
+    { month: "Feb", days: 18 },
+    { month: "Mar", days: 20 },
+    { month: "Apr", days: 12 },
+    { month: "May", days: 8 },
+    { month: "Jun", days: 7 },
+    { month: "Jul", days: 4 },
+    { month: "Aug", days: 3 },
+    { month: "Sep", days: 3 },
+    { month: "Oct", days: 6 },
+    { month: "Nov", days: 10 },
+    { month: "Dec", days: 16 },
   ];
-
 
   const TableRow = ({ onClick, label }) => (
     <Tr onClick={onClick} style={{ cursor: "pointer" }}>
@@ -169,7 +168,10 @@ export default function Home() {
               Preparing for Bali trip
             </Heading>
 
-            <Heading as={'h3'} style={{ marginTop: "20px" }} fontSize="2xl"> Bali weather </Heading>
+            <Heading as={"h3"} style={{ marginTop: "20px" }} fontSize="2xl">
+              {" "}
+              Bali weather{" "}
+            </Heading>
             <Text style={{ marginTop: "20px" }} fontSize="xl">
               The best months to travel Bali are:
             </Text>
@@ -181,15 +183,18 @@ export default function Home() {
             </UnorderedList>
 
             <Text style={{ marginTop: "20px" }} fontSize="xl">
-              Other months can seriously ruin your holiday experience.
-              A day spent waiting for rain to stop is a day wasted from your holiday.
+              Other months can seriously ruin your holiday experience. A day
+              spent waiting for rain to stop is a day wasted from your holiday.
             </Text>
             <PrecipitationChart
               data={baliData}
               destinationName="Bali"
               destinationIcon="🌴"
             />
-            <Heading as={'h3'} style={{ marginTop: "20px" }} fontSize="2xl"> Delhi to Bali flight</Heading>
+            <Heading as={"h3"} style={{ marginTop: "20px" }} fontSize="2xl">
+              {" "}
+              Delhi to Bali flight
+            </Heading>
             <Text style={{ marginTop: "20px" }} fontSize="xl">
               You can affordable return flights to Bali from New Delhi and
               Mumbai both. Just use{" "}
@@ -221,7 +226,10 @@ export default function Home() {
               />
             </div>
 
-            <Heading as={'h3'} style={{ marginTop: "20px" }} fontSize="2xl"> Visa for Bali </Heading>
+            <Heading as={"h3"} style={{ marginTop: "20px" }} fontSize="2xl">
+              {" "}
+              Visa for Bali{" "}
+            </Heading>
 
             <Text style={{ marginTop: "20px" }} fontSize="xl">
               {`Though Indonesia provides facility to apply for e-visa for Indian
@@ -808,7 +816,8 @@ export default function Home() {
                         isExternal
                         fontWeight="bold"
                         textDecoration="underline"
-                        href="https://www.google.com/search?q=zuri+kuta+hotel&oq=zuri+kuta+hotel">
+                        href="https://www.google.com/search?q=zuri+kuta+hotel&oq=zuri+kuta+hotel"
+                      >
                         Grand Zuri Hotel, Kuta
                       </Link>
                     </Td>
@@ -820,7 +829,8 @@ export default function Home() {
                         isExternal
                         fontWeight="bold"
                         textDecoration="underline"
-                        href="https://www.google.com/search?q=lokasari+retreat+ubud">
+                        href="https://www.google.com/search?q=lokasari+retreat+ubud"
+                      >
                         Lokasari Retreat, Ubud
                       </Link>
                     </Td>
@@ -832,7 +842,8 @@ export default function Home() {
                         isExternal
                         fontWeight="bold"
                         textDecoration="underline"
-                        href="https://www.google.com/search?q=Puri+Padma+Hotel+%26+Resort+ubud">
+                        href="https://www.google.com/search?q=Puri+Padma+Hotel+%26+Resort+ubud"
+                      >
                         Puri Padma Hotel & Resort
                       </Link>
                     </Td>
