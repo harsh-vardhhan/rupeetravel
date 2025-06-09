@@ -21,6 +21,7 @@ import Header from "@/component/header";
 import Image from "next/image";
 import CurrencyConverter from "@/component/CurrencyConverter";
 import PrecipitationChart from "@/component/PrecipitationChart";
+import VisaStamp from "@/component/VisaStamp";
 import { IDRINRMarketRate } from "../currency/currency";
 
 export default function Home() {
@@ -201,7 +202,7 @@ export default function Home() {
               >
                 {"Google Flights"}
               </Link>
-              {`to see which date has the cheapest flight. If you want to book a
+              {` to see which date has the cheapest flight. If you want to book a
               cheap flight, be flexible with your travel dates. For those who are price conscious like me, fly with VietJet Air. 
               Even though it doesn't offer a direct flight to Bali, it's a lot cheaper than direct flights.`}
             </Text>
@@ -222,6 +223,7 @@ export default function Home() {
             </div>
 
             <Heading as={'h3'} style={{ marginTop: "20px" }} fontSize="2xl"> Visa for Bali </Heading>
+            <VisaStamp/>
 
             <Text style={{ marginTop: "20px" }} fontSize="xl">
               {`Though Indonesia provides facility to apply for e-visa for Indian
