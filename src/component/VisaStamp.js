@@ -1,17 +1,11 @@
-import React from 'react';
-import {
-  Box,
-  Text,
-  VStack,
-  HStack,
-  Center,
-} from '@chakra-ui/react';
+import React from "react";
+import { Box, Text, VStack, HStack, Center } from "@chakra-ui/react";
 
 const VisaStamp = () => {
-  const currentDate = new Date().toLocaleDateString('en-GB', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric'
+  const currentDate = new Date().toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
   });
 
   return (
@@ -41,11 +35,17 @@ const VisaStamp = () => {
             borderColor="red.500"
             borderRadius="md"
           />
-          
+
           {/* Content */}
           <VStack spacing={3} position="relative" zIndex={10}>
             {/* Header */}
-            <VStack spacing={1} pb={2} borderBottom="2px solid" borderColor="red.600" w="full">
+            <VStack
+              spacing={1}
+              pb={2}
+              borderBottom="2px solid"
+              borderColor="red.600"
+              w="full"
+            >
               <Text
                 fontSize={{ base: "md", sm: "lg" }}
                 fontWeight="bold"
@@ -66,7 +66,7 @@ const VisaStamp = () => {
                 Ministry of Tourism
               </Text>
             </VStack>
-            
+
             {/* Visa Type */}
             <Box py={2}>
               <Text
@@ -79,41 +79,68 @@ const VisaStamp = () => {
                 Tourist Visa
               </Text>
             </Box>
-            
+
             {/* Visa Details */}
             <VStack spacing={2} fontSize="sm" w="full">
               <HStack justify="space-between" w="full">
-                <Text fontWeight="semibold" color="gray.700">VISA:</Text>
-                <Text fontWeight="bold" color="black" bg="yellow.100" px={2} py={1} borderRadius="md">
+                <Text fontWeight="semibold" color="gray.700">
+                  VISA:
+                </Text>
+                <Text
+                  fontWeight="bold"
+                  color="black"
+                  bg="yellow.100"
+                  px={2}
+                  py={1}
+                  borderRadius="md"
+                >
                   B2
                 </Text>
               </HStack>
-              
+
               <HStack justify="space-between" w="full">
-                <Text fontWeight="semibold" color="gray.700">DURATION:</Text>
-                <Text fontWeight="bold" color="black">30 DAYS</Text>
+                <Text fontWeight="semibold" color="gray.700">
+                  DURATION:
+                </Text>
+                <Text fontWeight="bold" color="black">
+                  30 DAYS
+                </Text>
               </HStack>
-              
+
               <HStack justify="space-between" w="full">
-                <Text fontWeight="semibold" color="gray.700">FEE:</Text>
-                <Text fontWeight="bold" color="green.700">500,000 IDR</Text>
-              </HStack>
-            </VStack>
-            
-            {/* Date and stamp info */}
-            <VStack spacing={1} pt={3} mt={4} borderTop="2px solid" borderColor="red.600" w="full">
-              <HStack justify="space-between" fontSize="xs" w="full">
-                <Text color="gray.600">ISSUED:</Text>
-                <Text fontWeight="semibold" color="black">{currentDate}</Text>
-              </HStack>
-              <HStack justify="space-between" fontSize="xs" w="full">
-                <Text color="gray.600">ENTRY:</Text>
-                <Text fontWeight="semibold" color="black">DENPASAR</Text>
+                <Text fontWeight="semibold" color="gray.700">
+                  FEE:
+                </Text>
+                <Text fontWeight="bold" color="green.700">
+                  500,000 IDR
+                </Text>
               </HStack>
             </VStack>
 
+            {/* Date and stamp info */}
+            <VStack
+              spacing={1}
+              pt={3}
+              mt={4}
+              borderTop="2px solid"
+              borderColor="red.600"
+              w="full"
+            >
+              <HStack justify="space-between" fontSize="xs" w="full">
+                <Text color="gray.600">ISSUED:</Text>
+                <Text fontWeight="semibold" color="black">
+                  {currentDate}
+                </Text>
+              </HStack>
+              <HStack justify="space-between" fontSize="xs" w="full">
+                <Text color="gray.600">ENTRY:</Text>
+                <Text fontWeight="semibold" color="black">
+                  DENPASAR
+                </Text>
+              </HStack>
+            </VStack>
           </VStack>
-          
+
           {/* Background watermark */}
           <Box
             position="absolute"
