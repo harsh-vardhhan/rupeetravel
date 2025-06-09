@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { BarChart, Bar, XAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import { Box, Text, VStack, Badge, Flex, useBreakpointValue } from '@chakra-ui/react';
 
@@ -17,7 +17,8 @@ const getCurrentMonth = () => {
   return months[new Date().getMonth()];
 };
 
-const CustomTooltip = ({ active, payload, label }) => {
+// Memoized tooltip component
+const CustomTooltip = React.memo(({ active, payload, label }) => {
   if (active && payload && payload.length) {
     const value = payload[0].value;
     const emoji = getRainEmoji(value);
@@ -44,9 +45,12 @@ const CustomTooltip = ({ active, payload, label }) => {
     );
   }
   return null;
-};
+});
 
-const CustomizedLabel = (props) => {
+CustomTooltip.displayName = 'CustomTooltip';
+
+// Memoized label component
+const CustomizedLabel = React.memo((props) => {
   const { x, y, width, value } = props;
   
   const days = value || 0;
@@ -69,22 +73,62 @@ const CustomizedLabel = (props) => {
       {emoji}
     </text>
   );
+});
+
+CustomizedLabel.displayName = 'CustomizedLabel';
+
+// Pre-defined styles to avoid inline object creation
+const currentMonthStyle = {
+  filter: 'drop-shadow(0 8px 16px rgba(59, 130, 246, 0.3))'
+};
+
+const regularMonthStyle = {
+  filter: 'drop-shadow(0 4px 8px rgba(147, 197, 253, 0.2))'
 };
 
 // Main reusable component
-const PrecipitationChart = ({ 
+const PrecipitationChart = React.memo(({ 
   data, 
   destinationName = "Location", 
   destinationIcon = "🌍", 
   currentMonth = getCurrentMonth(),
   subtitle 
 }) => {
-  // Process data to add emojis
-  const processedData = data.map(item => ({
-    ...item,
-    emoji: getRainEmoji(item.days)
-  }));
-  const chartSubtitle = subtitle || "Monthly precipitation patterns";
+  // Memoize processed data to prevent unnecessary recalculations
+  const processedData = useMemo(() => 
+    data.map(item => ({
+      ...item,
+      emoji: getRainEmoji(item.days)
+    })), [data]
+  );
+
+  // Memoize chart subtitle
+  const chartSubtitle = useMemo(() => 
+    subtitle || "Monthly precipitation patterns", [subtitle]
+  );
+  
+  // Memoize gradient definitions
+  const gradientDefs = useMemo(() => 
+    processedData.map((entry, index) => (
+      <linearGradient key={`gradient-${index}`} id={`gradient-${index}`} x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor={entry.month === currentMonth ? "#3B82F6" : "#93C5FD"} />
+        <stop offset="100%" stopColor={entry.month === currentMonth ? "#1E40AF" : "#60A5FA"} />
+      </linearGradient>
+    )), [processedData, currentMonth]
+  );
+
+  // Memoize bar cells
+  const barCells = useMemo(() => 
+    processedData.map((entry, index) => (
+      <Cell 
+        key={`cell-${index}`} 
+        fill={`url(#gradient-${index})`}
+        stroke={entry.month === currentMonth ? '#1E40AF' : 'transparent'}
+        strokeWidth={entry.month === currentMonth ? 3 : 0}
+        style={entry.month === currentMonth ? currentMonthStyle : regularMonthStyle}
+      />
+    )), [processedData, currentMonth]
+  );
   
   // Hide X-axis on mobile
   const showXAxis = useBreakpointValue({ base: false, md: true });
@@ -173,12 +217,7 @@ const PrecipitationChart = ({
               }}
             >
               <defs>
-                {processedData.map((entry, index) => (
-                  <linearGradient key={`gradient-${index}`} id={`gradient-${index}`} x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor={entry.month === currentMonth ? "#3B82F6" : "#93C5FD"} />
-                    <stop offset="100%" stopColor={entry.month === currentMonth ? "#1E40AF" : "#60A5FA"} />
-                  </linearGradient>
-                ))}
+                {gradientDefs}
               </defs>
               
               <CartesianGrid 
@@ -204,19 +243,7 @@ const PrecipitationChart = ({
                 radius={[8, 8, 0, 0]}
                 label={<CustomizedLabel />}
               >
-                {processedData.map((entry, index) => (
-                  <Cell 
-                    key={`cell-${index}`} 
-                    fill={`url(#gradient-${index})`}
-                    stroke={entry.month === currentMonth ? '#1E40AF' : 'transparent'}
-                    strokeWidth={entry.month === currentMonth ? 3 : 0}
-                    style={{
-                      filter: entry.month === currentMonth ? 
-                        'drop-shadow(0 8px 16px rgba(59, 130, 246, 0.3))' : 
-                        'drop-shadow(0 4px 8px rgba(147, 197, 253, 0.2))'
-                    }}
-                  />
-                ))}
+                {barCells}
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -225,7 +252,8 @@ const PrecipitationChart = ({
       </VStack>
     </Box>
   );
-};
+});
 
+PrecipitationChart.displayName = 'PrecipitationChart';
 
 export default PrecipitationChart;
