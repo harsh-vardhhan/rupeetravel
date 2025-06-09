@@ -139,7 +139,7 @@ const PrecipitationChart = ({
         <Box 
           w="100%" 
           maxW="1000px" 
-          h={{ base: "400px", sm: "450px", md: "550px" }} 
+          h={{ base: "280px", sm: "320px", md: "550px" }} 
           bg="rgba(255, 255, 255, 0.95)"
           p={{ base: 4, sm: 6, md: 8 }} 
           borderRadius="3xl" 
