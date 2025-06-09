@@ -195,27 +195,6 @@ const PrecipitationChart = ({
                 }}
                 interval={0}
               />
-              <YAxis 
-                axisLine={false}
-                tickLine={false}
-                tick={{ 
-                  fontSize: 11, 
-                  fill: '#6B7280',
-                  fontWeight: 500
-                }}
-                label={{ 
-                  value: 'Rainy Days', 
-                  angle: -90, 
-                  position: 'insideLeft',
-                  style: { 
-                    textAnchor: 'middle',
-                    fontSize: '12px',
-                    fill: '#6B7280',
-                    fontWeight: 500
-                  }
-                }}
-                width={40}
-              />
               <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(59, 130, 246, 0.1)' }} />
               <Bar 
                 dataKey="days" 
