@@ -15,17 +15,11 @@ const Header = ({ title, blog = false }) => {
         </Text>
       </Link>
       {blog ? (
-        <Text
-          as="h1"
-          fontSize={{ base: "sm", md: "md", lg: "lg" }}
-        >
+        <Text as="h1" fontSize={{ base: "sm", md: "md", lg: "lg" }}>
           {title}
         </Text>
       ) : (
-        <Text
-          as="h1"
-          fontSize={{ base: "sm", md: "md", lg: "lg" }}
-        >
+        <Text as="h1" fontSize={{ base: "sm", md: "md", lg: "lg" }}>
           {title}
         </Text>
       )}
