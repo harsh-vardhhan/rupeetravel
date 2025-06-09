@@ -114,28 +114,6 @@ const VisaStamp = () => {
               </HStack>
             </VStack>
             
-            {/* Official stamp mark */}
-            <Box mt={4} pt={2}>
-              <Center
-                w={16}
-                h={16}
-                mx="auto"
-                borderRadius="full"
-                border="2px solid"
-                borderColor="red.600"
-                bg="red.50"
-              >
-                <Text
-                  fontSize="xs"
-                  fontWeight="bold"
-                  color="red.700"
-                  textAlign="center"
-                  lineHeight="tight"
-                >
-                  OFFICIAL<br />STAMP
-                </Text>
-              </Center>
-            </Box>
           </VStack>
           
           {/* Background watermark */}
