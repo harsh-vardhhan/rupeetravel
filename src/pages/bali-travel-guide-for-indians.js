@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import styles from "@/styles/Home.module.css";
 import {
   Text,
   Heading,
