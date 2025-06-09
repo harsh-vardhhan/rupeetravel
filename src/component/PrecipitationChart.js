@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { Box, Text, VStack, Badge, Flex } from '@chakra-ui/react';
+import { Box, Text, VStack, Badge, Flex, useBreakpointValue } from '@chakra-ui/react';
 
 // Helper function to determine emoji based on precipitation days
 const getRainEmoji = (days) => {
@@ -77,7 +77,6 @@ const PrecipitationChart = ({
   destinationName = "Location", 
   destinationIcon = "🌍", 
   currentMonth = getCurrentMonth(),
-  title,
   subtitle 
 }) => {
   // Process data to add emojis
@@ -86,6 +85,9 @@ const PrecipitationChart = ({
     emoji: getRainEmoji(item.days)
   }));
   const chartSubtitle = subtitle || "Monthly precipitation patterns";
+  
+  // Hide X-axis on mobile
+  const showXAxis = useBreakpointValue({ base: false, md: true });
 
   return (
     <Box 
@@ -194,6 +196,7 @@ const PrecipitationChart = ({
                   fontWeight: 500
                 }}
                 interval={0}
+                hide={!showXAxis}
               />
               <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(59, 130, 246, 0.1)' }} />
               <Bar 
