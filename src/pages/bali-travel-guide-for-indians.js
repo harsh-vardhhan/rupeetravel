@@ -149,7 +149,10 @@ export default function Home() {
               {" "}
               Preparing for Bali trip
             </Heading>
-            <Heading as={'h3'} style={{ marginTop: "20px" }} fontSize="2xl"> Delhi to Bali flight</Heading>
+            <Heading as={"h3"} style={{ marginTop: "20px" }} fontSize="2xl">
+              {" "}
+              Delhi to Bali flight
+            </Heading>
             <Text style={{ marginTop: "20px" }} fontSize="xl">
               You can affordable return flights to Bali from New Delhi and
               Mumbai both. Just use{" "}
@@ -180,7 +183,10 @@ export default function Home() {
               />
             </div>
 
-            <Heading as={'h3'} style={{ marginTop: "20px" }} fontSize="2xl"> Visa for Bali </Heading>
+            <Heading as={"h3"} style={{ marginTop: "20px" }} fontSize="2xl">
+              {" "}
+              Visa for Bali{" "}
+            </Heading>
 
             <Text style={{ marginTop: "20px" }} fontSize="xl">
               Though Indonesia provides facility to apply for e-visa for Indian
@@ -767,7 +773,8 @@ export default function Home() {
                         isExternal
                         fontWeight="bold"
                         textDecoration="underline"
-                        href="https://www.google.com/search?q=zuri+kuta+hotel&oq=zuri+kuta+hotel">
+                        href="https://www.google.com/search?q=zuri+kuta+hotel&oq=zuri+kuta+hotel"
+                      >
                         Grand Zuri Hotel, Kuta
                       </Link>
                     </Td>
@@ -779,7 +786,8 @@ export default function Home() {
                         isExternal
                         fontWeight="bold"
                         textDecoration="underline"
-                        href="https://www.google.com/search?q=lokasari+retreat+ubud">
+                        href="https://www.google.com/search?q=lokasari+retreat+ubud"
+                      >
                         Lokasari Retreat, Ubud
                       </Link>
                     </Td>
@@ -791,7 +799,8 @@ export default function Home() {
                         isExternal
                         fontWeight="bold"
                         textDecoration="underline"
-                        href="https://www.google.com/search?q=Puri+Padma+Hotel+%26+Resort+ubud">
+                        href="https://www.google.com/search?q=Puri+Padma+Hotel+%26+Resort+ubud"
+                      >
                         Puri Padma Hotel & Resort
                       </Link>
                     </Td>
