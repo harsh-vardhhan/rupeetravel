@@ -6,33 +6,25 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 
-const Header = ({ title, blog=false }) => {
+const Header = ({ title, blog = false }) => {
   return (
     <>
       <Link href="/">
-        <Text fontSize="5xl" as="b">
+        <Text fontSize={{ base: "2xl", md: "2xl", lg: "7xl" }} as="b">
           Rupee Travel
         </Text>
       </Link>
       {blog ? (
         <Text
           as="h1"
-          fontSize={{ base: '24px', md: '40px', lg: '75px' }}
-          style={{
-            marginTop: "20px",
-            fontWeight: 700,
-          }}
+          fontSize={{ base: "sm", md: "md", lg: "lg" }}
         >
           {title}
         </Text>
       ) : (
         <Text
           as="h1"
-          fontSize="xl"
-          style={{
-            marginTop: "20px",
-            fontWeight: 600,
-          }}
+          fontSize={{ base: "sm", md: "md", lg: "lg" }}
         >
           {title}
         </Text>

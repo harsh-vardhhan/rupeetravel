@@ -5,7 +5,7 @@ import {
 
 const Header = () => {
     return (
-        <Text fontSize='5xl' as='b'>
+        <Text fontSize={{ base: "2xl", md: "2xl", lg: "7xl" }} as='b'>
             <Link href="/" className="hover:underline">
                 Rupee Travel
             </Link>

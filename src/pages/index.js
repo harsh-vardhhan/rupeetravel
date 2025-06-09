@@ -24,12 +24,12 @@ export default function Home({
     <>
       <Seo canonical={"https://www.rupeetravel.com"} />
       <main className={styles.main}>
-        <Text fontSize="5xl" as="b">
+        <Text fontSize={{ base: "2xl", md: "2xl", lg: "7xl" }} as="b">
           Rupee Travel
         </Text>
         <Heading
           as="h1"
-          fontSize={{ base: "24px", md: "40px", lg: "75px" }}
+          fontSize={{ base: "2xl", md: "2xl", lg: "5xl" }} 
           style={{ marginTop: "20px" }}
         >
           The ultimate checklist for Vietnam travel from India 🇻🇳
