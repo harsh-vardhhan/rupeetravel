@@ -126,7 +126,7 @@ export default function Home() {
                 <Tbody>
                   <TableRow
                     onClick={FlightAndVisaClick}
-                    label="Booking flights and applying visa"
+                    label="Preparing for Bali trip"
                   />
                   <TableRow onClick={Day1Click} label="Day 1 - Kuta" />
                   <TableRow onClick={Day2Click} label="Day 2 - Seminyak" />
@@ -135,7 +135,7 @@ export default function Home() {
                   <TableRow onClick={Day5Click} label="Day 5 - Ubud" />
                   <TableRow onClick={Day6Click} label="Day 6 - Ubud" />
                   <TableRow onClick={Day7Click} label="Day 7 - Uluwatu" />
-                  <TableRow onClick={HotelsClick} label="Hotels we stayed" />
+                  <TableRow onClick={HotelsClick} label="Hotels" />
                   <TableRow
                     onClick={MoneySavingClick}
                     label="Money saving tips"
@@ -762,15 +762,39 @@ export default function Home() {
                 </Thead>
                 <Tbody>
                   <Tr>
-                    <Td>Zuri Hotel, Kuta</Td>
+                    <Td>
+                      <Link
+                        isExternal
+                        fontWeight="bold"
+                        textDecoration="underline"
+                        href="https://www.google.com/search?q=zuri+kuta+hotel&oq=zuri+kuta+hotel">
+                        Grand Zuri Hotel, Kuta
+                      </Link>
+                    </Td>
                     <Td>₹ 2,100</Td>
                   </Tr>
                   <Tr>
-                    <Td>Lokasari Retreat</Td>
+                    <Td>
+                      <Link
+                        isExternal
+                        fontWeight="bold"
+                        textDecoration="underline"
+                        href="https://www.google.com/search?q=lokasari+retreat+ubud">
+                        Lokasari Retreat, Ubud
+                      </Link>
+                    </Td>
                     <Td>₹ 2,074</Td>
                   </Tr>
                   <Tr>
-                    <Td>Puri Padma Hotel & Resort</Td>
+                    <Td>
+                      <Link
+                        isExternal
+                        fontWeight="bold"
+                        textDecoration="underline"
+                        href="https://www.google.com/search?q=Puri+Padma+Hotel+%26+Resort+ubud">
+                        Puri Padma Hotel & Resort
+                      </Link>
+                    </Td>
                     <Td>₹ 2,800</Td>
                   </Tr>
                 </Tbody>
@@ -861,7 +885,7 @@ export default function Home() {
 
             <Heading ref={TotalCostRef} style={{ marginTop: "20px" }}>
               {" "}
-              Bali trip cost from India for couple​
+              Bali trip cost from India for couple
             </Heading>
 
             <Text style={{ marginTop: "20px" }} fontSize="xl">
