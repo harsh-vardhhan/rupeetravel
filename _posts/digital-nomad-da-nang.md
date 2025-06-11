@@ -21,7 +21,7 @@ The Vietnam e-visa is for a month, so why not maximize it? So I decided on a mon
 
 ## Time to arm up
 
-![Financial tools](/assets/blog/digital-nomad-da-nang/tools.webp "Financial tools")
+![Financial tools](/assets/blog/digital-nomad-da-nang/tools.avif "Financial tools")
 
 I started to equip myself with all cross-border financial tools to make my stay as pleasant as possible:
 

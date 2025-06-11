@@ -14,7 +14,8 @@ import {
   Box,
   UnorderedList,
   ListItem,
-  Flex
+  Flex,
+  useColorModeValue
 } from "@chakra-ui/react";
 import Seo from "@/component/seo";
 import Header from "@/component/header";
@@ -343,12 +344,10 @@ export default function Home() {
           </Text>
 
           <Card
-            style={{
-              padding: { base: "10px", md: "15px", lg: "20px" },
-              marginTop: "10px",
-              backgroundColor: "#FAF3F0",
-              width: "100%"
-            }}
+            bg={useColorModeValue('orange.50', 'orange.900')}
+            p={{ base: "10px", md: "15px", lg: "20px" }}
+            mt="10px"
+            w="100%"
           >
             <div style={{
               marginLeft: "5%",
@@ -424,12 +423,10 @@ export default function Home() {
           </Text>
 
           <Card
-            style={{
-              padding: { base: "10px", md: "15px", lg: "20px" },
-              marginTop: "10px",
-              backgroundColor: "#FAF3F0",
-              width: "100%"
-            }}
+            bg={useColorModeValue('orange.50', 'orange.900')}
+            p={{ base: "10px", md: "15px", lg: "20px" }}
+            mt="10px"
+            w="100%"
           >
             <div style={{
               marginLeft: "5%",
@@ -508,12 +505,10 @@ export default function Home() {
           />
 
           <Card
-            style={{
-              padding: { base: "10px", md: "15px", lg: "20px" },
-              marginTop: "10px",
-              backgroundColor: "#FAF3F0",
-              width: "100%"
-            }}
+            bg={useColorModeValue('orange.50', 'orange.900')}
+            p={{ base: "10px", md: "15px", lg: "20px" }}
+            mt="10px"
+            w="100%"
           >
             <div style={{
               marginLeft: "5%",
@@ -672,12 +667,10 @@ export default function Home() {
           />
 
           <Card
-            style={{
-              padding: { base: "10px", md: "15px", lg: "20px" },
-              marginTop: "10px",
-              backgroundColor: "#FAF3F0",
-              width: "100%"
-            }}
+            bg={useColorModeValue('orange.50', 'orange.900')}
+            p={{ base: "10px", md: "15px", lg: "20px" }}
+            mt="10px"
+            w="100%"
           >
             <div style={{
               marginLeft: "5%",
@@ -730,12 +723,10 @@ export default function Home() {
           </Heading>
 
           <Card
-            style={{
-              padding: { base: "10px", md: "15px", lg: "20px" },
-              marginTop: "10px",
-              backgroundColor: "#FAF3F0",
-              width: "100%"
-            }}
+            bg={useColorModeValue('orange.50', 'orange.900')}
+            p={{ base: "10px", md: "15px", lg: "20px" }}
+            mt="10px"
+            w="100%"
           >
             <div style={{
               marginLeft: "5%",
@@ -825,12 +816,10 @@ export default function Home() {
           />
 
           <Card
-            style={{
-              padding: { base: "10px", md: "15px", lg: "20px" },
-              marginTop: "10px",
-              backgroundColor: "#FAF3F0",
-              width: "100%"
-            }}
+            bg={useColorModeValue('orange.50', 'orange.900')}
+            p={{ base: "10px", md: "15px", lg: "20px" }}
+            mt="10px"
+            w="100%"
           >
             <div style={{
               marginLeft: "5%",

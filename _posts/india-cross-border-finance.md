@@ -1,14 +1,14 @@
 ---
 title: 'Indian passport sucks, but its cross-border tools do not.'
 excerpt: 'You need to leverage the cross-border financial services India provides for your next international travel plan'
-coverImage: '/assets/blog/india-cross-border-finance/tools.webp'
+coverImage: '/assets/blog/india-cross-border-finance/tools.avif'
 date: '2023-06-01T05:35:07.322Z'
 canonical: 'https://www.rupeetravel.com/posts/india-cross-border-finance'
 author:
   name: 'Harsh Vardhan'
   picture: '/assets/blog/india-cross-border-finance/profile.webp'
 ogImage:
-  url: '/assets/blog/india-cross-border-finance/tools.webp'
+  url: '/assets/blog/india-cross-border-finance/tools.avif'
 ---
 
 ## Yes, an Indian passport sucks. We all know that ###
