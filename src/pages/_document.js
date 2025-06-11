@@ -1,11 +1,11 @@
 // pages/_document.js
-import { Html, Head, Main, NextScript } from 'next/document'
-import { ColorModeScript } from '@chakra-ui/react'
-import theme from '../styles/theme' // Import your theme
+import { Html, Head, Main, NextScript } from "next/document";
+import { ColorModeScript } from "@chakra-ui/react";
+import theme from "../styles/theme"; // Import your theme
 
 export default function Document() {
   return (
-    <Html lang='en'>
+    <Html lang="en">
       <Head />
       <body>
         {/* 👇 Here's the script */}
@@ -14,5 +14,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }

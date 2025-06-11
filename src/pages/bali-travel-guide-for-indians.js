@@ -15,7 +15,7 @@ import {
   UnorderedList,
   ListItem,
   Flex,
-  useColorModeValue
+  useColorModeValue,
 } from "@chakra-ui/react";
 import Seo from "@/component/seo";
 import Header from "@/component/header";
@@ -82,18 +82,18 @@ export default function Home() {
   };
 
   const baliData = [
-    { month: 'Jan', days: 19 },
-    { month: 'Feb', days: 18 },
-    { month: 'Mar', days: 20 },
-    { month: 'Apr', days: 12 },
-    { month: 'May', days: 8 },
-    { month: 'Jun', days: 7 },
-    { month: 'Jul', days: 4 },
-    { month: 'Aug', days: 3 },
-    { month: 'Sep', days: 3 },
-    { month: 'Oct', days: 6 },
-    { month: 'Nov', days: 10 },
-    { month: 'Dec', days: 16 }
+    { month: "Jan", days: 19 },
+    { month: "Feb", days: 18 },
+    { month: "Mar", days: 20 },
+    { month: "Apr", days: 12 },
+    { month: "May", days: 8 },
+    { month: "Jun", days: 7 },
+    { month: "Jul", days: 4 },
+    { month: "Aug", days: 3 },
+    { month: "Sep", days: 3 },
+    { month: "Oct", days: 6 },
+    { month: "Nov", days: 10 },
+    { month: "Dec", days: 16 },
   ];
 
   const TableRow = ({ onClick, label }) => (
@@ -133,7 +133,7 @@ export default function Home() {
               marginTop: "10px",
               maxWidth: "100%",
               height: "auto",
-              objectFit: "cover"
+              objectFit: "cover",
             }}
           />
 
@@ -143,7 +143,7 @@ export default function Home() {
               borderColor: "aliceblue",
               marginTop: "10px",
               width: "100%",
-              overflowX: "auto"
+              overflowX: "auto",
             }}
           >
             <Table variant="simple" size={{ base: "sm", md: "md", lg: "lg" }}>
@@ -185,7 +185,7 @@ export default function Home() {
           </Heading>
 
           <Heading
-            as={'h3'}
+            as={"h3"}
             style={{ marginTop: "20px" }}
             fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
           >
@@ -208,8 +208,8 @@ export default function Home() {
             style={{ marginTop: "20px" }}
             fontSize={{ base: "md", md: "lg", lg: "xl" }}
           >
-            Other months can seriously ruin your holiday experience.
-            A day spent waiting for rain to stop is a day wasted from your holiday.
+            Other months can seriously ruin your holiday experience. A day spent
+            waiting for rain to stop is a day wasted from your holiday.
           </Text>
           <PrecipitationChart
             data={baliData}
@@ -217,7 +217,7 @@ export default function Home() {
             destinationIcon="🌴"
           />
           <Heading
-            as={'h3'}
+            as={"h3"}
             style={{ marginTop: "20px" }}
             fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
           >
@@ -227,8 +227,8 @@ export default function Home() {
             style={{ marginTop: "20px" }}
             fontSize={{ base: "md", md: "lg", lg: "xl" }}
           >
-            You can affordable return flights to Bali from New Delhi and
-            Mumbai both. Just use{" "}
+            You can affordable return flights to Bali from New Delhi and Mumbai
+            both. Just use{" "}
             <Link
               href="https://www.google.com/travel/flights"
               isExternal
@@ -247,7 +247,7 @@ export default function Home() {
               marginTop: "10px",
               borderWidth: "medium",
               borderColor: "aliceblue",
-              width: "100%"
+              width: "100%",
             }}
           >
             <Image
@@ -258,13 +258,13 @@ export default function Home() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "cover"
+                objectFit: "cover",
               }}
             />
           </div>
 
           <Heading
-            as={'h3'}
+            as={"h3"}
             style={{ marginTop: "20px" }}
             fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
           >
@@ -306,7 +306,7 @@ export default function Home() {
               marginTop: "10px",
               borderWidth: "medium",
               borderColor: "aliceblue",
-              width: "100%"
+              width: "100%",
             }}
           >
             <Image
@@ -317,7 +317,7 @@ export default function Home() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "cover"
+                objectFit: "cover",
               }}
             />
           </div>
@@ -326,8 +326,8 @@ export default function Home() {
             style={{ marginTop: "20px" }}
             fontSize={{ base: "md", md: "lg", lg: "xl" }}
           >
-            Kuta is a destination near the airport. You can enjoy walking on
-            the beach, or visiting{" "}
+            Kuta is a destination near the airport. You can enjoy walking on the
+            beach, or visiting{" "}
             <Link
               href="https://beachwalkbali.com/"
               isExternal
@@ -344,21 +344,21 @@ export default function Home() {
           </Text>
 
           <Card
-            bg={useColorModeValue('orange.50', 'orange.900')}
+            bg={useColorModeValue("orange.50", "orange.900")}
             p={{ base: "10px", md: "15px", lg: "20px" }}
             mt="10px"
             w="100%"
           >
-            <div style={{
-              marginLeft: "5%",
-              width: '90%',
-              marginRight: "5%",
-              marginTop: 20,
-              marginBottom: 20
-            }}>
-              <Heading
-                fontSize={{ base: "md", md: "lg", lg: "xl" }}
-              >
+            <div
+              style={{
+                marginLeft: "5%",
+                width: "90%",
+                marginRight: "5%",
+                marginTop: 20,
+                marginBottom: 20,
+              }}
+            >
+              <Heading fontSize={{ base: "md", md: "lg", lg: "xl" }}>
                 {`What is the budget food option available?`}
               </Heading>
               <Text
@@ -378,7 +378,7 @@ export default function Home() {
                 style={{
                   marginTop: "10px",
                   height: "auto",
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
               <CurrencyConverter
@@ -397,7 +397,7 @@ export default function Home() {
           <div
             style={{
               marginTop: "10px",
-              width: "100%"
+              width: "100%",
             }}
           >
             <Image
@@ -408,7 +408,7 @@ export default function Home() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "cover"
+                objectFit: "cover",
               }}
             />
           </div>
@@ -418,26 +418,26 @@ export default function Home() {
             fontSize={{ base: "md", md: "lg", lg: "xl" }}
           >
             Kuta has multiple beach clubs that you can visit in the evening
-            time. We visited Azul Beach Club. You can enjoy the sunset view
-            from the beach club.
+            time. We visited Azul Beach Club. You can enjoy the sunset view from
+            the beach club.
           </Text>
 
           <Card
-            bg={useColorModeValue('orange.50', 'orange.900')}
+            bg={useColorModeValue("orange.50", "orange.900")}
             p={{ base: "10px", md: "15px", lg: "20px" }}
             mt="10px"
             w="100%"
           >
-            <div style={{
-              marginLeft: "5%",
-              width: '90%',
-              marginRight: "5%",
-              marginTop: 20,
-              marginBottom: 20
-            }}>
-              <Heading
-                fontSize={{ base: "md", md: "lg", lg: "xl" }}
-              >
+            <div
+              style={{
+                marginLeft: "5%",
+                width: "90%",
+                marginRight: "5%",
+                marginTop: 20,
+                marginBottom: 20,
+              }}
+            >
+              <Heading fontSize={{ base: "md", md: "lg", lg: "xl" }}>
                 {`What is the budget drink option available?`}
               </Heading>
               <Text
@@ -457,7 +457,7 @@ export default function Home() {
                   marginTop: "10px",
                   width: "100%",
                   height: "auto",
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
               <CurrencyConverter
@@ -500,26 +500,26 @@ export default function Home() {
               borderColor: "aliceblue",
               width: "100%",
               height: "auto",
-              objectFit: "cover"
+              objectFit: "cover",
             }}
           />
 
           <Card
-            bg={useColorModeValue('orange.50', 'orange.900')}
+            bg={useColorModeValue("orange.50", "orange.900")}
             p={{ base: "10px", md: "15px", lg: "20px" }}
             mt="10px"
             w="100%"
           >
-            <div style={{
-              marginLeft: "5%",
-              width: '90%',
-              marginRight: "5%",
-              marginTop: 20,
-              marginBottom: 20
-            }}>
-              <Heading
-                fontSize={{ base: "md", md: "lg", lg: "xl" }}
-              >
+            <div
+              style={{
+                marginLeft: "5%",
+                width: "90%",
+                marginRight: "5%",
+                marginTop: 20,
+                marginBottom: 20,
+              }}
+            >
+              <Heading fontSize={{ base: "md", md: "lg", lg: "xl" }}>
                 {`What is the budget food option available?`}
               </Heading>
               <Text
@@ -538,7 +538,7 @@ export default function Home() {
                   marginTop: "10px",
                   width: "100%",
                   height: "auto",
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
               <CurrencyConverter
@@ -565,7 +565,7 @@ export default function Home() {
               borderColor: "aliceblue",
               width: "100%",
               height: "auto",
-              objectFit: "cover"
+              objectFit: "cover",
             }}
           />
 
@@ -599,9 +599,9 @@ export default function Home() {
               marginTop: "10px",
               borderWidth: "medium",
               borderColor: "aliceblue",
-              'width': "100%",
+              width: "100%",
               height: "auto",
-              objectFit: "cover"
+              objectFit: "cover",
             }}
           />
 
@@ -660,28 +660,28 @@ export default function Home() {
               marginTop: "10px",
               borderWidth: "medium",
               borderColor: "aliceblue",
-              'width': "100%",
+              width: "100%",
               height: "auto",
-              objectFit: "cover"
+              objectFit: "cover",
             }}
           />
 
           <Card
-            bg={useColorModeValue('orange.50', 'orange.900')}
+            bg={useColorModeValue("orange.50", "orange.900")}
             p={{ base: "10px", md: "15px", lg: "20px" }}
             mt="10px"
             w="100%"
           >
-            <div style={{
-              marginLeft: "5%",
-              width: '90%',
-              marginRight: "5%",
-              marginTop: 20,
-              marginBottom: 20
-            }}>
-              <Heading
-                fontSize={{ base: "md", md: "lg", lg: "xl" }}
-              >
+            <div
+              style={{
+                marginLeft: "5%",
+                width: "90%",
+                marginRight: "5%",
+                marginTop: 20,
+                marginBottom: 20,
+              }}
+            >
+              <Heading fontSize={{ base: "md", md: "lg", lg: "xl" }}>
                 {`What is the budget drink option available?`}
               </Heading>
               <Text
@@ -723,21 +723,21 @@ export default function Home() {
           </Heading>
 
           <Card
-            bg={useColorModeValue('orange.50', 'orange.900')}
+            bg={useColorModeValue("orange.50", "orange.900")}
             p={{ base: "10px", md: "15px", lg: "20px" }}
             mt="10px"
             w="100%"
           >
-            <div style={{
-              marginLeft: "5%",
-              width: '90%',
-              marginRight: "5%",
-              marginTop: 20,
-              marginBottom: 20
-            }}>
-              <Heading
-                fontSize={{ base: "md", md: "lg", lg: "xl" }}
-              >
+            <div
+              style={{
+                marginLeft: "5%",
+                width: "90%",
+                marginRight: "5%",
+                marginTop: 20,
+                marginBottom: 20,
+              }}
+            >
+              <Heading fontSize={{ base: "md", md: "lg", lg: "xl" }}>
                 {`How to reach Ubud?`}
               </Heading>
               <Text
@@ -758,7 +758,7 @@ export default function Home() {
                   borderColor: "aliceblue",
                   width: "100%",
                   height: "auto",
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
               <CurrencyConverter
@@ -793,7 +793,7 @@ export default function Home() {
               borderColor: "aliceblue",
               width: "100%",
               height: "auto",
-              objectFit: "cover"
+              objectFit: "cover",
             }}
           />
 
@@ -816,21 +816,21 @@ export default function Home() {
           />
 
           <Card
-            bg={useColorModeValue('orange.50', 'orange.900')}
+            bg={useColorModeValue("orange.50", "orange.900")}
             p={{ base: "10px", md: "15px", lg: "20px" }}
             mt="10px"
             w="100%"
           >
-            <div style={{
-              marginLeft: "5%",
-              width: '90%',
-              marginRight: "5%",
-              marginTop: 20,
-              marginBottom: 20
-            }}>
-              <Heading
-                fontSize={{ base: "md", md: "lg", lg: "xl" }}
-              >
+            <div
+              style={{
+                marginLeft: "5%",
+                width: "90%",
+                marginRight: "5%",
+                marginTop: 20,
+                marginBottom: 20,
+              }}
+            >
+              <Heading fontSize={{ base: "md", md: "lg", lg: "xl" }}>
                 {`What is the budget food option available?`}
               </Heading>
               <Text
@@ -858,7 +858,7 @@ export default function Home() {
                   marginTop: "10px",
                   width: "100%",
                   height: "auto",
-                  objectFit: "cover"
+                  objectFit: "cover",
                 }}
               />
               <CurrencyConverter
@@ -893,7 +893,7 @@ export default function Home() {
               borderColor: "aliceblue",
               width: "100%",
               height: "auto",
-              objectFit: "cover"
+              objectFit: "cover",
             }}
           />
           <Text
@@ -955,7 +955,7 @@ export default function Home() {
               borderColor: "aliceblue",
               width: "100%",
               height: "auto",
-              objectFit: "cover"
+              objectFit: "cover",
             }}
           />
 
@@ -1001,7 +1001,7 @@ export default function Home() {
               borderColor: "aliceblue",
               width: "100%",
               height: "auto",
-              objectFit: "cover"
+              objectFit: "cover",
             }}
           />
 
@@ -1046,18 +1046,14 @@ export default function Home() {
               borderColor: "aliceblue",
               marginTop: "10px",
               width: "100%",
-              overflowX: "auto"
+              overflowX: "auto",
             }}
           >
             <Table variant="simple" size={{ base: "sm", md: "md", lg: "lg" }}>
               <Thead>
                 <Tr>
-                  <Th fontSize={{ base: "md", md: "lg", lg: "xl" }}>
-                    Hotel
-                  </Th>
-                  <Th fontSize={{ base: "md", md: "lg", lg: "xl" }}>
-                    Price
-                  </Th>
+                  <Th fontSize={{ base: "md", md: "lg", lg: "xl" }}>Hotel</Th>
+                  <Th fontSize={{ base: "md", md: "lg", lg: "xl" }}>Price</Th>
                 </Tr>
               </Thead>
               <Tbody>
@@ -1067,13 +1063,12 @@ export default function Home() {
                       isExternal
                       fontWeight="bold"
                       textDecoration="underline"
-                      href="https://www.google.com/search?q=zuri+kuta+hotel">
+                      href="https://www.google.com/search?q=zuri+kuta+hotel"
+                    >
                       Grand Zuri Hotel, Kuta
                     </Link>
                   </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 2,100
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 2,100</Td>
                 </Tr>
                 <Tr>
                   <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
@@ -1081,13 +1076,12 @@ export default function Home() {
                       isExternal
                       fontWeight="bold"
                       textDecoration="underline"
-                      href="https://www.google.com/search?q=lokasari+retreat+ubud">
+                      href="https://www.google.com/search?q=lokasari+retreat+ubud"
+                    >
                       Lokasari Retreat, Ubud
                     </Link>
                   </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 2,074
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 2,074</Td>
                 </Tr>
                 <Tr>
                   <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
@@ -1095,13 +1089,12 @@ export default function Home() {
                       isExternal
                       fontWeight="bold"
                       textDecoration="underline"
-                      href="https://www.google.com/search?q=Puri+Padma+Hotel+%26+Resort+ubud">
+                      href="https://www.google.com/search?q=Puri+Padma+Hotel+%26+Resort+ubud"
+                    >
                       Puri Padma Hotel & Resort
                     </Link>
                   </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 2,800
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 2,800</Td>
                 </Tr>
               </Tbody>
             </Table>
@@ -1128,7 +1121,7 @@ export default function Home() {
               borderColor: "aliceblue",
               width: "100%",
               height: "auto",
-              objectFit: "cover"
+              objectFit: "cover",
             }}
           />
 
@@ -1144,8 +1137,8 @@ export default function Home() {
             style={{ marginTop: "20px" }}
             fontSize={{ base: "md", md: "lg", lg: "xl" }}
           >
-            Avoid using ATMs with mark-up fee. The ATMs will most likely
-            inform you before cash withdrawal
+            Avoid using ATMs with mark-up fee. The ATMs will most likely inform
+            you before cash withdrawal
           </Text>
 
           <Image
@@ -1159,7 +1152,7 @@ export default function Home() {
               borderColor: "aliceblue",
               width: "100%",
               height: "auto",
-              objectFit: "cover"
+              objectFit: "cover",
             }}
           />
 
@@ -1185,7 +1178,7 @@ export default function Home() {
               borderColor: "aliceblue",
               width: "100%",
               height: "auto",
-              objectFit: "cover"
+              objectFit: "cover",
             }}
           />
 
@@ -1193,9 +1186,9 @@ export default function Home() {
             style={{ marginTop: "20px" }}
             fontSize={{ base: "md", md: "lg", lg: "xl" }}
           >
-            Grab Taxi is a relatively more expensive option to commute in
-            Bali. Instead, rent a scooter to travel. We got a scooter at a
-            cost of 75,000 IDR per day, which already had 1 litre of petrol.
+            Grab Taxi is a relatively more expensive option to commute in Bali.
+            Instead, rent a scooter to travel. We got a scooter at a cost of
+            75,000 IDR per day, which already had 1 litre of petrol.
           </Text>
 
           <CurrencyConverter
@@ -1240,7 +1233,7 @@ export default function Home() {
               borderColor: "aliceblue",
               marginTop: "10px",
               width: "100%",
-              overflowX: "auto"
+              overflowX: "auto",
             }}
           >
             <Table variant="simple" size={{ base: "sm", md: "md", lg: "lg" }}>
@@ -1249,155 +1242,107 @@ export default function Home() {
                   <Th fontSize={{ base: "md", md: "lg", lg: "xl" }}>
                     Category
                   </Th>
-                  <Th fontSize={{ base: "md", md: "lg", lg: "xl" }}>
-                    Cost
-                  </Th>
+                  <Th fontSize={{ base: "md", md: "lg", lg: "xl" }}>Cost</Th>
                 </Tr>
               </Thead>
               <Tbody>
                 <Tr>
-                  <Td style={{ fontWeight: "bold" }} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
+                  <Td
+                    style={{ fontWeight: "bold" }}
+                    fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  >
                     Day 1 - Kuta
                   </Td>
                   <Td></Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Lunch
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 660
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Lunch</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 660</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Dinner
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 660
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Dinner</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 660</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Drinks
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 530
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Drinks</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 530</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Hotel
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 2,100
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Hotel</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 2,100</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Coffee
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 300
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Coffee</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 300</Td>
                 </Tr>
 
                 <Tr>
-                  <Td style={{ fontWeight: "bold" }} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
+                  <Td
+                    style={{ fontWeight: "bold" }}
+                    fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  >
                     Day 2 - Seminyak
                   </Td>
                   <Td></Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Lunch
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 500
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Lunch</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 500</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Dinner
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 600
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Dinner</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 600</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Drinks
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 530
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Drinks</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 530</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Hotel
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 2,100
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Hotel</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 2,100</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Coconut
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 320
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Coconut</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 320</Td>
                 </Tr>
 
                 <Tr>
-                  <Td style={{ fontWeight: "bold" }} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
+                  <Td
+                    style={{ fontWeight: "bold" }}
+                    fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  >
                     Day 3 - Canggu
                   </Td>
                   <Td></Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Lunch
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 600
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Lunch</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 600</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Dinner
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 600
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Dinner</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 600</Td>
                 </Tr>
                 <Tr>
                   <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
                     Tanah Lot Temple
                   </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 800
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 800</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Drinks
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 900
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Drinks</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 900</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Hotel
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 2,100
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Hotel</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 2,100</Td>
                 </Tr>
 
                 <Tr>
-                  <Td style={{ fontWeight: "bold" }} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
+                  <Td
+                    style={{ fontWeight: "bold" }}
+                    fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  >
                     Day 4 - Ubud
                   </Td>
                   <Td></Td>
@@ -1406,45 +1351,30 @@ export default function Home() {
                   <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
                     Alas Hurum Entry Fee
                   </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 540
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 540</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Lunch
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 675
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Lunch</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 675</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Dinner
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 600
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Dinner</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 600</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Hotel
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 2,074
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Hotel</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 2,074</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Scooter
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 450
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Scooter</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 450</Td>
                 </Tr>
 
                 <Tr>
-                  <Td style={{ fontWeight: "bold" }} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
+                  <Td
+                    style={{ fontWeight: "bold" }}
+                    fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  >
                     Day 5 - Ubud
                   </Td>
                   <Td></Td>
@@ -1453,45 +1383,30 @@ export default function Home() {
                   <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
                     Empul Temple Entry Fee
                   </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 810
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 810</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Lunch
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 675
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Lunch</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 675</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Dinner
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 600
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Dinner</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 600</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Hotel
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 2,074
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Hotel</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 2,074</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Scooter
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 450
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Scooter</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 450</Td>
                 </Tr>
 
                 <Tr>
-                  <Td style={{ fontWeight: "bold" }} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
+                  <Td
+                    style={{ fontWeight: "bold" }}
+                    fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  >
                     Day 6 - Ubud
                   </Td>
                   <Td></Td>
@@ -1500,53 +1415,36 @@ export default function Home() {
                   <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
                     Waterfall Entry Fee
                   </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 216
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 216</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Lunch
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 600
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Lunch</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 600</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Dinner
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 675
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Dinner</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 675</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Hotel
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 2,800
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Hotel</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 2,800</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Scooter
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 450
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Scooter</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 450</Td>
                 </Tr>
                 <Tr>
                   <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
                     Coffee (Omma Club)
                   </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 250
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 250</Td>
                 </Tr>
 
                 <Tr>
-                  <Td style={{ fontWeight: "bold" }} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
+                  <Td
+                    style={{ fontWeight: "bold" }}
+                    fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  >
                     Day 7 - Uluwatu
                   </Td>
                   <Td></Td>
@@ -1555,52 +1453,33 @@ export default function Home() {
                   <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
                     Uluwatu Temple Entry Fee
                   </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 540
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 540</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Lunch
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 600
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Lunch</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 600</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Dinner
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 675
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Dinner</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 675</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Hotel
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 2,074
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Hotel</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 2,074</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Scooter
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 450
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Scooter</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 450</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Coffee
-                  </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 250
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Coffee</Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 250</Td>
                 </Tr>
                 <Tr>
-                  <Td style={{ fontWeight: "bold" }} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
+                  <Td
+                    style={{ fontWeight: "bold" }}
+                    fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  >
                     Miscellaneous
                   </Td>
                   <Td></Td>
@@ -1609,14 +1488,10 @@ export default function Home() {
                   <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
                     Visa on Arrival
                   </Td>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    ₹ 5,400
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>₹ 5,400</Td>
                 </Tr>
                 <Tr>
-                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    Flight
-                  </Td>
+                  <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>Flight</Td>
                   <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
                     ₹ 63,000
                   </Td>
@@ -1630,7 +1505,10 @@ export default function Home() {
                   </Td>
                 </Tr>
                 <Tr>
-                  <Td style={{ fontWeight: "bold" }} fontSize={{ base: "sm", md: "md", lg: "lg" }}>
+                  <Td
+                    style={{ fontWeight: "bold" }}
+                    fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                  >
                     Total Cost
                   </Td>
                   <Td fontSize={{ base: "sm", md: "md", lg: "lg" }}>
