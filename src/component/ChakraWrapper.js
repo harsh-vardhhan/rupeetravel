@@ -13,12 +13,15 @@ export default function ChakraWrapper({ children }) {
   // Show a loading state or basic styling until client hydration
   if (!isClient) {
     return (
-      <div style={{ 
-        backgroundColor: '#1A202C', 
-        color: '#E2E8F0', 
-        minHeight: '100vh',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
-      }}>
+      <div
+        style={{
+          backgroundColor: "#1A202C",
+          color: "#E2E8F0",
+          minHeight: "100vh",
+          fontFamily:
+            '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
+        }}
+      >
         {children}
       </div>
     );
