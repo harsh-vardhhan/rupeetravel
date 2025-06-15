@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import styles from "../../styles/Home.module.css";
 import {
@@ -12,7 +12,7 @@ import {
   Button,
   Heading,
 } from "@chakra-ui/react";
-import Image from 'next/image';
+import Image from "next/image";
 import ListView from "../../component/listview";
 import Header from "../../component/header";
 import Link from "next/link";
@@ -49,7 +49,6 @@ export default function Home() {
         title="Rupee Travel | Withdraw Vietnam local currency VND from ATM"
         description="Best ATM to withdraw VND with zero forex markup in Vietnam for Indians"
         canonical={"https://www.rupeetravel.com/withdraw-vietnam-currency-atm"}
-
       />
       <main className={styles.main}>
         <Header title={"Withdraw Vietnam currency for next visit"} />
@@ -86,6 +85,5 @@ export default function Home() {
         </div>
       </main>
     </>
-
   );
 }
