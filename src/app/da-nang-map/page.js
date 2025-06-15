@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Seo from '../../component/seo';
-import styles from '@/styles/Home.module.css';
+import styles from '../../styles/Home.module.css';
 import Header from "../../component/header";
 import Link from "next/link";
 import {

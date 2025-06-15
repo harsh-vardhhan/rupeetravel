@@ -1,6 +1,6 @@
 "use client"
 
-import styles from "./page.module.css";
+import styles from "../../styles/Home.module.css";
 import {
   Card,
   CardBody,
@@ -16,6 +16,7 @@ import Image from 'next/image';
 import ListView from "../../component/listview";
 import Header from "../../component/header";
 import Link from "next/link";
+import Seo from "../../component/seo";
 
 // Static data that was previously in getStaticProps
 const features = [
@@ -41,50 +42,50 @@ const features = [
   },
 ];
 
-// Metadata for SEO (replaces the Seo component)
-export const metadata = {
-  title: "Rupee Travel | Withdraw Vietnam local currency VND from ATM",
-  description: "Best ATM to withdraw VND with zero forex markup in Vietnam for Indians",
-  alternates: {
-    canonical: "https://www.rupeetravel.com/withdraw-vietnam-currency-atm",
-  },
-};
-
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <Header title={"Withdraw Vietnam currency for next visit"} />
-      <div style={{ marginTop: "20px" }}>
-        <SimpleGrid minChildWidth="350px" spacing="40px">
-          <Card maxW="md">
-            <CardBody>
-              <Image
-                src={"/images/local-currency.webp"}
-                alt="local-currency"
-                height={232}
-                width={310}
-              />
-              <Stack mt="6" spacing="3">
-                <Heading as="h2" size="md">
-                  Withdraw VND for next visit{" "}
-                </Heading>
-                <Tag colorScheme="teal" style={{ width: "fit-content" }}>
-                  Personally used
-                </Tag>
-                <ListView features={features} />
-              </Stack>
-            </CardBody>
-            <Divider style={{ color: "#e2e8f0" }} />
-            <CardFooter>
-              <Link spacing="2" href="/atm-vietnam-zero-forex-markup">
-                <Button variant="solid" colorScheme="green">
-                  Ocean Bank ATM
-                </Button>
-              </Link>
-            </CardFooter>
-          </Card>
-        </SimpleGrid>
-      </div>
-    </main>
+    <>
+      <Seo
+        title="Rupee Travel | Withdraw Vietnam local currency VND from ATM"
+        description="Best ATM to withdraw VND with zero forex markup in Vietnam for Indians"
+        canonical={"https://www.rupeetravel.com/withdraw-vietnam-currency-atm"}
+
+      />
+      <main className={styles.main}>
+        <Header title={"Withdraw Vietnam currency for next visit"} />
+        <div style={{ marginTop: "20px" }}>
+          <SimpleGrid minChildWidth="350px" spacing="40px">
+            <Card maxW="md">
+              <CardBody>
+                <Image
+                  src={"/images/local-currency.webp"}
+                  alt="local-currency"
+                  height={232}
+                  width={310}
+                />
+                <Stack mt="6" spacing="3">
+                  <Heading as="h2" size="md">
+                    Withdraw VND for next visit{" "}
+                  </Heading>
+                  <Tag colorScheme="teal" style={{ width: "fit-content" }}>
+                    Personally used
+                  </Tag>
+                  <ListView features={features} />
+                </Stack>
+              </CardBody>
+              <Divider style={{ color: "#e2e8f0" }} />
+              <CardFooter>
+                <Link spacing="2" href="/atm-vietnam-zero-forex-markup">
+                  <Button variant="solid" colorScheme="green">
+                    Ocean Bank ATM
+                  </Button>
+                </Link>
+              </CardFooter>
+            </Card>
+          </SimpleGrid>
+        </div>
+      </main>
+    </>
+
   );
 }
