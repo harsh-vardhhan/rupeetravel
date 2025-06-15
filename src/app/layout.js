@@ -1,8 +1,8 @@
-import { Providers } from './providers'; // We'll create this file
+import { Providers } from "./providers"; // We'll create this file
 
 export const metadata = {
-  title: 'Rupee Travel',
-  description: 'The ultimate checklist for Vietnam travel from India 🇻🇳',
+  title: "Rupee Travel",
+  description: "The ultimate checklist for Vietnam travel from India 🇻🇳",
 };
 
 export default function RootLayout({ children }) {

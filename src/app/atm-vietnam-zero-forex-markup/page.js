@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import styles from "../../styles/Home.module.css";
 import {
@@ -15,7 +15,7 @@ import {
   Button,
   Heading,
 } from "@chakra-ui/react";
-import Image from 'next/image';
+import Image from "next/image";
 import Header from "../../component/header";
 import ListView from "../../component/listview";
 import Seo from "../../component/seo";
@@ -103,18 +103,10 @@ export default function Home() {
               <CardFooter>
                 <Stack direction="row">
                   <a href="https://www.google.com/maps?q=MB+Bank+ATM">
-                    <Button
-                      colorScheme="green"
-                    >
-                      MB Bank ATM
-                    </Button>
+                    <Button colorScheme="green">MB Bank ATM</Button>
                   </a>
                   <a href="https://www.google.com/maps?q=Ocean+Bank+ATM">
-                    <Button
-                      colorScheme="green"
-                    >
-                      Ocean Bank ATM
-                    </Button>
+                    <Button colorScheme="green">Ocean Bank ATM</Button>
                   </a>
                 </Stack>
               </CardFooter>
