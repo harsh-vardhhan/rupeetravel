@@ -28,3 +28,21 @@
   color: #2d3748;
   font-size: 1.125rem;
 }
+
+/* Responsive image styles */
+.markdown img {
+  @apply max-w-full h-auto my-6 rounded-lg shadow-sm;
+  display: block;
+}
+
+.markdown figure {
+  @apply my-8;
+}
+
+.markdown figure img {
+  @apply mx-auto;
+}
+
+.markdown figcaption {
+  @apply text-sm text-gray-600 text-center mt-2 italic;
+}

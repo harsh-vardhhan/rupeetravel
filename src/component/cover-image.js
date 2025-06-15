@@ -6,12 +6,14 @@ const CoverImage = ({ title, src, slug }) => {
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
-      width={1300}
-      height={630}
+      width={800}
+      height={400}
+      className="w-full h-auto rounded-lg shadow-md"
+      style={{ maxWidth: '100%', height: 'auto' }}
     />
   )
   return (
-    <div >
+    <div style={{ width: '100%' }}>
       {slug ? (
         <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}>
           {image}

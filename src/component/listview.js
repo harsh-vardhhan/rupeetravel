@@ -12,4 +12,4 @@ const ListView = ({ features }) => {
     })
 }
 
-export default ListView
+export default ListView;

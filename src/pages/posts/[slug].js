@@ -8,7 +8,7 @@ import Seo from '../../component/seo'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import PostTitle from '../../component/post-title'
 import markdownToHtml from '../../lib/markdownToHtml'
-import styles from '@/styles/Home.module.css'
+import styles from "../../styles/Home.module.css";
 
 export default function Post({ post, preview }) {
 
@@ -24,30 +24,28 @@ export default function Post({ post, preview }) {
         description={post.excerpt}
         canonical={post.canonical}
       />
-      <main className={styles.main}>
-        <Layout preview={preview}>
-          <Container>
-            <Header />
-            {router.isFallback ? (
-              <PostTitle>Loading…</PostTitle>
-            ) : (
-              <>
-                <article>
-                  <PostHeader
-                    title={post.title}
-                    coverImage={post.coverImage}
-                    date={post.date}
-                    author={post.author}
-                  />
-                  <PostBody
-                    content={post.content}
-                  />
-                </article>
-              </>
-            )}
-          </Container>
-        </Layout>
-      </main>
+      <Layout preview={preview}>
+        <Container>
+          <Header />
+          {router.isFallback ? (
+            <PostTitle>Loading…</PostTitle>
+          ) : (
+            <>
+              <article>
+                <PostHeader
+                  title={post.title}
+                  coverImage={post.coverImage}
+                  date={post.date}
+                  author={post.author}
+                />
+                <PostBody
+                  content={post.content}
+                />
+              </article>
+            </>
+          )}
+        </Container>
+      </Layout>
     </>
   )
 }
