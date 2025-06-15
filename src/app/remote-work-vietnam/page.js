@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import styles from "../../styles/Home.module.css";
 import {
@@ -58,7 +58,10 @@ export default function RemoteWorkVietnamPage() {
               </CardBody>
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
-                <Link spacing="2" href="https://www.google.com/maps?q=Highlands+Cafe">
+                <Link
+                  spacing="2"
+                  href="https://www.google.com/maps?q=Highlands+Cafe"
+                >
                   <Button variant="solid" colorScheme="green">
                     Highlands Cafe
                   </Button>

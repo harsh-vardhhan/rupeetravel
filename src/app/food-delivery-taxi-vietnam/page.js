@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import styles from "../../styles/Home.module.css";
 import {
@@ -11,7 +11,7 @@ import {
   SimpleGrid,
   Heading,
 } from "@chakra-ui/react";
-import Image from 'next/image';
+import Image from "next/image";
 import ListView from "../../component/listview";
 import Header from "../../component/header";
 import Seo from "../../component/seo";
@@ -65,10 +65,7 @@ export default function Home() {
               <Divider style={{ color: "#e2e8f0" }} />
               <CardFooter>
                 <a href="https://www.grab.com/vn/download/">
-                  <Button
-                    variant="solid"
-                    colorScheme="green"
-                  >
+                  <Button variant="solid" colorScheme="green">
                     Download Grab
                   </Button>
                 </a>

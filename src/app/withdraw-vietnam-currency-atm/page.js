@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import styles from "./page.module.css";
 import {
@@ -12,7 +12,7 @@ import {
   Button,
   Heading,
 } from "@chakra-ui/react";
-import Image from 'next/image';
+import Image from "next/image";
 import ListView from "../../component/listview";
 import Header from "../../component/header";
 import Link from "next/link";
@@ -44,7 +44,8 @@ const features = [
 // Metadata for SEO (replaces the Seo component)
 export const metadata = {
   title: "Rupee Travel | Withdraw Vietnam local currency VND from ATM",
-  description: "Best ATM to withdraw VND with zero forex markup in Vietnam for Indians",
+  description:
+    "Best ATM to withdraw VND with zero forex markup in Vietnam for Indians",
   alternates: {
     canonical: "https://www.rupeetravel.com/withdraw-vietnam-currency-atm",
   },

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import styles from "../../styles/Home.module.css";
 import {
   Card,

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import styles from "../../styles/Home.module.css";
 import {
@@ -14,7 +14,7 @@ import {
   Tag,
   Heading,
 } from "@chakra-ui/react";
-import Image from 'next/image';
+import Image from "next/image";
 import Header from "../../component/header";
 import ListView from "../../component/listview";
 import StructuredData from "../../component/structuredData";
@@ -60,27 +60,27 @@ const features = [
 const structuredData = {
   "@context": "https://www.schema.org",
   "@type": "product",
-  "brand": "IDFC Bank",
-  "name": "IDCF First Wow Credit Card",
-  "image": "https://ik.imagekit.io/rupeetravel/credit-card.webp",
-  "category": "Credit Card",
-  "description": " Zero forex markup credit card",
-  "aggregateRating": {
+  brand: "IDFC Bank",
+  name: "IDCF First Wow Credit Card",
+  image: "https://ik.imagekit.io/rupeetravel/credit-card.webp",
+  category: "Credit Card",
+  description: " Zero forex markup credit card",
+  aggregateRating: {
     "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "1"
+    ratingValue: "5",
+    reviewCount: "1",
   },
-  "offers": {
+  offers: {
     "@type": "Offer",
-    "priceCurrency": "INR",
-    "price": "0",
-    "itemCondition": "http://schema.org/UsedCondition",
-    "availability": "http://schema.org/InStock",
-    "seller": {
+    priceCurrency: "INR",
+    price: "0",
+    itemCondition: "http://schema.org/UsedCondition",
+    availability: "http://schema.org/InStock",
+    seller: {
       "@type": "Bank",
-      "name": "IDFC Bank"
+      name: "IDFC Bank",
     },
-  }
+  },
 };
 
 export default function Home() {
@@ -123,10 +123,7 @@ export default function Home() {
               <CardFooter>
                 <Stack direction="row">
                   <a href="https://www.idfcfirstbank.com/credit-card/credit-card-against-fixed-deposits">
-                    <Button
-                      variant="solid"
-                      colorScheme="green"
-                    >
+                    <Button variant="solid" colorScheme="green">
                       IDFC First Wow
                     </Button>
                   </a>
