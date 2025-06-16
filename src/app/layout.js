@@ -1,4 +1,5 @@
-import { Providers } from './providers'; // We'll create this file
+import { Providers } from './providers';
+import '../styles/globals.css'
 
 export const metadata = {
   title: 'Rupee Travel',

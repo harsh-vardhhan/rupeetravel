@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
+    appDir: true,
     runtime: 'experimental-edge',  // Ensure Edge runtime is enabled
     nodejs_compat: true, // Enable Node.js compatibility
   },

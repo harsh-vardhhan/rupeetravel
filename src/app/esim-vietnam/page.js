@@ -1,17 +1,9 @@
 "use client"
 
-import styles from "../../styles/Home.module.css";
-import {
-    Card,
-    CardBody,
-    Stack,
-    Divider,
-    CardFooter,
-    Button,
-    SimpleGrid,
-    Tag,
-    Heading,
-} from "@chakra-ui/react";
+import { Card, CardContent, CardFooter } from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
+import { Badge } from "../../components/ui/badge";
+import { Separator } from "../../components/ui/separator";
 import Image from "next/image";
 import ListView from "../../component/listview";
 import Header from "../../component/header";
@@ -63,53 +55,73 @@ export default function Home() {
                 description="Airtel eSIM | Jio eSIM | How to activate eSIM in iPhone"
                 canonical={"https://www.rupeetravel.com/esim-vietnam"}
             />
-            <main className={styles.main}>
+            <div className="min-h-screen bg-background">
                 <Header title={"eSim"} />
-                <div style={{ marginTop: "20px" }}>
-                    <SimpleGrid minChildWidth="350px" spacing="40px">
-                        <Card maxW="sm">
-                            <CardBody>
-                                <Stack mt="6" spacing="3">
-                                    <Heading as="h2" size="md">
-                                        Convert Indian SIM to eSIM
-                                    </Heading>
-                                    <Tag colorScheme="teal" style={{ width: "fit-content" }}>
-                                        Personally used
-                                    </Tag>
-                                    <ListView features={features} />
-                                </Stack>
-                            </CardBody>
-                            <Divider style={{ color: "#e2e8f0" }} />
-                            <CardFooter>
+                <main className="container mx-auto px-4 py-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
+                        <Card className="w-full shadow-md">
+                            <CardContent className="p-0">
+                                <div className="p-6 pt-6">
+                                    <div className="flex flex-col gap-3">
+                                        <h2 className="text-lg font-semibold">
+                                            Convert Indian SIM to eSIM
+                                        </h2>
+                                        <Badge 
+                                            variant="secondary" 
+                                            className="w-fit text-teal-800"
+                                            style={{ 
+                                                backgroundColor: "#81E6D9", 
+                                                color: "#2D3748",
+                                                fontWeight: "500"
+                                            }}
+                                        >
+                                            Personally used
+                                        </Badge>
+                                        <ListView features={features} />
+                                    </div>
+                                </div>
+                            </CardContent>
+                            <Separator className="border-gray-200" />
+                            <CardFooter className="p-6">
                                 <a href="https://www.jio.com/en-in/esim">
-                                    <Button variant="solid" colorScheme="green">
+                                    <Button 
+                                        className="text-white font-medium"
+                                        style={{ 
+                                            backgroundColor: "#38A169", 
+                                            hover: { backgroundColor: "#2F855A" }
+                                        }}
+                                    >
                                         Jio eSim
                                     </Button>
                                 </a>
                             </CardFooter>
                         </Card>
-                        <Card maxW="sm">
-                            <CardBody>
-                                <Stack mt="6" spacing="3">
-                                    <Heading as="h2" size="md">
-                                        Why get eSIM?
-                                    </Heading>
-                                    <Image
-                                        src={"/images/esim.webp"}
-                                        alt="eSIM"
-                                        height={391}
-                                        width={310}
-                                        style={{
-                                            marginTop: "10px",
-                                        }}
-                                    />
-                                    <ListView features={reasons} />
-                                </Stack>
-                            </CardBody>
+                        
+                        <Card className="w-full shadow-md">
+                            <CardContent className="p-0">
+                                <div className="p-6 pt-6" >
+                                    <div className="flex flex-col gap-3">
+                                        <h2 className="text-lg font-semibold">
+                                            Why get eSIM?
+                                        </h2>
+                                        <Image
+                                            src={"/images/esim.webp"}
+                                            alt="eSIM"
+                                            height={391}
+                                            width={310}
+                                            className="ml-0"
+                                            style={{
+                                                marginTop: "10px",
+                                            }}
+                                        />
+                                        <ListView features={reasons} />
+                                    </div>
+                                </div>
+                            </CardContent>
                         </Card>
-                    </SimpleGrid>
-                </div>
-            </main>
+                    </div>
+                </main>
+            </div>
         </>
     );
 }
