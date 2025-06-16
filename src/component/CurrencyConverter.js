@@ -11,7 +11,7 @@ import { Input } from "../components/ui/server/input";
 const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base, quote, quoteSymbol }) => {
   const [value, setValue] = useState(amount);
 
-  const parse = (val) => val.replace(/[^\d.-]/g, '');
+  const parse = (event) => event.target.value.replace(/[^\d.-]/g, '');
 
   const formatCurrency = useMemo(() => (value, currency) => {
     const locales = {
@@ -28,13 +28,11 @@ const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base,
 
   // Calculate the converted value
   const convertedValue = value * rate;
-  console.log('Debug:', { value, rate, convertedValue, quote });
 
   const convertedPrice = useMemo(() => {
     const formatted = formatCurrency(convertedValue, quote);
-    console.log('Formatted:', formatted);
     return formatted;
-  }, [value, convertedValue, quote, formatCurrency]);
+  }, [convertedValue, quote, formatCurrency]);
 
   return (
     <>
@@ -48,7 +46,7 @@ const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base,
             <Input
               type="number"
               value={value}
-              onChange={(valueString) => setValue(parse(valueString))}
+              onChange={(event) => setValue(parse(event))}
               className="max-w-[200px]"
             />
           </div>
@@ -60,7 +58,7 @@ const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base,
 
           <div className="flex items-center gap-4">
             <span className="font-bold">{exchange} Rate</span>
-            <Badge 
+            <Badge
               variant="secondary"
               className="bg-teal-200 text-teal-900"
             >
