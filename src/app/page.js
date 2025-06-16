@@ -180,16 +180,16 @@ export default function HomePage() {
     <>
       <Seo canonical={"https://www.rupeetravel.com"} />
       <div className="min-h-screen bg-background">
-        <main className="px-8 py-12">
+        <main className="px-4 sm:px-8 py-8 sm:py-12">
           <div>
-            <h1 className="text-4xl md:text-4xl lg:text-7xl font-bold">
+            <h1 className="text-3xl sm:text-4xl lg:text-7xl font-bold">
               Rupee Travel
             </h1>
-            <h2 className="text-2xl md:text-2xl lg:text-5xl font-bold mt-5">
+            <h2 className="text-xl sm:text-2xl lg:text-5xl font-bold mt-4 sm:mt-5">
               The ultimate checklist for Vietnam travel from India 🇻🇳
             </h2>
-            <div className="mt-10">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="mt-8 sm:mt-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
                 <CheckListItemCard
                   title={"Before you arrive 🇮🇳"}
                   list={beforeArrivals}
@@ -212,14 +212,14 @@ export default function HomePage() {
 // Move these components to separate files
 const CheckListItemCard = ({ title, list }) => {
   return (
-    <Card className="w-[343px] mt-2.5 shadow-md">
-      <CardHeader className="p-6 pt-6">
-        <h3 className="text-2xl font-bold">
+    <Card className="w-full mt-2.5 shadow-md">
+      <CardHeader className="p-4 sm:p-6 pt-4 sm:pt-6">
+        <h3 className="text-xl sm:text-2xl font-bold">
           {title}
         </h3>
       </CardHeader>
-      <CardContent className="p-6 pt-0">
-        <div className="space-y-4">
+      <CardContent className="p-4 sm:p-6 pt-0">
+        <div className="space-y-3 sm:space-y-4">
           {list.map((arrivals) => (
             <CheckListItem key={arrivals.key} task={arrivals} />
           ))}
@@ -231,10 +231,10 @@ const CheckListItemCard = ({ title, list }) => {
 
 const CheckListItem = ({ task }) => {
   return (
-    <div className="border-b last:border-0 pb-4 last:pb-0">
+    <div className="border-b last:border-0 pb-3 sm:pb-4 last:pb-0">
       <Link href={task.link}>
-        <div className="flex items-center gap-2">
-          <h4 className="text-xl font-bold">
+        <div className="flex flex-wrap items-center gap-2">
+          <h4 className="text-lg sm:text-xl font-bold">
             {task.heading}
           </h4>
           <Badge 
@@ -253,7 +253,7 @@ const CheckListItem = ({ task }) => {
             {task.tagText}
           </Badge>
         </div>
-        <p className="font-medium text-sm pt-2">
+        <p className="font-medium text-sm pt-1 sm:pt-2">
           {task.subHeading}
         </p>
       </Link>
