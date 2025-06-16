@@ -1,15 +1,20 @@
-"use client"
-
-import { Card, CardContent, CardFooter } from "../../components/ui/card";
-import { Button } from "../../components/ui/button";
-import { Badge } from "../../components/ui/badge";
-import { Separator } from "../../components/ui/separator";
+import Header from "../../component/server/header";
+import { Card, CardContent, CardFooter } from "../../components/ui/server/card";
+import { Button } from "../../components/ui/server/button";
+import { Badge } from "../../components/ui/server/badge";
+import { Separator } from "../../components/ui/server/separator";
 import Image from "next/image";
-import ListView from "../../component/listview";
-import Header from "../../component/header";
-import Seo from "../../component/seo";
+import ListView from "../../component/server/listview";
 
-// Define the data directly in the component since it's static
+export const dynamic = 'force-static';
+export const revalidate = false;
+export const fetchCache = 'force-cache';
+
+export async function generateStaticParams() {
+    return [{ slug: 'esim-vietnam' }];
+}
+
+// Move static data outside of component
 const features = [
     {
         item: 1,
@@ -47,14 +52,16 @@ const reasons = [
     },
 ];
 
+export async function generateMetadata() {
+    return {
+        title: "Rupee Travel | Activate eSIM for travel",
+        description: "Airtel eSIM | Jio eSIM | How to activate eSIM in iPhone",
+    };
+}
+
 export default function Home() {
     return (
         <>
-            <Seo
-                title="Rupee Travel | Activate eSIM for travel"
-                description="Airtel eSIM | Jio eSIM | How to activate eSIM in iPhone"
-                canonical={"https://www.rupeetravel.com/esim-vietnam"}
-            />
             <div className="min-h-screen bg-background">
                 <Header title={"eSim"} />
                 <main className="container mx-auto px-4 py-8">
@@ -113,6 +120,7 @@ export default function Home() {
                                             style={{
                                                 marginTop: "10px",
                                             }}
+                                            priority
                                         />
                                         <ListView features={reasons} />
                                     </div>
