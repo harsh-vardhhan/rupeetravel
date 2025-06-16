@@ -1,4 +1,6 @@
-import { useState, useMemo, useEffect } from "react";
+'use client';
+
+import { useState, useMemo } from "react";
 import {
   Card,
   CardContent,
@@ -8,6 +10,8 @@ import { Input } from "../components/ui/server/input";
 
 const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base, quote, quoteSymbol }) => {
   const [value, setValue] = useState(amount);
+
+  const parse = (val) => val.replace(/[^\d.-]/g, '');
 
   const formatCurrency = useMemo(() => (value, currency) => {
     const locales = {
@@ -24,11 +28,13 @@ const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base,
 
   // Calculate the converted value
   const convertedValue = value * rate;
+  console.log('Debug:', { value, rate, convertedValue, quote });
 
   const convertedPrice = useMemo(() => {
     const formatted = formatCurrency(convertedValue, quote);
+    console.log('Formatted:', formatted);
     return formatted;
-  }, [convertedValue, quote, formatCurrency]);
+  }, [value, convertedValue, quote, formatCurrency]);
 
   return (
     <>
@@ -42,11 +48,7 @@ const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base,
             <Input
               type="number"
               value={value}
-              onChange={(e) => {
-                const newValue = e.target.value === '' ? 0 : Number(e.target.value);
-                console.log('New value:', newValue);
-                setValue(newValue);
-              }}
+              onChange={(valueString) => setValue(parse(valueString))}
               className="max-w-[200px]"
             />
           </div>
