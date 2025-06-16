@@ -1,16 +1,12 @@
 import Header from "../../components/ui/server/header";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-} from "../../components/ui/server/card";
+import { Card, CardContent, CardFooter } from "../../components/ui/server/card";
 import { Button } from "../../components/ui/server/button";
 import { Badge } from "../../components/ui/server/badge";
-import Image from 'next/image';
+import Image from "next/image";
 import Link from "next/link";
 import Seo from "../../component/seo";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 // Static data that was previously in getStaticProps
 const features = [
@@ -63,7 +59,7 @@ export default function Home() {
                   <h2 className="text-lg font-semibold">
                     Withdraw VND for next visit
                   </h2>
-                  <Badge 
+                  <Badge
                     variant="secondary"
                     className="bg-teal-200 text-teal-900"
                   >
@@ -80,9 +76,7 @@ export default function Home() {
               </CardContent>
               <CardFooter className="flex justify-center pt-2">
                 <Link href="/atm-vietnam-zero-forex-markup">
-                  <Button 
-                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base"
-                  >
+                  <Button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base">
                     Ocean Bank ATM
                   </Button>
                 </Link>
