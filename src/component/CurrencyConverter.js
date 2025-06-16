@@ -1,66 +1,74 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import {
-    Text,
-    Heading,
-    NumberInput,
-    NumberInputField,
-    Stack,
-    Card,
-    Tag,
-} from "@chakra-ui/react";
+  Card,
+  CardContent,
+} from "../components/ui/server/card";
+import { Badge } from "../components/ui/server/badge";
+import { Input } from "../components/ui/server/input";
 
 const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base, quote, quoteSymbol }) => {
-    const parse = (val) => val.replace(/[^\d.-]/g, '');
-    const [value, setValue] = useState(amount);
+  const [value, setValue] = useState(amount);
 
-    const formatCurrency = useMemo(() => (value, currency) => {
-        const locales = {
-            IDR: "id-ID",
-            INR: "en-IN",
-        };
-        return new Intl.NumberFormat(locales[currency] || region, {
-            style: "currency",
-            currency,
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2,
-        }).format(value);
-    }, [region]);
+  const formatCurrency = useMemo(() => (value, currency) => {
+    const locales = {
+      IDR: "id-ID",
+      INR: "en-IN",
+    };
+    return new Intl.NumberFormat(locales[currency] || region, {
+      style: "currency",
+      currency,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(value);
+  }, [region]);
 
-    const convertedPrice = useMemo(() => formatCurrency(value * rate, quote), [value, rate, quote, formatCurrency]);
+  // Calculate the converted value
+  const convertedValue = value * rate;
 
-    return (
-        <>
-            <Heading fontSize="lg" mt="20px">
-                {currencyPair} currency converter with {exchange} rate:
-            </Heading>
-            <Card p="20px" mt="10px">
-                <Stack direction="row">
-                    <Text mt="7px" fontWeight="700">
-                        {base}
-                    </Text>
-                    <NumberInput
-                        onChange={(valueString) => setValue(parse(valueString))}
-                        value={value}
-                        max={1_000_000_000}
-                    >
-                        <NumberInputField onBlur={() => setValue(Number(value) || 0)} />
-                    </NumberInput>
-                </Stack>
+  const convertedPrice = useMemo(() => {
+    const formatted = formatCurrency(convertedValue, quote);
+    return formatted;
+  }, [convertedValue, quote, formatCurrency]);
 
-                <Stack direction="row" mt="20px">
-                    <Text fontWeight="700">{quote}</Text>
-                    <Text>{convertedPrice}</Text>
-                </Stack>
+  return (
+    <>
+      <h2 className="text-lg font-semibold mt-5">
+        {currencyPair} currency converter with {exchange} rate:
+      </h2>
+      <Card className="mt-3">
+        <CardContent className="pt-6 space-y-5">
+          <div className="flex items-center gap-4">
+            <span className="font-bold">{base}</span>
+            <Input
+              type="number"
+              value={value}
+              onChange={(e) => {
+                const newValue = e.target.value === '' ? 0 : Number(e.target.value);
+                console.log('New value:', newValue);
+                setValue(newValue);
+              }}
+              className="max-w-[200px]"
+            />
+          </div>
 
-                <Stack direction="row" mt="20px">
-                    <Text fontWeight="700">{exchange} Rate</Text>
-                    <Tag colorScheme="teal">
-                        {quoteSymbol} {rate}
-                    </Tag>
-                </Stack>
-            </Card>
-        </>
-    );
+          <div className="flex items-center gap-4">
+            <span className="font-bold">{quote}</span>
+            <span>{convertedPrice}</span>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <span className="font-bold">{exchange} Rate</span>
+            <Badge 
+              variant="secondary"
+              className="bg-teal-200 text-teal-900"
+            >
+              {quoteSymbol} {rate}
+            </Badge>
+          </div>
+        </CardContent>
+      </Card>
+    </>
+  );
 };
 
 export default CurrencyConverter;
