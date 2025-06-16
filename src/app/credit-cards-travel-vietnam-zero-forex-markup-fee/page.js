@@ -1,58 +1,53 @@
-"use client"
-
-import styles from "../../styles/Home.module.css";
+import Image from 'next/image';
+import Header from "../../components/ui/server/header";
 import {
   Card,
-  CardBody,
-  Stack,
-  Divider,
+  CardHeader,
+  CardContent,
   CardFooter,
-  Button,
-  Alert,
-  AlertIcon,
-  SimpleGrid,
-  Tag,
-  Heading,
-} from "@chakra-ui/react";
-import Image from 'next/image';
-import Header from "../../component/header";
-import ListView from "../../component/listview";
-import StructuredData from "../../component/structuredData";
+} from "../../components/ui/server/card";
+import { Badge } from "../../components/ui/server/badge";
+import { Button } from "../../components/ui/server/button";
+import { Alert, AlertDescription } from "../../components/ui/server/alert";
+import { AlertCircle } from "lucide-react";
 import Seo from "../../component/seo";
+import StructuredData from "../../component/structuredData";
 import Link from "next/link";
+
+export const dynamic = 'force-static';
 
 // Static data that was previously in getStaticProps
 const features = [
   {
     item: 1,
     title: "✅ Zero forex markup credit card",
-    color: "green.500",
+    color: "green",
   },
   {
     item: 2,
     title: "✅ Zero Joining/Annual fee",
-    color: "green.500",
+    color: "green",
   },
   {
     item: 3,
     title:
       "✅ Withdraw cash from ATM without interest till Payment date (48 days interest free cash)",
-    color: "green.500",
+    color: "green",
   },
   {
     item: 4,
     title: "✅ VISA backed credit card hence higher acceptance in Vietnam",
-    color: "green.500",
+    color: "green",
   },
   {
     item: 5,
     title: "❌ Secured credit card which needs an FD as collateral",
-    color: "red.400",
+    color: "red",
   },
   {
     item: 6,
     title: "❌ Only ₹1 Lakh FD limit hence only 1 Lakh credit card limit",
-    color: "red.400",
+    color: "red",
   },
 ];
 
@@ -94,70 +89,98 @@ export default function Home() {
           "https://www.rupeetravel.com/credit-cards-travel-vietnam-zero-forex-markup-fee"
         }
       />
-      <main className={styles.main}>
+      <div className="min-h-screen bg-background">
         <Header title={"Indian Credit Cards for Vietnam"} />
-        <div style={{ marginTop: "20px" }}>
-          <SimpleGrid minChildWidth="350px" spacing="40px">
-            <Card maxW="sm">
-              <CardBody>
-                <Stack mt="6" spacing="3">
-                  <Heading as="h2" size="md">
+        <main className="container max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            <Card className="w-full">
+              <CardHeader className="pb-2">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-xl font-bold">
                     IDFC First Wow credit card
-                  </Heading>
-                  <Tag colorScheme="teal" style={{ width: "fit-content" }}>
+                  </h2>
+                  <Badge 
+                    variant="secondary"
+                    className="bg-teal-100 text-teal-800"
+                  >
                     Personally using
-                  </Tag>
+                  </Badge>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
                   <Image
                     src={"/images/credit-card.webp"}
                     alt="IDFC First Wow"
                     height={174}
                     width={310}
-                    style={{
-                      marginTop: "10px",
-                    }}
+                    className="w-full h-auto rounded-lg"
                   />
-                  <ListView features={features} />
-                </Stack>
-              </CardBody>
-              <Divider style={{ color: "#e2e8f0" }} />
-              <CardFooter>
-                <Stack direction="row">
-                  <a href="https://www.idfcfirstbank.com/credit-card/credit-card-against-fixed-deposits">
-                    <Button
-                      variant="solid"
-                      colorScheme="green"
-                    >
-                      IDFC First Wow
-                    </Button>
-                  </a>
-                  <Link spacing="2" href="/posts/india-cross-border-finance">
-                    <Button variant="solid" colorScheme="green">
-                      Read More
-                    </Button>
-                  </Link>
-                </Stack>
+                  <div className="space-y-2">
+                    {features.map((feature) => (
+                      <div key={feature.item} className="flex items-start gap-2">
+                        <p className="text-sm">
+                          {feature.title}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+              <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
+                <a 
+                  href="https://www.idfcfirstbank.com/credit-card/credit-card-against-fixed-deposits"
+                  className="w-full"
+                >
+                  <Button 
+                    className="w-full bg-green-600 hover:bg-green-700 text-white"
+                  >
+                    Apply Now
+                  </Button>
+                </a>
+                <Link 
+                  href="/posts/india-cross-border-finance"
+                  className="w-full"
+                >
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-green-600 text-green-600 hover:bg-green-50"
+                  >
+                    Learn More
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
-            <Card maxW="sm">
-              <CardBody>
-                <Tag colorScheme="teal">Personally used 😞</Tag>
-                <Alert status="error" style={{ marginTop: "10px" }}>
-                  <AlertIcon />
-                  Please avoid Amex credit cards, since they are hardly accepted
-                  anywhere in Vietnam.
+
+            <Card className="w-full">
+              <CardHeader className="pb-2">
+                <Badge 
+                  variant="secondary"
+                  className="bg-teal-100 text-teal-800"
+                >
+                  Personally used 😞
+                </Badge>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <Alert variant="destructive" className="bg-red-50 border-red-200 text-red-800">
+                  <AlertCircle className="h-4 w-4" />
+                  <AlertDescription>
+                    Please avoid Amex credit cards, since they are hardly accepted
+                    anywhere in Vietnam.
+                  </AlertDescription>
                 </Alert>
                 <Image
                   src={"/images/american-express.webp"}
                   alt="Amex card"
                   height={312}
                   width={310}
-                  style={{ marginTop: "10px" }}
+                  className="w-full h-auto rounded-lg"
                 />
-              </CardBody>
+              </CardContent>
             </Card>
-          </SimpleGrid>
-        </div>
-      </main>
+          </div>
+        </main>
+      </div>
     </>
   );
 }
