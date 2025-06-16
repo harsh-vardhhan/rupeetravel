@@ -1,15 +1,11 @@
 import Header from "../../components/ui/server/header";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-} from "../../components/ui/server/card";
+import { Card, CardContent, CardFooter } from "../../components/ui/server/card";
 import { Button } from "../../components/ui/server/button";
 import { Badge } from "../../components/ui/server/badge";
 import Seo from "../../component/seo";
 import Link from "next/link";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 // Define the features data
 const features = [
@@ -44,7 +40,7 @@ export default function RemoteWorkVietnamPage() {
                   <h2 className="text-lg font-semibold">
                     Arranging for remote work
                   </h2>
-                  <Badge 
+                  <Badge
                     variant="secondary"
                     className="bg-teal-200 text-teal-900"
                   >
@@ -61,9 +57,7 @@ export default function RemoteWorkVietnamPage() {
               </CardContent>
               <CardFooter className="flex justify-center pt-2">
                 <Link href="https://www.google.com/maps?q=Highlands+Cafe">
-                  <Button 
-                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base"
-                  >
+                  <Button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base">
                     Highlands Cafe
                   </Button>
                 </Link>

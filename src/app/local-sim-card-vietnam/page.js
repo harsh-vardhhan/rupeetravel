@@ -1,12 +1,9 @@
 import Header from "../../components/ui/server/header";
-import {
-  Card,
-  CardContent,
-} from "../../components/ui/server/card";
+import { Card, CardContent } from "../../components/ui/server/card";
 import { Badge } from "../../components/ui/server/badge";
 import Seo from "../../component/seo";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 // Static data that was previously in getStaticProps
 const features = [
@@ -45,7 +42,7 @@ export default function Home() {
                   <h2 className="text-lg font-semibold">
                     Get local SIM card at airport
                   </h2>
-                  <Badge 
+                  <Badge
                     variant="secondary"
                     className="bg-teal-200 text-teal-900"
                   >

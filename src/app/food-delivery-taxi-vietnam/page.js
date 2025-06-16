@@ -1,14 +1,10 @@
 import Header from "../../components/ui/server/header";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-} from "../../components/ui/server/card";
+import { Card, CardContent, CardFooter } from "../../components/ui/server/card";
 import { Button } from "../../components/ui/server/button";
-import Image from 'next/image';
+import Image from "next/image";
 import Seo from "../../component/seo";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 // Define the features data directly in the component since it's static
 const features = [
@@ -65,9 +61,7 @@ export default function Home() {
               </CardContent>
               <CardFooter className="flex justify-center pt-2">
                 <a href="https://www.grab.com/vn/download/">
-                  <Button 
-                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base"
-                  >
+                  <Button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base">
                     Download Grab
                   </Button>
                 </a>
