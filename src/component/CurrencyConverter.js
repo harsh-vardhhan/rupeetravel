@@ -1,26 +1,35 @@
 import { useState, useMemo, useEffect } from "react";
-import {
-  Card,
-  CardContent,
-} from "../components/ui/server/card";
+import { Card, CardContent } from "../components/ui/server/card";
 import { Badge } from "../components/ui/server/badge";
 import { Input } from "../components/ui/server/input";
 
-const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base, quote, quoteSymbol }) => {
+const CurrencyConverter = ({
+  region,
+  amount,
+  currencyPair,
+  exchange,
+  rate,
+  base,
+  quote,
+  quoteSymbol,
+}) => {
   const [value, setValue] = useState(amount);
 
-  const formatCurrency = useMemo(() => (value, currency) => {
-    const locales = {
-      IDR: "id-ID",
-      INR: "en-IN",
-    };
-    return new Intl.NumberFormat(locales[currency] || region, {
-      style: "currency",
-      currency,
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    }).format(value);
-  }, [region]);
+  const formatCurrency = useMemo(
+    () => (value, currency) => {
+      const locales = {
+        IDR: "id-ID",
+        INR: "en-IN",
+      };
+      return new Intl.NumberFormat(locales[currency] || region, {
+        style: "currency",
+        currency,
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      }).format(value);
+    },
+    [region],
+  );
 
   // Calculate the converted value
   const convertedValue = value * rate;
@@ -43,8 +52,9 @@ const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base,
               type="number"
               value={value}
               onChange={(e) => {
-                const newValue = e.target.value === '' ? 0 : Number(e.target.value);
-                console.log('New value:', newValue);
+                const newValue =
+                  e.target.value === "" ? 0 : Number(e.target.value);
+                console.log("New value:", newValue);
                 setValue(newValue);
               }}
               className="max-w-[200px]"
@@ -58,10 +68,7 @@ const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base,
 
           <div className="flex items-center gap-4">
             <span className="font-bold">{exchange} Rate</span>
-            <Badge 
-              variant="secondary"
-              className="bg-teal-200 text-teal-900"
-            >
+            <Badge variant="secondary" className="bg-teal-200 text-teal-900">
               {quoteSymbol} {rate}
             </Badge>
           </div>
