@@ -30,4 +30,4 @@ const Header = ({ title, blog = false }) => {
   );
 };
 
-export default Header; 
+export default Header;
