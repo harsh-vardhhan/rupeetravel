@@ -1,24 +1,16 @@
-'use client';
-
-import styles from "../../styles/Home.module.css";
+import Header from "../../components/ui/server/header";
 import {
   Card,
-  CardBody,
-  Text,
-  Stack,
-  Alert,
-  AlertIcon,
-  SimpleGrid,
-  Tag,
-  Divider,
+  CardContent,
   CardFooter,
-  Button,
-  Heading,
-} from "@chakra-ui/react";
+} from "../../components/ui/server/card";
+import { Button } from "../../components/ui/server/button";
+import { Badge } from "../../components/ui/server/badge";
+import { Alert, AlertDescription } from "../../components/ui/server/alert";
 import Image from 'next/image';
-import Header from "../../component/header";
-import ListView from "../../component/listview";
 import Seo from "../../component/seo";
+
+export const dynamic = 'force-static';
 
 // Static data that was previously in getStaticProps
 const features = [
@@ -71,72 +63,86 @@ export default function Home() {
         description="Best and cheapest ATM in Vietnam for zero exchange rate"
         canonical={"https://www.rupeetravel.com/atm-vietnam-zero-forex-markup"}
       />
-      <main className={styles.main}>
+      <div className="min-h-screen bg-background">
         <Header title={"ATM cash withdrawal with no fee in Vietnam"} />
-        <div style={{ marginTop: "20px" }}>
-          <SimpleGrid minChildWidth="350px" spacing="40px">
-            <Card maxW="sm">
-              <CardBody>
-                <Stack direction="column">
+        <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            <Card className="w-full max-w-sm mx-auto">
+              <CardContent className="pt-6">
+                <div className="flex flex-col items-center">
                   <Image
                     src={"/images/mb-bank-atm.webp"}
                     alt="MB Bank ATM"
                     height={284}
                     width={310}
+                    className="rounded-lg"
                   />
-                </Stack>
-                <Stack mt="6" spacing="3">
-                  <Heading as="h2" size="md">
+                </div>
+                <div className="mt-6 space-y-3">
+                  <h2 className="text-lg font-semibold">
                     Withdraw cash from Ocean Bank ATM or MB Bank ATM
-                  </Heading>
-                  <Tag colorScheme="teal" style={{ width: "fit-content" }}>
+                  </h2>
+                  <Badge 
+                    variant="secondary"
+                    className="bg-teal-200 text-teal-900"
+                  >
                     Personally using
-                  </Tag>
-                  <Text>
-                    Just search on google map <Text as="b">Ocean Bank</Text> or{" "}
-                    <Text as="b">MB Bank</Text> for nearby ATM.
-                  </Text>
-                  <ListView features={features} />
-                </Stack>
-              </CardBody>
-              <Divider style={{ color: "#e2e8f0" }} />
-              <CardFooter>
-                <Stack direction="row">
-                  <a href="https://www.google.com/maps?q=MB+Bank+ATM">
-                    <Button
-                      colorScheme="green"
-                    >
-                      MB Bank ATM
-                    </Button>
-                  </a>
-                  <a href="https://www.google.com/maps?q=Ocean+Bank+ATM">
-                    <Button
-                      colorScheme="green"
-                    >
-                      Ocean Bank ATM
-                    </Button>
-                  </a>
-                </Stack>
+                  </Badge>
+                  <p className="text-sm">
+                    Just search on google map <span className="font-bold">Ocean Bank</span> or{" "}
+                    <span className="font-bold">MB Bank</span> for nearby ATM.
+                  </p>
+                  <ul className="space-y-2">
+                    {features.map((feature) => (
+                      <li key={feature.item} className="text-sm">
+                        {feature.title}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </CardContent>
+              <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
+                <a href="https://www.google.com/maps?q=MB+Bank+ATM" className="w-full">
+                  <Button 
+                    className="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base"
+                  >
+                    MB Bank ATM
+                  </Button>
+                </a>
+                <a href="https://www.google.com/maps?q=Ocean+Bank+ATM" className="w-full">
+                  <Button 
+                    className="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base"
+                  >
+                    Ocean Bank ATM
+                  </Button>
+                </a>
               </CardFooter>
             </Card>
-            <Card maxW="sm">
-              <CardBody>
-                <Alert status="info" style={{ marginTop: "10px" }}>
-                  <AlertIcon />
-                  Debit card forex charge & ATM forex charge are NOT same.
+            <Card className="w-full max-w-sm mx-auto">
+              <CardContent className="pt-6">
+                <Alert className="mb-4">
+                  <AlertDescription>
+                    Debit card forex charge & ATM forex charge are NOT same.
+                  </AlertDescription>
                 </Alert>
-                <Stack mt="6" spacing="3">
-                  <Text>
+                <div className="space-y-3">
+                  <p className="text-sm">
                     When you withdraw cash from ATM&apos;s there are two sides
                     which charge you:
-                  </Text>
-                  <ListView features={atmFeatures} />
-                </Stack>
-              </CardBody>
+                  </p>
+                  <ul className="space-y-2">
+                    {atmFeatures.map((feature) => (
+                      <li key={feature.item} className="text-sm">
+                        {feature.title}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </CardContent>
             </Card>
-          </SimpleGrid>
-        </div>
-      </main>
+          </div>
+        </main>
+      </div>
     </>
   );
 }

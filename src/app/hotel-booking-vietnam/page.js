@@ -1,161 +1,158 @@
-"use client"
-
-import styles from "../../styles/Home.module.css";
+import Header from "../../components/ui/server/header";
 import {
-    Card,
-    CardBody,
-    Stack,
-    Divider,
-    CardFooter,
-    Button,
-    SimpleGrid,
-    Tag,
-    Table,
-    Thead,
-    Tbody,
-    Tr,
-    Th,
-    Td,
-    TableContainer,
-} from "@chakra-ui/react";
-import Header from "../../component/header";
+  Card,
+  CardContent,
+  CardFooter,
+} from "../../components/ui/server/card";
+import { Button } from "../../components/ui/server/button";
+import { Badge } from "../../components/ui/server/badge";
 import Seo from "../../component/seo";
 import Link from "next/link";
 
+export const dynamic = 'force-static';
+
 // Define the hotels data directly in the component since it's static
 const hotels = [
-    {
-        item: 1,
-        name: `Sala Danang Beach Hotel`,
-        contact: "https://www.facebook.com/saladanangbeachhotel/",
-    },
-    {
-        item: 2,
-        name: "Lavencos Hotel",
-        contact: "https://www.facebook.com/lavencos.vn",
-    },
-    {
-        item: 3,
-        name: "Paracel Danang Hotel",
-        contact: "https://www.facebook.com/paraceldananghotel/",
-    },
-    {
-        item: 4,
-        name: "BlueSun Hotel",
-        contact: "https://www.facebook.com/bluesundanang/",
-    },
-    {
-        item: 5,
-        name: "Golden Lotus Hotel",
-        contact: "https://www.facebook.com/goldenlotushoteldanang/",
-    },
-    {
-        item: 6,
-        name: "Avatar Danang Hotel",
-        contact: "https://www.facebook.com/AvatarDananghotel/",
-    },
-    {
-        item: 7,
-        name: "Belle Maison Parosand Hotel",
-        contact: "https://www.facebook.com/bellemaisondanang/",
-    },
-    {
-        item: 8,
-        name: "Sekong Hotel Da Nang",
-        contact: "https://facebook.com/sekonghoteldanang"
-    },
-    {
-        item: 9,
-        name: "Cicilia Danang Hotel & Spa",
-        contact: "https://www.facebook.com/ciciliadanang/"
-    },
-    {
-        item: 10,
-        name: "Aria Grand Hotel Da Nang",
-        contact: "https://www.facebook.com/ariagrandhotel/"
-    },
+  {
+    item: 1,
+    name: `Sala Danang Beach Hotel`,
+    contact: "https://www.facebook.com/saladanangbeachhotel/",
+  },
+  {
+    item: 2,
+    name: "Lavencos Hotel",
+    contact: "https://www.facebook.com/lavencos.vn",
+  },
+  {
+    item: 3,
+    name: "Paracel Danang Hotel",
+    contact: "https://www.facebook.com/paraceldananghotel/",
+  },
+  {
+    item: 4,
+    name: "BlueSun Hotel",
+    contact: "https://www.facebook.com/bluesundanang/",
+  },
+  {
+    item: 5,
+    name: "Golden Lotus Hotel",
+    contact: "https://www.facebook.com/goldenlotushoteldanang/",
+  },
+  {
+    item: 6,
+    name: "Avatar Danang Hotel",
+    contact: "https://www.facebook.com/AvatarDananghotel/",
+  },
+  {
+    item: 7,
+    name: "Belle Maison Parosand Hotel",
+    contact: "https://www.facebook.com/bellemaisondanang/",
+  },
+  {
+    item: 8,
+    name: "Sekong Hotel Da Nang",
+    contact: "https://facebook.com/sekonghoteldanang"
+  },
+  {
+    item: 9,
+    name: "Cicilia Danang Hotel & Spa",
+    contact: "https://www.facebook.com/ciciliadanang/"
+  },
+  {
+    item: 10,
+    name: "Aria Grand Hotel Da Nang",
+    contact: "https://www.facebook.com/ariagrandhotel/"
+  },
 ];
 
 export default function Home() {
-    return (
-        <>
-            <Seo
-                title="Rupee Travel | Lowest Vietnam hotel room price"
-                description="Vietnam cheap hotels"
-                canonical={"https://www.rupeetravel.com/hotel-booking-vietnam"}
-            />
-            <main className={styles.main}>
-                <Header title={"Booking hotel in Da Nang, Vietnam"} />
-                <div style={{ marginTop: "20px" }}>
-                    <SimpleGrid minChildWidth="350px" spacing="40px">
-                        <Card>
-                            <CardBody>
-                                🏝️ All hotels are located near the beach.
-                                <br />
-                                🚕 You can request the hotel to send a taxi for you at the Da Nang airport.
-                            </CardBody>
-                            <Divider style={{ color: "#e2e8f0" }} />
-                            <CardBody>
-                                <TableContainer>
-                                    <Table size='sm'>
-                                        <Thead>
-                                            <Tr>
-                                                <Th>Hotel</Th>
-                                                <Th>Contact</Th>
-                                            </Tr>
-                                        </Thead>
-                                        <Tbody>
-                                            {hotels.map((hotel, i) => {
-                                                return (
-                                                    <Tr key={i}>
-                                                        <Td>{hotel.name}</Td>
-                                                        <Td>
-                                                            <a href={hotel.contact}>
-                                                                <Button
-                                                                    colorScheme='teal'
-                                                                    size='xs'
-                                                                >
-                                                                    contact
-                                                                </Button>
-                                                            </a>
-                                                        </Td>
-                                                    </Tr>
-                                                )
-                                            })}
-                                        </Tbody>
-                                    </Table>
-                                </TableContainer>
-                            </CardBody>
-                            <Divider style={{ color: "#e2e8f0" }} />
-                            <CardBody>
-                                <Tag colorScheme="teal">Personally used</Tag>
-                                <br />
-                                Incase you want to stay in the same city (Da Nang) and same
-                                hotel (Lavencos) where I stayed 😂, you can contact below
-                            </CardBody>
-                            <Divider style={{ color: "#e2e8f0" }} />
-                            <CardFooter>
-                                <Stack direction="row">
-                                    <a href="https://www.facebook.com/lavencos.vn">
-                                        <Button
-                                            variant="solid"
-                                            colorScheme="green"
-                                        >
-                                            Contact Lavencos
-                                        </Button>
-                                    </a>
-                                    <Link spacing="2" href="/da-nang-map">
-                                        <Button variant="solid" colorScheme="green">
-                                            Da Nang Map
-                                        </Button>
-                                    </Link>
-                                </Stack>
-
-                            </CardFooter>
-                        </Card>
-                    </SimpleGrid>
+  return (
+    <>
+      <Seo
+        title="Rupee Travel | Lowest Vietnam hotel room price"
+        description="Vietnam cheap hotels"
+        canonical={"https://www.rupeetravel.com/hotel-booking-vietnam"}
+      />
+      <div className="min-h-screen bg-background">
+        <Header title={"Booking hotel in Da Nang, Vietnam"} />
+        <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
+          <div className="grid grid-cols-1 gap-4 sm:gap-6">
+            <Card className="w-full max-w-xl mx-auto">
+              <CardContent className="pt-6">
+                <p className="text-sm">
+                  🏝️ All hotels are located near the beach.
+                  <br />
+                  🚕 You can request the hotel to send a taxi for you at the Da Nang airport.
+                </p>
+              </CardContent>
+              <CardContent>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b">
+                        <th className="p-4 text-left font-medium">Hotel</th>
+                        <th className="p-4 text-left font-medium">Contact</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {hotels.map((hotel, i) => (
+                        <tr key={i} className="border-b">
+                          <td className="p-4">{hotel.name}</td>
+                          <td className="p-4">
+                            <a href={hotel.contact}>
+                              <Button 
+                                variant="outline"
+                                size="sm"
+                                className="border-teal-600 text-teal-600 hover:bg-teal-50"
+                              >
+                                contact
+                              </Button>
+                            </a>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
-            </main>
-        </>
-    );
+              </CardContent>
+              <CardContent>
+                <Badge 
+                  variant="secondary"
+                  className="bg-teal-200 text-teal-900 mb-4"
+                >
+                  Personally used
+                </Badge>
+                <p className="text-sm">
+                  Incase you want to stay in the same city (Da Nang) and same
+                  hotel (Lavencos) where I stayed 😂, you can contact below
+                </p>
+              </CardContent>
+              <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
+                <a 
+                  href="https://www.facebook.com/lavencos.vn"
+                  className="w-full"
+                >
+                  <Button 
+                    className="w-full bg-green-600 hover:bg-green-700 text-white"
+                  >
+                    Contact Lavencos
+                  </Button>
+                </a>
+                <Link 
+                  href="/da-nang-map"
+                  className="w-full"
+                >
+                  <Button 
+                    className="w-full bg-green-600 hover:bg-green-700 text-white"
+                  >
+                    Da Nang Map
+                  </Button>
+                </Link>
+              </CardFooter>
+            </Card>
+          </div>
+        </main>
+      </div>
+    </>
+  );
 }

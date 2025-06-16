@@ -1,17 +1,12 @@
-"use client"
-
-import styles from "../../styles/Home.module.css";
+import Header from "../../components/ui/server/header";
 import {
   Card,
-  CardBody,
-  Stack,
-  SimpleGrid,
-  Tag,
-  Heading,
-} from "@chakra-ui/react";
-import ListView from "../../component/listview";
-import Header from "../../component/header";
+  CardContent,
+} from "../../components/ui/server/card";
+import { Badge } from "../../components/ui/server/badge";
 import Seo from "../../component/seo";
+
+export const dynamic = 'force-static';
 
 // Static data that was previously in getStaticProps
 const features = [
@@ -40,26 +35,35 @@ export default function Home() {
         description="SIM card at Vietnam airport"
         canonical={"https://www.rupeetravel.com/local-sim-card-vietnam"}
       />
-      <main className={styles.main}>
+      <div className="min-h-screen bg-background">
         <Header title={"local SIM card in Vietnam"} />
-        <div style={{ marginTop: "20px" }}>
-          <SimpleGrid minChildWidth="350px" spacing="40px">
-            <Card maxW="sm">
-              <CardBody>
-                <Stack mt="6" spacing="3">
-                  <Heading as="h2" size="md">
+        <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
+          <div className="grid grid-cols-1 gap-4 sm:gap-6">
+            <Card className="w-full max-w-sm mx-auto">
+              <CardContent className="pt-6">
+                <div className="space-y-3">
+                  <h2 className="text-lg font-semibold">
                     Get local SIM card at airport
-                  </Heading>
-                  <Tag colorScheme="teal" style={{ width: "fit-content" }}>
+                  </h2>
+                  <Badge 
+                    variant="secondary"
+                    className="bg-teal-200 text-teal-900"
+                  >
                     Personally used
-                  </Tag>
-                  <ListView features={features} />
-                </Stack>
-              </CardBody>
+                  </Badge>
+                  <ul className="space-y-2">
+                    {features.map((feature) => (
+                      <li key={feature.item} className="text-sm">
+                        {feature.title}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </CardContent>
             </Card>
-          </SimpleGrid>
-        </div>
-      </main>
+          </div>
+        </main>
+      </div>
     </>
   );
 }
