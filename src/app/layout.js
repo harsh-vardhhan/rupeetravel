@@ -1,9 +1,9 @@
-import { Providers } from './providers';
-import '../styles/globals.css'
+import { Providers } from "./providers";
+import "../styles/globals.css";
 
 export const metadata = {
-  title: 'Rupee Travel',
-  description: 'The ultimate checklist for Vietnam travel from India 🇻🇳',
+  title: "Rupee Travel",
+  description: "The ultimate checklist for Vietnam travel from India 🇻🇳",
 };
 
 export default function RootLayout({ children }) {
