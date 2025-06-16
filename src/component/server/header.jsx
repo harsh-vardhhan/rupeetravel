@@ -9,13 +9,13 @@ const Header = ({ title, blog = false }) => {
             Rupee Travel
           </h1>
         </Link>
-        <h2 className="text-sm md:text-base lg:text-lg mt-2">
-          {title}
-        </h2>
+        <h2 className="text-sm md:text-base lg:text-lg mt-2">{title}</h2>
         <nav className="mt-2">
           <ol className="flex items-center space-x-2 text-sm">
             <li>
-              <Link href="/" className="hover:underline">Home</Link>
+              <Link href="/" className="hover:underline">
+                Home
+              </Link>
             </li>
             <li className="text-gray-500">/</li>
             <li className="text-gray-500">{title}</li>
@@ -26,4 +26,4 @@ const Header = ({ title, blog = false }) => {
   );
 };
 
-export default Header; 
+export default Header;
