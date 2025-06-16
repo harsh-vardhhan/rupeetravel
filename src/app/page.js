@@ -7,6 +7,9 @@ import {
 import { Badge } from "../components/ui/server/badge";
 import Seo from "../component/seo";
 
+// Force static generation
+export const dynamic = 'force-static';
+
 // Move static data outside of component
 const beforeArrivals = [
   {
