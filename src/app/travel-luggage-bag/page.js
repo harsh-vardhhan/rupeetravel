@@ -1,35 +1,30 @@
-"use client"
-
-import styles from "../../styles/Home.module.css";
+import Image from 'next/image';
+import Header from "../../components/ui/server/header";
 import {
   Card,
-  CardBody,
-  Stack,
-  SimpleGrid,
-  Tag,
-  Heading,
-} from "@chakra-ui/react";
-import Image from 'next/image';
-import ListView from "../../component/listview";
-import Header from "../../component/header";
+  CardContent,
+} from "../../components/ui/server/card";
+import { Badge } from "../../components/ui/server/badge";
 import Seo from "../../component/seo";
+
+export const dynamic = 'force-static';
 
 // Define the features data
 const features = [
   {
     item: 1,
     title: `✅ Put a laminated name label on your checked-in luggage`,
-    color: "green.500",
+    color: "green",
   },
   {
     item: 2,
     title: `❌ It avoids the chances of others accidentally picking your luggage`,
-    color: "red.400",
+    color: "red",
   },
   {
     item: 3,
     title: `✅ It also helps you recognise your luggage quickly on the conveyer belt.`,
-    color: "green.500",
+    color: "green",
   },
 ];
 
@@ -41,32 +36,46 @@ export default function TravelLuggagePage() {
         description="hack for travel luggage on airports"
         canonical={"https://www.rupeetravel.com/travel-luggage-bag"}
       />
-      <main className={styles.main}>
+      <div className="min-h-screen bg-background">
         <Header title={"luggage"} />
-        <div style={{ marginTop: "20px" }}>
-          <SimpleGrid minChildWidth="350px" spacing="40px">
-            <Card maxW="sm">
-              <CardBody>
+        <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
+          <div className="grid grid-cols-1 gap-4 sm:gap-6">
+            <Card className="w-full max-w-xl mx-auto">
+              <CardContent className="pt-6">
                 <Image
                   src={"/images/luggage-travel-hack.webp"}
                   alt="Luggage"
                   height={187}
                   width={310}
+                  className="w-full h-auto rounded-lg"
                 />
-                <Stack mt="6" spacing="3">
-                  <Heading as="h2" size="md">
-                    Luggage travel hack
-                  </Heading>
-                  <Tag colorScheme="teal" style={{ width: "fit-content" }}>
-                    Personally experienced 😞
-                  </Tag>
-                  <ListView features={features} />
-                </Stack>
-              </CardBody>
+                <div className="mt-6 space-y-4">
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-xl font-bold">
+                      Luggage travel hack
+                    </h2>
+                    <Badge 
+                      variant="secondary"
+                      className="bg-teal-200 text-teal-900"
+                    >
+                      Personally experienced 😞
+                    </Badge>
+                  </div>
+                  <div className="space-y-2">
+                    {features.map((feature) => (
+                      <div key={feature.item} className="flex items-start gap-2">
+                        <p className="text-sm">
+                          {feature.title}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
             </Card>
-          </SimpleGrid>
-        </div>
-      </main>
+          </div>
+        </main>
+      </div>
     </>
   );
 }
