@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import Header from "../../components/ui/server/header";
 import {
   Card,
@@ -14,7 +14,7 @@ import Seo from "../../component/seo";
 import StructuredData from "../../component/structuredData";
 import Link from "next/link";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 // Static data that was previously in getStaticProps
 const features = [
@@ -94,10 +94,8 @@ export default function Home() {
             <Card className="w-full">
               <CardHeader className="pb-2">
                 <div className="flex items-center justify-between">
-                  <h2 className="text-xl font-bold">
-                    Fi Debit Card
-                  </h2>
-                  <Badge 
+                  <h2 className="text-xl font-bold">Fi Debit Card</h2>
+                  <Badge
                     variant="secondary"
                     className="bg-teal-100 text-teal-800"
                   >
@@ -120,32 +118,25 @@ export default function Home() {
                   </p>
                   <div className="space-y-2">
                     {features.map((feature) => (
-                      <div key={feature.item} className="flex items-start gap-2">
-                        <p className="text-sm">
-                          {feature.title}
-                        </p>
+                      <div
+                        key={feature.item}
+                        className="flex items-start gap-2"
+                      >
+                        <p className="text-sm">{feature.title}</p>
                       </div>
                     ))}
                   </div>
                 </div>
               </CardContent>
               <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
-                <a 
-                  href="https://fi.money/"
-                  className="w-full"
-                >
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  >
+                <a href="https://fi.money/" className="w-full">
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
                     Get Fi Account
                   </Button>
                 </a>
-                <Link 
-                  href="/atm-vietnam-zero-forex-markup"
-                  className="w-full"
-                >
-                  <Button 
-                    variant="outline" 
+                <Link href="/atm-vietnam-zero-forex-markup" className="w-full">
+                  <Button
+                    variant="outline"
                     className="w-full border-green-600 text-green-600 hover:bg-green-50"
                   >
                     Zero forex ATMs
@@ -178,7 +169,7 @@ export default function Home() {
 
             <Card className="w-full">
               <CardHeader className="pb-2">
-                <Badge 
+                <Badge
                   variant="secondary"
                   className="bg-teal-100 text-teal-800"
                 >
@@ -186,7 +177,10 @@ export default function Home() {
                 </Badge>
               </CardHeader>
               <CardContent className="space-y-4">
-                <Alert variant="destructive" className="bg-red-50 border-red-200 text-red-800">
+                <Alert
+                  variant="destructive"
+                  className="bg-red-50 border-red-200 text-red-800"
+                >
                   <AlertCircle className="h-4 w-4" />
                   <AlertDescription>
                     Please avoid Discover debit cards since they are hardly
