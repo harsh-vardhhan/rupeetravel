@@ -1,9 +1,16 @@
 "use client"
 
-import React, { useMemo } from 'react';
-import { BarChart, Bar, XAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import React from 'react';
 import { Badge } from "../components/ui/server/badge";
-import { Card, CardContent } from "../components/ui/server/card";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Cell
+} from 'recharts';
 
 // Helper function to determine emoji based on precipitation days
 const getRainEmoji = (days) => {
@@ -20,43 +27,34 @@ const getCurrentMonth = () => {
   return months[new Date().getMonth()];
 };
 
-// Memoized tooltip component
-const CustomTooltip = React.memo(({ active, payload, label }) => {
+// Custom tooltip component
+const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     const value = payload[0].value;
     const emoji = getRainEmoji(value);
     return (
-      <Card className="bg-white/95 p-4 shadow-lg border border-gray-100 backdrop-blur-md">
-        <CardContent className="p-0">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">{emoji}</span>
-            <div className="flex flex-col items-start">
-              <span className="font-bold text-sm text-gray-800">{label}</span>
-              <span className="text-sm font-medium text-blue-600">
-                {value} rainy days
-              </span>
-            </div>
+      <div className="bg-white/95 p-4 rounded-xl shadow-lg border border-gray-100 backdrop-blur-md">
+        <div className="flex items-center gap-2">
+          <span className="text-2xl">{emoji}</span>
+          <div className="flex flex-col items-start">
+            <span className="font-bold text-sm text-gray-800">{label}</span>
+            <span className="text-sm font-medium text-blue-600">
+              {value} rainy days
+            </span>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     );
   }
   return null;
-});
+};
 
-CustomTooltip.displayName = 'CustomTooltip';
-
-// Memoized label component
-const CustomizedLabel = React.memo((props) => {
-  const { x, y, width, value } = props;
-  
-  const days = value || 0;
-  const emoji = getRainEmoji(days);
-  
+// Custom label component
+const CustomLabel = ({ x, y, width, value }) => {
   if (x === undefined || y === undefined || width === undefined) {
     return null;
   }
-  
+  const emoji = getRainEmoji(value);
   return (
     <text 
       x={x + width / 2} 
@@ -68,63 +66,21 @@ const CustomizedLabel = React.memo((props) => {
       {emoji}
     </text>
   );
-});
-
-CustomizedLabel.displayName = 'CustomizedLabel';
-
-// Pre-defined styles to avoid inline object creation
-const currentMonthStyle = {
-  filter: 'drop-shadow(0 8px 16px rgba(59, 130, 246, 0.3))'
 };
 
-const regularMonthStyle = {
-  filter: 'drop-shadow(0 4px 8px rgba(147, 197, 253, 0.2))'
-};
-
-// Main reusable component
-const PrecipitationChart = React.memo(({ 
+// Main component
+const PrecipitationChart = ({ 
   data, 
   destinationName = "Location", 
   destinationIcon = "🌍", 
   currentMonth = getCurrentMonth(),
-  subtitle 
+  subtitle = "Monthly precipitation patterns"
 }) => {
-  console.log(data)
-  // Memoize processed data to prevent unnecessary recalculations
-  const processedData = useMemo(() => 
-    data.map(item => ({
-      ...item,
-      emoji: getRainEmoji(item.days)
-    })), [data]
-  );
-
-  // Memoize chart subtitle
-  const chartSubtitle = useMemo(() => 
-    subtitle || "Monthly precipitation patterns", [subtitle]
-  );
-  
-  // Memoize gradient definitions
-  const gradientDefs = useMemo(() => 
-    processedData.map((entry, index) => (
-      <linearGradient key={`gradient-${index}`} id={`gradient-${index}`} x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor={entry.month === currentMonth ? "#3B82F6" : "#93C5FD"} />
-        <stop offset="100%" stopColor={entry.month === currentMonth ? "#1E40AF" : "#60A5FA"} />
-      </linearGradient>
-    )), [processedData, currentMonth]
-  );
-
-  // Memoize bar cells
-  const barCells = useMemo(() => 
-    processedData.map((entry, index) => (
-      <Cell 
-        key={`cell-${index}`} 
-        fill={`url(#gradient-${index})`}
-        stroke={entry.month === currentMonth ? '#1E40AF' : 'transparent'}
-        strokeWidth={entry.month === currentMonth ? 3 : 0}
-        style={entry.month === currentMonth ? currentMonthStyle : regularMonthStyle}
-      />
-    )), [processedData, currentMonth]
-  );
+  // Process data to add emojis
+  const processedData = data.map(item => ({
+    ...item,
+    emoji: getRainEmoji(item.days)
+  }));
 
   return (
     <div className="relative bg-gradient-to-b from-[#FFD6BA] via-[#FFE8CD] to-[#FFF2EB]">
@@ -149,13 +105,13 @@ const PrecipitationChart = React.memo(({
           
           <div className="flex flex-col gap-2">
             <p className="text-base md:text-lg text-black font-medium">
-              {chartSubtitle}
+              {subtitle}
             </p>
           </div>
         </div>
 
         {/* Chart Container */}
-        <Card className="w-full max-w-[1000px] h-[280px] sm:h-[320px] md:h-[550px] bg-white/95 p-4 sm:p-6 md:p-8 rounded-3xl shadow-lg backdrop-blur-xl border border-white/20 relative overflow-hidden">
+        <div className="w-full max-w-[1000px] h-[280px] sm:h-[320px] md:h-[550px] bg-white/95 p-4 sm:p-6 md:p-8 rounded-3xl shadow-lg backdrop-blur-xl border border-white/20 relative overflow-hidden">
           {/* Subtle inner glow */}
           <div
             className="absolute inset-0 rounded-3xl pointer-events-none"
@@ -175,7 +131,12 @@ const PrecipitationChart = React.memo(({
               }}
             >
               <defs>
-                {gradientDefs}
+                {processedData.map((entry, index) => (
+                  <linearGradient key={`gradient-${index}`} id={`gradient-${index}`} x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor={entry.month === currentMonth ? "#3B82F6" : "#93C5FD"} />
+                    <stop offset="100%" stopColor={entry.month === currentMonth ? "#1E40AF" : "#60A5FA"} />
+                  </linearGradient>
+                ))}
               </defs>
               
               <CartesianGrid 
@@ -193,24 +154,34 @@ const PrecipitationChart = React.memo(({
                   fontWeight: 500
                 }}
                 interval={0}
-                hide={false}
+                className="hidden sm:block"
               />
               <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(59, 130, 246, 0.1)' }} />
               <Bar 
                 dataKey="days" 
                 radius={[8, 8, 0, 0]}
-                label={<CustomizedLabel />}
+                label={<CustomLabel />}
               >
-                {barCells}
+                {processedData.map((entry, index) => (
+                  <Cell 
+                    key={`cell-${index}`} 
+                    fill={`url(#gradient-${index})`}
+                    stroke={entry.month === currentMonth ? '#1E40AF' : 'transparent'}
+                    strokeWidth={entry.month === currentMonth ? 3 : 0}
+                    style={{
+                      filter: entry.month === currentMonth 
+                        ? 'drop-shadow(0 8px 16px rgba(59, 130, 246, 0.3))'
+                        : 'drop-shadow(0 4px 8px rgba(147, 197, 253, 0.2))'
+                    }}
+                  />
+                ))}
               </Bar>
             </BarChart>
           </ResponsiveContainer>
-        </Card>
+        </div>
       </div>
     </div>
   );
-});
-
-PrecipitationChart.displayName = 'PrecipitationChart';
+};
 
 export default PrecipitationChart;
