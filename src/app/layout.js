@@ -1,4 +1,10 @@
 import '../styles/globals.css'
+import { Rubik } from 'next/font/google'
+
+const rubik = Rubik({ 
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Rupee Travel',
@@ -7,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={rubik.className}>
       <body>
         {children}
       </body>
