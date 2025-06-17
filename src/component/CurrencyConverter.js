@@ -36,31 +36,31 @@ const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base,
 
   return (
     <>
-      <h2 className="text-lg font-semibold mt-5">
+      <h2 className="text-base md:text-lg font-semibold mt-4 md:mt-5">
         {currencyPair} currency converter with {exchange} rate:
       </h2>
-      <Card className="mt-3">
-        <CardContent className="pt-6 space-y-5">
-          <div className="flex items-center gap-4">
-            <span className="font-bold">{base}</span>
+      <Card className="mt-2 md:mt-3">
+        <CardContent className="pt-4 md:pt-6 space-y-3 md:space-y-5">
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+            <span className="font-bold text-sm md:text-base">{base}</span>
             <Input
               type="number"
               value={value}
               onChange={(event) => setValue(parse(event))}
-              className="max-w-[200px]"
+              className="w-full md:max-w-[200px]"
             />
           </div>
 
-          <div className="flex items-center gap-4">
-            <span className="font-bold">{quote}</span>
-            <span>{convertedPrice}</span>
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+            <span className="font-bold text-sm md:text-base">{quote}</span>
+            <span className="text-sm md:text-base">{convertedPrice}</span>
           </div>
 
-          <div className="flex items-center gap-4">
-            <span className="font-bold">{exchange} Rate</span>
+          <div className="flex items-center gap-2 md:gap-4">
+            <span className="font-bold text-sm md:text-base whitespace-nowrap">{exchange} Rate</span>
             <Badge
               variant="secondary"
-              className="bg-teal-200 text-teal-900"
+              className="bg-teal-200 text-teal-900 text-sm md:text-base"
             >
               {quoteSymbol} {rate}
             </Badge>
