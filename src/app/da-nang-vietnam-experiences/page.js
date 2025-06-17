@@ -2,7 +2,7 @@ import Header from "../../components/ui/server/header";
 import { Tweet } from "react-tweet";
 import Seo from "../../component/seo";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export default function Home() {
   return (
