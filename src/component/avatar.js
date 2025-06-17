@@ -1,18 +1,29 @@
 import Image from "next/image";
-import { Text, Wrap, WrapItem } from "@chakra-ui/react";
+import { cn } from "../lib/utils";
 
-const Avatar = ({ name, picture }) => {
+export const dynamic = 'force-static';
+
+const Avatar = ({ name, picture, className }) => {
   return (
-    <Wrap style={{ marginTop: "20px", marginBottom: "20px" }}>
-      <WrapItem>
-        <Image height={48} width={48} alt={name} src={picture} />
-      </WrapItem>
-      <WrapItem>
-        <Text style={{ marginTop: "12px" }} as="b" fontSize="md">
+    <div className={cn(
+      "flex flex-wrap items-center gap-4 my-5",
+      className
+    )}>
+      <div>
+        <Image 
+          height={48} 
+          width={48} 
+          alt={name} 
+          src={picture}
+          className="rounded-full"
+        />
+      </div>
+      <div>
+        <p className="font-bold text-base mt-3">
           {name}
-        </Text>
-      </WrapItem>
-    </Wrap>
+        </p>
+      </div>
+    </div>
   );
 };
 

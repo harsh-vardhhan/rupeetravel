@@ -1,13 +1,17 @@
-import {
-  Heading,
-} from '@chakra-ui/react'
+"use client"
 
-const PostTitle = ({ children }) => {
+import React from 'react';
+import { cn } from "../lib/utils";
+
+const PostTitle = ({ children, className }) => {
   return (
-    <Heading as='h1' fontSize={{ base: '24px', md: '40px', lg: '75px' }} style={{ marginTop: '20px' }}>
+    <h1 className={cn(
+      "mt-5 text-2xl md:text-4xl lg:text-[75px] font-bold",
+      className
+    )}>
       {children}
-    </Heading>
-  )
-}
+    </h1>
+  );
+};
 
-export default PostTitle
+export default PostTitle;

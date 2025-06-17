@@ -1,11 +1,7 @@
+"use client"
+
 import React from 'react';
-import {
-  Box,
-  Text,
-  VStack,
-  HStack,
-  Center,
-} from '@chakra-ui/react';
+import { cn } from "../lib/utils";
 
 const VisaStamp = () => {
   const currentDate = new Date().toLocaleDateString('en-GB', {
@@ -15,123 +11,75 @@ const VisaStamp = () => {
   });
 
   return (
-    <Center bg="white" p={4}>
-      <Box position="relative">
+    <div className="flex justify-center items-center bg-white p-4">
+      <div className="relative">
         {/* Main stamp container */}
-        <Box
-          bg="white"
-          border="4px solid"
-          borderColor="red.600"
-          borderRadius="lg"
-          p={6}
-          shadow="lg"
-          position="relative"
-          overflow="hidden"
-          w={{ base: "90vw", sm: "350px", md: "400px" }}
-          maxW="400px"
-        >
+        <div className={cn(
+          "relative bg-white border-4 border-red-600 rounded-lg p-6 shadow-lg overflow-hidden",
+          "w-[90vw] sm:w-[350px] md:w-[400px] max-w-[400px]"
+        )}>
           {/* Decorative border pattern */}
-          <Box
-            position="absolute"
-            top={2}
-            left={2}
-            right={2}
-            bottom={2}
-            border="2px dashed"
-            borderColor="red.500"
-            borderRadius="md"
-          />
+          <div className="absolute top-2 left-2 right-2 bottom-2 border-2 border-dashed border-red-500 rounded-md" />
           
           {/* Content */}
-          <VStack spacing={3} position="relative" zIndex={10}>
+          <div className="relative z-10 flex flex-col space-y-3">
             {/* Header */}
-            <VStack spacing={1} pb={2} borderBottom="2px solid" borderColor="red.600" w="full">
-              <Text
-                fontSize={{ base: "md", sm: "lg" }}
-                fontWeight="bold"
-                color="red.700"
-                textTransform="uppercase"
-                letterSpacing="wide"
-                textAlign="center"
-              >
+            <div className="flex flex-col space-y-1 pb-2 border-b-2 border-red-600 w-full">
+              <p className="text-base sm:text-lg font-bold text-red-700 uppercase tracking-wide text-center">
                 Republic of Indonesia
-              </Text>
-              <Text
-                fontSize={{ base: "xs", sm: "sm" }}
-                fontWeight="semibold"
-                color="red.600"
-                textTransform="uppercase"
-                textAlign="center"
-              >
+              </p>
+              <p className="text-xs sm:text-sm font-semibold text-red-600 uppercase text-center">
                 Ministry of Tourism
-              </Text>
-            </VStack>
+              </p>
+            </div>
             
             {/* Visa Type */}
-            <Box py={2}>
-              <Text
-                fontSize={{ base: "lg", sm: "xl" }}
-                fontWeight="bold"
-                color="black"
-                textTransform="uppercase"
-                textAlign="center"
-              >
+            <div className="py-2">
+              <p className="text-lg sm:text-xl font-bold text-black uppercase text-center">
                 Tourist Visa
-              </Text>
-            </Box>
+              </p>
+            </div>
             
             {/* Visa Details */}
-            <VStack spacing={2} fontSize="sm" w="full">
-              <HStack justify="space-between" w="full">
-                <Text fontWeight="semibold" color="gray.700">VISA:</Text>
-                <Text fontWeight="bold" color="black" bg="yellow.100" px={2} py={1} borderRadius="md">
+            <div className="flex flex-col space-y-2 text-sm w-full">
+              <div className="flex justify-between w-full">
+                <span className="font-semibold text-gray-700">VISA:</span>
+                <span className="font-bold text-black bg-yellow-100 px-2 py-1 rounded-md">
                   B2
-                </Text>
-              </HStack>
+                </span>
+              </div>
               
-              <HStack justify="space-between" w="full">
-                <Text fontWeight="semibold" color="gray.700">DURATION:</Text>
-                <Text fontWeight="bold" color="black">30 DAYS</Text>
-              </HStack>
+              <div className="flex justify-between w-full">
+                <span className="font-semibold text-gray-700">DURATION:</span>
+                <span className="font-bold text-black">30 DAYS</span>
+              </div>
               
-              <HStack justify="space-between" w="full">
-                <Text fontWeight="semibold" color="gray.700">FEE:</Text>
-                <Text fontWeight="bold" color="green.700">500,000 IDR</Text>
-              </HStack>
-            </VStack>
+              <div className="flex justify-between w-full">
+                <span className="font-semibold text-gray-700">FEE:</span>
+                <span className="font-bold text-green-700">500,000 IDR</span>
+              </div>
+            </div>
             
             {/* Date and stamp info */}
-            <VStack spacing={1} pt={3} mt={4} borderTop="2px solid" borderColor="red.600" w="full">
-              <HStack justify="space-between" fontSize="xs" w="full">
-                <Text color="gray.600">ISSUED:</Text>
-                <Text fontWeight="semibold" color="black">{currentDate}</Text>
-              </HStack>
-              <HStack justify="space-between" fontSize="xs" w="full">
-                <Text color="gray.600">ENTRY:</Text>
-                <Text fontWeight="semibold" color="black">DENPASAR</Text>
-              </HStack>
-            </VStack>
-
-          </VStack>
+            <div className="flex flex-col space-y-1 pt-3 mt-4 border-t-2 border-red-600 w-full">
+              <div className="flex justify-between text-xs w-full">
+                <span className="text-gray-600">ISSUED:</span>
+                <span className="font-semibold text-black">{currentDate}</span>
+              </div>
+              <div className="flex justify-between text-xs w-full">
+                <span className="text-gray-600">ENTRY:</span>
+                <span className="font-semibold text-black">DENPASAR</span>
+              </div>
+            </div>
+          </div>
           
           {/* Background watermark */}
-          <Box
-            position="absolute"
-            top="50%"
-            left="50%"
-            transform="translate(-50%, -50%) rotate(45deg)"
-            fontSize="6xl"
-            fontWeight="bold"
-            color="red.600"
-            opacity={0.05}
-            pointerEvents="none"
-            zIndex={1}
-          >
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45 text-6xl font-bold text-red-600 opacity-5 pointer-events-none z-[1]">
             VISA
-          </Box>
-        </Box>
-      </Box>
-    </Center>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

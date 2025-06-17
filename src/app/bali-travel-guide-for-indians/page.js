@@ -1,5 +1,3 @@
-"use client"
-
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -21,6 +19,9 @@ import CurrencyConverter from "../../component/CurrencyConverter";
 import PrecipitationChart from "../../component/PrecipitationChart";
 import VisaStamp from "../../component/VisaStamp";
 import { IDRINRMarketRate } from "../../currency/currency";
+
+export const dynamic = 'force-static';
+
 
 export default function Home() {
   const baliData = [

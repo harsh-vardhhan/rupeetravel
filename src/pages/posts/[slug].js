@@ -1,14 +1,13 @@
 import { useRouter } from 'next/router'
 import Container from '../../component/container'
 import PostBody from '../../component/post-body'
-import Header from '../../component/blog-header'
+import Header from '../../components/ui/server/header'
 import PostHeader from '../../component/post-header'
 import Layout from '../../component/layout'
 import Seo from '../../component/seo'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import PostTitle from '../../component/post-title'
 import markdownToHtml from '../../lib/markdownToHtml'
-import styles from "../../styles/Home.module.css";
 
 export default function Post({ post, preview }) {
 
