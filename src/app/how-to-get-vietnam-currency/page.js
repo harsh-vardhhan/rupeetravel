@@ -169,12 +169,12 @@ export default function Home() {
                         </div>
 
                         <div>
-                            <p className="text-lg mb-4">
+                            <p className="text-base sm:text-lg mb-4">
                                 Getting foreign currency is a crucial piece of travel experience.
                                 In a foreign country, no access to local currency can be a scary experience.
                                 <br />Hence, we will learn how to get Vietnamese Dong (VND):
                             </p>
-                            <ul className="list-disc pl-6 space-y-2 text-lg">
+                            <ul className="list-disc pl-6 space-y-2 text-base sm:text-lg">
                                 <li>at right rates</li>
                                 <li>in the legal way</li>
                                 <li>in your own country (get VND in India)</li>
@@ -184,8 +184,8 @@ export default function Home() {
                         </div>
 
                         <div>
-                            <h2 className="text-2xl font-bold mb-4">But why use cash in Vietnam and not credit or debit cards?</h2>
-                            <p className="text-lg">
+                            <h2 className="text-xl sm:text-2xl font-bold mb-4">But why use cash in Vietnam and not credit or debit cards?</h2>
+                            <p className="text-base sm:text-lg">
                                 Vietnam is still predominantly a cash-first country.
                                 Using only credit and debit cards will limit the places you can visit,
                                 like street food places or even getting a
@@ -197,7 +197,7 @@ export default function Home() {
                         </div>
 
                         <div>
-                            <h2 className="text-2xl font-bold mb-4" id="inr-vnd">INR to Vietnam currency</h2>
+                            <h2 className="text-xl sm:text-2xl font-bold mb-4" id="inr-vnd">INR to Vietnam currency</h2>
                             <CurrencyConverter
                                 currencyPair={'INRVND'}
                                 exchange={'forex market'}
@@ -207,13 +207,13 @@ export default function Home() {
                                 quoteSymbol={'₫'}
                                 amount={100}
                             />
-                            <p className="text-lg mt-4">
+                            <p className="text-base sm:text-lg mt-4">
                                 Try to buy Vietnamese Dong (VND) closest to the forex rate. This is where it gets tricky. You need to get the right foreign currency at the right place to get the right price.
                             </p>
                         </div>
 
                         <div>
-                            <h2 className="text-2xl font-bold mb-4" id="buy-vnd">Buy Vietnam currency in India</h2>
+                            <h2 className="text-xl sm:text-2xl font-bold mb-4" id="buy-vnd">Buy Vietnam currency in India</h2>
                             <CurrencyConverter
                                 currencyPair={'INRVND'}
                                 exchange={'BookMyForex'}
@@ -224,7 +224,7 @@ export default function Home() {
                                 amount={100}
                                 region={'en-VN'}
                             />
-                            <p className="text-lg mt-4">
+                            <p className="text-base sm:text-lg mt-4">
                                 <span className="font-bold">The dumb way:</span> You can buy VND in India from an authorised forex dealer like BookMyforex.
                                 But it can be seen that rate offered by BookMyForex is not great compared to the offering in the forex market.
                             </p>
@@ -232,10 +232,10 @@ export default function Home() {
 
                         <Card className="w-full bg-orange-50 dark:bg-orange-900">
                             <CardHeader>
-                                <h2 className="text-2xl font-bold">Why is buying VND so expensive in India?</h2>
+                                <h2 className="text-xl sm:text-2xl font-bold">Why is buying VND so expensive in India?</h2>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-lg">
+                                <p className="text-base sm:text-lg">
                                     Vietnamese currency VND is an exotic currency,
                                     meaning the currency does not have sufficient demand in the global market.
                                     Less buyer and sellers of the currency makes the buying and selling cost very high.
@@ -244,7 +244,7 @@ export default function Home() {
                         </Card>
 
                         <div>
-                            <h2 className="text-2xl font-bold mb-4" id="buy-usd">Buy USD in India</h2>
+                            <h2 className="text-xl sm:text-2xl font-bold mb-4" id="buy-usd">Buy USD in India</h2>
                             <Image
                                 src={"/images/usd-currency.avif"}
                                 alt="USD currency notes"
@@ -252,7 +252,7 @@ export default function Home() {
                                 width={1000}
                                 className="w-full h-auto rounded-lg"
                             />
-                            <p className="text-lg mt-4">
+                            <p className="text-base sm:text-lg mt-4">
                                 <span className="font-bold">The smart way:</span> Wait? but why? I am travelling to Vietnam, not the US, why should I buy USD.
                                 Well, that&apos;s cause USD has the highest global demand hence the buy/sell rate
                                 are great even in India.
@@ -261,10 +261,10 @@ export default function Home() {
 
                         <Card className="w-full bg-orange-50 dark:bg-orange-900">
                             <CardHeader>
-                                <h2 className="text-2xl font-bold">Can I buy USD currency notes from BookMyForex whenever I want?</h2>
+                                <h2 className="text-xl sm:text-2xl font-bold">Can I buy USD currency notes from BookMyForex whenever I want?</h2>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-lg">
+                                <p className="text-base sm:text-lg">
                                     No. You can only buy USD currency notes from an authorized forex dealer
                                     like BookMyForex when you have a valid visa, like
                                     {' '}
@@ -278,10 +278,10 @@ export default function Home() {
 
                         <Card className="w-full bg-green-50 dark:bg-green-900">
                             <CardHeader>
-                                <h2 className="text-2xl font-bold">Are online forex brokers like BookMyForex always giving better rates than brick-and-mortar ones?</h2>
+                                <h2 className="text-xl sm:text-2xl font-bold">Are online forex brokers like BookMyForex always giving better rates than brick-and-mortar ones?</h2>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-lg">
+                                <p className="text-base sm:text-lg">
                                     I asked a local forex broker in Mumbai for USD currency notes.
                                     It turned out that both the local forex dealer and BookMyForex
                                     are offering USD currency notes at the same rate.
@@ -328,7 +328,7 @@ export default function Home() {
                                     region={'en-IN'}
                                 />
                             </div>
-                            <p className="text-lg mt-4">
+                            <p className="text-base sm:text-lg mt-4">
                                 The difference between rates offered between
                                 BookMyForex and the forex market is minimal.
                                 You can carry the
@@ -349,10 +349,10 @@ export default function Home() {
 
                         <Card className="w-full bg-orange-50 dark:bg-orange-900">
                             <CardHeader>
-                                <h2 className="text-2xl font-bold">What if I didn&apos;t spend all the USD I purchased for my Vietnam travel?</h2>
+                                <h2 className="text-xl sm:text-2xl font-bold">What if I didn&apos;t spend all the USD I purchased for my Vietnam travel?</h2>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-lg">
+                                <p className="text-base sm:text-lg">
                                     As an Indian citizen, you can keep $2,000 physical currency notes.
                                     Since USD is a globally accepted currency, you can use it for your
                                     next international travel to any other country.
@@ -374,10 +374,10 @@ export default function Home() {
 
                         <Card className="w-full bg-orange-50 dark:bg-orange-900">
                             <CardHeader>
-                                <h2 className="text-2xl font-bold">How much foreign currency can I carry from India?</h2>
+                                <h2 className="text-xl sm:text-2xl font-bold">How much foreign currency can I carry from India?</h2>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-lg">
+                                <p className="text-base sm:text-lg">
                                     You can carry up to $3,000 foreign currency notes from India.
                                     If you need more foreign currency, then you can carry credit and debit cards.
                                 </p>
@@ -397,7 +397,7 @@ export default function Home() {
                         </Card>
 
                         <div>
-                            <h2 className="text-2xl font-bold mb-4" id="withdraw-vnd">Withdraw VND from Vietnam ATM</h2>
+                            <h2 className="text-xl sm:text-2xl font-bold mb-4" id="withdraw-vnd">Withdraw VND from Vietnam ATM</h2>
                             <Image
                                 src={"/images/ocean-bank-atm.avif"}
                                 alt="Zero forex charges ATM - Ocean Bank ATM"
@@ -405,7 +405,7 @@ export default function Home() {
                                 width={500}
                                 className="w-full h-auto rounded-lg"
                             />
-                            <p className="text-lg mt-4">
+                            <p className="text-base sm:text-lg mt-4">
                                 <span className="font-bold">The smartest way:</span> Get a
                                 {' '}
                                 <Link href='https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee' className="font-bold text-blue-600 hover:underline">
@@ -426,10 +426,10 @@ export default function Home() {
 
                         <Card className="w-full bg-orange-50 dark:bg-orange-900">
                             <CardHeader>
-                                <h2 className="text-2xl font-bold">So, if you have zero forex markup debit card, you don&apos;t need to carry USD currency notes?</h2>
+                                <h2 className="text-xl sm:text-2xl font-bold">So, if you have zero forex markup debit card, you don&apos;t need to carry USD currency notes?</h2>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-lg">
+                                <p className="text-base sm:text-lg">
                                     No, I would recommend keeping USD currency notes as an
                                     alternate solution. That&apos;s cause there have been events
                                     where banks like{' '}
@@ -449,10 +449,10 @@ export default function Home() {
 
                         <Card className="w-full bg-red-50 dark:bg-red-900">
                             <CardHeader>
-                                <h2 className="text-2xl font-bold">How to find zero forex markup ATMs for cash withdrawal in Vietnam?</h2>
+                                <h2 className="text-xl sm:text-2xl font-bold">How to find zero forex markup ATMs for cash withdrawal in Vietnam?</h2>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-lg">
+                                <p className="text-base sm:text-lg">
                                     You can search for{' '}
                                     <Link href="https://www.google.com/maps?q=Ocean+Bank+ATM" className="font-bold text-blue-600 hover:underline">
                                         Ocean Bank
@@ -464,7 +464,7 @@ export default function Home() {
                                     {` Both ATMs accept international Visa and MasterCard
                                     debit cards and are zero forex markup ATMs.`}
                                 </p>
-                                <p className="text-lg mt-4">
+                                <p className="text-base sm:text-lg mt-4">
                                     <span className="font-bold">Note:</span> These Google map links will give you the right results only when you are in Vietnam.
                                 </p>
                             </CardContent>
@@ -472,7 +472,7 @@ export default function Home() {
 
                         <Card className="w-full bg-yellow-50 dark:bg-yellow-900">
                             <CardHeader>
-                                <h2 className="text-2xl font-bold">Which debit cards are accepted in Vietnam ATMs for cash withdrawal?</h2>
+                                <h2 className="text-xl sm:text-2xl font-bold">Which debit cards are accepted in Vietnam ATMs for cash withdrawal?</h2>
                             </CardHeader>
                             <CardContent>
                                 <Image
@@ -482,7 +482,7 @@ export default function Home() {
                                     width={300}
                                     className="w-full h-auto rounded-lg"
                                 />
-                                <p className="text-lg mt-4">
+                                <p className="text-base sm:text-lg mt-4">
                                     Visa and MasterCard are the widely accepted cards in Vietnam ATMs.
                                     You will have to <span className="font-bold">enable ATM withdrawals and international usage</span>.
                                     Please do not carry RuPay or Discover for cash withdrawals in
@@ -493,7 +493,7 @@ export default function Home() {
 
                         <Card className="w-full bg-green-50 dark:bg-green-900">
                             <CardHeader>
-                                <h2 className="text-2xl font-bold">
+                                <h2 className="text-xl sm:text-2xl font-bold">
                                     Will using any ATM for cash withdrawal cost me
                                     zero charges if I use a zero forex markup debit card?
                                 </h2>
@@ -506,7 +506,7 @@ export default function Home() {
                                     width={400}
                                     className="w-full h-auto rounded-lg"
                                 />
-                                <p className="text-lg mt-4">
+                                <p className="text-base sm:text-lg mt-4">
                                     No, Using any random ATM can cause you
                                     forex charges up to 3%. Hence, using a zero
                                     forex charge debit card isn&apos;t enough. It&apos;s essential
@@ -517,10 +517,10 @@ export default function Home() {
 
                         <Card className="w-full bg-teal-50 dark:bg-teal-900">
                             <CardHeader>
-                                <h2 className="text-2xl font-bold">What is forex card?</h2>
+                                <h2 className="text-xl sm:text-2xl font-bold">What is forex card?</h2>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-lg">
+                                <p className="text-base sm:text-lg">
                                     <Link href='https://www.bookmyforex.com/forex-card/' className="font-bold text-blue-600 hover:underline">
                                         Forex cards
                                     </Link>
@@ -530,7 +530,7 @@ export default function Home() {
                                     </Link>
                                     {`, which are zero charges for cash withdrawals, but they come with the hassle of reloading USD on them. Zero forex markup debit cards come with dynamic conversion (INR -> USD -> VND), so there is no need to worry about loading USD every time.`}
                                 </p>
-                                <p className="text-lg mt-4">
+                                <p className="text-base sm:text-lg mt-4">
                                     {`Also, no forex cards, as of now, support loading Vietnam currency VND. Hence, the hassle of currency conversion and forex conversion cost is still there (USD -> VND).`}
                                 </p>
                             </CardContent>
@@ -538,10 +538,10 @@ export default function Home() {
 
                         <Card className="w-full bg-blue-50 dark:bg-blue-900">
                             <CardHeader>
-                                <h2 className="text-2xl font-bold">Why is conversion rates for VND via Vietnam ATM&apos;s so great?</h2>
+                                <h2 className="text-xl sm:text-2xl font-bold">Why is conversion rates for VND via Vietnam ATM&apos;s so great?</h2>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-lg">
+                                <p className="text-base sm:text-lg">
                                     {`Payment networks like Visa and MasterCard use the forex market
                                     (which are very liquid - many buyers and sellers of currency)
                                     to get great conversion rates unlike local forex dealer. Also, behind the scene it&apos;s
@@ -552,10 +552,10 @@ export default function Home() {
 
                         <Card className="w-full bg-orange-50 dark:bg-orange-900">
                             <CardHeader>
-                                <h2 className="text-2xl font-bold">Can you bring back the Vietnam currency to India?</h2>
+                                <h2 className="text-xl sm:text-2xl font-bold">Can you bring back the Vietnam currency to India?</h2>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-lg">
+                                <p className="text-base sm:text-lg">
                                     {`Yes. You can bring back ₫15,000,000 VND of physical currency notes
                                     to India without declaring to the Vietnamese customs.`}
                                 </p>
@@ -576,10 +576,10 @@ export default function Home() {
 
                         <Card className="w-full bg-orange-50 dark:bg-orange-900">
                             <CardHeader>
-                                <h2 className="text-2xl font-bold">How to exchange foreign currency to Indian rupees?</h2>
+                                <h2 className="text-xl sm:text-2xl font-bold">How to exchange foreign currency to Indian rupees?</h2>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-lg">
+                                <p className="text-base sm:text-lg">
                                     {`You can sell it in exchange for Indian Rupee to an
                                     authorized Forex dealer, like BookMyForex.`}
                                 </p>
@@ -587,7 +587,7 @@ export default function Home() {
                         </Card>
 
                         <div>
-                            <h2 className="text-2xl font-bold mb-4" id="vnd-notes">Vietnam currency in Indian Rupees</h2>
+                            <h2 className="text-xl sm:text-2xl font-bold mb-4" id="vnd-notes">Vietnam currency in Indian Rupees</h2>
                             <Table>
                                 <TableHeader>
                                     <TableRow>
@@ -609,7 +609,7 @@ export default function Home() {
                                     </TableRow>
                                 </TableBody>
                             </Table>
-                            <p className="text-lg mt-4">
+                            <p className="text-base sm:text-lg mt-4">
                                 {`Let us understand the physical currency notes in Vietnam and how much they value in Indian Rupees.`}
                             </p>
                             <Image
@@ -622,7 +622,7 @@ export default function Home() {
                         </div>
 
                         <div>
-                            <h2 className="text-xl font-bold mb-4">₫500,000 VND currency notes to INR</h2>
+                            <h2 className="text-lg sm:text-xl font-bold mb-4">₫500,000 VND currency notes to INR</h2>
                             <CurrencyConverter
                                 currencyPair={'VNDINR'}
                                 exchange={'forex market'}
@@ -646,11 +646,11 @@ export default function Home() {
                                     className="w-full h-auto rounded-lg"
                                 />
                                 <div className="mt-6 space-y-3">
-                                    <h3 className="text-lg font-bold">What ₫500,000 VND gets you in Vietnam</h3>
-                                    <p className="text-lg">
+                                    <h3 className="text-base sm:text-lg font-bold">What ₫500,000 VND gets you in Vietnam</h3>
+                                    <p className="text-base sm:text-lg">
                                         {`Roughly the same amount gets you a hotel room in Da Nang for a night.`}
                                     </p>
-                                    <p className="text-2xl">
+                                    <p className="text-xl sm:text-2xl">
                                         ₫600,000/night
                                     </p>
                                 </div>
@@ -665,7 +665,7 @@ export default function Home() {
                         </Card>
 
                         <div>
-                            <h2 className="text-xl font-bold mb-4">₫200,000 VND currency notes to INR</h2>
+                            <h2 className="text-lg sm:text-xl font-bold mb-4">₫200,000 VND currency notes to INR</h2>
                             <CurrencyConverter
                                 currencyPair={'VNDINR'}
                                 exchange={'forex market'}
@@ -689,11 +689,11 @@ export default function Home() {
                                     className="w-full h-auto rounded-lg"
                                 />
                                 <div className="mt-6 space-y-3">
-                                    <h3 className="text-lg font-bold">What ₫200,000 VND gets you in Vietnam</h3>
-                                    <p className="text-lg">
+                                    <h3 className="text-base sm:text-lg font-bold">What ₫200,000 VND gets you in Vietnam</h3>
+                                    <p className="text-base sm:text-lg">
                                         {`You can enjoy sushi at a nice high-end restaurant (Tram Sushi, Hanoi).`}
                                     </p>
-                                    <p className="text-2xl">
+                                    <p className="text-xl sm:text-2xl">
                                         ₫220,000
                                     </p>
                                 </div>
@@ -708,7 +708,7 @@ export default function Home() {
                         </Card>
 
                         <div>
-                            <h2 className="text-xl font-bold mb-4">₫100,000 VND currency notes to INR</h2>
+                            <h2 className="text-lg sm:text-xl font-bold mb-4">₫100,000 VND currency notes to INR</h2>
                             <CurrencyConverter
                                 currencyPair={'VNDINR'}
                                 exchange={'forex market'}
@@ -723,7 +723,7 @@ export default function Home() {
                         </div>
 
                         <div>
-                            <h2 className="text-xl font-bold mb-4">₫50,000 VND currency notes to INR</h2>
+                            <h2 className="text-lg sm:text-xl font-bold mb-4">₫50,000 VND currency notes to INR</h2>
                             <CurrencyConverter
                                 currencyPair={'VNDINR'}
                                 exchange={'forex market'}
@@ -747,11 +747,11 @@ export default function Home() {
                                     className="w-full h-auto rounded-lg"
                                 />
                                 <div className="mt-6 space-y-3">
-                                    <h3 className="text-lg font-bold">What ₫50,000 VND gets you in Vietnam</h3>
-                                    <p className="text-lg">
+                                    <h3 className="text-base sm:text-lg font-bold">What ₫50,000 VND gets you in Vietnam</h3>
+                                    <p className="text-base sm:text-lg">
                                         {`It gets you a vegan dish called com chay.`}
                                     </p>
-                                    <p className="text-2xl">
+                                    <p className="text-xl sm:text-2xl">
                                         ₫45,000
                                     </p>
                                 </div>
