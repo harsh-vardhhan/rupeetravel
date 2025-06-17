@@ -1,6 +1,9 @@
+"use client"
+
 import React, { useMemo } from 'react';
 import { BarChart, Bar, XAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { Box, Text, VStack, Badge, Flex, useBreakpointValue } from '@chakra-ui/react';
+import { Badge } from "../components/ui/server/badge";
+import { Card, CardContent } from "../components/ui/server/card";
 
 // Helper function to determine emoji based on precipitation days
 const getRainEmoji = (days) => {
@@ -23,25 +26,19 @@ const CustomTooltip = React.memo(({ active, payload, label }) => {
     const value = payload[0].value;
     const emoji = getRainEmoji(value);
     return (
-      <Box 
-        bg="rgba(255, 255, 255, 0.95)" 
-        p={4} 
-        borderRadius="xl" 
-        shadow="2xl"
-        border="1px solid"
-        borderColor="gray.100"
-        backdropFilter="blur(10px)"
-      >
-        <Flex align="center" gap={2}>
-          <Text fontSize="2xl">{emoji}</Text>
-          <VStack align="start" spacing={0}>
-            <Text fontWeight="bold" fontSize="md" color="gray.800">{label}</Text>
-            <Text color="blue.600" fontSize="sm" fontWeight="medium">
-              {value} rainy days
-            </Text>
-          </VStack>
-        </Flex>
-      </Box>
+      <Card className="bg-white/95 p-4 shadow-lg border border-gray-100 backdrop-blur-md">
+        <CardContent className="p-0">
+          <div className="flex items-center gap-2">
+            <span className="text-2xl">{emoji}</span>
+            <div className="flex flex-col items-start">
+              <span className="font-bold text-sm text-gray-800">{label}</span>
+              <span className="text-sm font-medium text-blue-600">
+                {value} rainy days
+              </span>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     );
   }
   return null;
@@ -66,9 +63,7 @@ const CustomizedLabel = React.memo((props) => {
       y={y - 15} 
       textAnchor="middle" 
       fontSize="22"
-      style={{
-        filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'
-      }}
+      className="drop-shadow-md"
     >
       {emoji}
     </text>
@@ -94,6 +89,7 @@ const PrecipitationChart = React.memo(({
   currentMonth = getCurrentMonth(),
   subtitle 
 }) => {
+  console.log(data)
   // Memoize processed data to prevent unnecessary recalculations
   const processedData = useMemo(() => 
     data.map(item => ({
@@ -129,81 +125,43 @@ const PrecipitationChart = React.memo(({
       />
     )), [processedData, currentMonth]
   );
-  
-  // Hide X-axis on mobile
-  const showXAxis = useBreakpointValue({ base: false, md: true });
 
   return (
-    <Box 
-      bg="linear-gradient(#FFD6BA, #FFE8CD 0%, #FFF2EB 100%)"
-      position="relative"
-    >
+    <div className="relative bg-gradient-to-b from-[#FFD6BA] via-[#FFE8CD] to-[#FFF2EB]">
       {/* Background pattern */}
-      <Box
-        position="absolute"
-        top="0"
-        left="0"
-        right="0"
-        bottom="0"
-        opacity="0.1"
-        bgImage="radial-gradient(circle at 25px 25px, white 2px, transparent 0)"
-        bgSize="50px 50px"
+      <div
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: 'radial-gradient(circle at 25px 25px, white 2px, transparent 0)',
+          backgroundSize: '50px 50px'
+        }}
       />
       
-      <VStack spacing={{ base: 6, md: 8 }} p={{ base: 4, md: 8 }} position="relative">
+      <div className="relative flex flex-col gap-6 md:gap-8 p-4 md:p-8">
         {/* Header */}
-        <VStack spacing={4} textAlign="center" pt={{ base: 4, md: 8 }}>
+        <div className="flex flex-col items-center gap-4 text-center pt-4 md:pt-8">
           <Badge
-            colorScheme="whiteAlpha"
-            variant="solid"
-            px={4}
-            py={2}
-            borderRadius="full"
-            fontSize="sm"
-            fontWeight="medium"
-            bg="#FFDCDC"
-            color="black"
-            backdropFilter="blur(10px)"
+            variant="secondary"
+            className="px-4 py-2 rounded-full text-sm font-medium bg-[#FFDCDC] text-black backdrop-blur-md"
           >
             {destinationIcon} {destinationName}
           </Badge>
           
-          <VStack spacing={2}>
-            <Text 
-              fontSize={{ base: "md", md: "lg" }} 
-              color="black"
-              fontWeight="medium"
-            >
+          <div className="flex flex-col gap-2">
+            <p className="text-base md:text-lg text-black font-medium">
               {chartSubtitle}
-            </Text>
-          </VStack>
-        </VStack>
+            </p>
+          </div>
+        </div>
 
         {/* Chart Container */}
-        <Box 
-          w="100%" 
-          maxW="1000px" 
-          h={{ base: "280px", sm: "320px", md: "550px" }} 
-          bg="rgba(255, 255, 255, 0.95)"
-          p={{ base: 4, sm: 6, md: 8 }} 
-          borderRadius="3xl" 
-          shadow="2xl"
-          backdropFilter="blur(20px)"
-          border="1px solid"
-          borderColor="whiteAlpha.200"
-          position="relative"
-          overflow="hidden"
-        >
+        <Card className="w-full max-w-[1000px] h-[280px] sm:h-[320px] md:h-[550px] bg-white/95 p-4 sm:p-6 md:p-8 rounded-3xl shadow-lg backdrop-blur-xl border border-white/20 relative overflow-hidden">
           {/* Subtle inner glow */}
-          <Box
-            position="absolute"
-            top="0"
-            left="0"
-            right="0"
-            bottom="0"
-            borderRadius="3xl"
-            bg="linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%)"
-            pointerEvents="none"
+          <div
+            className="absolute inset-0 rounded-3xl pointer-events-none"
+            style={{
+              background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%)'
+            }}
           />
           
           <ResponsiveContainer width="100%" height="100%">
@@ -235,7 +193,7 @@ const PrecipitationChart = React.memo(({
                   fontWeight: 500
                 }}
                 interval={0}
-                hide={!showXAxis}
+                hide={false}
               />
               <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(59, 130, 246, 0.1)' }} />
               <Bar 
@@ -247,10 +205,9 @@ const PrecipitationChart = React.memo(({
               </Bar>
             </BarChart>
           </ResponsiveContainer>
-        </Box>
-
-      </VStack>
-    </Box>
+        </Card>
+      </div>
+    </div>
   );
 });
 
