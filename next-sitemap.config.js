@@ -1,4 +1,4 @@
-const siteUrl ='https://www.rupeetravel.com';
+const siteUrl = "https://www.rupeetravel.com";
 
 module.exports = {
   siteUrl,
