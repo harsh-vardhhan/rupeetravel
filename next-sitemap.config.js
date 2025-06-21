@@ -1,4 +1,5 @@
-const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
+const siteUrl ='https://www.rupeetravel.com';
+
 module.exports = {
   siteUrl,
   exclude: ["/404"],
