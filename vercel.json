@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/sync-flights",
+      "schedule": "0 0 * * *"
+    }
+  ]
+} 
