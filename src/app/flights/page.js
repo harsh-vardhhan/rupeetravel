@@ -12,10 +12,12 @@ import {
 import { Button } from "../../components/ui/server/button";
 import { eq, asc, sql } from 'drizzle-orm';
 import Link from 'next/link';
+import FlightSearchForm from '../../components/FlightSearchForm';
 
 export default async function FlightsPage({ searchParams }) {
   const params = await searchParams;
   const page = parseInt(params.page) || 1;
+  const destination = params.destination || "Hanoi";
   const limit = 20;
   const offset = (page - 1) * limit;
 
@@ -25,7 +27,7 @@ export default async function FlightsPage({ searchParams }) {
     .from(schema.flight)
     .where(
       eq(schema.flight.origin, "New Delhi") && 
-      eq(schema.flight.destination, "Hanoi")
+      eq(schema.flight.destination, destination)
     )
     .orderBy(asc(schema.flight.price_inr))
     .limit(limit)
@@ -37,7 +39,7 @@ export default async function FlightsPage({ searchParams }) {
     .from(schema.flight)
     .where(
       eq(schema.flight.origin, "New Delhi") && 
-      eq(schema.flight.destination, "Hanoi")
+      eq(schema.flight.destination, destination)
     );
 
   const totalCount = totalFlights[0].count;
@@ -45,7 +47,10 @@ export default async function FlightsPage({ searchParams }) {
 
   return (
     <main className="flex min-h-screen flex-col items-center p-8">
-      <h1 className="text-4xl font-bold mb-8">Flights from New Delhi to Hanoi</h1>
+      <h1 className="text-4xl font-bold mb-8">Flights from New Delhi to {destination}</h1>
+      
+      <FlightSearchForm currentDestination={destination} />
+
       <Card className="w-full max-w-6xl">
         <CardHeader>
           <CardTitle>Flight Information (Sorted by Price - Lowest First)</CardTitle>
@@ -91,7 +96,7 @@ export default async function FlightsPage({ searchParams }) {
               Page {page} of {totalPages}
             </div>
             <div className="flex gap-2">
-              <Link href={`/flights?page=${page - 1}`}>
+              <Link href={`/flights?page=${page - 1}&destination=${destination}`}>
                 <Button
                   variant="outline"
                   disabled={page <= 1}
@@ -99,7 +104,7 @@ export default async function FlightsPage({ searchParams }) {
                   Previous
                 </Button>
               </Link>
-              <Link href={`/flights?page=${page + 1}`}>
+              <Link href={`/flights?page=${page + 1}&destination=${destination}`}>
                 <Button
                   variant="outline"
                   disabled={page >= totalPages}
