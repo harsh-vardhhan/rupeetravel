@@ -1,14 +1,6 @@
 import { db } from '../../db';
 import * as schema from '../../db/schema';
 import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/server/card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "../../components/ui/server/table"
 import { Button } from "../../components/ui/server/button";
 import { eq, asc, sql } from 'drizzle-orm';
 import Link from 'next/link';
