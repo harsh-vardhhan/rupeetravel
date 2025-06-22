@@ -175,6 +175,25 @@ const blogs = [
   },
 ];
 
+const flights = [
+  {
+    key: 1,
+    heading: ` New Delhi to Vietnam flights`,
+    subHeading: `Cheapest flights from New Delhi to Vietnam flights`,
+    tagText: `Fights`,
+    tagColor: `teal`,
+    link: `/new-delhi-to-vietnam-flight`,
+  },
+  {
+    key: 2,
+    heading: ` Mumbai to Vietnam flights`,
+    subHeading: ` Cheapest flights from Mumbai to Vietnam flights`,
+    tagText: `Flights`,
+    tagColor: `teal`,
+    link: `/mumbai-to-vietnam-flight`,
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -200,6 +219,7 @@ export default function HomePage() {
                   list={beforeDeparture}
                 />
                 <CheckListItemCard title={"Blogs"} list={blogs} />
+                <CheckListItemCard title={"Flights"} list={flights} />
               </div>
             </div>
           </div>

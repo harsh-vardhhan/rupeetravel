@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1750542045823,
+      "tag": "0000_loving_zodiak",
+      "breakpoints": true
+    }
+  ]
+}
