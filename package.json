@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "dotenv -- next dev",
-    "build": "npm run db:push && next build",
+    "build": "npm run db:seed && next build",
     "start": "next start",
     "lint": "next lint",
-    "db:push": "dotenv -e .env.local -- drizzle-kit push",
     "db:seed": "dotenv -e .env.local -- node scripts/seed.js",
     "postbuild": "next-sitemap"
   },
