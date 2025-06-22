@@ -7,7 +7,8 @@ export default function FlightSearchForm({
   currentSource,
   sourceOptions = [],
   destinationOptions = [],
-  routeName = "flight"
+  routeName = "flight",
+  showDrySeasonButton = false
 }) {
   const [source, setSource] = useState(currentSource);
   const [destination, setDestination] = useState(currentDestination);
@@ -105,14 +106,16 @@ export default function FlightSearchForm({
           <div className="bg-blue-50 text-blue-700 px-2 py-1 rounded-full text-xs font-medium">
             One Way
           </div>
-          <button
-            type="button"
-            onClick={handleDrySeasonToggle}
-            className={`ml-2 px-3 py-1 rounded-full text-xs font-medium border transition-colors ${drySeason ? 'bg-green-100 border-green-400 text-green-800' : 'bg-gray-100 border-gray-300 text-gray-500 hover:bg-green-50 hover:border-green-400 hover:text-green-700'}`}
-            aria-pressed={drySeason}
-          >
-            Dry Season
-          </button>
+          {showDrySeasonButton && (
+            <button
+              type="button"
+              onClick={handleDrySeasonToggle}
+              className={`ml-2 px-3 py-1 rounded-full text-xs font-medium border transition-colors ${drySeason ? 'bg-green-100 border-green-400 text-green-800' : 'bg-gray-100 border-gray-300 text-gray-500 hover:bg-green-50 hover:border-green-400 hover:text-green-700'}`}
+              aria-pressed={drySeason}
+            >
+              Dry Season
+            </button>
+          )}
         </div>
       </div>
 
