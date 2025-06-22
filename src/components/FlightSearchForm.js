@@ -91,12 +91,13 @@ export default function FlightSearchForm({
       <div className="flex items-center gap-2 mb-3">
         {/* Source */}
         <div className="flex-1">
-          <label className="block text-xs font-medium text-gray-700 mb-1">
+          <label htmlFor="source-select" className="block text-xs font-medium text-gray-700 mb-1">
             From
           </label>
           {shouldShowSourceDropdown() ? (
             <div className="relative">
               <select
+                id="source-select"
                 value={source}
                 onChange={(e) => handleSourceChange(e.target.value)}
                 className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none text-sm"
@@ -125,6 +126,7 @@ export default function FlightSearchForm({
           <button
             type="button"
             onClick={handleFlip}
+            aria-label="Flip source and destination"
             className="bg-white border-2 border-blue-500 rounded-full p-2 shadow-sm hover:shadow-md transition-all hover:scale-105 active:scale-95 mt-5"
           >
             <svg 
@@ -145,11 +147,12 @@ export default function FlightSearchForm({
 
         {/* Destination */}
         <div className="flex-1">
-          <label className="block text-xs font-medium text-gray-700 mb-1">
+          <label htmlFor="destination-select" className="block text-xs font-medium text-gray-700 mb-1">
             To
           </label>
           <div className="relative">
             <select
+              id="destination-select"
               value={destination}
               onChange={(e) => handleDestinationChange(e.target.value)}
               className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none text-sm"
