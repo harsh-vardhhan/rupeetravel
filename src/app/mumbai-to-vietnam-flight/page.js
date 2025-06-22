@@ -27,7 +27,7 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
   // Helper function to get full city names
   const getCityFullName = (city) => {
     const cityMap = {
-      "New Delhi": "New Delhi, India",
+      "Mumbai": "Mumbai, India",
       "Hanoi": "Hanoi, Vietnam",
       "Ho Chi Minh City": "Ho Chi Minh City, Vietnam",
       "Da Nang": "Da Nang, Vietnam",
@@ -60,6 +60,25 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
 
   const totalCount = totalFlights[0].count;
   const totalPages = Math.ceil(totalCount / limit);
+
+  // Pagination Logic
+  const pagesToDisplay = Math.min(5, totalPages);
+  let pageNumbers = [];
+  if (totalPages > 1) {
+    let startPage;
+    if (totalPages <= 5) {
+      startPage = 1;
+    } else {
+      if (page <= 3) {
+        startPage = 1;
+      } else if (page >= totalPages - 2) {
+        startPage = totalPages - 4;
+      } else {
+        startPage = page - 2;
+      }
+    }
+    pageNumbers = Array.from({ length: pagesToDisplay }, (_, i) => startPage + i);
+  }
 
   // Get source code for display
   const getSourceCode = (city) => {
@@ -255,20 +274,17 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
                   
                   {/* Page Numbers for larger screens */}
                   <div className="hidden sm:flex items-center gap-1">
-                    {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
-                      const pageNum = Math.max(1, Math.min(page - 2 + i, totalPages));
-                      return (
-                        <Link key={`page-${i}-${pageNum}`} href={`/mumbai-to-vietnam-flight?page=${pageNum}&destination=${destination}&source=${source}`}>
-                          <Button
-                            variant={pageNum === page ? "default" : "outline"}
-                            size="sm"
-                            className="w-10 h-10 p-0 text-sm"
-                          >
-                            {pageNum}
-                          </Button>
-                        </Link>
-                      );
-                    })}
+                    {pageNumbers.map((pageNum) => (
+                      <Link key={`page-${pageNum}`} href={`/mumbai-to-vietnam-flight?page=${pageNum}&destination=${destination}&source=${source}`}>
+                        <Button
+                          variant={pageNum === page ? "default" : "outline"}
+                          size="sm"
+                          className="w-10 h-10 p-0 text-sm"
+                        >
+                          {pageNum}
+                        </Button>
+                      </Link>
+                    ))}
                   </div>
                   
                   <Link href={`/mumbai-to-vietnam-flight?page=${page + 1}&destination=${destination}&source=${source}`}>
