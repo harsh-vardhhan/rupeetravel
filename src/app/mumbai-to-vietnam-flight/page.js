@@ -6,7 +6,7 @@ import Link from 'next/link';
 import FlightSearchForm from '../../components/FlightSearchForm';
 import Header from '../../components/ui/server/header';
 
-export default async function DelhiToVietnamFlightPage({ searchParams }) {
+export default async function MumbaiToVietnamFlightPage({ searchParams }) {
   const params = await searchParams;
   const page = parseInt(params.page) || 1;
   const destination = params.destination || "Hanoi";
@@ -84,7 +84,7 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <Header title="Flights from New Delhi to Vietnam" />
+      <Header title="Flights from Mumbai to Vietnam" />
       <div className="px-4 py-6 max-w-7xl mx-auto">
         {/* Search Form */}
         <div className="mb-6">
