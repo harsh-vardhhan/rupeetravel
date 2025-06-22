@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { Button } from "./ui/server/button";
 
 export default function FlightSearchForm({ 
   currentDestination, 
@@ -171,14 +170,6 @@ export default function FlightSearchForm({
           </div>
         </div>
       </div>
-
-      {/* Search Button */}
-      <Button 
-        type="submit" 
-        className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 rounded-lg text-sm transition-all duration-200 shadow-sm hover:shadow-md"
-      >
-        🔍 Search Flights
-      </Button>
     </div>
   );
 }

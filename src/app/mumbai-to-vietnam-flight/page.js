@@ -83,7 +83,6 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
   // Get source code for display
   const getSourceCode = (city) => {
     const codeMap = {
-      "New Delhi": "DEL",
       "Mumbai": "BOM",
       "Hanoi": "HAN",
       "Ho Chi Minh City": "SGN"
@@ -93,7 +92,6 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
 
   const getDestinationCode = (city) => {
     const codeMap = {
-      "New Delhi": "DEL",
       "Mumbai": "BOM",
       "Hanoi": "HAN",
       "Ho Chi Minh City": "SGN"

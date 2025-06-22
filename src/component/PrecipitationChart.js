@@ -184,4 +184,50 @@ const PrecipitationChart = ({
   );
 };
 
+// CircularProgressBar: shows a circular progress with %
+export function CircularProgressBar({ value = 0, color = '#3498db', label = '' }) {
+  const radius = 22;
+  const stroke = 5;
+  const normalizedRadius = radius - stroke / 2;
+  const circumference = normalizedRadius * 2 * Math.PI;
+  const percent = Math.max(0, Math.min(100, value));
+  const strokeDashoffset = circumference - (percent / 100) * circumference;
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div style={{ width: 56, height: 56, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <svg height={radius * 2} width={radius * 2} style={{ display: 'block' }}>
+          <circle
+            stroke="#e5e7eb"
+            fill="transparent"
+            strokeWidth={stroke}
+            r={normalizedRadius}
+            cx={radius}
+            cy={radius}
+          />
+          <circle
+            stroke={color}
+            fill="transparent"
+            strokeWidth={stroke}
+            strokeLinecap="round"
+            strokeDasharray={circumference + ' ' + circumference}
+            style={{ strokeDashoffset, transition: 'stroke-dashoffset 0.5s' }}
+            r={normalizedRadius}
+            cx={radius}
+            cy={radius}
+          />
+        </svg>
+        <span style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          pointerEvents: 'none',
+        }} className="text-xs font-semibold text-gray-700">{percent}%</span>
+      </div>
+      {label && <div className="text-[10px] text-gray-500 mt-1" style={{ marginTop: 4 }}>{label}</div>}
+    </div>
+  );
+}
+
 export default PrecipitationChart;

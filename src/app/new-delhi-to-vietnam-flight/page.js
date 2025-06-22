@@ -5,6 +5,7 @@ import { eq, asc, sql, and } from 'drizzle-orm';
 import Link from 'next/link';
 import FlightSearchForm from '../../components/FlightSearchForm';
 import Header from '../../components/ui/server/header';
+import { CircularProgressBar } from '../../component/PrecipitationChart';
 
 export default async function DelhiToVietnamFlightPage({ searchParams }) {
   const params = await searchParams;
@@ -99,6 +100,15 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
       "Ho Chi Minh City": "SGN"
     };
     return codeMap[city] || city.substring(0, 3).toUpperCase();
+  };
+
+  // Rain color logic
+  const getRainColor = (probability) => {
+    if (probability < 25)
+      return  "rgba(46, 204, 113, 0.7)";
+    if (probability > 50)
+      return "rgba(231, 76, 60, 0.7)";
+    return "rgba(52, 152, 219, 0.7)";
   };
 
   return (
@@ -211,6 +221,14 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
                           {flight.time.split('-')[1]}
                         </p>
                       </div>
+                    </div>
+                    {/* Rain Probability Circular Progress */}
+                    <div className="ml-4 flex-shrink-0 flex flex-col items-center">
+                      <CircularProgressBar
+                        value={parseInt(flight.rain_probability, 10)}
+                        color={getRainColor(parseInt(flight.rain_probability, 10))}
+                        label="Rain"
+                      />
                     </div>
                   </div>
 
