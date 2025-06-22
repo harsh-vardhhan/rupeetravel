@@ -12,6 +12,7 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
   const page = parseInt(params.page) || 1;
   const destination = params.destination || "Hanoi";
   const source = params.source || "New Delhi";
+  const drySeason = params.drySeason === '1';
   const limit = 20;
   const offset = (page - 1) * limit;
 
@@ -39,10 +40,17 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
   };
 
   // Build dynamic where condition
-  const whereCondition = and(
+  let whereCondition = and(
     eq(schema.flight.origin, source),
     eq(schema.flight.destination, destination)
   );
+  if (drySeason) {
+    // Only include flights with rain_probability <= 20
+    whereCondition = and(
+      whereCondition,
+      sql`CAST(${schema.flight.rain_probability} AS INTEGER) <= 20`
+    );
+  }
 
   // Fetch filtered and paginated flights
   const flights = await db
@@ -123,6 +131,7 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
             sourceOptions={sourceOptions}
             destinationOptions={destinationOptions}
             routeName="new-delhi-to-vietnam-flight"
+            drySeason={drySeason}
           />
         </div>
 
