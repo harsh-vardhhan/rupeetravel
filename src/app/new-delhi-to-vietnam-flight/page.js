@@ -1,10 +1,10 @@
-import { db } from '../../db';
-import * as schema from '../../db/schema';
+import { db } from "../../db";
+import * as schema from "../../db/schema";
 import { Button } from "../../components/ui/server/button";
-import { eq, asc, sql, and } from 'drizzle-orm';
-import Link from 'next/link';
-import FlightSearchForm from '../../components/FlightSearchForm';
-import Header from '../../components/ui/server/header';
+import { eq, asc, sql, and } from "drizzle-orm";
+import Link from "next/link";
+import FlightSearchForm from "../../components/FlightSearchForm";
+import Header from "../../components/ui/server/header";
 
 export default async function DelhiToVietnamFlightPage({ searchParams }) {
   const params = await searchParams;
@@ -15,24 +15,22 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
   const offset = (page - 1) * limit;
 
   // Define route configuration
-  const sourceOptions = [
-    { value: "New Delhi", label: "New Delhi, India" }
-  ];
-  
+  const sourceOptions = [{ value: "New Delhi", label: "New Delhi, India" }];
+
   const destinationOptions = [
     { value: "Hanoi", label: "Hanoi, Vietnam" },
-    { value: "Ho Chi Minh City", label: "Ho Chi Minh City, Vietnam" }
+    { value: "Ho Chi Minh City", label: "Ho Chi Minh City, Vietnam" },
   ];
 
   // Helper function to get full city names
   const getCityFullName = (city) => {
     const cityMap = {
       "New Delhi": "New Delhi, India",
-      "Hanoi": "Hanoi, Vietnam",
+      Hanoi: "Hanoi, Vietnam",
       "Ho Chi Minh City": "Ho Chi Minh City, Vietnam",
       "Da Nang": "Da Nang, Vietnam",
       "Nha Trang": "Nha Trang, Vietnam",
-      "Phu Quoc": "Phu Quoc, Vietnam"
+      "Phu Quoc": "Phu Quoc, Vietnam",
     };
     return cityMap[city] || city;
   };
@@ -40,7 +38,7 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
   // Build dynamic where condition
   const whereCondition = and(
     eq(schema.flight.origin, source),
-    eq(schema.flight.destination, destination)
+    eq(schema.flight.destination, destination),
   );
 
   // Fetch filtered and paginated flights
@@ -65,9 +63,9 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
   const getSourceCode = (city) => {
     const codeMap = {
       "New Delhi": "DEL",
-      "Mumbai": "BOM",
-      "Hanoi": "HAN",
-      "Ho Chi Minh City": "SGN"
+      Mumbai: "BOM",
+      Hanoi: "HAN",
+      "Ho Chi Minh City": "SGN",
     };
     return codeMap[city] || city.substring(0, 3).toUpperCase();
   };
@@ -75,9 +73,9 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
   const getDestinationCode = (city) => {
     const codeMap = {
       "New Delhi": "DEL",
-      "Mumbai": "BOM",
-      "Hanoi": "HAN",
-      "Ho Chi Minh City": "SGN"
+      Mumbai: "BOM",
+      Hanoi: "HAN",
+      "Ho Chi Minh City": "SGN",
     };
     return codeMap[city] || city.substring(0, 3).toUpperCase();
   };
@@ -88,8 +86,8 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
       <div className="px-4 py-6 max-w-7xl mx-auto">
         {/* Search Form */}
         <div className="mb-6">
-          <FlightSearchForm 
-            currentDestination={destination} 
+          <FlightSearchForm
+            currentDestination={destination}
             currentSource={source}
             sourceOptions={sourceOptions}
             destinationOptions={destinationOptions}
@@ -118,13 +116,26 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
         {flights.length === 0 ? (
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center">
             <div className="text-gray-400 mb-4">
-              <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.291-1.007-5.824-2.636M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              <svg
+                className="w-16 h-16 mx-auto"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1}
+                  d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.291-1.007-5.824-2.636M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                />
               </svg>
             </div>
-            <h3 className="text-lg font-medium text-gray-900 mb-2">No flights found</h3>
+            <h3 className="text-lg font-medium text-gray-900 mb-2">
+              No flights found
+            </h3>
             <p className="text-gray-500 mb-4">
-              No flights available for {getCityFullName(source)} to {getCityFullName(destination)}
+              No flights available for {getCityFullName(source)} to{" "}
+              {getCityFullName(destination)}
             </p>
             <p className="text-sm text-gray-400">
               Try selecting a different route using the search form above
@@ -171,10 +182,10 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
                         </p>
                         <p className="text-xs text-gray-500">{flight.origin}</p>
                         <p className="text-xs text-gray-500">
-                          {flight.time.split('-')[0]}
+                          {flight.time.split("-")[0]}
                         </p>
                       </div>
-                      
+
                       <div className="flex-1 flex items-center justify-center relative">
                         <div className="w-full h-px bg-gray-300"></div>
                         <div className="absolute bg-white border-2 border-blue-500 rounded-full w-3 h-3"></div>
@@ -182,14 +193,16 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
                           {flight.duration}
                         </div>
                       </div>
-                      
+
                       <div className="text-center">
                         <p className="font-semibold text-gray-900 text-sm">
                           {getDestinationCode(flight.destination)}
                         </p>
-                        <p className="text-xs text-gray-500">{flight.destination}</p>
                         <p className="text-xs text-gray-500">
-                          {flight.time.split('-')[1]}
+                          {flight.destination}
+                        </p>
+                        <p className="text-xs text-gray-500">
+                          {flight.time.split("-")[1]}
                         </p>
                       </div>
                     </div>
@@ -198,32 +211,38 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
                   {/* Features Row */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                        flight.flight_type === 'direct' 
-                          ? 'bg-green-100 text-green-800' 
-                          : 'bg-orange-100 text-orange-800'
-                      }`}>
+                      <span
+                        className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
+                          flight.flight_type === "direct"
+                            ? "bg-green-100 text-green-800"
+                            : "bg-orange-100 text-orange-800"
+                        }`}
+                      >
                         {flight.flight_type}
                       </span>
-                      
+
                       <div className="flex items-center gap-1">
                         <span className="text-sm">🍽️</span>
-                        <span className={`text-xs font-medium ${
-                          flight.free_meal ? 'text-green-600' : 'text-gray-400'
-                        }`}>
-                          {flight.free_meal ? 'Meal included' : 'No meal'}
+                        <span
+                          className={`text-xs font-medium ${
+                            flight.free_meal
+                              ? "text-green-600"
+                              : "text-gray-400"
+                          }`}
+                        >
+                          {flight.free_meal ? "Meal included" : "No meal"}
                         </span>
                       </div>
                     </div>
 
-                    <a 
+                    <a
                       href={`https://www.google.com/search?q=${encodeURIComponent(`flights from ${flight.origin} to ${flight.destination} ${flight.date} one way`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block"
                     >
-                      <Button 
-                        size="sm" 
+                      <Button
+                        size="sm"
                         className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-xs font-medium transition-colors"
                       >
                         Search Flight
@@ -238,11 +257,14 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-600">
-                  Showing {((page - 1) * limit) + 1}-{Math.min(page * limit, totalCount)} of {totalCount}
+                  Showing {(page - 1) * limit + 1}-
+                  {Math.min(page * limit, totalCount)} of {totalCount}
                 </div>
-                
+
                 <div className="flex items-center gap-2">
-                  <Link href={`/new-delhi-to-vietnam-flight?page=${page - 1}&destination=${destination}&source=${source}`}>
+                  <Link
+                    href={`/new-delhi-to-vietnam-flight?page=${page - 1}&destination=${destination}&source=${source}`}
+                  >
                     <Button
                       variant="outline"
                       size="sm"
@@ -252,13 +274,19 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
                       ← Prev
                     </Button>
                   </Link>
-                  
+
                   {/* Page Numbers for larger screens */}
                   <div className="hidden sm:flex items-center gap-1">
                     {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
-                      const pageNum = Math.max(1, Math.min(page - 2 + i, totalPages));
+                      const pageNum = Math.max(
+                        1,
+                        Math.min(page - 2 + i, totalPages),
+                      );
                       return (
-                        <Link key={`page-${i}-${pageNum}`} href={`/new-delhi-to-vietnam-flight?page=${pageNum}&destination=${destination}&source=${source}`}>
+                        <Link
+                          key={`page-${i}-${pageNum}`}
+                          href={`/new-delhi-to-vietnam-flight?page=${pageNum}&destination=${destination}&source=${source}`}
+                        >
                           <Button
                             variant={pageNum === page ? "default" : "outline"}
                             size="sm"
@@ -270,8 +298,10 @@ export default async function DelhiToVietnamFlightPage({ searchParams }) {
                       );
                     })}
                   </div>
-                  
-                  <Link href={`/new-delhi-to-vietnam-flight?page=${page + 1}&destination=${destination}&source=${source}`}>
+
+                  <Link
+                    href={`/new-delhi-to-vietnam-flight?page=${page + 1}&destination=${destination}&source=${source}`}
+                  >
                     <Button
                       variant="outline"
                       size="sm"
