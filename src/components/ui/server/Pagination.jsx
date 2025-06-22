@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Pagination({
   page,
@@ -20,7 +20,8 @@ export default function Pagination({
     <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
       <div className="flex items-center justify-between">
         <div className="text-sm text-gray-600">
-          Showing {((page - 1) * limit) + 1}-{Math.min(page * limit, totalCount)} of {totalCount}
+          Showing {(page - 1) * limit + 1}-{Math.min(page * limit, totalCount)}{" "}
+          of {totalCount}
         </div>
         <div className="flex items-center gap-2">
           <Link href={buildHref(page - 1)}>
@@ -61,4 +62,4 @@ export default function Pagination({
       </div>
     </div>
   );
-} 
+}
