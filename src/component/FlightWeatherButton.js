@@ -1,16 +1,29 @@
 "use client";
-import { useState } from 'react';
-import BottomSheet from '../components/ui/server/BottomSheet';
-import PrecipitationChart from './PrecipitationChart';
+import { useState } from "react";
+import BottomSheet from "../components/ui/server/BottomSheet";
+import PrecipitationChart from "./PrecipitationChart";
 
-const monthAbbr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const monthAbbr = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 export default function FlightWeatherButton({
   precipitationData,
   destination,
   showWeatherButton = false,
   destinationOptions = [],
-  flight
+  flight,
 }) {
   const [weatherOpen, setWeatherOpen] = useState(false);
   const [selectedDestination, setSelectedDestination] = useState(destination);
@@ -39,10 +52,10 @@ export default function FlightWeatherButton({
       </button>
       <BottomSheet open={weatherOpen} onClose={() => setWeatherOpen(false)}>
         <div className="mb-4 flex flex-wrap gap-2 justify-center">
-          {destinationOptions.map(opt => (
+          {destinationOptions.map((opt) => (
             <button
               key={opt.value}
-              className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors ${selectedDestination === opt.value ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-blue-100'}`}
+              className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors ${selectedDestination === opt.value ? "bg-blue-500 text-white" : "bg-gray-100 text-gray-700 hover:bg-blue-100"}`}
               onClick={() => setSelectedDestination(opt.value)}
             >
               {opt.label}
@@ -50,7 +63,9 @@ export default function FlightWeatherButton({
           ))}
         </div>
         <PrecipitationChart
-          data={Object.entries(precipitationData[selectedDestination] || {}).map(([month, days]) => ({ month, days }))}
+          data={Object.entries(
+            precipitationData[selectedDestination] || {},
+          ).map(([month, days]) => ({ month, days }))}
           destinationName={selectedDestination}
           destinationIcon="🌦️"
           subtitle="Monthly rainy days (avg)"
@@ -59,4 +74,4 @@ export default function FlightWeatherButton({
       </BottomSheet>
     </>
   );
-} 
+}

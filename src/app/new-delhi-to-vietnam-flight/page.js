@@ -1,42 +1,46 @@
-import { db } from '../../db';
-import * as schema from '../../db/schema';
+import { db } from "../../db";
+import * as schema from "../../db/schema";
 import { Button } from "../../components/ui/server/button";
-import { eq, asc, sql, and } from 'drizzle-orm';
-import FlightSearchForm from '../../components/FlightSearchForm';
-import Header from '../../components/ui/server/header';
-import FlightCard from '../../components/ui/server/FlightCard';
-import Pagination from '../../components/ui/server/Pagination';
-import AirlineGroupButton from '../../components/ui/AirlineGroupButton';
+import { eq, asc, sql, and } from "drizzle-orm";
+import FlightSearchForm from "../../components/FlightSearchForm";
+import Header from "../../components/ui/server/header";
+import FlightCard from "../../components/ui/server/FlightCard";
+import Pagination from "../../components/ui/server/Pagination";
+import AirlineGroupButton from "../../components/ui/AirlineGroupButton";
 
 export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
   const params = await searchParams;
   const page = parseInt(params.page) || 1;
   const destination = params.destination || "Hanoi";
   const source = params.source || "New Delhi";
-  const drySeason = params.drySeason === '1';
+  const drySeason = params.drySeason === "1";
   const airlineGroup = params.airlineGroup || "all";
   const limit = 20;
   const offset = (page - 1) * limit;
 
   // Define route configuration
   const sourceOptions = [
-    { value: "New Delhi", label: "New Delhi, India", country: "India" }
+    { value: "New Delhi", label: "New Delhi, India", country: "India" },
   ];
 
   const destinationOptions = [
     { value: "Hanoi", label: "Hanoi, Vietnam", country: "Vietnam" },
-    { value: "Ho Chi Minh City", label: "Ho Chi Minh City, Vietnam", country: "Vietnam" }
+    {
+      value: "Ho Chi Minh City",
+      label: "Ho Chi Minh City, Vietnam",
+      country: "Vietnam",
+    },
   ];
 
   // Helper function to get full city names
   const getCityFullName = (city) => {
     const cityMap = {
       "New Delhi": "New Delhi, India",
-      "Hanoi": "Hanoi, Vietnam",
+      Hanoi: "Hanoi, Vietnam",
       "Ho Chi Minh City": "Ho Chi Minh City, Vietnam",
       "Da Nang": "Da Nang, Vietnam",
       "Nha Trang": "Nha Trang, Vietnam",
-      "Phu Quoc": "Phu Quoc, Vietnam"
+      "Phu Quoc": "Phu Quoc, Vietnam",
     };
     return cityMap[city] || city;
   };
@@ -52,13 +56,13 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
   // Build dynamic where condition
   let whereCondition = and(
     eq(schema.flight.origin, source),
-    eq(schema.flight.destination, destination)
+    eq(schema.flight.destination, destination),
   );
   if (drySeason) {
     // Only include flights with rain_probability <= 20
     whereCondition = and(
       whereCondition,
-      sql`CAST(${schema.flight.rain_probability} AS INTEGER) <= 20`
+      sql`CAST(${schema.flight.rain_probability} AS INTEGER) <= 20`,
     );
   }
   if (airlineFilter) {
@@ -99,16 +103,19 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
         startPage = page - 2;
       }
     }
-    pageNumbers = Array.from({ length: pagesToDisplay }, (_, i) => startPage + i);
+    pageNumbers = Array.from(
+      { length: pagesToDisplay },
+      (_, i) => startPage + i,
+    );
   }
 
   // Get source code for display
   const getSourceCode = (city) => {
     const codeMap = {
       "New Delhi": "DEL",
-      "Mumbai": "BOM",
-      "Hanoi": "HAN",
-      "Ho Chi Minh City": "SGN"
+      Mumbai: "BOM",
+      Hanoi: "HAN",
+      "Ho Chi Minh City": "SGN",
     };
     return codeMap[city] || city.substring(0, 3).toUpperCase();
   };
@@ -116,44 +123,88 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
   const getDestinationCode = (city) => {
     const codeMap = {
       "New Delhi": "DEL",
-      "Mumbai": "BOM",
-      "Hanoi": "HAN",
-      "Ho Chi Minh City": "SGN"
+      Mumbai: "BOM",
+      Hanoi: "HAN",
+      "Ho Chi Minh City": "SGN",
     };
     return codeMap[city] || city.substring(0, 3).toUpperCase();
   };
 
   // Rain color logic
   const getRainColor = (probability) => {
-    if (probability < 25)
-      return "rgba(46, 204, 113, 0.7)";
-    if (probability > 50)
-      return "rgba(231, 76, 60, 0.7)";
+    if (probability < 25) return "rgba(46, 204, 113, 0.7)";
+    if (probability > 50) return "rgba(231, 76, 60, 0.7)";
     return "rgba(52, 152, 219, 0.7)";
   };
 
   // Precipitation data for weather chart
   const precipitationData = {
     Hanoi: {
-      Jan: 1.9, Feb: 2.2, Mar: 4.6, Apr: 6.7, May: 12.2, Jun: 14.4, Jul: 16.3, Aug: 17.2, Sep: 12.6, Oct: 8.0, Nov: 4.2, Dec: 2.0,
+      Jan: 1.9,
+      Feb: 2.2,
+      Mar: 4.6,
+      Apr: 6.7,
+      May: 12.2,
+      Jun: 14.4,
+      Jul: 16.3,
+      Aug: 17.2,
+      Sep: 12.6,
+      Oct: 8.0,
+      Nov: 4.2,
+      Dec: 2.0,
     },
     "Ho Chi Minh City": {
-      Jan: 0.9, Feb: 0.6, Mar: 1.6, Apr: 4.3, May: 11.7, Jun: 15.9, Jul: 16.7, Aug: 15.7, Sep: 16.6, Oct: 16.5, Nov: 8.4, Dec: 2.9,
+      Jan: 0.9,
+      Feb: 0.6,
+      Mar: 1.6,
+      Apr: 4.3,
+      May: 11.7,
+      Jun: 15.9,
+      Jul: 16.7,
+      Aug: 15.7,
+      Sep: 16.6,
+      Oct: 16.5,
+      Nov: 8.4,
+      Dec: 2.9,
     },
     "Da Nang": {
-      Jan: 4.5, Feb: 1.8, Mar: 2.0, Apr: 3.2, May: 7.2, Jun: 7.2, Jul: 7.1, Aug: 10.8, Sep: 15.5, Oct: 18.3, Nov: 13.8, Dec: 9.7,
+      Jan: 4.5,
+      Feb: 1.8,
+      Mar: 2.0,
+      Apr: 3.2,
+      May: 7.2,
+      Jun: 7.2,
+      Jul: 7.1,
+      Aug: 10.8,
+      Sep: 15.5,
+      Oct: 18.3,
+      Nov: 13.8,
+      Dec: 9.7,
     },
     "Phu Quoc": {
-      Jan: 2.0, Feb: 2.3, Mar: 5.2, Apr: 9.7, May: 15.8, Jun: 19.6, Jul: 21.3, Aug: 21.6, Sep: 20.6, Oct: 19.4, Nov: 11.0, Dec: 3.9,
+      Jan: 2.0,
+      Feb: 2.3,
+      Mar: 5.2,
+      Apr: 9.7,
+      May: 15.8,
+      Jun: 19.6,
+      Jul: 21.3,
+      Aug: 21.6,
+      Sep: 20.6,
+      Oct: 19.4,
+      Nov: 11.0,
+      Dec: 3.9,
     },
   };
 
   // Generate all destination options from precipitationData keys
-  const allWeatherDestinationOptions = Object.keys(precipitationData).map(key => ({
-    value: key,
-    label: key + ', Vietnam',
-    country: 'Vietnam'
-  }));
+  const allWeatherDestinationOptions = Object.keys(precipitationData).map(
+    (key) => ({
+      value: key,
+      label: key + ", Vietnam",
+      country: "Vietnam",
+    }),
+  );
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -162,8 +213,10 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
         {/* Search Form */}
         <div className="mb-6">
           {(() => {
-            const sourceOption = sourceOptions.find(opt => opt.value === source);
-            if (sourceOption && sourceOption.country === 'India') {
+            const sourceOption = sourceOptions.find(
+              (opt) => opt.value === source,
+            );
+            if (sourceOption && sourceOption.country === "India") {
               return (
                 <FlightSearchForm
                   currentDestination={destination}
@@ -218,13 +271,26 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
         {flights.length === 0 ? (
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center">
             <div className="text-gray-400 mb-4">
-              <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.291-1.007-5.824-2.636M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              <svg
+                className="w-16 h-16 mx-auto"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1}
+                  d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.291-1.007-5.824-2.636M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                />
               </svg>
             </div>
-            <h3 className="text-lg font-medium text-gray-900 mb-2">No flights found</h3>
+            <h3 className="text-lg font-medium text-gray-900 mb-2">
+              No flights found
+            </h3>
             <p className="text-gray-500 mb-4">
-              No flights available for {getCityFullName(source)} to {getCityFullName(destination)}
+              No flights available for {getCityFullName(source)} to{" "}
+              {getCityFullName(destination)}
             </p>
             <p className="text-sm text-gray-400">
               Try selecting a different route using the search form above
@@ -235,17 +301,23 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
             {/* Flight Cards */}
             <div className="space-y-3 mb-6">
               {flights.map((flight, index) => {
-                const sourceOption = sourceOptions.find(opt => opt.value === flight.origin);
+                const sourceOption = sourceOptions.find(
+                  (opt) => opt.value === flight.origin,
+                );
                 return (
                   <FlightCard
                     key={flight.id}
                     flight={flight}
                     getSourceCode={getSourceCode}
                     getDestinationCode={getDestinationCode}
-                    showRain={!!(sourceOption && sourceOption.country === 'India')}
+                    showRain={
+                      !!(sourceOption && sourceOption.country === "India")
+                    }
                     getRainColor={getRainColor}
                     Button={Button}
-                    showWeatherButton={!!(sourceOption && sourceOption.country === 'India')}
+                    showWeatherButton={
+                      !!(sourceOption && sourceOption.country === "India")
+                    }
                     precipitationData={precipitationData}
                     destinationOptions={allWeatherDestinationOptions}
                   />
