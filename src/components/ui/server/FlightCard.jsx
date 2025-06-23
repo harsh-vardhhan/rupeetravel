@@ -1,4 +1,6 @@
 import { CircularProgressBar } from '../../../component/PrecipitationChart';
+import LuggagePolicyButton from './LuggagePolicyButton';
+
 
 export default function FlightCard({
   flight,
@@ -80,7 +82,7 @@ export default function FlightCard({
       </div>
 
       {/* Features Row */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
         <div className="flex items-center gap-3">
           <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
             flight.flight_type === 'direct'
@@ -99,20 +101,22 @@ export default function FlightCard({
             </span>
           </div>
         </div>
-
-        <a
-          href={`https://www.google.com/search?q=${encodeURIComponent(`flights from ${flight.origin} to ${flight.destination} ${flight.date} one way`)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block"
-        >
-          <Button
-            size="sm"
-            className="bg-blue-400 hover:bg-blue-400 text-white px-4 py-2 rounded-lg text-xs font-medium transition-colors"
+        <div className="flex gap-2 mt-2 sm:mt-0">
+          <a
+            href={`https://www.google.com/search?q=${encodeURIComponent(`flights from ${flight.origin} to ${flight.destination} ${flight.date} one way`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
           >
-            Search Flight
-          </Button>
-        </a>
+            <Button
+              size="sm"
+              className="bg-blue-400 hover:bg-blue-400 text-white px-4 py-2 rounded-lg text-xs font-medium transition-colors"
+            >
+              Search Flight
+            </Button>
+          </a>
+          <LuggagePolicyButton airline={flight.airline} />
+        </div>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import FlightSearchForm from '../../components/FlightSearchForm';
 import Header from '../../components/ui/server/header';
 import FlightCard from '../../components/ui/server/FlightCard';
 import Pagination from '../../components/ui/server/Pagination';
+import AirlineGroupButton from '../../components/ui/AirlineGroupButton';
 
 export default async function MumbaiToVietnamFlightPage({ searchParams }) {
   const params = await searchParams;
@@ -13,6 +14,7 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
   const destination = params.destination || "Hanoi";
   const source = params.source || "Mumbai";
   const drySeason = params.drySeason === '1';
+  const airlineGroup = params.airlineGroup || "all";
   const limit = 20;
   const offset = (page - 1) * limit;
 
@@ -39,6 +41,14 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
     return cityMap[city] || city;
   };
 
+  // Airline group filter logic
+  let airlineFilter = null;
+  if (airlineGroup === "free") {
+    airlineFilter = eq(schema.flight.airline, "VietJet Air");
+  } else if (airlineGroup === "paid") {
+    airlineFilter = sql`${schema.flight.airline} IN ('Vietnam Airlines', 'Air India')`;
+  }
+
   // Build dynamic where condition
   let whereCondition = and(
     eq(schema.flight.origin, source),
@@ -50,6 +60,9 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
       whereCondition,
       sql`CAST(${schema.flight.rain_probability} AS INTEGER) <= 20`
     );
+  }
+  if (airlineFilter) {
+    whereCondition = and(whereCondition, airlineFilter);
   }
 
   // Fetch filtered and paginated flights
@@ -151,6 +164,14 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
             }
           })()}
         </div>
+
+        {/* Airline Grouped Button */}
+        <AirlineGroupButton
+          airlineGroup={airlineGroup}
+          destination={destination}
+          source={source}
+          drySeason={drySeason}
+        />
 
         {/* Results Header */}
         <div className="flex items-center justify-between mb-4">
