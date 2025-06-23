@@ -8,6 +8,7 @@ import FlightCard from '../../components/ui/server/FlightCard';
 import Pagination from '../../components/ui/server/Pagination';
 import AirlineGroupButton from '../../components/ui/AirlineGroupButton';
 import { precipitationData, getRainColor, getAllWeatherDestinationOptions } from '../../lib/flightWeather';
+import Seo from '../../component/seo';
 
 export default async function MumbaiToVietnamFlightPage({ searchParams }) {
   const params = await searchParams;
@@ -125,6 +126,11 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <Seo
+        title="Flights from Mumbai to Vietnam"
+        description="Find and compare the best flights from Mumbai to Vietnam. Filter by airline, season, and more."
+        canonical="https://www.rupeetravel.com/mumbai-to-vietnam-flight"
+      />
       <Header title="Flights from Mumbai to Vietnam" />
       <div className="px-4 py-6 max-w-7xl mx-auto">
         {/* Search Form */}
