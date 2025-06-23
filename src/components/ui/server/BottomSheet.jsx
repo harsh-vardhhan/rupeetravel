@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 export default function BottomSheet({ open, onClose, children }) {
   useEffect(() => {
     if (!open) return;
     const handleEsc = (e) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === "Escape") onClose();
     };
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
   }, [open, onClose]);
 
   if (!open) return null;
@@ -26,13 +26,17 @@ export default function BottomSheet({ open, onClose, children }) {
       </div>
       <style jsx>{`
         .animate-slide-up {
-          animation: slideUp 0.3s cubic-bezier(0.4,0,0.2,1);
+          animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         @keyframes slideUp {
-          from { transform: translateY(100%); }
-          to { transform: translateY(0); }
+          from {
+            transform: translateY(100%);
+          }
+          to {
+            transform: translateY(0);
+          }
         }
       `}</style>
     </div>
   );
-} 
+}
