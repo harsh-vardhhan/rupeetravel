@@ -39,10 +39,10 @@ export default function LuggagePolicyButton({ airline }) {
     <>
       <button
         type="button"
-        className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg text-xs font-medium transition-colors flex items-center gap-1"
+        className="bg-emerald-300 hover:bg-emerald-400 text-white px-4 py-2 rounded-lg text-xs font-medium transition-colors flex items-center gap-1"
         onClick={handleLuggageClick}
       >
-        <span role="img" aria-label="luggage">🧳</span> Luggage Policy
+        Luggage Policy
       </button>
       <BottomSheet open={showSheet} onClose={() => setShowSheet(false)}>
         {policy && (

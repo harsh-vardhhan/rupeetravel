@@ -1,6 +1,6 @@
 import { CircularProgressBar } from '../../../component/PrecipitationChart';
 import LuggagePolicyButton from './LuggagePolicyButton';
-
+import FlightWeatherButton from '../../../component/FlightWeatherButton';
 
 export default function FlightCard({
   flight,
@@ -8,7 +8,10 @@ export default function FlightCard({
   getDestinationCode,
   showRain = false,
   getRainColor,
-  Button
+  Button,
+  showWeatherButton,
+  precipitationData,
+  destinationOptions
 }) {
   return (
     <div
@@ -116,6 +119,13 @@ export default function FlightCard({
             </Button>
           </a>
           <LuggagePolicyButton airline={flight.airline} />
+          <FlightWeatherButton
+            precipitationData={precipitationData}
+            destination={flight.destination}
+            showWeatherButton={showWeatherButton}
+            destinationOptions={destinationOptions}
+            flight={flight}
+          />
         </div>
       </div>
     </div>
