@@ -45,9 +45,9 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
   // Airline group filter logic
   let airlineFilter = null;
   if (airlineGroup === "free") {
-    airlineFilter = eq(schema.flight.airline, "VietJet Air");
-  } else if (airlineGroup === "paid") {
     airlineFilter = sql`${schema.flight.airline} IN ('Vietnam Airlines', 'Air India')`;
+  } else if (airlineGroup === "paid") {
+    airlineFilter = eq(schema.flight.airline, "VietJet Air");
   }
 
   // Build dynamic where condition
