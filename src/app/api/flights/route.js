@@ -1,15 +1,15 @@
-import { db } from '../../../db';
-import * as schema from '../../../db/schema';
-import { eq, asc, sql, and } from 'drizzle-orm';
-import { NextResponse } from 'next/server';
+import { db } from "../../../db";
+import * as schema from "../../../db/schema";
+import { eq, asc, sql, and } from "drizzle-orm";
+import { NextResponse } from "next/server";
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
-  const page = parseInt(searchParams.get('page')) || 1;
-  const destination = searchParams.get('destination') || "Hanoi";
-  const source = searchParams.get('source') || "New Delhi";
-  const drySeason = searchParams.get('drySeason') === '1';
-  const airlineGroup = searchParams.get('airlineGroup') || "all";
+  const page = parseInt(searchParams.get("page")) || 1;
+  const destination = searchParams.get("destination") || "Hanoi";
+  const source = searchParams.get("source") || "New Delhi";
+  const drySeason = searchParams.get("drySeason") === "1";
+  const airlineGroup = searchParams.get("airlineGroup") || "all";
   const limit = 20;
   const offset = (page - 1) * limit;
 
@@ -24,13 +24,13 @@ export async function GET(request) {
   // Build dynamic where condition
   let whereCondition = and(
     eq(schema.flight.origin, source),
-    eq(schema.flight.destination, destination)
+    eq(schema.flight.destination, destination),
   );
 
   if (drySeason) {
     whereCondition = and(
       whereCondition,
-      sql`CAST(${schema.flight.rain_probability} AS INTEGER) <= 20`
+      sql`CAST(${schema.flight.rain_probability} AS INTEGER) <= 20`,
     );
   }
   if (airlineFilter) {
@@ -56,9 +56,11 @@ export async function GET(request) {
     const totalCount = totalFlightsResult[0].count;
 
     return NextResponse.json({ flights, totalCount });
-
   } catch (error) {
-    console.error('Database query failed:', error);
-    return NextResponse.json({ error: 'Failed to fetch flight data.' }, { status: 500 });
+    console.error("Database query failed:", error);
+    return NextResponse.json(
+      { error: "Failed to fetch flight data." },
+      { status: 500 },
+    );
   }
 }
