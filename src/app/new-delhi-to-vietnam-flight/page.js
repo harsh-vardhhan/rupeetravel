@@ -1,18 +1,25 @@
 import { Button } from "../../components/ui/server/button";
-import FlightSearchForm from '../../components/FlightSearchForm';
-import Header from '../../components/ui/server/header';
-import FlightCard from '../../components/ui/server/FlightCard';
-import Pagination from '../../components/ui/server/Pagination';
-import AirlineGroupButton from '../../components/ui/AirlineGroupButton';
-import { precipitationData, getRainColor, getAllWeatherDestinationOptions } from '../../lib/flightWeather';
-import Seo from '../../component/seo';
+import FlightSearchForm from "../../components/FlightSearchForm";
+import Header from "../../components/ui/server/header";
+import FlightCard from "../../components/ui/server/FlightCard";
+import Pagination from "../../components/ui/server/Pagination";
+import AirlineGroupButton from "../../components/ui/AirlineGroupButton";
+import {
+  precipitationData,
+  getRainColor,
+  getAllWeatherDestinationOptions,
+} from "../../lib/flightWeather";
+import Seo from "../../component/seo";
 
 async function getFlights(searchParams) {
-  const protocol = process.env.NODE_ENV === 'development' ? 'http:' : 'https:';
-  const host = process.env.NODE_ENV === 'development' ? 'localhost:3000' : 'rupeetravel.com';
+  const protocol = process.env.NODE_ENV === "development" ? "http:" : "https:";
+  const host =
+    process.env.NODE_ENV === "development"
+      ? "localhost:3000"
+      : "rupeetravel.com";
   const baseUrl = `${protocol}//${host}`;
 
-  const url = new URL('/api/flights', baseUrl);
+  const url = new URL("/api/flights", baseUrl);
   Object.entries(searchParams).forEach(([key, value]) => {
     if (value !== undefined && value !== null) {
       url.searchParams.set(key, value);
@@ -22,12 +29,12 @@ async function getFlights(searchParams) {
   const res = await fetch(url.toString(), {
     next: {
       revalidate: 43200, // 12 hours in seconds
-      tags: ['flights']
-    }
+      tags: ["flights"],
+    },
   });
 
   if (!res.ok) {
-    throw new Error('Failed to fetch flights');
+    throw new Error("Failed to fetch flights");
   }
 
   return res.json();
@@ -39,7 +46,7 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
   const page = parseInt(resolvedSearchParams.page) || 1;
   const destination = resolvedSearchParams.destination || "Hanoi";
   const source = "New Delhi"; // Static for this page
-  const drySeason = resolvedSearchParams.drySeason === '1';
+  const drySeason = resolvedSearchParams.drySeason === "1";
   const airlineGroup = resolvedSearchParams.airlineGroup || "all";
 
   const { flights, totalCount } = await getFlights({
@@ -47,29 +54,32 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
     page,
     destination,
     source,
-    airlineGroup
+    airlineGroup,
   });
-
 
   const limit = 20;
 
   const sourceOptions = [
-    { value: "New Delhi", label: "New Delhi, India", country: "India" }
+    { value: "New Delhi", label: "New Delhi, India", country: "India" },
   ];
 
   const destinationOptions = [
     { value: "Hanoi", label: "Hanoi, Vietnam", country: "Vietnam" },
-    { value: "Ho Chi Minh City", label: "Ho Chi Minh City, Vietnam", country: "Vietnam" }
+    {
+      value: "Ho Chi Minh City",
+      label: "Ho Chi Minh City, Vietnam",
+      country: "Vietnam",
+    },
   ];
 
   const getCityFullName = (city) => {
     const cityMap = {
       "New Delhi": "New Delhi, India",
-      "Hanoi": "Hanoi, Vietnam",
+      Hanoi: "Hanoi, Vietnam",
       "Ho Chi Minh City": "Ho Chi Minh City, Vietnam",
       "Da Nang": "Da Nang, Vietnam",
       "Nha Trang": "Nha Trang, Vietnam",
-      "Phu Quoc": "Phu Quoc, Vietnam"
+      "Phu Quoc": "Phu Quoc, Vietnam",
     };
     return cityMap[city] || city;
   };
@@ -91,14 +101,17 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
         startPage = page - 2;
       }
     }
-    pageNumbers = Array.from({ length: pagesToDisplay }, (_, i) => startPage + i);
+    pageNumbers = Array.from(
+      { length: pagesToDisplay },
+      (_, i) => startPage + i,
+    );
   }
 
   const getSourceCode = (city) => {
     const codeMap = {
       "New Delhi": "DEL",
-      "Hanoi": "HAN",
-      "Ho Chi Minh City": "SGN"
+      Hanoi: "HAN",
+      "Ho Chi Minh City": "SGN",
     };
     return codeMap[city] || city.substring(0, 3).toUpperCase();
   };
@@ -106,9 +119,9 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
   const getDestinationCode = (city) => {
     const codeMap = {
       "New Delhi": "DEL",
-      "Mumbai": "BOM",
-      "Hanoi": "HAN",
-      "Ho Chi Minh City": "SGN"
+      Mumbai: "BOM",
+      Hanoi: "HAN",
+      "Ho Chi Minh City": "SGN",
     };
     return codeMap[city] || city.substring(0, 3).toUpperCase();
   };
@@ -124,8 +137,10 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
       <div className="px-4 py-6 max-w-7xl mx-auto">
         <div className="mb-6">
           {(() => {
-            const sourceOption = sourceOptions.find(opt => opt.value === source);
-            if (sourceOption && sourceOption.country === 'India') {
+            const sourceOption = sourceOptions.find(
+              (opt) => opt.value === source,
+            );
+            if (sourceOption && sourceOption.country === "India") {
               return (
                 <FlightSearchForm
                   currentDestination={destination}
@@ -178,13 +193,26 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
         {flights.length === 0 ? (
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center">
             <div className="text-gray-400 mb-4">
-              <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.291-1.007-5.824-2.636M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              <svg
+                className="w-16 h-16 mx-auto"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1}
+                  d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.291-1.007-5.824-2.636M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                />
               </svg>
             </div>
-            <h3 className="text-lg font-medium text-gray-900 mb-2">No flights found</h3>
+            <h3 className="text-lg font-medium text-gray-900 mb-2">
+              No flights found
+            </h3>
             <p className="text-gray-500 mb-4">
-              No flights available for {getCityFullName(source)} to {getCityFullName(destination)}
+              No flights available for {getCityFullName(source)} to{" "}
+              {getCityFullName(destination)}
             </p>
             <p className="text-sm text-gray-400">
               Try selecting a different route using the search form above
@@ -194,17 +222,23 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
           <>
             <div className="space-y-3 mb-6">
               {flights.map((flight, index) => {
-                const sourceOption = sourceOptions.find(opt => opt.value === flight.origin);
+                const sourceOption = sourceOptions.find(
+                  (opt) => opt.value === flight.origin,
+                );
                 return (
                   <FlightCard
                     key={flight.id}
                     flight={flight}
                     getSourceCode={getSourceCode}
                     getDestinationCode={getDestinationCode}
-                    showRain={!!(sourceOption && sourceOption.country === 'India')}
+                    showRain={
+                      !!(sourceOption && sourceOption.country === "India")
+                    }
                     getRainColor={getRainColor}
                     Button={Button}
-                    showWeatherButton={!!(sourceOption && sourceOption.country === 'India')}
+                    showWeatherButton={
+                      !!(sourceOption && sourceOption.country === "India")
+                    }
                     precipitationData={precipitationData}
                     destinationOptions={getAllWeatherDestinationOptions()}
                   />
