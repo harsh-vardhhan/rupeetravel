@@ -129,7 +129,7 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Seo
         title="Flights from New Delhi to Vietnam"
-        description="Find and compare the best flights from New Delhi to Vietnam. Filter by airline, season, and more."
+        description="Find and compare the best flights from New Delhi to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight"
         canonical="https://www.rupeetravel.com/new-delhi-to-vietnam-flight"
       />
       <Header title="Flights from New Delhi to Vietnam" />

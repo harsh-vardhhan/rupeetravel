@@ -128,7 +128,7 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Seo
         title="Flights from Mumbai to Vietnam"
-        description="Find and compare the best flights from Mumbai to Vietnam. Filter by airline, season, and more."
+        description="Find and compare the best flights from Mumbai to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight"
         canonical="https://www.rupeetravel.com/mumbai-to-vietnam-flight"
       />
       <Header title="Flights from Mumbai to Vietnam" />
