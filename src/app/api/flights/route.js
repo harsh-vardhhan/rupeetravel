@@ -7,7 +7,7 @@ export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const page = parseInt(searchParams.get('page')) || 1;
   const destination = searchParams.get('destination') || "Hanoi";
-  const source = searchParams.get('source') || "New Delhi";
+  const source = searchParams.get('source');
   const drySeason = searchParams.get('drySeason') === '1';
   const airlineGroup = searchParams.get('airlineGroup') || "all";
   const limit = 20;
@@ -22,10 +22,16 @@ export async function GET(request) {
   }
 
   // Build dynamic where condition
-  let whereCondition = and(
-    eq(schema.flight.origin, source),
-    eq(schema.flight.destination, destination)
-  );
+  let whereCondition;
+  if (source) {
+    whereCondition = and(
+      eq(schema.flight.origin, source),
+      eq(schema.flight.destination, destination)
+    );
+  } else {
+    // If no source is provided, return no flights.
+    return NextResponse.json({ flights: [], totalCount: 0 });
+  }
 
   if (drySeason) {
     whereCondition = and(

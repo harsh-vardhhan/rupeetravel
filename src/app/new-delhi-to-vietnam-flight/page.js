@@ -34,14 +34,20 @@ async function getFlights(searchParams) {
 }
 
 export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
-  const resolvedSearchParams = await searchParams;
-  const { flights, totalCount } = await getFlights(resolvedSearchParams);
+  const page = parseInt(searchParams.page) || 1;
+  const destination = searchParams.destination || "Hanoi";
+  const source = "New Delhi"; // Static for this page
+  const drySeason = searchParams.drySeason === '1';
+  const airlineGroup = searchParams.airlineGroup || "all";
 
-  const page = parseInt(resolvedSearchParams.page) || 1;
-  const destination = resolvedSearchParams.destination || "Hanoi";
-  const source = resolvedSearchParams.source || "New Delhi";
-  const drySeason = resolvedSearchParams.drySeason === '1';
-  const airlineGroup = resolvedSearchParams.airlineGroup || "all";
+  const { flights, totalCount } = await getFlights({
+    ...searchParams,
+    page,
+    destination,
+    source,
+    airlineGroup
+  });
+
   const limit = 20;
 
   const sourceOptions = [
@@ -88,7 +94,6 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
   const getSourceCode = (city) => {
     const codeMap = {
       "New Delhi": "DEL",
-      "Mumbai": "BOM",
       "Hanoi": "HAN",
       "Ho Chi Minh City": "SGN"
     };
