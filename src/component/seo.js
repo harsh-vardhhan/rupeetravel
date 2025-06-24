@@ -2,7 +2,7 @@ import Head from "next/head";
 
 const DOMAIN = "https://www.rupeetravel.com/";
 const DEFAULT_OG_IMAGE =
-  "https://raw.githubusercontent.com/harsh-vardhhan/images/refs/heads/main/rupeetravel-preview.png";
+  "https://ik.imagekit.io/rupeetravel/preview.png";
 
 export default function Seo({
   title = "Rupee Travel | Vietnam trip for Indians",
@@ -36,28 +36,31 @@ export default function Seo({
       />
       <meta key="og_image:width" property="og:image:width" content="1200" />
       <meta key="og_image:height" property="og:image:height" content="630" />
-
       <meta name="robots" content="index,follow" />
-
+      <meta
+        key="twitter:image"
+        name="twitter:image"
+        content={ogImage ?? DEFAULT_OG_IMAGE}
+      />
       <meta
         key="twitter:card"
         name="twitter:card"
         content="summary_large_image"
       />
-      <meta 
-        key="twitter:site" 
-        name="twitter:site" 
-        content={twitterHandle} 
+      <meta
+        key="twitter:site"
+        name="twitter:site"
+        content={twitterHandle}
       />
       <meta
         key="twitter:creator"
         name="twitter:creator"
         content={twitterHandle}
       />
-      <meta 
-        key="twitter:title" 
-        property="twitter:title" 
-        content={title} 
+      <meta
+        key="twitter:title"
+        property="twitter:title"
+        content={title}
       />
       <meta
         key="twitter:description"
