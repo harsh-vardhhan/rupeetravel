@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "./server/button";
 
-export default function AirlineGroupButton({ airlineGroup, destination, source, drySeason }) {
+export default function AirlineGroupButton({ airlineGroup, destination, source, drySeason, priceUnder10k }) {
   const buttons = [
     { label: "All", value: "all" },
     { label: "Free checked-in", value: "free" },
@@ -13,7 +13,16 @@ export default function AirlineGroupButton({ airlineGroup, destination, source, 
     url.searchParams.set("airlineGroup", value);
     url.searchParams.set("destination", destination);
     url.searchParams.set("source", source);
-    if (drySeason) url.searchParams.set("drySeason", "1");
+    if (drySeason) {
+      url.searchParams.set("drySeason", "1");
+    } else {
+      url.searchParams.delete("drySeason");
+    }
+    if (priceUnder10k) {
+      url.searchParams.set("priceUnder10k", "1");
+    } else {
+      url.searchParams.delete("priceUnder10k");
+    }
     url.searchParams.delete("page");
     window.location.href = url.toString();
   };

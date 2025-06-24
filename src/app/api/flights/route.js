@@ -1,6 +1,6 @@
 import { db } from '../../../db';
 import * as schema from '../../../db/schema';
-import { eq, asc, sql, and } from 'drizzle-orm';
+import { eq, asc, sql, and, lt } from 'drizzle-orm';
 import { NextResponse } from 'next/server';
 
 export async function GET(request) {
@@ -9,7 +9,9 @@ export async function GET(request) {
   const destination = searchParams.get('destination') || "Hanoi";
   const source = searchParams.get('source');
   const drySeason = searchParams.get('drySeason') === '1';
+  const priceUnder10k = searchParams.get('priceUnder10k') === '1';
   const airlineGroup = searchParams.get('airlineGroup') || "all";
+  const sortBy = searchParams.get('sortBy') || "price";
   const limit = 20;
   const offset = (page - 1) * limit;
 
@@ -22,34 +24,40 @@ export async function GET(request) {
   }
 
   // Build dynamic where condition
-  let whereCondition;
+  const conditions = [];
+
   if (source) {
-    whereCondition = and(
-      eq(schema.flight.origin, source),
-      eq(schema.flight.destination, destination)
-    );
+    conditions.push(eq(schema.flight.origin, source));
+    conditions.push(eq(schema.flight.destination, destination));
   } else {
     // If no source is provided, return no flights.
     return NextResponse.json({ flights: [], totalCount: 0 });
   }
 
   if (drySeason) {
-    whereCondition = and(
-      whereCondition,
-      sql`CAST(${schema.flight.rain_probability} AS INTEGER) <= 20`
-    );
+    conditions.push(sql`CAST(${schema.flight.rain_probability} AS INTEGER) <= 20`);
   }
-  if (airlineFilter) {
-    whereCondition = and(whereCondition, airlineFilter);
+  
+  if (priceUnder10k) {
+    conditions.push(lt(schema.flight.price_inr, 10000));
   }
 
+  if (airlineFilter) {
+    conditions.push(airlineFilter);
+  }
+
+  const whereCondition = and(...conditions);
+
   try {
+    const orderBy = sortBy === 'date'
+      ? asc(schema.flight.date)
+      : asc(schema.flight.price_inr);
     // Fetch filtered and paginated flights
     const flights = await db
       .select()
       .from(schema.flight)
       .where(whereCondition)
-      .orderBy(asc(schema.flight.price_inr))
+      .orderBy(orderBy)
       .limit(limit)
       .offset(offset);
 

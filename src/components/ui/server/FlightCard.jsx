@@ -2,6 +2,15 @@ import { CircularProgressBar } from '../../../component/PrecipitationChart';
 import LuggagePolicyButton from './LuggagePolicyButton';
 import FlightWeatherButton from '../../../component/FlightWeatherButton';
 
+function formatDateWithSuffix(dateString) {
+  const date = new Date(dateString);
+  if (isNaN(date)) return dateString;
+  const day = date.getDate();
+  const month = date.toLocaleString('default', { month: 'long' });
+  const year = date.getFullYear();
+  return `${day} ${month} ${year}`;
+}
+
 export default function FlightCard({
   flight,
   getSourceCode,
@@ -30,7 +39,9 @@ export default function FlightCard({
             <p className="font-semibold text-gray-900 text-sm leading-tight">
               {flight.airline}
             </p>
-            <p className="text-xs text-gray-500">{flight.date}</p>
+            <p className="text-xs text-gray-500">
+              {formatDateWithSuffix(flight.date)}
+            </p>
           </div>
         </div>
         <div className="text-right">
@@ -130,4 +141,4 @@ export default function FlightCard({
       </div>
     </div>
   );
-} 
+}

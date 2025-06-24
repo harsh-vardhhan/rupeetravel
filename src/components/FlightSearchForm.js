@@ -7,17 +7,19 @@ export default function FlightSearchForm({
   currentSource,
   sourceOptions = [],
   destinationOptions = [],
-  routeName = "flight",
-  showDrySeasonButton = false
+  showDrySeasonButton = false,
+  showPriceUnder10kButton = false
 }) {
   const [source, setSource] = useState(currentSource);
   const [destination, setDestination] = useState(currentDestination);
   const [drySeason, setDrySeason] = useState(false);
+  const [priceUnder10k, setPriceUnder10k] = useState(false);
   
   useEffect(() => {
     // Check if drySeason=1 is present in the URL
     const url = new URL(window.location);
     setDrySeason(url.searchParams.get('drySeason') === '1');
+    setPriceUnder10k(url.searchParams.get('priceUnder10k') === '1');
   }, []);
 
   // Helper function to get short label (airport code)
@@ -83,6 +85,19 @@ export default function FlightSearchForm({
     window.location.href = url.toString();
   };
 
+  const handlePriceUnder10kToggle = () => {
+    const url = new URL(window.location);
+    if (priceUnder10k) {
+      url.searchParams.delete('priceUnder10k');
+    } else {
+      url.searchParams.set('priceUnder10k', '1');
+    }
+    url.searchParams.set('destination', destination);
+    url.searchParams.set('source', source);
+    url.searchParams.delete('page');
+    window.location.href = url.toString();
+  };
+
   // Get available options based on flip state
   const getSourceOptions = () => {
     return isFlipped ? destinationOptions : sourceOptions;
@@ -114,6 +129,16 @@ export default function FlightSearchForm({
               aria-pressed={drySeason}
             >
               Dry Season
+            </button>
+          )}
+          {showPriceUnder10kButton && (
+            <button
+              type="button"
+              onClick={handlePriceUnder10kToggle}
+              className={`ml-2 px-3 py-1 rounded-full text-xs font-medium border transition-colors ${priceUnder10k ? 'bg-green-100 border-green-400 text-green-800' : 'bg-gray-100 border-gray-300 text-gray-500 hover:bg-green-50 hover:border-green-400 hover:text-green-700'}`}
+              aria-pressed={priceUnder10k}
+            >
+              under ₹10,000
             </button>
           )}
         </div>
