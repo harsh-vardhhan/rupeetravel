@@ -8,27 +8,25 @@ import { precipitationData, getRainColor, getAllWeatherDestinationOptions } from
 import Seo from '../../component/seo';
 
 async function getFlights(searchParams) {
-  // In production, we can get the base URL from the headers
   const protocol = process.env.NODE_ENV === 'development' ? 'http:' : 'https:';
   const host = process.env.NODE_ENV === 'development' ? 'localhost:3000' : 'rupeetravel.com';
   const baseUrl = `${protocol}//${host}`;
 
   const url = new URL('/api/flights', baseUrl);
   Object.entries(searchParams).forEach(([key, value]) => {
-    if (value !== undefined) {
+    if (value !== undefined && value !== null) {
       url.searchParams.set(key, value);
     }
   });
 
   const res = await fetch(url.toString(), {
     next: {
-      revalidate: 43200, // 24 hours in seconds
+      revalidate: 43200, // 12 hours in seconds
       tags: ['flights']
     }
   });
 
   if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch flights');
   }
 
@@ -36,16 +34,16 @@ async function getFlights(searchParams) {
 }
 
 export default async function MumbaiToVietnamFlightPage({ searchParams }) {
-  const { flights, totalCount } = await getFlights(searchParams);
+  const resolvedSearchParams = await searchParams;
+  const { flights, totalCount } = await getFlights(resolvedSearchParams);
 
-  const page = parseInt(searchParams.page) || 1;
-  const destination = searchParams.destination || "Hanoi";
-  const source = searchParams.source || "Mumbai";
-  const drySeason = searchParams.drySeason === '1';
-  const airlineGroup = searchParams.airlineGroup || "all";
+  const page = parseInt(resolvedSearchParams.page) || 1;
+  const destination = resolvedSearchParams.destination || "Hanoi";
+  const source = resolvedSearchParams.source || "Mumbai";
+  const drySeason = resolvedSearchParams.drySeason === '1';
+  const airlineGroup = resolvedSearchParams.airlineGroup || "all";
   const limit = 20;
 
-  // Define route configuration
   const sourceOptions = [
     { value: "Mumbai", label: "Mumbai, India", country: "India" }
   ];
@@ -55,7 +53,6 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
     { value: "Ho Chi Minh City", label: "Ho Chi Minh City, Vietnam", country: "Vietnam" }
   ];
 
-  // Helper function to get full city names
   const getCityFullName = (city) => {
     const cityMap = {
       "Mumbai": "Mumbai, India",
@@ -70,7 +67,6 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
 
   const totalPages = Math.ceil(totalCount / limit);
 
-  // Pagination Logic
   const pagesToDisplay = Math.min(5, totalPages);
   let pageNumbers = [];
   if (totalPages > 1) {
@@ -89,7 +85,6 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
     pageNumbers = Array.from({ length: pagesToDisplay }, (_, i) => startPage + i);
   }
 
-  // Get source code for display
   const getSourceCode = (city) => {
     const codeMap = {
       "Mumbai": "BOM",
@@ -101,7 +96,6 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
 
   const getDestinationCode = (city) => {
     const codeMap = {
-      "Mumbai": "DEL",
       "Mumbai": "BOM",
       "Hanoi": "HAN",
       "Ho Chi Minh City": "SGN"
@@ -118,7 +112,6 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
       />
       <Header title="Flights from Mumbai to Vietnam" />
       <div className="px-4 py-6 max-w-7xl mx-auto">
-        {/* Search Form */}
         <div className="mb-6">
           {(() => {
             const sourceOption = sourceOptions.find(opt => opt.value === source);
@@ -148,7 +141,6 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
           })()}
         </div>
 
-        {/* Airline Grouped Button */}
         <AirlineGroupButton
           airlineGroup={airlineGroup}
           destination={destination}
@@ -156,7 +148,6 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
           drySeason={drySeason}
         />
 
-        {/* Results Header */}
         <div className="flex items-center justify-between mb-4">
           <div>
             <h2 className="text-lg font-semibold text-gray-900">
@@ -191,7 +182,6 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
           </div>
         ) : (
           <>
-            {/* Flight Cards */}
             <div className="space-y-3 mb-6">
               {flights.map((flight, index) => {
                 const sourceOption = sourceOptions.find(opt => opt.value === flight.origin);
@@ -212,7 +202,6 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
               })}
             </div>
 
-            {/* Enhanced Pagination */}
             <Pagination
               page={page}
               totalCount={totalCount}
