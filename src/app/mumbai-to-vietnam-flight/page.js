@@ -34,14 +34,17 @@ async function getFlights(searchParams) {
 }
 
 export default async function MumbaiToVietnamFlightPage({ searchParams }) {
-  const page = parseInt(searchParams.page) || 1;
-  const destination = searchParams.destination || "Hanoi";
+  
+  const resolvedSearchParams = await searchParams;
+
+  const page = parseInt(resolvedSearchParams.page) || 1;
+  const destination = resolvedSearchParams.destination || "Hanoi";
   const source = "Mumbai"; // Static for this page
-  const drySeason = searchParams.drySeason === '1';
-  const airlineGroup = searchParams.airlineGroup || "all";
+  const drySeason = resolvedSearchParams.drySeason === '1';
+  const airlineGroup = resolvedSearchParams.airlineGroup || "all";
 
   const { flights, totalCount } = await getFlights({
-    ...searchParams,
+    ...resolvedSearchParams,
     page,
     destination,
     source,
