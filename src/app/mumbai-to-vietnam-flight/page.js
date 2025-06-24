@@ -1,7 +1,4 @@
-import { db } from '../../db';
-import * as schema from '../../db/schema';
 import { Button } from "../../components/ui/server/button";
-import { eq, asc, sql, and } from 'drizzle-orm';
 import FlightSearchForm from '../../components/FlightSearchForm';
 import Header from '../../components/ui/server/header';
 import FlightCard from '../../components/ui/server/FlightCard';
@@ -10,15 +7,43 @@ import AirlineGroupButton from '../../components/ui/AirlineGroupButton';
 import { precipitationData, getRainColor, getAllWeatherDestinationOptions } from '../../lib/flightWeather';
 import Seo from '../../component/seo';
 
+async function getFlights(searchParams) {
+  // In production, we can get the base URL from the headers
+  const protocol = process.env.NODE_ENV === 'development' ? 'http:' : 'https:';
+  const host = process.env.NODE_ENV === 'development' ? 'localhost:3000' : 'rupeetravel.com';
+  const baseUrl = `${protocol}//${host}`;
+
+  const url = new URL('/api/flights', baseUrl);
+  Object.entries(searchParams).forEach(([key, value]) => {
+    if (value !== undefined) {
+      url.searchParams.set(key, value);
+    }
+  });
+
+  const res = await fetch(url.toString(), {
+    next: {
+      revalidate: 43200, // 24 hours in seconds
+      tags: ['flights']
+    }
+  });
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch flights');
+  }
+
+  return res.json();
+}
+
 export default async function MumbaiToVietnamFlightPage({ searchParams }) {
-  const params = await searchParams;
-  const page = parseInt(params.page) || 1;
-  const destination = params.destination || "Hanoi";
-  const source = params.source || "Mumbai";
-  const drySeason = params.drySeason === '1';
-  const airlineGroup = params.airlineGroup || "all";
+  const { flights, totalCount } = await getFlights(searchParams);
+
+  const page = parseInt(searchParams.page) || 1;
+  const destination = searchParams.destination || "Hanoi";
+  const source = searchParams.source || "Mumbai";
+  const drySeason = searchParams.drySeason === '1';
+  const airlineGroup = searchParams.airlineGroup || "all";
   const limit = 20;
-  const offset = (page - 1) * limit;
 
   // Define route configuration
   const sourceOptions = [
@@ -43,46 +68,6 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
     return cityMap[city] || city;
   };
 
-  // Airline group filter logic
-  let airlineFilter = null;
-  if (airlineGroup === "free") {
-    airlineFilter = sql`${schema.flight.airline} IN ('Vietnam Airlines', 'Air India')`;
-  } else if (airlineGroup === "paid") {
-    airlineFilter = eq(schema.flight.airline, "VietJet Air");
-  }
-
-  // Build dynamic where condition
-  let whereCondition = and(
-    eq(schema.flight.origin, source),
-    eq(schema.flight.destination, destination)
-  );
-  if (drySeason) {
-    // Only include flights with rain_probability <= 20
-    whereCondition = and(
-      whereCondition,
-      sql`CAST(${schema.flight.rain_probability} AS INTEGER) <= 20`
-    );
-  }
-  if (airlineFilter) {
-    whereCondition = and(whereCondition, airlineFilter);
-  }
-
-  // Fetch filtered and paginated flights
-  const flights = await db
-    .select()
-    .from(schema.flight)
-    .where(whereCondition)
-    .orderBy(asc(schema.flight.price_inr))
-    .limit(limit)
-    .offset(offset);
-
-  // Get total count for pagination
-  const totalFlights = await db
-    .select({ count: sql`count(*)` })
-    .from(schema.flight)
-    .where(whereCondition);
-
-  const totalCount = totalFlights[0].count;
   const totalPages = Math.ceil(totalCount / limit);
 
   // Pagination Logic
