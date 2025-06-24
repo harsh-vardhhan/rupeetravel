@@ -1,11 +1,17 @@
 "use client";
 import { Button } from "./server/button";
 
-export default function AirlineGroupButton({ airlineGroup, destination, source, drySeason, priceUnder10k }) {
+export default function AirlineGroupButton({
+  airlineGroup,
+  destination,
+  source,
+  drySeason,
+  priceUnder10k,
+}) {
   const buttons = [
     { label: "All", value: "all" },
     { label: "Free checked-in", value: "free" },
-    { label: "Paid checked-in", value: "paid" }
+    { label: "Paid checked-in", value: "paid" },
   ];
 
   const handleClick = (value) => {
@@ -29,11 +35,11 @@ export default function AirlineGroupButton({ airlineGroup, destination, source, 
 
   return (
     <div className="flex gap-2 mb-4">
-      {buttons.map(btn => (
+      {buttons.map((btn) => (
         <Button
           key={btn.value}
           type="button"
-          className={`px-4 py-2 rounded-full border text-sm font-medium transition-colors ${airlineGroup === btn.value ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-blue-700 border-blue-200 hover:bg-blue-50'}`}
+          className={`px-4 py-2 rounded-full border text-sm font-medium transition-colors ${airlineGroup === btn.value ? "bg-blue-600 text-white border-blue-600" : "bg-white text-blue-700 border-blue-200 hover:bg-blue-50"}`}
           onClick={() => handleClick(btn.value)}
           aria-pressed={airlineGroup === btn.value}
         >
@@ -42,4 +48,4 @@ export default function AirlineGroupButton({ airlineGroup, destination, source, 
       ))}
     </div>
   );
-} 
+}
