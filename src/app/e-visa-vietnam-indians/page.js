@@ -8,13 +8,14 @@ import {
 import { Button } from "../../components/ui/server/button";
 import StructuredData from "../../component/structuredData";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 // Define the steps data directly in the component since it's static
 const steps = [
   {
     title: `Apply for Vietnam E-Visa`,
-    description: "fill the online form from the official site link given below.",
+    description:
+      "fill the online form from the official site link given below.",
   },
   {
     title: `Pay the fee`,
@@ -22,7 +23,8 @@ const steps = [
   },
   {
     title: `Wait for E-Visa approval`,
-    description: "Wait for 3-5 business days. You will get status update on your email",
+    description:
+      "Wait for 3-5 business days. You will get status update on your email",
   },
 ];
 
@@ -30,27 +32,27 @@ const steps = [
 const structuredData = {
   "@context": "https://www.schema.org",
   "@type": "product",
-  "brand": "Vietnam E-visa",
-  "name": "Vietnam E-visa application",
-  "image": "https://ik.imagekit.io/rupeetravel/local-currency.webp",
-  "category": "E-visa",
-  "description": " Vietnam E-visa application",
-  "aggregateRating": {
+  brand: "Vietnam E-visa",
+  name: "Vietnam E-visa application",
+  image: "https://ik.imagekit.io/rupeetravel/local-currency.webp",
+  category: "E-visa",
+  description: " Vietnam E-visa application",
+  aggregateRating: {
     "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "1"
+    ratingValue: "5",
+    reviewCount: "1",
   },
-  "offers": {
+  offers: {
     "@type": "Offer",
-    "priceCurrency": "INR",
-    "price": "2100",
-    "itemCondition": "http://schema.org/UsedCondition",
-    "availability": "http://schema.org/InStock",
-    "seller": {
+    priceCurrency: "INR",
+    price: "2100",
+    itemCondition: "http://schema.org/UsedCondition",
+    availability: "http://schema.org/InStock",
+    seller: {
       "@type": "Vietnam Immigration",
-      "name": "Vietnam E-visa"
+      name: "Vietnam E-visa",
     },
-  }
+  },
 };
 
 export const metadata = {
@@ -81,7 +83,9 @@ export const metadata = {
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
-  alternates: { canonical: "https://www.rupeetravel.com/e-visa-vietnam-indians" },
+  alternates: {
+    canonical: "https://www.rupeetravel.com/e-visa-vietnam-indians",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -117,13 +121,8 @@ export default function Home() {
                 </div>
               </CardContent>
               <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
-                <a 
-                  href="https://evisa.gov.vn/"
-                  className="w-full"
-                >
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  >
+                <a href="https://evisa.gov.vn/" className="w-full">
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
                     Apply E-Visa
                   </Button>
                 </a>

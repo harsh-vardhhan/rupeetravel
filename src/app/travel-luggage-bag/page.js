@@ -1,12 +1,9 @@
-import Image from 'next/image';
+import Image from "next/image";
 import Header from "../../components/ui/server/header";
-import {
-  Card,
-  CardContent,
-} from "../../components/ui/server/card";
+import { Card, CardContent } from "../../components/ui/server/card";
 import { Badge } from "../../components/ui/server/badge";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export const metadata = {
   title: "Rupee Travel | Best travel hack for luggage",
@@ -79,10 +76,8 @@ export default function TravelLuggagePage() {
                 />
                 <div className="mt-6 space-y-4">
                   <div className="flex items-center justify-between">
-                    <h2 className="text-xl font-bold">
-                      Luggage travel hack
-                    </h2>
-                    <Badge 
+                    <h2 className="text-xl font-bold">Luggage travel hack</h2>
+                    <Badge
                       variant="secondary"
                       className="bg-teal-200 text-teal-900"
                     >
@@ -91,10 +86,11 @@ export default function TravelLuggagePage() {
                   </div>
                   <div className="space-y-2">
                     {features.map((feature) => (
-                      <div key={feature.item} className="flex items-start gap-2">
-                        <p className="text-sm">
-                          {feature.title}
-                        </p>
+                      <div
+                        key={feature.item}
+                        className="flex items-start gap-2"
+                      >
+                        <p className="text-sm">{feature.title}</p>
                       </div>
                     ))}
                   </div>

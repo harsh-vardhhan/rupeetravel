@@ -1,21 +1,19 @@
 import Header from "../../components/ui/server/header";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-} from "../../components/ui/server/card";
+import { Card, CardContent, CardFooter } from "../../components/ui/server/card";
 import { Button } from "../../components/ui/server/button";
 import { Badge } from "../../components/ui/server/badge";
 import { Alert, AlertDescription } from "../../components/ui/server/alert";
-import Image from 'next/image';
+import Image from "next/image";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export const metadata = {
-  title: "Rupee Travel | Best ATM with zero forex markup in Vietnam for foreigners",
+  title:
+    "Rupee Travel | Best ATM with zero forex markup in Vietnam for foreigners",
   description: "Best and cheapest ATM in Vietnam for zero exchange rate",
   openGraph: {
-    title: "Rupee Travel | Best ATM with zero forex markup in Vietnam for foreigners",
+    title:
+      "Rupee Travel | Best ATM with zero forex markup in Vietnam for foreigners",
     description: "Best and cheapest ATM in Vietnam for zero exchange rate",
     url: "https://www.rupeetravel.com/atm-vietnam-zero-forex-markup",
     siteName: "Rupee Travel",
@@ -32,14 +30,17 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rupee Travel | Best ATM with zero forex markup in Vietnam for foreigners",
+    title:
+      "Rupee Travel | Best ATM with zero forex markup in Vietnam for foreigners",
     description: "Best and cheapest ATM in Vietnam for zero exchange rate",
     site: "@harsh_vardhhan",
     creator: "@harsh_vardhhan",
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
-  alternates: { canonical: "https://www.rupeetravel.com/atm-vietnam-zero-forex-markup" },
+  alternates: {
+    canonical: "https://www.rupeetravel.com/atm-vietnam-zero-forex-markup",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -110,14 +111,15 @@ export default function Home() {
                   <h2 className="text-lg font-semibold">
                     Withdraw cash from Ocean Bank ATM or MB Bank ATM
                   </h2>
-                  <Badge 
+                  <Badge
                     variant="secondary"
                     className="bg-teal-200 text-teal-900"
                   >
                     Personally using
                   </Badge>
                   <p className="text-sm">
-                    Just search on google map <span className="font-bold">Ocean Bank</span> or{" "}
+                    Just search on google map{" "}
+                    <span className="font-bold">Ocean Bank</span> or{" "}
                     <span className="font-bold">MB Bank</span> for nearby ATM.
                   </p>
                   <ul className="space-y-2">
@@ -130,17 +132,19 @@ export default function Home() {
                 </div>
               </CardContent>
               <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
-                <a href="https://www.google.com/maps?q=MB+Bank+ATM" className="w-full">
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base"
-                  >
+                <a
+                  href="https://www.google.com/maps?q=MB+Bank+ATM"
+                  className="w-full"
+                >
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base">
                     MB Bank ATM
                   </Button>
                 </a>
-                <a href="https://www.google.com/maps?q=Ocean+Bank+ATM" className="w-full">
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base"
-                  >
+                <a
+                  href="https://www.google.com/maps?q=Ocean+Bank+ATM"
+                  className="w-full"
+                >
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base">
                     Ocean Bank ATM
                   </Button>
                 </a>

@@ -10,7 +10,7 @@ import { Badge } from "../../components/ui/server/badge";
 import Seo from "../../component/seo";
 import Link from "next/link";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export const metadata = {
   title: "Rupee Travel | Best travel insurance for Vietnam",
@@ -40,7 +40,9 @@ export const metadata = {
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
-  alternates: { canonical: "https://www.rupeetravel.com/travel-insurance-india-vietnam" },
+  alternates: {
+    canonical: "https://www.rupeetravel.com/travel-insurance-india-vietnam",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -81,7 +83,7 @@ export default function Home() {
               <CardHeader className="pb-2">
                 <div className="flex items-center justify-between">
                   <h2 className="text-xl font-bold">Digit Insurance</h2>
-                  <Badge 
+                  <Badge
                     variant="secondary"
                     className="bg-teal-200 text-teal-900"
                   >
@@ -93,31 +95,25 @@ export default function Home() {
                 <div className="space-y-2">
                   {features.map((feature) => (
                     <div key={feature.item} className="flex items-start gap-2">
-                      <p className="text-sm">
-                        {feature.title}
-                      </p>
+                      <p className="text-sm">{feature.title}</p>
                     </div>
                   ))}
                 </div>
               </CardContent>
               <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
-                <a 
+                <a
                   href="https://www.godigit.com/international-travel-insurance"
                   className="w-full"
                 >
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  >
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
                     Get Insurance
                   </Button>
                 </a>
-                <Link 
+                <Link
                   href="/posts/india-cross-border-finance"
                   className="w-full"
                 >
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  >
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
                     Read More
                   </Button>
                 </Link>
