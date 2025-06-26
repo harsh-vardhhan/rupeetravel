@@ -7,7 +7,6 @@ import {
 } from "../../components/ui/server/card";
 import { Button } from "../../components/ui/server/button";
 import { Badge } from "../../components/ui/server/badge";
-import Seo from "../../component/seo";
 import Link from "next/link";
 
 export const dynamic = 'force-static';
@@ -68,11 +67,6 @@ const features = [
 export default function Home() {
   return (
     <>
-      <Seo
-        title="Rupee Travel | Best travel insurance for Vietnam"
-        description="Travel insurance for Indians in Vietnam"
-        canonical={"https://www.rupeetravel.com/travel-insurance-india-vietnam"}
-      />
       <div className="min-h-screen bg-background">
         <Header title={"Travel insurance for Vietnam"} />
         <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">

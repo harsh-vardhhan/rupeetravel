@@ -11,7 +11,7 @@ import { Button } from "../../components/ui/server/button";
 import { Alert, AlertDescription } from "../../components/ui/server/alert";
 import { AlertCircle } from "lucide-react";
 import Link from "next/link";
-import StructuredData from "../../components/ui/server/structured-data";
+import StructuredData from "../../component/structuredData";
 
 export const dynamic = 'force-static';
 

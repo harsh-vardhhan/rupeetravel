@@ -27,6 +27,40 @@ import {
     VNDINRMarketRate
 } from '../../currency/currency';
 
+export const metadata = {
+  title: "Rupee Travel | Get Vietnam currency in India",
+  description: "Vietnam currency | Vietnamese Dong | VND",
+  openGraph: {
+    title: "Rupee Travel | Get Vietnam currency in India",
+    description: "Vietnam currency | Vietnamese Dong | VND",
+    url: "https://www.rupeetravel.com/how-to-get-vietnam-currency",
+    siteName: "Rupee Travel",
+    images: [
+      {
+        url: "https://ik.imagekit.io/rupeetravel/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Rupee Travel | Get Vietnam currency in India | Rupee Travel",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rupee Travel | Get Vietnam currency in India",
+    description: "Vietnam currency | Vietnamese Dong | VND",
+    site: "@harsh_vardhhan",
+    creator: "@harsh_vardhhan",
+    images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
+  },
+  robots: "index,follow",
+  alternates: { canonical: "https://www.rupeetravel.com/how-to-get-vietnam-currency" },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 export default function Home() {
     const structuredData = {
         "@context": "https://schema.org",
@@ -101,12 +135,6 @@ export default function Home() {
     return (
         <>
             <StructuredData data={structuredData} />
-            <Seo
-                title="Rupee Travel | Get Vietnam currency in India"
-                description="Vietnam currency | Vietnamese Dong | VND"
-                canonical={"https://www.rupeetravel.com/how-to-get-vietnam-currency"}
-            />
-
             <div className="min-h-screen bg-background">
                 <Header title={"How to get Vietnam currency in India"} />
                 <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
