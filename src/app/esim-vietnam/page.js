@@ -52,12 +52,39 @@ const reasons = [
     },
 ];
 
-export async function generateMetadata() {
-    return {
+export const metadata = {
+    title: "Rupee Travel | Activate eSIM for travel",
+    description: "Airtel eSIM | Jio eSIM | How to activate eSIM in iPhone",
+    openGraph: {
         title: "Rupee Travel | Activate eSIM for travel",
         description: "Airtel eSIM | Jio eSIM | How to activate eSIM in iPhone",
-    };
-}
+        url: "https://www.rupeetravel.com/esim-vietnam",
+        siteName: "Rupee Travel",
+        images: [
+            {
+                url: "https://ik.imagekit.io/rupeetravel/preview.png",
+                width: 1200,
+                height: 630,
+                alt: "Rupee Travel | Activate eSIM for travel | Rupee Travel",
+            },
+        ],
+        locale: "en_IN",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Rupee Travel | Activate eSIM for travel",
+        description: "Airtel eSIM | Jio eSIM | How to activate eSIM in iPhone",
+        site: "@harsh_vardhhan",
+        creator: "@harsh_vardhhan",
+        images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
+    },
+    robots: "index,follow",
+    alternates: { canonical: "https://www.rupeetravel.com/esim-vietnam" },
+    icons: {
+        icon: "/favicon.ico",
+    },
+};
 
 export default function Home() {
     return (

@@ -13,7 +13,6 @@ import {
   TableHeader,
   TableRow,
 } from "../../components/ui/server/table";
-import Seo from '../../component/seo';
 import Header from "../../components/ui/server/header";
 import CurrencyConverter from "../../component/CurrencyConverter";
 import PrecipitationChart from "../../component/PrecipitationChart";
@@ -22,6 +21,39 @@ import { IDRINRMarketRate } from "../../currency/currency";
 
 export const dynamic = 'force-static';
 
+export const metadata = {
+  title: "Rupee Travel | Bali travel guide for Indians",
+  description: "Bali Indonesia | Bali Currency | Bali Visa | Bali Travel Guide | Bali Travel Tips | Bali Travel Blog | Bali Travel Itinerary | Bali Travel Cost | Bali Travel Packages | Bali Travel Guide for Indians | Bali Travel Guide for Indian Tourists | Bali Travel Guide for Indian Families | Bali Travel Guide for Indian Couples | Bali Travel Guide for Indian Solo Travelers | Bali Travel Guide for Indian Backpackers | Bali Travel Guide for Indian Honeymooners | Bali Travel Guide for Indian",
+  openGraph: {
+    title: "Rupee Travel | Bali travel guide for Indians",
+    description: "Bali Indonesia | Bali Currency | Bali Visa | Bali Travel Guide | Bali Travel Tips | Bali Travel Blog | Bali Travel Itinerary | Bali Travel Cost | Bali Travel Packages | Bali Travel Guide for Indians | Bali Travel Guide for Indian Tourists | Bali Travel Guide for Indian Families | Bali Travel Guide for Indian Couples | Bali Travel Guide for Indian Solo Travelers | Bali Travel Guide for Indian Backpackers | Bali Travel Guide for Indian Honeymooners | Bali Travel Guide for Indian",
+    url: "https://www.rupeetravel.com/bali-travel-guide-for-indians",
+    siteName: "Rupee Travel",
+    images: [
+      {
+        url: "https://ik.imagekit.io/rupeetravel/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Rupee Travel | Bali travel guide for Indians | Rupee Travel",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rupee Travel | Bali travel guide for Indians",
+    description: "Bali Indonesia | Bali Currency | Bali Visa | Bali Travel Guide | Bali Travel Tips | Bali Travel Blog | Bali Travel Itinerary | Bali Travel Cost | Bali Travel Packages | Bali Travel Guide for Indians | Bali Travel Guide for Indian Tourists | Bali Travel Guide for Indian Families | Bali Travel Guide for Indian Couples | Bali Travel Guide for Indian Solo Travelers | Bali Travel Guide for Indian Backpackers | Bali Travel Guide for Indian Honeymooners | Bali Travel Guide for Indian",
+    site: "@harsh_vardhhan",
+    creator: "@harsh_vardhhan",
+    images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
+  },
+  robots: "index,follow",
+  alternates: { canonical: "https://www.rupeetravel.com/bali-travel-guide-for-indians" },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 export default function Home() {
   const baliData = [
@@ -41,12 +73,6 @@ export default function Home() {
 
   return (
     <>
-      <Seo
-        title="Rupee Travel | Bali travel guide for Indians"
-        description="Bali Indonesia | Bali Currency | Bali Visa | Bali Travel Guide | Bali Travel Tips | Bali Travel Blog | Bali Travel Itinerary | Bali Travel Cost | Bali Travel Packages | Bali Travel Guide for Indians | Bali Travel Guide for Indian Tourists | Bali Travel Guide for Indian Families | Bali Travel Guide for Indian Couples | Bali Travel Guide for Indian Solo Travelers | Bali Travel Guide for Indian Backpackers | Bali Travel Guide for Indian Honeymooners | Bali Travel Guide for Indian"
-        canonical={"https://www.rupeetravel.com/bali-travel-guide-for-indians"}
-      />
-
       <div className="min-h-screen bg-background">
         <Header title={"Bali travel guide for Indians"} blog={true} />
         <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
@@ -187,7 +213,7 @@ export default function Home() {
                 >
                   Google Flights
                 </Link>
-                {" to see which date has the cheapest flight. If you want to book a cheap flight, be flexible with your travel dates. For those who are price conscious like me, fly with VietJet Air. Even though it doesn&apos;t offer a direct flight to Bali, it&apos;s a lot cheaper than direct flights."}
+                {" to see which date has the cheapest flight. If you want to book a cheap flight, be flexible with your travel dates. For those who are price conscious like me, fly with VietJet Air. Even though it&apos;t doesn&apos;t offer a direct flight to Bali, it&apos;s a lot cheaper than direct flights."}
               </p>
 
               <div className="border border-border rounded-lg overflow-hidden my-4">

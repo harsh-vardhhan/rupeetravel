@@ -5,7 +5,6 @@ import {
   CardContent,
 } from "../components/ui/server/card";
 import { Badge } from "../components/ui/server/badge";
-import Seo from "../component/seo";
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -194,10 +193,43 @@ const flights = [
   },
 ];
 
+export const metadata = {
+  title: "Rupee Travel | Vietnam trip for Indians",
+  description: "Vietnam budget travel checklist for Indians",
+  openGraph: {
+    title: "Rupee Travel | Vietnam trip for Indians",
+    description: "Vietnam budget travel checklist for Indians",
+    url: "https://www.rupeetravel.com",
+    siteName: "Rupee Travel",
+    images: [
+      {
+        url: "https://ik.imagekit.io/rupeetravel/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Rupee Travel | Vietnam trip for Indians | Rupee Travel",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rupee Travel | Vietnam trip for Indians",
+    description: "Vietnam budget travel checklist for Indians",
+    site: "@harsh_vardhhan",
+    creator: "@harsh_vardhhan",
+    images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
+  },
+  robots: "index,follow",
+  alternates: { canonical: "https://www.rupeetravel.com" },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 export default function HomePage() {
   return (
     <>
-      <Seo canonical={"https://www.rupeetravel.com"} />
       <div className="min-h-screen bg-background">
         <main className="px-4 sm:px-8 py-8 sm:py-12">
           <div>

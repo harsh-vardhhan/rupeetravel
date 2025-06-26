@@ -6,9 +6,42 @@ import {
 } from "../../components/ui/server/card";
 import { Button } from "../../components/ui/server/button";
 import Image from 'next/image';
-import Seo from "../../component/seo";
 
 export const dynamic = 'force-static';
+
+export const metadata = {
+  title: "Rupee Travel | Food delivery and ride hailing app in Vietnam",
+  description: "Grab app in Vietnam",
+  openGraph: {
+    title: "Rupee Travel | Food delivery and ride hailing app in Vietnam",
+    description: "Grab app in Vietnam",
+    url: "https://www.rupeetravel.com/food-delivery-taxi-vietnam",
+    siteName: "Rupee Travel",
+    images: [
+      {
+        url: "https://ik.imagekit.io/rupeetravel/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Rupee Travel | Food delivery and ride hailing app in Vietnam | Rupee Travel",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rupee Travel | Food delivery and ride hailing app in Vietnam",
+    description: "Grab app in Vietnam",
+    site: "@harsh_vardhhan",
+    creator: "@harsh_vardhhan",
+    images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
+  },
+  robots: "index,follow",
+  alternates: { canonical: "https://www.rupeetravel.com/food-delivery-taxi-vietnam" },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 // Define the features data directly in the component since it's static
 const features = [
@@ -32,11 +65,6 @@ const features = [
 export default function Home() {
   return (
     <>
-      <Seo
-        title="Rupee Travel | Food delivery and ride hailing app in Vietnam"
-        description="Grab app in Vietnam"
-        canonical={"https://www.rupeetravel.com/food-delivery-taxi-vietnam"}
-      />
       <div className="min-h-screen bg-background">
         <Header title={"Food Delivery and Taxi for Vietnam"} />
         <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">

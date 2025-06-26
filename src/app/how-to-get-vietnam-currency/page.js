@@ -16,7 +16,6 @@ import {
 } from "../../components/ui/server/table";
 import { Badge } from "../../components/ui/server/badge";
 import { Button } from "../../components/ui/server/button";
-import Seo from '../../component/seo';
 import Header from "../../components/ui/server/header";
 import StructuredData from "../../component/structuredData";
 import CurrencyConverter from "../../component/CurrencyConverter";

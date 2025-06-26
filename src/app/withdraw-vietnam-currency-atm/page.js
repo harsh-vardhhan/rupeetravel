@@ -8,9 +8,42 @@ import { Button } from "../../components/ui/server/button";
 import { Badge } from "../../components/ui/server/badge";
 import Image from 'next/image';
 import Link from "next/link";
-import Seo from "../../component/seo";
 
 export const dynamic = 'force-static';
+
+export const metadata = {
+  title: "Rupee Travel | Withdraw Vietnam local currency VND from ATM",
+  description: "Best ATM to withdraw VND with zero forex markup in Vietnam for Indians",
+  openGraph: {
+    title: "Rupee Travel | Withdraw Vietnam local currency VND from ATM",
+    description: "Best ATM to withdraw VND with zero forex markup in Vietnam for Indians",
+    url: "https://www.rupeetravel.com/withdraw-vietnam-currency-atm",
+    siteName: "Rupee Travel",
+    images: [
+      {
+        url: "https://ik.imagekit.io/rupeetravel/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Rupee Travel | Withdraw Vietnam local currency VND from ATM | Rupee Travel",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rupee Travel | Withdraw Vietnam local currency VND from ATM",
+    description: "Best ATM to withdraw VND with zero forex markup in Vietnam for Indians",
+    site: "@harsh_vardhhan",
+    creator: "@harsh_vardhhan",
+    images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
+  },
+  robots: "index,follow",
+  alternates: { canonical: "https://www.rupeetravel.com/withdraw-vietnam-currency-atm" },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 // Static data that was previously in getStaticProps
 const features = [
@@ -39,11 +72,6 @@ const features = [
 export default function Home() {
   return (
     <>
-      <Seo
-        title="Rupee Travel | Withdraw Vietnam local currency VND from ATM"
-        description="Best ATM to withdraw VND with zero forex markup in Vietnam for Indians"
-        canonical={"https://www.rupeetravel.com/withdraw-vietnam-currency-atm"}
-      />
       <div className="min-h-screen bg-background">
         <Header title={"Withdraw Vietnam currency for next visit"} />
         <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">

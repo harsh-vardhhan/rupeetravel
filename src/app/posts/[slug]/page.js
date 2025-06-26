@@ -18,13 +18,44 @@ export async function generateMetadata({ params }) {
     'title',
     'excerpt',
     'canonical',
+    'ogImage',
+    'coverImage',
   ])
   if (!post) return {}
+  const ogImage = post.ogImage || post.coverImage || "https://ik.imagekit.io/rupeetravel/preview.png";
   return {
     title: post.title,
     description: post.excerpt,
     alternates: { canonical: post.canonical },
-  }
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: post.canonical,
+      siteName: "Rupee Travel",
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: `${post.title} | Rupee Travel`,
+        },
+      ],
+      locale: "en_IN",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      site: "@harsh_vardhhan",
+      creator: "@harsh_vardhhan",
+      images: [ogImage],
+    },
+    robots: "index,follow",
+    icons: {
+      icon: "/favicon.ico",
+    },
+  };
 }
 
 export default async function Page({ params }) {
@@ -46,12 +77,6 @@ export default async function Page({ params }) {
 
   return (
     <>
-      {/* Seo is handled by generateMetadata, but you can keep this for legacy support */}
-      <Seo
-        title={post.title}
-        description={post.excerpt}
-        canonical={post.canonical}
-      />
       <Layout>
         <Container>
           <Header />

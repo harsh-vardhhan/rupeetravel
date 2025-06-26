@@ -9,7 +9,6 @@ import {
   getRainColor,
   getAllWeatherDestinationOptions,
 } from "../../lib/flightWeather";
-import Seo from "../../component/seo";
 import { cn } from "../../components/lib/utils";
 import Link from "next/link";
 
@@ -67,6 +66,40 @@ const SortButton = ({ currentSortBy, sortByValue, label, params }) => {
       {label}
     </Link>
   );
+};
+
+export const metadata = {
+  title: "Flights from New Delhi to Vietnam",
+  description: "Find and compare the best flights from New Delhi to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+  openGraph: {
+    title: "Flights from New Delhi to Vietnam",
+    description: "Find and compare the best flights from New Delhi to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+    url: "https://www.rupeetravel.com/new-delhi-to-vietnam-flight",
+    siteName: "Rupee Travel",
+    images: [
+      {
+        url: "https://ik.imagekit.io/rupeetravel/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Flights from New Delhi to Vietnam | Rupee Travel",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Flights from New Delhi to Vietnam",
+    description: "Find and compare the best flights from New Delhi to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+    site: "@harsh_vardhhan",
+    creator: "@harsh_vardhhan",
+    images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
+  },
+  robots: "index,follow",
+  alternates: { canonical: "https://www.rupeetravel.com/new-delhi-to-vietnam-flight" },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
@@ -161,11 +194,6 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <Seo
-        title="Flights from New Delhi to Vietnam"
-        description="Find and compare the best flights from New Delhi to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight"
-        canonical="https://www.rupeetravel.com/new-delhi-to-vietnam-flight"
-      />
       <Header title="Flights from New Delhi to Vietnam" />
       <div className="px-4 py-6 max-w-7xl mx-auto">
         <div className="mb-6">

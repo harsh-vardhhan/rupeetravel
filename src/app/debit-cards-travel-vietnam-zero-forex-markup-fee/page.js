@@ -10,9 +10,8 @@ import { Badge } from "../../components/ui/server/badge";
 import { Button } from "../../components/ui/server/button";
 import { Alert, AlertDescription } from "../../components/ui/server/alert";
 import { AlertCircle, Info } from "lucide-react";
-import Seo from "../../component/seo";
-import StructuredData from "../../component/structuredData";
 import Link from "next/link";
+import StructuredData from "../../components/ui/server/structured-data";
 
 export const dynamic = 'force-static';
 
@@ -76,17 +75,44 @@ const structuredData = {
   },
 };
 
+export const metadata = {
+  title: "Rupee Travel | debit card with zero forex markup for travel in Vietnam",
+  description: "Best debit card with zero forex markup for foreign travel in Vietnam for Indians",
+  openGraph: {
+    title: "Rupee Travel | debit card with zero forex markup for travel in Vietnam",
+    description: "Best debit card with zero forex markup for foreign travel in Vietnam for Indians",
+    url: "https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee",
+    siteName: "Rupee Travel",
+    images: [
+      {
+        url: "https://ik.imagekit.io/rupeetravel/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Rupee Travel | debit card with zero forex markup for travel in Vietnam | Rupee Travel",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rupee Travel | debit card with zero forex markup for travel in Vietnam",
+    description: "Best debit card with zero forex markup for foreign travel in Vietnam for Indians",
+    site: "@harsh_vardhhan",
+    creator: "@harsh_vardhhan",
+    images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
+  },
+  robots: "index,follow",
+  alternates: { canonical: "https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee" },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 export default function Home() {
   return (
     <>
       <StructuredData data={structuredData} />
-      <Seo
-        title="Rupee Travel | debit card with zero forex markup for travel in Vietnam"
-        description="Best debit card with zero forex markup for foreign travel in Vietnam for Indians"
-        canonical={
-          "https://www.rupeetravel.com/debit-cards-travel-vietnam-zero-forex-markup-fee"
-        }
-      />
       <div className="min-h-screen bg-background">
         <Header title={"Indian Debit Cards for Vietnam"} />
         <main className="container max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">

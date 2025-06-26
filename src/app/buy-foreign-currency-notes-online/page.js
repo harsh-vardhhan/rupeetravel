@@ -19,7 +19,6 @@ import {
   TableHeader,
   TableRow,
 } from "../../components/ui/server/table";
-import Seo from "../../component/seo";
 import StructuredData from "../../component/structuredData";
 import Link from "next/link";
 
@@ -136,17 +135,44 @@ const ComparisonMatrix = () => (
   </Card>
 );
 
+export const metadata = {
+  title: "Rupee Travel | Buy forex currency notes in India",
+  description: "best foreign currency exchange online in India",
+  openGraph: {
+    title: "Rupee Travel | Buy forex currency notes in India",
+    description: "best foreign currency exchange online in India",
+    url: "https://www.rupeetravel.com/buy-foreign-currency-notes-online",
+    siteName: "Rupee Travel",
+    images: [
+      {
+        url: "https://ik.imagekit.io/rupeetravel/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Rupee Travel | Buy forex currency notes in India | Rupee Travel",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rupee Travel | Buy forex currency notes in India",
+    description: "best foreign currency exchange online in India",
+    site: "@harsh_vardhhan",
+    creator: "@harsh_vardhhan",
+    images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
+  },
+  robots: "index,follow",
+  alternates: { canonical: "https://www.rupeetravel.com/buy-foreign-currency-notes-online" },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 export default function Home() {
   return (
     <>
       <StructuredData data={structuredData} />
-      <Seo
-        title="Rupee Travel | Buy forex currency notes in India"
-        description="best foreign currency exchange online in India"
-        canonical={
-          "https://www.rupeetravel.com/buy-foreign-currency-notes-online"
-        }
-      />
       <div className="min-h-screen bg-background">
         <Header title={"Buy foreign currency notes"} />
         <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">

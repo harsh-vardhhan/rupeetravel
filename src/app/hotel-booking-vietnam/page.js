@@ -6,10 +6,43 @@ import {
 } from "../../components/ui/server/card";
 import { Button } from "../../components/ui/server/button";
 import { Badge } from "../../components/ui/server/badge";
-import Seo from "../../component/seo";
 import Link from "next/link";
 
 export const dynamic = 'force-static';
+
+export const metadata = {
+  title: "Rupee Travel | Lowest Vietnam hotel room price",
+  description: "Vietnam cheap hotels",
+  openGraph: {
+    title: "Rupee Travel | Lowest Vietnam hotel room price",
+    description: "Vietnam cheap hotels",
+    url: "https://www.rupeetravel.com/hotel-booking-vietnam",
+    siteName: "Rupee Travel",
+    images: [
+      {
+        url: "https://ik.imagekit.io/rupeetravel/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Rupee Travel | Lowest Vietnam hotel room price | Rupee Travel",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rupee Travel | Lowest Vietnam hotel room price",
+    description: "Vietnam cheap hotels",
+    site: "@harsh_vardhhan",
+    creator: "@harsh_vardhhan",
+    images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
+  },
+  robots: "index,follow",
+  alternates: { canonical: "https://www.rupeetravel.com/hotel-booking-vietnam" },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 // Define the hotels data directly in the component since it's static
 const hotels = [
@@ -68,11 +101,6 @@ const hotels = [
 export default function Home() {
   return (
     <>
-      <Seo
-        title="Rupee Travel | Lowest Vietnam hotel room price"
-        description="Vietnam cheap hotels"
-        canonical={"https://www.rupeetravel.com/hotel-booking-vietnam"}
-      />
       <div className="min-h-screen bg-background">
         <Header title={"Booking hotel in Da Nang, Vietnam"} />
         <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">

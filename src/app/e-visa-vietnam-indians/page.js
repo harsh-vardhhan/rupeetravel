@@ -1,4 +1,3 @@
-
 import Header from "../../components/ui/server/header";
 import {
   Card,
@@ -7,7 +6,6 @@ import {
   CardFooter,
 } from "../../components/ui/server/card";
 import { Button } from "../../components/ui/server/button";
-import Seo from "../../component/seo";
 import StructuredData from "../../component/structuredData";
 
 export const dynamic = 'force-static';
@@ -55,15 +53,44 @@ const structuredData = {
   }
 };
 
+export const metadata = {
+  title: "Rupee Travel | Apply for Vietnam e-visa",
+  description: "Vietnam e-visa application. Vietnam visa for Indians.",
+  openGraph: {
+    title: "Rupee Travel | Apply for Vietnam e-visa",
+    description: "Vietnam e-visa application. Vietnam visa for Indians.",
+    url: "https://www.rupeetravel.com/e-visa-vietnam-indians",
+    siteName: "Rupee Travel",
+    images: [
+      {
+        url: "https://ik.imagekit.io/rupeetravel/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Rupee Travel | Apply for Vietnam e-visa | Rupee Travel",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rupee Travel | Apply for Vietnam e-visa",
+    description: "Vietnam e-visa application. Vietnam visa for Indians.",
+    site: "@harsh_vardhhan",
+    creator: "@harsh_vardhhan",
+    images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
+  },
+  robots: "index,follow",
+  alternates: { canonical: "https://www.rupeetravel.com/e-visa-vietnam-indians" },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 export default function Home() {
   return (
     <>
       <StructuredData data={structuredData} />
-      <Seo
-        title="Rupee Travel | Apply for Vietnam e-visa"
-        description="Vietnam e-visa application. Vietnam visa for Indians."
-        canonical={"https://www.rupeetravel.com/e-visa-vietnam-indians"}
-      />
       <div className="min-h-screen bg-background">
         <Header title={"Apply E-Visa for Vietnam"} />
         <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
