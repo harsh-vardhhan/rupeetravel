@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import Header from "../../components/ui/server/header";
 import {
   Card,
@@ -20,7 +20,7 @@ import {
 import StructuredData from "../../component/structuredData";
 import Link from "next/link";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 // Static data that was previously in getStaticProps
 const features = [
@@ -85,7 +85,9 @@ const structuredData = {
 const ComparisonMatrix = () => (
   <Card className="mt-8">
     <CardHeader>
-      <h2 className="text-xl font-bold">Only Order USD currency notes in India</h2>
+      <h2 className="text-xl font-bold">
+        Only Order USD currency notes in India
+      </h2>
     </CardHeader>
     <CardContent>
       <div className="overflow-x-auto">
@@ -161,7 +163,9 @@ export const metadata = {
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
-  alternates: { canonical: "https://www.rupeetravel.com/buy-foreign-currency-notes-online" },
+  alternates: {
+    canonical: "https://www.rupeetravel.com/buy-foreign-currency-notes-online",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -181,7 +185,7 @@ export default function Home() {
                   <h2 className="text-xl font-bold">
                     BookMyForex for USD currency notes
                   </h2>
-                  <Badge 
+                  <Badge
                     variant="secondary"
                     className="bg-teal-100 text-teal-800"
                   >
@@ -202,32 +206,28 @@ export default function Home() {
                   </div>
                   <div className="space-y-2">
                     {features.map((feature) => (
-                      <div key={feature.item} className="flex items-start gap-2">
-                        <p className="text-sm">
-                          {feature.title}
-                        </p>
+                      <div
+                        key={feature.item}
+                        className="flex items-start gap-2"
+                      >
+                        <p className="text-sm">{feature.title}</p>
                       </div>
                     ))}
                   </div>
                 </div>
               </CardContent>
               <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
-                <a 
-                  href="https://www.bookmyforex.com/"
-                  className="w-full"
-                >
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  >
+                <a href="https://www.bookmyforex.com/" className="w-full">
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
                     Book My Forex
                   </Button>
                 </a>
-                <Link 
+                <Link
                   href="/posts/india-cross-border-finance"
                   className="w-full"
                 >
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="w-full border-green-600 text-green-600 hover:bg-green-50"
                   >
                     Read More

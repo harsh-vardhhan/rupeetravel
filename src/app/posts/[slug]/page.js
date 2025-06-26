@@ -1,48 +1,44 @@
-import Container from '../../../component/container'
-import PostBody from '../../../component/post-body'
-import Header from '../../../components/ui/server/header'
-import PostHeader from '../../../component/post-header'
-import Layout from '../../../component/layout'
-import { getPostBySlug, getAllPosts } from '../../../lib/api'
-import markdownToHtml from '../../../lib/markdownToHtml'
-import { notFound } from 'next/navigation'
-import Seo from '../../../component/seo'
+import Container from "../../../component/container";
+import PostBody from "../../../component/post-body";
+import Header from "../../../components/ui/server/header";
+import PostHeader from "../../../component/post-header";
+import Layout from "../../../component/layout";
+import { getPostBySlug, getAllPosts } from "../../../lib/api";
+import markdownToHtml from "../../../lib/markdownToHtml";
+import { notFound } from "next/navigation";
+import Seo from "../../../component/seo";
 
 export async function generateStaticParams() {
-  const posts = getAllPosts(['slug'])
-  return posts.map((post) => ({ slug: post.slug }))
+  const posts = getAllPosts(["slug"]);
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }) {
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'excerpt',
-    'canonical',
-  ])
-  if (!post) return {}
+  const post = getPostBySlug(params.slug, ["title", "excerpt", "canonical"]);
+  if (!post) return {};
   return {
     title: post.title,
     description: post.excerpt,
     alternates: { canonical: post.canonical },
-  }
+  };
 }
 
 export default async function Page({ params }) {
   const post = getPostBySlug(params.slug, [
-    'title',
-    'excerpt',
-    'date',
-    'slug',
-    'author',
-    'canonical',
-    'content',
-    'ogImage',
-    'coverImage',
-  ])
+    "title",
+    "excerpt",
+    "date",
+    "slug",
+    "author",
+    "canonical",
+    "content",
+    "ogImage",
+    "coverImage",
+  ]);
   if (!post?.slug) {
-    notFound()
+    notFound();
   }
-  const content = await markdownToHtml(post.content || '')
+  const content = await markdownToHtml(post.content || "");
 
   return (
     <>
@@ -67,5 +63,5 @@ export default async function Page({ params }) {
         </Container>
       </Layout>
     </>
-  )
-} 
+  );
+}
