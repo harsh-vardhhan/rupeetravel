@@ -1,8 +1,7 @@
 import Head from "next/head";
 
 const DOMAIN = "https://www.rupeetravel.com/";
-const DEFAULT_OG_IMAGE =
-  "https://ik.imagekit.io/rupeetravel/preview.png";
+const DEFAULT_OG_IMAGE = "https://ik.imagekit.io/rupeetravel/preview.png";
 
 export default function Seo({
   title = "Rupee Travel | Vietnam trip for Indians",
