@@ -1,22 +1,20 @@
 import Header from "../../components/ui/server/header";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-} from "../../components/ui/server/card";
+import { Card, CardContent, CardFooter } from "../../components/ui/server/card";
 import { Button } from "../../components/ui/server/button";
 import { Badge } from "../../components/ui/server/badge";
-import Image from 'next/image';
+import Image from "next/image";
 import Link from "next/link";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export const metadata = {
   title: "Rupee Travel | Withdraw Vietnam local currency VND from ATM",
-  description: "Best ATM to withdraw VND with zero forex markup in Vietnam for Indians",
+  description:
+    "Best ATM to withdraw VND with zero forex markup in Vietnam for Indians",
   openGraph: {
     title: "Rupee Travel | Withdraw Vietnam local currency VND from ATM",
-    description: "Best ATM to withdraw VND with zero forex markup in Vietnam for Indians",
+    description:
+      "Best ATM to withdraw VND with zero forex markup in Vietnam for Indians",
     url: "https://www.rupeetravel.com/withdraw-vietnam-currency-atm",
     siteName: "Rupee Travel",
     images: [
@@ -33,13 +31,16 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Rupee Travel | Withdraw Vietnam local currency VND from ATM",
-    description: "Best ATM to withdraw VND with zero forex markup in Vietnam for Indians",
+    description:
+      "Best ATM to withdraw VND with zero forex markup in Vietnam for Indians",
     site: "@harsh_vardhhan",
     creator: "@harsh_vardhhan",
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
-  alternates: { canonical: "https://www.rupeetravel.com/withdraw-vietnam-currency-atm" },
+  alternates: {
+    canonical: "https://www.rupeetravel.com/withdraw-vietnam-currency-atm",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -91,7 +92,7 @@ export default function Home() {
                   <h2 className="text-lg font-semibold">
                     Withdraw VND for next visit
                   </h2>
-                  <Badge 
+                  <Badge
                     variant="secondary"
                     className="bg-teal-200 text-teal-900"
                   >
@@ -108,9 +109,7 @@ export default function Home() {
               </CardContent>
               <CardFooter className="flex justify-center pt-2">
                 <Link href="/atm-vietnam-zero-forex-markup">
-                  <Button 
-                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base"
-                  >
+                  <Button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base">
                     Ocean Bank ATM
                   </Button>
                 </Link>

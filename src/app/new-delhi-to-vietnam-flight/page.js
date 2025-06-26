@@ -70,10 +70,12 @@ const SortButton = ({ currentSortBy, sortByValue, label, params }) => {
 
 export const metadata = {
   title: "Flights from New Delhi to Vietnam",
-  description: "Find and compare the best flights from New Delhi to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+  description:
+    "Find and compare the best flights from New Delhi to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
   openGraph: {
     title: "Flights from New Delhi to Vietnam",
-    description: "Find and compare the best flights from New Delhi to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+    description:
+      "Find and compare the best flights from New Delhi to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
     url: "https://www.rupeetravel.com/new-delhi-to-vietnam-flight",
     siteName: "Rupee Travel",
     images: [
@@ -90,13 +92,16 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Flights from New Delhi to Vietnam",
-    description: "Find and compare the best flights from New Delhi to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+    description:
+      "Find and compare the best flights from New Delhi to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
     site: "@harsh_vardhhan",
     creator: "@harsh_vardhhan",
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
-  alternates: { canonical: "https://www.rupeetravel.com/new-delhi-to-vietnam-flight" },
+  alternates: {
+    canonical: "https://www.rupeetravel.com/new-delhi-to-vietnam-flight",
+  },
   icons: {
     icon: "/favicon.ico",
   },

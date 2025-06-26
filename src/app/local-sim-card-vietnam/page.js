@@ -1,11 +1,8 @@
 import Header from "../../components/ui/server/header";
-import {
-  Card,
-  CardContent,
-} from "../../components/ui/server/card";
+import { Card, CardContent } from "../../components/ui/server/card";
 import { Badge } from "../../components/ui/server/badge";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export const metadata = {
   title: "Rupee Travel | Prepaid SIM cards for tourist",
@@ -35,7 +32,9 @@ export const metadata = {
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
-  alternates: { canonical: "https://www.rupeetravel.com/local-sim-card-vietnam" },
+  alternates: {
+    canonical: "https://www.rupeetravel.com/local-sim-card-vietnam",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -73,7 +72,7 @@ export default function Home() {
                   <h2 className="text-lg font-semibold">
                     Get local SIM card at airport
                   </h2>
-                  <Badge 
+                  <Badge
                     variant="secondary"
                     className="bg-teal-200 text-teal-900"
                   >

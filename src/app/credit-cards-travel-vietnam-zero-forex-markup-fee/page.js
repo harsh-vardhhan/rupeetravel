@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import Header from "../../components/ui/server/header";
 import {
   Card,
@@ -13,7 +13,7 @@ import { AlertCircle } from "lucide-react";
 import Link from "next/link";
 import StructuredData from "../../components/ui/server/structured-data";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 // Static data that was previously in getStaticProps
 const features = [
@@ -54,35 +54,39 @@ const features = [
 const structuredData = {
   "@context": "https://www.schema.org",
   "@type": "product",
-  "brand": "IDFC Bank",
-  "name": "IDCF First Wow Credit Card",
-  "image": "https://ik.imagekit.io/rupeetravel/credit-card.webp",
-  "category": "Credit Card",
-  "description": " Zero forex markup credit card",
-  "aggregateRating": {
+  brand: "IDFC Bank",
+  name: "IDCF First Wow Credit Card",
+  image: "https://ik.imagekit.io/rupeetravel/credit-card.webp",
+  category: "Credit Card",
+  description: " Zero forex markup credit card",
+  aggregateRating: {
     "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "1"
+    ratingValue: "5",
+    reviewCount: "1",
   },
-  "offers": {
+  offers: {
     "@type": "Offer",
-    "priceCurrency": "INR",
-    "price": "0",
-    "itemCondition": "http://schema.org/UsedCondition",
-    "availability": "http://schema.org/InStock",
-    "seller": {
+    priceCurrency: "INR",
+    price: "0",
+    itemCondition: "http://schema.org/UsedCondition",
+    availability: "http://schema.org/InStock",
+    seller: {
       "@type": "Bank",
-      "name": "IDFC Bank"
+      name: "IDFC Bank",
     },
-  }
+  },
 };
 
 export const metadata = {
-  title: "Rupee Travel | credit card with zero international transaction charges",
-  description: "Best credit card for international travel. Apply IDFC credit card.",
+  title:
+    "Rupee Travel | credit card with zero international transaction charges",
+  description:
+    "Best credit card for international travel. Apply IDFC credit card.",
   openGraph: {
-    title: "Rupee Travel | credit card with zero international transaction charges",
-    description: "Best credit card for international travel. Apply IDFC credit card.",
+    title:
+      "Rupee Travel | credit card with zero international transaction charges",
+    description:
+      "Best credit card for international travel. Apply IDFC credit card.",
     url: "https://www.rupeetravel.com/credit-cards-travel-vietnam-zero-forex-markup-fee",
     siteName: "Rupee Travel",
     images: [
@@ -98,14 +102,19 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rupee Travel | credit card with zero international transaction charges",
-    description: "Best credit card for international travel. Apply IDFC credit card.",
+    title:
+      "Rupee Travel | credit card with zero international transaction charges",
+    description:
+      "Best credit card for international travel. Apply IDFC credit card.",
     site: "@harsh_vardhhan",
     creator: "@harsh_vardhhan",
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
-  alternates: { canonical: "https://www.rupeetravel.com/credit-cards-travel-vietnam-zero-forex-markup-fee" },
+  alternates: {
+    canonical:
+      "https://www.rupeetravel.com/credit-cards-travel-vietnam-zero-forex-markup-fee",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -125,7 +134,7 @@ export default function Home() {
                   <h2 className="text-xl font-bold">
                     IDFC First Wow credit card
                   </h2>
-                  <Badge 
+                  <Badge
                     variant="secondary"
                     className="bg-teal-100 text-teal-800"
                   >
@@ -144,32 +153,31 @@ export default function Home() {
                   />
                   <div className="space-y-2">
                     {features.map((feature) => (
-                      <div key={feature.item} className="flex items-start gap-2">
-                        <p className="text-sm">
-                          {feature.title}
-                        </p>
+                      <div
+                        key={feature.item}
+                        className="flex items-start gap-2"
+                      >
+                        <p className="text-sm">{feature.title}</p>
                       </div>
                     ))}
                   </div>
                 </div>
               </CardContent>
               <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
-                <a 
+                <a
                   href="https://www.idfcfirstbank.com/credit-card/credit-card-against-fixed-deposits"
                   className="w-full"
                 >
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  >
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
                     Apply Now
                   </Button>
                 </a>
-                <Link 
+                <Link
                   href="/posts/india-cross-border-finance"
                   className="w-full"
                 >
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="w-full border-green-600 text-green-600 hover:bg-green-50"
                   >
                     Learn More
@@ -180,7 +188,7 @@ export default function Home() {
 
             <Card className="w-full">
               <CardHeader className="pb-2">
-                <Badge 
+                <Badge
                   variant="secondary"
                   className="bg-teal-100 text-teal-800"
                 >
@@ -188,11 +196,14 @@ export default function Home() {
                 </Badge>
               </CardHeader>
               <CardContent className="space-y-4">
-                <Alert variant="destructive" className="bg-red-50 border-red-200 text-red-800">
+                <Alert
+                  variant="destructive"
+                  className="bg-red-50 border-red-200 text-red-800"
+                >
                   <AlertCircle className="h-4 w-4" />
                   <AlertDescription>
-                    Please avoid Amex credit cards, since they are hardly accepted
-                    anywhere in Vietnam.
+                    Please avoid Amex credit cards, since they are hardly
+                    accepted anywhere in Vietnam.
                   </AlertDescription>
                 </Alert>
                 <Image

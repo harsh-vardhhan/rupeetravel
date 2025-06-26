@@ -1,7 +1,7 @@
 import Header from "../../components/ui/server/header";
 import { Tweet } from "react-tweet";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export const metadata = {
   title: "Rupee Travel | Da Nang Vietnam hotel beach experiences",
@@ -31,7 +31,9 @@ export const metadata = {
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
-  alternates: { canonical: "https://www.rupeetravel.com/da-nang-vietnam-experiences" },
+  alternates: {
+    canonical: "https://www.rupeetravel.com/da-nang-vietnam-experiences",
+  },
   icons: {
     icon: "/favicon.ico",
   },

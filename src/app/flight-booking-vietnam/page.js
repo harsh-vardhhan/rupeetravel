@@ -10,7 +10,7 @@ import { Badge } from "../../components/ui/server/badge";
 import { Alert, AlertDescription } from "../../components/ui/server/alert";
 import { AlertCircle } from "lucide-react";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export const metadata = {
   title: "Rupee Travel | India to Vietnam flight ticket",
@@ -40,7 +40,9 @@ export const metadata = {
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
-  alternates: { canonical: "https://www.rupeetravel.com/flight-booking-vietnam" },
+  alternates: {
+    canonical: "https://www.rupeetravel.com/flight-booking-vietnam",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -142,7 +144,9 @@ const ComparisonMatrix = () => (
           </thead>
           <tbody>
             <tr className="border-b">
-              <td className="p-4">Checked-in luggage cost included in ticket price</td>
+              <td className="p-4">
+                Checked-in luggage cost included in ticket price
+              </td>
               <td className="p-4">❌</td>
               <td className="p-4">✅</td>
             </tr>
@@ -152,7 +156,9 @@ const ComparisonMatrix = () => (
               <td className="p-4">✅</td>
             </tr>
             <tr className="border-b">
-              <td className="p-4">Direct flight to Vietnam from India (0 stops)</td>
+              <td className="p-4">
+                Direct flight to Vietnam from India (0 stops)
+              </td>
               <td className="p-4">✅</td>
               <td className="p-4">❌</td>
             </tr>
@@ -179,10 +185,7 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-bold">{cardTitle}</h2>
-          <Badge 
-            variant="secondary"
-            className="bg-teal-200 text-teal-900"
-          >
+          <Badge variant="secondary" className="bg-teal-200 text-teal-900">
             Personally used
           </Badge>
         </div>
@@ -191,21 +194,14 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
         <div className="space-y-2">
           {features.map((feature) => (
             <div key={feature.item} className="flex items-start gap-2">
-              <p className="text-sm">
-                {feature.title}
-              </p>
+              <p className="text-sm">{feature.title}</p>
             </div>
           ))}
         </div>
       </CardContent>
       <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
-        <a 
-          href={buttonLink}
-          className="w-full"
-        >
-          <Button 
-            className="w-full bg-green-600 hover:bg-green-700 text-white"
-          >
+        <a href={buttonLink} className="w-full">
+          <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
             {buttonName}
           </Button>
         </a>
@@ -235,7 +231,7 @@ export default function Home() {
             />
             <Card className="w-full">
               <CardContent className="pt-6">
-                <Badge 
+                <Badge
                   variant="secondary"
                   className="bg-orange-200 text-orange-900 mb-4"
                 >
@@ -244,9 +240,9 @@ export default function Home() {
                 <Alert className="bg-green-100 border-green-300 text-green-900">
                   <AlertCircle className="h-4 w-4" />
                   <AlertDescription>
-                    Please ensure no mistakes are made in filling personal details
-                    during booking or else you might have to pay ~5,000 for fixing
-                    info at airport.
+                    Please ensure no mistakes are made in filling personal
+                    details during booking or else you might have to pay ~5,000
+                    for fixing info at airport.
                   </AlertDescription>
                 </Alert>
               </CardContent>
