@@ -106,8 +106,8 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
   const resolvedSearchParams = await searchParams;
 
   const page = parseInt(resolvedSearchParams.page) || 1;
+  const source = resolvedSearchParams.source || "New Delhi";
   const destination = resolvedSearchParams.destination || "Hanoi";
-  const source = "New Delhi"; // Static for this page
   const drySeason = resolvedSearchParams.drySeason === "1";
   const priceUnder10k = resolvedSearchParams.priceUnder10k === "1";
   const airlineGroup = resolvedSearchParams.airlineGroup || "all";
@@ -125,18 +125,23 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
 
   const limit = 20;
 
-  const sourceOptions = [
+  // Define city options
+  const indiaCities = [
     { value: "New Delhi", label: "New Delhi, India", country: "India" },
   ];
-
-  const destinationOptions = [
+  const vietnamCities = [
     { value: "Hanoi", label: "Hanoi, Vietnam", country: "Vietnam" },
-    {
-      value: "Ho Chi Minh City",
-      label: "Ho Chi Minh City, Vietnam",
-      country: "Vietnam",
-    },
+    { value: "Ho Chi Minh City", label: "Ho Chi Minh City, Vietnam", country: "Vietnam" },
   ];
+
+  let sourceOptions, destinationOptions;
+  if (indiaCities.find(opt => opt.value === source)) {
+    sourceOptions = indiaCities;
+    destinationOptions = vietnamCities;
+  } else {
+    sourceOptions = vietnamCities;
+    destinationOptions = indiaCities;
+  }
 
   const getCityFullName = (city) => {
     const cityMap = {

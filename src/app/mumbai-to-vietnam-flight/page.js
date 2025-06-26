@@ -106,8 +106,8 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
   const resolvedSearchParams = await searchParams;
 
   const page = parseInt(resolvedSearchParams.page) || 1;
+  const source = resolvedSearchParams.source || "Mumbai";
   const destination = resolvedSearchParams.destination || "Hanoi";
-  const source = "Mumbai"; // Static for this page
   const drySeason = resolvedSearchParams.drySeason === "1";
   const priceUnder10k = resolvedSearchParams.priceUnder10k === "1";
   const airlineGroup = resolvedSearchParams.airlineGroup || "all";
@@ -125,18 +125,23 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
 
   const limit = 20;
 
-  const sourceOptions = [
+  // Define city options
+  const indiaCities = [
     { value: "Mumbai", label: "Mumbai, India", country: "India" },
   ];
-
-  const destinationOptions = [
+  const vietnamCities = [
     { value: "Hanoi", label: "Hanoi, Vietnam", country: "Vietnam" },
-    {
-      value: "Ho Chi Minh City",
-      label: "Ho Chi Minh City, Vietnam",
-      country: "Vietnam",
-    },
+    { value: "Ho Chi Minh City", label: "Ho Chi Minh City, Vietnam", country: "Vietnam" },
   ];
+
+  let sourceOptions, destinationOptions;
+  if (indiaCities.find(opt => opt.value === source)) {
+    sourceOptions = indiaCities;
+    destinationOptions = vietnamCities;
+  } else {
+    sourceOptions = vietnamCities;
+    destinationOptions = indiaCities;
+  }
 
   const getCityFullName = (city) => {
     const cityMap = {
