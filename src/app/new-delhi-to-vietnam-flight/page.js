@@ -346,7 +346,14 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
               limit={limit}
               pageNumbers={pageNumbers}
               baseHref="/new-delhi-to-vietnam-flight"
-              queryParams={{ destination, source }}
+              queryParams={{
+                destination,
+                source,
+                airlineGroup,
+                sortBy,
+                ...(drySeason ? { drySeason: "1" } : {}),
+                ...(priceUnder10k ? { priceUnder10k: "1" } : {}),
+              }}
               Button={Button}
             />
           </>

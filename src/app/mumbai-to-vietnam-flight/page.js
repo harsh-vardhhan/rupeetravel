@@ -345,7 +345,14 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
               limit={limit}
               pageNumbers={pageNumbers}
               baseHref="/mumbai-to-vietnam-flight"
-              queryParams={{ destination, source }}
+              queryParams={{
+                destination,
+                source,
+                airlineGroup,
+                sortBy,
+                ...(drySeason ? { drySeason: "1" } : {}),
+                ...(priceUnder10k ? { priceUnder10k: "1" } : {}),
+              }}
               Button={Button}
             />
           </>
