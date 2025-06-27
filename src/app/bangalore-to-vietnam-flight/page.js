@@ -70,10 +70,12 @@ const SortButton = ({ currentSortBy, sortByValue, label, params }) => {
 
 export const metadata = {
   title: "Flights from Bangalore to Vietnam",
-  description: "Find and compare the best flights from Bangalore to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+  description:
+    "Find and compare the best flights from Bangalore to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
   openGraph: {
     title: "Flights from Bangalore to Vietnam",
-    description: "Find and compare the best flights from Bangalore to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+    description:
+      "Find and compare the best flights from Bangalore to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
     url: "https://www.rupeetravel.com/bangalore-to-vietnam-flight",
     siteName: "Rupee Travel",
     images: [
@@ -90,13 +92,16 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Flights from Bangalore to Vietnam",
-    description: "Find and compare the best flights from Bangalore to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+    description:
+      "Find and compare the best flights from Bangalore to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
     site: "@harsh_vardhhan",
     creator: "@harsh_vardhhan",
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
-  alternates: { canonical: "https://www.rupeetravel.com/bangalore-to-vietnam-flight" },
+  alternates: {
+    canonical: "https://www.rupeetravel.com/bangalore-to-vietnam-flight",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -130,11 +135,15 @@ export default async function BangaloreToVietnamFlightPage({ searchParams }) {
     { value: "Bangalore", label: "Bangalore, India", country: "India" },
   ];
   const vietnamCities = [
-    { value: "Ho Chi Minh City", label: "Ho Chi Minh City, Vietnam", country: "Vietnam" },
+    {
+      value: "Ho Chi Minh City",
+      label: "Ho Chi Minh City, Vietnam",
+      country: "Vietnam",
+    },
   ];
 
   let sourceOptions, destinationOptions;
-  if (indiaCities.find(opt => opt.value === source)) {
+  if (indiaCities.find((opt) => opt.value === source)) {
     sourceOptions = indiaCities;
     destinationOptions = vietnamCities;
   } else {
@@ -144,7 +153,7 @@ export default async function BangaloreToVietnamFlightPage({ searchParams }) {
 
   const getCityFullName = (city) => {
     const cityMap = {
-      "Bangalore": "Bangalore, India",
+      Bangalore: "Bangalore, India",
       Hanoi: "Hanoi, Vietnam",
       "Ho Chi Minh City": "Ho Chi Minh City, Vietnam",
       "Da Nang": "Da Nang, Vietnam",
@@ -179,7 +188,7 @@ export default async function BangaloreToVietnamFlightPage({ searchParams }) {
 
   const getSourceCode = (city) => {
     const codeMap = {
-      "Bangalore": "BLR",
+      Bangalore: "BLR",
       Hanoi: "HAN",
       "Ho Chi Minh City": "SGN",
     };
@@ -188,7 +197,7 @@ export default async function BangaloreToVietnamFlightPage({ searchParams }) {
 
   const getDestinationCode = (city) => {
     const codeMap = {
-      "Bangalore": "BLR",
+      Bangalore: "BLR",
       Mumbai: "BOM",
       Hanoi: "HAN",
       "Ho Chi Minh City": "SGN",
@@ -360,4 +369,4 @@ export default async function BangaloreToVietnamFlightPage({ searchParams }) {
       </div>
     </main>
   );
-} 
+}
