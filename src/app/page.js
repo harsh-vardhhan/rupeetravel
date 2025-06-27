@@ -191,6 +191,14 @@ const flights = [
     tagColor: `teal`,
     link: `/mumbai-to-vietnam-flight`,
   },
+  {
+    key: 3,
+    heading: ` Bangalore to Vietnam flights`,
+    subHeading: ` Cheapest flights from Bangalore to Vietnam flights`,
+    tagText: `Flights`,
+    tagColor: `teal`,
+    link: `/bangalore-to-vietnam-flight`,
+  },
 ];
 
 export const metadata = {
