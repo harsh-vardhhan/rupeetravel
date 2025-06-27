@@ -27,12 +27,7 @@ async function getFlights(searchParams) {
     }
   });
 
-  const res = await fetch(url.toString(), {
-    next: {
-      revalidate: 43200, // 12 hours in seconds
-      tags: ["flights"],
-    },
-  });
+  const res = await fetch(url.toString());
 
   if (!res.ok) {
     throw new Error("Failed to fetch flights");
@@ -102,7 +97,10 @@ export const metadata = {
   },
 };
 
+export const revalidate = false;
+
 export default async function MumbaiToVietnamFlightPage({ searchParams }) {
+  // Use a resolvedSearchParams variable for clarity
   const resolvedSearchParams = await searchParams;
 
   const page = parseInt(resolvedSearchParams.page) || 1;
