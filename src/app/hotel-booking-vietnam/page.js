@@ -1,14 +1,10 @@
 import Header from "../../components/ui/server/header";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-} from "../../components/ui/server/card";
+import { Card, CardContent, CardFooter } from "../../components/ui/server/card";
 import { Button } from "../../components/ui/server/button";
 import { Badge } from "../../components/ui/server/badge";
 import Link from "next/link";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export const metadata = {
   title: "Rupee Travel | Lowest Vietnam hotel room price",
@@ -38,7 +34,9 @@ export const metadata = {
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
-  alternates: { canonical: "https://www.rupeetravel.com/hotel-booking-vietnam" },
+  alternates: {
+    canonical: "https://www.rupeetravel.com/hotel-booking-vietnam",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -84,17 +82,17 @@ const hotels = [
   {
     item: 8,
     name: "Sekong Hotel Da Nang",
-    contact: "https://facebook.com/sekonghoteldanang"
+    contact: "https://facebook.com/sekonghoteldanang",
   },
   {
     item: 9,
     name: "Cicilia Danang Hotel & Spa",
-    contact: "https://www.facebook.com/ciciliadanang/"
+    contact: "https://www.facebook.com/ciciliadanang/",
   },
   {
     item: 10,
     name: "Aria Grand Hotel Da Nang",
-    contact: "https://www.facebook.com/ariagrandhotel/"
+    contact: "https://www.facebook.com/ariagrandhotel/",
   },
 ];
 
@@ -110,7 +108,8 @@ export default function Home() {
                 <p className="text-sm">
                   🏝️ All hotels are located near the beach.
                   <br />
-                  🚕 You can request the hotel to send a taxi for you at the Da Nang airport.
+                  🚕 You can request the hotel to send a taxi for you at the Da
+                  Nang airport.
                 </p>
               </CardContent>
               <CardContent>
@@ -128,7 +127,7 @@ export default function Home() {
                           <td className="p-4">{hotel.name}</td>
                           <td className="p-4">
                             <a href={hotel.contact}>
-                              <Button 
+                              <Button
                                 variant="outline"
                                 size="sm"
                                 className="border-teal-600 text-teal-600 hover:bg-teal-50"
@@ -144,7 +143,7 @@ export default function Home() {
                 </div>
               </CardContent>
               <CardContent>
-                <Badge 
+                <Badge
                   variant="secondary"
                   className="bg-teal-200 text-teal-900 mb-4"
                 >
@@ -156,13 +155,11 @@ export default function Home() {
                 </p>
               </CardContent>
               <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
-                <a 
+                <a
                   href="https://www.facebook.com/lavencos.vn"
                   className="w-full"
                 >
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  >
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
                     Contact Lavencos
                   </Button>
                 </a>
