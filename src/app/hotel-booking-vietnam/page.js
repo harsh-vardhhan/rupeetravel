@@ -166,16 +166,6 @@ export default function Home() {
                     Contact Lavencos
                   </Button>
                 </a>
-                <Link 
-                  href="/da-nang-map"
-                  className="w-full"
-                >
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  >
-                    Da Nang Map
-                  </Button>
-                </Link>
               </CardFooter>
             </Card>
           </div>

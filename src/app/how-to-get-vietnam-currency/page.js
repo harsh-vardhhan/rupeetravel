@@ -366,11 +366,7 @@ export default function Home() {
                                 {' '}
                                 to Vietnam and buy VND from it at the airport.
                                 The USD is even accepted directly at many places in
-                                Vietnam, specially tourist hubs like
-                                {' '}
-                                <Link href='https://www.rupeetravel.com/da-nang-map' className="font-bold text-blue-600 hover:underline">
-                                    Da Nang
-                                </Link>.
+                                Vietnam, specially tourist hubs like Da Nang.
                             </p>
                         </div>
 
