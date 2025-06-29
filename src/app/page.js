@@ -178,7 +178,7 @@ const flights = [
   {
     key: 1,
     heading: ` New Delhi to Vietnam flights`,
-    subHeading: `Cheapest flights from New Delhi to Vietnam flights`,
+    subHeading: `Cheapest flights from New Delhi to Vietnam`,
     tagText: `Fights`,
     tagColor: `teal`,
     link: `/new-delhi-to-vietnam-flight`,
@@ -186,7 +186,7 @@ const flights = [
   {
     key: 2,
     heading: ` Mumbai to Vietnam flights`,
-    subHeading: ` Cheapest flights from Mumbai to Vietnam flights`,
+    subHeading: ` Cheapest flights from Mumbai to Vietnam`,
     tagText: `Flights`,
     tagColor: `teal`,
     link: `/mumbai-to-vietnam-flight`,
@@ -194,10 +194,18 @@ const flights = [
   {
     key: 3,
     heading: ` Bangalore to Vietnam flights`,
-    subHeading: ` Cheapest flights from Bangalore to Vietnam flights`,
+    subHeading: ` Cheapest flights from Bangalore to Vietnam`,
     tagText: `Flights`,
     tagColor: `teal`,
     link: `/bangalore-to-vietnam-flight`,
+  },
+  {
+    key: 4,
+    heading: ` Kolkata to Vietnam flights`,
+    subHeading: ` Cheapest flights from Kolkata to Vietnam`,
+    tagText: `Flights`,
+    tagColor: `teal`,
+    link: `/kolkata-to-vietnam-flight`,
   },
 ];
 

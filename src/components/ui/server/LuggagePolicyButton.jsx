@@ -23,6 +23,10 @@ const luggagePolicies = {
     carryOn: { weight: "7kg", free: true },
     checked: { weight: "25kg", free: true },
   },
+  "IndiGo": {
+    carryOn: { weight: "7kg", free: true },
+    checked: { weight: "30kg", free: true },
+  },
 };
 
 export default function LuggagePolicyButton({ airline }) {
