@@ -18,7 +18,7 @@ export async function GET(request) {
   // Airline group filter logic
   let airlineFilter = null;
   if (airlineGroup === "free") {
-    airlineFilter = sql`${schema.flight.airline} IN ('Vietnam Airlines', 'Air India')`;
+    airlineFilter = sql`${schema.flight.airline} IN ('Vietnam Airlines', 'Air India', 'IndiGo')`;
   } else if (airlineGroup === "paid") {
     airlineFilter = eq(schema.flight.airline, "VietJet Air");
   }
