@@ -1,6 +1,15 @@
-import { CurrencyConverterClient } from './CurrencyConverterClient';
+import { CurrencyConverterClient } from "./CurrencyConverterClient";
 
-const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base, quote, quoteSymbol }) => {
+const CurrencyConverter = ({
+  region,
+  amount,
+  currencyPair,
+  exchange,
+  rate,
+  base,
+  quote,
+  quoteSymbol,
+}) => {
   return (
     <>
       <h2 className="text-base md:text-lg font-semibold mt-4 md:mt-5">
