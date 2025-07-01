@@ -85,7 +85,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Flights from Mumbai to Vietnam",
-    description: "Find and compare the best flights from Mumbai to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+    description: "Mumbai to Hanoi flight | Mumbai to Ho Chi Minh City flight | Hanoi to Mumbai flight | Ho Chi Minh City to Mumbai flight",
     site: "@harsh_vardhhan",
     creator: "@harsh_vardhhan",
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],

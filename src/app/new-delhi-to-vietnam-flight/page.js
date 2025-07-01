@@ -90,7 +90,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Flights from New Delhi to Vietnam",
-    description: "Find and compare the best flights from New Delhi to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+    description: "New Delhi to Hanoi flight | New Delhi to Ho Chi Minh City flight | Hanoi to New Delhi flight | Ho Chi Minh City to New Delhi flight",
     site: "@harsh_vardhhan",
     creator: "@harsh_vardhhan",
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
