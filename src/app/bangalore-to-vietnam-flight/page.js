@@ -68,7 +68,7 @@ export const metadata = {
   description: "Find and compare the best flights from Bangalore to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
   openGraph: {
     title: "Flights from Bangalore to Vietnam",
-    description: "Find and compare the best flights from Bangalore to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+    description: "Bangalore to Ho Chi Minh City flight | Ho Chi Minh City to Bangalore flight | Cheapest flights from Bangalore to Vietnam",
     url: "https://www.rupeetravel.com/bangalore-to-vietnam-flight",
     siteName: "Rupee Travel",
     images: [
