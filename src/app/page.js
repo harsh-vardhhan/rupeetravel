@@ -1,10 +1,4 @@
-import Link from "next/link";
-import {
-  Card,
-  CardHeader,
-  CardContent,
-} from "../components/ui/server/card";
-import { Badge } from "../components/ui/server/badge";
+import CheckListItemCard from "../components/ui/server/CheckListItemCard";
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -276,55 +270,3 @@ export default function HomePage() {
     </>
   );
 }
-
-// Move these components to separate files
-const CheckListItemCard = ({ title, list }) => {
-  return (
-    <Card className="w-full mt-2.5 shadow-md">
-      <CardHeader className="p-4 sm:p-6 pt-4 sm:pt-6">
-        <h3 className="text-xl sm:text-2xl font-bold">
-          {title}
-        </h3>
-      </CardHeader>
-      <CardContent className="p-4 sm:p-6 pt-0">
-        <div className="space-y-3 sm:space-y-4">
-          {list.map((arrivals) => (
-            <CheckListItem key={arrivals.key} task={arrivals} />
-          ))}
-        </div>
-      </CardContent>
-    </Card>
-  );
-};
-
-const CheckListItem = ({ task }) => {
-  return (
-    <div className="border-b last:border-0 pb-3 sm:pb-4 last:pb-0">
-      <Link href={task.link}>
-        <div className="flex flex-wrap items-center gap-2">
-          <h4 className="text-lg sm:text-xl font-bold">
-            {task.heading}
-          </h4>
-          <Badge 
-            variant={task.tagColor === 'orange' ? 'default' : task.tagColor === 'teal' ? 'secondary' : task.tagColor === 'red' ? 'destructive' : 'outline'}
-            className="w-fit"
-            style={{ 
-              backgroundColor: task.tagColor === 'orange' ? '#FED7AA' : 
-                            task.tagColor === 'teal' ? '#99F6E4' : 
-                            task.tagColor === 'red' ? '#FECACA' : '#F1F5F9',
-              color: task.tagColor === 'orange' ? '#9A3412' : 
-                    task.tagColor === 'teal' ? '#134E4A' : 
-                    task.tagColor === 'red' ? '#991B1B' : '#475569',
-              fontWeight: "500"
-            }}
-          >
-            {task.tagText}
-          </Badge>
-        </div>
-        <p className="font-medium text-sm pt-1 sm:pt-2">
-          {task.subHeading}
-        </p>
-      </Link>
-    </div>
-  );
-};

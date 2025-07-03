@@ -7,8 +7,7 @@ import {
 } from "../../components/ui/server/card";
 import { Button } from "../../components/ui/server/button";
 import { Badge } from "../../components/ui/server/badge";
-import { Alert, AlertDescription } from "../../components/ui/server/alert";
-import { AlertCircle } from "lucide-react";
+import CheckListItemCard from "../../components/ui/server/CheckListItemCard";
 
 export const dynamic = 'force-static';
 
@@ -179,7 +178,7 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-bold">{cardTitle}</h2>
-          <Badge 
+          <Badge
             variant="secondary"
             className="bg-teal-200 text-teal-900"
           >
@@ -199,11 +198,11 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
         </div>
       </CardContent>
       <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
-        <a 
+        <a
           href={buttonLink}
           className="w-full"
         >
-          <Button 
+          <Button
             className="w-full bg-green-600 hover:bg-green-700 text-white"
           >
             {buttonName}
@@ -215,6 +214,41 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
 };
 
 export default function Home() {
+
+  const flights = [
+    {
+      key: 1,
+      heading: ` New Delhi to Vietnam flights`,
+      subHeading: `Cheapest flights from New Delhi to Vietnam`,
+      tagText: `Fights`,
+      tagColor: `teal`,
+      link: `/new-delhi-to-vietnam-flight`,
+    },
+    {
+      key: 2,
+      heading: ` Mumbai to Vietnam flights`,
+      subHeading: ` Cheapest flights from Mumbai to Vietnam`,
+      tagText: `Flights`,
+      tagColor: `teal`,
+      link: `/mumbai-to-vietnam-flight`,
+    },
+    {
+      key: 3,
+      heading: ` Bangalore to Vietnam flights`,
+      subHeading: ` Cheapest flights from Bangalore to Vietnam`,
+      tagText: `Flights`,
+      tagColor: `teal`,
+      link: `/bangalore-to-vietnam-flight`,
+    },
+    {
+      key: 4,
+      heading: ` Kolkata to Vietnam flights`,
+      subHeading: ` Cheapest flights from Kolkata to Vietnam`,
+      tagText: `Flights`,
+      tagColor: `teal`,
+      link: `/kolkata-to-vietnam-flight`,
+    },
+  ];
   return (
     <>
       <div className="min-h-screen bg-background">
@@ -233,24 +267,7 @@ export default function Home() {
               buttonName={"Book Indigo"}
               buttonLink={"https://www.goindigo.in/"}
             />
-            <Card className="w-full">
-              <CardContent className="pt-6">
-                <Badge 
-                  variant="secondary"
-                  className="bg-orange-200 text-orange-900 mb-4"
-                >
-                  Fellow passenger faced this
-                </Badge>
-                <Alert className="bg-green-100 border-green-300 text-green-900">
-                  <AlertCircle className="h-4 w-4" />
-                  <AlertDescription>
-                    Please ensure no mistakes are made in filling personal details
-                    during booking or else you might have to pay ~5,000 for fixing
-                    info at airport.
-                  </AlertDescription>
-                </Alert>
-              </CardContent>
-            </Card>
+            <CheckListItemCard title={"Flights"} list={flights} />
           </div>
           <ComparisonMatrix />
         </main>
