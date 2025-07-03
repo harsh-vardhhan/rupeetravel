@@ -5,9 +5,7 @@ const CheckListItemCard = ({ title, list }) => {
   return (
     <Card className="w-full mt-2.5 shadow-md">
       <CardHeader className="p-4 sm:p-6 pt-4 sm:pt-6">
-        <h3 className="text-xl sm:text-2xl font-bold">
-          {title}
-        </h3>
+        <h3 className="text-xl sm:text-2xl font-bold">{title}</h3>
       </CardHeader>
       <CardContent className="p-4 sm:p-6 pt-0">
         <div className="space-y-3 sm:space-y-4">
@@ -20,4 +18,4 @@ const CheckListItemCard = ({ title, list }) => {
   );
 };
 
-export default CheckListItemCard; 
+export default CheckListItemCard;
