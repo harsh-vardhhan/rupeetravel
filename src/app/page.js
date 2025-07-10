@@ -1,7 +1,7 @@
 import CheckListItemCard from "../components/ui/server/CheckListItemCard";
 
 // Force static generation
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 // Move static data outside of component
 const beforeArrivals = [
