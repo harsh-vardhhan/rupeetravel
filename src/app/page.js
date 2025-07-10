@@ -249,6 +249,27 @@ export default function HomePage() {
             <h2 className="text-xl sm:text-2xl lg:text-5xl font-bold mt-4 sm:mt-5">
               The ultimate checklist for Vietnam travel from India 🇻🇳
             </h2>
+
+            {/* mint news testimonial here */}
+            <div className="flex flex-col items-start gap-2 mt-6">
+              <span className="text-lg font-semibold">Featured in news</span>
+              <a
+                href="https://www.livemint.com/money/personal-finance/travel-series-goa-beach-destination-vietnam-mumbai-techie-da-nang-budget-destination-hotels-flights-federal-bank-11733038109690.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <img
+                  src="/images/mint-logo.avif"
+                  alt="Mint logo"
+                  width={110}
+                  height={45}
+                  style={{ maxWidth: 160, maxHeight: 85 }}
+                  className="object-contain rounded-md border border-orange-400 shadow-sm bg-white px-4 py-2 hover:shadow-md transition-shadow cursor-pointer"
+                />
+              </a>
+            </div>
+
             <div className="mt-8 sm:mt-10">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
                 <CheckListItemCard
