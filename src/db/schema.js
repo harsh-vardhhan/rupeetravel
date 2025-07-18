@@ -7,7 +7,7 @@ export const flight = sqliteTable('flight', {
   origin: text('origin').notNull(),
   destination: text('destination').notNull(),
   airline: text('airline').notNull(),
-  time: text('time').notNull(),
+  link: text('link').notNull(),
   duration: text('duration').notNull(),
   flight_type: text('flight_type').notNull(),
   price_inr: integer('price_inr').notNull(),
