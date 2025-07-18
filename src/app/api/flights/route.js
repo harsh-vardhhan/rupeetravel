@@ -20,7 +20,7 @@ export async function GET(request) {
   if (airlineGroup === "free") {
     airlineFilter = sql`${schema.flight.airline} IN ('Vietnam Airlines', 'Air India', 'IndiGo')`;
   } else if (airlineGroup === "paid") {
-    airlineFilter = eq(schema.flight.airline, "VietJet Air");
+    airlineFilter = eq(schema.flight.airline, "Vietjet");
   }
 
   // Build dynamic where condition

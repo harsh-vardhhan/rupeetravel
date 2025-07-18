@@ -213,7 +213,7 @@ export default function Home() {
                 >
                   Google Flights
                 </Link>
-                {" to see which date has the cheapest flight. If you want to book a cheap flight, be flexible with your travel dates. For those who are price conscious like me, fly with VietJet Air. Even though it&apos;t doesn&apos;t offer a direct flight to Bali, it&apos;s a lot cheaper than direct flights."}
+                {" to see which date has the cheapest flight. If you want to book a cheap flight, be flexible with your travel dates. For those who are price conscious like me, fly with Vietjet. Even though it&apos;t doesn&apos;t offer a direct flight to Bali, it&apos;s a lot cheaper than direct flights."}
               </p>
 
               <div className="border border-border rounded-lg overflow-hidden my-4">

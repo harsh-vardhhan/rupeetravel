@@ -3,7 +3,7 @@ import { useState } from 'react';
 import BottomSheet from './BottomSheet';
 
 const luggagePolicies = {
-  "VietJet Air": {
+  "Vietjet": {
     carryOn: { weight: "7kg", free: true },
     checked: { weight: "0kg", free: false, note: "Must purchase separately" },
     extraCheckedOptions: [
@@ -33,7 +33,7 @@ export default function LuggagePolicyButton({ airline }) {
   const [showSheet, setShowSheet] = useState(false);
   const [selectedWeight, setSelectedWeight] = useState(20);
   const policy = luggagePolicies[airline];
-  const vietjet = airline === 'VietJet Air';
+  const vietjet = airline === 'Vietjet';
   const handleLuggageClick = () => {
     if (policy) setShowSheet(true);
   };
