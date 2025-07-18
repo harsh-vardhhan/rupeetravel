@@ -1,10 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-} from "../../components/ui/server/card";
+import Image from "next/image";
+import Link from "next/link";
+import { Card, CardContent, CardHeader } from "../../components/ui/server/card";
 import {
   Table,
   TableBody,
@@ -19,14 +15,16 @@ import PrecipitationChart from "../../component/PrecipitationChart";
 import VisaStamp from "../../component/VisaStamp";
 import { IDRINRMarketRate } from "../../currency/currency";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export const metadata = {
   title: "Rupee Travel | Bali travel guide for Indians",
-  description: "Bali Indonesia | Bali Currency | Bali Visa | Bali Travel Guide | Bali Travel Tips | Bali Travel Blog | Bali Travel Itinerary | Bali Travel Cost | Bali Travel Packages | Bali Travel Guide for Indians | Bali Travel Guide for Indian Tourists | Bali Travel Guide for Indian Families | Bali Travel Guide for Indian Couples | Bali Travel Guide for Indian Solo Travelers | Bali Travel Guide for Indian Backpackers | Bali Travel Guide for Indian Honeymooners | Bali Travel Guide for Indian",
+  description:
+    "Bali Indonesia | Bali Currency | Bali Visa | Bali Travel Guide | Bali Travel Tips | Bali Travel Blog | Bali Travel Itinerary | Bali Travel Cost | Bali Travel Packages | Bali Travel Guide for Indians | Bali Travel Guide for Indian Tourists | Bali Travel Guide for Indian Families | Bali Travel Guide for Indian Couples | Bali Travel Guide for Indian Solo Travelers | Bali Travel Guide for Indian Backpackers | Bali Travel Guide for Indian Honeymooners | Bali Travel Guide for Indian",
   openGraph: {
     title: "Rupee Travel | Bali travel guide for Indians",
-    description: "Bali Indonesia | Bali Currency | Bali Visa | Bali Travel Guide | Bali Travel Tips | Bali Travel Blog | Bali Travel Itinerary | Bali Travel Cost | Bali Travel Packages | Bali Travel Guide for Indians | Bali Travel Guide for Indian Tourists | Bali Travel Guide for Indian Families | Bali Travel Guide for Indian Couples | Bali Travel Guide for Indian Solo Travelers | Bali Travel Guide for Indian Backpackers | Bali Travel Guide for Indian Honeymooners | Bali Travel Guide for Indian",
+    description:
+      "Bali Indonesia | Bali Currency | Bali Visa | Bali Travel Guide | Bali Travel Tips | Bali Travel Blog | Bali Travel Itinerary | Bali Travel Cost | Bali Travel Packages | Bali Travel Guide for Indians | Bali Travel Guide for Indian Tourists | Bali Travel Guide for Indian Families | Bali Travel Guide for Indian Couples | Bali Travel Guide for Indian Solo Travelers | Bali Travel Guide for Indian Backpackers | Bali Travel Guide for Indian Honeymooners | Bali Travel Guide for Indian",
     url: "https://www.rupeetravel.com/bali-travel-guide-for-indians",
     siteName: "Rupee Travel",
     images: [
@@ -43,13 +41,16 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Rupee Travel | Bali travel guide for Indians",
-    description: "Bali Indonesia | Bali Currency | Bali Visa | Bali Travel Guide | Bali Travel Tips | Bali Travel Blog | Bali Travel Itinerary | Bali Travel Cost | Bali Travel Packages | Bali Travel Guide for Indians | Bali Travel Guide for Indian Tourists | Bali Travel Guide for Indian Families | Bali Travel Guide for Indian Couples | Bali Travel Guide for Indian Solo Travelers | Bali Travel Guide for Indian Backpackers | Bali Travel Guide for Indian Honeymooners | Bali Travel Guide for Indian",
+    description:
+      "Bali Indonesia | Bali Currency | Bali Visa | Bali Travel Guide | Bali Travel Tips | Bali Travel Blog | Bali Travel Itinerary | Bali Travel Cost | Bali Travel Packages | Bali Travel Guide for Indians | Bali Travel Guide for Indian Tourists | Bali Travel Guide for Indian Families | Bali Travel Guide for Indian Couples | Bali Travel Guide for Indian Solo Travelers | Bali Travel Guide for Indian Backpackers | Bali Travel Guide for Indian Honeymooners | Bali Travel Guide for Indian",
     site: "@harsh_vardhhan",
     creator: "@harsh_vardhhan",
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
-  alternates: { canonical: "https://www.rupeetravel.com/bali-travel-guide-for-indians" },
+  alternates: {
+    canonical: "https://www.rupeetravel.com/bali-travel-guide-for-indians",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -57,18 +58,18 @@ export const metadata = {
 
 export default function Home() {
   const baliData = [
-    { month: 'Jan', days: 19 },
-    { month: 'Feb', days: 18 },
-    { month: 'Mar', days: 20 },
-    { month: 'Apr', days: 12 },
-    { month: 'May', days: 8 },
-    { month: 'Jun', days: 7 },
-    { month: 'Jul', days: 4 },
-    { month: 'Aug', days: 3 },
-    { month: 'Sep', days: 3 },
-    { month: 'Oct', days: 6 },
-    { month: 'Nov', days: 10 },
-    { month: 'Dec', days: 16 }
+    { month: "Jan", days: 19 },
+    { month: "Feb", days: 18 },
+    { month: "Mar", days: 20 },
+    { month: "Apr", days: 12 },
+    { month: "May", days: 8 },
+    { month: "Jun", days: 7 },
+    { month: "Jul", days: 4 },
+    { month: "Aug", days: 3 },
+    { month: "Sep", days: 3 },
+    { month: "Oct", days: 6 },
+    { month: "Nov", days: 10 },
+    { month: "Dec", days: 16 },
   ];
 
   return (
@@ -99,77 +100,110 @@ export default function Home() {
                   <TableBody>
                     <TableRow>
                       <TableCell>
-                        <Link href="#preparing-for-bali" className="text-primary hover:underline">
+                        <Link
+                          href="#preparing-for-bali"
+                          className="text-primary hover:underline"
+                        >
                           Preparing for Bali trip
                         </Link>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
-                        <Link href="#day-1" className="text-primary hover:underline">
+                        <Link
+                          href="#day-1"
+                          className="text-primary hover:underline"
+                        >
                           Day 1 - Kuta
                         </Link>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
-                        <Link href="#day-2" className="text-primary hover:underline">
+                        <Link
+                          href="#day-2"
+                          className="text-primary hover:underline"
+                        >
                           Day 2 - Seminyak
                         </Link>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
-                        <Link href="#day-3" className="text-primary hover:underline">
+                        <Link
+                          href="#day-3"
+                          className="text-primary hover:underline"
+                        >
                           Day 3 - Canggu
                         </Link>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
-                        <Link href="#day-4" className="text-primary hover:underline">
+                        <Link
+                          href="#day-4"
+                          className="text-primary hover:underline"
+                        >
                           Day 4 - Ubud
                         </Link>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
-                        <Link href="#day-5" className="text-primary hover:underline">
+                        <Link
+                          href="#day-5"
+                          className="text-primary hover:underline"
+                        >
                           Day 5 - Ubud
                         </Link>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
-                        <Link href="#day-6" className="text-primary hover:underline">
+                        <Link
+                          href="#day-6"
+                          className="text-primary hover:underline"
+                        >
                           Day 6 - Ubud
                         </Link>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
-                        <Link href="#day-7" className="text-primary hover:underline">
+                        <Link
+                          href="#day-7"
+                          className="text-primary hover:underline"
+                        >
                           Day 7 - Uluwatu
                         </Link>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
-                        <Link href="#hotels" className="text-primary hover:underline">
+                        <Link
+                          href="#hotels"
+                          className="text-primary hover:underline"
+                        >
                           Hotels
                         </Link>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
-                        <Link href="#money-saving" className="text-primary hover:underline">
+                        <Link
+                          href="#money-saving"
+                          className="text-primary hover:underline"
+                        >
                           Money saving tips
                         </Link>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
-                        <Link href="#total-cost" className="text-primary hover:underline">
+                        <Link
+                          href="#total-cost"
+                          className="text-primary hover:underline"
+                        >
                           Total cost
                         </Link>
                       </TableCell>
@@ -180,9 +214,13 @@ export default function Home() {
             </Card>
 
             <section id="preparing-for-bali">
-              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">Preparing for Bali trip</h2>
-              
-              <h3 className="text-xl sm:text-2xl font-semibold mt-6 mb-3">Bali weather</h3>
+              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">
+                Preparing for Bali trip
+              </h2>
+
+              <h3 className="text-xl sm:text-2xl font-semibold mt-6 mb-3">
+                Bali weather
+              </h3>
               <p className="text-base sm:text-lg mb-4">
                 The best months to travel Bali are:
               </p>
@@ -192,8 +230,9 @@ export default function Home() {
                 <li>September</li>
               </ul>
               <p className="text-base sm:text-lg mb-4">
-                Other months can seriously ruin your holiday experience.
-                A day spent waiting for rain to stop is a day wasted from your holiday.
+                Other months can seriously ruin your holiday experience. A day
+                spent waiting for rain to stop is a day wasted from your
+                holiday.
               </p>
               <PrecipitationChart
                 data={baliData}
@@ -201,7 +240,9 @@ export default function Home() {
                 destinationIcon="🌴"
               />
 
-              <h3 className="text-xl sm:text-2xl font-semibold mt-6 mb-3">Delhi to Bali flight</h3>
+              <h3 className="text-xl sm:text-2xl font-semibold mt-6 mb-3">
+                Delhi to Bali flight
+              </h3>
               <p className="text-base sm:text-lg mb-4">
                 You can affordable return flights to Bali from New Delhi and
                 Mumbai both. Just use{" "}
@@ -213,7 +254,9 @@ export default function Home() {
                 >
                   Google Flights
                 </Link>
-                {" to see which date has the cheapest flight. If you want to book a cheap flight, be flexible with your travel dates. For those who are price conscious like me, fly with Vietjet. Even though it&apos;t doesn&apos;t offer a direct flight to Bali, it&apos;s a lot cheaper than direct flights."}
+                {
+                  " to see which date has the cheapest flight. If you want to book a cheap flight, be flexible with your travel dates. For those who are price conscious like me, fly with Vietjet. Even though it&apos;t doesn&apos;t offer a direct flight to Bali, it&apos;s a lot cheaper than direct flights."
+                }
               </p>
 
               <div className="border border-border rounded-lg overflow-hidden my-4">
@@ -226,7 +269,9 @@ export default function Home() {
                 />
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-semibold mt-6 mb-3">Visa for Bali</h3>
+              <h3 className="text-xl sm:text-2xl font-semibold mt-6 mb-3">
+                Visa for Bali
+              </h3>
               <VisaStamp />
               <p className="text-base sm:text-lg mb-4">
                 {`Though Indonesia provides facility to apply for e-visa for Indian
@@ -248,8 +293,10 @@ export default function Home() {
             </section>
 
             <section id="day-1">
-              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">Day 1: Kuta</h2>
-              
+              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">
+                Day 1: Kuta
+              </h2>
+
               <div className="border border-border rounded-lg overflow-hidden my-4">
                 <Image
                   src={"/images/bali-kuta-arabica-cafe.avif"}
@@ -272,10 +319,10 @@ export default function Home() {
                   Beachwalk Shopping Center
                 </Link>
                 . You might think what can be so special about a shopping mall ?
-                well they have designed the mall aligned with theme of Bali. Hence
-                its unlike any other mall you have visited in India. You can also
-                try out Arabica cafe which is a Japanese coffee chain. Their white
-                themed cafe is great for Instagram photos.
+                well they have designed the mall aligned with theme of Bali.
+                Hence its unlike any other mall you have visited in India. You
+                can also try out Arabica cafe which is a Japanese coffee chain.
+                Their white themed cafe is great for Instagram photos.
               </p>
 
               <Card className="bg-orange-50 dark:bg-orange-900">
@@ -286,8 +333,8 @@ export default function Home() {
                   <p className="text-base sm:text-lg mb-4">
                     You can enjoy some good food within the Beachwalk Shopping
                     Center. They have a food court with a variety of options. We
-                    went for Padang kurin Restaurant. We had chicken and rice dish
-                    for 61,000 IDR each.
+                    went for Padang kurin Restaurant. We had chicken and rice
+                    dish for 61,000 IDR each.
                   </p>
                   <Image
                     src={"/images/kuta-food.avif"}
@@ -331,9 +378,9 @@ export default function Home() {
                     What is the budget drink option available?
                   </h3>
                   <p className="text-base sm:text-lg mb-4">
-                    Since you need to buy a drink to sit at a beach club, you can
-                    try out Bali Cider. We had a bottle of Bali Cider for 49,000 IDR
-                    each.
+                    Since you need to buy a drink to sit at a beach club, you
+                    can try out Bali Cider. We had a bottle of Bali Cider for
+                    49,000 IDR each.
                   </p>
                   <Image
                     src={"/images/azul-beach-club-cider.avif"}
@@ -357,7 +404,9 @@ export default function Home() {
             </section>
 
             <section id="day-2">
-              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">Day 2: Seminyak</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">
+                Day 2: Seminyak
+              </h2>
               <p className="text-base sm:text-lg mb-4">
                 {`Raya Seminyak is a street which offers boutiques, art shops.
                 you can also enjoy great cafe's and restaurants. Also, if you are looking for cash,
@@ -378,8 +427,8 @@ export default function Home() {
                     What is the budget food option available?
                   </h3>
                   <p className="text-base sm:text-lg mb-4">
-                    We had a Margherita pizza at a restaurant on Raya Seminyak for
-                    93,000 IDR. The place is called The Shisha House.
+                    We had a Margherita pizza at a restaurant on Raya Seminyak
+                    for 93,000 IDR. The place is called The Shisha House.
                   </p>
                   <Image
                     src={"/images/margherita-seminyak.avif"}
@@ -443,7 +492,9 @@ export default function Home() {
             </section>
 
             <section id="day-3">
-              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">Day 3: Canggu</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">
+                Day 3: Canggu
+              </h2>
               <p className="text-base sm:text-lg mb-4">
                 {`In day time you can visit Tanah lot temple. You can take a taxi via Grab app.
                 it's best to visit this place when in Canggu cause it's the closest from here.
@@ -481,8 +532,8 @@ export default function Home() {
                     What is the budget drink option available?
                   </h3>
                   <p className="text-base sm:text-lg mb-4">
-                    To keep your partying experience budget friendly, you can try
-                    out a Bintang beer. Along with that, try to use the{" "}
+                    To keep your partying experience budget friendly, you can
+                    try out a Bintang beer. Along with that, try to use the{" "}
                     <Link
                       href="https://finnsbeachclub.com/venue/beach-deluxe/drink-menu/#hh"
                       className="font-bold underline"
@@ -491,8 +542,8 @@ export default function Home() {
                     >
                       happy hours
                     </Link>{" "}
-                    to get two bintang beers at the price of one which will cost you
-                    85,000 IDR.
+                    to get two bintang beers at the price of one which will cost
+                    you 85,000 IDR.
                   </p>
                   <CurrencyConverter
                     currencyPair={"IDRINR"}
@@ -509,7 +560,9 @@ export default function Home() {
             </section>
 
             <section id="day-4">
-              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">Day 4: Ubud</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">
+                Day 4: Ubud
+              </h2>
 
               <Card className="bg-orange-50 dark:bg-orange-900">
                 <CardContent className="p-6">
@@ -583,8 +636,8 @@ export default function Home() {
                     >
                       Cretya Club.
                     </Link>{" "}
-                    . It had cost us 125,000 IDR and buying that food also gives you
-                    access to their pool.
+                    . It had cost us 125,000 IDR and buying that food also gives
+                    you access to their pool.
                   </p>
                   <Image
                     src={"/images/alas-hurum-cretya-ubud.avif"}
@@ -608,7 +661,9 @@ export default function Home() {
             </section>
 
             <section id="day-5">
-              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">Day 5: Ubud</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">
+                Day 5: Ubud
+              </h2>
 
               <Image
                 src={"/images/tirta-empul-temple-ubud.avif"}
@@ -636,7 +691,9 @@ export default function Home() {
             </section>
 
             <section id="day-6">
-              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">Day 6: Ubud</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">
+                Day 6: Ubud
+              </h2>
               <p className="text-base sm:text-lg mb-4">
                 {`Tegenungan waterfall comprises of an experience
                 where you get to walk down the stairs
@@ -679,7 +736,9 @@ export default function Home() {
             </section>
 
             <section id="day-7">
-              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">Day 7: Uluwatu</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">
+                Day 7: Uluwatu
+              </h2>
               <p className="text-base sm:text-lg mb-4">
                 {`We went for Uluwatu to see the Uluwatu temple. Also being close to the airport, we planned it for our last day`}
               </p>
@@ -711,7 +770,9 @@ export default function Home() {
             </section>
 
             <section id="hotels">
-              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">Hotels we stayed</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">
+                Hotels we stayed
+              </h2>
               <p className="text-base sm:text-lg mb-4">
                 {`Here is the list of hotels in which we stayed`}
               </p>
@@ -787,7 +848,9 @@ export default function Home() {
             </section>
 
             <section id="money-saving">
-              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">Money saving tips</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">
+                Money saving tips
+              </h2>
               <p className="text-base sm:text-lg mb-4">
                 Avoid using ATMs with mark-up fee. The ATMs will most likely
                 inform you before cash withdrawal
@@ -804,9 +867,9 @@ export default function Home() {
               <p className="text-base sm:text-lg mb-4">
                 If you would like to further save money, but at the cost of less
                 convenience, you can bring USD currency notes from India and get
-                them converted to IDR at a forex dealer. By using a forex dealer,
-                not only you save on the mark-up fee, but you also get better
-                conversion rates.
+                them converted to IDR at a forex dealer. By using a forex
+                dealer, not only you save on the mark-up fee, but you also get
+                better conversion rates.
               </p>
 
               <Image
@@ -841,7 +904,9 @@ export default function Home() {
             </section>
 
             <section id="total-cost">
-              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">Bali trip cost from India for couple</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4">
+                Bali trip cost from India for couple
+              </h2>
               <p className="text-base sm:text-lg mb-4">
                 Despite being fairly detailed about the cost, still consider
                 significant variation in cost for your own trip since personal
@@ -859,7 +924,9 @@ export default function Home() {
                     </TableHeader>
                     <TableBody>
                       <TableRow>
-                        <TableCell className="font-bold">Day 1 - Kuta</TableCell>
+                        <TableCell className="font-bold">
+                          Day 1 - Kuta
+                        </TableCell>
                         <TableCell></TableCell>
                       </TableRow>
                       <TableRow>
@@ -884,7 +951,9 @@ export default function Home() {
                       </TableRow>
 
                       <TableRow>
-                        <TableCell className="font-bold">Day 2 - Seminyak</TableCell>
+                        <TableCell className="font-bold">
+                          Day 2 - Seminyak
+                        </TableCell>
                         <TableCell></TableCell>
                       </TableRow>
                       <TableRow>
@@ -909,7 +978,9 @@ export default function Home() {
                       </TableRow>
 
                       <TableRow>
-                        <TableCell className="font-bold">Day 3 - Canggu</TableCell>
+                        <TableCell className="font-bold">
+                          Day 3 - Canggu
+                        </TableCell>
                         <TableCell></TableCell>
                       </TableRow>
                       <TableRow>
@@ -934,7 +1005,9 @@ export default function Home() {
                       </TableRow>
 
                       <TableRow>
-                        <TableCell className="font-bold">Day 4 - Ubud</TableCell>
+                        <TableCell className="font-bold">
+                          Day 4 - Ubud
+                        </TableCell>
                         <TableCell></TableCell>
                       </TableRow>
                       <TableRow>
@@ -959,7 +1032,9 @@ export default function Home() {
                       </TableRow>
 
                       <TableRow>
-                        <TableCell className="font-bold">Day 5 - Ubud</TableCell>
+                        <TableCell className="font-bold">
+                          Day 5 - Ubud
+                        </TableCell>
                         <TableCell></TableCell>
                       </TableRow>
                       <TableRow>
@@ -984,7 +1059,9 @@ export default function Home() {
                       </TableRow>
 
                       <TableRow>
-                        <TableCell className="font-bold">Day 6 - Ubud</TableCell>
+                        <TableCell className="font-bold">
+                          Day 6 - Ubud
+                        </TableCell>
                         <TableCell></TableCell>
                       </TableRow>
                       <TableRow>
@@ -1013,7 +1090,9 @@ export default function Home() {
                       </TableRow>
 
                       <TableRow>
-                        <TableCell className="font-bold">Day 7 - Uluwatu</TableCell>
+                        <TableCell className="font-bold">
+                          Day 7 - Uluwatu
+                        </TableCell>
                         <TableCell></TableCell>
                       </TableRow>
                       <TableRow>
@@ -1042,7 +1121,9 @@ export default function Home() {
                       </TableRow>
 
                       <TableRow>
-                        <TableCell className="font-bold">Miscellaneous</TableCell>
+                        <TableCell className="font-bold">
+                          Miscellaneous
+                        </TableCell>
                         <TableCell></TableCell>
                       </TableRow>
                       <TableRow>
