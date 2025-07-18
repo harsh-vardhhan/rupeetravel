@@ -111,7 +111,7 @@ export default function FlightCard({
         </div>
         <div className="flex gap-2 mt-2 sm:mt-0">
           <a
-            href={`https://www.google.com/search?q=${encodeURIComponent(`flights from ${flight.origin} to ${flight.destination} ${flight.date} one way`)}`}
+            href={flight.link}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block"
