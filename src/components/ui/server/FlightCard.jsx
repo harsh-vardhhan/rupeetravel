@@ -22,6 +22,13 @@ export default function FlightCard({
   precipitationData,
   destinationOptions
 }) {
+  const getFlightHref = (flight) => {
+    if (flight.link && flight.link.trim() !== "") {
+      return flight.link;
+    }
+    return `https://www.google.com/search?q=${encodeURIComponent(`flights from ${flight.origin} to ${flight.destination} ${flight.date} one way`)}`;
+  };
+
   return (
     <div
       key={flight.id}
@@ -111,17 +118,12 @@ export default function FlightCard({
         </div>
         <div className="flex gap-2 mt-2 sm:mt-0">
           <a
-            href={flight.link}
+            href={getFlightHref(flight)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block"
+            className="bg-blue-400 hover:bg-blue-400 text-white px-4 py-2 rounded-lg text-xs font-medium transition-colors inline-block"
           >
-            <Button
-              size="sm"
-              className="bg-blue-400 hover:bg-blue-400 text-white px-4 py-2 rounded-lg text-xs font-medium transition-colors"
-            >
-              Search Flight
-            </Button>
+            Search Flight
           </a>
           <LuggagePolicyButton airline={flight.airline} />
           <FlightWeatherButton
