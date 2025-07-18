@@ -25,7 +25,7 @@ async function seedFlights() {
       origin: flightItem.origin,
       destination: flightItem.destination,
       airline: flightItem.airline,
-      time: flightItem.time,
+      link: flightItem.link,
       duration: flightItem.duration,
       flight_type: flightItem.flightType,
       price_inr: flightItem.price_inr,

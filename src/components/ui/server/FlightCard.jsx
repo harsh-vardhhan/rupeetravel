@@ -60,9 +60,6 @@ export default function FlightCard({
               {getSourceCode(flight.origin)}
             </p>
             <p className="text-xs text-gray-500">{flight.origin}</p>
-            <p className="text-xs text-gray-500">
-              {flight.time.split('-')[0]}
-            </p>
           </div>
 
           <div className="flex-1 flex items-center justify-center relative">
@@ -78,9 +75,6 @@ export default function FlightCard({
               {getDestinationCode(flight.destination)}
             </p>
             <p className="text-xs text-gray-500">{flight.destination}</p>
-            <p className="text-xs text-gray-500">
-              {flight.time.split('-')[1]}
-            </p>
           </div>
         </div>
         {/* Rain Probability Circular Progress */}
