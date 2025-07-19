@@ -2,7 +2,7 @@ import CheckListItemCard from "../components/ui/server/CheckListItemCard";
 import Image from "next/image";
 
 // Force static generation
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 // Move static data outside of component
 const beforeArrivals = [
@@ -202,6 +202,14 @@ const flights = [
     tagColor: `teal`,
     link: `/kolkata-to-vietnam-flight`,
   },
+  {
+    key: 5,
+    heading: ` Ahmedabad to Vietnam flights`,
+    subHeading: ` Cheapest flights from Ahmedabad to Vietnam`,
+    tagText: `Flights`,
+    tagColor: `teal`,
+    link: `/ahmedabad-to-vietnam-flight`,
+  },
 ];
 
 export const metadata = {
@@ -258,7 +266,8 @@ export default function HomePage() {
                 href="https://www.livemint.com/money/personal-finance/travel-series-goa-beach-destination-vietnam-mumbai-techie-da-nang-budget-destination-hotels-flights-federal-bank-11733038109690.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block">
+                className="inline-block"
+              >
                 <Image
                   src="/images/mint-logo.avif"
                   alt="Mint logo"

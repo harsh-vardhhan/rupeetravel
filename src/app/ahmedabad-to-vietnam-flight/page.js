@@ -21,7 +21,7 @@ const SortButton = ({ currentSortBy, sortByValue, label, params }) => {
   );
   const query = new URLSearchParams(filteredParams);
   query.set("sortBy", sortByValue);
-  const href = `/mumbai-to-vietnam-flight?${query.toString()}`;
+  const href = `/ahmedabad-to-vietnam-flight?${query.toString()}`;
   const isActive = currentSortBy === sortByValue;
 
   return (
@@ -41,21 +41,21 @@ const SortButton = ({ currentSortBy, sortByValue, label, params }) => {
 };
 
 export const metadata = {
-  title: "Flights from Mumbai to Vietnam",
+  title: "Flights from Ahmedabad to Vietnam",
   description:
-    "Find and compare the best flights from Mumbai to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+    "Find and compare the best flights from Ahmedabad to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
   openGraph: {
-    title: "Flights from Mumbai to Vietnam",
+    title: "Flights from Ahmedabad to Vietnam",
     description:
-      "Find and compare the best flights from Mumbai to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
-    url: "https://www.rupeetravel.com/mumbai-to-vietnam-flight",
+      "Find and compare the best flights from Ahmedabad to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+    url: "https://www.rupeetravel.com/ahmedabad-to-vietnam-flight",
     siteName: "Rupee Travel",
     images: [
       {
         url: "https://ik.imagekit.io/rupeetravel/preview.png",
         width: 1200,
         height: 630,
-        alt: "Flights from Mumbai to Vietnam | Rupee Travel",
+        alt: "Flights from Ahmedabad to Vietnam | Rupee Travel",
       },
     ],
     locale: "en_IN",
@@ -63,30 +63,27 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flights from Mumbai to Vietnam",
+    title: "Flights from Ahmedabad to Vietnam",
     description:
-      "Mumbai to Hanoi flight | Mumbai to Ho Chi Minh City flight | Hanoi to Mumbai flight | Ho Chi Minh City to Mumbai flight",
+      "Ahmedabad to Hanoi flight | Ahmedabad to Ho Chi Minh City flight | Hanoi to Ahmedabad flight | Ho Chi Minh City to Ahmedabad flight",
     site: "@harsh_vardhhan",
     creator: "@harsh_vardhhan",
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
   alternates: {
-    canonical: "https://www.rupeetravel.com/mumbai-to-vietnam-flight",
+    canonical: "https://www.rupeetravel.com/ahmedabad-to-vietnam-flight",
   },
   icons: {
     icon: "/favicon.ico",
   },
 };
 
-export const revalidate = false;
-
-export default async function MumbaiToVietnamFlightPage({ searchParams }) {
-  // Use a resolvedSearchParams variable for clarity
+export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
   const resolvedSearchParams = await searchParams;
 
   const page = parseInt(resolvedSearchParams.page) || 1;
-  const source = resolvedSearchParams.source || "Mumbai";
+  const source = resolvedSearchParams.source || "Ahmedabad";
   const destination = resolvedSearchParams.destination || "Hanoi";
   const drySeason = resolvedSearchParams.drySeason === "1";
   const priceUnder10k = resolvedSearchParams.priceUnder10k === "1";
@@ -116,7 +113,7 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
 
   // Define city options
   const indiaCities = [
-    { value: "Mumbai", label: "Mumbai, India", country: "India" },
+    { value: "Ahmedabad", label: "Ahmedabad, India", country: "India" },
   ];
   const vietnamCities = [
     { value: "Hanoi", label: "Hanoi, Vietnam", country: "Vietnam" },
@@ -138,7 +135,7 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
 
   const getCityFullName = (city) => {
     const cityMap = {
-      Mumbai: "Mumbai, India",
+      Ahmedabad: "Ahmedabad, India",
       Hanoi: "Hanoi, Vietnam",
       "Ho Chi Minh City": "Ho Chi Minh City, Vietnam",
       "Da Nang": "Da Nang, Vietnam",
@@ -173,7 +170,7 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
 
   const getSourceCode = (city) => {
     const codeMap = {
-      Mumbai: "BOM",
+      Ahmedabad: "AMD",
       Hanoi: "HAN",
       "Ho Chi Minh City": "SGN",
     };
@@ -182,6 +179,7 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
 
   const getDestinationCode = (city) => {
     const codeMap = {
+      Ahmedabad: "DEL",
       Mumbai: "BOM",
       Hanoi: "HAN",
       "Ho Chi Minh City": "SGN",
@@ -191,7 +189,7 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <Header title="Flights from Mumbai to Vietnam" />
+      <Header title="Flights from Ahmedabad to Vietnam" />
       <div className="px-4 py-6 max-w-7xl mx-auto">
         <div className="mb-6">
           {(() => {
@@ -205,7 +203,7 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
                   currentSource={source}
                   sourceOptions={sourceOptions}
                   destinationOptions={destinationOptions}
-                  routeName="mumbai-to-vietnam-flight"
+                  routeName="ahmedabad-to-vietnam-flight"
                   drySeason={drySeason}
                   showDrySeasonButton={true}
                   priceUnder10k={priceUnder10k}
@@ -219,7 +217,7 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
                   currentSource={source}
                   sourceOptions={sourceOptions}
                   destinationOptions={destinationOptions}
-                  routeName="mumbai-to-vietnam-flight"
+                  routeName="ahmedabad-to-vietnam-flight"
                 />
               );
             }
@@ -337,7 +335,7 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
               totalPages={totalPages}
               limit={limit}
               pageNumbers={pageNumbers}
-              baseHref="/mumbai-to-vietnam-flight"
+              baseHref="/ahmedabad-to-vietnam-flight"
               queryParams={{
                 destination,
                 source,
