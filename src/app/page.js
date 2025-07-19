@@ -1,4 +1,5 @@
 import CheckListItemCard from "../components/ui/server/CheckListItemCard";
+import Image from "next/image";
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -257,15 +258,15 @@ export default function HomePage() {
                 href="https://www.livemint.com/money/personal-finance/travel-series-goa-beach-destination-vietnam-mumbai-techie-da-nang-budget-destination-hotels-flights-federal-bank-11733038109690.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block"
-              >
-                <img
+                className="inline-block">
+                <Image
                   src="/images/mint-logo.avif"
                   alt="Mint logo"
                   width={110}
                   height={45}
                   style={{ maxWidth: 160, maxHeight: 85 }}
                   className="object-contain rounded-md border border-orange-400 shadow-sm bg-white px-4 py-2 hover:shadow-md transition-shadow cursor-pointer"
+                  priority
                 />
               </a>
             </div>
