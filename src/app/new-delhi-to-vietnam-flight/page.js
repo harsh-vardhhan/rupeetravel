@@ -91,6 +91,7 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
   let flights, totalCount;
   try {
     const data = await getFlightsFromDb({
+      ...resolvedSearchParams,
       page,
       destination,
       source,
