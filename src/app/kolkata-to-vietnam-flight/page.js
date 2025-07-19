@@ -9,9 +9,7 @@ import {
   getRainColor,
   getAllWeatherDestinationOptions,
 } from "../../lib/flightWeather";
-import {
-  getFlightsFromDb
-} from "../../lib/flightData";
+import { getFlightsFromDb } from "../../lib/flightData";
 import { cn } from "../../components/lib/utils";
 import Link from "next/link";
 
@@ -44,10 +42,12 @@ const SortButton = ({ currentSortBy, sortByValue, label, params }) => {
 
 export const metadata = {
   title: "Flights from Kolkata to Vietnam",
-  description: "Find and compare the best flights from Kolkata to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+  description:
+    "Find and compare the best flights from Kolkata to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
   openGraph: {
     title: "Flights from Kolkata to Vietnam",
-    description: "Find and compare the best flights from Kolkata to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+    description:
+      "Find and compare the best flights from Kolkata to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
     url: "https://www.rupeetravel.com/kolkata-to-vietnam-flight",
     siteName: "Rupee Travel",
     images: [
@@ -64,13 +64,16 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Flights from Kolkata to Vietnam",
-    description: "Find and compare the best flights from Kolkata to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+    description:
+      "Find and compare the best flights from Kolkata to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
     site: "@harsh_vardhhan",
     creator: "@harsh_vardhhan",
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
-  alternates: { canonical: "https://www.rupeetravel.com/kolkata-to-vietnam-flight" },
+  alternates: {
+    canonical: "https://www.rupeetravel.com/kolkata-to-vietnam-flight",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -90,7 +93,6 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
   const airlineGroup = resolvedSearchParams.airlineGroup || "all";
   const sortBy = resolvedSearchParams.sortBy || "price";
 
-
   let flights, totalCount;
   try {
     const data = await getFlightsFromDb({
@@ -108,7 +110,7 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
     flights = [];
     totalCount = 0;
   }
-  
+
   const limit = 20;
 
   // Define city options
@@ -117,11 +119,15 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
   ];
   const vietnamCities = [
     { value: "Hanoi", label: "Hanoi, Vietnam", country: "Vietnam" },
-    { value: "Ho Chi Minh City", label: "Ho Chi Minh City, Vietnam", country: "Vietnam" },
+    {
+      value: "Ho Chi Minh City",
+      label: "Ho Chi Minh City, Vietnam",
+      country: "Vietnam",
+    },
   ];
 
   let sourceOptions, destinationOptions;
-  if (indiaCities.find(opt => opt.value === source)) {
+  if (indiaCities.find((opt) => opt.value === source)) {
     sourceOptions = indiaCities;
     destinationOptions = vietnamCities;
   } else {
