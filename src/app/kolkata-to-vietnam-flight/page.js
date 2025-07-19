@@ -9,32 +9,11 @@ import {
   getRainColor,
   getAllWeatherDestinationOptions,
 } from "../../lib/flightWeather";
+import {
+  getFlightsFromDb
+} from "../../lib/flightData";
 import { cn } from "../../components/lib/utils";
 import Link from "next/link";
-
-async function getFlights(searchParams) {
-  const protocol = process.env.NODE_ENV === "development" ? "http:" : "https:";
-  const host =
-    process.env.NODE_ENV === "development"
-      ? "localhost:3000"
-      : "rupeetravel.com";
-  const baseUrl = `${protocol}//${host}`;
-
-  const url = new URL("/api/flights", baseUrl);
-  Object.entries(searchParams).forEach(([key, value]) => {
-    if (value !== undefined && value !== null) {
-      url.searchParams.set(key, value);
-    }
-  });
-
-  const res = await fetch(url.toString());
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch flights");
-  }
-
-  return res.json();
-}
 
 const SortButton = ({ currentSortBy, sortByValue, label, params }) => {
   const filteredParams = Object.fromEntries(
@@ -111,16 +90,25 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
   const airlineGroup = resolvedSearchParams.airlineGroup || "all";
   const sortBy = resolvedSearchParams.sortBy || "price";
 
-  const { flights, totalCount } = await getFlights({
-    ...resolvedSearchParams,
-    page,
-    destination,
-    source,
-    airlineGroup,
-    sortBy,
-    priceUnder10k: priceUnder10k ? "1" : undefined,
-  });
 
+  let flights, totalCount;
+  try {
+    const data = await getFlightsFromDb({
+      page,
+      destination,
+      source,
+      airlineGroup,
+      sortBy,
+      priceUnder10k: priceUnder10k ? "1" : undefined,
+    });
+    flights = data.flights;
+    totalCount = data.totalCount;
+  } catch (error) {
+    console.error(error);
+    flights = [];
+    totalCount = 0;
+  }
+  
   const limit = 20;
 
   // Define city options
