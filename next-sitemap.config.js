@@ -31,6 +31,12 @@ module.exports = {
         priority: 0.7,
         lastmod: new Date().toISOString(),
       },
+      {
+        loc: '/ahmedabad-to-vietnam-flight',
+        changefreq: 'daily',
+        priority: 0.7,
+        lastmod: new Date().toISOString(),
+      },
     ];
     return result;
   },
