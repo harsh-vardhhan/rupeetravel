@@ -17,9 +17,9 @@ export default function Pagination({
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
+    <div className="bg-card rounded-xl shadow-sm border border-border p-4">
       <div className="flex items-center justify-between">
-        <div className="text-sm text-gray-600">
+        <div className="text-sm text-muted-foreground">
           Showing {((page - 1) * limit) + 1}-{Math.min(page * limit, totalCount)} of {totalCount}
         </div>
         <div className="flex items-center gap-2">

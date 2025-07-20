@@ -187,7 +187,7 @@ export default async function BangaloreToVietnamFlightPage({ searchParams }) {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <main className="min-h-screen bg-background">
       <Header title="Flights from Bangalore to Vietnam" />
       <div className="px-4 py-6 max-w-7xl mx-auto">
         <div className="mb-6">

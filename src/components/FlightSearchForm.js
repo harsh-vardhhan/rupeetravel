@@ -113,10 +113,10 @@ export default function FlightSearchForm({
   };
 
   return (
-    <div className="w-full bg-white rounded-xl shadow-sm border border-gray-100 p-3 mb-3">
+    <div className="w-full bg-card rounded-xl shadow-sm border border-border p-3 mb-3">
       {/* Header */}
       <div className="flex items-center justify-between mb-3">
-        <h2 className="text-base font-semibold text-gray-900">Find Flights</h2>
+        <h2 className="text-base font-semibold text-card-foreground">Find Flights</h2>
         <div className="flex items-center gap-2">
           <div className="bg-blue-50 text-blue-700 px-2 py-1 rounded-full text-xs font-medium">
             One Way
@@ -125,7 +125,7 @@ export default function FlightSearchForm({
             <button
               type="button"
               onClick={handleDrySeasonToggle}
-              className={`ml-2 px-3 py-1 rounded-full text-xs font-medium border transition-colors ${drySeason ? 'bg-green-100 border-green-400 text-green-800' : 'bg-gray-100 border-gray-300 text-gray-500 hover:bg-green-50 hover:border-green-400 hover:text-green-700'}`}
+              className={`ml-2 px-3 py-1 rounded-full text-xs font-medium border transition-colors ${drySeason ? 'bg-green-100 border-green-400 text-green-800' : 'bg-muted border-border text-muted-foreground hover:bg-green-50 hover:border-green-400 hover:text-green-700'}`}
               aria-pressed={drySeason}
             >
               Dry Season
@@ -135,7 +135,7 @@ export default function FlightSearchForm({
             <button
               type="button"
               onClick={handlePriceUnder10kToggle}
-              className={`ml-2 px-3 py-1 rounded-full text-xs font-medium border transition-colors ${priceUnder10k ? 'bg-green-100 border-green-400 text-green-800' : 'bg-gray-100 border-gray-300 text-gray-500 hover:bg-green-50 hover:border-green-400 hover:text-green-700'}`}
+              className={`ml-2 px-3 py-1 rounded-full text-xs font-medium border transition-colors ${priceUnder10k ? 'bg-green-100 border-green-400 text-green-800' : 'bg-muted border-border text-muted-foreground hover:bg-green-50 hover:border-green-400 hover:text-green-700'}`}
               aria-pressed={priceUnder10k}
             >
               under ₹10,000
@@ -148,7 +148,7 @@ export default function FlightSearchForm({
       <div className="flex items-center gap-2 mb-3">
         {/* Source */}
         <div className="flex-1">
-          <label htmlFor="source-select" className="block text-xs font-medium text-gray-700 mb-1">
+          <label htmlFor="source-select" className="block text-xs font-medium text-muted-foreground mb-1">
             From
           </label>
           {shouldShowSourceDropdown() ? (
@@ -157,7 +157,7 @@ export default function FlightSearchForm({
                 id="source-select"
                 value={source}
                 onChange={(e) => handleSourceChange(e.target.value)}
-                className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none text-sm"
+                className="w-full p-3 bg-muted border border-border rounded-lg text-foreground font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none text-sm"
               >
                 {getSourceOptions().map((src) => (
                   <option key={src.value} value={src.value}>
@@ -166,13 +166,13 @@ export default function FlightSearchForm({
                 ))}
               </select>
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </div>
             </div>
           ) : (
-            <div className="w-full p-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 font-medium text-sm">
+            <div className="w-full p-3 bg-muted border border-border rounded-lg text-foreground font-medium text-sm">
               {getShortLabel(source)}
             </div>
           )}
@@ -184,7 +184,7 @@ export default function FlightSearchForm({
             type="button"
             onClick={handleFlip}
             aria-label="Flip source and destination"
-            className="bg-white border-2 border-blue-500 rounded-full p-2 shadow-sm hover:shadow-md transition-all hover:scale-105 active:scale-95 mt-5"
+            className="bg-card border-2 border-border rounded-full p-2 shadow-sm hover:shadow-md transition-all hover:scale-105 active:scale-95 mt-5"
           >
             <svg 
               className="w-4 h-4 text-blue-600" 
@@ -204,7 +204,7 @@ export default function FlightSearchForm({
 
         {/* Destination */}
         <div className="flex-1">
-          <label htmlFor="destination-select" className="block text-xs font-medium text-gray-700 mb-1">
+          <label htmlFor="destination-select" className="block text-xs font-medium text-muted-foreground mb-1">
             To
           </label>
           <div className="relative">
@@ -212,7 +212,7 @@ export default function FlightSearchForm({
               id="destination-select"
               value={destination}
               onChange={(e) => handleDestinationChange(e.target.value)}
-              className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none text-sm"
+              className="w-full p-3 bg-muted border border-border rounded-lg text-foreground font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none text-sm"
             >
               {getDestinationOptions().map((dest) => (
                 <option key={dest.value} value={dest.value}>
@@ -221,7 +221,7 @@ export default function FlightSearchForm({
               ))}
             </select>
             <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-              <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </div>

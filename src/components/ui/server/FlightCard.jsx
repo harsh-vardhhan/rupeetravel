@@ -32,7 +32,7 @@ export default function FlightCard({
   return (
     <div
       key={flight.id}
-      className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 hover:shadow-md transition-all duration-200 hover:border-blue-200"
+      className="bg-card rounded-xl shadow-sm border border-border p-4 hover:shadow-md transition-all duration-200 hover:border-blue-200"
     >
       {/* Airline & Date Row */}
       <div className="flex items-center justify-between mb-3">
@@ -43,10 +43,10 @@ export default function FlightCard({
             </span>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 text-sm leading-tight">
+            <p className="font-semibold text-card-foreground text-sm leading-tight">
               {flight.airline}
             </p>
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-muted-foreground">
               {formatDateWithSuffix(flight.date)}
             </p>
           </div>
@@ -55,33 +55,33 @@ export default function FlightCard({
           <p className="text-xl font-bold text-emerald-600">
             ₹{flight.price_inr.toLocaleString()}
           </p>
-          <p className="text-xs text-gray-500">per person</p>
+          <p className="text-xs text-muted-foreground">per person</p>
         </div>
       </div>
 
       {/* Route & Time Row */}
-      <div className="flex items-center justify-between mb-3 py-3 bg-gray-50 rounded-lg px-3">
+      <div className="flex items-center justify-between mb-3 py-3 bg-muted rounded-lg px-3">
         <div className="flex items-center gap-3 flex-1">
           <div className="text-center">
-            <p className="font-semibold text-gray-900 text-sm">
+            <p className="font-semibold text-card-foreground text-sm">
               {getSourceCode(flight.origin)}
             </p>
-            <p className="text-xs text-gray-500">{flight.origin}</p>
+            <p className="text-xs text-muted-foreground">{flight.origin}</p>
           </div>
 
           <div className="flex-1 flex items-center justify-center relative">
-            <div className="w-full h-px bg-gray-300"></div>
-            <div className="absolute bg-white border-2 border-blue-500 rounded-full w-3 h-3"></div>
-            <div className="absolute text-xs text-gray-600 top-4 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+            <div className="w-full h-px bg-border"></div>
+            <div className="absolute bg-card border-2 border-blue-500 rounded-full w-3 h-3"></div>
+            <div className="absolute text-xs text-muted-foreground top-4 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
               {flight.duration}
             </div>
           </div>
 
           <div className="text-center">
-            <p className="font-semibold text-gray-900 text-sm">
+            <p className="font-semibold text-card-foreground text-sm">
               {getDestinationCode(flight.destination)}
             </p>
-            <p className="text-xs text-gray-500">{flight.destination}</p>
+            <p className="text-xs text-muted-foreground">{flight.destination}</p>
           </div>
         </div>
         {/* Rain Probability Circular Progress */}
@@ -110,7 +110,7 @@ export default function FlightCard({
           <div className="flex items-center gap-1">
             <span className="text-sm">🍽️</span>
             <span className={`text-xs font-medium ${
-              flight.free_meal ? 'text-green-600' : 'text-gray-400'
+              flight.free_meal ? 'text-green-600' : 'text-muted-foreground'
             }`}>
               {flight.free_meal ? 'Meal included' : 'No meal'}
             </span>
