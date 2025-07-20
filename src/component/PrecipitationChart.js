@@ -33,12 +33,12 @@ const CustomTooltip = ({ active, payload, label }) => {
     const value = payload[0].value;
     const emoji = getRainEmoji(value);
     return (
-      <div className="bg-white/95 p-4 rounded-xl shadow-lg border border-gray-100 backdrop-blur-md">
+      <div className="bg-card/95 p-4 rounded-xl shadow-lg border border-border backdrop-blur-md dark:bg-card/90 dark:text-card-foreground">
         <div className="flex items-center gap-2">
           <span className="text-2xl">{emoji}</span>
           <div className="flex flex-col items-start">
-            <span className="font-bold text-sm text-gray-800">{label}</span>
-            <span className="text-sm font-medium text-blue-600">
+            <span className="font-bold text-sm text-card-foreground">{label}</span>
+            <span className="text-sm font-medium text-primary">
               {value} rainy days
             </span>
           </div>
@@ -83,12 +83,12 @@ const PrecipitationChart = ({
   }));
 
   return (
-    <div className="relative bg-gradient-to-b from-[#FFD6BA] via-[#FFE8CD] to-[#FFF2EB]">
+    <div className="relative bg-card">
       {/* Background pattern */}
       <div
         className="absolute inset-0 opacity-10"
         style={{
-          backgroundImage: 'radial-gradient(circle at 25px 25px, white 2px, transparent 0)',
+          backgroundImage: 'radial-gradient(circle at 25px 25px, var(--tw-prose-invert) 2px, transparent 0)',
           backgroundSize: '50px 50px'
         }}
       />
@@ -98,20 +98,20 @@ const PrecipitationChart = ({
         <div className="flex flex-col items-center gap-4 text-center pt-4 md:pt-8">
           <Badge
             variant="secondary"
-            className="px-4 py-2 rounded-full text-sm font-medium bg-[#FFDCDC] text-black backdrop-blur-md"
+            className="px-4 py-2 rounded-full text-sm font-medium bg-muted text-foreground backdrop-blur-md"
           >
             {destinationIcon} {destinationName}
           </Badge>
           
           <div className="flex flex-col gap-2">
-            <p className="text-base md:text-lg text-black font-medium">
+            <p className="text-base md:text-lg text-card-foreground font-medium">
               {subtitle}
             </p>
           </div>
         </div>
 
         {/* Chart Container */}
-        <div className="w-full max-w-[1000px] h-[280px] sm:h-[320px] md:h-[550px] bg-white/95 p-4 sm:p-6 md:p-8 rounded-3xl shadow-lg backdrop-blur-xl border border-white/20 relative overflow-hidden">
+        <div className="w-full max-w-[1000px] h-[280px] sm:h-[320px] md:h-[550px] bg-card/95 p-4 sm:p-6 md:p-8 rounded-3xl shadow-lg backdrop-blur-xl border border-border relative overflow-hidden">
           {/* Subtle inner glow */}
           <div
             className="absolute inset-0 rounded-3xl pointer-events-none"
@@ -141,7 +141,7 @@ const PrecipitationChart = ({
               
               <CartesianGrid 
                 strokeDasharray="3 3" 
-                stroke="rgba(156, 163, 175, 0.3)" 
+                stroke="rgba(156, 163, 175, 0.3)" // Optionally adjust for dark mode
                 vertical={false}
               />
               <XAxis 
@@ -150,7 +150,7 @@ const PrecipitationChart = ({
                 tickLine={false}
                 tick={{ 
                   fontSize: 12, 
-                  fill: '#6B7280',
+                  fill: 'var(--tw-prose-invert, #6B7280)',
                   fontWeight: 500
                 }}
                 interval={0}
@@ -223,9 +223,9 @@ export function CircularProgressBar({ value = 0, color = '#3498db', label = '' }
           left: '50%',
           transform: 'translate(-50%, -50%)',
           pointerEvents: 'none',
-        }} className="text-xs font-semibold text-gray-700">{percent}%</span>
+        }} className="text-xs font-semibold text-card-foreground">{percent}%</span>
       </div>
-      {label && <div className="text-[10px] text-gray-500 mt-1" style={{ marginTop: 4 }}>{label}</div>}
+      {label && <div className="text-[10px] text-muted-foreground mt-1" style={{ marginTop: 4 }}>{label}</div>}
     </div>
   );
 }
