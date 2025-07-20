@@ -122,6 +122,7 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
       label: "Ho Chi Minh City, Vietnam",
       country: "Vietnam",
     },
+    { value: "Da Nang", label: "Da Nang, Vietnam", country: "Vietnam" },
   ];
 
   let sourceOptions, destinationOptions;
@@ -173,6 +174,7 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
       Ahmedabad: "AMD",
       Hanoi: "HAN",
       "Ho Chi Minh City": "SGN",
+      "Da Nang": "DAD",
     };
     return codeMap[city] || city.substring(0, 3).toUpperCase();
   };
@@ -183,6 +185,7 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
       Mumbai: "BOM",
       Hanoi: "HAN",
       "Ho Chi Minh City": "SGN",
+      "Da Nang": "DAD",
     };
     return codeMap[city] || city.substring(0, 3).toUpperCase();
   };
