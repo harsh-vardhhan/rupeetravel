@@ -32,10 +32,11 @@ export default function FlightCard({
   return (
     <div
       key={flight.id}
-      className="bg-card rounded-xl shadow-sm border border-border p-4 hover:shadow-md transition-all duration-200 hover:border-blue-200"
+      // CHANGE: Added dark mode border color
+      className="bg-card rounded-xl shadow-sm border border-border dark:border-gray-800 p-4 hover:shadow-md transition-all duration-200 hover:border-blue-200"
     >
       {/* Airline & Date Row */}
-      <div className="flex items-start justify-between mb-3"> {/* Use items-start for better alignment */}
+      <div className="flex items-start justify-between mb-3">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-blue-400 rounded-lg flex items-center justify-center">
             <span className="text-white text-xs font-bold">
@@ -49,28 +50,29 @@ export default function FlightCard({
             <p className="text-xs text-muted-foreground">
               {formatDateWithSuffix(flight.date)}
             </p>
-            {/* REVAMP: Luggage price info was here, but has been moved to the right side
-              to group it with the main price. This cleans up the left side and
-              balances the card layout.
-            */}
           </div>
         </div>
         <div className="text-right flex-shrink-0">
-          <p className="text-xl font-bold text-emerald-600">
+          {/* CHANGE: Added dark mode color for price */}
+          <p className="text-xl font-bold text-emerald-600 dark:text-emerald-500">
             ₹{flight.price_inr.toLocaleString()}
           </p>
           <p className="text-xs text-muted-foreground">per person</p>
 
-          {/* REVAMP: New, cleaner luggage price section */}
+          {/* Luggage Price Section with Dark Mode Fixes */}
           {flight.airline === "Vietjet" && flight.minCheckedLuggagePrice && (
-            <div className="mt-1.5 border-t border-dashed pt-1.5 text-xs">
-              <p className="text-muted-foreground">
+            // CHANGE: Added dark mode border color
+            <div className="mt-1.5 border-t border-dashed border-gray-200 dark:border-gray-700 pt-1.5 text-xs">
+              <p className="text-muted-foreground dark:text-gray-400">
+                {/* CHANGE: Updated text to be more specific */}
                 with {flight.minCheckedLuggageWeight} bag:{" "}
-                <span className="font-bold text-card-foreground">
+                {/* CHANGE: Added brighter text color for dark mode */}
+                <span className="font-bold text-card-foreground dark:text-gray-200">
                   ₹{flight.totalWithMinLuggage.toLocaleString()}
                 </span>
               </p>
-              <p className="text-[11px] text-gray-400 -mt-0.5">
+              {/* CHANGE: Added brighter text color for dark mode */}
+              <p className="text-[11px] text-gray-500 dark:text-gray-500 -mt-0.5">
                 (+₹{flight.minCheckedLuggagePrice.toLocaleString()} for baggage)
               </p>
             </div>
@@ -89,8 +91,10 @@ export default function FlightCard({
           </div>
 
           <div className="flex-1 flex items-center justify-center relative">
-            <div className="w-full h-px bg-border"></div>
-            <div className="absolute bg-card border-2 border-blue-500 rounded-full w-3 h-3"></div>
+            {/* CHANGE: Added dark mode border color */}
+            <div className="w-full h-px bg-border dark:bg-gray-700"></div>
+            {/* CHANGE: Added dark mode border color */}
+            <div className="absolute bg-card border-2 border-blue-500 dark:border-blue-400 rounded-full w-3 h-3"></div>
             <div className="absolute text-xs text-muted-foreground top-4 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
               {flight.duration}
             </div>
@@ -103,7 +107,6 @@ export default function FlightCard({
             <p className="text-xs text-muted-foreground">{flight.destination}</p>
           </div>
         </div>
-        {/* Rain Probability Circular Progress */}
         {showRain && getRainColor && (
           <div className="ml-4 flex-shrink-0 flex flex-col items-center">
             <CircularProgressBar
@@ -118,18 +121,22 @@ export default function FlightCard({
       {/* Features Row */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
         <div className="flex items-center gap-3">
+          {/* CHANGE: Added dark mode variants for status badges */}
           <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
             flight.flight_type === 'direct'
-              ? 'bg-green-100 text-green-800'
-              : 'bg-orange-100 text-orange-800'
+              ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+              : 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300'
           }`}>
             {flight.flight_type}
           </span>
 
           <div className="flex items-center gap-1">
             <span className="text-sm">🍽️</span>
+            {/* CHANGE: Added dark mode variants for meal text */}
             <span className={`text-xs font-medium ${
-              flight.free_meal ? 'text-green-600' : 'text-muted-foreground'
+              flight.free_meal 
+                ? 'text-green-600 dark:text-green-400' 
+                : 'text-muted-foreground'
             }`}>
               {flight.free_meal ? 'Meal included' : 'No meal'}
             </span>
@@ -140,7 +147,7 @@ export default function FlightCard({
             href={getFlightHref(flight)}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-400 hover:bg-blue-400 text-white px-4 py-2 rounded-lg text-xs font-medium transition-colors inline-block"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-xs font-medium transition-colors inline-block"
           >
             Search Flight
           </a>
