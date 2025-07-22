@@ -59,20 +59,20 @@ export default function FlightCard({
           <p className="text-xs text-muted-foreground">per person</p>
 
           {/* Luggage Price Section with Dark Mode Fixes */}
-          {flight.airline === "Vietjet" && flight.minCheckedLuggagePrice && (
+          {flight.airline === "Vietjet" && flight.min_checked_luggage_price && (
             // CHANGE: Added dark mode border color
             <div className="mt-1.5 border-t border-dashed border-gray-200 dark:border-gray-700 pt-1.5 text-xs">
               <p className="text-muted-foreground dark:text-gray-400">
                 {/* CHANGE: Updated text to be more specific */}
-                with {flight.minCheckedLuggageWeight} bag:{" "}
+                with {flight.min_checked_luggage_weight} bag:{" "}
                 {/* CHANGE: Added brighter text color for dark mode */}
                 <span className="font-bold text-card-foreground dark:text-gray-200">
-                  ₹{flight.totalWithMinLuggage.toLocaleString()}
+                  ₹{flight.total_with_min_luggage.toLocaleString()}
                 </span>
               </p>
               {/* CHANGE: Added brighter text color for dark mode */}
               <p className="text-[11px] text-gray-500 dark:text-gray-500 -mt-0.5">
-                (+₹{flight.minCheckedLuggagePrice.toLocaleString()} for baggage)
+                (+₹{flight.min_checked_luggage_price.toLocaleString()} for baggage)
               </p>
             </div>
           )}
