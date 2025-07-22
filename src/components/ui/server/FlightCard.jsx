@@ -1,12 +1,12 @@
-import { CircularProgressBar } from '../../../component/PrecipitationChart';
-import LuggagePolicyButton from './LuggagePolicyButton';
-import FlightWeatherButton from '../../../component/FlightWeatherButton';
+import { CircularProgressBar } from "../../../component/PrecipitationChart";
+import LuggagePolicyButton from "./LuggagePolicyButton";
+import FlightWeatherButton from "../../../component/FlightWeatherButton";
 
 function formatDateWithSuffix(dateString) {
   const date = new Date(dateString);
   if (isNaN(date)) return dateString;
   const day = date.getDate();
-  const month = date.toLocaleString('default', { month: 'long' });
+  const month = date.toLocaleString("default", { month: "long" });
   const year = date.getFullYear();
   return `${day} ${month} ${year}`;
 }
@@ -20,7 +20,7 @@ export default function FlightCard({
   Button,
   showWeatherButton,
   precipitationData,
-  destinationOptions
+  destinationOptions,
 }) {
   const getFlightHref = (flight) => {
     if (flight.link && flight.link.trim() !== "") {
@@ -104,7 +104,9 @@ export default function FlightCard({
             <p className="font-semibold text-card-foreground text-sm">
               {getDestinationCode(flight.destination)}
             </p>
-            <p className="text-xs text-muted-foreground">{flight.destination}</p>
+            <p className="text-xs text-muted-foreground">
+              {flight.destination}
+            </p>
           </div>
         </div>
         {showRain && getRainColor && (
@@ -122,23 +124,27 @@ export default function FlightCard({
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
         <div className="flex items-center gap-3">
           {/* CHANGE: Added dark mode variants for status badges */}
-          <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-            flight.flight_type === 'direct'
-              ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
-              : 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300'
-          }`}>
+          <span
+            className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
+              flight.flight_type === "direct"
+                ? "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
+                : "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"
+            }`}
+          >
             {flight.flight_type}
           </span>
 
           <div className="flex items-center gap-1">
             <span className="text-sm">🍽️</span>
             {/* CHANGE: Added dark mode variants for meal text */}
-            <span className={`text-xs font-medium ${
-              flight.free_meal 
-                ? 'text-green-600 dark:text-green-400' 
-                : 'text-muted-foreground'
-            }`}>
-              {flight.free_meal ? 'Meal included' : 'No meal'}
+            <span
+              className={`text-xs font-medium ${
+                flight.free_meal
+                  ? "text-green-600 dark:text-green-400"
+                  : "text-muted-foreground"
+              }`}
+            >
+              {flight.free_meal ? "Meal included" : "No meal"}
             </span>
           </div>
         </div>
