@@ -32,7 +32,10 @@ async function seedFlights() {
       origin_country: flightItem.originCountry,
       destination_country: flightItem.destinationCountry,
       rain_probability: flightItem.rainProbability.toString(),
-      free_meal: flightItem.freeMeal ? 1 : 0
+      free_meal: flightItem.freeMeal ? 1 : 0,
+      min_checked_luggage_price: flightItem.minCheckedLuggagePrice || null,
+      min_checked_luggage_weight: flightItem.minCheckedLuggageWeight || null,
+      total_with_min_luggage: flightItem.totalWithMinLuggage || null
     }));
     
     console.log('🔄 Inserting flights into database...');
