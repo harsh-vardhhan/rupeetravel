@@ -35,7 +35,7 @@ export default function FlightCard({
       className="bg-card rounded-xl shadow-sm border border-border p-4 hover:shadow-md transition-all duration-200 hover:border-blue-200"
     >
       {/* Airline & Date Row */}
-      <div className="flex items-center justify-between mb-3">
+      <div className="flex items-start justify-between mb-3"> {/* Use items-start for better alignment */}
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-blue-400 rounded-lg flex items-center justify-center">
             <span className="text-white text-xs font-bold">
@@ -49,13 +49,32 @@ export default function FlightCard({
             <p className="text-xs text-muted-foreground">
               {formatDateWithSuffix(flight.date)}
             </p>
+            {/* REVAMP: Luggage price info was here, but has been moved to the right side
+              to group it with the main price. This cleans up the left side and
+              balances the card layout.
+            */}
           </div>
         </div>
-        <div className="text-right">
+        <div className="text-right flex-shrink-0">
           <p className="text-xl font-bold text-emerald-600">
             ₹{flight.price_inr.toLocaleString()}
           </p>
           <p className="text-xs text-muted-foreground">per person</p>
+
+          {/* REVAMP: New, cleaner luggage price section */}
+          {flight.airline === "Vietjet" && flight.minCheckedLuggagePrice && (
+            <div className="mt-1.5 border-t border-dashed pt-1.5 text-xs">
+              <p className="text-muted-foreground">
+                with {flight.minCheckedLuggageWeight} bag:{" "}
+                <span className="font-bold text-card-foreground">
+                  ₹{flight.totalWithMinLuggage.toLocaleString()}
+                </span>
+              </p>
+              <p className="text-[11px] text-gray-400 -mt-0.5">
+                (+₹{flight.minCheckedLuggagePrice.toLocaleString()} for baggage)
+              </p>
+            </div>
+          )}
         </div>
       </div>
 
