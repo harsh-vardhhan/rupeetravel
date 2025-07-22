@@ -1,12 +1,12 @@
-import { CircularProgressBar } from '../../../component/PrecipitationChart';
-import LuggagePolicyButton from './LuggagePolicyButton';
-import FlightWeatherButton from '../../../component/FlightWeatherButton';
+import { CircularProgressBar } from "../../../component/PrecipitationChart";
+import LuggagePolicyButton from "./LuggagePolicyButton";
+import FlightWeatherButton from "../../../component/FlightWeatherButton";
 
 function formatDateWithSuffix(dateString) {
   const date = new Date(dateString);
   if (isNaN(date)) return dateString;
   const day = date.getDate();
-  const month = date.toLocaleString('default', { month: 'long' });
+  const month = date.toLocaleString("default", { month: "long" });
   const year = date.getFullYear();
   return `${day} ${month} ${year}`;
 }
@@ -20,7 +20,7 @@ export default function FlightCard({
   Button,
   showWeatherButton,
   precipitationData,
-  destinationOptions
+  destinationOptions,
 }) {
   const getFlightHref = (flight) => {
     if (flight.link && flight.link.trim() !== "") {
@@ -35,7 +35,9 @@ export default function FlightCard({
       className="bg-card rounded-xl shadow-sm border border-border p-4 hover:shadow-md transition-all duration-200 hover:border-blue-200"
     >
       {/* Airline & Date Row */}
-      <div className="flex items-start justify-between mb-3"> {/* Use items-start for better alignment */}
+      <div className="flex items-start justify-between mb-3">
+        {" "}
+        {/* Use items-start for better alignment */}
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-blue-400 rounded-lg flex items-center justify-center">
             <span className="text-white text-xs font-bold">
@@ -100,7 +102,9 @@ export default function FlightCard({
             <p className="font-semibold text-card-foreground text-sm">
               {getDestinationCode(flight.destination)}
             </p>
-            <p className="text-xs text-muted-foreground">{flight.destination}</p>
+            <p className="text-xs text-muted-foreground">
+              {flight.destination}
+            </p>
           </div>
         </div>
         {/* Rain Probability Circular Progress */}
@@ -118,20 +122,24 @@ export default function FlightCard({
       {/* Features Row */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
         <div className="flex items-center gap-3">
-          <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-            flight.flight_type === 'direct'
-              ? 'bg-green-100 text-green-800'
-              : 'bg-orange-100 text-orange-800'
-          }`}>
+          <span
+            className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
+              flight.flight_type === "direct"
+                ? "bg-green-100 text-green-800"
+                : "bg-orange-100 text-orange-800"
+            }`}
+          >
             {flight.flight_type}
           </span>
 
           <div className="flex items-center gap-1">
             <span className="text-sm">🍽️</span>
-            <span className={`text-xs font-medium ${
-              flight.free_meal ? 'text-green-600' : 'text-muted-foreground'
-            }`}>
-              {flight.free_meal ? 'Meal included' : 'No meal'}
+            <span
+              className={`text-xs font-medium ${
+                flight.free_meal ? "text-green-600" : "text-muted-foreground"
+              }`}
+            >
+              {flight.free_meal ? "Meal included" : "No meal"}
             </span>
           </div>
         </div>
