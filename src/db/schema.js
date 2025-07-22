@@ -15,4 +15,7 @@ export const flight = sqliteTable('flight', {
   destination_country: text('destination_country').notNull(),
   rain_probability: text('rain_probability').notNull(),
   free_meal: integer('free_meal', { mode: 'boolean' }).notNull().default(false),
+  minCheckedLuggagePrice: integer('min_checked_luggage_price'),
+  minCheckedLuggageWeight: text('min_checked_luggage_weight'),
+  totalWithMinLuggage: integer('total_with_min_luggage'),
 }); 

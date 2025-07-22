@@ -17,7 +17,6 @@ export default function FlightCard({
   getDestinationCode,
   showRain = false,
   getRainColor,
-  Button,
   showWeatherButton,
   precipitationData,
   destinationOptions

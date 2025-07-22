@@ -83,12 +83,9 @@ export async function getFlightsFromDb(searchParams) {
       db.select().from(schema.flight).where(whereCondition).orderBy(orderBy).limit(limit).offset(offset),
       db.select({ count: sql`count(*)` }).from(schema.flight).where(whereCondition)
     ]);
-
-    // Enrich flights with luggage info for UI
-    const enrichedFlights = flights.map(enrichFlightWithLuggage);
-
+    
     const totalCount = totalFlightsResult[0].count;
-    return { flights: enrichedFlights, totalCount };
+    return { flights: flights, totalCount };
 
   } catch (error) {
     console.error('Database query failed:', error);
