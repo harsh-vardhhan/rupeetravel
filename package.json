@@ -3,19 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "dotenv -- next dev",
-    "build": "npm run db:seed && next build",
+    "dev": "next dev",
+    "build": "bun run db:seed && next build",
     "start": "next start",
     "lint": "next lint",
-    "db:seed": "dotenv -e .env.local -- node scripts/seed.js",
+    "db:seed": "node scripts/seed.js",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@libsql/client": "^0.15.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "dotenv": "^16.5.0",
-    "dotenv-cli": "^8.0.0",
     "drizzle-orm": "^0.44.2",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.2",
