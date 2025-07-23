@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import { db } from '../src/db/index.js';
 import { flight } from '../src/db/schema.js';
 import fs from 'fs';
