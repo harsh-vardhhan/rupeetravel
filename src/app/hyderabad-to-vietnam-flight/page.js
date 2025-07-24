@@ -86,7 +86,7 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
 
   const page = parseInt(resolvedSearchParams.page) || 1;
   const source = resolvedSearchParams.source || "Hyderabad";
-  const destination = resolvedSearchParams.destination || "Hanoi";
+  const destination = resolvedSearchParams.destination || "Ho Chi Minh City";
   const drySeason = resolvedSearchParams.drySeason === "1";
   const priceUnder10k = resolvedSearchParams.priceUnder10k === "1";
   const airlineGroup = resolvedSearchParams.airlineGroup || "all";
@@ -118,7 +118,6 @@ export default async function MumbaiToVietnamFlightPage({ searchParams }) {
     { value: "Hyderabad", label: "Hyderabad, India", country: "India" },
   ];
   const vietnamCities = [
-    { value: "Hanoi", label: "Hanoi, Vietnam", country: "Vietnam" },
     {
       value: "Ho Chi Minh City",
       label: "Ho Chi Minh City, Vietnam",
