@@ -1,4 +1,4 @@
-const siteUrl ='https://www.rupeetravel.com';
+const siteUrl = 'https://www.rupeetravel.com';
 
 module.exports = {
   siteUrl,
@@ -33,6 +33,12 @@ module.exports = {
       },
       {
         loc: '/ahmedabad-to-vietnam-flight',
+        changefreq: 'daily',
+        priority: 0.7,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/hyderabad-to-vietnam-flight',
         changefreq: 'daily',
         priority: 0.7,
         lastmod: new Date().toISOString(),

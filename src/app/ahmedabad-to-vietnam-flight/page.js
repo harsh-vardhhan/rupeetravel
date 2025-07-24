@@ -42,8 +42,7 @@ const SortButton = ({ currentSortBy, sortByValue, label, params }) => {
 
 export const metadata = {
   title: "Flights from Ahmedabad to Vietnam",
-  description:
-    "Find and compare the best flights from Ahmedabad to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+  description: "Find the cheapest flights from Ahmedabad to Vietnam for Hanoi, Ho Chi Minh City, and Da Nang.",
   openGraph: {
     title: "Flights from Ahmedabad to Vietnam",
     description:

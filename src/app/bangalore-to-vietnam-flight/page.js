@@ -42,8 +42,7 @@ const SortButton = ({ currentSortBy, sortByValue, label, params }) => {
 
 export const metadata = {
   title: "Flights from Bangalore to Vietnam",
-  description:
-    "Find and compare the best flights from Bangalore to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+  description: "Find the cheapest flights from Bangalore to Vietnam for Ho Chi Minh City.",
   openGraph: {
     title: "Flights from Bangalore to Vietnam",
     description:

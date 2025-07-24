@@ -21,7 +21,7 @@ const SortButton = ({ currentSortBy, sortByValue, label, params }) => {
   );
   const query = new URLSearchParams(filteredParams);
   query.set("sortBy", sortByValue);
-  const href = `/new-delhi-to-vietnam-flight?${query.toString()}`;
+  const href = `/hyderabad-to-vietnam-flight?${query.toString()}`;
   const isActive = currentSortBy === sortByValue;
 
   return (
@@ -41,21 +41,20 @@ const SortButton = ({ currentSortBy, sortByValue, label, params }) => {
 };
 
 export const metadata = {
-  title: "Flights from New Delhi to Vietnam",
-  description:
-    "Find the cheapest flights from New Delhi to Vietnam for Hanoi and Ho Chi Minh City.",
+  title: "Flights from Hyderabad to Vietnam",
+  description: "Find the cheapest flights from Hyderabad to Vietnam for Ho Chi Minh City.",
   openGraph: {
-    title: "Flights from New Delhi to Vietnam",
+    title: "Flights from Hyderabad to Vietnam",
     description:
-      "Find and compare the best flights from New Delhi to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
-    url: "https://www.rupeetravel.com/new-delhi-to-vietnam-flight",
+      "Find and compare the best flights from Hyderabad to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
+    url: "https://www.rupeetravel.com/hyderabad-to-vietnam-flight",
     siteName: "Rupee Travel",
     images: [
       {
         url: "https://ik.imagekit.io/rupeetravel/preview.png",
         width: 1200,
         height: 630,
-        alt: "Flights from New Delhi to Vietnam | Rupee Travel",
+        alt: "Flights from Hyderabad to Vietnam | Rupee Travel",
       },
     ],
     locale: "en_IN",
@@ -63,27 +62,30 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flights from New Delhi to Vietnam",
+    title: "Flights from Hyderabad to Vietnam",
     description:
-      "New Delhi to Hanoi flight | New Delhi to Ho Chi Minh City flight | Hanoi to New Delhi flight | Ho Chi Minh City to New Delhi flight",
+      "Find and compare the best flights from Hyderabad to Vietnam | Buy cheapest Vietnam flight ticket | India to Vietnam flight",
     site: "@harsh_vardhhan",
     creator: "@harsh_vardhhan",
     images: ["https://ik.imagekit.io/rupeetravel/preview.png"],
   },
   robots: "index,follow",
   alternates: {
-    canonical: "https://www.rupeetravel.com/new-delhi-to-vietnam-flight",
+    canonical: "https://www.rupeetravel.com/hyderabad-to-vietnam-flight",
   },
   icons: {
     icon: "/favicon.ico",
   },
 };
 
-export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
+export const revalidate = false;
+
+export default async function MumbaiToVietnamFlightPage({ searchParams }) {
+  // Use a resolvedSearchParams variable for clarity
   const resolvedSearchParams = await searchParams;
 
   const page = parseInt(resolvedSearchParams.page) || 1;
-  const source = resolvedSearchParams.source || "New Delhi";
+  const source = resolvedSearchParams.source || "Hyderabad";
   const destination = resolvedSearchParams.destination || "Hanoi";
   const drySeason = resolvedSearchParams.drySeason === "1";
   const priceUnder10k = resolvedSearchParams.priceUnder10k === "1";
@@ -113,7 +115,7 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
 
   // Define city options
   const indiaCities = [
-    { value: "New Delhi", label: "New Delhi, India", country: "India" },
+    { value: "Hyderabad", label: "Hyderabad, India", country: "India" },
   ];
   const vietnamCities = [
     { value: "Hanoi", label: "Hanoi, Vietnam", country: "Vietnam" },
@@ -135,7 +137,7 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
 
   const getCityFullName = (city) => {
     const cityMap = {
-      "New Delhi": "New Delhi, India",
+      Hyderabad: "Hyderabad, India",
       Hanoi: "Hanoi, Vietnam",
       "Ho Chi Minh City": "Ho Chi Minh City, Vietnam",
       "Da Nang": "Da Nang, Vietnam",
@@ -170,7 +172,7 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
 
   const getSourceCode = (city) => {
     const codeMap = {
-      "New Delhi": "DEL",
+      Hyderabad: "HYD",
       Hanoi: "HAN",
       "Ho Chi Minh City": "SGN",
     };
@@ -179,8 +181,7 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
 
   const getDestinationCode = (city) => {
     const codeMap = {
-      "New Delhi": "DEL",
-      Mumbai: "BOM",
+      Hyderabad: "HYD",
       Hanoi: "HAN",
       "Ho Chi Minh City": "SGN",
     };
@@ -189,7 +190,7 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
 
   return (
     <main className="min-h-screen bg-background">
-      <Header title="Flights from New Delhi to Vietnam" />
+      <Header title="Flights from Hyderabad to Vietnam" />
       <div className="px-4 py-6 max-w-7xl mx-auto">
         <div className="mb-6">
           {(() => {
@@ -203,7 +204,7 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
                   currentSource={source}
                   sourceOptions={sourceOptions}
                   destinationOptions={destinationOptions}
-                  routeName="new-delhi-to-vietnam-flight"
+                  routeName="hyderabad-to-vietnam-flight"
                   drySeason={drySeason}
                   showDrySeasonButton={true}
                   priceUnder10k={priceUnder10k}
@@ -217,7 +218,7 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
                   currentSource={source}
                   sourceOptions={sourceOptions}
                   destinationOptions={destinationOptions}
-                  routeName="new-delhi-to-vietnam-flight"
+                  routeName="hyderabad-to-vietnam-flight"
                 />
               );
             }
@@ -335,7 +336,7 @@ export default async function NewDelhiToVietnamFlightPage({ searchParams }) {
               totalPages={totalPages}
               limit={limit}
               pageNumbers={pageNumbers}
-              baseHref="/new-delhi-to-vietnam-flight"
+              baseHref="/hyderabad-to-vietnam-flight"
               queryParams={{
                 destination,
                 source,
