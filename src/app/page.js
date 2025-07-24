@@ -153,14 +153,6 @@ const blogs = [
   },
   {
     key: 4,
-    heading: ` Budget experiences of Da Nang, Vietnam`,
-    subHeading: ` Affordable experiences to enjoy in Da Nang `,
-    tagText: `Blog`,
-    tagColor: `red`,
-    link: `/da-nang-vietnam-experiences`,
-  },
-  {
-    key: 5,
     heading: ` Bali travel guide for Indians`,
     subHeading: ` 7 day itinerary for Couples in Bali`,
     tagText: `Blog`,

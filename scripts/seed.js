@@ -5,14 +5,27 @@ import path from 'path';
 
 async function seedFlights() {
   try {
+    // Check if database URL is configured
+    if (!process.env.TURSO_DB_URL) {
+      console.log('⚠️  TURSO_DB_URL not configured. Skipping database seeding.');
+      console.log('📝 To enable seeding, add TURSO_DB_URL to your .env.local file');
+      return;
+    }
+
     console.log('🌱 Starting flight data seeding...');
 
     // Clear the flight table before seeding
     await db.delete(flight);
     console.log('🧹 Cleared all existing flights from the database.');
     
-    // Read the flight-price.json file
+    // Check if flight data file exists
     const flightDataPath = path.join(process.cwd(), 'flight-price.json');
+    if (!fs.existsSync(flightDataPath)) {
+      console.log('⚠️  flight-price.json not found. Skipping seeding.');
+      return;
+    }
+    
+    // Read the flight-price.json file
     const flightData = JSON.parse(fs.readFileSync(flightDataPath, 'utf8'));
     
     console.log(`📊 Found ${flightData.length} flights to insert`);
@@ -55,4 +68,4 @@ async function seedFlights() {
   }
 }
 
-seedFlights(); 
+seedFlights();
