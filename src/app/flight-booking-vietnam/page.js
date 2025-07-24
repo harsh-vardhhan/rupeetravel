@@ -214,7 +214,6 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
 };
 
 export default function Home() {
-
   const flights = [
     {
       key: 1,
@@ -247,6 +246,22 @@ export default function Home() {
       tagText: `Flights`,
       tagColor: `teal`,
       link: `/kolkata-to-vietnam-flight`,
+    },
+    {
+      key: 5,
+      heading: ` Ahmedabad to Vietnam flights`,
+      subHeading: ` Cheapest flights from Ahmedabad to Vietnam`,
+      tagText: `Flights`,
+      tagColor: `teal`,
+      link: `/ahmedabad-to-vietnam-flight`,
+    },
+    {
+      key: 6,
+      heading: ` Hyderabad to Vietnam flights`,
+      subHeading: ` Cheapest flights from Hyderabad to Vietnam`,
+      tagText: `Flights`,
+      tagColor: `teal`,
+      link: `/hyderabad-to-vietnam-flight`,
     },
   ];
   return (
