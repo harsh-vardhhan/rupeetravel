@@ -210,6 +210,14 @@ const flights = [
     tagColor: `teal`,
     link: `/ahmedabad-to-vietnam-flight`,
   },
+  {
+    key: 6,
+    heading: ` Hyderabad to Vietnam flights`,
+    subHeading: ` Cheapest flights from Hyderabad to Vietnam`,
+    tagText: `Flights`,
+    tagColor: `teal`,
+    link: `/hyderabad-to-vietnam-flight`,
+  },
 ];
 
 export const metadata = {
