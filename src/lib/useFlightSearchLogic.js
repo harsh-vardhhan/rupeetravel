@@ -62,34 +62,33 @@ const allVietnamCities = [
   },
 ];
 
-/**
- * A reusable server-side function to encapsulate all flight search logic.
- * It fetches data and resolves parameters based on the dynamic route.
- * @param {object} params - The route parameters from Next.js (e.g., { flightRoute: '...' }).
- * @param {object} searchParams - The URL search parameters.
- * @returns {Promise<object>} An object containing all data and state for the page component.
- */
+// Make sure the function itself is marked as async
 export const useFlightSearchLogic = async (params, searchParams) => {
-  // 1. Get the configuration for the current route, with a fallback
+  // 1. AWAIT params and searchParams to get their actual values
+  //    This resolves the Promises returned by the dynamic APIs.
+  const resolvedParams = await params;
+  const resolvedSearchParams = await searchParams;
+
+  // 2. Use the resolved values to get the configuration for the current route
   const currentRouteConfig =
-    routeConfig[params.flightRoute] || routeConfig["mumbai-to-vietnam-flight"];
+    routeConfig[resolvedParams.flightRoute] || routeConfig["mumbai-to-vietnam-flight"];
 
-  // 2. Resolve all search parameters
-  const page = parseInt(searchParams.page) || 1;
-  const source = searchParams.source || currentRouteConfig.source;
+  // 3. Resolve all search parameters using the awaited searchParams object
+  const page = parseInt(resolvedSearchParams.page) || 1;
+  const source = resolvedSearchParams.source || currentRouteConfig.source;
   const destination =
-    searchParams.destination || currentRouteConfig.defaultDestination;
-  const drySeason = searchParams.drySeason === "1";
-  const priceUnder10k = searchParams.priceUnder10k === "1";
-  const airlineGroup = searchParams.airlineGroup || "all";
-  const sortBy = searchParams.sortBy || "price";
-  const limit = 20;
+    resolvedSearchParams.destination || currentRouteConfig.defaultDestination;
+  const drySeason = resolvedSearchParams.drySeason === "1";
+  const priceUnder10k = resolvedSearchParams.priceUnder10k === "1";
+  const airlineGroup = resolvedSearchParams.airlineGroup || "all";
+  const sortBy = resolvedSearchParams.sortBy || "price";
+  const limit = 20; // This can remain synchronous as it's a local constant
 
-  // 3. Fetch flight data from the database
+  // 4. Fetch flight data from the database using the resolved parameters
   let flights, totalCount;
   try {
     const data = await getFlightsFromDb({
-      ...searchParams,
+      ...resolvedSearchParams, // Pass the awaited object if needed by getFlightsFromDb
       page,
       destination,
       source,
@@ -105,31 +104,27 @@ export const useFlightSearchLogic = async (params, searchParams) => {
     totalCount = 0;
   }
 
-  // 4. Determine the source and destination options for the dropdowns
+  // 5. Determine the source and destination options for the dropdowns
+  //    (Logic remains the same, but uses the resolved `source`)
   const isIndiaToVietnam = allIndiaCities.some((city) => city.value === source);
 
   let sourceOptions, destinationOptions;
 
   if (isIndiaToVietnam) {
-    // This is a standard trip from India to Vietnam
     sourceOptions = allIndiaCities;
-    // The destinations are the ones allowed by the specific route config
     destinationOptions = allVietnamCities.filter((city) =>
       currentRouteConfig.destinations.includes(city.value),
     );
   } else {
-    // This is a flipped/return trip from Vietnam to India
-    // The sources are the Vietnamese cities allowed by the route config
     sourceOptions = allVietnamCities.filter((city) =>
       currentRouteConfig.destinations.includes(city.value),
     );
-    // The only possible destination is the original source city of the route
     destinationOptions = allIndiaCities.filter(
       (city) => city.value === currentRouteConfig.source,
     );
   }
 
-  // 5. Calculate pagination details
+  // 6. Calculate pagination details (Logic remains the same)
   const totalPages = Math.ceil(totalCount / limit);
   const pagesToDisplay = Math.min(5, totalPages);
   let pageNumbers = [];
@@ -144,7 +139,7 @@ export const useFlightSearchLogic = async (params, searchParams) => {
     );
   }
 
-  // 6. Return all processed data for the page component
+  // 7. Return all processed data for the page component
   return {
     flights,
     totalCount,
@@ -160,6 +155,6 @@ export const useFlightSearchLogic = async (params, searchParams) => {
     sortBy,
     sourceOptions,
     destinationOptions,
-    currentRouteConfig, // Pass the config for use in the page
+    currentRouteConfig,
   };
 };

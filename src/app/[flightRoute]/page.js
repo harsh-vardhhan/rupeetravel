@@ -14,10 +14,6 @@ import {
 } from "../../lib/flightWeather";
 import { getAirportCode, getCityFullName } from '../../lib/flightUtils';
 
-// --- Helper Components & Functions ---
-// For better organization, these should be in their own files.
-// For example: components/ui/server/SortButton.js and lib/flightUtils.js
-
 const SortButton = ({
   currentSortBy,
   sortByValue,
@@ -65,7 +61,10 @@ export async function generateStaticParams() {
 
 // Dynamically generate metadata for each route
 export async function generateMetadata({ params }) {
-  const sourceCity = params.flightRoute
+  // Await params before using its properties
+  const resolvedParams = await params;
+  
+  const sourceCity = resolvedParams.flightRoute
     .split("-to-")[0]
     .replace(/-/g, " ")
     .replace(/\b\w/g, (l) => l.toUpperCase());
@@ -78,7 +77,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title,
       description,
-      url: `https://www.rupeetravel.com/${params.flightRoute}`,
+      url: `https://www.rupeetravel.com/${resolvedParams.flightRoute}`,
       siteName: "Rupee Travel",
       images: [
         {
@@ -91,7 +90,7 @@ export async function generateMetadata({ params }) {
       type: "website",
     },
     alternates: {
-      canonical: `https://www.rupeetravel.com/${params.flightRoute}`,
+      canonical: `https://www.rupeetravel.com/${resolvedParams.flightRoute}`,
     },
   };
 }
@@ -101,6 +100,9 @@ export const revalidate = false; // Or a time-based value like 3600
 // --- The Page Component ---
 
 export default async function FlightPage({ params, searchParams }) {
+  // Await params before using its properties
+  const resolvedParams = await params;
+  
   // 1. Get all data and state by calling the reusable logic function
   const {
     flights,
@@ -118,9 +120,9 @@ export default async function FlightPage({ params, searchParams }) {
     sourceOptions,
     destinationOptions,
     currentRouteConfig,
-  } = await useFlightSearchLogic(params, searchParams);
+  } = await useFlightSearchLogic(resolvedParams, searchParams);
 
-  const baseHref = `/${params.flightRoute}`;
+  const baseHref = `/${resolvedParams.flightRoute}`;
 
   // 2. The rest of the component is for rendering the UI
   return (
@@ -133,7 +135,7 @@ export default async function FlightPage({ params, searchParams }) {
             currentSource={source}
             sourceOptions={sourceOptions}
             destinationOptions={destinationOptions}
-            routeName={params.flightRoute}
+            routeName={resolvedParams.flightRoute}
             drySeason={drySeason}
             showDrySeasonButton={true}
             priceUnder10k={priceUnder10k}
