@@ -42,7 +42,8 @@ const SortButton = ({ currentSortBy, sortByValue, label, params }) => {
 
 export const metadata = {
   title: "Flights from Ahmedabad to Vietnam",
-  description: "Find the cheapest flights from Ahmedabad to Vietnam for Hanoi, Ho Chi Minh City, and Da Nang.",
+  description:
+    "Find the cheapest flights from Ahmedabad to Vietnam for Hanoi, Ho Chi Minh City, and Da Nang.",
   openGraph: {
     title: "Flights from Ahmedabad to Vietnam",
     description:

@@ -42,7 +42,8 @@ const SortButton = ({ currentSortBy, sortByValue, label, params }) => {
 
 export const metadata = {
   title: "Flights from Kolkata to Vietnam",
-  description: "Find the cheapest flights from Kolkata to Vietnam for Ho Chi Minh City.",
+  description:
+    "Find the cheapest flights from Kolkata to Vietnam for Ho Chi Minh City.",
   openGraph: {
     title: "Flights from Kolkata to Vietnam",
     description:
