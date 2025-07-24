@@ -1,70 +1,36 @@
-# Rupee Travel: Technical Specification
-
-## 1. System Overview
-A web application providing a travel checklist, guides, and blog content for Indian travelers to Vietnam. The system is optimized for SEO and performance, and supports dynamic and static content.
-
-## 2. Architecture
-- **Frontend:** Next.js 15 (App Router), React 18, Tailwind CSS
-- **Backend/Data Layer:** Serverless SQLite (Turso/LibSQL) accessed via Drizzle ORM
-- **Content:** Markdown files for blog posts, dynamic data for flights and checklists
-- **Deployment:** Vercel (optimized for static and dynamic rendering)
-
-## 3. Main Modules & Responsibilities
-- **App Router (src/app/):**
-  - Route-based code splitting and static generation
-  - Dynamic routes for guides, checklists, and blog posts
-- **Components (src/components/, src/component/):**
-  - UI library (buttons, cards, tables, etc.)
-  - Feature-specific components (e.g., Currency Converter, Flight Search)
-- **Database (src/db/):**
-  - Schema defined with Drizzle ORM (SQLite)
-  - Stores flight data and other structured content
-- **Data Access (src/lib/):**
-  - Centralized data fetching and business logic (e.g., flight search, markdown parsing)
-- **Content (/_posts):**
-  - Markdown files for blog content, parsed at build time
-
-## 4. Data Flow
-- **Static Content:**
-  - Blog posts and guides are written in Markdown, parsed at build time using gray-matter and remark.
-  - Static pages are generated for SEO and performance.
-- **Dynamic Content:**
-  - Flight data and checklists are fetched from the SQLite database using Drizzle ORM.
-  - API-like data access is handled via server components and utility functions.
-
-## 5. Key Technical Features
-- **Static Site Generation (SSG):**
-  - Most pages are statically generated for fast load times and SEO.
-- **Server Components:**
-  - Used for data fetching and rendering on the server where possible.
-- **ORM & Database:**
-  - Drizzle ORM provides type-safe access to a serverless SQLite database (Turso/LibSQL).
-- **SEO Optimization:**
-  - Structured data, meta tags, and sitemap generation for high search visibility.
-- **Image Optimization:**
-  - Next.js Image component with WebP support for performance.
-- **Responsive UI:**
-  - Tailwind CSS for mobile-first, accessible design.
-
-## 6. Constraints & Patterns
-- **Type Safety:**
-  - TypeScript used throughout for type safety (where applicable).
-- **Centralized Data Logic:**
-  - All data access and business logic is centralized in `src/lib/`.
-- **Modular Component Design:**
-  - UI and feature components are reusable and composable.
-- **Environment Management:**
-  - Sensitive config via environment variables (dotenv).
-
-## 7. Deployment & Operations
-- **Build:**
-  - `npm run build` seeds the database and builds the static site.
-- **Deployment:**
-  - Deployed on Vercel for optimal static/dynamic rendering.
-- **Database:**
-  - Turso serverless SQLite, managed migrations with Drizzle Kit.
+# Rupee Travel - Your Ultimate Guide to Vietnam from India
 
 ---
 
-*This document provides a high-level technical overview for developers and technical reviewers.*
+Rupee Travel is a comprehensive resource designed to help Indian travelers plan and execute a seamless trip to Vietnam. This project aims to provide an **ultimate checklist and valuable insights** for every stage of your journey, from initial preparations to departure.
 
+## Key Features
+
+* **Pre-Arrival Checklist**: Essential information and recommendations for preparations before arriving in Vietnam, including:
+    * Guidance on **financial tools** like zero forex markup debit and credit cards.
+    * Detailed steps for obtaining a Vietnam **e-Visa**.
+    * Tips for **booking flights and hotels**.
+    * Advice on securing **travel insurance**.
+* **In-Vietnam Recommendations**: Suggestions for when you arrive in Vietnam, such as:
+    * Recommended local **food and taxi applications**.
+    * Information on getting a local **SIM card**.
+    * Guidance on finding suitable places for **remote work**.
+* **Departure Tips**: Important advice for your departure, including currency management for future visits.
+* **Comprehensive Blog Posts**: A variety of articles covering diverse topics like:
+    * Experiences of a month-long stay in Da Nang.
+    * Insights into **cross-border financial tools**.
+    * Information on **currency conversion**.
+    * Guides to **budget-friendly experiences** in Da Nang.
+* **Flight Search**: Direct links to find the **cheapest flights to Vietnam** from major Indian cities (New Delhi, Mumbai, Bangalore, Kolkata, and Ahmedabad).
+
+## Project Purpose
+
+---
+
+The primary goal of Rupee Travel is to **simplify the travel planning process** for Indians visiting Vietnam by providing reliable, practical, and comprehensive information all in one place.
+
+## Access the Guide
+
+---
+
+You can access the full guide and explore all the resources on the [Rupee Travel Website](https://www.rupeetravel.com/).
