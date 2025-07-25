@@ -15,7 +15,7 @@ import {
 } from "../../components/ui/server/table";
 import Header from "../../components/ui/server/header";
 import CurrencyConverter from "../../component/CurrencyConverter";
-import PrecipitationChart from "../../component/PrecipitationChart";
+import PrecipitationChart from "../../component/PrecipitationChart.jsx";
 import VisaStamp from "../../component/VisaStamp";
 import { IDRINRMarketRate } from "../../currency/currency";
 

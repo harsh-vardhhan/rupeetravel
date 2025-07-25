@@ -8,7 +8,7 @@ import {
 import { Badge } from "../components/ui/server/badge";
 import { Input } from "../components/ui/server/input";
 
-export const CurrencyConverterClient = ({ region, amount, currencyPair, exchange, rate, base, quote, quoteSymbol }) => {
+export const CurrencyConverterClient = ({ region, amount, exchange, rate, base, quote, quoteSymbol }) => {
   const [value, setValue] = useState(amount);
 
   const parse = (event) => event.target.value.replace(/[^\d.-]/g, '');

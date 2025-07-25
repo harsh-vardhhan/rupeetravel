@@ -1,4 +1,4 @@
-import { CurrencyConverterClient } from './CurrencyConverterClient';
+import { CurrencyConverterClient } from './CurrencyConverterClient.jsx';
 
 const CurrencyConverter = ({ region, amount, currencyPair, exchange, rate, base, quote, quoteSymbol }) => {
   return (
