@@ -14,7 +14,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const post = getPostBySlug(params.slug, [
+  const { slug } = await params // Await params here
+  const post = getPostBySlug(slug, [
     'title',
     'excerpt',
     'canonical',
@@ -28,7 +29,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Page({ params }) {
-  const post = getPostBySlug(params.slug, [
+  const { slug } = await params // Await params here
+  const post = getPostBySlug(slug, [
     'title',
     'excerpt',
     'date',
@@ -54,7 +56,7 @@ export default async function Page({ params }) {
       />
       <Layout>
         <Container>
-          <Header />
+          <Header  title={post.title} blog={true}/>
           <article>
             <PostHeader
               title={post.title}
@@ -68,4 +70,4 @@ export default async function Page({ params }) {
       </Layout>
     </>
   )
-} 
+}
