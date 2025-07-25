@@ -5,7 +5,7 @@ import Header from "../../components/ui/server/header";
 import FlightCard from "../../components/ui/server/FlightCard";
 import Pagination from "../../components/ui/server/Pagination";
 import AirlineGroupButton from "../../components/ui/AirlineGroupButton";
-import { useFlightSearchLogic } from "../../lib/useFlightSearchLogic";
+import { getFlightSearchData } from "../../lib/getFlightSearchData";
 import { cn } from "../../components/lib/utils";
 import {
   precipitationData,
@@ -120,7 +120,7 @@ export default async function FlightPage({ params, searchParams }) {
     sourceOptions,
     destinationOptions,
     currentRouteConfig,
-  } = await useFlightSearchLogic(resolvedParams, searchParams);
+  } = await getFlightSearchData(resolvedParams, searchParams);
 
   const baseHref = `/${resolvedParams.flightRoute}`;
 

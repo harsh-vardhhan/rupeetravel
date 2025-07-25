@@ -63,7 +63,7 @@ const allVietnamCities = [
 ];
 
 // Make sure the function itself is marked as async
-export const useFlightSearchLogic = async (params, searchParams) => {
+export const getFlightSearchData = async (params, searchParams) => {
   // 1. AWAIT params and searchParams to get their actual values
   //    This resolves the Promises returned by the dynamic APIs.
   const resolvedParams = await params;
