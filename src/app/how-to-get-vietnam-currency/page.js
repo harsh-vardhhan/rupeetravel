@@ -25,7 +25,7 @@ import {
     INRVNDMarketRate,
     INRVNDBookMyForexRate,
     VNDINRMarketRate
-} from '../../currency/currency';
+} from '../../constants/currency';
 
 export const metadata = {
   title: "Rupee Travel | Get Vietnam currency in India",

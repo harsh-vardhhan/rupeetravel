@@ -17,7 +17,7 @@ import Header from "../../components/ui/header";
 import CurrencyConverter from "../../components/ui/CurrencyConverter";
 import PrecipitationChart from "../../components/flight/PrecipitationChart";
 import VisaStamp from "../../components/ui/VisaStamp";
-import { IDRINRMarketRate } from "../../currency/currency";
+import { IDRINRMarketRate } from "../../constants/currency";
 
 export const dynamic = 'force-static';
 
