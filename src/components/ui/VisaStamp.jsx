@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import { cn } from "../util/utils";
+import { cn } from "../../lib/utils";
 
 const VisaStamp = () => {
   const currentDate = new Date().toLocaleDateString('en-GB', {

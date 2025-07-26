@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { cn } from "../util/utils";
+import { cn } from "../../lib/utils";
 
 export const dynamic = 'force-static';
 
