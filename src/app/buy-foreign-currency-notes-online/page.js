@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import Header from "../../components/ui/server/header";
+import Header from "../../components/ui/header";
 import {
   Card,
   CardHeader,
   CardContent,
   CardFooter,
-} from "../../components/ui/server/card";
-import { Badge } from "../../components/ui/server/badge";
-import { Button } from "../../components/ui/server/button";
+} from "../../components/ui/card";
+import { Badge } from "../../components/ui/badge";
+import { Button } from "../../components/ui/button";
 import {
   Table,
   TableBody,
@@ -16,8 +16,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "../../components/ui/server/table";
-import StructuredData from "../../component/structuredData";
+} from "../../components/ui/table";
+import StructuredData from "../../components/util/structuredData";
 import Link from "next/link";
 
 export const dynamic = 'force-static';

@@ -1,13 +1,13 @@
-import Header from "../../components/ui/server/header";
+import Header from "../../components/ui/header";
 import {
   Card,
   CardHeader,
   CardContent,
   CardFooter,
-} from "../../components/ui/server/card";
-import { Button } from "../../components/ui/server/button";
-import { Badge } from "../../components/ui/server/badge";
-import CheckListItemCard from "../../components/ui/server/CheckListItemCard";
+} from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
+import { Badge } from "../../components/ui/badge";
+import CheckListItemCard from "../../components/ui/CheckListItemCard";
 
 export const dynamic = 'force-static';
 

@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "./server/button";
+import { Button } from "../ui/button";
 
 export default function AirlineGroupButton({ airlineGroup, destination, source, drySeason, priceUnder10k }) {
   const buttons = [

@@ -1,4 +1,4 @@
-import { cn } from "../../../lib/utils"
+import { cn } from "../util/utils"
 
 export function Separator({ className, ...props }) {
   return (

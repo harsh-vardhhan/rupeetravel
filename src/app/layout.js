@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import { Rubik } from 'next/font/google'
 
 // Add this import for the dark mode client logic
-import DarkModeScript from '../component/DarkModeScript'
+import DarkModeScript from '../components/util/DarkModeScript'
 
 const rubik = Rubik({ 
   subsets: ['latin'],

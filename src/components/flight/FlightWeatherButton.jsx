@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import BottomSheet from '../components/ui/server/BottomSheet';
+import BottomSheet from '../flight/BottomSheet';
 import PrecipitationChart from './PrecipitationChart';
 
 const monthAbbr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];

@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Button } from "../../components/ui/server/button";
-import FlightSearchForm from "../../components/FlightSearchForm";
-import Header from "../../components/ui/server/header";
-import FlightCard from "../../components/ui/server/FlightCard";
-import Pagination from "../../components/ui/server/Pagination";
-import AirlineGroupButton from "../../components/ui/AirlineGroupButton";
+import { Button } from "../../components/ui/button";
+import FlightSearchForm from "../../components/flight/FlightSearchForm";
+import Header from "../../components/ui/header";
+import FlightCard from "../../components/flight/FlightCard";
+import Pagination from "../../components/flight/Pagination";
+import AirlineGroupButton from "../../components/flight/AirlineGroupButton";
 import { getFlightSearchData } from "../../lib/getFlightSearchData";
-import { cn } from "../../components/lib/utils";
+import { cn } from "../../lib/utils";
 import {
   precipitationData,
   getRainColor,

@@ -1,5 +1,5 @@
 import CheckListItem from "./CheckListItem";
-import { Card, CardHeader, CardContent } from "../server/card";
+import { Card, CardHeader, CardContent } from "../ui/card";
 
 const CheckListItemCard = ({ title, list }) => {
   return (

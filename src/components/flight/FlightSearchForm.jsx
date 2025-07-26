@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { getAirportCode } from '../lib/flightUtils';
+import { getAirportCode } from '../../lib/flightUtils';
 
 export default function FlightSearchForm({ 
   currentDestination, 

@@ -1,10 +1,10 @@
-import Header from "../../components/ui/server/header";
-import { Card, CardContent, CardFooter } from "../../components/ui/server/card";
-import { Button } from "../../components/ui/server/button";
-import { Badge } from "../../components/ui/server/badge";
-import { Separator } from "../../components/ui/server/separator";
+import Header from "../../components/ui/header";
+import { Card, CardContent, CardFooter } from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
+import { Badge } from "../../components/ui/badge";
+import { Separator } from "../../components/ui/separator";
 import Image from "next/image";
-import ListView from "../../component/server/listview";
+import ListView from "../../components/ui/listview";
 
 export const dynamic = 'force-static';
 export const revalidate = false;

@@ -1,6 +1,6 @@
-import { CircularProgressBar } from '../../../component/PrecipitationChart';
+import { CircularProgressBar } from '../flight/PrecipitationChart';
 import LuggagePolicyButton from './LuggagePolicyButton';
-import FlightWeatherButton from '../../../component/FlightWeatherButton';
+import FlightWeatherButton from '../flight/FlightWeatherButton';
 
 function formatDateWithSuffix(dateString) {
   const date = new Date(dateString);

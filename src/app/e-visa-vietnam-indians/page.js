@@ -1,12 +1,12 @@
-import Header from "../../components/ui/server/header";
+import Header from "../../components/ui/header";
 import {
   Card,
   CardHeader,
   CardContent,
   CardFooter,
-} from "../../components/ui/server/card";
-import { Button } from "../../components/ui/server/button";
-import StructuredData from "../../component/structuredData";
+} from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
+import StructuredData from "../../components/util/structuredData";
 
 export const dynamic = 'force-static';
 

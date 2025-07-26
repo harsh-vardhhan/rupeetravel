@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Badge } from "../server/badge";
+import { Badge } from "../ui/badge";
 
 const CheckListItem = ({ task }) => {
   return (

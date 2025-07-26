@@ -1,17 +1,17 @@
 import Image from 'next/image';
-import Header from "../../components/ui/server/header";
+import Header from "../../components/ui/header";
 import {
   Card,
   CardHeader,
   CardContent,
   CardFooter,
-} from "../../components/ui/server/card";
-import { Badge } from "../../components/ui/server/badge";
-import { Button } from "../../components/ui/server/button";
-import { Alert, AlertDescription } from "../../components/ui/server/alert";
+} from "../../components/ui/card";
+import { Badge } from "../../components/ui/badge";
+import { Button } from "../../components/ui/button";
+import { Alert, AlertDescription } from "../../components/ui/alert";
 import { AlertCircle } from "lucide-react";
 import Link from "next/link";
-import StructuredData from "../../component/structuredData";
+import StructuredData from "../../components/util/structuredData";
 
 export const dynamic = 'force-static';
 

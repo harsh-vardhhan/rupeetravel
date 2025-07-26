@@ -5,7 +5,7 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
-} from "../../components/ui/server/card";
+} from "../../components/ui/card";
 import {
   Table,
   TableBody,
@@ -13,12 +13,12 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "../../components/ui/server/table";
-import { Badge } from "../../components/ui/server/badge";
-import { Button } from "../../components/ui/server/button";
-import Header from "../../components/ui/server/header";
-import StructuredData from "../../component/structuredData";
-import CurrencyConverter from "../../component/CurrencyConverter";
+} from "../../components/ui/table";
+import { Badge } from "../../components/ui/badge";
+import { Button } from "../../components/ui/button";
+import Header from "../../components/ui/header";
+import StructuredData from "../../components/util/structuredData";
+import CurrencyConverter from "../../components/ui/CurrencyConverter";
 import {
     USDINRMarketRate,
     USDINRBookMyForexRate,

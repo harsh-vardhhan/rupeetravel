@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import Header from "../../components/ui/server/header";
+import Header from "../../components/ui/header";
 import {
   Card,
   CardContent,
-} from "../../components/ui/server/card";
-import { Badge } from "../../components/ui/server/badge";
+} from "../../components/ui/card";
+import { Badge } from "../../components/ui/badge";
 
 export const dynamic = 'force-static';
 

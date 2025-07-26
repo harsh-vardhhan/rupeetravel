@@ -1,12 +1,12 @@
-import Container from '../../../component/container'
-import PostBody from '../../../component/post-body'
-import Header from '../../../components/ui/server/header'
-import PostHeader from '../../../component/post-header'
-import Layout from '../../../component/layout'
+import Container from '../../../components/post/container'
+import PostBody from '../../../components/post/post-body'
+import Header from '../../../components/ui/header'
+import PostHeader from '../../../components/post/post-header'
+import Layout from '../../../components/ui/layout'
 import { getPostBySlug, getAllPosts } from '../../../lib/api'
 import markdownToHtml from '../../../lib/markdownToHtml'
 import { notFound } from 'next/navigation'
-import Seo from '../../../component/seo'
+import Seo from '../../../components/util/seo'
 
 export async function generateStaticParams() {
   const posts = getAllPosts(['slug'])

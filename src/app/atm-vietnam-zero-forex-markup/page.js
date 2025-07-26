@@ -1,12 +1,12 @@
-import Header from "../../components/ui/server/header";
+import Header from "../../components/ui/header";
 import {
   Card,
   CardContent,
   CardFooter,
-} from "../../components/ui/server/card";
-import { Button } from "../../components/ui/server/button";
-import { Badge } from "../../components/ui/server/badge";
-import { Alert, AlertDescription } from "../../components/ui/server/alert";
+} from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
+import { Badge } from "../../components/ui/badge";
+import { Alert, AlertDescription } from "../../components/ui/alert";
 import Image from 'next/image';
 
 export const dynamic = 'force-static';

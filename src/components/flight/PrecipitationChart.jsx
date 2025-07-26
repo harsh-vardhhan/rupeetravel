@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import { Badge } from "../components/ui/server/badge";
+import { Badge } from "../ui/badge";
 import {
   BarChart,
   Bar,

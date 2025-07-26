@@ -4,9 +4,9 @@ import { useState, useMemo } from "react";
 import {
   Card,
   CardContent,
-} from "../components/ui/server/card";
-import { Badge } from "../components/ui/server/badge";
-import { Input } from "../components/ui/server/input";
+} from "../../components/ui/card";
+import { Badge } from "../../components/ui/badge";
+import { Input } from "../../components/ui/input";
 
 export const CurrencyConverterClient = ({ region, amount, exchange, rate, base, quote, quoteSymbol }) => {
   const [value, setValue] = useState(amount);

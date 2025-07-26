@@ -1,4 +1,4 @@
-import CheckListItemCard from "../components/ui/server/CheckListItemCard";
+import CheckListItemCard from "../components/ui/CheckListItemCard";
 import Image from "next/image";
 
 // Force static generation

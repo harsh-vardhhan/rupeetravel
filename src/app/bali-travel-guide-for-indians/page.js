@@ -4,7 +4,7 @@ import {
   Card,
   CardContent,
   CardHeader,
-} from "../../components/ui/server/card";
+} from "../../components/ui/card";
 import {
   Table,
   TableBody,
@@ -12,11 +12,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "../../components/ui/server/table";
-import Header from "../../components/ui/server/header";
-import CurrencyConverter from "../../component/CurrencyConverter";
-import PrecipitationChart from "../../component/PrecipitationChart.jsx";
-import VisaStamp from "../../component/VisaStamp";
+} from "../../components/ui/table";
+import Header from "../../components/ui/header";
+import CurrencyConverter from "../../components/ui/CurrencyConverter";
+import PrecipitationChart from "../../components/flight/PrecipitationChart";
+import VisaStamp from "../../components/ui/VisaStamp";
 import { IDRINRMarketRate } from "../../currency/currency";
 
 export const dynamic = 'force-static';
