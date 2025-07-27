@@ -1,5 +1,6 @@
 import CheckListItemCard from "../components/ui/CheckListItemCard";
 import Image from "next/image";
+import { Card, CardHeader, CardContent } from "../components/ui/card";
 
 // Force static generation
 export const dynamic = "force-static";
@@ -293,6 +294,34 @@ export default function HomePage() {
                 />
                 <CheckListItemCard title={"Blogs"} list={blogs} />
                 <CheckListItemCard title={"Flights"} list={flights} />
+
+                <Card className="w-full mt-2.5 shadow-md">
+                  <CardHeader className="p-4 sm:p-6 pt-4 sm:pt-6">
+                    <h3 className="text-xl sm:text-2xl font-bold">
+                      {'Play Store App'}
+                    </h3>
+                  </CardHeader>
+                  <CardContent className="p-4 sm:p-6 pt-0">
+                    <div className="space-y-3 sm:space-y-4">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.trakbit.flightpricetracker"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors font-medium"
+                      >
+                        <Image
+                          src={"/images/playstore.png"}
+                          alt="Google Play Store"
+                          width={20}
+                          height={20}
+                          className="mr-2 object-contain"
+                        />
+                        Get it on Google Play
+                      </a>
+                    </div>
+                  </CardContent>
+                </Card>
+
               </div>
             </div>
           </div>
