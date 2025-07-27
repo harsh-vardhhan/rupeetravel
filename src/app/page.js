@@ -307,7 +307,7 @@ export default function HomePage() {
                         href="https://play.google.com/store/apps/details?id=com.trakbit.flightpricetracker"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors font-medium"
+                        className="inline-flex items-center px-4 py-2 bg-teal-400 text-white rounded hover:bg-teal-500  transition-colors font-medium"
                       >
                         <Image
                           src={"/images/playstore.png"}
