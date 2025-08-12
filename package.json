@@ -7,8 +7,7 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "db:seed": "bun scripts/seed.js",
-    "build": "bun run db:seed && next build",
+    "build": "next build",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
