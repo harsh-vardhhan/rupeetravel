@@ -19,30 +19,26 @@ export async function getFlightsFromDb(searchParams) {
   }
 
   try {
-    // Build query parameters - the API uses 'origin' instead of 'source'
+    // Build query parameters using the correct API parameter names
     const queryParams = new URLSearchParams({
       page: page.toString(),
       limit: limit.toString(),
       origin: source, // Map 'source' to 'origin' for the API
       destination,
+      sort_by: sortBy // API supports 'date' or 'price'
     });
 
-    // Add sorting if the API supports it
-    if (sortBy) {
-      queryParams.append('sort_by', sortBy);
-    }
-
-    // Add price filter if API supports it
+    // Add price filter - API uses 'max_price'
     if (priceUnder10k) {
       queryParams.append('max_price', '10000');
     }
 
-    // Add rain probability filter for dry season
+    // Add rain probability filter for dry season - API uses 'max_rain'
     if (drySeason) {
-      queryParams.append('max_rain_probability', '20');
+      queryParams.append('max_rain', '20');
     }
 
-    // Add airline filter if API supports it
+    // Add airline filter - API accepts comma-separated airline names
     if (airlineGroup === "free") {
       queryParams.append('airline', 'Vietnam Airlines,Air India,IndiGo');
     } else if (airlineGroup === "paid") {
@@ -73,37 +69,40 @@ export async function getFlightsFromDb(searchParams) {
     const flights = apiData.data || [];
     const totalCount = apiData.total_items || 0;
 
-    // Apply client-side filtering if the API doesn't support certain filters
+    // Apply client-side filtering only if needed (the API should handle most filtering)
     let filteredFlights = flights;
 
-    // Client-side filtering for dry season if API doesn't support it
-    if (drySeason && !queryParams.has('max_rain_probability')) {
+    // All filtering should now be handled by the API, but keep fallbacks just in case
+    // The API uses 'max_rain' so this shouldn't be needed
+    if (drySeason && flights.length > 0 && !url.includes('max_rain')) {
       filteredFlights = filteredFlights.filter(flight => 
         parseFloat(flight.rain_probability) <= 20
       );
     }
 
-    // Client-side filtering for price if API doesn't support it
-    if (priceUnder10k && !queryParams.has('max_price')) {
+    // The API uses 'max_price' so this shouldn't be needed  
+    if (priceUnder10k && flights.length > 0 && !url.includes('max_price')) {
       filteredFlights = filteredFlights.filter(flight => 
         flight.price_inr < 10000
       );
     }
 
-    // Client-side filtering for airlines if API doesn't support it
-    if (airlineGroup === "free" && !queryParams.has('airline')) {
-      const freeAirlines = ['Vietnam Airlines', 'Air India', 'IndiGo'];
-      filteredFlights = filteredFlights.filter(flight => 
-        freeAirlines.includes(flight.airline)
-      );
-    } else if (airlineGroup === "paid" && !queryParams.has('airline')) {
-      filteredFlights = filteredFlights.filter(flight => 
-        flight.airline === 'Vietjet'
-      );
+    // The API uses 'airline' parameter so this shouldn't be needed
+    if (airlineGroup !== "all" && flights.length > 0 && !url.includes('airline')) {
+      if (airlineGroup === "free") {
+        const freeAirlines = ['Vietnam Airlines', 'Air India', 'IndiGo'];
+        filteredFlights = filteredFlights.filter(flight => 
+          freeAirlines.includes(flight.airline)
+        );
+      } else if (airlineGroup === "paid") {
+        filteredFlights = filteredFlights.filter(flight => 
+          flight.airline === 'Vietjet'
+        );
+      }
     }
 
-    // Client-side sorting if API doesn't support it
-    if (sortBy && !queryParams.has('sort_by')) {
+    // The API uses 'sort_by' so this shouldn't be needed
+    if (sortBy && flights.length > 0 && !url.includes('sort_by')) {
       filteredFlights.sort((a, b) => {
         if (sortBy === 'date') {
           return new Date(a.date) - new Date(b.date);
