@@ -3,7 +3,7 @@
 const API_BASE_URL = 'https://rupeetravel-api-production.up.railway.app/api/flights';
 
 // This is the centralized function that now uses the external API instead of direct database queries.
-export async function getFlightsFromApi(searchParams) {
+export async function getFlightsFromDb(searchParams) {
   const page = parseInt(searchParams.page) || 1;
   const destination = searchParams.destination || "Hanoi";
   const source = searchParams.source; // Your frontend uses 'source'
@@ -125,28 +125,3 @@ export async function getFlightsFromApi(searchParams) {
     throw new Error('Failed to fetch flight data from API.');
   }
 }
-
-// Alternative version with better error handling and retry logic
-export async function getFlightsFromApiWithRetry(searchParams, maxRetries = 3) {
-  let lastError;
-  
-  for (let attempt = 1; attempt <= maxRetries; attempt++) {
-    try {
-      return await getFlightsFromApi(searchParams);
-    } catch (error) {
-      lastError = error;
-      console.warn(`API call attempt ${attempt} failed:`, error.message);
-      
-      if (attempt < maxRetries) {
-        // Wait before retrying (exponential backoff)
-        const delay = Math.pow(2, attempt - 1) * 1000; // 1s, 2s, 4s
-        await new Promise(resolve => setTimeout(resolve, delay));
-      }
-    }
-  }
-  
-  throw lastError;
-}
-
-// For backward compatibility, you can keep this alias
-export const getFlightsFromDb = getFlightsFromApi;
