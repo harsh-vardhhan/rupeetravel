@@ -106,7 +106,7 @@ export default function FlightCard({
             <p className="text-xs text-muted-foreground">{flight.destination}</p>
           </div>
         </div>
-        {showRain && getRainColor && (
+        {showRain && getRainColor && flight?.rain_probability > 0 && (
           <div className="ml-4 flex-shrink-0 flex flex-col items-center">
             <CircularProgressBar
               value={parseInt(flight.rain_probability, 10)}
