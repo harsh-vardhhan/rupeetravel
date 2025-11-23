@@ -13,10 +13,10 @@ export default function BottomSheet({ open, onClose, children }) {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black bg-opacity-40 transition-opacity">
-      <div className="w-full max-w-md mx-auto bg-white rounded-t-2xl shadow-lg p-6 animate-slide-up relative">
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black bg-opacity-40 dark:bg-black dark:bg-opacity-60 transition-opacity">
+      <div className="w-full max-w-md mx-auto bg-white dark:bg-gray-900 rounded-t-2xl shadow-lg p-6 animate-slide-up relative">
         <button
-          className="absolute top-2 right-4 text-gray-400 hover:text-gray-700 text-2xl font-bold"
+          className="absolute top-2 right-4 text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 text-2xl font-bold"
           onClick={onClose}
           aria-label="Close"
         >

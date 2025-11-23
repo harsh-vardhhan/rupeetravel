@@ -43,7 +43,7 @@ export default function LuggagePolicyButton({ airline }) {
     <>
       <button
         type="button"
-        className="bg-emerald-300 hover:bg-emerald-400 text-white px-4 py-2 rounded-lg text-xs font-medium transition-colors flex items-center gap-1"
+        className="bg-emerald-300 hover:bg-emerald-400 dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white px-4 py-2 rounded-lg text-xs font-medium transition-colors flex items-center gap-1"
         onClick={handleLuggageClick}
       >
         Luggage Policy
@@ -56,22 +56,22 @@ export default function LuggagePolicyButton({ airline }) {
               <h3 className="text-lg font-bold">{airline} Luggage Policy</h3>
             </div>
             <div className="flex flex-col gap-3">
-              <div className="flex items-center gap-2 bg-blue-50 rounded-lg px-3 py-2">
+              <div className="flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg px-3 py-2">
                 <span className="text-xl">🎒</span>
                 <div>
-                  <span className="font-semibold">Carry-on:</span> <span className="font-mono">{policy.carryOn.weight}</span> {policy.carryOn.free ? <span className="text-green-600 font-medium">(Free)</span> : <span className="text-red-600 font-medium">(Paid)</span>}
+                  <span className="font-semibold">Carry-on:</span> <span className="font-mono">{policy.carryOn.weight}</span> {policy.carryOn.free ? <span className="text-green-600 dark:text-green-400 font-medium">(Free)</span> : <span className="text-red-600 dark:text-red-400 font-medium">(Paid)</span>}
                 </div>
               </div>
-              <div className="flex items-center gap-2 bg-yellow-50 rounded-lg px-3 py-2">
+              <div className="flex items-center gap-2 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg px-3 py-2">
                 <span className="text-xl">🧳</span>
                 <div>
-                  <span className="font-semibold">Checked:</span> <span className="font-mono">{policy.checked.weight}</span> {policy.checked.free ? <span className="text-green-600 font-medium">(Free)</span> : <span className="text-red-600 font-medium">(Paid)</span>}
-                  {policy.checked.note && <div className="text-xs text-gray-500 mt-1">{policy.checked.note}</div>}
+                  <span className="font-semibold">Checked:</span> <span className="font-mono">{policy.checked.weight}</span> {policy.checked.free ? <span className="text-green-600 dark:text-green-400 font-medium">(Free)</span> : <span className="text-red-600 dark:text-red-400 font-medium">(Paid)</span>}
+                  {policy.checked.note && <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">{policy.checked.note}</div>}
                 </div>
               </div>
             </div>
             {vietjet && (
-              <div className="mt-4 bg-orange-50 rounded-lg p-4 border border-orange-200">
+              <div className="mt-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg p-4 border border-orange-200 dark:border-orange-800">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-xl">➕</span>
                   <span className="font-semibold">Add Extra Checked Baggage</span>
@@ -83,22 +83,22 @@ export default function LuggagePolicyButton({ airline }) {
                   step={10}
                   value={selectedWeight}
                   onChange={e => setSelectedWeight(Number(e.target.value))}
-                  className="w-full accent-orange-500 mt-2"
+                  className="w-full accent-orange-500 dark:accent-orange-400 mt-2"
                 />
-                <div className="flex justify-between text-xs text-gray-500 mt-1">
+                <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
                   {policy.extraCheckedOptions.map(opt => (
                     <span key={opt.weight}>{opt.weight}</span>
                   ))}
                 </div>
                 {vietjetOption && (
-                  <div className="mt-3 p-3 bg-white rounded-lg border border-orange-100">
+                  <div className="mt-3 p-3 bg-white dark:bg-gray-800 rounded-lg border border-orange-100 dark:border-orange-700">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-lg">🧳</span>
                       <span className="font-medium">{vietjetOption.weight} checked baggage</span>
                     </div>
                     <div className="flex flex-col gap-1 mt-1 text-sm">
-                      <span>💸 <span className="font-semibold">₹{vietjetOption.beforeThreeHours}</span> <span className="text-gray-500">(booked &gt;3h before flight)</span></span>
-                      <span>💸 <span className="font-semibold">₹{vietjetOption.afterThreeHours}</span> <span className="text-gray-500">(booked &lt;3h before flight)</span></span>
+                      <span>💸 <span className="font-semibold">₹{vietjetOption.beforeThreeHours}</span> <span className="text-gray-500 dark:text-gray-400">(booked &gt;3h before flight)</span></span>
+                      <span>💸 <span className="font-semibold">₹{vietjetOption.afterThreeHours}</span> <span className="text-gray-500 dark:text-gray-400">(booked &lt;3h before flight)</span></span>
                     </div>
                   </div>
                 )}

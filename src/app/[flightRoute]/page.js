@@ -38,8 +38,8 @@ const SortButton = ({
       className={cn(
         "px-3 py-1 text-xs font-medium rounded-full",
         isActive
-          ? "bg-slate-800 text-white"
-          : "bg-gray-100 text-gray-600 hover:bg-gray-200",
+          ? "bg-slate-800 dark:bg-slate-600 text-white"
+          : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700",
       )}
     >
       {label}
@@ -153,18 +153,18 @@ export default async function FlightPage({ params, searchParams }) {
 
         <div className="flex items-center justify-between mb-4">
           <div>
-            <h2 className="text-lg font-semibold text-gray-900">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
               Available Flights
             </h2>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
               {getCityFullName(source)} → {getCityFullName(destination)}
             </p>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
               Page {page} of {totalPages} • {totalCount} results found
             </p>
           </div>
           <div className="flex items-center space-x-1">
-            <span className="text-xs text-gray-500">Sort by:</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400">Sort by:</span>
             <SortButton
               baseHref={baseHref}
               currentSortBy={sortBy}
@@ -195,11 +195,11 @@ export default async function FlightPage({ params, searchParams }) {
         </div>
 
         {flights.length === 0 ? (
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center">
-            <h3 className="text-lg font-medium text-gray-900 mb-2">
+          <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-8 text-center">
+            <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">
               No flights found
             </h3>
-            <p className="text-gray-500 mb-4">
+            <p className="text-gray-500 dark:text-gray-400 mb-4">
               No flights available for {getCityFullName(source)} to{" "}
               {getCityFullName(destination)} with the selected filters.
             </p>
