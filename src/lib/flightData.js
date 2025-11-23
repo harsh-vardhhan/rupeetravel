@@ -1,6 +1,6 @@
 // flightData.js
 
-const API_BASE_URL = 'https://rupeetravel-api-production.up.railway.app/api/flights';
+const API_BASE_URL = 'https://rupeetravel-worker.harsh-vardhan-611.workers.dev/flights';
 
 // This is the centralized function that now uses the external API instead of direct database queries.
 export async function getFlightsFromDb(searchParams) {
