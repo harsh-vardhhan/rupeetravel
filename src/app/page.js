@@ -1,6 +1,5 @@
 import CheckListItemCard from "../components/ui/CheckListItemCard";
 import Image from "next/image";
-import { Card, CardHeader, CardContent } from "../components/ui/card";
 
 // Force static generation
 export const dynamic = "force-static";
@@ -162,56 +161,7 @@ const blogs = [
   },
 ];
 
-const flights = [
-  {
-    key: 1,
-    heading: ` New Delhi to Vietnam flights`,
-    subHeading: `Cheapest flights from New Delhi to Vietnam`,
-    tagText: `Fights`,
-    tagColor: `teal`,
-    link: `/new-delhi-to-vietnam-flight`,
-  },
-  {
-    key: 2,
-    heading: ` Mumbai to Vietnam flights`,
-    subHeading: ` Cheapest flights from Mumbai to Vietnam`,
-    tagText: `Flights`,
-    tagColor: `teal`,
-    link: `/mumbai-to-vietnam-flight`,
-  },
-  {
-    key: 3,
-    heading: ` Bangalore to Vietnam flights`,
-    subHeading: ` Cheapest flights from Bangalore to Vietnam`,
-    tagText: `Flights`,
-    tagColor: `teal`,
-    link: `/bangalore-to-vietnam-flight`,
-  },
-  {
-    key: 4,
-    heading: ` Kolkata to Vietnam flights`,
-    subHeading: ` Cheapest flights from Kolkata to Vietnam`,
-    tagText: `Flights`,
-    tagColor: `teal`,
-    link: `/kolkata-to-vietnam-flight`,
-  },
-  {
-    key: 5,
-    heading: ` Ahmedabad to Vietnam flights`,
-    subHeading: ` Cheapest flights from Ahmedabad to Vietnam`,
-    tagText: `Flights`,
-    tagColor: `teal`,
-    link: `/ahmedabad-to-vietnam-flight`,
-  },
-  {
-    key: 6,
-    heading: ` Hyderabad to Vietnam flights`,
-    subHeading: ` Cheapest flights from Hyderabad to Vietnam`,
-    tagText: `Flights`,
-    tagColor: `teal`,
-    link: `/hyderabad-to-vietnam-flight`,
-  },
-];
+
 
 export const metadata = {
   title: "Rupee Travel | Vietnam trip for Indians",
@@ -293,34 +243,6 @@ export default function HomePage() {
                   list={beforeDeparture}
                 />
                 <CheckListItemCard title={"Blogs"} list={blogs} />
-                <CheckListItemCard title={"Flights"} list={flights} />
-
-                <Card className="w-full mt-2.5 shadow-md">
-                  <CardHeader className="p-4 sm:p-6 pt-4 sm:pt-6">
-                    <h3 className="text-xl sm:text-2xl font-bold">
-                      {'Play Store App'}
-                    </h3>
-                  </CardHeader>
-                  <CardContent className="p-4 sm:p-6 pt-0">
-                    <div className="space-y-3 sm:space-y-4">
-                      <a
-                        href="https://play.google.com/store/apps/details?id=com.trakbit.flightpricetracker"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center px-4 py-2 bg-teal-400 text-white rounded hover:bg-teal-500  transition-colors font-medium"
-                      >
-                        <Image
-                          src={"/images/playstore.png"}
-                          alt="Google Play Store"
-                          width={20}
-                          height={20}
-                          className="mr-2 object-contain"
-                        />
-                        Get it on Google Play
-                      </a>
-                    </div>
-                  </CardContent>
-                </Card>
 
               </div>
             </div>

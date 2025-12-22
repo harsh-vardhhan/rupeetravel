@@ -7,7 +7,6 @@ import {
 } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
 import { Badge } from "../../components/ui/badge";
-import CheckListItemCard from "../../components/ui/CheckListItemCard";
 
 export const dynamic = 'force-static';
 
@@ -214,62 +213,12 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
 };
 
 export default function Home() {
-  const flights = [
-    {
-      key: 1,
-      heading: ` New Delhi to Vietnam flights`,
-      subHeading: `Cheapest flights from New Delhi to Vietnam`,
-      tagText: `Fights`,
-      tagColor: `teal`,
-      link: `/new-delhi-to-vietnam-flight`,
-    },
-    {
-      key: 2,
-      heading: ` Mumbai to Vietnam flights`,
-      subHeading: ` Cheapest flights from Mumbai to Vietnam`,
-      tagText: `Flights`,
-      tagColor: `teal`,
-      link: `/mumbai-to-vietnam-flight`,
-    },
-    {
-      key: 3,
-      heading: ` Bangalore to Vietnam flights`,
-      subHeading: ` Cheapest flights from Bangalore to Vietnam`,
-      tagText: `Flights`,
-      tagColor: `teal`,
-      link: `/bangalore-to-vietnam-flight`,
-    },
-    {
-      key: 4,
-      heading: ` Kolkata to Vietnam flights`,
-      subHeading: ` Cheapest flights from Kolkata to Vietnam`,
-      tagText: `Flights`,
-      tagColor: `teal`,
-      link: `/kolkata-to-vietnam-flight`,
-    },
-    {
-      key: 5,
-      heading: ` Ahmedabad to Vietnam flights`,
-      subHeading: ` Cheapest flights from Ahmedabad to Vietnam`,
-      tagText: `Flights`,
-      tagColor: `teal`,
-      link: `/ahmedabad-to-vietnam-flight`,
-    },
-    {
-      key: 6,
-      heading: ` Hyderabad to Vietnam flights`,
-      subHeading: ` Cheapest flights from Hyderabad to Vietnam`,
-      tagText: `Flights`,
-      tagColor: `teal`,
-      link: `/hyderabad-to-vietnam-flight`,
-    },
-  ];
   return (
     <>
       <div className="min-h-screen bg-background">
         <Header title={"Booking flight for Vietnam"} />
         <main className="container max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             <FlightCard
               cardTitle={"Book Vietjet flight to Vietnam"}
               features={vietjet}
@@ -282,7 +231,6 @@ export default function Home() {
               buttonName={"Book Indigo"}
               buttonLink={"https://www.goindigo.in/"}
             />
-            <CheckListItemCard title={"Flights"} list={flights} />
           </div>
           <ComparisonMatrix />
         </main>
