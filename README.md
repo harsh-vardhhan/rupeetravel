@@ -25,7 +25,6 @@ Rupee Travel is a comprehensive resource designed to help Indian travelers plan 
     * Insights into **cross-border financial tools**.
     * Information on **currency conversion**.
     * Guides to **budget-friendly experiences** in Da Nang.
-* **Flight Search**: Direct links to find the **cheapest flights to Vietnam** from major Indian cities (New Delhi, Mumbai, Bangalore, Kolkata, and Ahmedabad).
 
 ## Project Purpose
 
