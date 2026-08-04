@@ -1,16 +1,24 @@
 'use client';
 
-import { useState, useMemo } from "react";
-import {
-  Card,
-  CardHeader,
-  CardContent,
-} from "../../components/ui/card";
-import { Badge } from "../../components/ui/badge";
-import { Input } from "../../components/ui/input";
+import React, { useState, useMemo } from "react";
+import { Card, CardHeader, CardContent } from "./card";
+import { Badge } from "./badge";
+import { Input } from "./input";
 import { ArrowRightLeft, TrendingUp } from "lucide-react";
 
-export const CurrencyConverterClient = ({ 
+export interface CurrencyConverterClientProps {
+  region?: string;
+  amount: number;
+  currencyPair?: string;
+  exchange?: string;
+  rate: number;
+  base?: string;
+  quote?: string;
+  baseSymbol?: string;
+  quoteSymbol?: string;
+}
+
+export const CurrencyConverterClient: React.FC<CurrencyConverterClientProps> = ({ 
   region, 
   amount, 
   exchange = "forex market", 
@@ -20,17 +28,17 @@ export const CurrencyConverterClient = ({
   baseSymbol = "₫",
   quoteSymbol = "₹" 
 }) => {
-  const [value, setValue] = useState(amount);
+  const [value, setValue] = useState<number | string>(amount);
 
-  const parse = (event) => event.target.value.replace(/[^\d.-]/g, '');
+  const parse = (event: React.ChangeEvent<HTMLInputElement>) => event.target.value.replace(/[^\d.-]/g, '');
 
-  const formatCurrency = useMemo(() => (val, currency) => {
-    const locales = {
+  const formatCurrency = useMemo(() => (val: number, currency: string) => {
+    const locales: Record<string, string> = {
       IDR: "id-ID",
       INR: "en-IN",
       VND: "vi-VN",
     };
-    return new Intl.NumberFormat(locales[currency] || region, {
+    return new Intl.NumberFormat(locales[currency] || region || "en-IN", {
       style: "currency",
       currency,
       minimumFractionDigits: 2,
@@ -38,7 +46,8 @@ export const CurrencyConverterClient = ({
     }).format(val);
   }, [region]);
 
-  const convertedValue = (value || 0) * rate;
+  const numericValue = typeof value === 'number' ? value : parseFloat(value) || 0;
+  const convertedValue = numericValue * rate;
 
   const convertedPrice = useMemo(() => {
     return formatCurrency(convertedValue, quote);
@@ -104,4 +113,4 @@ export const CurrencyConverterClient = ({
       </CardContent>
     </Card>
   );
-}; 
+};

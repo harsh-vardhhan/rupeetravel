@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
-const Header = ({ title, blog = false }) => {
+export interface HeaderProps {
+  title?: string;
+  blog?: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ title, blog = false }) => {
   return (
     <header className="relative md:sticky md:top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md transition-all">
       <div className="container mx-auto px-4 py-3 sm:py-4">
@@ -42,4 +47,4 @@ const Header = ({ title, blog = false }) => {
   );
 };
 
-export default Header; 
+export default Header;

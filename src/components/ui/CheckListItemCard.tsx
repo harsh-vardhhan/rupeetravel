@@ -1,7 +1,12 @@
-import CheckListItem from "./CheckListItem";
-import { Card, CardHeader, CardContent } from "../ui/card";
+import CheckListItem, { type TaskItem } from "./CheckListItem";
+import { Card, CardHeader, CardContent } from "./card";
 
-const CheckListItemCard = ({ title, list }) => {
+export interface CheckListItemCardProps {
+  title: string;
+  list: TaskItem[];
+}
+
+const CheckListItemCard: React.FC<CheckListItemCardProps> = ({ title, list }) => {
   return (
     <Card className="w-full mt-4 shadow-sm hover:shadow-md transition-shadow border-border/80">
       <CardHeader className="p-4 sm:p-6 pb-2">
@@ -11,8 +16,8 @@ const CheckListItemCard = ({ title, list }) => {
       </CardHeader>
       <CardContent className="p-4 sm:p-6 pt-2">
         <div className="space-y-1">
-          {list.map((arrivals) => (
-            <CheckListItem key={arrivals.key} task={arrivals} />
+          {list.map((task, i) => (
+            <CheckListItem key={task.key ?? i} task={task} />
           ))}
         </div>
       </CardContent>
@@ -20,4 +25,4 @@ const CheckListItemCard = ({ title, list }) => {
   );
 };
 
-export default CheckListItemCard; 
+export default CheckListItemCard;
