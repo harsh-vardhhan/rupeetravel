@@ -1,8 +1,21 @@
 import Link from "next/link";
-import { Badge } from "../ui/badge";
+import { Badge } from "./badge";
 import { ChevronRight } from "lucide-react";
 
-const getTagStyles = (color) => {
+export interface TaskItem {
+  key?: number | string;
+  heading: string;
+  subHeading: string;
+  tagText: string;
+  tagColor: "orange" | "teal" | "red" | "blue" | string;
+  link: string;
+}
+
+export interface CheckListItemProps {
+  task: TaskItem;
+}
+
+const getTagStyles = (color: string) => {
   switch (color) {
     case "orange":
       return "bg-orange-100 text-orange-900 border-orange-200 dark:bg-orange-950 dark:text-orange-200 dark:border-orange-800";
@@ -10,12 +23,14 @@ const getTagStyles = (color) => {
       return "bg-teal-100 text-teal-900 border-teal-200 dark:bg-teal-950 dark:text-teal-200 dark:border-teal-800";
     case "red":
       return "bg-red-100 text-red-900 border-red-200 dark:bg-red-950 dark:text-red-200 dark:border-red-800";
+    case "blue":
+      return "bg-blue-100 text-blue-900 border-blue-200 dark:bg-blue-950 dark:text-blue-200 dark:border-blue-800";
     default:
       return "bg-muted text-muted-foreground border-border";
   }
 };
 
-const CheckListItem = ({ task }) => {
+const CheckListItem: React.FC<CheckListItemProps> = ({ task }) => {
   return (
     <div className="border-b last:border-0 pb-3 sm:pb-4 last:pb-0">
       <Link href={task.link} className="group block rounded-lg p-2.5 -mx-2 hover:bg-muted/60 transition-colors">
@@ -41,4 +56,4 @@ const CheckListItem = ({ task }) => {
   );
 };
 
-export default CheckListItem; 
+export default CheckListItem;
