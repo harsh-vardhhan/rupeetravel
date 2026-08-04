@@ -115,7 +115,14 @@ export default function Home() {
       <StructuredData data={structuredData} />
       <div className="min-h-screen bg-background">
         <Header title={"Indian Debit Cards for Vietnam"} />
-        <main className="container max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
+        <main className="container max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4 space-y-6">
+          <Alert variant="destructive" className="bg-red-50 border-red-200 text-red-900">
+            <AlertCircle className="h-4 w-4 text-red-600" />
+            <AlertDescription className="font-semibold text-base">
+              Note: Fi debit card is dead
+            </AlertDescription>
+          </Alert>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             <Card className="w-full">
               <CardHeader className="pb-2">
@@ -160,9 +167,7 @@ export default function Home() {
                   href="https://fi.money/"
                   className="w-full"
                 >
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  >
+                  <Button className="w-full">
                     Get Fi Account
                   </Button>
                 </a>
@@ -172,7 +177,7 @@ export default function Home() {
                 >
                   <Button 
                     variant="outline" 
-                    className="w-full border-green-600 text-green-600 hover:bg-green-50"
+                    className="w-full"
                   >
                     Zero forex ATMs
                   </Button>

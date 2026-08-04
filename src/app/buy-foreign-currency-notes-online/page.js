@@ -216,9 +216,7 @@ export default function Home() {
                   href="https://www.bookmyforex.com/"
                   className="w-full"
                 >
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  >
+                  <Button className="w-full">
                     Book My Forex
                   </Button>
                 </a>
@@ -228,7 +226,7 @@ export default function Home() {
                 >
                   <Button 
                     variant="outline" 
-                    className="w-full border-green-600 text-green-600 hover:bg-green-50"
+                    className="w-full"
                   >
                     Read More
                   </Button>

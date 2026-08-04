@@ -201,9 +201,7 @@ const FlightCard = ({ cardTitle, features, buttonName, buttonLink }) => {
           href={buttonLink}
           className="w-full"
         >
-          <Button
-            className="w-full bg-green-600 hover:bg-green-700 text-white"
-          >
+          <Button className="w-full">
             {buttonName}
           </Button>
         </a>

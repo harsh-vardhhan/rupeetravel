@@ -89,9 +89,7 @@ export default function RemoteWorkVietnamPage() {
               </CardContent>
               <CardFooter className="flex justify-center pt-2">
                 <Link href="https://www.google.com/maps?q=Highlands+Cafe">
-                  <Button 
-                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base"
-                  >
+                  <Button size="lg">
                     Highlands Cafe
                   </Button>
                 </Link>

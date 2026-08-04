@@ -108,9 +108,7 @@ export default function Home() {
               </CardContent>
               <CardFooter className="flex justify-center pt-2">
                 <Link href="/atm-vietnam-zero-forex-markup">
-                  <Button 
-                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base"
-                  >
+                  <Button size="lg">
                     Ocean Bank ATM
                   </Button>
                 </Link>

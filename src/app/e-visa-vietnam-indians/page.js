@@ -121,9 +121,7 @@ export default function Home() {
                   href="https://evisa.gov.vn/"
                   className="w-full"
                 >
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  >
+                  <Button className="w-full">
                     Apply E-Visa
                   </Button>
                 </a>
