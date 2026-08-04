@@ -129,18 +129,14 @@ export default function Home() {
                   </ul>
                 </div>
               </CardContent>
-              <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
+              <CardFooter className="flex flex-col gap-2.5 pt-2">
                 <a href="https://www.google.com/maps?q=MB+Bank+ATM" className="w-full">
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base"
-                  >
+                  <Button className="w-full">
                     MB Bank ATM
                   </Button>
                 </a>
                 <a href="https://www.google.com/maps?q=Ocean+Bank+ATM" className="w-full">
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base"
-                  >
+                  <Button variant="outline" className="w-full">
                     Ocean Bank ATM
                   </Button>
                 </a>

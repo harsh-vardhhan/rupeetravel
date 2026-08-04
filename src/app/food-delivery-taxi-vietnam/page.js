@@ -93,9 +93,7 @@ export default function Home() {
               </CardContent>
               <CardFooter className="flex justify-center pt-2">
                 <a href="https://www.grab.com/vn/download/">
-                  <Button 
-                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 text-base"
-                  >
+                  <Button size="lg">
                     Download Grab
                   </Button>
                 </a>

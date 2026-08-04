@@ -130,7 +130,6 @@ export default function Home() {
                               <Button 
                                 variant="outline"
                                 size="sm"
-                                className="border-teal-600 text-teal-600 hover:bg-teal-50"
                               >
                                 contact
                               </Button>
@@ -159,9 +158,7 @@ export default function Home() {
                   href="https://www.facebook.com/lavencos.vn"
                   className="w-full"
                 >
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  >
+                  <Button className="w-full">
                     Contact Lavencos
                   </Button>
                 </a>

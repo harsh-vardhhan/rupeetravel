@@ -680,7 +680,7 @@ export default function Home() {
                             </CardContent>
                             <CardFooter>
                                 <Link href="https://www.rupeetravel.com/hotel-booking-vietnam" className="w-full">
-                                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                                    <Button className="w-full">
                                         Book Hotel
                                     </Button>
                                 </Link>
@@ -723,7 +723,7 @@ export default function Home() {
                             </CardContent>
                             <CardFooter>
                                 <Link href="https://tramsushi.com/" className="w-full">
-                                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                                    <Button className="w-full">
                                         Visit website
                                     </Button>
                                 </Link>
@@ -781,7 +781,7 @@ export default function Home() {
                             </CardContent>
                             <CardFooter>
                                 <Link href="https://lovinghut.com/vn/" className="w-full">
-                                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                                    <Button className="w-full">
                                         Visit website
                                     </Button>
                                 </Link>

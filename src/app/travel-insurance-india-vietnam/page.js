@@ -99,9 +99,7 @@ export default function Home() {
                   href="https://www.godigit.com/international-travel-insurance"
                   className="w-full"
                 >
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  >
+                  <Button className="w-full">
                     Get Insurance
                   </Button>
                 </a>
@@ -109,9 +107,7 @@ export default function Home() {
                   href="/posts/india-cross-border-finance"
                   className="w-full"
                 >
-                  <Button 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  >
+                  <Button variant="outline" className="w-full">
                     Read More
                   </Button>
                 </Link>

@@ -111,9 +111,7 @@ export default function Home() {
                             <Separator className="border-gray-200" />
                             <CardFooter className="p-6 sm:p-8 pt-4">
                                 <a href="https://www.jio.com/jcms/esim/" className="w-full">
-                                    <Button 
-                                        className="w-full bg-green-600 hover:bg-green-700 text-white"
-                                    >
+                                    <Button className="w-full">
                                         Jio eSim
                                     </Button>
                                 </a>
