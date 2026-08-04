@@ -6,7 +6,6 @@ import Layout from '../../../components/ui/layout'
 import { getPostBySlug, getAllPosts } from '../../../lib/api'
 import markdownToHtml from '../../../lib/markdownToHtml'
 import { notFound } from 'next/navigation'
-import Seo from '../../../components/util/seo'
 
 export async function generateStaticParams() {
   const posts = getAllPosts(['slug'])
@@ -47,14 +46,7 @@ export default async function Page({ params }) {
   const content = await markdownToHtml(post.content || '')
 
   return (
-    <>
-      {/* Seo is handled by generateMetadata, but you can keep this for legacy support */}
-      <Seo
-        title={post.title}
-        description={post.excerpt}
-        canonical={post.canonical}
-      />
-      <Layout>
+    <Layout>
         <Container>
           <Header  title={post.title} blog={true}/>
           <article>
@@ -68,6 +60,5 @@ export default async function Page({ params }) {
           </article>
         </Container>
       </Layout>
-    </>
   )
 }

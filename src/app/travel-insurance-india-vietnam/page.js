@@ -8,6 +8,8 @@ import {
 import { Button } from "../../components/ui/button";
 import { Badge } from "../../components/ui/badge";
 import Link from "next/link";
+import ListView from "../../components/ui/listview";
+import { insuranceFeatures } from "../../data/guides.js";
 
 export const dynamic = 'force-static';
 
@@ -45,75 +47,52 @@ export const metadata = {
   },
 };
 
-// Static data that was previously in getStaticProps
-const features = [
-  {
-    item: 1,
-    title: `✅ Got $100,000 coverage at just ~₹1300 premium`,
-    color: "green",
-  },
-  {
-    item: 2,
-    title: `✅ It cannot be extended hence make sure it covers your entire stay while buying it.`,
-    color: "green",
-  },
-  {
-    item: 3,
-    title: `❌ Your normal health insurance doesn't cover international treatments hence strongly recommended you get travel insurance.`,
-    color: "red",
-  },
-];
-
 export default function Home() {
   return (
     <>
       <div className="min-h-screen bg-background">
         <Header title={"Travel insurance for Vietnam"} />
         <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
-          <div className="grid grid-cols-1 gap-4 sm:gap-6">
-            <Card className="w-full max-w-xl mx-auto">
-              <CardHeader className="pb-2">
-                <div className="flex items-center justify-between">
-                  <h2 className="text-xl font-bold">Digit Insurance</h2>
-                  <Badge 
-                    variant="secondary"
-                    className="bg-teal-200 text-teal-900"
-                  >
-                    Personally used
-                  </Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  {features.map((feature) => (
-                    <div key={feature.item} className="flex items-start gap-2">
-                      <p className="text-sm">
-                        {feature.title}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-              <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
-                <a 
-                  href="https://www.godigit.com/international-travel-insurance"
-                  className="w-full"
+          <Card className="w-full border-border/80 shadow-sm hover:shadow-md transition-shadow">
+            <CardHeader className="pb-3">
+              <div className="flex items-center justify-between">
+                <h2 className="text-xl font-bold text-foreground">
+                  Digit Insurance
+                </h2>
+                <Badge 
+                  variant="outline"
+                  className="bg-teal-100 text-teal-900 border-teal-200 dark:bg-teal-950 dark:text-teal-200 font-semibold"
                 >
-                  <Button className="w-full">
-                    Get Insurance
-                  </Button>
-                </a>
-                <Link 
-                  href="/posts/india-cross-border-finance"
-                  className="w-full"
-                >
-                  <Button variant="outline" className="w-full">
-                    Read More
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
-          </div>
+                  Personally used 🛡️
+                </Badge>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4 pt-1">
+                <ListView features={insuranceFeatures} />
+              </div>
+            </CardContent>
+            <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
+              <a
+                href="https://www.godigit.com/international-travel-insurance"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+              >
+                <Button className="w-full">
+                  Get Insurance
+                </Button>
+              </a>
+              <Link 
+                href="/posts/india-cross-border-finance"
+                className="w-full"
+              >
+                <Button variant="outline" className="w-full">
+                  Read More
+                </Button>
+              </Link>
+            </CardFooter>
+          </Card>
         </main>
       </div>
     </>

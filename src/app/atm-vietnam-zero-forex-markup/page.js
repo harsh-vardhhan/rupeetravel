@@ -6,8 +6,9 @@ import {
 } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
 import { Badge } from "../../components/ui/badge";
-import { Alert, AlertDescription } from "../../components/ui/alert";
+import { CheckCircle2, XCircle } from "lucide-react";
 import Image from 'next/image';
+import { atmGeneralFeatures, atmBankFeatures } from "../../data/atm.js";
 
 export const dynamic = 'force-static';
 
@@ -45,57 +46,14 @@ export const metadata = {
   },
 };
 
-// Static data that was previously in getStaticProps
-const features = [
-  {
-    item: 1,
-    title: `✅ Always accepts international debit card (unlike other ATM's)`,
-    color: "green.500",
-  },
-  {
-    item: 2,
-    title: "✅ Zero Forex charges on cash withdrawal.",
-    color: "green.500",
-  },
-  {
-    item: 3,
-    title: `❌ Other ATMs in Vietnam can charge 1.5%-3%
-          (minimum amount 30,000 VND -50,000 VND) on withdrawal.`,
-    color: "red.400",
-  },
-];
-
-const atmFeatures = [
-  {
-    item: 1,
-    title: `✅ bank whose debit card you hold. 💳`,
-    color: "green.500",
-  },
-  {
-    item: 2,
-    title: `✅ bank whose ATM you use. 🏧`,
-    color: "green.500",
-  },
-  {
-    item: 3,
-    title: `✅ Fi debit card + Ocean Bank/MB Bank ATM = zero forex*`,
-    color: "green.500",
-  },
-  {
-    item: 4,
-    title: `❌ ₹100 charge for ATM withdrawal from Fi`,
-    color: "red.400",
-  },
-];
-
 export default function Home() {
   return (
     <>
       <div className="min-h-screen bg-background">
         <Header title={"ATM cash withdrawal with no fee in Vietnam"} />
-        <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-            <Card className="w-full max-w-sm mx-auto">
+        <main className="container max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="w-full border-border/80 shadow-sm hover:shadow-md transition-shadow">
               <CardContent className="pt-6">
                 <div className="flex flex-col items-center">
                   <Image
@@ -103,66 +61,102 @@ export default function Home() {
                     alt="MB Bank ATM"
                     height={284}
                     width={310}
-                    className="rounded-lg"
+                    className="rounded-lg border border-border/60"
                   />
                 </div>
                 <div className="mt-6 space-y-3">
-                  <h2 className="text-lg font-semibold">
-                    Withdraw cash from Ocean Bank ATM or MB Bank ATM
-                  </h2>
-                  <Badge 
-                    variant="secondary"
-                    className="bg-teal-200 text-teal-900"
-                  >
-                    Personally using
-                  </Badge>
-                  <p className="text-sm">
-                    Just search on google map <span className="font-bold">Ocean Bank</span> or{" "}
-                    <span className="font-bold">MB Bank</span> for nearby ATM.
-                  </p>
-                  <ul className="space-y-2">
-                    {features.map((feature) => (
-                      <li key={feature.item} className="text-sm">
-                        {feature.title}
-                      </li>
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-xl font-bold text-foreground">
+                      MB Bank ATM
+                    </h2>
+                    <Badge 
+                      variant="outline"
+                      className="bg-teal-100 text-teal-900 border-teal-200 dark:bg-teal-950 dark:text-teal-200 font-semibold"
+                    >
+                      Zero Local ATM Fee 🏧
+                    </Badge>
+                  </div>
+                  <div className="space-y-2.5 pt-2">
+                    {atmGeneralFeatures.map((feature) => (
+                      <div key={feature.id} className="flex items-start gap-2.5">
+                        {feature.isPro ? (
+                          <CheckCircle2 className="h-4 w-4 text-green-600 shrink-0 mt-0.5" />
+                        ) : (
+                          <XCircle className="h-4 w-4 text-red-500 shrink-0 mt-0.5" />
+                        )}
+                        <p className="text-sm font-medium text-foreground/90 leading-snug">
+                          {feature.text}
+                        </p>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               </CardContent>
-              <CardFooter className="flex flex-col gap-2.5 pt-2">
-                <a href="https://www.google.com/maps?q=MB+Bank+ATM" className="w-full">
+              <CardFooter className="flex flex-col sm:flex-row gap-2.5 pt-2">
+                <a
+                  href="https://mbbank.com.vn/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
                   <Button className="w-full">
-                    MB Bank ATM
-                  </Button>
-                </a>
-                <a href="https://www.google.com/maps?q=Ocean+Bank+ATM" className="w-full">
-                  <Button variant="outline" className="w-full">
-                    Ocean Bank ATM
+                    Locate MB Bank ATM
                   </Button>
                 </a>
               </CardFooter>
             </Card>
-            <Card className="w-full max-w-sm mx-auto">
+
+            <Card className="w-full border-border/80 shadow-sm hover:shadow-md transition-shadow">
               <CardContent className="pt-6">
-                <Alert className="mb-4">
-                  <AlertDescription>
-                    Debit card forex charge & ATM forex charge are NOT same.
-                  </AlertDescription>
-                </Alert>
-                <div className="space-y-3">
-                  <p className="text-sm">
-                    When you withdraw cash from ATM&apos;s there are two sides
-                    which charge you:
-                  </p>
-                  <ul className="space-y-2">
-                    {atmFeatures.map((feature) => (
-                      <li key={feature.item} className="text-sm">
-                        {feature.title}
-                      </li>
+                <div className="flex flex-col items-center">
+                  <Image
+                    src={"/images/ocean-bank-atm.webp"}
+                    alt="Ocean Bank ATM"
+                    height={284}
+                    width={310}
+                    className="rounded-lg border border-border/60"
+                  />
+                </div>
+                <div className="mt-6 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-xl font-bold text-foreground">
+                      OceanBank ATM
+                    </h2>
+                    <Badge 
+                      variant="outline"
+                      className="bg-teal-100 text-teal-900 border-teal-200 dark:bg-teal-950 dark:text-teal-200 font-semibold"
+                    >
+                      Zero Local ATM Fee 🏧
+                    </Badge>
+                  </div>
+                  <div className="space-y-2.5 pt-2">
+                    {atmBankFeatures.map((feature) => (
+                      <div key={feature.id} className="flex items-start gap-2.5">
+                        {feature.isPro ? (
+                          <CheckCircle2 className="h-4 w-4 text-green-600 shrink-0 mt-0.5" />
+                        ) : (
+                          <XCircle className="h-4 w-4 text-red-500 shrink-0 mt-0.5" />
+                        )}
+                        <p className="text-sm font-medium text-foreground/90 leading-snug">
+                          {feature.text}
+                        </p>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               </CardContent>
+              <CardFooter className="flex flex-col sm:flex-row gap-2.5 pt-2">
+                <a
+                  href="https://oceanbank.vn/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button className="w-full">
+                    Locate OceanBank ATM
+                  </Button>
+                </a>
+              </CardFooter>
             </Card>
           </div>
         </main>

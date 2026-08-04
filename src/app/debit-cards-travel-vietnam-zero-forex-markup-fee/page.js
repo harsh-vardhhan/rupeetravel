@@ -9,46 +9,13 @@ import {
 import { Badge } from "../../components/ui/badge";
 import { Button } from "../../components/ui/button";
 import { Alert, AlertDescription } from "../../components/ui/alert";
-import { AlertCircle, Info } from "lucide-react";
+import { AlertCircle, Info, CheckCircle2, XCircle } from "lucide-react";
 import Link from "next/link";
 import StructuredData from "../../components/util/structuredData";
+import { debitCardFeatures } from "../../data/cards.js";
 
 export const dynamic = 'force-static';
 
-// Static data that was previously in getStaticProps
-const features = [
-  {
-    item: 1,
-    title: "✅ Zero forex markup on debit card",
-    color: "green",
-  },
-  {
-    item: 2,
-    title: "✅ ₹100 on international ATM cash withdrawl from Fi",
-    color: "green",
-  },
-  {
-    item: 3,
-    title:
-      "✅ For unlimited zero forex spending, maintain ₹50,000 minimum balance.",
-    color: "green",
-  },
-  {
-    item: 4,
-    title:
-      "✅ For zero forex spending till ₹50,000, maintain ₹10,000 minimum balance.",
-    color: "green",
-  },
-  {
-    item: 5,
-    title: `❌ Local ATMs in Vietnam will still charge 1.5%-3%
-          (minimum amount 30,000 VND -50,000 VND) on withdrawal.
-          Hence try using zero forex ATM's.`,
-    color: "red",
-  },
-];
-
-// Structured data for SEO
 const structuredData = {
   "@context": "https://www.schema.org",
   "@type": "product",
@@ -116,23 +83,23 @@ export default function Home() {
       <div className="min-h-screen bg-background">
         <Header title={"Indian Debit Cards for Vietnam"} />
         <main className="container max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4 space-y-6">
-          <Alert variant="destructive" className="bg-red-50 border-red-200 text-red-900">
+          <Alert variant="destructive" className="bg-red-50 border-red-200 text-red-900 dark:bg-red-950/50">
             <AlertCircle className="h-4 w-4 text-red-600" />
             <AlertDescription className="font-semibold text-base">
               Note: Fi debit card is dead
             </AlertDescription>
           </Alert>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-            <Card className="w-full">
-              <CardHeader className="pb-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="w-full border-border/80 shadow-sm hover:shadow-md transition-shadow">
+              <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
-                  <h2 className="text-xl font-bold">
+                  <h2 className="text-xl font-bold text-foreground">
                     Fi Debit Card
                   </h2>
                   <Badge 
-                    variant="secondary"
-                    className="bg-teal-100 text-teal-800"
+                    variant="outline"
+                    className="bg-teal-100 text-teal-900 border-teal-200 dark:bg-teal-950 dark:text-teal-200 font-semibold"
                   >
                     Personally using
                   </Badge>
@@ -145,17 +112,21 @@ export default function Home() {
                     alt="Fi Debit Card"
                     height={232}
                     width={310}
-                    className="w-full h-auto rounded-lg"
+                    className="w-full h-auto rounded-lg border border-border/60"
                   />
-                  <p className="text-sm text-muted-foreground">
-                    Fi is a no brainer, easy to use neobank account. Suit&apos;s
-                    perfect for travelling abroad.
+                  <p className="text-xs text-muted-foreground">
+                    Fi is a no brainer, easy to use neobank account. Suitable for travelling abroad.
                   </p>
-                  <div className="space-y-2">
-                    {features.map((feature) => (
-                      <div key={feature.item} className="flex items-start gap-2">
-                        <p className="text-sm">
-                          {feature.title}
+                  <div className="space-y-2.5">
+                    {debitCardFeatures.map((feature) => (
+                      <div key={feature.id} className="flex items-start gap-2.5">
+                        {feature.isPro ? (
+                          <CheckCircle2 className="h-4 w-4 text-green-600 shrink-0 mt-0.5" />
+                        ) : (
+                          <XCircle className="h-4 w-4 text-red-500 shrink-0 mt-0.5" />
+                        )}
+                        <p className="text-sm font-medium text-foreground/90 leading-snug">
+                          {feature.text}
                         </p>
                       </div>
                     ))}
@@ -165,6 +136,8 @@ export default function Home() {
               <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
                 <a 
                   href="https://fi.money/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full"
                 >
                   <Button className="w-full">
@@ -185,16 +158,15 @@ export default function Home() {
               </CardFooter>
             </Card>
 
-            <Card className="w-full">
-              <CardHeader className="pb-2">
-                <h2 className="text-xl font-bold">Fi Settings</h2>
+            <Card className="w-full border-border/80 shadow-sm">
+              <CardHeader className="pb-3">
+                <h2 className="text-xl font-bold text-foreground">Fi App Settings</h2>
               </CardHeader>
-              <CardContent className="space-y-4 pt-4">
-                <Alert className="bg-blue-50 border-blue-200 text-blue-800">
-                  <Info className="h-4 w-4" />
-                  <AlertDescription>
-                    Do activate the &quot;Apply these settings to international
-                    usage&quot; checkbox when abroad
+              <CardContent className="space-y-4 pt-2">
+                <Alert className="bg-blue-50 border-blue-200 text-blue-900 dark:bg-blue-950/50">
+                  <Info className="h-4 w-4 text-blue-600 shrink-0" />
+                  <AlertDescription className="text-xs font-medium">
+                    Do activate the &quot;Apply these settings to international usage&quot; checkbox when abroad
                   </AlertDescription>
                 </Alert>
                 <Image
@@ -202,27 +174,25 @@ export default function Home() {
                   alt="Fi Settings Mobile"
                   height={364}
                   width={310}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-lg border border-border/60"
                 />
               </CardContent>
             </Card>
 
-            <Card className="w-full">
-              <CardHeader className="pb-2">
+            <Card className="w-full border-border/80 shadow-sm">
+              <CardHeader className="pb-3">
                 <Badge 
-                  variant="secondary"
-                  className="bg-teal-100 text-teal-800"
+                  variant="outline"
+                  className="bg-red-100 text-red-900 border-red-200 dark:bg-red-950 dark:text-red-200 font-semibold w-fit"
                 >
-                  Personally used 😞
+                  Avoid Discover Cards ❌
                 </Badge>
               </CardHeader>
               <CardContent className="space-y-4">
-                <Alert variant="destructive" className="bg-red-50 border-red-200 text-red-800">
-                  <AlertCircle className="h-4 w-4" />
-                  <AlertDescription>
-                    Please avoid Discover debit cards since they are hardly
-                    accepted anywhere. You can check the logo on your debit card
-                    in case you aren&apos;t aware.
+                <Alert variant="destructive" className="bg-red-50 border-red-200 text-red-900 dark:bg-red-950/50">
+                  <AlertCircle className="h-4 w-4 text-red-600 shrink-0" />
+                  <AlertDescription className="text-xs font-medium">
+                    Please avoid Discover debit cards since they are hardly accepted anywhere in Vietnam.
                   </AlertDescription>
                 </Alert>
                 <Image
@@ -230,7 +200,7 @@ export default function Home() {
                   alt="Discover card"
                   height={232}
                   width={310}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-lg border border-border/60"
                 />
               </CardContent>
             </Card>

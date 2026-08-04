@@ -9,48 +9,13 @@ import {
 import { Badge } from "../../components/ui/badge";
 import { Button } from "../../components/ui/button";
 import { Alert, AlertDescription } from "../../components/ui/alert";
-import { AlertCircle } from "lucide-react";
+import { AlertCircle, CheckCircle2, XCircle } from "lucide-react";
 import Link from "next/link";
 import StructuredData from "../../components/util/structuredData";
+import { creditCardFeatures } from "../../data/cards.js";
 
 export const dynamic = 'force-static';
 
-// Static data that was previously in getStaticProps
-const features = [
-  {
-    item: 1,
-    title: "✅ Zero forex markup credit card",
-    color: "green",
-  },
-  {
-    item: 2,
-    title: "✅ Zero Joining/Annual fee",
-    color: "green",
-  },
-  {
-    item: 3,
-    title:
-      "✅ Withdraw cash from ATM without interest till Payment date (48 days interest free cash)",
-    color: "green",
-  },
-  {
-    item: 4,
-    title: "✅ VISA backed credit card hence higher acceptance in Vietnam",
-    color: "green",
-  },
-  {
-    item: 5,
-    title: "❌ Secured credit card which needs an FD as collateral",
-    color: "red",
-  },
-  {
-    item: 6,
-    title: "❌ Only ₹1 Lakh FD limit hence only 1 Lakh credit card limit",
-    color: "red",
-  },
-];
-
-// Structured data for SEO
 const structuredData = {
   "@context": "https://www.schema.org",
   "@type": "product",
@@ -118,16 +83,16 @@ export default function Home() {
       <div className="min-h-screen bg-background">
         <Header title={"Indian Credit Cards for Vietnam"} />
         <main className="container max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-            <Card className="w-full">
-              <CardHeader className="pb-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="w-full border-border/80 shadow-sm hover:shadow-md transition-shadow">
+              <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
-                  <h2 className="text-xl font-bold">
+                  <h2 className="text-xl font-bold text-foreground">
                     IDFC First Wow credit card
                   </h2>
                   <Badge 
-                    variant="secondary"
-                    className="bg-teal-100 text-teal-800"
+                    variant="outline"
+                    className="bg-teal-100 text-teal-900 border-teal-200 dark:bg-teal-950 dark:text-teal-200 font-semibold"
                   >
                     Personally using
                   </Badge>
@@ -140,13 +105,18 @@ export default function Home() {
                     alt="IDFC First Wow"
                     height={174}
                     width={310}
-                    className="w-full h-auto rounded-lg"
+                    className="w-full h-auto rounded-lg border border-border/60"
                   />
-                  <div className="space-y-2">
-                    {features.map((feature) => (
-                      <div key={feature.item} className="flex items-start gap-2">
-                        <p className="text-sm">
-                          {feature.title}
+                  <div className="space-y-2.5">
+                    {creditCardFeatures.map((feature) => (
+                      <div key={feature.id} className="flex items-start gap-2.5">
+                        {feature.isPro ? (
+                          <CheckCircle2 className="h-4 w-4 text-green-600 shrink-0 mt-0.5" />
+                        ) : (
+                          <XCircle className="h-4 w-4 text-red-500 shrink-0 mt-0.5" />
+                        )}
+                        <p className="text-sm font-medium text-foreground/90 leading-snug">
+                          {feature.text}
                         </p>
                       </div>
                     ))}
@@ -156,6 +126,8 @@ export default function Home() {
               <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
                 <a 
                   href="https://www.idfcfirstbank.com/credit-card/credit-card-against-fixed-deposits"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full"
                 >
                   <Button className="w-full">
@@ -176,19 +148,19 @@ export default function Home() {
               </CardFooter>
             </Card>
 
-            <Card className="w-full">
-              <CardHeader className="pb-2">
+            <Card className="w-full border-border/80 shadow-sm">
+              <CardHeader className="pb-3">
                 <Badge 
-                  variant="secondary"
-                  className="bg-teal-100 text-teal-800"
+                  variant="outline"
+                  className="bg-red-100 text-red-900 border-red-200 dark:bg-red-950 dark:text-red-200 font-semibold w-fit"
                 >
-                  Personally used 😞
+                  Avoid Amex in Vietnam ❌
                 </Badge>
               </CardHeader>
               <CardContent className="space-y-4">
-                <Alert variant="destructive" className="bg-red-50 border-red-200 text-red-800">
-                  <AlertCircle className="h-4 w-4" />
-                  <AlertDescription>
+                <Alert variant="destructive" className="bg-red-50 border-red-200 text-red-900 dark:bg-red-950/50">
+                  <AlertCircle className="h-4 w-4 text-red-600" />
+                  <AlertDescription className="font-medium text-sm">
                     Please avoid Amex credit cards, since they are hardly accepted
                     anywhere in Vietnam.
                   </AlertDescription>
@@ -198,7 +170,7 @@ export default function Home() {
                   alt="Amex card"
                   height={312}
                   width={310}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-lg border border-border/60"
                 />
               </CardContent>
             </Card>
