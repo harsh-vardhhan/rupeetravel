@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Compass, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const Header = ({ title, blog = false }) => {
   return (
@@ -7,10 +7,7 @@ const Header = ({ title, blog = false }) => {
       <div className="container mx-auto px-4 py-3 sm:py-4">
         <div className="max-w-6xl">
           <div className="flex items-center gap-2">
-            <Link href="/" className="inline-flex items-center gap-2 group">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-green-600/10 text-green-600 transition-transform group-hover:scale-105">
-                <Compass className="h-5 w-5" />
-              </div>
+            <Link href="/" className="inline-flex items-center group">
               <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-foreground transition-colors group-hover:text-green-600">
                 Rupee Travel
               </h1>

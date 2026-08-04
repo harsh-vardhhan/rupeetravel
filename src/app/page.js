@@ -215,13 +215,13 @@ export default function HomePage() {
               Rupee Travel
             </h1>
             
-            <p className="text-lg sm:text-xl lg:text-2xl font-medium text-muted-foreground leading-relaxed max-w-3xl">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-foreground/90 leading-relaxed max-w-3xl">
               The ultimate checklist for Vietnam travel from India 🇻🇳
-            </p>
+            </h2>
 
             {/* Featured in news section */}
             <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-              <span className="text-xs sm:text-sm font-semibold text-muted-foreground uppercase tracking-wider">Featured in</span>
+              <span className="text-xs sm:text-sm font-bold text-foreground/70 uppercase tracking-wider">Featured in</span>
               <a
                 href="https://www.livemint.com/money/personal-finance/travel-series-goa-beach-destination-vietnam-mumbai-techie-da-nang-budget-destination-hotels-flights-federal-bank-11733038109690.html"
                 target="_blank"
