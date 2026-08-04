@@ -33,7 +33,7 @@ const CheckListItem = ({ task }) => {
           </div>
           <ChevronRight className="h-4 w-4 text-muted-foreground/60 group-hover:text-green-600 group-hover:translate-x-0.5 transition-all shrink-0" />
         </div>
-        <p className="font-normal text-xs sm:text-sm text-muted-foreground pt-1 group-hover:text-foreground/80 transition-colors">
+        <p className="font-medium text-xs sm:text-sm text-foreground/85 pt-1 group-hover:text-foreground transition-colors">
           {task.subHeading}
         </p>
       </Link>
