@@ -1,13 +1,15 @@
 import Header from "../../components/ui/header";
 import {
   Card,
+  CardHeader,
   CardContent,
   CardFooter,
 } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
 import { Badge } from "../../components/ui/badge";
-import Image from 'next/image';
-import Link from "next/link";
+import Image from "next/image";
+import ListView from "../../components/ui/listview";
+import { withdrawCurrencyFeatures } from "../../data/guides.js";
 
 export const dynamic = 'force-static';
 
@@ -45,76 +47,50 @@ export const metadata = {
   },
 };
 
-// Static data that was previously in getStaticProps
-const features = [
-  {
-    item: 1,
-    title: `✅ Before you leave, withdraw some VND enough for first few days of your next visit.`,
-    color: "green.500",
-  },
-  {
-    item: 2,
-    title: `✅ Avoid the hassle of looking for ATM right after your arrive Vietnam.`,
-    color: "green.500",
-  },
-  {
-    item: 3,
-    title: `✅ Vietnam is still mostly cash only society. No credit card,debit card, or USD will make it as easy as Vietnam currency (VND).`,
-    color: "green.500",
-  },
-  {
-    item: 4,
-    title: `❌ Try withdrawing money from Ocean Bank ATM since it has zero forex markup charges.`,
-    color: "red.400",
-  },
-];
-
 export default function Home() {
   return (
     <>
       <div className="min-h-screen bg-background">
-        <Header title={"Withdraw Vietnam currency for next visit"} />
+        <Header title={"Withdraw VND for next visit"} />
         <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
-          <div className="grid grid-cols-1 gap-4 sm:gap-6">
-            <Card className="w-full max-w-md mx-auto">
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center">
-                  <Image
-                    src={"/images/local-currency.webp"}
-                    alt="local-currency"
-                    height={232}
-                    width={310}
-                    className="rounded-lg"
-                  />
-                </div>
-                <div className="mt-6 space-y-3">
-                  <h2 className="text-lg font-semibold">
-                    Withdraw VND for next visit
-                  </h2>
-                  <Badge 
-                    variant="secondary"
-                    className="bg-teal-200 text-teal-900"
-                  >
-                    Personally used
-                  </Badge>
-                  <ul className="space-y-2">
-                    {features.map((feature) => (
-                      <li key={feature.item} className="text-sm">
-                        {feature.title}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </CardContent>
-              <CardFooter className="flex justify-center pt-2">
-                <Link href="/atm-vietnam-zero-forex-markup">
-                  <Button size="lg">
-                    Ocean Bank ATM
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
-          </div>
+          <Card className="w-full border-border/80 shadow-sm hover:shadow-md transition-shadow">
+            <CardHeader className="pb-3">
+              <div className="flex items-center justify-between">
+                <h2 className="text-xl font-bold text-foreground">
+                  VND Cash for Next Travel
+                </h2>
+                <Badge 
+                  variant="outline"
+                  className="bg-teal-100 text-teal-900 border-teal-200 dark:bg-teal-950 dark:text-teal-200 font-semibold"
+                >
+                  Frequent Visitors 💵
+                </Badge>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <Image
+                  src={"/images/vietnam-currency-notes.avif"}
+                  alt="VND currency notes"
+                  height={155}
+                  width={310}
+                  className="w-full h-auto rounded-lg border border-border/60"
+                  priority
+                />
+                <ListView features={withdrawCurrencyFeatures} />
+              </div>
+            </CardContent>
+            <CardFooter className="pt-2">
+              <a
+                href="/atm-vietnam-zero-forex-markup"
+                className="w-full"
+              >
+                <Button className="w-full">
+                  Zero Forex ATMs
+                </Button>
+              </a>
+            </CardFooter>
+          </Card>
         </main>
       </div>
     </>

@@ -1,10 +1,15 @@
-import Image from 'next/image';
 import Header from "../../components/ui/header";
 import {
   Card,
+  CardHeader,
   CardContent,
+  CardFooter,
 } from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
 import { Badge } from "../../components/ui/badge";
+import Image from "next/image";
+import ListView from "../../components/ui/listview";
+import { luggageFeatures } from "../../data/guides.js";
 
 export const dynamic = 'force-static';
 
@@ -42,66 +47,52 @@ export const metadata = {
   },
 };
 
-// Define the features data
-const features = [
-  {
-    item: 1,
-    title: `✅ Put a laminated name label on your checked-in luggage`,
-    color: "green",
-  },
-  {
-    item: 2,
-    title: `❌ It avoids the chances of others accidentally picking your luggage`,
-    color: "red",
-  },
-  {
-    item: 3,
-    title: `✅ It also helps you recognise your luggage quickly on the conveyer belt.`,
-    color: "green",
-  },
-];
-
-export default function TravelLuggagePage() {
+export default function Home() {
   return (
     <>
       <div className="min-h-screen bg-background">
-        <Header title={"luggage"} />
+        <Header title={"Luggage travel hack"} />
         <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 mt-4">
-          <div className="grid grid-cols-1 gap-4 sm:gap-6">
-            <Card className="w-full max-w-xl mx-auto">
-              <CardContent className="pt-6">
+          <Card className="w-full border-border/80 shadow-sm hover:shadow-md transition-shadow">
+            <CardHeader className="pb-3">
+              <div className="flex items-center justify-between">
+                <h2 className="text-xl font-bold text-foreground">
+                  Airport Luggage Hack
+                </h2>
+                <Badge 
+                  variant="outline"
+                  className="bg-teal-100 text-teal-900 border-teal-200 dark:bg-teal-950 dark:text-teal-200 font-semibold"
+                >
+                  Personally used 🧳
+                </Badge>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
                 <Image
                   src={"/images/luggage-travel-hack.webp"}
-                  alt="Luggage"
-                  height={187}
+                  alt="Luggage tag hack"
+                  height={155}
                   width={310}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-lg border border-border/60"
+                  priority
                 />
-                <div className="mt-6 space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-xl font-bold">
-                      Luggage travel hack
-                    </h2>
-                    <Badge 
-                      variant="secondary"
-                      className="bg-teal-200 text-teal-900"
-                    >
-                      Personally experienced 😞
-                    </Badge>
-                  </div>
-                  <div className="space-y-2">
-                    {features.map((feature) => (
-                      <div key={feature.item} className="flex items-start gap-2">
-                        <p className="text-sm">
-                          {feature.title}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                <ListView features={luggageFeatures} />
+              </div>
+            </CardContent>
+            <CardFooter className="pt-2">
+              <a
+                href="https://amzn.to/3Yq8M2v"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+              >
+                <Button className="w-full">
+                  Buy Luggage Tag on Amazon
+                </Button>
+              </a>
+            </CardFooter>
+          </Card>
         </main>
       </div>
     </>
