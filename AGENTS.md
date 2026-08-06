@@ -21,7 +21,7 @@ This repository is **Rupee Travel** (`rupeetravel`), a Next.js web application p
 - Ensure all interactive elements have responsive layouts (`grid-cols-1 md:grid-cols-2/3`), mobile touch targets (`inputMode="decimal"` for numeric inputs), and text-wrap protection (`max-w-full`).
 
 ### 2. Header & Mobile Navigation
-- The header ([header.tsx](file:///Users/harshvardhan/Documents/GitHub/rupeetravel/src/components/ui/header.tsx)) uses `relative md:sticky md:top-0` to scroll away naturally on mobile viewports while staying sticky with glassmorphism blur on desktop screens.
+- The header ([header.tsx](file:///Users/harshvardhan/Documents/GitHub/rupeetravel/src/components/ui/header.tsx)) uses `relative` positioning to scroll away naturally on all viewports, maximizing readable content area.
 
 ### 3. Data Separation
 - Keep page component files (`page.js` / `page.tsx`) focused on UI layout and routing.
