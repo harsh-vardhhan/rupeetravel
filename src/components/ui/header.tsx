@@ -8,7 +8,7 @@ export interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title, blog = false }) => {
   return (
-    <header className="relative md:sticky md:top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md transition-all">
+    <header className="relative z-50 border-b border-border/60 bg-background/85 backdrop-blur-md transition-all">
       <div className="container mx-auto px-4 py-3 sm:py-4">
         <div className="max-w-6xl">
           <div className="flex items-center gap-2">
