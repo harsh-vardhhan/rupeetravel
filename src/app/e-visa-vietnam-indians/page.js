@@ -7,6 +7,8 @@ import {
 } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
 import StructuredData from "../../components/util/structuredData";
+import { CurrencyConverterClient } from "../../components/ui/CurrencyConverterClient";
+import { USDINRMarketRate } from "../../constants/currency";
 
 export const dynamic = 'force-static';
 
@@ -115,6 +117,16 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
+                <CurrencyConverterClient
+                  currencyPair="USDINR"
+                  exchange="forex market"
+                  rate={USDINRMarketRate}
+                  base="USD"
+                  quote="INR"
+                  baseSymbol="$"
+                  quoteSymbol="₹"
+                  amount={25}
+                />
               </CardContent>
               <CardFooter className="flex flex-col sm:flex-row gap-3 pt-2">
                 <a 
