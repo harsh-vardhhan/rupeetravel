@@ -69,7 +69,7 @@ export default function Home() {
                     <h2 className="text-xl font-bold text-foreground">
                       MB Bank ATM
                     </h2>
-                    <Badge 
+                    <Badge
                       variant="outline"
                       className="bg-teal-100 text-teal-900 border-teal-200 dark:bg-teal-950 dark:text-teal-200 font-semibold"
                     >
@@ -110,7 +110,7 @@ export default function Home() {
               <CardContent className="pt-6">
                 <div className="flex flex-col items-center">
                   <Image
-                    src={"/images/ocean-bank-atm.webp"}
+                    src={"/images/ocean-bank-atm.avif"}
                     alt="Ocean Bank ATM"
                     height={284}
                     width={310}
@@ -122,7 +122,7 @@ export default function Home() {
                     <h2 className="text-xl font-bold text-foreground">
                       OceanBank ATM
                     </h2>
-                    <Badge 
+                    <Badge
                       variant="outline"
                       className="bg-teal-100 text-teal-900 border-teal-200 dark:bg-teal-950 dark:text-teal-200 font-semibold"
                     >
