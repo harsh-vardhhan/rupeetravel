@@ -34,36 +34,49 @@ export const indiaPrepDiagram = `flowchart TD
     C --> D`;
 
 export const atmDecisionDiagram = `flowchart TD
-    NeedCash["Need Cash in Vietnam"]
-    FindATM{"Choose an ATM"}
-    BestATM["MB Bank / Ocean Bank\n(0% ATM Fee)"]
-    OtherATM["Other Vietnam ATMs\n(₫30k–66k Surcharge)"]
-    Prompt{"ATM Screen Prompt:\n'Accept Conversion to INR?'"}
-    Decline["✅ Select 'Decline Conversion'\n(Charge in VND)"]
-    Win["🏆 Indian bank converts at\nlive Visa/MC rate (No markup)"]
+    classDef good fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#15803d;
+    classDef bad fill:#fff1f2,stroke:#f43f5e,stroke-width:2px,color:#9f1239;
+    classDef step fill:#ffffff,stroke:#cbd5e1,stroke-width:1.5px,color:#0f172a;
 
-    NeedCash --> FindATM
-    FindATM -->|"Recommended"| BestATM
-    FindATM -->|"If unavailable"| OtherATM
-    BestATM --> Prompt
-    OtherATM --> Prompt
-    Prompt --> Decline
-    Decline --> Win`;
+    Start["Withdraw VND at Vietnam ATM"]:::step
+    
+    ATM{"Step 1: Choose ATM"}:::step
+    MB["MB Bank or Ocean Bank\n(0% Local ATM Surcharge)"]:::good
+    Other["Other Vietnam ATMs\n(₫30k–66k Local Surcharge)"]:::step
+
+    Screen{"Step 2: ATM Conversion Prompt\n'Charge in INR or VND?'"}:::step
+    
+    Accept["❌ Accept INR (DCC Trap)\nATM adds 3%–5% hidden markup"]:::bad
+    Decline["✅ Decline / Charge in VND\nBank converts at live Visa/MC rate"]:::good
+
+    Start --> ATM
+    ATM -->|"Recommended"| MB
+    ATM -->|"If unavailable"| Other
+    MB --> Screen
+    Other --> Screen
+    
+    Screen -->|"Charge INR (Trap)"| Accept
+    Screen -->|"Charge VND (Recommended)"| Decline`;
 
 export const customsRulesDiagram = `flowchart TD
-    Return["Leftover Currency After Trip"]
-    Split{"Select Currency"}
-    VND["₫ Vietnamese Dong"]
-    VNDLimit["Max ₫15,000,000 (~₹50k)\nwithout customs declaration"]
-    VNDDone["Spend or sell at BookMyForex"]
-    USD["$ US Dollar Cash Notes"]
-    USDLimit["Max $2,000 USD legally\nheld under RBI rules"]
-    USDDone["Keep at home for next trip"]
+    classDef good fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#15803d;
+    classDef step fill:#ffffff,stroke:#cbd5e1,stroke-width:1.5px,color:#0f172a;
+
+    Return["Leftover Currency After Trip"]:::step
+    Split{"Select Currency"}:::step
+    
+    VND["₫ Vietnamese Dong"]:::step
+    VNDLimit["Max ₫15,000,000 (~₹50k)\nwithout customs declaration"]:::good
+    VNDDone["Spend at airport or sell at BookMyForex"]:::step
+    
+    USD["$ US Dollar Cash Notes"]:::step
+    USDLimit["Max $2,000 USD legally\nheld under RBI rules"]:::good
+    USDDone["Keep safe at home for next trip"]:::step
 
     Return --> Split
-    Split -->|"VND"| VND
+    Split -->|"Leftover Dong"| VND
     VND --> VNDLimit
     VNDLimit --> VNDDone
-    Split -->|"USD"| USD
+    Split -->|"Unspent USD"| USD
     USD --> USDLimit
     USDLimit --> USDDone`;

@@ -122,12 +122,21 @@
   .dark .pele-wrapper svg .pele-node.step .pele-label {
     fill: hsl(var(--foreground)) !important;
   }
-  .dark .pele-wrapper svg .pele-node.ready rect {
+  .dark .pele-wrapper svg .pele-node.ready rect,
+  .dark .pele-wrapper svg .pele-node.good rect {
     fill: hsl(142.1 70.6% 45.3% / 0.15) !important;
     stroke: hsl(142.1 70.6% 45.3%) !important;
   }
-  .dark .pele-wrapper svg .pele-node.ready .pele-label {
+  .dark .pele-wrapper svg .pele-node.ready .pele-label,
+  .dark .pele-wrapper svg .pele-node.good .pele-label {
     fill: hsl(142.1 70.6% 45.3%) !important;
+  }
+  .dark .pele-wrapper svg .pele-node.bad rect {
+    fill: hsl(0 62.8% 30.6% / 0.2) !important;
+    stroke: hsl(0 84.2% 60.2%) !important;
+  }
+  .dark .pele-wrapper svg .pele-node.bad .pele-label {
+    fill: hsl(0 84.2% 60.2%) !important;
   }
 }
  
