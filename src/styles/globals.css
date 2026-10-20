@@ -92,7 +92,7 @@
 
   .pele-wrapper svg {
     width: 100%;
-    max-width: 440px;
+    max-width: 100%;
     height: auto;
   }
 
