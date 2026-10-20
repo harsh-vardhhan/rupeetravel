@@ -19,6 +19,7 @@
     "lucide-react": "^0.515.0",
     "next": "^15.5.9",
     "next-sitemap": "^4.0.9",
+    "pele": "^1.7.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-intersection-observer": "^9.10.3",
