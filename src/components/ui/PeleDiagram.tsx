@@ -23,13 +23,13 @@ export default function PeleDiagram({
   }
 
   return (
-    <figure className={cn("w-full my-4 flex flex-col items-center", className)} {...props}>
+    <figure className={cn("w-full my-6 flex flex-col items-center", className)} {...props}>
       <div
-        className="pele-wrapper w-full flex justify-center overflow-x-auto rounded-lg border bg-card text-card-foreground p-3 sm:p-4 shadow-sm"
+        className="pele-wrapper w-full flex justify-center overflow-x-auto py-2"
         dangerouslySetInnerHTML={{ __html: svg }}
       />
       {caption && (
-        <figcaption className="text-xs sm:text-sm text-muted-foreground mt-2 text-center">
+        <figcaption className="text-xs sm:text-sm text-muted-foreground mt-2 text-center font-medium">
           {caption}
         </figcaption>
       )}

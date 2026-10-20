@@ -20,10 +20,8 @@ import Header from "../../components/ui/header";
 import StructuredData from "../../components/util/structuredData";
 import CurrencyConverter from "../../components/ui/CurrencyConverter";
 import PeleDiagram from "../../components/ui/PeleDiagram";
+import ThreeWaysComparison from "../../components/ui/ThreeWaysComparison";
 import {
-    dumbWayDiagram,
-    smartWayDiagram,
-    smartestWayDiagram,
     indiaPrepDiagram,
     atmDecisionDiagram,
     customsRulesDiagram
@@ -204,6 +202,8 @@ export default function Home() {
                             </Table>
                         </div>
 
+                        <ThreeWaysComparison />
+
                         <div>
                             <p className="text-base sm:text-lg mb-4">
                                 Getting foreign currency is a crucial piece of travel experience.
@@ -264,10 +264,6 @@ export default function Home() {
                                 <span className="font-bold">The dumb way:</span> You can buy VND in India from an authorised forex dealer like BookMyforex.
                                 But it can be seen that rate offered by BookMyForex is not great compared to the offering in the forex market.
                             </p>
-                            <PeleDiagram
-                                code={dumbWayDiagram}
-                                caption="The Dumb Way: Buying VND in India results in high exotic currency spreads"
-                            />
                         </div>
 
                         <Card className="w-full bg-orange-50 dark:bg-orange-900">
@@ -297,10 +293,6 @@ export default function Home() {
                                 Well, that&apos;s cause USD has the highest global demand hence the buy/sell rate
                                 are great even in India.
                             </p>
-                            <PeleDiagram
-                                code={smartWayDiagram}
-                                caption="The Smart Way: Buy liquid USD in India, exchange in Vietnam for minimal loss"
-                            />
                         </div>
 
                         <Card className="w-full bg-orange-50 dark:bg-orange-900">
@@ -467,10 +459,6 @@ export default function Home() {
                                 allows you skip the hassle of buying USD currency
                                 notes just for great conversion rates.`}
                             </p>
-                            <PeleDiagram
-                                code={smartestWayDiagram}
-                                caption="The Smartest Way: Zero-forex debit card + zero-markup ATM in Vietnam"
-                            />
                         </div>
 
                         <Card className="w-full bg-orange-50 dark:bg-orange-900">

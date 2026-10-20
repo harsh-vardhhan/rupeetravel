@@ -81,13 +81,38 @@
     --pele-bg: transparent;
     --pele-fg: hsl(var(--foreground));
     --pele-muted: hsl(var(--muted-foreground));
-    --pele-line: hsl(var(--foreground) / 0.7);
+    --pele-line: hsl(var(--foreground) / 0.65);
     --pele-surface: hsl(var(--muted));
     --pele-surface-alt: hsl(var(--muted));
     --pele-border: hsl(var(--border));
     --pele-accent: hsl(var(--primary));
     --pele-font: inherit;
-    --pele-radius: var(--radius);
+    --pele-radius: 12px;
+  }
+
+  .pele-wrapper svg {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+  }
+
+  .pele-wrapper svg .pele-node rect {
+    rx: 12px;
+    stroke-width: 1.5px;
+    filter: drop-shadow(0 2px 4px rgb(0 0 0 / 0.04));
+  }
+
+  .pele-wrapper svg .pele-node polygon {
+    filter: drop-shadow(0 2px 4px rgb(0 0 0 / 0.04));
+  }
+
+  .pele-wrapper svg .pele-edges path {
+    stroke-width: 2px;
+  }
+
+  .pele-wrapper svg .pele-label {
+    font-family: inherit !important;
+    font-weight: 500;
   }
 }
  

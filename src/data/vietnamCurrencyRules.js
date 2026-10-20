@@ -1,30 +1,24 @@
-export const dumbWayDiagram = `flowchart TD
-    A["INR in India"]
-    B["Buy VND from Indian Forex Dealer"]
-    C["❌ Lose 15%–20% on exotic currency spreads"]
+// Unified 3 ways comparison diagram (Pele / Mermaid)
+export const threeWaysComparisonDiagram = `flowchart TD
+    classDef dumb fill:#fff1f2,stroke:#f43f5e,stroke-width:2px,color:#9f1239;
+    classDef smart fill:#f0f9ff,stroke:#0284c7,stroke-width:2px,color:#0369a1;
+    classDef smartest fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#15803d;
+    classDef step fill:#ffffff,stroke:#cbd5e1,stroke-width:1.5px,color:#0f172a;
 
-    A --> B
-    B --> C`;
+    subgraph Dumb["❌ 1. The Dumb Way: Buy VND in India"]
+        D1["INR in India"]:::step --> D2["Indian Forex Dealer"]:::step --> D3["Lose 15%–20% on exotic spread"]:::dumb
+    end
 
-export const smartWayDiagram = `flowchart TD
-    A["INR in India"]
-    B["Buy USD Cash Notes (~0.5% markup)"]
-    C["Carry physical USD to Vietnam"]
-    D["Exchange to VND at Airport or Gold Shops"]
+    subgraph Smart["🛡️ 2. The Smart Way: USD Cash Buffer"]
+        S1["INR in India"]:::step --> S2["Buy USD Notes in India (~0.5%)"]:::step --> S3["Exchange USD in Vietnam"]:::smart
+    end
 
-    A --> B
-    B --> C
-    C --> D`;
+    subgraph Smartest["🏆 3. The Smartest Way: Zero-Forex ATM"]
+        T1["INR in Bank Account"]:::step --> T2["Zero-Forex Debit Card"]:::step --> T3["Withdraw at Ocean/MB Bank ATM (0% Fee)"]:::smartest
+    end
 
-export const smartestWayDiagram = `flowchart TD
-    A["INR in Indian Bank Account"]
-    B["Zero-Forex Debit Card (Visa / Mastercard)"]
-    C["Withdraw at MB Bank or Ocean Bank ATM"]
-    D["🎉 VND Cash at 0% ATM Fee & Interbank Rate"]
-
-    A --> B
-    B --> C
-    C --> D`;
+    D3 -. "Better Alternative" .-> S1
+    S3 -. "Best Method" .-> T1`;
 
 export const indiaPrepDiagram = `flowchart TD
     Start["Trip Prep in India"]
