@@ -19,6 +19,15 @@ import { Button } from "../../components/ui/button";
 import Header from "../../components/ui/header";
 import StructuredData from "../../components/util/structuredData";
 import CurrencyConverter from "../../components/ui/CurrencyConverter";
+import PeleDiagram from "../../components/ui/PeleDiagram";
+import {
+    dumbWayDiagram,
+    smartWayDiagram,
+    smartestWayDiagram,
+    indiaPrepDiagram,
+    atmDecisionDiagram,
+    customsRulesDiagram
+} from '../../data/vietnamCurrencyRules';
 import {
     USDINRMarketRate,
     USDINRBookMyForexRate,
@@ -255,6 +264,10 @@ export default function Home() {
                                 <span className="font-bold">The dumb way:</span> You can buy VND in India from an authorised forex dealer like BookMyforex.
                                 But it can be seen that rate offered by BookMyForex is not great compared to the offering in the forex market.
                             </p>
+                            <PeleDiagram
+                                code={dumbWayDiagram}
+                                caption="The Dumb Way: Buying VND in India results in high exotic currency spreads"
+                            />
                         </div>
 
                         <Card className="w-full bg-orange-50 dark:bg-orange-900">
@@ -284,6 +297,10 @@ export default function Home() {
                                 Well, that&apos;s cause USD has the highest global demand hence the buy/sell rate
                                 are great even in India.
                             </p>
+                            <PeleDiagram
+                                code={smartWayDiagram}
+                                caption="The Smart Way: Buy liquid USD in India, exchange in Vietnam for minimal loss"
+                            />
                         </div>
 
                         <Card className="w-full bg-orange-50 dark:bg-orange-900">
@@ -419,6 +436,11 @@ export default function Home() {
                             </CardContent>
                         </Card>
 
+                        <PeleDiagram
+                            code={indiaPrepDiagram}
+                            caption="Pre-Trip Setup: Card preparation and emergency cash cushion before flying"
+                        />
+
                         <div>
                             <h2 className="text-xl sm:text-2xl font-bold mb-4" id="withdraw-vnd">Withdraw VND from Vietnam ATM</h2>
                             <Image
@@ -445,6 +467,10 @@ export default function Home() {
                                 allows you skip the hassle of buying USD currency
                                 notes just for great conversion rates.`}
                             </p>
+                            <PeleDiagram
+                                code={smartestWayDiagram}
+                                caption="The Smartest Way: Zero-forex debit card + zero-markup ATM in Vietnam"
+                            />
                         </div>
 
                         <Card className="w-full bg-orange-50 dark:bg-orange-900">
@@ -535,6 +561,10 @@ export default function Home() {
                                     forex charge debit card isn&apos;t enough. It&apos;s essential
                                     that you also use that card in a zero-forex ATM.
                                 </p>
+                                <PeleDiagram
+                                    code={atmDecisionDiagram}
+                                    caption="Decision Guide: Zero-forex ATM selection & declining the ATM conversion trap"
+                                />
                             </CardContent>
                         </Card>
 
@@ -608,6 +638,11 @@ export default function Home() {
                                 </p>
                             </CardContent>
                         </Card>
+
+                        <PeleDiagram
+                            code={customsRulesDiagram}
+                            caption="Customs & RBI Rules: Legal limits for bringing back leftover VND vs retaining USD"
+                        />
 
                         <div>
                             <h2 className="text-xl sm:text-2xl font-bold mb-4" id="vnd-notes">Vietnam currency in Indian Rupees</h2>

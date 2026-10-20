@@ -73,4 +73,21 @@
   body {
     @apply bg-background text-foreground;
   }
-} 
+}
+
+@layer components {
+  .pele-wrapper svg,
+  .pele {
+    --pele-bg: transparent;
+    --pele-fg: hsl(var(--foreground));
+    --pele-muted: hsl(var(--muted-foreground));
+    --pele-line: hsl(var(--foreground) / 0.7);
+    --pele-surface: hsl(var(--muted));
+    --pele-surface-alt: hsl(var(--muted));
+    --pele-border: hsl(var(--border));
+    --pele-accent: hsl(var(--primary));
+    --pele-font: inherit;
+    --pele-radius: var(--radius);
+  }
+}
+ 
