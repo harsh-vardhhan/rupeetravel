@@ -21,48 +21,58 @@ export const threeWaysComparisonDiagram = `flowchart TD
     S3 -. "Best Method" .-> T1`;
 
 export const indiaPrepDiagram = `flowchart TD
-    Start["Trip Prep in India"]
-    Card["1. Primary Cash Tool:\nZero-Forex Debit Card"]
-    App["Enable Int'l Transactions & ATM\nin mobile banking app"]
-    Cash["2. Emergency Cash Cushion:\nBuy $200–$500 in USD notes"]
-    Avoid["❌ Never buy VND in India"]
+    classDef step fill:#ffffff,stroke:#cbd5e1,stroke-width:1.5px,color:#0f172a;
+    classDef ready fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#15803d;
 
-    Start --> Card
-    Card --> App
-    Start --> Cash
-    Cash --> Avoid`;
+    A["1. Zero-Forex Debit Card\n(Visa or Mastercard)"]:::step
+    B["2. Mobile Banking App Settings\nEnable International Usage & ATM Withdrawals"]:::step
+    C["3. Emergency Cash Cushion\nBuy $200–$500 in physical USD cash notes"]:::step
+    D["✈️ Ready to Fly to Vietnam\nRely on Vietnam ATMs, keep USD as safety net"]:::ready
+
+    A --> B
+    B --> C
+    C --> D`;
 
 export const atmDecisionDiagram = `flowchart TD
-    NeedCash["Need Cash in Vietnam"]
-    FindATM{"Choose an ATM"}
-    BestATM["MB Bank / Ocean Bank\n(0% ATM Fee)"]
-    OtherATM["Other Vietnam ATMs\n(₫30k–66k Surcharge)"]
-    Prompt{"ATM Screen Prompt:\n'Accept Conversion to INR?'"}
-    Decline["✅ Select 'Decline Conversion'\n(Charge in VND)"]
-    Win["🏆 Indian bank converts at\nlive Visa/MC rate (No markup)"]
+    classDef good fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#15803d;
+    classDef bad fill:#fff1f2,stroke:#f43f5e,stroke-width:2px,color:#9f1239;
+    classDef step fill:#ffffff,stroke:#cbd5e1,stroke-width:1.5px,color:#0f172a;
 
-    NeedCash --> FindATM
-    FindATM -->|"Recommended"| BestATM
-    FindATM -->|"If unavailable"| OtherATM
-    BestATM --> Prompt
-    OtherATM --> Prompt
-    Prompt --> Decline
-    Decline --> Win`;
+    Card["Zero-Forex Debit Card\n(Visa or Mastercard)"]:::step
+    
+    ATM{"Which Vietnam ATM?"}:::step
+    
+    Best["Ocean Bank or MB Bank"]:::good
+    Random["Random Vietnam ATM"]:::bad
+    
+    ZeroCost["🎉 0% Total Charges\nZero card markup + Zero ATM fee"]:::good
+    Surcharge["⚠️ Up to 3% Surcharge\nRandom ATMs add local charges"]:::bad
+
+    Card --> ATM
+    ATM -->|"Zero-Forex ATM"| Best
+    ATM -->|"Other ATMs"| Random
+    Best --> ZeroCost
+    Random --> Surcharge`;
 
 export const customsRulesDiagram = `flowchart TD
-    Return["Leftover Currency After Trip"]
-    Split{"Select Currency"}
-    VND["₫ Vietnamese Dong"]
-    VNDLimit["Max ₫15,000,000 (~₹50k)\nwithout customs declaration"]
-    VNDDone["Spend or sell at BookMyForex"]
-    USD["$ US Dollar Cash Notes"]
-    USDLimit["Max $2,000 USD legally\nheld under RBI rules"]
-    USDDone["Keep at home for next trip"]
+    classDef good fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#15803d;
+    classDef step fill:#ffffff,stroke:#cbd5e1,stroke-width:1.5px,color:#0f172a;
+
+    Return["Leftover Currency After Trip"]:::step
+    Split{"Select Currency"}:::step
+    
+    VND["₫ Vietnamese Dong"]:::step
+    VNDLimit["Max ₫15,000,000 (~₹50k)\nwithout customs declaration"]:::good
+    VNDDone["Spend at airport or sell at BookMyForex"]:::step
+    
+    USD["$ US Dollar Cash Notes"]:::step
+    USDLimit["Max $2,000 USD legally\nheld under RBI rules"]:::good
+    USDDone["Keep safe at home for next trip"]:::step
 
     Return --> Split
-    Split -->|"VND"| VND
+    Split -->|"Leftover Dong"| VND
     VND --> VNDLimit
     VNDLimit --> VNDDone
-    Split -->|"USD"| USD
+    Split -->|"Unspent USD"| USD
     USD --> USDLimit
     USDLimit --> USDDone`;
