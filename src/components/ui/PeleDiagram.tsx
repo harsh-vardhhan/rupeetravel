@@ -28,7 +28,7 @@ export default function PeleDiagram({
     <figure className={cn("w-full my-6 flex flex-col items-center", className)} {...props}>
       <div
         className={cn(
-          "pele-wrapper w-full max-w-sm flex justify-center overflow-x-auto rounded-xl border bg-card text-card-foreground p-3 sm:p-4 shadow-sm",
+          "pele-wrapper w-full max-w-xs sm:max-w-sm flex justify-center overflow-x-auto py-1",
           containerClassName
         )}
         dangerouslySetInnerHTML={{ __html: svg }}
