@@ -38,15 +38,15 @@ export default function ThreeWaysComparison({ className, ...props }: ThreeWaysCo
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-sm mt-3 pt-3 border-t border-destructive/15">
             <div>
-              <span className="text-xs font-medium text-muted-foreground block">Step 1: Starting Point</span>
-              <p className="font-semibold text-foreground">INR in India</p>
+              <span className="text-xs font-medium text-muted-foreground block">Strategy</span>
+              <p className="font-semibold text-foreground">Buy VND in India</p>
             </div>
             <div>
-              <span className="text-xs font-medium text-muted-foreground block">Step 2: Conversion</span>
-              <p className="font-semibold text-foreground">Forex Dealer / BookMyForex</p>
+              <span className="text-xs font-medium text-muted-foreground block">Channel</span>
+              <p className="font-semibold text-foreground">Indian Forex Dealer / BookMyForex</p>
             </div>
             <div>
-              <span className="text-xs font-medium text-muted-foreground block">Step 3: Outcome</span>
+              <span className="text-xs font-medium text-muted-foreground block">Outcome</span>
               <p className="font-semibold text-destructive">Lose ₹1,500–₹2,000 per ₹10,000</p>
             </div>
           </div>
@@ -77,16 +77,16 @@ export default function ThreeWaysComparison({ className, ...props }: ThreeWaysCo
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-sm mt-3 pt-3 border-t border-border">
             <div>
-              <span className="text-xs font-medium text-muted-foreground block">Step 1: In India</span>
-              <p className="font-semibold text-foreground">Buy USD Cash Notes</p>
+              <span className="text-xs font-medium text-muted-foreground block">Strategy</span>
+              <p className="font-semibold text-foreground">Buy USD in India</p>
             </div>
             <div>
-              <span className="text-xs font-medium text-muted-foreground block">Step 2: In Vietnam</span>
-              <p className="font-semibold text-foreground">Exchange at Airport / Gold Shops</p>
+              <span className="text-xs font-medium text-muted-foreground block">Channel</span>
+              <p className="font-semibold text-foreground">Local Dealer / BookMyForex (~0.5%)</p>
             </div>
             <div>
-              <span className="text-xs font-medium text-muted-foreground block">Step 3: Outcome</span>
-              <p className="font-semibold text-foreground">Minimal Spread + Offline Safety Net</p>
+              <span className="text-xs font-medium text-muted-foreground block">Outcome</span>
+              <p className="font-semibold text-foreground">Exchange in Vietnam + Backup Cushion</p>
             </div>
           </div>
           <p className="text-xs text-muted-foreground mt-3">
@@ -118,15 +118,15 @@ export default function ThreeWaysComparison({ className, ...props }: ThreeWaysCo
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-sm mt-3 pt-3 border-t border-emerald-500/20">
             <div>
-              <span className="text-xs font-medium text-muted-foreground block">Step 1: Your Card</span>
-              <p className="font-semibold text-foreground">Zero-Forex Debit Card</p>
+              <span className="text-xs font-medium text-muted-foreground block">Strategy</span>
+              <p className="font-semibold text-foreground">Withdraw VND from Vietnam ATM</p>
             </div>
             <div>
-              <span className="text-xs font-medium text-muted-foreground block">Step 2: ATM Choice</span>
-              <p className="font-semibold text-foreground">MB Bank or Ocean Bank ATM</p>
+              <span className="text-xs font-medium text-muted-foreground block">Channel</span>
+              <p className="font-semibold text-foreground">Zero-Forex Card + MB / Ocean Bank</p>
             </div>
             <div>
-              <span className="text-xs font-medium text-muted-foreground block">Step 3: Outcome</span>
+              <span className="text-xs font-medium text-muted-foreground block">Outcome</span>
               <p className="font-semibold text-emerald-700 dark:text-emerald-400">VND Cash at 0% Bank Markup</p>
             </div>
           </div>

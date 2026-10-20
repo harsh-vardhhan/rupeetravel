@@ -5,16 +5,16 @@ export const threeWaysComparisonDiagram = `flowchart TD
     classDef smartest fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#15803d;
     classDef step fill:#ffffff,stroke:#cbd5e1,stroke-width:1.5px,color:#0f172a;
 
-    subgraph Dumb["❌ 1. The Dumb Way: Buy VND in India"]
-        D1["INR in India"]:::step --> D2["Indian Forex Dealer"]:::step --> D3["Lose 15%–20% on exotic spread"]:::dumb
+    subgraph Dumb["❌ 1. The Dumb Way"]
+        D1["Buy VND in India"]:::step --> D2["Indian Forex Dealer / BookMyForex"]:::step --> D3["Lose 15%–20% on exotic spread"]:::dumb
     end
 
-    subgraph Smart["🛡️ 2. The Smart Way: USD Cash Buffer"]
-        S1["INR in India"]:::step --> S2["Buy USD Notes in India (~0.5%)"]:::step --> S3["Exchange USD in Vietnam"]:::smart
+    subgraph Smart["🛡️ 2. The Smart Way"]
+        S1["Buy USD in India"]:::step --> S2["Carry USD Notes (~0.5% markup)"]:::step --> S3["Exchange USD in Vietnam"]:::smart
     end
 
-    subgraph Smartest["🏆 3. The Smartest Way: Zero-Forex ATM"]
-        T1["INR in Bank Account"]:::step --> T2["Zero-Forex Debit Card"]:::step --> T3["Withdraw at Ocean/MB Bank ATM (0% Fee)"]:::smartest
+    subgraph Smartest["🏆 3. The Smartest Way"]
+        T1["Withdraw VND from Vietnam ATM"]:::step --> T2["Zero-Forex Card + MB/Ocean Bank"]:::step --> T3["0% Fee at Live Interbank Rate"]:::smartest
     end
 
     D3 -. "Better Alternative" .-> S1
