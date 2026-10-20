@@ -551,7 +551,7 @@ export default function Home() {
                                 </p>
                                 <PeleDiagram
                                     code={atmDecisionDiagram}
-                                    caption="Decision Guide: Zero-forex ATM selection & declining the ATM conversion trap"
+                                    caption="Rule: Pair your zero-forex debit card with a zero-forex ATM to avoid the 3% surcharge"
                                 />
                             </CardContent>
                         </Card>

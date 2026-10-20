@@ -38,25 +38,21 @@ export const atmDecisionDiagram = `flowchart TD
     classDef bad fill:#fff1f2,stroke:#f43f5e,stroke-width:2px,color:#9f1239;
     classDef step fill:#ffffff,stroke:#cbd5e1,stroke-width:1.5px,color:#0f172a;
 
-    Start["Withdraw VND at Vietnam ATM"]:::step
+    Card["Zero-Forex Debit Card\n(Visa or Mastercard)"]:::step
     
-    ATM{"Step 1: Choose ATM"}:::step
-    MB["MB Bank or Ocean Bank\n(0% Local ATM Surcharge)"]:::good
-    Other["Other Vietnam ATMs\n(₫30k–66k Local Surcharge)"]:::step
+    ATM{"Which Vietnam ATM?"}:::step
+    
+    Best["Ocean Bank or MB Bank"]:::good
+    Random["Random Vietnam ATM"]:::bad
+    
+    ZeroCost["🎉 0% Total Charges\nZero card markup + Zero ATM fee"]:::good
+    Surcharge["⚠️ Up to 3% Surcharge\nRandom ATMs add local charges"]:::bad
 
-    Screen{"Step 2: ATM Conversion Prompt\n'Charge in INR or VND?'"}:::step
-    
-    Accept["❌ Accept INR (DCC Trap)\nATM adds 3%–5% hidden markup"]:::bad
-    Decline["✅ Decline / Charge in VND\nBank converts at live Visa/MC rate"]:::good
-
-    Start --> ATM
-    ATM -->|"Recommended"| MB
-    ATM -->|"If unavailable"| Other
-    MB --> Screen
-    Other --> Screen
-    
-    Screen -->|"Charge INR (Trap)"| Accept
-    Screen -->|"Charge VND (Recommended)"| Decline`;
+    Card --> ATM
+    ATM -->|"Zero-Forex ATM"| Best
+    ATM -->|"Other ATMs"| Random
+    Best --> ZeroCost
+    Random --> Surcharge`;
 
 export const customsRulesDiagram = `flowchart TD
     classDef good fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#15803d;
