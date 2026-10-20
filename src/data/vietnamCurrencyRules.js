@@ -21,16 +21,17 @@ export const threeWaysComparisonDiagram = `flowchart TD
     S3 -. "Best Method" .-> T1`;
 
 export const indiaPrepDiagram = `flowchart TD
-    Start["Trip Prep in India"]
-    Card["1. Primary Cash Tool:\nZero-Forex Debit Card"]
-    App["Enable Int'l Transactions & ATM\nin mobile banking app"]
-    Cash["2. Emergency Cash Cushion:\nBuy $200–$500 in USD notes"]
-    Avoid["❌ Never buy VND in India"]
+    classDef step fill:#ffffff,stroke:#cbd5e1,stroke-width:1.5px,color:#0f172a;
+    classDef ready fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#15803d;
 
-    Start --> Card
-    Card --> App
-    Start --> Cash
-    Cash --> Avoid`;
+    A["1. Zero-Forex Debit Card\n(Visa or Mastercard)"]:::step
+    B["2. Mobile Banking App Settings\nEnable International Usage & ATM Withdrawals"]:::step
+    C["3. Emergency Cash Cushion\nBuy $200–$500 in physical USD cash notes"]:::step
+    D["✈️ Ready to Fly to Vietnam\nRely on Vietnam ATMs, keep USD as safety net"]:::ready
+
+    A --> B
+    B --> C
+    C --> D`;
 
 export const atmDecisionDiagram = `flowchart TD
     NeedCash["Need Cash in Vietnam"]

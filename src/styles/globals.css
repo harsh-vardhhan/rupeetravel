@@ -114,5 +114,20 @@
     font-family: inherit !important;
     font-weight: 500;
   }
+
+  .dark .pele-wrapper svg .pele-node.step rect {
+    fill: hsl(var(--card)) !important;
+    stroke: hsl(var(--border)) !important;
+  }
+  .dark .pele-wrapper svg .pele-node.step .pele-label {
+    fill: hsl(var(--foreground)) !important;
+  }
+  .dark .pele-wrapper svg .pele-node.ready rect {
+    fill: hsl(142.1 70.6% 45.3% / 0.15) !important;
+    stroke: hsl(142.1 70.6% 45.3%) !important;
+  }
+  .dark .pele-wrapper svg .pele-node.ready .pele-label {
+    fill: hsl(142.1 70.6% 45.3%) !important;
+  }
 }
  
